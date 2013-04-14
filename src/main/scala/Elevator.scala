@@ -7,14 +7,14 @@ class Elevator{
 
 object Elevator{
   def main(args: Array[String]){
-    val numFloorsReal = 5
-    val numStopsReal = 2
+    val numFloorsReal = 10
+    val numStopsReal = 3
     val numFloors = numFloorsReal + 1
     val numStops = numStopsReal + 1
     val a = Array.fill(numFloors,numStops){Int.MaxValue} //table of costs
     val p = Array.fill(numFloors,numStops){-1} //table of parents
 
-    val destinations = Array(0,1,4,4)
+    val destinations = Array(0,1,4,4,8,10)
 
     def floorsWalked(prev: Int, curr: Int) = {
       var nsteps = 0;
@@ -42,7 +42,7 @@ object Elevator{
           cost = a(k)(j-1) - floorsWalked(k, Int.MaxValue) + floorsWalked(k, i) + floorsWalked(i, Int.MaxValue)
           if (cost < a(i)(j)) {
             a(i)(j) = cost
-            p(i)(j) = cost
+            p(i)(j) = k
           }
         }
 
@@ -67,7 +67,6 @@ object Elevator{
       println("")
     }
 
-    //FIXME: either this, or our path selection above, is incorrect
     def findStops(lastStop: Int, n: Int): Unit = {
       println(lastStop)
       n match {
