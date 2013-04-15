@@ -7,6 +7,9 @@ object LazyQueue {
     val a = new LazyQueue()
     val b = a.enqueue(1).enqueue(2)
     println(b.elements)
+    val c = a.enqueue(10)
+    println(c.elements)
+
   }
 }
 
@@ -21,18 +24,18 @@ class LazyQueue {
   def enqueue(x: Int) = exec(lenf, front, lenr + 1, x :: rear)
   def dequeue() = (front.head, exec(lenf - 1, front.tail, lenr, rear))
 
-  def rotate(xs: Stream[Int], ys: List[Int], rys: Stream[Int]): Stream[Int] = ys match {
+  def rotate(xs: Stream[Int], ys: List[Int], a: Stream[Int]): Stream[Int] = ys match {
     case y :: ys1 =>
       if (xs.isEmpty) {
-        Stream.cons(y, rys)
+        Stream.cons(y, a) // rotate when |r| = |f| + 1, so |ys| = |xs| + 1
       } else {
-        Stream.cons(xs.head, rotate(xs.tail, ys.tail, Stream.cons(y,rys)))
+        Stream.cons(xs.head, rotate(xs.tail, ys1, Stream.cons(y,a)))
       }
-    case Nil => xs
+    case Nil => println("DEBUG rotate: Empty ys"); xs
   }
 
   def exec(lenf1: Int, f: Stream[Int], lenr1: Int, r: List[Int]): LazyQueue = {
-    if(lenr <= lenf) {
+    if(lenr < lenf) {
       new LazyQueue {
         override val lenf = lenf1
         override val front = f
@@ -49,7 +52,7 @@ class LazyQueue {
     }
   }
 
-  def elements: List[Int] = front.toList ::: rear.reverse
+  def elements  = (front.toList, rear.reverse)
 }
 
 class StrictQueue() {
