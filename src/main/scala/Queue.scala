@@ -3,13 +3,19 @@ package snippets.algorithms
 object LazyQueue {
   import LazyQueue._
 
+  def grow_queue(q: LazyQueue, n: Int): LazyQueue = n match {
+    case 0 => println(q.elements); q
+    case _ => println(q.elements); grow_queue(q.enqueue(n),n-1)
+  }
+
   def main(args: Array[String]){
     val a = new LazyQueue()
-    val b = a.enqueue(1).enqueue(2)
+    val b = a.enqueue(1).enqueue(2).enqueue(3).enqueue(4)
     println(b.elements)
     val c = a.enqueue(10)
     println(c.elements)
 
+    grow_queue(a,15)
   }
 }
 
