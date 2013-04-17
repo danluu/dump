@@ -1,5 +1,7 @@
 package snippets.algorithms
 
+// Functional-ish queues
+
 object LazyQueue {
   import LazyQueue._
 
