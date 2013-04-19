@@ -20,3 +20,9 @@ assert(string_is_perm("foo","oof") == true)
 assert(string_is_perm("foo","foof") == false)
 assert(string_is_perm("foo","moof") == false)
 assert(string_is_perm("foo","moo") == false)
+
+function sub_spaces(x::String)
+    replace(x," ", "%20")
+end
+
+assert(sub_spaces("this is a string   --yep") == "this%20is%20a%20string%20%20%20--yep")
