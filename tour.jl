@@ -1,3 +1,6 @@
+# Trying out various features of julia by solving easy toy problems that require
+# some use of basic language features and libraries
+
 function string_is_perm(a::String, b::String)
     count = Dict{Char,Int}()
     
