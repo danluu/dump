@@ -43,3 +43,72 @@ assert(is_rotation("waterbottle", "erbottlewat") == true)
 assert(is_rotation("waterbottle", "trbottlewae") == false)
 assert(is_rotation("f", "ff") == false)
 assert(is_rotation("ff", "f") == false)
+
+type DLLBlock{T}
+    data::T
+    prev::Union(Nothing,DLLBlock{T})
+    next::Union(Nothing,DLLBlock{T})
+end
+
+type DLL{T}
+    length::Int
+    head::DLLBlock{T}
+    rear::DLLBlock{T}
+end
+
+function makeDLL{T}(x::T)
+    y = DLLBlock(x,nothing,nothing)
+    return DLL{T}(1,y,y)
+end
+
+begin
+    a = makeDLL(10)
+end
+
+type LLBlock{T}
+    data::T
+    next::Union(Nothing,LLBlock{T})
+end
+
+type LL{T}
+    length::Int
+    head::LLBlock{T}
+end
+
+function makeLL{T}(x::T)
+    y = LLBlock(x,nothing)
+    return LL{T}(1,y)
+end
+
+function cons{T}(x::T, xs::LL{T})
+    block = LLBlock(x, nothing)
+    block.next = xs.head
+    xs.length += 1
+    xs.head = block
+end
+
+# Note: begin/end doesn't define a new scope
+
+begin
+    a = makeLL(10)
+    b = cons(20,a)
+end
+
+# Stacks are supported by the Vector type in Julia, which is just a 1-d array
+function sort_stack(s::Array{Int})
+    len = length(s)
+    new_s = Array(Int,0)
+    while(length(new_s) < len)
+        assert(length(new_s) + length(s) == len)
+        temp = pop!(s)
+        while(length(new_s) != 0 && temp > last(new_s))
+            push!(s, pop!(new_s))
+        end
+        push!(new_s,temp)
+    end
+    return new_s
+end
+
+assert(sort_stack([1,2,3,4,5]) == [5,4,3,2,1])
+assert(sort_stack([5,4,3,2,1]) == [5,4,3,2,1])
+
