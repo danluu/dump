@@ -20,9 +20,11 @@ object Parens {
     }
   }
 
+  def solve(n :Int) = parens(n, 0, 0)
+
   def main(args: Array[String]){
-    println(parens(1,0,0))
-    println(parens(2,0,0))
-    println(parens(3,0,0))
+    println(solve(1))
+    println(solve(2))
+    println(solve(3))
   }
 }
