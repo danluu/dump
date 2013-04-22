@@ -112,3 +112,17 @@ end
 assert(sort_stack([1,2,3,4,5]) == [5,4,3,2,1])
 assert(sort_stack([5,4,3,2,1]) == [5,4,3,2,1])
 
+# Solution from Leah
+function subsets{T}(xs::Array{T,1})
+    if length(xs) == 0
+        return Array(Array{T,1},0)
+    else
+        subrest = subsets(xs[2:])
+        ours = [x for x=[unshift!(z,xs[1]) for z=[copy(ys) for ys=subrest]]]
+            append!(subrest,ours)
+            push!(subrest,[xs[1]])
+            return subrest
+   end
+end
+
+@show subsets([1,2,3])
