@@ -31,14 +31,14 @@ object Permutations{
       xs(j) = temp
     }
 
-    //find largest k such that xs(k) < xs(k+1)
+    // 1. find largest k such that xs(k) < xs(k+1)
     var k: Int = -1
     (0 until (xs.length - 1)).foreach{ i =>
       if(xs(i) < xs(i+1))
         k = i
     }
 
-    //find largest l such that xs(k) < xs(l). We know this must exist, because xs(k) < xs(k+1)
+    // 2. find largest l such that xs(k) < xs(l). We know this must exist, because xs(k) < xs(k+1)
     var l = -1
     if (k >= 0) {
       (0 until (xs.length)).foreach { i =>
@@ -47,6 +47,8 @@ object Permutations{
       }
     }
 
+    // 3. swap xs(k) and xs(l) and then reverse xs(k+1:)
+    // from '1', we know that xs(k+1:) is decreasing, so reversing it will give us the smallest perm
     if (k >= 0) {
       swap(k,l)
       val base = k + 1
