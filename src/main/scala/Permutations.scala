@@ -31,39 +31,33 @@ object Permutations{
       xs(j) = temp
     }
 
-    var k: Option[Int] = None
+    //find largest k such that xs(k) < xs(k+1)
+    var k: Int = -1
     (0 until (xs.length - 1)).foreach{ i =>
       if(xs(i) < xs(i+1))
-        k = Some(i)
+        k = i
     }
 
-    val l = k match {
-      case None => None
-      case Some(i) => 
-        var ll: Option[Int] = None
-        val x = xs(i)
-        (0 until (xs.length)).foreach { i =>
-          if (x < xs(i))
-            ll = Some(i)
-        }
-        ll
+    //find largest l such that xs(k) < xs(l). We know this must exist, because xs(k) < xs(k+1)
+    var l = -1
+    if (k >= 0) {
+      (0 until (xs.length)).foreach { i =>
+        if (xs(k) < xs(i))
+          l = i
+      }
     }
 
-    (k,l) match {
-      case (None,None) => return None
-      case (Some(k), Some(l)) => swap(k,l)
-//        println(s"k l ${k} ${l}")
-        val base = k + 1
-        var i = 0
-//        println(s"reverse? i+b:${i + base} len:${xs.length} j:${xs.length - i - 1}")
-//        println(s"pre-reverse ${xs.mkString(" ")}")
-        while(i + base < xs.length - i - 1) {
-//          println(s"swapping ${i+base} ${xs.length - i - 1}")
-          swap(i + base, xs.length - i - 1)
-          i = i + 1
-        }
-//        println(s"post-reverse ${xs.mkString(" ")}")
+    if (k >= 0) {
+      swap(k,l)
+      val base = k + 1
+      var i = 0
+      while(i + base < xs.length - i - 1) {
+        swap(i + base, xs.length - i - 1)
+        i = i + 1
+      }
       return Some(xs)
+    } else {
+      return None
     }
   }
 
