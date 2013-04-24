@@ -13,6 +13,29 @@ assert(is_perm("foo","foof") == false)
 assert(is_perm("foo","moof") == false)
 assert(is_perm("foo","moo") == false)
 
+function is_perm_linear(a::String, b::String)
+    count = Dict{Char,Int}()
+    
+    for c = a
+        has(count,c) ? (count[c] += 1) : (count[c] = 1)
+    end
+    
+    for c = b
+        has(count,c) ? count[c] -= 1 : return false
+    end
+
+    for (k,v) = count
+        if v != 0 return false end
+    end
+    return true
+end
+    
+assert(is_perm_linear("foo","foo") == true)
+assert(is_perm_linear("foo","oof") == true)
+assert(is_perm_linear("foo","foof") == false)
+assert(is_perm_linear("foo","moof") == false)
+assert(is_perm_linear("foo","moo") == false)
+
 function sub_spaces(x::String)
     replace(x," ", "%20")
 end
