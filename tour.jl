@@ -1,17 +1,17 @@
 # Trying out various features of julia by solving easy toy problems that require
 # some use of basic language features and libraries
 
-function string_is_perm(a::String, b::String)
+function is_perm(a::String, b::String)
     as = sort([c for c in a])
     bs = sort([c for c in b])
     return isequal(as,bs)
 end
     
-assert(string_is_perm("foo","foo") == true)
-assert(string_is_perm("foo","oof") == true)
-assert(string_is_perm("foo","foof") == false)
-assert(string_is_perm("foo","moof") == false)
-assert(string_is_perm("foo","moo") == false)
+assert(is_perm("foo","foo") == true)
+assert(is_perm("foo","oof") == true)
+assert(is_perm("foo","foof") == false)
+assert(is_perm("foo","moof") == false)
+assert(is_perm("foo","moo") == false)
 
 function sub_spaces(x::String)
     replace(x," ", "%20")
