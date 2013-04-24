@@ -109,4 +109,6 @@ function subsets{T}(xs::Array{T,1})
    end
 end
 
-@show subsets([1,2,3])
+assert(isequal(
+    sort(map(sort,subsets([1,2,3]))),
+    sort(map(sort,Vector{Int}[[1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]]))))
