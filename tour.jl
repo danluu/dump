@@ -2,20 +2,9 @@
 # some use of basic language features and libraries
 
 function string_is_perm(a::String, b::String)
-    count = Dict{Char,Int}()
-    
-    for c = a
-        has(count,c) ? (count[c] += 1) : (count[c] = 1)
-    end
-    
-    for c = b
-        has(count,c) ? count[c] -= 1 : return false
-    end
-
-    for (k,v) = count
-        if v != 0 return false end
-    end
-    return true
+    as = sort([c for c in a])
+    bs = sort([c for c in b])
+    return isequal(as,bs)
 end
     
 assert(string_is_perm("foo","foo") == true)
