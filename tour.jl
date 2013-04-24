@@ -31,12 +31,7 @@ end
 assert(sub_spaces("this is a string   --yep") == "this%20is%20a%20string%20%20%20--yep")
 
 function is_rotation(x::String, y::String)
-    if length(x) == length(y)
-        xx = x^2
-        return ismatch(Regex(y),xx)
-    else
-        return false
-    end 
+    return length(x)==length(y) && ismatch(Regex(y),"$x$x")
 end
 
 assert(is_rotation("waterbottle", "erbottlewat") == true)
