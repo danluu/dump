@@ -1,28 +1,17 @@
 # Trying out various features of julia by solving easy toy problems that require
 # some use of basic language features and libraries
 
-function string_is_perm(a::String, b::String)
-    count = Dict{Char,Int}()
-    
-    for c = a
-        has(count,c) ? (count[c] += 1) : (count[c] = 1)
-    end
-    
-    for c = b
-        has(count,c) ? count[c] -= 1 : return false
-    end
-
-    for (k,v) = count
-        if v != 0 return false end
-    end
-    return true
+function is_perm(a::String, b::String)
+    as = sort([c for c in a])
+    bs = sort([c for c in b])
+    return isequal(as,bs)
 end
     
-assert(string_is_perm("foo","foo") == true)
-assert(string_is_perm("foo","oof") == true)
-assert(string_is_perm("foo","foof") == false)
-assert(string_is_perm("foo","moof") == false)
-assert(string_is_perm("foo","moo") == false)
+assert(is_perm("foo","foo") == true)
+assert(is_perm("foo","oof") == true)
+assert(is_perm("foo","foof") == false)
+assert(is_perm("foo","moof") == false)
+assert(is_perm("foo","moo") == false)
 
 function sub_spaces(x::String)
     replace(x," ", "%20")
@@ -31,12 +20,7 @@ end
 assert(sub_spaces("this is a string   --yep") == "this%20is%20a%20string%20%20%20--yep")
 
 function is_rotation(x::String, y::String)
-    if length(x) == length(y)
-        xx = x^2
-        return ismatch(Regex(y),xx)
-    else
-        return false
-    end 
+    return length(x)==length(y) && ismatch(Regex(y),"$x$x")
 end
 
 assert(is_rotation("waterbottle", "erbottlewat") == true)
@@ -125,4 +109,6 @@ function subsets{T}(xs::Array{T,1})
    end
 end
 
-@show subsets([1,2,3])
+assert(isequal(
+    sort(map(sort,subsets([1,2,3]))),
+    sort(map(sort,Vector{Int}[[1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]]))))
