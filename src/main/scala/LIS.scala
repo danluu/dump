@@ -1,8 +1,11 @@
 package snippets.algorithms
 
+import scala.collection.mutable
+
 object LIS {
   def main(args: Array[String]) {
     println(solve(Array(7,3,8,4,2,6,7)))
+    println(solveMemo(Array(7,3,8,4,2,6,7)))
   }
 
   // 1-d dynamic programming
@@ -25,8 +28,28 @@ object LIS {
     len.max
   }
 
-  def solveRecursive(xs: Array[Int]) = {
+  // try memoizing rather than explicitly walking through a table
+  def solveMemo(xs: Array[Int]) = {
+    // length and where we came from
+    var mem: mutable.Map[Int, (Int, Int)] = mutable.Map.empty
 
+    cost(xs.length-1)
+    def cost(c: Int): (Int, Int) = {
+      mem.get(c) match {
+        case None =>
+          val subCost = (0 until c).map{ i =>
+            if(xs(c) > xs(i))
+              (1 + cost(i)._1, cost(i)._2)
+            else
+              (1, i)
+          }
+          val len = subCost.maxBy(_._1)._1
+          val prev = subCost.maxBy(_._1)._2
+          mem(c) = (len,prev)
+          (len, prev)
+        case Some(n) => n
+      }
+    }
+    mem
   }
-
 }
