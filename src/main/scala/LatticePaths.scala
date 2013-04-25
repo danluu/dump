@@ -1,4 +1,4 @@
-package algorithms.roughgarden
+package snippets.algorithms
 
 /* Find # of lattice paths through an x*y lattice */
 
