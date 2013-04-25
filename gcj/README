@@ -1,0 +1,376 @@
+GCJ Commandline submit tool, v1.0-beta4
+Copyright 2010 Google Inc. All Rights Reserved.
+
+Download and submit tool for the Google Code Jam
+-------------------------------------------------------------------------------
+TABLE OF CONTENTS:
+
+0. Disclaimer
+1. Prerequisites
+2. Basic usage
+  a. Configuring the system
+  b. Initializing the contest
+  c. Downloading an input
+  d. Submitting a solution
+  e. Checking your status
+  f. Cleaning the contest
+3. Configuration files
+4. Executable files
+  a. Contest crawler
+  b. Login agent
+  c. Input downloader
+  d. Solution submitter
+  e. Contest cleaner
+
+-------------------------------------------------------------------------------
+0. DISCLAIMER
+
+GCJ Commandline submit tool, v1.0-beta3
+Copyright 2010 Google Inc. All Rights Reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-------------------------------------------------------------------------------
+1. PREREQUISITES
+
+To install this software, just copy these files into any folder and execute the
+python scripts from the main folder (the one that contains this file).
+
+To run the scripts, you will need Python 2.6, which can be downloaded from
+<http://www.python.org/download/releases/>. This was developed and tested using
+Python 2.6.5, so we recommend using 2.6.5 or later.
+
+-------------------------------------------------------------------------------
+2. BASIC USAGE
+
+To use this tool, open a terminal in the main folder (the one that contains
+this file). The scripts in this directory expect to be run from this directory,
+otherwise, they will not find the configuration files in the config/ directory.
+
+
+2a. Configuring the system
+
+Before attempting to run a script included with this software, you should
+configure the system by writing some needed information in the user
+configuration file, located at config/user_config.py. This file is formatted as
+a Python dict structure, but a basic one is be included with this software.
+Three values are needed to run the software:
+
+- host: The name of the website hosting the contest. For normal contests and
+  for the remaining of this example, the host is 'code.google.com'.
+
+- user: Your google account, for example 'myaccount@gmail.com'.
+
+- source_names_format: This is a list of strings that specify the default
+  sources to be included with an output file. In this example, we will assume
+  we use C++ and set it to ['{problem}-{input}-{id}.cpp']. Remember to change it
+  before a contest or you might end submitting the included source code by
+  accident!
+
+Look at Section 3 for more information about these and many more configuration
+parameters.
+
+
+2b. Initializing the contest
+
+The first step to use this software is initializing the contest. To do this
+you have to specify the contest id, which can be found in the dashboard URL
+for that contest. For example, for the GCJ 2010 Qualification Round the
+dashboard URL is:
+
+http://code.google.com/codejam/contest/dashboard?c=433101
+
+so you can initialize the contest executing:
+
+$ ./gcj_init_contest.py 433101
+
+During this step, the software logs into Code Jam servers (it may ask for your
+password) and extracts information from the contest, including problem ids,
+names and the middleware tokens required to transfer information.
+
+Then, all this information, including the login cookie and the information in
+the user configuration file, is stored in the current configuration file (found
+at config/current_config.py).
+
+If you don't specify a contest id for this script, it will attempt to initialize
+the tool for the current contest. If no contest is running it will print an
+error message.
+
+NOTE: Your password is not stored in the current configuration file if you did
+not entered it in the user configuration file.
+
+
+2c. Downloading an input
+
+Once you have implemented a solution and think you got it right, you may
+download an input file using the gcj_download_input.py script. This script
+receives the problem letter (A, B or C for the GCJ10 Qual), the I/O set name and
+an id to differentiate it from other attempts.
+
+If a problem has only one small I/O set it will be called "small", but if it has
+multiple small I/O sets they will be called "small1", "small2", "small3", and so
+on (all quotes for clarity). Large I/O sets are named in the same way.
+
+For example, to download a small input for the problem A, Snapper Chain, you
+can execute:
+
+$ ./gcj_download_input.py A small 0
+
+which will download the input file and store it in source/A-small-0.in. Now
+it is time to run your solution and generate the output file.
+
+NOTE: Downloading an input file twice in the same attempt will just redownload
+the same input file if its timer has *NOT* expired. Otherwise, it will download
+another input and start another attempt for small I/O sets. However, if this is
+the case it will ask for confirmation from the user.
+
+
+2d. Submitting a solution
+
+After running your solution and generating the output, it is time to submit the
+output file with the source files using the gcj_submit_solution.py script. This
+script receives the problem letter, the I/O set name and the id used when the
+input was downloaded. See section 2c for I/O set naming.
+
+For example, to submit the solution for the small I/O set of problem A, Snapper
+Chain, you can execute:
+
+$ ./gcj_submit_solution.py A small 0
+
+which will submit the file source/A-small-0.out as the answer and
+source/A-small-0.cpp as the only source file. If you want to add extra source
+files, you may use the -a flag as many times you need. For example, if you want
+to submit two extra files called library.cpp and template.txt you can execute:
+
+$ ./gcj_submit_solution.py -a library.cpp -a template.txt A small 0
+
+which will submit the file source/A-small-0.out as the answer and
+source/A-small-0.cpp, library.cpp and template.txt as the source files. If you
+add a directory using the -a option, the program will compress it into a zip
+file before submitting it.
+
+After submitting the file, the Code Jam server will answer with a message
+string. The most important values are:
+
+- 'Incorrect: Wrong Answer': Your solution for the small input was wrong, try
+  again.
+- 'Correct: Good Job!': Your solution for the small input was right,
+  congratulations!
+- 'Submitted: Your answer has been received and will be judged at the end of
+  the contest.': This is received after submitting the output for a large input.
+- 'Rejected: <reason>': Your submission was rejected for some reason, please
+  try again. This attempt did not count as a wrong answer.
+
+
+2e. Checking your status
+
+During the contest you can check your status by using the gcj_get_status.py
+script, which will show you your current rank, number of points, time at which
+each input was solved, number of wrong attempts per input and remaining time for
+current attempts.
+
+To run this script you should execute:
+
+$ ./gcj_get_status.py
+
+which will show an output like this one:
+
+Rank: 194 (66 points)
+Problem: Snapper Chain
+  small: 00:15:16 (2 wrong tries)
+  large: 00:19:11
+Problem: Fair Warning
+  small: --:--:-- (1 wrong try) << 2:31 left
+  large: --:--:--
+Problem: Theme Park
+  small: 01:42:45
+  large: 01:47:18 << 6:38 left
+
+
+2f. Cleaning the contest
+
+After the contest is over, you can clean all contest-related information using
+the ./gcj_clear_contest.py script, which receives no parameters. This script
+will not delete your source code, input or output files.
+
+-------------------------------------------------------------------------------
+3. CONFIGURATION FILES
+
+This tool needs one configuration file to run, which can be located at
+config/user_config.py. This file is formatted as a python dict structure and
+may have the following keys:
+
+- 'host' : The name of the website hosting the contest. For normal contests,
+  it is 'code.google.com'.
+
+- 'user' : Your google account, the '@gmail.com' might be omitted for contests
+  in 'code.google.com'.
+
+- 'password' : The password for your google account. This value is optional, if
+  it is not found the executables will ask for it when necessary.
+
+- 'data_directory' : Directory where input files are written and the output and
+  main source file is read from. This value is optional, if not specified it
+  will default to './source'.
+
+- 'input_name_format' : Format used to generate filenames for input files,
+  where '{problem}' will be substituted for the problem letter, '{input}' for
+  the input type (small or large) and '{id}' for the submit id. This value is
+  optional, if not specified it will default to '{problem}-{input}-{id}.in'.
+
+- 'output_name_format' : Format used to generate filenames for output files,
+  whose format is similar to the input format. This value is optional, if not
+  specified it will default to '{problem}-{input}-{id}.out'.
+
+- 'source_names_format' : List with filename formats for the source files
+  included by default; each list value must be formatted in the same way as the
+  input name format. This value is *NOT* optional, to prevent accidental
+  submits of outputs with no source files.
+
+All these values (with the exception of 'host', 'user' and
+'source_names_format') can be overriden in the scripts by using command line
+options. When these values are specified on the command line, the values in the
+configuration files and the default values are ignored.
+
+For the input, output and source format the final filename is generated using
+the Python str.format() function.
+
+If you want to change the path of the configuration file, look at the
+lib/constants.py file and change the respective variables. Remember that those
+paths are relative to the current directory, not to the lib directory. You could
+also use absolute paths or use the placeholder '{base_dir}' (quotes for
+clarity); this placeholder will be substituted by the directory where the tool
+is in the filesystem.
+
+IMPORTANT: Scripts stores information from the current contest along with the
+user information in the current configuration file (config/current_config.py).
+However, any change you make in the user configuration file will be recognized
+by the scripts, even if the current configuration file is not updated. This
+implies that the user should update their information in the user configuration
+file, otherwise the scripts will not see the change.
+
+-------------------------------------------------------------------------------
+4. EXECUTABLE FILES
+
+This tool is composed by four executable scripts, one to initialize the tool
+for a contest, one to download inputs, one to submit solutions and finally one
+to login in the Google servers, just in case the authentication cookie becomes
+invalid.
+
+All scripts provide a --version and a --help options. These options will show
+the current tool version and a list with all the possible options for the
+script, including a brief description of each one.
+
+All scripts might require your Google password if you do not specify it in the
+configuration file. Another option is to pass the password using the option
+--passwd, just be careful that specifying the password this way will be visible
+in your screen and will be stored in the commands history.
+
+The scripts to download input and submit outputs support a --login option; if
+this option is specified the current login cookie will be ignored and a new one
+will be requested. Also, if the cookie has expired the scripts will
+automatically try to renew it. Beware that this might cause the executables to
+ask for your password. Also, these scripts ask confirmation from the user before
+downloading an input that will start a new timer and before resubmitting a
+solution for a large input. These confirmations can be skipped by passing the
+--force option.
+
+
+4a. Contest crawler
+
+This script is the gcj_init_contest.py script and receives one optional
+positional argument which is the contest id (see Section 2b for instructions on
+how to retrieve a contest id), that is used to retrieve the important
+information of the contest, i.e., number of problems, middleware authentication
+tokens, problem ids, etc.
+
+If no contest id is specified in the arguments, this script will retrieve the
+id of the current contest and initialize the tool for it. If there is no running
+contest an error message will be shown to the user.
+
+This script should be run once before each contest, so the correct information
+is retrieved. Otherwise, all other scripts might fail because no contest data
+will be found.
+
+
+4b. Login agent
+
+This script is the gcj_renew_login.py script and receives no positional
+arguments, and will renew the login cookie in the current configuration file
+with a new one.
+
+This script should not be used under regular operation, this is just included
+in case your login cookie expires or becomes invalid during a contest.
+
+
+4c. Input downloader
+
+This script is the gcj_download_input.py script and receives three positional
+arguments, the problem letter, the input size ('small' or 'large') and a submit
+id. The problem letter and the input size are always converted to uppercase and
+lowercase before using them, respectively, but the id is case-sensitive.
+
+This script downloads the specified input and stores it in a file inside the
+data directory. However, the flags --data-directory and --input-name are
+provided to override the default values and the ones in the configuration files.
+
+
+4d. Solution submitter
+
+This script is the gcj_submit_solution.py script and receives three positional
+arguments, the problem letter, the input size ('small' or 'large') and a submit
+id. Similar to the input downloader, both the problem letter and the input size
+are converted to uppercase and lowercase before using them, respectively, but
+the id is case-sensitive.
+
+If a directory is specified as an output file, this executable will zip it into
+a file before submitting, so the whole folder can be sent to the server.
+
+By default this script submits the specified output files along with the
+additional default source files specified in the configuration file. However,
+this script provides many options to alter its default behaviour:
+
+- Similar to the input downloader, the --data-directory option can be used to
+  choose another data directory, and the --output-name option can be used to
+  change the default name of the output file.
+
+- If additional source files are needed, the --add-source option can be used to
+  submit them along with the output files.
+
+- If the source files being uploaded are too big, the --zip-sources option can
+  be used to zip all the source files into a single file before submitting. This
+  options is smart and will not zip already zipped files.
+
+- The --ignore-zip option will indicate that all zip files inside a included
+  directory should be ignored, otherwise they will be added. However, zip files
+  specified directly in the source configuration or using the --add-source will
+  be included.
+
+- The --ignore-default-source option will indicate that all default source files
+  in the configuration file should be ignored, and only source files specified
+  through the --add-source option should be sent.
+
+- There are two different encondings to send the output to the server. If the
+  --gzip-content flag is specified the output and the source files will be
+  sent using gzip; if the --nogzip-content flag is specified the output and the
+  source files will be sent using text/plain. If no flag is specified, the data
+  will be sent using gzip.
+
+
+4e. Contest cleaner
+
+This script is the gcj_clear_contest.py script and receives no positional
+arguments. When this script is executed all contest-related information will be
+removed from the system, which does not include your source code, input or
+output files.

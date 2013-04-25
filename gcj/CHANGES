@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------------
+GCJ Command Line v1.2-beta1, released 2012-07-26
+
+WARNING: Previous versions of the commandline tool don't work anymore, because
+the problem information returned by the server changed its format.
+
+[Feature]: Check that the current version is accepted by the host.
+
+[Fix]: Modify tool to receive all problem and I/O set information from the
+       server, keeping support for arbitrary I/O sets.
+
+-------------------------------------------------------------------------------
+GCJ Command Line v1.1-beta1, released 2012-06-08
+
+Previous versions of the commandline tool still work, but will not be able to
+handle problems with I/O sets different from small/large.
+
+[Feature]: Support for arbitrary number of I/O sets for each problem. This
+           includes support for problems with no small I/O sets, no large I/O
+           sets and multiple I/O sets of the same type.
+
+-------------------------------------------------------------------------------
+GCJ Command Line v1.0-beta4, released 2011-06-03
+
+[Feature]: Source files specified in the configuration files and using the -a
+           option in gcj_submit_solution.py can now be glob patterns.
+
+[Feature]: In the tools/ directory there is an update_hashbangs.py script to
+           change the hashbang line of a bulk of python files using a single
+           command.
+
+[Fix]: --base_dir option was not working in gcj_submit_solution.py.
+
+[Fix]: Default value for --base_dir was not following symlinks properly.
+
+[Fix]: User status script was crashing when the user is not logged in or did
+       not participate in the contest.
+
+[Fix]: Configuration file reading was crashing when spaces were inserted before
+       the opening brace. A fix was made to clean the configuration file before
+       attempting to parse it.
+
+-------------------------------------------------------------------------------
+GCJ Command Line v1.0-beta3, released 2011-05-12
+
+[Feature]: New script to get the current user status from the server, showing
+           the time at which each input was solved, wrong tries and time left
+           for the current attempt.
+
+[Feature]: Add support to parametrize configuration file paths with the base
+           directory. Use --base_dir option to override auto-detection.
+
+[Feature]: Init contest script now autodetects the current contest if no contest
+           id is specified in the arguments.
+
+[Fix]: Use memory-mapped files to compress and decompress network traffic and
+       source files, no need for temporary files.
+
+-------------------------------------------------------------------------------
+GCJ Command Line v1.0-beta2, released 2011-05-05
+
+[Feature]: Added support for practice contests.
+
+-------------------------------------------------------------------------------
+GCJ Command Line v1.0-beta1, released 2011-04-29
+
+[Feature]: Initial release.
