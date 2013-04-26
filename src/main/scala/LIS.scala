@@ -2,6 +2,13 @@ package snippets.algorithms
 
 import scala.collection.mutable
 
+// Note: these algorithms are both n^2. There's an n log n algorithm
+// scan linearly through the array
+// we keep a side vector and maintiain the invariant that, on iteration i, side(n)
+// is the highest number in xs(0:i) that completes a subsequences of length n
+// we can update the side vector by binary searching and inserting at the right location,
+// hence the log n
+
 object LIS {
   def main(args: Array[String]) {
     println(solve(Array(7,3,8,4,2,6,7)))
