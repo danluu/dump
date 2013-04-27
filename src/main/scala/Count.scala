@@ -2,10 +2,41 @@ package snippets.algorithms
 
 object Count {
   def main(args: Array[String]) {
-    val lc = new LogCount()
-    Iterator.continually(lc.inc).takeWhile(_ < 33).foreach { i =>
-      println(i)
+    val lgc = new LogCount()
+    var realI = 0
+    Iterator.continually(lgc.inc).takeWhile(_ < 33).foreach { i =>
+      realI = realI + 1
+      println(s"${realI} ${i}")
     }
+
+    val linc = new LinearCounter(100)
+    realI = 0
+    Iterator.continually(linc.inc).takeWhile(_ < 33.0).foreach { i =>
+      realI = realI + 1
+      println(s"${realI} ${i}")
+    }
+  }
+}
+
+class LinearCounter(len: Int) {
+  val rng = new scala.util.Random()
+
+  // using a java bitset because it has a built in cardinality method
+  // we could calculate cardinality pretty easily, but why?
+  val bits = new java.util.BitSet(len)
+
+  def count(): Double = {
+    if (len == bits.cardinality()) {
+      Double.PositiveInfinity
+    } else {
+      len.toDouble * math.log(len.toDouble / (len.toDouble - bits.cardinality()))
+    }
+  }
+
+  // if we were counting items, we'd want to use the hashcode for the items here
+  def inc(): Double = {
+    bits.set(rng.nextInt(len))
+    count()
   }
 }
 
