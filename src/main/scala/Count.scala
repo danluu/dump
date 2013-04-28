@@ -13,7 +13,7 @@ object Count {
 
     val linc = new LinearCounter(100)
     realI = 0
-    Iterator.continually(linc.inc).takeWhile(_ < 33.0).foreach { i =>
+    Iterator.continually(linc.inc).takeWhile(_ < 200.0).foreach { i =>
       realI = realI + 1
       println(s"${realI} ${i}")
     }
@@ -34,7 +34,7 @@ class LinearCounter(len: Int) {
   // by linearity of expectation, E[empty] = k(1 - 1/k)^n
   // lim as k,n -> inf
   // k(1 - 1/k)^n = 
-  // by L'Hopital's rule
+  // by log transform + L'Hopital's rule
   // ke^(-n/k)
   def count(): Double = {
     if (len == bits.cardinality()) {
