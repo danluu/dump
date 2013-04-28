@@ -25,6 +25,15 @@ class LinearCounter(len: Int) {
   // we could calculate cardinality pretty easily, but why?
   val bits = new java.util.BitSet(len)
 
+
+  // for len = k,
+  // Pr(bit i == 0) after hashing on item: 1 - 1/k
+  // after n items: (1 - 1/k)^n
+  // by linearity of expectation, E[empty] = k(1 - 1/k)^n
+  // lim as k,n -> inf
+  // k(1 - 1/k)^n = 
+  // by L'Hopital's rule
+  // ke^(-n/k)
   def count(): Double = {
     if (len == bits.cardinality()) {
       Double.PositiveInfinity
