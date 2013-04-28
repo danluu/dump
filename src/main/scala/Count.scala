@@ -1,5 +1,7 @@
 package snippets.algorithms
 
+// Note: we can do better, using HyperLogLog: http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf
+
 object Count {
   def main(args: Array[String]) {
     val lgc = new LogCount()
