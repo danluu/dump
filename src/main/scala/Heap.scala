@@ -11,7 +11,14 @@ object ArrayHeap {
     println(h.toString)
     h.insert(10)
     println(h.toString)
-
+    h.deleteMin()
+    println(h.toString)
+    h.deleteMin()
+    println(h.toString)
+    h.deleteMin()
+    println(h.toString)
+    h.deleteMin()
+    println(h.toString)
   }
 }
 
@@ -23,6 +30,7 @@ class ArrayHeap {
   var len = 0
 
   override def toString() = {
+//    s"${len}: ${h.slice(0,len+2).mkString(" ")}"
     s"${len}: ${h.slice(0,len).mkString(" ")}"
   }
 
@@ -38,6 +46,34 @@ class ArrayHeap {
       i = (i-1)/2
     }
     len = len + 1
+  }
+
+  def deleteMin() = {
+    if (len > 0) {
+      var i = 0
+      var j = 0
+      swap(0,len - 1)
+      // FIXME: this is a mess
+      var left = math.min(2*i + 1, math.max(len-2,0))
+      var right = math.min(2*i + 2, math.max(len-2,0))
+      while (j < 6 && h(i) > h(left) || h(i) > h(right)) {
+        j = j + 1
+        println(s"pre swap ${this.toString()}")
+        if (h(left) > h(right)) {
+          println(s"swapping ${i} ${right} | ${h(i)} ${h(right)}")
+          swap(i, right)
+          i = right
+
+        } else {
+          println(s"swapping ${i} ${left} | ${h(i)} ${h(left)}")
+          swap(i, left)
+          i = left
+        }
+        left = math.min(2*i + 1, math.max(len-2,0))
+        right = math.min(2*i + 2, math.max(len-2,0))
+      }
+      len = len - 1
+    }
   }
 
   def swap(i: Int, j: Int) = {
