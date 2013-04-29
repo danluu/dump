@@ -76,6 +76,30 @@ class ArrayHeap {
     }
   }
 
+  def left(i: Int) = 2*i + 1
+  def right(i: Int) = 2*i + 2
+
+  // Thought about using a recursive siftDown instead of the deleteMin
+  // fn above, but this doesn't seem simpler
+  def siftDown(i: Int): Unit = {
+    var swapIdx = 0
+    if (right(i) > (len - 1)) {
+      if (left(i) > (len - 1))
+        return
+      else
+        swapIdx = left(i)
+    } else {
+      if (h(right(i))  > h(left(i)))
+        swapIdx = left(i)
+      else
+        swapIdx = right(i)
+    }
+    if (h(i) > h(swapIdx)) {
+      swap(i,swapIdx)
+      siftDown(swapIdx)
+    } 
+  }
+
   def swap(i: Int, j: Int) = {
     val temp = h(i)
     h(i) = h(j)
