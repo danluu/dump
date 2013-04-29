@@ -51,13 +51,11 @@ class ArrayHeap {
   def deleteMin() = {
     if (len > 0) {
       var i = 0
-      var j = 0
       swap(0,len - 1)
       // FIXME: this is a mess
       var left = math.min(2*i + 1, math.max(len-2,0))
       var right = math.min(2*i + 2, math.max(len-2,0))
-      while (j < 6 && h(i) > h(left) || h(i) > h(right)) {
-        j = j + 1
+      while (h(i) > h(left) || h(i) > h(right)) {
         println(s"pre swap ${this.toString()}")
         if (h(left) > h(right)) {
           println(s"swapping ${i} ${right} | ${h(i)} ${h(right)}")
