@@ -10,10 +10,10 @@ class RedBlack[T](implicit ord: Ordering[T]) {
   }
 
   case object End extends Tree {
-    override def ins: Tree = Node(Red, End, x, End) 
+    override def ins(x: T): Tree = Node(Red, End, x, End) 
   }
 
   case class Node(c: Color, l: Tree, a: T, r: Tree) extends Tree {
-
+    override def ins(x: T): Tree = Node(Red, End, x, End)
   }
 }
