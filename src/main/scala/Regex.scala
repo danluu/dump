@@ -40,6 +40,12 @@ object RegexEngine{
   def matches(x: Regex, s: String): Boolean = success(run(x,s))
 
   def main(args: Array[String]) = {
-    
+    val a = Lit('a')
+    assert(matches(a, "a") == true)
+    assert(matches(a, "aa") == false) //!
+    val aStar = Star(a)
+    assert(matches(aStar, "") == true)
+    assert(matches(aStar, "a") == true)
+    assert(matches(aStar, "aa") == true)
   }
 }
