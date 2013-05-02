@@ -41,6 +41,7 @@ object RegexEngine{
 
   def main(args: Array[String]) = {
     val a = Lit('a')
+    val b = Lit('b')
     assert(matches(a, "a") == true)
     assert(matches(a, "aa") == false) //!
     val aStar = Star(a)
@@ -51,5 +52,22 @@ object RegexEngine{
     assert(matches(aPlus, "") == false)
     assert(matches(aPlus, "a") == true)
     assert(matches(aPlus, "aa") == true) 
+    val aStarb = Concat(aStar, b)
+    assert(matches(aStarb, "b") == true)
+    assert(matches(aStarb, "ab") == true)
+    assert(matches(aStarb, "aab") == true)
+    assert(matches(aStarb, "aaba") == false)
+    val aStara = Concat(aStar, a)
+    assert(matches(aStara, "a") == true)
+    assert(matches(aStara, "aa") == true)
+    assert(matches(aStara, "aaa") == true)
+    val aStarab = Concat(aStara, b)
+    assert(matches(aStarab, "ab") == true)
+    assert(matches(aStarab, "aab") == true)
+    assert(matches(aStarab, "aaab") == true)
+    assert(matches(aStarab, "aaa") == false)
+    val ab = Concat(a, b)
+    val abStar = Star(ab)
+    println(matches(abStar,"a"))
   }
 }
