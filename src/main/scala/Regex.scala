@@ -22,7 +22,7 @@ object RegexEngine{
   def step(x: Regex, c: Char): Regex = x match {
     case Nil => Nil
     case Empty => Nil
-    case Lit(regexC: Char) => 
+    case Lit(regexC) => 
       if (regexC == c) 
         Empty
       else 
@@ -47,5 +47,9 @@ object RegexEngine{
     assert(matches(aStar, "") == true)
     assert(matches(aStar, "a") == true)
     assert(matches(aStar, "aa") == true)
+    val aPlus = Concat(a, aStar)
+    assert(matches(aPlus, "") == false)
+    assert(matches(aPlus, "a") == true)
+    assert(matches(aPlus, "aa") == true) 
   }
 }
