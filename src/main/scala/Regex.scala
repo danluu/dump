@@ -27,12 +27,12 @@ object RegexEngine{
         Empty
       else 
         Nil
-    case Union(left, right) => Union(step(left, c), step(right, c))
-    case Concat(left, right) =>
-      if (success(left)) 
-        Union(Concat(step(left, c), right), step(right, c))
+    case Union(l, r) => Union(step(l, c), step(r, c))
+    case Concat(l, r) =>
+      if (success(l)) 
+        Union(Concat(step(l, c), r), step(r, c))
       else 
-        Concat(step(left, c), right)
+        Concat(step(l, c), r)
     case Star(regexX) => Concat(step(regexX, c), Star(regexX))
   }
 
