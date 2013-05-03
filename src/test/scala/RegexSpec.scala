@@ -37,6 +37,9 @@ class TreeSuite extends FunSuite {
     assert(matches(aStarab, "aaa") == false)
     val ab = Concat(a, b)
     val abStar = Star(ab)
-    println(matches(abStar,"a"))
+    assert(matches(abStar,"a") == false)
+    assert(matches(abStar,"ab") == true)
+    assert(matches(abStar,"aba") == false)
+    assert(matches(abStar,"abab") == true)
   }
 }
