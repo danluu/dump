@@ -12,8 +12,9 @@ object SillyFns {
     t
   }
 
-  def main(args: Array[String]) = {
+  def main(args: Array[String]): Unit = {
     println(byname(myTime()))
+    println(List(41, "cat") collect { case i: Int ⇒ i + 1 })
   }
 
 }
