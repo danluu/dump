@@ -20,7 +20,7 @@ object SillyFns {
   }
 
   def myForeach[T](xs: Seq[T], f: T => Unit): Unit = xs match {
-    case x if xs.isEmpty => Unit //too bad we can't just write Nil?
+    case Seq() => Unit
     case _ => f(xs.head); myForeach(xs.tail, f)
   }
 
