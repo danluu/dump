@@ -1,6 +1,8 @@
 package snippets.algorithms
 // Inspired by https://gist.github.com/happy4crazy/5489636
 
+import scala.util.parsing.combinator._
+
 sealed trait Regex
 case object Nil extends Regex
 case object Empty extends Regex
@@ -8,6 +10,14 @@ case class Lit(c: Char) extends Regex
 case class Union(left: Regex, right: Regex) extends Regex
 case class Concat(right: Regex, left: Regex) extends Regex
 case class Star(x: Regex) extends Regex
+
+// sort of silly to use RegexParsers to implement this
+// but it's just a stand in for manually tokenizing it, really
+object MyRegexParsers extends RegexParsers {
+  def star: Parser[String] = """*""".r
+  def bar: Parser[String] = """|""".r
+  def lit: Parser[String] = """.""".r
+}
 
 object RegexEngine{
   def success(x: Regex): Boolean = x match {
