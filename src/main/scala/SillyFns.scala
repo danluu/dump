@@ -53,6 +53,21 @@ object SillyFns {
     myFoldLeft(xs, Map[U, List[T]](), { (acc: Map[U, List[T]], x: T) => acc.updated(f(x), x :: acc.getOrElse(f(x), List[T]())) })
   }
 
+  def flattenAll[T](xs: List[Any]): List[Any] = xs flatMap {
+    case ys: List[_] => flattenAll(ys)
+    case x => List(x)  
+  }
+
+  def flattenOnce[T](xs: List[Any]): List[Any] = xs.flatMap {
+    case ys: List[_] => ys
+    case x => List(x)
+  }
+
+//  def myFlatMap[T, U](xs: Seq[T], f: T => U): Seq[U] = {
+//
+//  }
+
+
   def main(args: Array[String]): Unit = {
     println(byname(myTime()))
     println(List(41, "cat") collect { case i: Int ⇒ i + 1 })
@@ -66,6 +81,11 @@ object SillyFns {
     val a = List(1,2,3)
     val b = List(4,5,6)
     println(a.myAppend(b))
+
+    println("flattens!")
+    println(List(List(1, 1), 2, List(3, List(5, 8))))
+    println(flattenAll(List(List(1, 1), 2, List(3, List(5, 8)))))
+    println(flattenOnce(List(List(1, 1), 2, List(3, List(5, 8)))))
 
   }
 
