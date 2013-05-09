@@ -1,5 +1,11 @@
 package snippets.algorithms
 
+class SillyList[T](x: List[T]) {
+  def myAppend(y: List[T]): List[T] = {
+    x ++ y
+  }
+}
+
 object SillyFns {
 
   def myTime() = {
@@ -55,6 +61,12 @@ object SillyFns {
     println(myGroupBy0(List("abc","aa","bo","foo","!"),{x:String => x.length}))
     println(myGroupByImmutable(List("abc","aa","bo","foo","!"),{x:String => x.length}))
     println(myGroupByImmutable0(List("abc","aa","bo","foo","!"),{x:String => x.length}))
+
+    implicit def sillifyList[T](xs: List[T]) = new SillyList[T](xs)
+    val a = List(1,2,3)
+    val b = List(4,5,6)
+    println(a.myAppend(b))
+
   }
 
 }
