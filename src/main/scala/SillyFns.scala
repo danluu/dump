@@ -80,6 +80,13 @@ object SillyFns {
       }) ++ flattenAll0(xs)
   }
 
+
+  def flattenAll1[T](xs: List[T]): List[Any] = xs match {
+    case List() => List()
+    case (x:List[_])::xs => flattenAll1(x) ++ flattenAll1(xs)
+    case x::xs => List(x) ++ flattenAll1(xs)
+  }
+
 //  def myFlatMap[T](xs: List[Any], f: Any => Iterable[T]): List[T] = xs match {
 //    f(xs.head).elements ++ myFlatMap(xs.tail, f)
 //  }
@@ -105,8 +112,9 @@ object SillyFns {
 
     println("flattens!")
     println(List(List(1, 1), 2, List(3, List(5, 8))))
-    println(s"flattenAll ${flattenAll(List(List(1, 1), 2, List(3, List(5, 8))))}")
+    println(s"flattenAll  ${flattenAll(List(List(1, 1), 2, List(3, List(5, 8))))}")
     println(s"flattenAll0 ${flattenAll0(List(List(1, 1), 2, List(3, List(5, 8))))}")
+    println(s"flattenAll1 ${flattenAll1(List(List(1, 1), 2, List(3, List(5, 8))))}")
     println(flattenOnce(List(List(1, 1), 2, List(3, List(5, 8)))))
 
   }
