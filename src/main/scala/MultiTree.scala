@@ -6,7 +6,7 @@ sealed trait MultiTree
 case class Leaf(x: Int) extends MultiTree
 case class MNode(nodes: List[MultiTree]) extends MultiTree
 
-class FoundMatch(message: String = null, cause: Throwable = null, item: Int) extends RuntimeException(message, cause)
+case class FoundMatch(message: String = null, cause: Throwable = null, item: Int) extends RuntimeException(message, cause)
 
 object MTreeToy {
   def main(args: Array[String]) = {
@@ -23,7 +23,7 @@ object MTreeToy {
       findHelper(t, x)
       None
     } catch {
-      case FoundMatch(item=y) => Some(y)
+      case FoundMatch(_, _, y) => Some(y)
     }
   }
 
