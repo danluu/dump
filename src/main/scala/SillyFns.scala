@@ -99,11 +99,7 @@ object SillyFns {
   def main(args: Array[String]): Unit = {
     println(byname(myTime()))
     println(List(41, "cat") collect { case i: Int ⇒ i + 1 })
-    println(List("abc","aa","bo","foo","!").groupBy(_.length))
-    println(myGroupBy(List("abc","aa","bo","foo","!"),{x:String => x.length}))
-    println(myGroupBy0(List("abc","aa","bo","foo","!"),{x:String => x.length}))
-    println(myGroupByImmutable(List("abc","aa","bo","foo","!"),{x:String => x.length}))
-    println(myGroupByImmutable0(List("abc","aa","bo","foo","!"),{x:String => x.length}))
+
 
     implicit def sillifyList[T](xs: List[T]) = new SillyList[T](xs)
     val a = List(1,2,3)
@@ -111,12 +107,8 @@ object SillyFns {
     println(a.myAppend(b))
 
     println("flattens!")
-    println(List(List(1, 1), 2, List(3, List(5, 8))))
-    println(s"flattenAll  ${flattenAll(List(List(1, 1), 2, List(3, List(5, 8))))}")
-    println(s"flattenAll0 ${flattenAll0(List(List(1, 1), 2, List(3, List(5, 8))))}")
-    println(s"flattenAll1 ${flattenAll1(List(List(1, 1), 2, List(3, List(5, 8))))}")
-    println(flattenOnce(List(List(1, 1), 2, List(3, List(5, 8)))))
 
+    println(flattenOnce(List(List(1, 1), 2, List(3, List(5, 8)))))
   }
 
 }

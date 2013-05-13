@@ -17,6 +17,7 @@ object MyRegexParsers extends RegexParsers {
   def star: Parser[String] = """*""".r
   def bar: Parser[String] = """|""".r
   def lit: Parser[String] = """.""".r
+  
 }
 
 object RegexEngine{
