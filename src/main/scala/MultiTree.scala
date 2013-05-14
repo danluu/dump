@@ -27,23 +27,16 @@ object MTreeToy {
 
 
   def find(t: MultiTree, x: Int) = {
-    def findHelper(t: MultiTree, x: Int): Int = t match {
-      case Leaf(y) =>
-        if (x == 0)
-          throw new FoundMatch(item = y)
-        else
-          1
-      case MNode(l) =>
+    def findHelper(t: MultiTree, x: Int): Int = (t, x) match {
+      case (Leaf(y),  0) => throw new FoundMatch(item = y)
+      case (Leaf(y),  _) => 1
+      case (MNode(l), _) =>
         var i = 0
-        l.foreach{ n =>
-          val temp = findHelper(n, x - i)
-          i = i + temp
-        }
-      i
+        l.foreach{ n => i = i + findHelper(n, x - i) }
+        i
     }
     try {
-      findHelper(t, x)
-      None
+      findHelper(t, x); None
     } catch {
       case FoundMatch(_, _, y) => Some(y)
     }
@@ -51,17 +44,13 @@ object MTreeToy {
 
   // inspiried by Raul
   def findImmutable(t: MultiTree, x: Int) = {
-    def findImmutableHelper(t: MultiTree, x: Int): PolyReturn = t match {
-      case Leaf(y) =>
-        if (x == 0)
-          Found(y)
-        else
-          Continue(x - 1)
-      case MNode(List()) =>
-        Continue(x)
-      case MNode(nodes) =>
+    def findImmutableHelper(t: MultiTree, x: Int): PolyReturn = (t, x) match {
+      case (Leaf(y),       0) => Found(y)
+      case (Leaf(y),       _) => Continue(x - 1)
+      case (MNode(List()), _) => Continue(x)
+      case (MNode(nodes),  _) =>
         findImmutableHelper(nodes.head, x) match {
-        case Found(y) => Found(y)
+          case Found(y) => Found(y)
           case Continue(x)  => findImmutableHelper(MNode(nodes.tail), x)
         }
     }
