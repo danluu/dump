@@ -27,27 +27,26 @@ object MTreeToy {
 
 
   def find(t: MultiTree, x: Int) = {
+    def findHelper(t: MultiTree, x: Int): Int = t match {
+      case Leaf(y) =>
+        if (x == 0)
+          throw new FoundMatch(item = y)
+        else
+          1
+      case MNode(l) =>
+        var i = 0
+        l.foreach{ n =>
+          val temp = findHelper(n, x - i)
+          i = i + temp
+        }
+      i
+    }
     try {
       findHelper(t, x)
       None
     } catch {
       case FoundMatch(_, _, y) => Some(y)
     }
-  }
-
-  def findHelper(t: MultiTree, x: Int): Int = t match {
-    case Leaf(y) => 
-      if (x == 0)
-        throw new FoundMatch(item = y)
-      else 
-        1
-    case MNode(l) =>
-      var i = 0
-      l.foreach{ n =>
-        val temp = findHelper(n, x - i)        
-        i = i + temp
-      }
-      i
   }
 
   // inspiried by Raul
