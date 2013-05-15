@@ -10,12 +10,12 @@ sealed trait PolyReturn
 case class Continue(x: Int) extends PolyReturn
 case class Found(x: Int) extends PolyReturn
 
-case class FoundMatch(message: String = null, cause: Throwable = null, item: Int) extends RuntimeException(message, cause)
+case class FoundMatch(item: Int) extends Exception
 
 object MTreeToy {
   def find(t: MultiTree, x: Int) = {
     def findHelper(t: MultiTree, x: Int): Int = (t, x) match {
-      case (Leaf(y),  0) => throw new FoundMatch(item = y)
+      case (Leaf(y),  0) => throw new FoundMatch(y)
       case (Leaf(y),  _) => 1
       case (MNode(l), _) =>
         var i = 0
@@ -25,7 +25,7 @@ object MTreeToy {
     try {
       findHelper(t, x); None
     } catch {
-      case FoundMatch(_, _, y) => Some(y)
+      case FoundMatch(y) => Some(y)
     }
   }
 
