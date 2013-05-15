@@ -13,19 +13,6 @@ case class Found(x: Int) extends PolyReturn
 case class FoundMatch(message: String = null, cause: Throwable = null, item: Int) extends RuntimeException(message, cause)
 
 object MTreeToy {
-  def main(args: Array[String]) = {
-    val t = MNode(List(Leaf(0), Leaf(1), Leaf(2), 
-      MNode(List(
-        MNode(List
-          (Leaf(3), Leaf(4))),
-        Leaf(5), Leaf(6)))))
-    (0 to 7).foreach{i =>
-      println(find(t,i))
-      println(findImmutable(t,i))
-    }
-  }
-
-
   def find(t: MultiTree, x: Int) = {
     def findHelper(t: MultiTree, x: Int): Int = (t, x) match {
       case (Leaf(y),  0) => throw new FoundMatch(item = y)
