@@ -4,7 +4,7 @@ object Permutations{
   def removeOne(x: Int, xs: List[Int]) = xs diff List(x)
 
   def permsRecursive(xs: List[Int]): List[List[Int]] = xs match {
-    case Nil => List(List[Int]())
+    case List() => List(List[Int]())
     case _ => xs.flatMap{x =>
       permsRecursive(removeOne(x,xs)).map{ys => x::ys}
     }
@@ -61,6 +61,11 @@ object Permutations{
     } else {
       return None
     }
+  }
+
+  // generate a rank order on permutations
+  def permRank(xs: List[Int]) = {
+
   }
 
   def main(args: Array[String]){

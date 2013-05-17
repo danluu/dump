@@ -1,5 +1,7 @@
 package snippets.algorithms
 
+import scala.collection.mutable
+
 class SillyList[T](x: List[T]) {
   def myAppend(y: List[T]): List[T] = {
     x ++ y
@@ -9,6 +11,12 @@ class SillyList[T](x: List[T]) {
 object SillyFns {
 
   def myTime() = {
+    println("Getting time")
+    System.nanoTime
+  }
+
+
+  def myTime2(x: Int) = {
     println("Getting time")
     System.nanoTime
   }
@@ -87,6 +95,17 @@ object SillyFns {
     case x::xs => List(x) ++ flattenAll1(xs)
   }
 
+  def memoize[U,T](f: U => T): U => T = {
+    val mem = scala.collection.mutable.Map[U,T]()
+
+    def g(input: U): T = mem.get(input) match {
+      case Some(x) => x
+      case None => mem.update(input,f(input)); mem(input)
+    }
+
+    g
+  }
+
 //  def myFlatMap[T](xs: List[Any], f: Any => Iterable[T]): List[T] = xs match {
 //    f(xs.head).elements ++ myFlatMap(xs.tail, f)
 //  }
@@ -109,6 +128,17 @@ object SillyFns {
     println("flattens!")
 
     println(flattenOnce(List(List(1, 1), 2, List(3, List(5, 8)))))
+//    println(myTime())
+//    println(myTime())
+    val memTime = memoize(myTime2)
+    println(memTime(0))
+    println(memTime(1))
+    println(memTime(2))
+    println("memoized")
+    println(memTime(0))
+    println(memTime(1))
+    println(memTime(2))
+
   }
 
 }
