@@ -2,6 +2,12 @@ package snippets.algorithms
 
 // Note: we can do better, using HyperLogLog: http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf
 
+// TODO: write this down in Verilog.
+// For implementing performance counters (or counter where we can sacrifice precision), we can use a Linear Counter or a HyperLogLog counter
+// if we want perfect precision at low counts we can have an extra bit, and flip into imprecise mode when we overflow the regular counter.
+// This seems often superior to the current x86 perf counter mechanism for events that may happen very often, in terms of storage space
+// We often don't need a perfect count for counters that get very large, so we can save some bits, which usually matters more in hardware than in software
+
 object Count {
   def main(args: Array[String]) {
     val lgc = new LogCount()
