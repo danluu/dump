@@ -1,1 +1,1 @@
-Just messing around. Working with Marek on some old gcj practice problems has convinced me that gcj problems are fun. Too bad I didn't realize that until after the qualifier. Oh well. Maybe next year.
+Playing around with misc. nonsense
