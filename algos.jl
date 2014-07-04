@@ -13,13 +13,33 @@ function read_jobs(fname)
     return a
 end
 
+function compare_difference(x, y)
+    if x[1] - x[2] > y[1] - y[2] 
+        return true
+    elseif x[1] - x[2] < y[1] - y[2] 
+        return false
+    else 
+        return x[1] > y[1] 
+    end
+end
+
+function compare_ratio(x, y)
+    if x[1] / x[2] > y[1] / y[2] 
+        return true
+    elseif x[1] / x[2] < y[1] / y[2] 
+        return false
+    else 
+        return x[1] > y[1] 
+    end
+end
+
 # 'correct' uses the ratio between the weight and the length
 # incorrect uses the difference
 function order_jobs(a::Array, correct::Bool)
     if (correct) 
-        ordered = sort(a, by=x->(x[1] / x[2]), rev=true)
+        ordered = sort(a, lt=compare_ratio)
     else
-        ordered = sort(a, by=x->(x[1] - x[2]), rev=true)
+        ordered = sort(a, lt=compare_difference)
     end
     return ordered
 end
@@ -44,4 +64,5 @@ end
 assert(compute_weighted_sum([(3,1), (2,2), (1,3)]) == 15)
 assert(problem1("1-1.txt", false) == 11336)
 assert(problem1("1-1.txt", true) == 10548)
-
+assert(problem1("1-2.txt", false) == 145924)
+assert(problem1("1-2.txt", true) == 138232)
