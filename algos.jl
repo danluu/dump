@@ -60,3 +60,71 @@ assert(problem1("1-1.txt", false) == 11336)
 assert(problem1("1-1.txt", true) == 10548)
 assert(problem1("1-2.txt", false) == 145924)
 assert(problem1("1-2.txt", true) == 138232)
+print("Problem 1: $(problem1("jobs.txt", false))\n")
+print("Problem 2: $(problem1("jobs.txt", true))\n")
+
+function read_edges(fname)
+    f = open(fname)
+    line = readline(f)
+    vertices, edges = tuple(map(int, split(line))...)
+    d = Dict()
+    # d could be an array -- the graph is connected, so we know every
+    # vertex has at least one edge.
+    for i in 1:edges
+        # tuple is (vertex, vertex, weight)
+        line = readline(f)
+        v1, v2, weight = tuple(map(int, split(line))...)
+        if !haskey(d, v1)
+            d[v1] = Dict()
+        end
+        
+        if !haskey(d, v2)
+            d[v2] = Dict()
+        end
+
+        d[v1][v2] = weight
+        d[v2][v1] = weight
+    end
+    return d
+end
+
+function compute_mst_naive(g)
+    # Assume graph is connected, so we can start with any node.
+    not_done = Dict()
+    weight = 0
+    for k in keys(g)
+        not_done[k] = true
+    end
+    done = {1 => true}
+    delete!(not_done, 1)
+
+    while !isempty(not_done)
+        existing, new = find_cheapest(done, g)       
+        weight += g[existing][new]
+        done[new] = true
+        delete!(not_done, new)
+    end
+
+    return weight
+end
+
+function find_cheapest(done, g)
+    cost = typemax(Int)
+    cheapest = (0, 0)
+    for v1 in keys(done)
+        for v2 in keys(g[v1])
+            if !haskey(done, v2) && g[v1][v2] < cost
+                cost = g[v1][v2]
+                cheapest = (v1, v2)
+            end
+        end
+    end
+    assert(cheapest != (0,0))
+    return cheapest
+end
+
+g = read_edges("1-3.txt")
+assert(compute_mst_naive(g) == 2624)
+
+g = read_edges("edges.txt")
+print("Problem 3: $(compute_mst_naive(g))\n")
