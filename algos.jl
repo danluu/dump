@@ -13,8 +13,14 @@ function read_jobs(fname)
     return a
 end
 
-function order_jobs_incorrectly(a::Array)
-    ordered = sort(a, by=x->(x[1] - x[2]), rev=true)
+# 'correct' uses the ratio between the weight and the length
+# incorrect uses the difference
+function order_jobs(a::Array, correct::Bool)
+    if (correct) 
+        ordered = sort(a, by=x->(x[1] / x[2]), rev=true)
+    else
+        ordered = sort(a, by=x->(x[1] - x[2]), rev=true)
+    end
     return ordered
 end
 
@@ -28,13 +34,14 @@ function compute_weighted_sum(a::Array)
     return sum
 end
 
-function problem1(fname::String)
+function problem1(fname::String, correct::Bool)
     raw_data = read_jobs(fname)
-    ordered_jobs = order_jobs_incorrectly(raw_data)
+    ordered_jobs = order_jobs(raw_data, correct)
     sum = compute_weighted_sum(ordered_jobs)
     return sum
 end
 
 assert(compute_weighted_sum([(3,1), (2,2), (1,3)]) == 15)
-assert(problem1("1-1.txt") == 11336)
+assert(problem1("1-1.txt", false) == 11336)
+assert(problem1("1-1.txt", true) == 10548)
 
