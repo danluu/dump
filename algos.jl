@@ -24,13 +24,7 @@ function compare_difference(x, y)
 end
 
 function compare_ratio(x, y)
-    if x[1] / x[2] > y[1] / y[2] 
-        return true
-    elseif x[1] / x[2] < y[1] / y[2] 
-        return false
-    else 
-        return x[1] > y[1] 
-    end
+    return x[1] / x[2] > y[1] / y[2]
 end
 
 # 'correct' uses the ratio between the weight and the length
