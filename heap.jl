@@ -32,7 +32,7 @@ function right(i::Int)
 end
 
 function Base.push!{T}(h::ArrayHeap{T}, x::T)
-    # Push onto the end and then bubble down to correct position
+    # Push onto the end and then bubble up to correct position
     push!(h.a, x)
     i = length(h.a)
     while (i > 1 && h.a[parent(i)] > h.a[i])

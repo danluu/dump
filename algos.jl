@@ -1,5 +1,9 @@
-# Some code for Tim Roughgarden's algorithms part 2 course
-
+# Read a text file with the following format
+# numjobs
+# weight length
+# weight length
+# ...
+# return an array with (weight, length) tuples
 function read_jobs(fname)
     f = open(fname)
     line = readline(f)
@@ -13,6 +17,8 @@ function read_jobs(fname)
     return a
 end
 
+# return true if weight(x) - length(x) > weight(y) - length(y)
+# ties are broken by largest weight
 function compare_difference(x, y)
     if x[1] - x[2] > y[1] - y[2] 
         return true
@@ -27,21 +33,21 @@ function compare_ratio(x, y)
     return x[1] / x[2] > y[1] / y[2]
 end
 
-# 'correct' uses the ratio between the weight and the length
-# incorrect uses the difference
-function order_jobs(a::Array, correct::Bool)
-    if (correct) 
-        ordered = sort(a, lt=compare_ratio)
+# is_correct uses the ratio between the weight and the length
+# not is_correct uses the difference
+function order_jobs(v::Vector{(Int, Int)}, is_correct::Bool)
+    if (is_correct) 
+        ordered = sort(v, lt=compare_ratio)
     else
-        ordered = sort(a, lt=compare_difference)
+        ordered = sort(v, lt=compare_difference)
     end
     return ordered
 end
 
-function compute_weighted_sum(a::Array)
+function compute_weighted_sum(v::Vector{(Int, Int)})
     time = 0
     sum = 0
-    for x in a
+    for x in v
         time += x[2]
         sum += x[1] * time
     end
@@ -67,7 +73,7 @@ function read_edges(fname)
     f = open(fname)
     line = readline(f)
     vertices, edges = tuple(map(int, split(line))...)
-    d = Dict()
+    d = Dict{Int, Dict{Int, Int}}()
     # d could be an array -- the graph is connected, so we know every
     # vertex has at least one edge.
     for i in 1:edges
@@ -75,11 +81,11 @@ function read_edges(fname)
         line = readline(f)
         v1, v2, weight = tuple(map(int, split(line))...)
         if !haskey(d, v1)
-            d[v1] = Dict()
+            d[v1] = Dict{Int, Int}()
         end
         
         if !haskey(d, v2)
-            d[v2] = Dict()
+            d[v2] = Dict{Int, Int}()
         end
 
         d[v1][v2] = weight
@@ -126,5 +132,30 @@ end
 g = read_edges("1-3.txt")
 assert(compute_mst_naive(g) == 2624)
 
-g = read_edges("edges.txt")
-print("Problem 3: $(compute_mst_naive(g))\n")
+# g = read_edges("edges.txt")
+# print("Problem 3: $(compute_mst_naive(g))\n")
+
+function read_clusters(fname::String)
+    f = open(fname)
+    line = readline(f)
+    vertices, edges = tuple(map(int, split(line))...)
+    d = Dict{Int, Dict{Int, Int}}()
+    # d could be an array -- the graph is connected, so we know every
+    # vertex has at least one edge.
+    for i in 1:edges
+        # tuple is (vertex, vertex, weight)
+        line = readline(f)
+        v1, v2, weight = tuple(map(int, split(line))...)
+        if !haskey(d, v1)
+            d[v1] = Dict{Int, Int}()
+        end
+        
+        if !haskey(d, v2)
+            d[v2] = Dict{Int, Int}()
+        end
+
+        d[v1][v2] = weight
+        d[v2][v1] = weight
+    end
+    return d
+end
