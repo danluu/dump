@@ -150,6 +150,28 @@ function read_clusters(fname::String)
     return (a, num_vertices)
 end
 
+function read_clusters_binary(fname::String)
+    f = open(fname)
+    line = readline(f)
+    num_vertices, num_bits = tuple(map(int, split(line))...)
+    d = Dict{Int, Bool}()
+
+    line = readline(f)
+    while line != ""
+        num = 0
+        line = chomp(line)
+        for c in line
+            if c != ' '
+                num = (num << 1) | parseint(c)
+            end
+        end
+        d[num] = true
+
+        line = readline(f)
+    end   
+    return d
+end
+
 function clustering_compare_edges(x, y)
     return x[3] < y[3]
 end
@@ -173,7 +195,7 @@ function find_cluster_distance(fname::String)
         
         if find(u, v1) != find(u, v2)
             if !done
-                union(u, v1, v2)
+                union(u, find(u, v1), find(u, v2))
             else
                 return distance
                 break
@@ -182,5 +204,60 @@ function find_cluster_distance(fname::String)
     end
 end
 
-assert(find_cluster_distance("3-1-a.txt")==134365)
+function single_bits(num_bits::Int)
+    max_shift = num_bits - 1
+    d = Dict{Int, Bool}()
+    for i in 0:max_shift
+        d[1 << i] = true
+    end
+    return d
+end
 
+function double_bits(num_bits::Int)
+    # this gets single and double bits.
+    max_shift = num_bits - 1
+    d = Dict{Int, Bool}()
+    bits = single_bits(num_bits)
+    for x in keys(bits)
+        for y in keys(bits)
+            d[x | y] = true
+        end
+    end
+    return d
+end
+
+function find_num_big_clusters()
+#    vertices = read_clusters_binary("clustering_small.txt")
+    vertices = read_clusters_binary("clustering_big.txt")
+    u = UF(Dict{Int, Int}(), Dict{Int, Vector{Int}}())
+
+    # make a hash of all vertices
+    for v in keys(vertices)
+        push!(u, v)
+    end
+    print("Read in vertices\n")
+
+    # generate all double bit pairs up to length 24
+    all_bits = double_bits(24)
+    
+    print("Generated $(length(all_bits)) bit pairs\n")
+    # create clusters for everything within hamming distance 2
+    for v1 in keys(vertices)
+        for b in keys(all_bits)
+            v2 = v1 $ b
+            if haskey(vertices, v2)
+                union(u, find(u, v1), find(u, v2))
+            end
+        end
+    end
+
+    return length(u)
+end
+
+assert(find_cluster_distance("3-1-a.txt")==134365)
+assert(find_cluster_distance("3-1-b.txt")==7)
+# print(find_cluster_distance("clustering1.txt"))
+# print(read_clusters_binary("clustering_small.txt"))
+# print(single_bits(4))
+# print(double_bits(24))
+print(find_num_big_clusters())

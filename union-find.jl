@@ -12,7 +12,15 @@ function make_union(num::Int)
     return u
 end
 
+function Base.push!(u::UF, x::Int)
+    u.parent[x] = x
+    u.children[x] = [x]
+end
+
 function union(u::UF, x::Int, y::Int)
+    if find(u, x) == find(u, y)
+        return
+    end
     if length(u.children[x]) > length(u.children[y]) 
         union_helper(u, x, y)
     else
@@ -59,3 +67,7 @@ assert(length(u0) == 1)
 assert(find(u0, 1) == find(u0, 2))
 assert(find(u0, 2) == find(u0, 3))
 assert(find(u0, 3) == find(u0, 4))
+
+# u1 = UF(Dict{Int, Int}(), Dict{Int, Vector{Int}}())
+u1 = make_union(0)
+push!(u1, 1)
