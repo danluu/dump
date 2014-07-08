@@ -72,26 +72,14 @@ print("Problem 2: $(problem1("jobs.txt", true))\n")
 function read_edges(fname)
     f = open(fname)
     line = readline(f)
-    vertices, edges = tuple(map(int, split(line))...)
-    d = Dict{Int, Dict{Int, Int}}()
-    # d could be an array -- the graph is connected, so we know every
-    # vertex has at least one edge.
-    for i in 1:edges
+    edges = tuple(map(int, split(line))...) - 1
+    a = Array(Int, Int, Int)()    
+    while line = readline(f)
         # tuple is (vertex, vertex, weight)
         line = readline(f)
-        v1, v2, weight = tuple(map(int, split(line))...)
-        if !haskey(d, v1)
-            d[v1] = Dict{Int, Int}()
-        end
-        
-        if !haskey(d, v2)
-            d[v2] = Dict{Int, Int}()
-        end
-
-        d[v1][v2] = weight
-        d[v2][v1] = weight
+        push!(a, tuple(map(int, split(line))...))       
     end
-    return d
+    return a
 end
 
 function compute_mst_naive(g)
@@ -138,24 +126,11 @@ assert(compute_mst_naive(g) == 2624)
 function read_clusters(fname::String)
     f = open(fname)
     line = readline(f)
-    vertices, edges = tuple(map(int, split(line))...)
-    d = Dict{Int, Dict{Int, Int}}()
-    # d could be an array -- the graph is connected, so we know every
-    # vertex has at least one edge.
-    for i in 1:edges
+    edges = tuple(map(int, split(line))...) - 1
+    a = Array(Int, Int, Int)()    
+    while line = readline(f)
         # tuple is (vertex, vertex, weight)
         line = readline(f)
-        v1, v2, weight = tuple(map(int, split(line))...)
-        if !haskey(d, v1)
-            d[v1] = Dict{Int, Int}()
-        end
-        
-        if !haskey(d, v2)
-            d[v2] = Dict{Int, Int}()
-        end
-
-        d[v1][v2] = weight
-        d[v2][v1] = weight
+        push!(a, tuple(map(int, split(line))...))       
     end
-    return d
 end

@@ -32,23 +32,30 @@ function find(u::UF, x::Int)
     return u.parent[x]
 end
 
+function Base.length(u::UF)
+    return length(u.children)
+end
+
 n0 = 4
 u0 = make_union(n0)
+assert(length(u0) == 4)
 for i in n0
     assert(u0.parent[i] == i)
     assert(find(u0, i) == i)
     assert(u0.children[i] == [i])
 end
 union(u0, 1, 2)
+assert(length(u0) == 3)
 assert(find(u0, 1) == find(u0, 2))
 assert(find(u0, 2) != find(u0, 3))
 assert(find(u0, 3) != find(u0, 4))
 union(u0, 3, 4)
+assert(length(u0) == 2)
 assert(find(u0, 1) == find(u0, 2))
 assert(find(u0, 2) != find(u0, 3))
 assert(find(u0, 3) == find(u0, 4))
 union(u0, find(u0, 3), find(u0, 2))
+assert(length(u0) == 1)
 assert(find(u0, 1) == find(u0, 2))
 assert(find(u0, 2) == find(u0, 3))
 assert(find(u0, 3) == find(u0, 4))
-print(u0)
