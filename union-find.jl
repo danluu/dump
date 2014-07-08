@@ -28,7 +28,7 @@ function union_helper(u::UF, x::Int, y::Int)
     delete!(u.children, y)
 end
 
-function find(u::UF, x::Int)
+function Base.find(u::UF, x::Int)
     return u.parent[x]
 end
 

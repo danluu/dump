@@ -66,8 +66,8 @@ assert(problem1("1-1.txt", false) == 11336)
 assert(problem1("1-1.txt", true) == 10548)
 assert(problem1("1-2.txt", false) == 145924)
 assert(problem1("1-2.txt", true) == 138232)
-print("Problem 1: $(problem1("jobs.txt", false))\n")
-print("Problem 2: $(problem1("jobs.txt", true))\n")
+# print("Problem 1: $(problem1("jobs.txt", false))\n")
+# print("Problem 2: $(problem1("jobs.txt", true))\n")
 
 function read_edges(fname)
     f = open(fname)
@@ -138,11 +138,49 @@ assert(compute_mst_naive(g) == 2624)
 function read_clusters(fname::String)
     f = open(fname)
     line = readline(f)
-    edges = tuple(map(int, split(line))...) - 1
-    a = Array(Int, Int, Int)()    
-    while line = readline(f)
+    num_vertices = int(line)
+    a = Array((Int, Int, Int), 0)    
+
+    line = readline(f)
+    while line != ""
         # tuple is (vertex, vertex, weight)
-        line = readline(f)
         push!(a, tuple(map(int, split(line))...))       
+        line = readline(f)
+    end
+    return (a, num_vertices)
+end
+
+function clustering_compare_edges(x, y)
+    return x[3] < y[3]
+end
+
+function sort_by_edge_weight(v::Vector{(Int, Int, Int)})
+    # put smallest edges on top
+    sort(v, lt=clustering_compare_edges)
+end
+
+include("union-find.jl")
+
+function find_cluster_distance(fname::String)
+    unsorted_edges, num_vertices = read_clusters(fname)
+    sorted_edges = sort_by_edge_weight(unsorted_edges)
+    u = make_union(num_vertices)
+    done = false
+    for (v1, v2, distance) in sorted_edges
+        if length(u) <= 4
+            done = true
+        end
+        
+        if find(u, v1) != find(u, v2)
+            if !done
+                union(u, v1, v2)
+            else
+                return distance
+                break
+            end
+        end
     end
 end
+
+assert(find_cluster_distance("3-1-a.txt")==134365)
+
