@@ -260,7 +260,7 @@ assert(find_cluster_distance("3-1-b.txt")==7)
 # print(read_clusters_binary("clustering_small.txt"))
 # print(find_num_big_clusters())
 
-function max_knapsack_value(fname::String)
+function max_knapsack_value(fname::String, memoize::Bool)
     # Note that we don't have a weight = 0 dimension in the array to work around
     # julia's 1 indexed arrays without kluding up every array access. This should
     # be fine except for degenerate cases.
@@ -284,7 +284,7 @@ function max_knapsack_value(fname::String)
         return (a, capacity, max_weight)
     end
 
-    function max_without_item(a, i, j)
+    function max_without_item(a::Array, i, j)
         # this would be more effficient if we made the array one larger and avoided
         # this branch all the time, but julia's 1-indexing makes that less readable.
         if i-1 > 0
@@ -294,7 +294,7 @@ function max_knapsack_value(fname::String)
         end
     end
 
-    function max_with_item(a, i, j, value, weight)
+    function max_with_item(a::Array, i, j, value, weight)
         # nonsense function to deal with julia's 1-based arrays
         if i-1 < 1 && j-weight >= 0 || j-weight == 0
             return value 
@@ -305,26 +305,55 @@ function max_knapsack_value(fname::String)
         end
     end
 
-    all_items, capacity, max_weight = read_items(fname)
-
-    a = Array(Int, length(all_items), capacity)
-
-    for i in 1:length(all_items)
-        for j in 1:capacity
+    function find_max_value(h, all_items, i, j)
+        if haskey(h, (i,j))
+            return h[(i,j)]
+        elseif i <= 0 || j <= 0
+            return 0
+        else
             value, weight = all_items[i]
-            a[i, j] = max_without_item(a, i, j) > max_with_item(a, i, j, value, weight) ?
-            max_without_item(a, i, j) : max_with_item(a, i, j, value, weight)
-        end
+            if (j-weight < 0)
+                h[(i,j)] = find_max_value(h, all_items, i-1, j)
+            else 
+                h[(i,j)] = max(find_max_value(h, all_items, i-1, j),
+                               find_max_value(h, all_items, i-1, j-weight) + value)
+            end
+            return h[(i,j)]
+        end        
     end
 
-    return a[length(all_items), capacity]
+    all_items, capacity, max_weight = read_items(fname)
+
+    if !memoize
+        a = Array(Int, length(all_items), capacity)
+
+        for i in 1:length(all_items)
+            for j in 1:capacity
+                value, weight = all_items[i]
+                a[i, j] = max_without_item(a, i, j) > max_with_item(a, i, j, value, weight) ?
+                max_without_item(a, i, j) : max_with_item(a, i, j, value, weight)
+            end
+        end
+
+        return a[length(all_items), capacity]
+    else
+        # (item, capacity) -> value
+        h = Dict{(Int, Int), Int}()
+        return find_max_value(h, all_items, length(all_items), capacity)
+    end
 end
 
-assert(max_knapsack_value("knapsack-test-1.txt") == 60)
-assert(max_knapsack_value("knapsack-test-1b.txt") == 60)
-assert(max_knapsack_value("knapsack-test-1c.txt") == 60)
-assert(max_knapsack_value("knapsack-test-2.txt") == 2700)
-assert(max_knapsack_value("knapsack-test-2b.txt") == 27000)
-assert(max_knapsack_value("knapsack-test-2c.txt") == 27000)
-print("$(max_knapsack_value("knapsack1.txt"))\n")
-print("$(max_knapsack_value("knapsack_big.txt"))\n")
+assert(max_knapsack_value("knapsack-test-1.txt", false) == 60)
+assert(max_knapsack_value("knapsack-test-1b.txt", false) == 60)
+assert(max_knapsack_value("knapsack-test-1c.txt", false) == 60)
+assert(max_knapsack_value("knapsack-test-2.txt", false) == 2700)
+assert(max_knapsack_value("knapsack-test-2b.txt", false) == 27000)
+assert(max_knapsack_value("knapsack-test-2c.txt", false) == 27000)
+assert(max_knapsack_value("knapsack-test-1.txt", true) == 60)
+assert(max_knapsack_value("knapsack-test-1b.txt", true) == 60)
+assert(max_knapsack_value("knapsack-test-1c.txt", true) == 60)
+assert(max_knapsack_value("knapsack-test-2.txt", true) == 2700)
+assert(max_knapsack_value("knapsack-test-2b.txt", true) == 27000)
+assert(max_knapsack_value("knapsack-test-2c.txt", true) == 27000)
+# print("$(max_knapsack_value("knapsack1.txt", true))\n")
+# print("$(max_knapsack_value("knapsack_big.txt", true))\n")
