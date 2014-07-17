@@ -258,6 +258,73 @@ assert(find_cluster_distance("3-1-a.txt")==134365)
 assert(find_cluster_distance("3-1-b.txt")==7)
 # print(find_cluster_distance("clustering1.txt"))
 # print(read_clusters_binary("clustering_small.txt"))
-# print(single_bits(4))
-# print(double_bits(24))
-print(find_num_big_clusters())
+# print(find_num_big_clusters())
+
+function max_knapsack_value(fname::String)
+    # Note that we don't have a weight = 0 dimension in the array to work around
+    # julia's 1 indexed arrays without kluding up every array access. This should
+    # be fine except for degenerate cases.
+
+    function read_items(fname::String)
+        f = open(fname)
+        line = readline(f)
+        capacity, num_items = tuple(map(int, split(line))...)
+        a = Array((Int, Int), num_items)
+
+        max_weight = 0
+        for i in 1:num_items
+            # tuple is (value, weight)
+            line = readline(f)
+            value, weight = tuple(map(int, split(line))...)
+            if weight > max_weight
+                max_weight = weight
+            end
+            a[i] = (value, weight)
+        end
+        return (a, capacity, max_weight)
+    end
+
+    function max_without_item(a, i, j)
+        # this would be more effficient if we made the array one larger and avoided
+        # this branch all the time, but julia's 1-indexing makes that less readable.
+        if i-1 > 0
+            return a[i-1, j]
+        else
+            return 0
+        end
+    end
+
+    function max_with_item(a, i, j, value, weight)
+        # nonsense function to deal with julia's 1-based arrays
+        if i-1 < 1 && j-weight >= 0 || j-weight == 0
+            return value 
+        elseif j-weight < 1 || i-1 < 1
+            return 0
+        else
+            return a[i-1, j-weight] + value
+        end
+    end
+
+    all_items, capacity, max_weight = read_items(fname)
+
+    a = Array(Int, length(all_items), capacity)
+
+    for i in 1:length(all_items)
+        for j in 1:capacity
+            value, weight = all_items[i]
+            a[i, j] = max_without_item(a, i, j) > max_with_item(a, i, j, value, weight) ?
+            max_without_item(a, i, j) : max_with_item(a, i, j, value, weight)
+        end
+    end
+
+    return a[length(all_items), capacity]
+end
+
+assert(max_knapsack_value("knapsack-test-1.txt") == 60)
+assert(max_knapsack_value("knapsack-test-1b.txt") == 60)
+assert(max_knapsack_value("knapsack-test-1c.txt") == 60)
+assert(max_knapsack_value("knapsack-test-2.txt") == 2700)
+assert(max_knapsack_value("knapsack-test-2b.txt") == 27000)
+assert(max_knapsack_value("knapsack-test-2c.txt") == 27000)
+print("$(max_knapsack_value("knapsack1.txt"))\n")
+print("$(max_knapsack_value("knapsack_big.txt"))\n")
