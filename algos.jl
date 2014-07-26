@@ -357,3 +357,40 @@ assert(max_knapsack_value("knapsack-test-2b.txt", true) == 27000)
 assert(max_knapsack_value("knapsack-test-2c.txt", true) == 27000)
 # print("$(max_knapsack_value("knapsack1.txt", true))\n")
 # print("$(max_knapsack_value("knapsack_big.txt", true))\n")
+
+function calculated_cost(a, m, n)
+    if n > size(a)[2] || m > size(a)[1] || n <= 0 || m <= 0 || m > n
+        return 0
+    else
+        return a[m,n]
+    end
+end
+
+function min_over_range(a::Array, input::Array, i, s)
+    min = typemax(Int)
+    for r in 1:(i+s)
+        cost = sum(input[1:i+s]) + 
+        calculated_cost(a, i, r-1) + 
+        calculated_cost(a, r+1, i+s)
+        min = cost < min ? cost : min
+    end
+    return min
+end
+
+function optimal_bst(input::Array)
+    n = length(input)
+    a = Array(Float64, n, n)
+    for s in 0:n-1 
+        for i in 1:n
+            # s = j - i
+            # i = j + s
+            if i+s <= n
+                a[i, i+s] = min_over_range(a, input, i, s)
+            end
+        end
+    end
+    print(a)
+    return a[1,n]
+end
+
+print(optimal_bst([.02, .97, .01]))
