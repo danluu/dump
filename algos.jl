@@ -368,8 +368,8 @@ end
 
 function min_over_range(a::Array, input::Array, i, s)
     min = typemax(Int)
-    for r in 1:(i+s)
-        cost = sum(input[1:i+s]) + 
+    for r in i:(i+s)
+        cost = sum(input[i:i+s]) + 
         calculated_cost(a, i, r-1) + 
         calculated_cost(a, r+1, i+s)
         min = cost < min ? cost : min
@@ -378,6 +378,7 @@ function min_over_range(a::Array, input::Array, i, s)
 end
 
 function optimal_bst(input::Array)
+    assert(sum(input) == 1)
     n = length(input)
     a = Array(Float64, n, n)
     for s in 0:n-1 
@@ -389,8 +390,8 @@ function optimal_bst(input::Array)
             end
         end
     end
-    print(a)
     return a[1,n]
 end
 
-print(optimal_bst([.02, .97, .01]))
+assert(optimal_bst([.1, .3, .6]) == 1.5)
+print(optimal_bst([.05, .4, .08, .04, .1, .1, .23]))
