@@ -1,0 +1,13 @@
+$ modinfo  hello.ko
+filename:       hello.ko
+srcversion:     141B7E1F75B2FB7B5A7E1A2
+depends:        
+vermagic:       3.2.0-65-generic SMP mod_unload modversions 
+
+$ sudo insmod hello.ko
+
+$ cat /proc/modules 
+hello 12426 0 - Live 0x0000000000000000 (P)
+...
+
+
