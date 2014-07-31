@@ -69,7 +69,7 @@ assert(problem1("1-2.txt", true) == 138232)
 # print("Problem 1: $(problem1("jobs.txt", false))\n")
 # print("Problem 2: $(problem1("jobs.txt", true))\n")
 
-function read_edges(fname)
+function read_edges(fname::String, directed::Bool)
     f = open(fname)
     line = readline(f)
     vertices, edges = tuple(map(int, split(line))...)
@@ -84,12 +84,14 @@ function read_edges(fname)
             d[v1] = Dict{Int, Int}()
         end
         
-        if !haskey(d, v2)
+        if !haskey(d, v2) && !directed
             d[v2] = Dict{Int, Int}()
         end
 
         d[v1][v2] = weight
-        d[v2][v1] = weight
+        if !directed
+            d[v2][v1] = weight
+        end
      end
     return d
 end
@@ -129,10 +131,10 @@ function find_cheapest(done, g)
     return cheapest
 end
 
-g = read_edges("1-3.txt")
+g = read_edges("1-3.txt", false)
 assert(compute_mst_naive(g) == 2624)
 
-# g = read_edges("edges.txt")
+# g = read_edges("edges.txt", false)
 # print("Problem 3: $(compute_mst_naive(g))\n")
 
 function read_clusters(fname::String)
@@ -400,14 +402,92 @@ assert(optimal_bst([.1, .3, .6]) == 1.5)
 # v1 v2 length
 # ...
 
-function read_graph4(fname::String)
-    # Can we re-use our old function? Maybe.
-    return read_edges(fname)
+function read_graph4(fname::String, directed::Bool)
+    # This is similar to read_edges, but we can't quite re-use read_edges.
+    # TODO: refactor this and read_edges into one function.
+    f = open(fname)
+    line = readline(f)
+    vertices, edges = tuple(map(int, split(line))...)
+    d = Dict{Int, Dict{Int, Int}}()
+    # d could be an array -- the graph is connected, so we know every
+    # vertex has at least one edge.
+    for i in 1:edges
+        # tuple is (vertex, vertex, weight)
+        line = readline(f)
+        v1, v2, weight = tuple(map(int, split(line))...)
+        if !haskey(d, v1)
+            d[v1] = Dict{Int, Int}()
+        end
+        
+        if !haskey(d, v2) && !directed
+            d[v2] = Dict{Int, Int}()
+        end
+
+        d[v1][v2] = weight
+        if !directed
+            d[v2][v1] = weight
+        end
+     end
+    return d, vertices
 end
 
 function find_shortest_path(fname::String)
+    # this function works around Julia's 1-based array. It's awkward not to be
+    # be able to index from 0 for this, so we simply return the correct value 
+    # for iteration 0.
+    # Also, k is the last index of the array because that makes julia pretty
+    # print the result in a reasonable fashion.
+    function lookup_fw_value(a::Array, g, k, i, j)
+        if k == 0
+            if i == j
+                return 0
+            elseif haskey(g, i) && haskey(g[i], j)
+                return g[i][j]
+            else
+                return div(typemax(Int),4)
+            end
+        else
+            return a[i, j, k]
+        end
+    end
 
+    # either the value from the previous iteration (i to j), or value from i to k plus k to j.
+    function fw_minimum(a::Array, g, k, i, j)
+        return min(lookup_fw_value(a, g, k-1, i, j),
+                   lookup_fw_value(a, g, k-1, i, k) + lookup_fw_value(a, g, k-1, k, j))
+    end
+
+    g, num_vertices = read_graph4(fname, true)
+    a = Array(Int, num_vertices, num_vertices, num_vertices)
+    
+    # Using Floyd-Warshall. Initialization is handled by lookup_fw_value.
+    for k in 1:num_vertices
+        for i in 1:num_vertices
+            for j in 1:num_vertices
+                a[i, j, k] = fw_minimum(a, g, k, i, j)
+            end
+        end
+    end
+
+    shortest_distance = typemax(Int)
+    for i in 1:num_vertices
+        for j in 1:num_vertices
+            shortest_distance = a[i,j,num_vertices] < shortest_distance ? a[i,j,num_vertices] : shortest_distance
+        end
+    end
+
+    has_cycle = false
+    for i in 1:num_vertices
+        if a[i,i,num_vertices] < 0
+            has_cycle = true
+        end
+    end
+
+    return (shortest_distance, has_cycle)
 end
-
-print(read_graph4("4-1.txt"))
-assert(find_shortest_path("4-1.txt") == -1)
+    
+assert(find_shortest_path("4-1.txt") == (-1, false))
+assert(find_shortest_path("4-2.txt") == (-1, false))
+print(find_shortest_path("g1.txt"))
+print(find_shortest_path("g2.txt"))
+print(find_shortest_path("g3.txt"))
