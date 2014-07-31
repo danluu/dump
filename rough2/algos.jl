@@ -61,11 +61,6 @@ function problem1(fname::String, correct::Bool)
     return sum
 end
 
-assert(compute_weighted_sum([(3,1), (2,2), (1,3)]) == 15)
-assert(problem1("1-1.txt", false) == 11336)
-assert(problem1("1-1.txt", true) == 10548)
-assert(problem1("1-2.txt", false) == 145924)
-assert(problem1("1-2.txt", true) == 138232)
 # print("Problem 1: $(problem1("jobs.txt", false))\n")
 # print("Problem 2: $(problem1("jobs.txt", true))\n")
 
@@ -130,9 +125,6 @@ function find_cheapest(done, g)
     assert(cheapest != (0,0))
     return cheapest
 end
-
-g = read_edges("1-3.txt", false)
-assert(compute_mst_naive(g) == 2624)
 
 # g = read_edges("edges.txt", false)
 # print("Problem 3: $(compute_mst_naive(g))\n")
@@ -254,8 +246,6 @@ function find_num_big_clusters()
     return length(u)
 end
 
-assert(find_cluster_distance("3-1-a.txt")==134365)
-assert(find_cluster_distance("3-1-b.txt")==7)
 # print(find_cluster_distance("clustering1.txt"))
 # print(read_clusters_binary("clustering_small.txt"))
 # print(find_num_big_clusters())
@@ -343,18 +333,6 @@ function max_knapsack_value(fname::String, memoize::Bool)
     end
 end
 
-assert(max_knapsack_value("knapsack-test-1.txt", false) == 60)
-assert(max_knapsack_value("knapsack-test-1b.txt", false) == 60)
-assert(max_knapsack_value("knapsack-test-1c.txt", false) == 60)
-assert(max_knapsack_value("knapsack-test-2.txt", false) == 2700)
-assert(max_knapsack_value("knapsack-test-2b.txt", false) == 27000)
-assert(max_knapsack_value("knapsack-test-2c.txt", false) == 27000)
-assert(max_knapsack_value("knapsack-test-1.txt", true) == 60)
-assert(max_knapsack_value("knapsack-test-1b.txt", true) == 60)
-assert(max_knapsack_value("knapsack-test-1c.txt", true) == 60)
-assert(max_knapsack_value("knapsack-test-2.txt", true) == 2700)
-assert(max_knapsack_value("knapsack-test-2b.txt", true) == 27000)
-assert(max_knapsack_value("knapsack-test-2c.txt", true) == 27000)
 # print("$(max_knapsack_value("knapsack1.txt", true))\n")
 # print("$(max_knapsack_value("knapsack_big.txt", true))\n")
 
@@ -486,8 +464,6 @@ function find_shortest_path(fname::String)
     return (shortest_distance, has_cycle)
 end
     
-assert(find_shortest_path("4-1.txt") == (-1, false))
-assert(find_shortest_path("4-2.txt") == (-1, false))
-print(find_shortest_path("g1.txt"))
-print(find_shortest_path("g2.txt"))
-print(find_shortest_path("g3.txt"))
+# print(find_shortest_path("g1.txt"))
+# print(find_shortest_path("g2.txt"))
+# print(find_shortest_path("g3.txt"))
