@@ -235,12 +235,10 @@ function find_num_big_clusters()
     for v in keys(vertices)
         push!(u, v)
     end
-    print("Read in vertices\n")
 
     # generate all double bit pairs up to length 24
     all_bits = double_bits(24)
     
-    print("Generated $(length(all_bits)) bit pairs\n")
     # create clusters for everything within hamming distance 2
     for v1 in keys(vertices)
         for b in keys(all_bits)
@@ -394,4 +392,22 @@ function optimal_bst(input::Array)
 end
 
 assert(optimal_bst([.1, .3, .6]) == 1.5)
-print(optimal_bst([.05, .4, .08, .04, .1, .1, .23]))
+# print(optimal_bst([.05, .4, .08, .04, .1, .1, .23]))
+
+# format is
+# num_vertices num_edges
+# v1 v2 length
+# v1 v2 length
+# ...
+
+function read_graph4(fname::String)
+    # Can we re-use our old function? Maybe.
+    return read_edges(fname)
+end
+
+function find_shortest_path(fname::String)
+
+end
+
+print(read_graph4("4-1.txt"))
+assert(find_shortest_path("4-1.txt") == -1)
