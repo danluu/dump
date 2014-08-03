@@ -472,14 +472,24 @@ function initial_perm(n::Int)
     return int32((1 << n) - 1)
 end
 
-function next_perm(current::Int32, n::Int ,k::Int)
+function next_perm(current::Int32, n::Int, k::Int)
     lowest_bit = current & -current
     propogate = lowest_bit + current
     next = div((current $ propogate) >> 2,lowest_bit) | propogate
     if next >= (1 << n)
         next = 0
     end
-    return next
+    return int32(next)
+end
+
+# Only take permutations that contain the first element.
+function next_perm_with_1(current::Int32, n::Int, k::Int)
+    possible_next = next_perm(current, n, k)
+    if (possible_next == 0 || possible_next & 1 == 1)
+        return possible_next
+    else
+        next_perm_with_1(possible_next, n, k)
+    end
 end
 
 assert(next_perm(int32(1), 4, 1) == 2)
@@ -507,24 +517,75 @@ function read_tsp(fname::String)
     return (a, num_cities)
 end
 
+function cost(a::(Float32, Float32), b::(Float32, Float32))
+    return float32(sqrt((a[1] - b[1])^2 + (a[2] - b[2])^2))
+end
+
+# This is 1-indexed because of Julia's 1-based array indexing.
+function one_indices(n::Int32)
+    indices = Array(Int, count_ones(n))
+    current = 1
+    for i in 1:n
+        if n & 1 == 1
+            indices[current] = i
+            current += 1
+        end
+        n >>= 1
+    end
+    return indices
+end
+
 function tsp_cost(fname::String)
-#    a, num_cities = read_tsp(fname)
-    num_cities = 4
+    a, num_cities = read_tsp(fname)
 
     # TODO: use two dicts to allow easy flushing of unused entries from dict.
 
     d = Dict{Int32, Float32}()
     # do we really need to special case the base case?
-    p = initial_perm(1)
-    while p != 0
-        d[p] = float32(1)
-        p = next_perm(p, num_cities, 1)
-    end
+    # p = initial_perm(1)
+    # while p != 0
+    #     d[p] = float32(1)
+    #     p = next_perm(p, num_cities, 1)
+    # end
+
+    # TOOO: need to handle base case here.
+    d[1 | 1 << num_cities] = 0
     
     for i in 2:num_cities
-        
+        p = initial_perm(i)
+        while p != 0
+            active_cities = one_indices(p)
+            for j in active_cities
+                min_over_k = typemax(Float32)
+                for k in active_cities
+                    if i == j
+                        continue
+                    end
+                    smaller_perm = p $ (1 << j)
+                    assert(count_ones(p) == count_ones(smaller_perm) + 1)
+                    smaller_index = smaller_perm | (k << num_cities)
+                    smaller_cost = cost(a[k], a[j])
+                    cost_with_k = d[smaller_index] + smaller_cost
+                    if cost_with_k < min_over_k
+                        min_over_k = cost_with_k
+                    end
+                end
+                a[p | (j << num_cities)] = min_over_k
+            end
+            p = next_perm(p, num_cities, i)
+        end
     end
-    return 0
+
+    # Find j (end city) with minimum cost.
+    p = initial_perm(num_cities)
+    min_over_j = typemax(Float32)
+    for j in 2:num_cities
+        cost_with_j = d[p | j << num_cities] + cost(a[j], a[1])
+        if cost_with_j < min_over_j
+            min_over_j = cost_with_j
+        end
+    end
+    return min_over_j
 end
 
 assert(tsp_cost("5-1.txt") == 4)
