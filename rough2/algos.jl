@@ -468,6 +468,10 @@ end
 # print(find_shortest_path("g2.txt"))
 # print(find_shortest_path("g3.txt"))
 
+function initial_perm(n::Int)
+    return int32((1 << n) - 1)
+end
+
 function next_perm(current::Int32, n::Int ,k::Int)
     lowest_bit = current & -current
     propogate = lowest_bit + current
@@ -504,7 +508,22 @@ function read_tsp(fname::String)
 end
 
 function tsp_cost(fname::String)
-    read_tsp(fname)
+#    a, num_cities = read_tsp(fname)
+    num_cities = 4
+
+    # TODO: use two dicts to allow easy flushing of unused entries from dict.
+
+    d = Dict{Int32, Float32}()
+    # do we really need to special case the base case?
+    p = initial_perm(1)
+    while p != 0
+        d[p] = float32(1)
+        p = next_perm(p, num_cities, 1)
+    end
+    
+    for i in 2:num_cities
+        
+    end
     return 0
 end
 
