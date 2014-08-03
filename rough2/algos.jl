@@ -469,17 +469,23 @@ end
 # print(find_shortest_path("g3.txt"))
 
 function next_perm(current::Int32, n::Int ,k::Int)
-    if (current < (1 << n))
-        lowest_bit = current & -current
-        propogate = lowest_bit + current
-        return div((current $ propogate) >> 2,lowest_bit) | propogate
-    else
-        return 0
+    lowest_bit = current & -current
+    propogate = lowest_bit + current
+    next = div((current $ propogate) >> 2,lowest_bit) | propogate
+    if next >= (1 << n)
+        next = 0
     end
+    return next
 end
 
 assert(next_perm(int32(1), 4, 1) == 2)
 assert(next_perm(int32(2), 4, 1) == 4)
 assert(next_perm(int32(4), 4, 1) == 8)
-assert(next_perm(int32(8), 4, 1) == 16)
-assert(next_perm(int32(16), 4, 1) == 0)
+assert(next_perm(int32(8), 4, 1) == 0)
+
+assert(next_perm(int32(3), 4, 2) == 5)
+assert(next_perm(int32(5), 4, 2) == 6)
+assert(next_perm(int32(6), 4, 2) == 9)
+assert(next_perm(int32(9), 4, 2) == 10)
+assert(next_perm(int32(10), 4, 2) == 12)
+assert(next_perm(int32(12), 4, 2) == 0)
