@@ -512,7 +512,7 @@ function read_tsp(fname::String)
     for i in 1:num_cities
         # tuple is (weight, length)
         line = readline(f)
-        a[i] = tuple(map(int, split(line))...)
+        a[i] = tuple(map(float32, split(line))...)
     end
     return (a, num_cities)
 end
@@ -561,7 +561,7 @@ function tsp_cost(fname::String)
         p = initial_perm(i)
         while p != 0
             active_cities = one_indices(p)
-            print("active_cities $active_cities\n")
+ #           print("active_cities $active_cities\n")
             for j in active_cities
                 if j == 1
                     continue
@@ -571,13 +571,13 @@ function tsp_cost(fname::String)
                     if k == j
                         continue
                     end
-                    print ("j $j k $k\n")
+#                    print ("j $j k $k\n")
                     smaller_perm = p $ (1 << (j-1))
-                    print("p $p smaller $smaller_perm\n")
+#                    print("p $p smaller $smaller_perm\n")
                     assert(count_ones(p) == count_ones(smaller_perm) + 1)
                     smaller_index = smaller_perm | (k << num_cities)
                     smaller_cost = cost(a[k], a[j])
-                    print("j $j smaller_perm $smaller_perm k $k smaller_index $smaller_index\n")
+#                    print("j $j smaller_perm $smaller_perm k $k smaller_index $smaller_index\n")
                     cost_with_k = typemax(Float32)
                     if (haskey(d, smaller_index))
                         cost_with_k = d[smaller_index] + smaller_cost
@@ -605,3 +605,6 @@ function tsp_cost(fname::String)
 end
 
 assert(tsp_cost("5-1.txt") == 4)
+assert(int(floor(tsp_cost("5-2.txt"))) == 10)
+#assert(int(floor(tsp_cost("5-3.txt"))) == 26714)
+print(tsp_cost("tsp.txt"))
