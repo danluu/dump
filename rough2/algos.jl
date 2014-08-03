@@ -522,6 +522,8 @@ function cost(a::(Float32, Float32), b::(Float32, Float32))
 end
 
 # This is 1-indexed because of Julia's 1-based array indexing.
+# Note that this means that all the bit-shifting stuff has to
+# have a "-1" attached.
 function one_indices(n::Int32)
     indices = Array(Int, count_ones(n))
     current = 1
@@ -534,6 +536,10 @@ function one_indices(n::Int32)
     end
     return indices
 end
+
+assert(one_indices(int32(3)) == [1,2])
+assert(one_indices(int32(4)) == [3])
+assert(one_indices(int32(5)) == [1,3])
 
 function tsp_cost(fname::String)
     a, num_cities = read_tsp(fname)
@@ -555,22 +561,32 @@ function tsp_cost(fname::String)
         p = initial_perm(i)
         while p != 0
             active_cities = one_indices(p)
+            print("active_cities $active_cities\n")
             for j in active_cities
+                if j == 1
+                    continue
+                end
                 min_over_k = typemax(Float32)
                 for k in active_cities
-                    if i == j
+                    if k == j
                         continue
                     end
-                    smaller_perm = p $ (1 << j)
+                    print ("j $j k $k\n")
+                    smaller_perm = p $ (1 << (j-1))
+                    print("p $p smaller $smaller_perm\n")
                     assert(count_ones(p) == count_ones(smaller_perm) + 1)
                     smaller_index = smaller_perm | (k << num_cities)
                     smaller_cost = cost(a[k], a[j])
-                    cost_with_k = d[smaller_index] + smaller_cost
+                    print("j $j smaller_perm $smaller_perm k $k smaller_index $smaller_index\n")
+                    cost_with_k = typemax(Float32)
+                    if (haskey(d, smaller_index))
+                        cost_with_k = d[smaller_index] + smaller_cost
+                    end
                     if cost_with_k < min_over_k
                         min_over_k = cost_with_k
                     end
                 end
-                a[p | (j << num_cities)] = min_over_k
+                d[p | (j << num_cities)] = min_over_k
             end
             p = next_perm(p, num_cities, i)
         end
