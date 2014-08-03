@@ -489,3 +489,23 @@ assert(next_perm(int32(6), 4, 2) == 9)
 assert(next_perm(int32(9), 4, 2) == 10)
 assert(next_perm(int32(10), 4, 2) == 12)
 assert(next_perm(int32(12), 4, 2) == 0)
+
+function read_tsp(fname::String)
+    f = open(fname)
+    line = readline(f)
+    num_cities = int(line)
+    a = Array((Float32, Float32), num_cities)
+    for i in 1:num_cities
+        # tuple is (weight, length)
+        line = readline(f)
+        a[i] = tuple(map(int, split(line))...)
+    end
+    return (a, num_cities)
+end
+
+function tsp_cost(fname::String)
+    read_tsp(fname)
+    return 0
+end
+
+assert(tsp_cost("5-1.txt") == 4)
