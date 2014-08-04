@@ -49,6 +49,10 @@ function reprobe(key, num_probes)
     return num_probes
 end
 
+function getindex(h::DenseDict, key)
+    return find(h, key)
+end
+
 function find(h, key)
     if size(h) == 0 
         return nothing
@@ -88,6 +92,10 @@ end
 
 function get_key(h, idx)
     return h.table[idx].key
+end
+
+function setindex!(h::DenseDict, val, key)
+    insert(h, key, val)
 end
 
 function insert(h, key, val)
