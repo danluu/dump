@@ -532,19 +532,17 @@ function find_min_over_k(a, d, active_cities, num_cities, p, j)
         if k == j
             continue
         end
-        #                    print ("j $j k $k\n")
         smaller_perm = p $ (1 << (j-1))
-        #                    print("p $p smaller $smaller_perm\n")
         assert(count_ones(p) == count_ones(smaller_perm) + 1)
-        smaller_index = smaller_perm | (k << num_cities)
-        smaller_cost = cost(a[k], a[j])
-        #                    print("j $j smaller_perm $smaller_perm k $k smaller_index $smaller_index\n")
-        cost_with_k = typemax(Float32)
-        if (haskey(d, smaller_index))
-            cost_with_k = d[smaller_index] + smaller_cost
-        end
-        if cost_with_k < min_over_k
-            min_over_k = cost_with_k
+        smaller_index = int32(smaller_perm | (k << num_cities))
+
+#        if (haskey(d, smaller_index))
+        if (d[smaller_index] != typemax(Float32))
+            smaller_cost = cost(a[k], a[j])
+            cost_with_k = float32(d[smaller_index] + smaller_cost)
+            if cost_with_k < min_over_k
+                min_over_k = cost_with_k
+            end
         end
     end
     return min_over_k
@@ -553,17 +551,14 @@ end
 function tsp_cost(fname::String)
     a, num_cities = read_tsp(fname)
 
-    # TODO: use two dicts to allow easy flushing of unused entries from dict.
+    # TODO: use two dicts to allow easy flushing of unused entries from dict?
+    # d = Dict{Int32, Float32}()
+    num_array_bits = num_cities + int(ceil(log2(num_cities + 0.1)))
+    d = Array(Float32, 2^num_array_bits)
 
-    d = Dict{Int32, Float32}()
-    # do we really need to special case the base case?
-    # p = initial_perm(1)
-    # while p != 0
-    #     d[p] = float32(1)
-    #     p = next_perm(p, num_cities, 1)
-    # end
-
-    # TOOO: need to handle base case here.
+    for i in 1:length(d)
+        d[i] = typemax(Float32)
+    end
     d[1 | 1 << num_cities] = 0
     
     for i in 2:num_cities
