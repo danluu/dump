@@ -492,6 +492,7 @@ function next_perm_with_1(current::Int32, n::Int, k::Int)
     end
 end
 
+include("dense_dict.jl")
 
 function read_tsp(fname::String)
     f = open(fname)
@@ -554,7 +555,9 @@ function tsp_cost(fname::String)
     # TODO: use two dicts to allow easy flushing of unused entries from dict?
     # d = Dict{Int32, Float32}()
     num_array_bits = num_cities + int(ceil(log2(num_cities + 0.1)))
-    d = Array(Float32, 2^num_array_bits)
+    # d = Array(Float32, 2^num_array_bits)
+    d = DenseDict(Array(KV), 0, 0, 0, 0, 0)
+    resize_and_reset(d, 2^num_array_bits)
 
     for i in 1:length(d)
         d[i] = typemax(Float32)

@@ -53,7 +53,7 @@ function getindex(h::DenseDict, key)
     return find(h, key)
 end
 
-function find(h, key)
+function Base.find(h::DenseDict, key)
     if size(h) == 0 
         return nothing
     end
@@ -137,7 +137,7 @@ function test_empty(h, index::Int)
 end
 
 
-function size(h)
+function Base.size(h::DenseDict)
     return h.num_elements - h.num_deleted
 end
 
