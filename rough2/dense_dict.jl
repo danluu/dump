@@ -88,10 +88,15 @@ function find_idx(h, key)
         num_probes += 1
         idx = mod1(idx + reprobe(key, num_probes), max_size(h))
     end
+    assert(false) # hash table is full.
 end
 
 function get_key(h, idx)
     return h.table[idx].key
+end
+
+function Base.haskey(h::DenseDict, key)    
+    return find_idx(h, key)[1] != ILLEGAL_IDX
 end
 
 function setindex!(h::DenseDict, val, key)

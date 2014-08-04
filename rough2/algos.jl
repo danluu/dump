@@ -537,8 +537,8 @@ function find_min_over_k(a, d, active_cities, num_cities, p, j)
         assert(count_ones(p) == count_ones(smaller_perm) + 1)
         smaller_index = int32(smaller_perm | (k << num_cities))
 
-#        if (haskey(d, smaller_index))
-        if (d[smaller_index] != typemax(Float32))
+        if (haskey(d, smaller_index))
+#        if (d[smaller_index] != typemax(Float32))
             smaller_cost = cost(a[k], a[j])
             cost_with_k = float32(d[smaller_index] + smaller_cost)
             if cost_with_k < min_over_k
@@ -559,9 +559,10 @@ function tsp_cost(fname::String)
     d = DenseDict(Array(KV), 0, 0, 0, 0, 0)
     resize_and_reset(d, 2^num_array_bits)
 
-    for i in 1:length(d)
-        d[i] = typemax(Float32)
-    end
+# TODO: restore for array version.
+#    for i in 1:length(d)
+#        d[i] = typemax(Float32)
+#    end
     d[1 | 1 << num_cities] = 0
     
     for i in 2:num_cities
