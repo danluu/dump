@@ -1,5 +1,5 @@
-ILLEGAL_IDX = -1
-MAX_HT_LOAD_FACTOR = 0.7
+const ILLEGAL_IDX = -1
+const MAX_HT_LOAD_FACTOR = 0.7
 
 # TODO: make this generic.
 immutable KV
@@ -58,7 +58,7 @@ function Base.find(h::DenseDict, key)
         return nothing
     end
     idx, insert_idx = find_idx(h, key)
-    if idx == ILLEGAL_IDX
+    if idx == ILLEGAL_IDX+1
         return nothing
     else
         return h.table[idx].value
@@ -66,27 +66,30 @@ function Base.find(h::DenseDict, key)
 end
 
 function find_idx(h, key)
-    # TODO: replace mod1 with bit manipulation to speed this up.
-    # This is somewhat annoying to do in Julia because of the 1-based indexing. 
-    # If we & with a mask we can get 0. Simplest solution is to basically 0 index,
-    # do all index modifying operations, and then add 1.
+    # Indexing is a terrible hack due to julia's 1-based indexing. Profiling reveals
+    # that using the standard solution, mod1, is very bad.
+
+    # & with a bit mask is much faster, but that's naturally 0-indexed so we
+    # use an internal 0-based index and add 1 any time we expose it to the outside
+    # world.
 
     num_probes = 0           # number of times we've probed
     insert_idx = ILLEGAL_IDX # where we'd insert
     # TODO: assert this where we re-size, to avoid adding the check to every lookup.
     assert(count_ones(h.max_size) == 1)
     # Maybe do this masking in the hash function?    
-    idx = mod1(hash_fn(key), max_size(h))
+    idx_mask = max_size(h) - 1
+    idx = hash_fn(key) & idx_mask
     while true
-        if test_empty(h, idx)            
-            return insert_idx == ILLEGAL_IDX ? (ILLEGAL_IDX, idx) : (ILLEGAL_IDX, insert_idx)
-        elseif test_deleted(h, idx) # keep looking, but mark entry for insertion.
+        if test_empty(h, idx+1)            
+            return insert_idx == ILLEGAL_IDX ? (ILLEGAL_IDX+1, idx+1) : (ILLEGAL_IDX+1, insert_idx+1)
+        elseif test_deleted(h, idx+1) # keep looking, but mark entry for insertion.
             insert_idx == ILLEGAL_IDX ? idx : insert_idx
-        elseif key == get_key(h, idx)
-            return (idx, ILLEGAL_IDX)
+        elseif key == get_key(h, idx+1)
+            return (idx+1, ILLEGAL_IDX+1) # profiler identifies this line as horrible.
         end
         num_probes += 1
-        idx = mod1(idx + reprobe(key, num_probes), max_size(h))
+        idx = (idx + reprobe(key, num_probes)) & idx_mask
     end
     assert(false) # hash table is full.
 end
@@ -96,7 +99,7 @@ function get_key(h, idx)
 end
 
 function Base.haskey(h::DenseDict, key)    
-    return find_idx(h, key)[1] != ILLEGAL_IDX
+    return find_idx(h, key)[1] != ILLEGAL_IDX+1
 end
 
 function setindex!(h::DenseDict, val, key)
@@ -112,7 +115,7 @@ function insert_noresize(h, key, val)
     assert(key != h.empty_key)
     assert(key != h.deleted_key)
     idx, insert_idx = find_idx(h, key)
-    if idx != ILLEGAL_IDX # element was already in table.
+    if idx != ILLEGAL_IDX+1 # element was already in table.
         return false      # false: didn't insert.
     else
         return insert_at(h, key, val, insert_idx)
@@ -156,7 +159,4 @@ end
 
 function num_buckets(h)
 end
-
-
-
 
