@@ -492,17 +492,6 @@ function next_perm_with_1(current::Int32, n::Int, k::Int)
     end
 end
 
-assert(next_perm(int32(1), 4, 1) == 2)
-assert(next_perm(int32(2), 4, 1) == 4)
-assert(next_perm(int32(4), 4, 1) == 8)
-assert(next_perm(int32(8), 4, 1) == 0)
-
-assert(next_perm(int32(3), 4, 2) == 5)
-assert(next_perm(int32(5), 4, 2) == 6)
-assert(next_perm(int32(6), 4, 2) == 9)
-assert(next_perm(int32(9), 4, 2) == 10)
-assert(next_perm(int32(10), 4, 2) == 12)
-assert(next_perm(int32(12), 4, 2) == 0)
 
 function read_tsp(fname::String)
     f = open(fname)
@@ -536,10 +525,6 @@ function one_indices(n::Int32)
     end
     return indices
 end
-
-assert(one_indices(int32(3)) == [1,2])
-assert(one_indices(int32(4)) == [3])
-assert(one_indices(int32(5)) == [1,3])
 
 function find_min_over_k(a, d, active_cities, num_cities, p, j)
     min_over_k = typemax(Float32)
@@ -609,8 +594,5 @@ function tsp_cost(fname::String)
     return min_over_j
 end
 
-assert(tsp_cost("5-1.txt") == 4)
-assert(int(floor(tsp_cost("5-2.txt"))) == 10)
-assert(int(floor(tsp_cost("5-3.txt"))) == 26714)
 # print(tsp_cost("tsp.txt"))
 # print(tsp_cost("tsp-size.txt"))
