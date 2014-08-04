@@ -541,6 +541,30 @@ assert(one_indices(int32(3)) == [1,2])
 assert(one_indices(int32(4)) == [3])
 assert(one_indices(int32(5)) == [1,3])
 
+function find_min_over_k(a, d, active_cities, num_cities, p, j)
+    min_over_k = typemax(Float32)
+    for k in active_cities
+        if k == j
+            continue
+        end
+        #                    print ("j $j k $k\n")
+        smaller_perm = p $ (1 << (j-1))
+        #                    print("p $p smaller $smaller_perm\n")
+        assert(count_ones(p) == count_ones(smaller_perm) + 1)
+        smaller_index = smaller_perm | (k << num_cities)
+        smaller_cost = cost(a[k], a[j])
+        #                    print("j $j smaller_perm $smaller_perm k $k smaller_index $smaller_index\n")
+        cost_with_k = typemax(Float32)
+        if (haskey(d, smaller_index))
+            cost_with_k = d[smaller_index] + smaller_cost
+        end
+        if cost_with_k < min_over_k
+            min_over_k = cost_with_k
+        end
+    end
+    return min_over_k
+end
+
 function tsp_cost(fname::String)
     a, num_cities = read_tsp(fname)
 
@@ -566,26 +590,7 @@ function tsp_cost(fname::String)
                 if j == 1
                     continue
                 end
-                min_over_k = typemax(Float32)
-                for k in active_cities
-                    if k == j
-                        continue
-                    end
-#                    print ("j $j k $k\n")
-                    smaller_perm = p $ (1 << (j-1))
-#                    print("p $p smaller $smaller_perm\n")
-                    assert(count_ones(p) == count_ones(smaller_perm) + 1)
-                    smaller_index = smaller_perm | (k << num_cities)
-                    smaller_cost = cost(a[k], a[j])
-#                    print("j $j smaller_perm $smaller_perm k $k smaller_index $smaller_index\n")
-                    cost_with_k = typemax(Float32)
-                    if (haskey(d, smaller_index))
-                        cost_with_k = d[smaller_index] + smaller_cost
-                    end
-                    if cost_with_k < min_over_k
-                        min_over_k = cost_with_k
-                    end
-                end
+                min_over_k = find_min_over_k(a, d, active_cities, num_cities, p, j)
                 d[p | (j << num_cities)] = min_over_k
             end
             p = next_perm(p, num_cities, i)
@@ -606,5 +611,6 @@ end
 
 assert(tsp_cost("5-1.txt") == 4)
 assert(int(floor(tsp_cost("5-2.txt"))) == 10)
-#assert(int(floor(tsp_cost("5-3.txt"))) == 26714)
-print(tsp_cost("tsp.txt"))
+assert(int(floor(tsp_cost("5-3.txt"))) == 26714)
+# print(tsp_cost("tsp.txt"))
+# print(tsp_cost("tsp-size.txt"))
