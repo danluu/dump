@@ -516,7 +516,7 @@ end
 function one_indices(n::Int32)
     indices = Array(Int, count_ones(n))
     current = 1
-    for i in 1:n
+    for i in 1:32
         if n & 1 == 1
             indices[current] = i
             current += 1
