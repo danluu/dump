@@ -596,5 +596,5 @@ end
 # print(tsp_cost("tsp.txt"))
 # print(tsp_cost("tsp-size.txt"))
 
-assert(two_sat("2-1.txt") == true)
-assert(two_sat("2-2.txt") == false)
+assert(two_sat("6-1.txt") == true)
+assert(two_sat("6-2.txt") == false)
