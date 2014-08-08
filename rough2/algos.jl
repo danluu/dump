@@ -596,5 +596,31 @@ end
 # print(tsp_cost("tsp.txt"))
 # print(tsp_cost("tsp-size.txt"))
 
-assert(two_sat("6-1.txt") == true)
-assert(two_sat("6-2.txt") == false)
+# assert(two_sat("6-1.txt") == true)
+# assert(two_sat("6-2.txt") == false)
+
+# TODO: refactor with read_edges. They're very similar.
+function read_scc_graph(fname::String)
+    f = open(fname)
+    d = Dict{Int, Dict{Int, Bool}}()
+    line = readline(f)
+    while line != ""
+        # tuple is (vertex, vertex, weight)
+        v1, v2 = tuple(map(int, split(line))...)
+        if !haskey(d, v1)
+            d[v1] = Dict{Int, Int}()
+        end
+        
+        d[v1][v2] = true
+
+        line = readline(f)
+     end
+    return d
+end
+
+function scc_count(fname::String)
+    
+end
+
+print(read_scc_graph("scc-2.txt"))
+# assert(scc_count("scc-2.txt") == [4, 3, 3, 1, 0])
