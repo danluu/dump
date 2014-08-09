@@ -629,7 +629,7 @@ function dfs(graph::Dict{Int, Array{Int}}, seen::Dict{Int, Bool}, current::Int, 
     seen[current] = true
 
     current_edges = graph[current]
-    
+
     for v in current_edges
         if !haskey(seen, v)
             dfs(graph, seen, v, finish)
@@ -664,8 +664,12 @@ function scc_pass_1(graph::Dict{Int, Array{Int}})
     seen = Dict{Int, Bool}()
     finish = Array(Int, 0)
 
-    current = 1    
-    dfs(graph, seen, current, finish)
+    # This assumes that each node has at least one outgoing edge. 
+    for v in keys(graph)
+        if !haskey(seen, v)
+            dfs(graph, seen, v, finish)      
+        end
+    end
     return finish
 end
 
