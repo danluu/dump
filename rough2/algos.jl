@@ -643,8 +643,13 @@ end
 
 # TODO: maybe refactor into single dfs function?
 function dfs2(graph::Dict{Int, Array{Int}}, seen::Dict{Int, Bool}, current::Int, parent, children::Dict{Int, Array{Int}})
-    assert(haskey(graph, current))
     seen[current] = true
+
+    # traversed into a dead end.
+    if !haskey(graph, current)
+        return
+    end
+
     current_edges = graph[current]
 
     push!(children[parent], current)
@@ -694,6 +699,7 @@ end
 function scc_count(fname::String)
     forward, reverse = read_scc_graph(fname)
     ordering = scc_pass_1(reverse)
+    reverse = nothing # allow GC to free reverse graph.
     children = scc_pass_2(forward, ordering)
 
     all_scc_counts = Array(Int, 0)
@@ -714,3 +720,4 @@ function scc_count(fname::String)
     return top_5_counts
 end
 
+print(scc_count("SCC.txt"))
