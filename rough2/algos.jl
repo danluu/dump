@@ -625,8 +625,12 @@ function read_scc_graph(fname::String)
 end
 
 function dfs(graph::Dict{Int, Array{Int}}, seen::Dict{Int, Bool}, current::Int, finish)
-    assert(haskey(graph, current))
     seen[current] = true
+    
+    # traversed into a dead end.
+    if !haskey(graph, current)
+        return
+    end
 
     current_edges = graph[current]
 
@@ -692,8 +696,25 @@ function scc_count(fname::String)
     forward, reverse = read_scc_graph(fname)
     ordering = scc_pass_1(reverse)
     children = scc_pass_2(forward, ordering)
-    return children
+
+    all_scc_counts = Array(Int, 0)
+    for (_, nodes_in_scc) in children
+        push!(all_scc_counts, length(nodes_in_scc))
+    end
+    sort!(all_scc_counts, rev=true)
+    
+    top_5_counts = Array(Int, 5)
+    for i in 1:5
+        if i > length(all_scc_counts)
+            top_5_counts[i] = 0
+        else
+            top_5_counts[i] = all_scc_counts[i]
+        end
+    end
+
+    return top_5_counts
 end
 
-print(scc_count("scc-2.txt"))
-# assert(scc_count("scc-2.txt") == [4, 3, 3, 1, 0])
+assert(all(scc_count("scc-2.txt") .== [4, 3, 3, 1, 0]))
+assert(all(scc_count("scc-4.txt") .== [3, 3, 2, 0, 0]))
+assert(all(scc_count("scc-7.txt") .== [36, 7, 1, 1, 1]))
