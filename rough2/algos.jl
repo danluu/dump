@@ -371,7 +371,6 @@ function optimal_bst(input::Array)
     return a[1,n]
 end
 
-assert(optimal_bst([.1, .3, .6]) == 1.5)
 # print(optimal_bst([.05, .4, .08, .04, .1, .1, .23]))
 
 # format is
@@ -715,6 +714,3 @@ function scc_count(fname::String)
     return top_5_counts
 end
 
-assert(all(scc_count("scc-2.txt") .== [4, 3, 3, 1, 0]))
-assert(all(scc_count("scc-4.txt") .== [3, 3, 2, 0, 0]))
-assert(all(scc_count("scc-7.txt") .== [36, 7, 1, 1, 1]))

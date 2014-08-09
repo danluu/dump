@@ -48,3 +48,7 @@ assert(one_indices(int32(5)) == [1,3])
 assert(tsp_cost("5-1.txt") == 4)
 assert(int(floor(tsp_cost("5-2.txt"))) == 10)
 assert(int(floor(tsp_cost("5-3.txt"))) == 26714)
+
+assert(all(scc_count("scc-2.txt") .== [4, 3, 3, 1, 0]))
+assert(all(scc_count("scc-4.txt") .== [3, 3, 2, 0, 0]))
+assert(all(scc_count("scc-7.txt") .== [36, 7, 1, 1, 1]))
