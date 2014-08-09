@@ -625,7 +625,7 @@ end
 
 function dfs(graph::Dict{Int, Array{Int}}, seen::Dict{Int, Bool}, current::Int, finish)
     seen[current] = true
-    
+
     # traversed into a dead end.
     if !haskey(graph, current)
         return
@@ -643,6 +643,7 @@ end
 
 # TODO: maybe refactor into single dfs function?
 function dfs2(graph::Dict{Int, Array{Int}}, seen::Dict{Int, Bool}, current::Int, parent, children::Dict{Int, Array{Int}})
+    push!(children[parent], current)
     seen[current] = true
 
     # traversed into a dead end.
@@ -652,12 +653,44 @@ function dfs2(graph::Dict{Int, Array{Int}}, seen::Dict{Int, Bool}, current::Int,
 
     current_edges = graph[current]
 
-    push!(children[parent], current)
-
     for v in current_edges
         if !haskey(seen, v)
             dfs2(graph, seen, v, parent, children)
         end
+    end
+end
+
+# Julia blows up on the recursive version and I can't find documentation on how to
+# increase the stack size.
+function dfs2_iterative(graph::Dict{Int, Array{Int}}, seen::Dict{Int, Bool}, parent::Int, children::Dict{Int, Array{Int}})
+    node_stack = Array(Int, 0)    
+    push!(node_stack, parent)
+
+    while length(node_stack) > 0
+        current = pop!(node_stack)
+
+        # This check is required because, below, we push all nodes onto our stack.
+        # This creates the possibility that we push a node onto the stack, x, 
+        # pushing something else in front of it, and then push x onto the stack
+        # again.
+        if haskey(seen, current)
+            continue
+        end
+
+        push!(children[parent], current)
+        seen[current] = true
+
+        # traversed into a dead end.
+        if !haskey(graph, current)
+            continue
+        end
+
+        current_edges = graph[current]
+        for v in current_edges
+            if !haskey(seen, v)
+                push!(node_stack, v)
+            end
+        end        
     end
 end
 
@@ -690,7 +723,7 @@ function scc_pass_2(graph, ordering::Array{Int})
         v = pop!(ordering)
         if !haskey(seen, v)
             children[v] = Array(Int, 0)
-            dfs2(graph, seen, v, v, children)
+            dfs2_iterative(graph, seen, v, children)
         end
     end
     return children
@@ -701,6 +734,7 @@ function scc_count(fname::String)
     ordering = scc_pass_1(reverse)
     reverse = nothing # allow GC to free reverse graph.
     children = scc_pass_2(forward, ordering)
+    forward = nothing
 
     all_scc_counts = Array(Int, 0)
     for (_, nodes_in_scc) in children
@@ -720,4 +754,4 @@ function scc_count(fname::String)
     return top_5_counts
 end
 
-print(scc_count("SCC.txt"))
+# print(scc_count("SCC.txt"))
