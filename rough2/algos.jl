@@ -602,25 +602,94 @@ end
 # TODO: refactor with read_edges. They're very similar.
 function read_scc_graph(fname::String)
     f = open(fname)
-    d = Dict{Int, Dict{Int, Bool}}()
+    # TODO: don't create two dicts for the two graphs.
+    forward = Dict{Int, Array{Int}}()
+    reverse = Dict{Int, Array{Int}}()
     line = readline(f)
     while line != ""
         # tuple is (vertex, vertex, weight)
         v1, v2 = tuple(map(int, split(line))...)
-        if !haskey(d, v1)
-            d[v1] = Dict{Int, Int}()
+        if !haskey(forward, v1)
+            forward[v1] = Array(Int, 0)
+        end
+        if !haskey(reverse, v2)
+            reverse[v2] = Array(Int, 0)
         end
         
-        d[v1][v2] = true
+        push!(forward[v1], v2)
+        push!(reverse[v2], v1)
 
         line = readline(f)
      end
-    return d
+    return (forward, reverse)
+end
+
+function dfs(graph::Dict{Int, Array{Int}}, seen::Dict{Int, Bool}, current::Int, finish)
+    assert(haskey(graph, current))
+    seen[current] = true
+
+    current_edges = graph[current]
+    
+    for v in current_edges
+        if !haskey(seen, v)
+            dfs(graph, seen, v, finish)
+        end
+    end
+    push!(finish, current)
+end
+
+# TODO: maybe refactor into single dfs function?
+function dfs2(graph::Dict{Int, Array{Int}}, seen::Dict{Int, Bool}, current::Int, parent, children::Dict{Int, Array{Int}})
+    assert(haskey(graph, current))
+    seen[current] = true
+    current_edges = graph[current]
+
+    push!(children[parent], current)
+
+    for v in current_edges
+        if !haskey(seen, v)
+            dfs2(graph, seen, v, parent, children)
+        end
+    end
+end
+
+# the first pass runs DFS on the reverse graph to calculate finishing times.
+function scc_pass_1(graph::Dict{Int, Array{Int}})
+    # TODO: figure out how to give a size hint to the array.
+    # We maintain a stack of nodes so that we can get the nodes in reverse order of finishing time
+    # in linear time.
+    # We also maintian a dict of nodes seen because that's standard for DFS.
+    # We arbitrarily start at node 1.
+
+    seen = Dict{Int, Bool}()
+    finish = Array(Int, 0)
+
+    current = 1    
+    dfs(graph, seen, current, finish)
+    return finish
+end
+
+function scc_pass_2(graph, ordering::Array{Int})
+    seen = Dict{Int, Bool}()
+    # children is a list of nodes found from a particular DFS invocation.
+    children = Dict{Int, Array{Int}}()
+
+    while length(ordering) > 0
+        v = pop!(ordering)
+        if !haskey(seen, v)
+            children[v] = Array(Int, 0)
+            dfs2(graph, seen, v, v, children)
+        end
+    end
+    return children
 end
 
 function scc_count(fname::String)
-    
+    forward, reverse = read_scc_graph(fname)
+    ordering = scc_pass_1(reverse)
+    children = scc_pass_2(forward, ordering)
+    return children
 end
 
-print(read_scc_graph("scc-2.txt"))
+print(scc_count("scc-2.txt"))
 # assert(scc_count("scc-2.txt") == [4, 3, 3, 1, 0])
