@@ -820,6 +820,9 @@ function scc_2sat(fname::String)
 end
 
 # print(scc_count("SCC.txt"))
-
-assert(scc_2sat("6-1.txt") == true)
-assert(scc_2sat("6-2.txt") == false)
+# print(scc_2sat("2sat1.txt"))
+# print(scc_2sat("2sat2.txt"))
+# print(scc_2sat("2sat3.txt"))
+# print(scc_2sat("2sat4.txt"))
+# print(scc_2sat("2sat5.txt"))
+# print(scc_2sat("2sat6.txt"))

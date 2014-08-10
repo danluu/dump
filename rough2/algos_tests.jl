@@ -52,3 +52,6 @@ assert(int(floor(tsp_cost("5-3.txt"))) == 26714)
 assert(all(scc_count("scc-2.txt") .== [4, 3, 3, 1, 0]))
 assert(all(scc_count("scc-4.txt") .== [3, 3, 2, 0, 0]))
 assert(all(scc_count("scc-7.txt") .== [36, 7, 1, 1, 1]))
+
+assert(scc_2sat("6-1.txt") == true)
+assert(scc_2sat("6-2.txt") == false)
