@@ -729,12 +729,18 @@ function scc_pass_2(graph, ordering::Array{Int})
     return children
 end
 
-function scc_count(fname::String)
-    forward, reverse = read_scc_graph(fname)
+# destroys refs to forward and reverse.
+function find_scc(forward, reverse)
     ordering = scc_pass_1(reverse)
     reverse = nothing # allow GC to free reverse graph.
     children = scc_pass_2(forward, ordering)
     forward = nothing
+    return children
+end
+
+function scc_count(fname::String)
+    forward, reverse = read_scc_graph(fname)
+    children = find_scc(forward, reverse)
 
     all_scc_counts = Array(Int, 0)
     for (_, nodes_in_scc) in children
@@ -754,4 +760,66 @@ function scc_count(fname::String)
     return top_5_counts
 end
 
+function read_2sat_graph(fname::String)
+    f = open(fname)
+    # TODO: don't create two dicts for the two graphs.
+    forward = Dict{Int, Array{Int}}()
+    reverse = Dict{Int, Array{Int}}()
+    line = readline(f)
+    num_clauses = line # We can throw this away, but we should assert to
+                       # make sure we're not doing it wrong.
+    line = readline(f)
+    while line != ""
+        # tuple is (vertex, vertex, weight)
+        v1, v2 = tuple(map(int, split(line))...)
+
+        if !haskey(forward, -v1)
+            forward[-v1] = Array(Int, 0)
+        end
+        if !haskey(forward, -v2)
+            forward[-v2] = Array(Int, 0)
+        end
+        if !haskey(reverse, v1)
+            reverse[v1] = Array(Int, 0)
+        end
+        if !haskey(reverse, v2)
+            reverse[v2] = Array(Int, 0)
+        end
+
+        
+        push!(forward[-v1], v2)
+        push!(forward[-v2], v1)
+        push!(reverse[v1], -v2)
+        push!(reverse[v2], -v1)
+
+        line = readline(f)
+     end
+    return (forward, reverse)
+end
+
+function has_2sat_contradiction(implications::Array{Int})
+    seen = Dict{Int, Bool}()
+    for x in implications
+        if haskey(seen, -x)
+            return true
+        end
+        seen[x] = true
+    end
+    return false
+end
+
+function scc_2sat(fname::String)
+    forward, reverse = read_2sat_graph(fname)
+    children = find_scc(forward, reverse)
+
+    has_contradiction = false
+    for (_, nodes_in_scc) in children
+        has_contradiction = has_contradiction || has_2sat_contradiction(nodes_in_scc) 
+    end
+    return !has_contradiction
+end
+
 # print(scc_count("SCC.txt"))
+
+assert(scc_2sat("6-1.txt") == true)
+assert(scc_2sat("6-2.txt") == false)
