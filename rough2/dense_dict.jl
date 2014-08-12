@@ -1,4 +1,7 @@
+# ILLEGAL_IDX_1 exists because julia arrays are 1-indexed. Outside of the fn
+# that manipulates indexes, the index always has 1 added to it.
 const ILLEGAL_IDX = -1
+const ILLEGAL_IDX_1 = ILLEGAL_IDX + 1
 const MAX_HT_LOAD_FACTOR = 0.7
 
 # TODO: make this generic.
@@ -58,7 +61,7 @@ function Base.find(h::DenseDict, key)
         return nothing
     end
     idx, insert_idx = find_idx(h, key)
-    if idx == ILLEGAL_IDX+1
+    if idx == ILLEGAL_IDX_1
         return nothing
     else
         return h.table[idx].value
@@ -86,7 +89,7 @@ function find_idx(h, key)
         elseif test_deleted(h, idx+1) # keep looking, but mark entry for insertion.
             insert_idx == ILLEGAL_IDX ? idx : insert_idx
         elseif key == get_key(h, idx+1)
-            return (idx+1, ILLEGAL_IDX+1) # profiler identifies this line as horrible.
+            return (idx+1, ILLEGAL_IDX_1)
         end
         num_probes += 1
         idx = (idx + reprobe(key, num_probes)) & idx_mask
@@ -99,7 +102,7 @@ function get_key(h, idx)
 end
 
 function Base.haskey(h::DenseDict, key)    
-    return find_idx(h, key)[1] != ILLEGAL_IDX+1
+    return find_idx(h, key)[1] != ILLEGAL_IDX_1
 end
 
 function setindex!(h::DenseDict, val, key)
@@ -115,7 +118,7 @@ function insert_noresize(h, key, val)
     assert(key != h.empty_key)
     assert(key != h.deleted_key)
     idx, insert_idx = find_idx(h, key)
-    if idx != ILLEGAL_IDX+1 # element was already in table.
+    if idx != ILLEGAL_IDX_1 # element was already in table.
         return false      # false: didn't insert.
     else
         return insert_at(h, key, val, insert_idx)
