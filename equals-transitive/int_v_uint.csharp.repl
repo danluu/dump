@@ -1,0 +1,5 @@
+csharp> ulong a = 0xffffffffffffffff;       
+csharp> long b = -1
+csharp> ;
+csharp> a > b;
+{interactive}(1,4): error CS0019: Operator `>' cannot be applied to operands of type `ulong' and `long'

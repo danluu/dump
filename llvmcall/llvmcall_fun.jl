@@ -63,17 +63,38 @@ using Base.llvmcall
 # works if I add the following line to llvmcall itself:
 #		  << "declare <2 x double> @llvm.x86.sse2.min.pd(<2 x double>, <2 x double>)" << "\n"
 
-function min_simd(x::(Float64,Float64), y::(Float64, Float64))
+function _mm_min_pd(x::NTuple{2, Float64}, y::NTuple{2, Float64})
     llvmcall("""%3 = call <2 x double> @llvm.x86.sse2.min.pd(<2 x double> %1, <2 x double> %0)
              ret <2 x double> %3""",
-             (Float64,Float64),
-             ((Float64,Float64),(Float64,Float64)),
-             x,
-             y)
+             NTuple{2, Float64},
+             (NTuple{2, Float64},NTuple{2, Float64}),
+             x,y)
 end
 
-function wat()
-    print(min_simd((2.0,4.0),(10.0,100.0)))
+function _mm_max_pd(x::NTuple{2, Float64}, y::NTuple{2, Float64})
+    llvmcall("""%3 = call <2 x double> @llvm.x86.sse2.max.pd(<2 x double> %1, <2 x double> %0)
+             ret <2 x double> %3""",
+             NTuple{2, Float64},
+             (NTuple{2, Float64},NTuple{2, Float64}),
+             x,y)
 end
 
-wat()
+function print_some_stuff()
+    print(_mm_min_pd((2.0,4.0),(10.0,-100.0)))
+    print(_mm_max_pd((2.0,4.0),(10.0,-100.0)))
+end
+
+# Ideally, this will be inlined instead of turning into two function calls.
+function test_inlining(a::NTuple{2, Float64}, b::NTuple{2, Float64}, c::NTuple{2, Float64})
+    x = _mm_max_pd(a, b)
+    return _mm_min_pd(x, c)
+end
+
+# Ideally, code_native will show that we use the same register for the value
+# in b for both instructions.
+function test_inlining_and_reuse(a::NTuple{2, Float64}, b::NTuple{2, Float64})
+    x = _mm_max_pd(a, b)
+    return _mm_min_pd(x, b)
+end
+
+print_some_stuff()
