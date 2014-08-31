@@ -1,12 +1,11 @@
 ﻿// (c) Peter Kankowski, 2010. http://www.strchr.com  mailto:kankowski@narod.ru
 // CRC-32C and population count benchmark
 
-#include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <assert.h>
-#include <intrin.h>
-#include <nmmintrin.h>
+#include <x86intrin.h>
 
 #ifndef _DEBUG
 //#define HTML_OUTPUT 
@@ -16,13 +15,13 @@
 
 // ======= CRC ========
 
-typedef UINT RES; // result type (32-bit for CRC32)
-typedef RES (*CRC_FUNC) (const BYTE *, SIZE_T);
+typedef uint32_t RES; // result type (32-bit for CRC32)
+typedef RES (*CRC_FUNC) (const uint8_t *, size_t);
 
 #define CRCPOLY 0x82f63b78 // reversed 0x1EDC6F41
 #define CRCINIT 0xFFFFFFFF
 
-static SIZE_T Min(SIZE_T x, SIZE_T y) {
+static size_t Min(size_t x, size_t y) {
 	// Branchless minimum (from http://graphics.stanford.edu/~seander/bithacks.html#IntegerMinOrMax)
 	//return y ^ ((x ^ y) & -(x < y));
 	return (x < y) ? x : y; // CMOV is used when /arch:SSE2 is on
@@ -31,18 +30,18 @@ static SIZE_T Min(SIZE_T x, SIZE_T y) {
 
 
 // Algorithm by Dilip V. Sarwate (used in most programs)
-UINT g_crc_precalc[256];
+uint32_t g_crc_precalc[256];
 
 static void CRC_Init() {
-	for (UINT i = 0; i <= 0xFF; i++) {
-		UINT x = i;
-		for (UINT j = 0; j < 8; j++)
+	for (uint32_t i = 0; i <= 0xFF; i++) {
+		uint32_t x = i;
+		for (uint32_t j = 0; j < 8; j++)
 			x = (x>>1) ^ (CRCPOLY & (-(INT)(x & 1)));
 		g_crc_precalc[i] = x;
 	}
 }
 
-static RES CRC_Sarwate(const BYTE* buf, SIZE_T len) {
+static RES CRC_Sarwate(const BYTE* buf, size_t len) {
 	RES crc = CRCINIT;
 	const BYTE * end = buf + len;
 	while (buf < end)
@@ -55,36 +54,36 @@ static RES CRC_Sarwate(const BYTE* buf, SIZE_T len) {
 // Slicing-by-4 and slicing-by-8 algorithms by Michael E. Kounavis and Frank L. Berry from Intel Corp.
 // http://www.intel.com/technology/comms/perfnet/download/CRC_generators.pdf
 
-UINT g_crc_slicing[8][256];
+uint32_t g_crc_slicing[8][256];
 
 static void CRC_SlicingInit() {
-	for (UINT i = 0; i <= 0xFF; i++) {
-		UINT x = i;
-		for (UINT j = 0; j < 8; j++)
+	for (uint32_t i = 0; i <= 0xFF; i++) {
+		uint32_t x = i;
+		for (uint32_t j = 0; j < 8; j++)
 			x = (x>>1) ^ (CRCPOLY & (-(INT)(x & 1)));
 		g_crc_slicing[0][i] = x;
 	}
 
-	for (UINT i = 0; i <= 0xFF; i++) {
-		UINT c = g_crc_slicing[0][i];
-		for (UINT j = 1; j < 8; j++) {
+	for (uint32_t i = 0; i <= 0xFF; i++) {
+		uint32_t c = g_crc_slicing[0][i];
+		for (uint32_t j = 1; j < 8; j++) {
 			c = g_crc_slicing[0][c & 0xFF] ^ (c >> 8);
 			g_crc_slicing[j][i] = c;
 		}
 	}
 }
 
-static RES CRC_SlicingBy4(const BYTE* buf, SIZE_T len) {
+static RES CRC_SlicingBy4(const BYTE* buf, size_t len) {
 	RES crc = CRCINIT;
 
 	// Align to DWORD boundary
-	SIZE_T align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
+	size_t align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
 	align = Min(align, len);
 	len -= align;
 	for (; align; align--)
 		crc = g_crc_slicing[0][(crc ^ *buf++) & 0xFF] ^ (crc >> 8);
 
-	SIZE_T ndwords = len / sizeof(DWORD);
+	size_t ndwords = len / sizeof(DWORD);
 	for (; ndwords; ndwords--) {
 		crc ^= *(DWORD*)buf;
 		crc =
@@ -102,13 +101,13 @@ static RES CRC_SlicingBy4(const BYTE* buf, SIZE_T len) {
 }
 
 /*
-static RES CRC_SlicingBy8_NoAlign(const BYTE* buf, SIZE_T len) {
+static RES CRC_SlicingBy8_NoAlign(const BYTE* buf, size_t len) {
 	RES crc = CRCINIT;
-	SIZE_T nqwords = len / (sizeof(DWORD) + sizeof(DWORD));
+	size_t nqwords = len / (sizeof(DWORD) + sizeof(DWORD));
 	for (; nqwords; nqwords--) {
 		crc ^= *(DWORD*)buf;
 		buf += sizeof(DWORD);
-		UINT next = *(DWORD*)buf;
+		uint32_t next = *(DWORD*)buf;
 		buf += sizeof(DWORD);
 		crc =
 			g_crc_slicing[7][(crc      ) & 0xFF] ^
@@ -127,18 +126,18 @@ static RES CRC_SlicingBy8_NoAlign(const BYTE* buf, SIZE_T len) {
 }
 
 // Alignment loop suggested by Dmitry Kostjuchenko
-static RES CRC_SlicingBy8_Portable(const BYTE* buf, SIZE_T len) {
+static RES CRC_SlicingBy8_Portable(const BYTE* buf, size_t len) {
     RES crc = CRCINIT;
     while (((((intptr_t)buf) & (sizeof(DWORD)-1)) != 0) && (len != 0))
     {
         crc = g_crc_slicing[0][(crc ^ *buf++) & 0xFF] ^ (crc >> 8);
         -- len;
     }
-    SIZE_T nqwords = len / (sizeof(DWORD) + sizeof(DWORD));
+    size_t nqwords = len / (sizeof(DWORD) + sizeof(DWORD));
     for (; nqwords; nqwords--) {
         crc ^= *(DWORD*)buf;
         buf += sizeof(DWORD);
-        UINT next = *(DWORD*)buf;
+        uint32_t next = *(DWORD*)buf;
         buf += sizeof(DWORD);
         crc =
             g_crc_slicing[7][(crc      ) & 0xFF] ^
@@ -156,21 +155,21 @@ static RES CRC_SlicingBy8_Portable(const BYTE* buf, SIZE_T len) {
     return ~crc;
 }*/
 
-static RES CRC_SlicingBy8(const BYTE* buf, SIZE_T len) {
+static RES CRC_SlicingBy8(const BYTE* buf, size_t len) {
 	RES crc = CRCINIT;
 
 	// Align to DWORD boundary
-	SIZE_T align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
+	size_t align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
 	align = Min(align, len);
 	len -= align;
 	for (; align; align--)
 		crc = g_crc_slicing[0][(crc ^ *buf++) & 0xFF] ^ (crc >> 8);
 
-	SIZE_T nqwords = len / (sizeof(DWORD) + sizeof(DWORD));
+	size_t nqwords = len / (sizeof(DWORD) + sizeof(DWORD));
 	for (; nqwords; nqwords--) {
 		crc ^= *(DWORD*)buf;
 		buf += sizeof(DWORD);
-		UINT next = *(DWORD*)buf;
+		uint32_t next = *(DWORD*)buf;
 		buf += sizeof(DWORD);
 		crc =
 			g_crc_slicing[7][(crc      ) & 0xFF] ^
@@ -195,17 +194,17 @@ static RES CRC_SlicingBy8(const BYTE* buf, SIZE_T len) {
 // This code is copyright © 1993 Richard Black. All rights are reserved. You may use this code
 // only if it includes a statement to that effect.
 // http://www.cl.cam.ac.uk/research/srg/bluebook/21/crc/node6.html#SECTION00064000000000000000
-static RES CRC_RichardBlack(const BYTE* buf, SIZE_T len) {
+static RES CRC_RichardBlack(const BYTE* buf, size_t len) {
 	RES crc = CRCINIT;
 
 	// Align to DWORD boundary
-	SIZE_T align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
+	size_t align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
 	align = Min(align, len);
 	len -= align;
 	for (; align; align--)
 		crc = g_crc_slicing[0][(crc ^ *buf++) & 0xFF] ^ (crc >> 8);
 
-	SIZE_T ndwords = len / sizeof(DWORD);
+	size_t ndwords = len / sizeof(DWORD);
 	for (; ndwords; ndwords--) {
 		crc ^= *(DWORD*)buf;
 		crc = g_crc_precalc[crc & 0xff] ^ (crc >> 8);
@@ -223,17 +222,17 @@ static RES CRC_RichardBlack(const BYTE* buf, SIZE_T len) {
 
 
 // Hardware-accelerated CRC-32C (using CRC32 instruction)
-static RES CRC_Hardware(const BYTE * buf, SIZE_T len) {
+static RES CRC_Hardware(const BYTE * buf, size_t len) {
 	RES crc = CRCINIT;
 
 	// Align to DWORD boundary
-	SIZE_T align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
+	size_t align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
 	align = Min(align, len);
 	len -= align;
 	for (; align; align--)
 		crc = g_crc_slicing[0][(crc ^ *buf++) & 0xFF] ^ (crc >> 8);
 
-	SIZE_T ndwords = len / sizeof(DWORD);
+	size_t ndwords = len / sizeof(DWORD);
 	for (; ndwords; ndwords--) {
 		crc = _mm_crc32_u32(crc, *(DWORD*)buf);
 		buf += sizeof(DWORD);
@@ -245,17 +244,17 @@ static RES CRC_Hardware(const BYTE * buf, SIZE_T len) {
 	return ~crc;
 }
 
-static RES CRC_HardwareUnrolled(const BYTE * buf, SIZE_T len) {
+static RES CRC_HardwareUnrolled(const BYTE * buf, size_t len) {
 	RES crc = CRCINIT;
 
 	// Align to DWORD boundary
-	SIZE_T align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
+	size_t align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
 	align = Min(align, len);
 	len -= align;
 	for (; align; align--)
 		crc = g_crc_slicing[0][(crc ^ *buf++) & 0xFF] ^ (crc >> 8);
 
-	SIZE_T ndqwords = len / (sizeof(DWORD) * 4);
+	size_t ndqwords = len / (sizeof(DWORD) * 4);
 	for (; ndqwords; ndqwords--) {
 		crc = _mm_crc32_u32(crc, *(DWORD*)buf);
 		crc = _mm_crc32_u32(crc, *(DWORD*)(buf + sizeof(DWORD) ));
@@ -275,29 +274,29 @@ static RES CRC_HardwareUnrolled(const BYTE * buf, SIZE_T len) {
 
 // Modified from http://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel
 // and http://www.hackersdelight.org/
-static UINT PopCnt32(UINT v) {
+static uint32_t PopCnt32(uint32_t v) {
 	v = v - ((v >> 1) & 0x55555555);                    // reuse input as temporary
 	v = (v & 0x33333333) + ((v >> 2) & 0x33333333);     // temp
 	v = v + (v >> 4) & 0x0F0F0F0F;
 	return (v * 0x01010101) >> 24; // count
 }
 
-/*static UINT PopCnt16(UINT v) {
+/*static uint32_t PopCnt16(uint32_t v) {
 	v = v - ((v >> 1) & 0x5555);                // reuse input as temporary
 	v = (v & 0x3333) + ((v >> 2) & 0x3333);     // temp
 	v = v + (v >> 4) & 0x0F0F;
 	return v + (v >> 8) & 0x00FF; // count
 }
 
-static UINT PopCnt8(UINT v) {
+static uint32_t PopCnt8(uint32_t v) {
 	v = v - ((v >> 1) & 0x55);                // reuse input as temporary
 	v = (v & 0x3333) + ((v >> 2) & 0x33);     // temp
 	return v + (v >> 4) & 0x0F; // count
 }
 
-static RES POPCNT_BitHacks_NoAlign(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_BitHacks_NoAlign(const BYTE * buf, size_t len) {
 	RES cnt = 0;
-	SIZE_T ndwords = len / sizeof(DWORD);
+	size_t ndwords = len / sizeof(DWORD);
 	for(; ndwords; ndwords--) {
 		cnt += PopCnt32(*(DWORD*)buf);
 		buf += sizeof(DWORD);
@@ -312,11 +311,11 @@ static RES POPCNT_BitHacks_NoAlign(const BYTE * buf, SIZE_T len) {
 }*/
 
 
-static RES POPCNT_BitHacks(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_BitHacks(const BYTE * buf, size_t len) {
 	RES cnt = 0;
 
 	// Align to DWORD boundary
-	SIZE_T align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
+	size_t align = (sizeof(DWORD) - (INT_PTR)buf) & (sizeof(DWORD) - 1);
 	align = (len < align) ? 0 : align;
 	if (align) {
 		buf = (BYTE *)( (INT_PTR)buf & (-(INT_PTR)sizeof(DWORD)) );
@@ -327,12 +326,12 @@ static RES POPCNT_BitHacks(const BYTE * buf, SIZE_T len) {
 		len -= align;
 	}
 	
-	SIZE_T ndwords = len / sizeof(DWORD);
+	size_t ndwords = len / sizeof(DWORD);
 	for (; ndwords; ndwords--) {
 		cnt += PopCnt32(*(DWORD*)buf);
 		buf += sizeof(DWORD);
 	}
-	SIZE_T remaining = len & (sizeof(DWORD) - 1);
+	size_t remaining = len & (sizeof(DWORD) - 1);
 	if (remaining) {
 		DWORD last = *(DWORD*)buf;
 		last &= ~(0xFFFFFFFF << (remaining * CHAR_BIT));
@@ -350,11 +349,11 @@ static const unsigned char g_pop_cnt[256] =
     B6(0), B6(1), B6(1), B6(2)
 };
 
-static RES POPCNT_Table(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_Table(const BYTE * buf, size_t len) {
 	RES cnt = 0;
-	SIZE_T ndwords = len / 4;
+	size_t ndwords = len / 4;
 	for(; ndwords; ndwords--) {
-		UINT v = *(DWORD*)buf;
+		uint32_t v = *(DWORD*)buf;
 		cnt += g_pop_cnt[v & 0xff] + 
 			   g_pop_cnt[(v >> 8) & 0xff] + 
 			   g_pop_cnt[(v >> 16) & 0xff] + 
@@ -362,7 +361,7 @@ static RES POPCNT_Table(const BYTE * buf, SIZE_T len) {
 		buf += 4;
 	}
 	if (len & 2) {
-		UINT v = *(WORD*)buf;
+		uint32_t v = *(WORD*)buf;
 		cnt += g_pop_cnt[ v & 0xff ] +
 			   g_pop_cnt[ v >> 8 ];
 		buf += 2;
@@ -406,7 +405,7 @@ static __m128i GetMasked(__m128i v, INT len, __m128i cmp_mask) {
 
 
 
-static RES POPCNT_SSE(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_SSE(const BYTE * buf, size_t len) {
 	__m128i sum = _mm_setzero_si128();
 	// Put masks in the main function to avoid reloading
 	const __m128i mask1 = _mm_set1_epi8(0x55);
@@ -414,7 +413,7 @@ static RES POPCNT_SSE(const BYTE * buf, SIZE_T len) {
 	const __m128i mask4 = _mm_set1_epi8(0x0F);
 
 	// Alignment
-	SIZE_T align = sizeof(__m128i) - (INT_PTR)buf & (sizeof(__m128i) - 1);
+	size_t align = sizeof(__m128i) - (INT_PTR)buf & (sizeof(__m128i) - 1);
 	align = (len < align) ? 0 : align; // optimized to branchless code by MSVC++
 	if (align) {
 		buf = (BYTE *)( (INT_PTR)buf & (-(INT_PTR)sizeof(__m128i)) );
@@ -426,10 +425,10 @@ static RES POPCNT_SSE(const BYTE * buf, SIZE_T len) {
 		len -= align;
 	}
 
-	SIZE_T ndqwords = len / sizeof(__m128i);
+	size_t ndqwords = len / sizeof(__m128i);
 	while (ndqwords) {
 		__m128i block_sum = _mm_setzero_si128();
-		SIZE_T block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
+		size_t block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
 		ndqwords -= block_ndqwords;
 		for (; block_ndqwords; block_ndqwords--) {
 			__m128i cnt = POPCNTto8( _mm_load_si128((__m128i *)buf), mask1, mask2, &mask4 );
@@ -461,14 +460,14 @@ static __m128i POPCNTto8_PSHUFB(__m128i v, __m128i mask_lo, __m128i mask_popcnt)
 	return _mm_add_epi8(lo, hi);
 }
 
-static RES POPCNT_SSE_PSHUFB(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_SSE_PSHUFB(const BYTE * buf, size_t len) {
 	__m128i sum = _mm_setzero_si128();
 	// Put masks in the main function to avoid reloading
 	const __m128i mask_lo = _mm_set1_epi8(0x0F);
 	const __m128i mask_popcnt = _mm_setr_epi8(0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4);
 
 	// Alignment
-	SIZE_T align = sizeof(__m128i) - (INT_PTR)buf & (sizeof(__m128i) - 1);
+	size_t align = sizeof(__m128i) - (INT_PTR)buf & (sizeof(__m128i) - 1);
 	align = (len < align) ? 0 : align; // optimized to branchless code by MSVC++
 	if (align) {
 		buf = (BYTE *)( (INT_PTR)buf & (-(INT_PTR)sizeof(__m128i)) );
@@ -480,10 +479,10 @@ static RES POPCNT_SSE_PSHUFB(const BYTE * buf, SIZE_T len) {
 		len -= align;
 	}
 
-	SIZE_T ndqwords = len / sizeof(__m128i);
+	size_t ndqwords = len / sizeof(__m128i);
 	while (ndqwords) {
 		__m128i block_sum = _mm_setzero_si128();
-		SIZE_T block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
+		size_t block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
 		ndqwords -= block_ndqwords;
 		for (; block_ndqwords; block_ndqwords--) {
 			__m128i cnt = POPCNTto8_PSHUFB( _mm_load_si128((__m128i *)buf), mask_lo, mask_popcnt );
@@ -506,23 +505,23 @@ static RES POPCNT_SSE_PSHUFB(const BYTE * buf, SIZE_T len) {
 }
 
 
-/*static RES POPCNT_SSE_Loop(const BYTE * buf, SIZE_T len) {
+/*static RES POPCNT_SSE_Loop(const BYTE * buf, size_t len) {
 	__m128i sum = _mm_setzero_si128();
 	const __m128i mask1 = _mm_set1_epi8(0x55);
 	const __m128i mask2 = _mm_set1_epi8(0x33);
 	const __m128i mask4 = _mm_set1_epi8(0x0F);
 
 	RES res = 0;
-	SIZE_T align = sizeof(__m128i) - (INT_PTR)buf & (sizeof(__m128i) - 1);
+	size_t align = sizeof(__m128i) - (INT_PTR)buf & (sizeof(__m128i) - 1);
 	align = Min(align, len);
 	len -= align;
 	for (; align; align--)
 		res += g_pop_cnt[*buf++];
 
-	SIZE_T ndqwords = len / sizeof(__m128i);
+	size_t ndqwords = len / sizeof(__m128i);
 	while (ndqwords) {
 		__m128i block_sum = _mm_setzero_si128();
-		SIZE_T block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
+		size_t block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
 		ndqwords -= block_ndqwords;
 		for (; block_ndqwords; block_ndqwords--) {
 			__m128i cnt = POPCNTto8( _mm_load_si128((__m128i *)buf), mask1, mask2, &mask4 );
@@ -540,16 +539,16 @@ static RES POPCNT_SSE_PSHUFB(const BYTE * buf, SIZE_T len) {
 	return res;
 }
 
-static RES POPCNT_SSE_NoAlign(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_SSE_NoAlign(const BYTE * buf, size_t len) {
 	__m128i sum = _mm_setzero_si128();
 	const __m128i mask1 = _mm_set1_epi8(0x55);
 	const __m128i mask2 = _mm_set1_epi8(0x33);
 	const __m128i mask4 = _mm_set1_epi8(0x0F);
 
-	SIZE_T ndqwords = len / sizeof(__m128i);
+	size_t ndqwords = len / sizeof(__m128i);
 	while (ndqwords) {
 		__m128i block_sum = _mm_setzero_si128();
-		SIZE_T block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
+		size_t block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
 		ndqwords -= block_ndqwords;
 		for (; block_ndqwords; block_ndqwords--) {
 			__m128i cnt = POPCNTto8( _mm_loadu_si128((__m128i *)buf), mask1, mask2, &mask4 );
@@ -568,7 +567,7 @@ static RES POPCNT_SSE_NoAlign(const BYTE * buf, SIZE_T len) {
 }
 
 // Alignment loop suggested by Dmitry Kostjuchenko
-static RES POPCNT_SSE_Dmitry(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_SSE_Dmitry(const BYTE * buf, size_t len) {
     RES res = 0;
 
     // Align 'buf' to 16 bytes to utilize _mm_load_si128
@@ -579,14 +578,14 @@ static RES POPCNT_SSE_Dmitry(const BYTE * buf, SIZE_T len) {
     }
 
     __m128i sum = _mm_setzero_si128();
-    SIZE_T ndqwords = len / sizeof(__m128i);
+    size_t ndqwords = len / sizeof(__m128i);
     const __m128i mask1 = _mm_set1_epi8(0x55);
     const __m128i mask2 = _mm_set1_epi8(0x33);
     const __m128i mask4 = _mm_set1_epi8(0x0F);
 
     while (ndqwords) {
         __m128i block_sum = _mm_setzero_si128();
-        SIZE_T block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
+        size_t block_ndqwords = Min(ndqwords, 31); // At most 31 ones can be summed up in one byte
         ndqwords -= block_ndqwords;
         for (; block_ndqwords; block_ndqwords--) {
 			__m128i cnt = POPCNTto8( _mm_load_si128((__m128i *)buf), mask1, mask2, &mask4 );
@@ -611,9 +610,9 @@ static RES POPCNT_SSE_Dmitry(const BYTE * buf, SIZE_T len) {
 
 
 // Hardware-accelerated population count (using POPCNT instruction)
-static RES POPCNT_Hardware(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_Hardware(const BYTE * buf, size_t len) {
 	RES cnt = 0;
-	SIZE_T ndwords = len / sizeof(DWORD);
+	size_t ndwords = len / sizeof(DWORD);
 	for(; ndwords; ndwords--) {
 		cnt += __popcnt(*(DWORD*)buf);
 		buf += sizeof(DWORD);
@@ -628,10 +627,10 @@ static RES POPCNT_Hardware(const BYTE * buf, SIZE_T len) {
 }
 
 // by Subbu N, http://www.strchr.com/crc32_popcnt?allcomments=1#comment_482
-static RES POPCNT_HardwareSubbuN(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_HardwareSubbuN(const BYTE * buf, size_t len) {
 	RES cnt = 0;
 
-	SIZE_T align = sizeof(DWORD) - (INT_PTR)buf & (sizeof(DWORD) - 1);
+	size_t align = sizeof(DWORD) - (INT_PTR)buf & (sizeof(DWORD) - 1);
 	align = (len < align) ? 0 : align;
 	if (align) {
 		buf = (BYTE *)( (INT_PTR)buf & (-(INT_PTR)sizeof(DWORD)) );
@@ -649,7 +648,7 @@ static RES POPCNT_HardwareSubbuN(const BYTE * buf, SIZE_T len) {
 	while(ndwords)
 		cnt += __popcnt(pInt[ndwords++]);
 	*/
-	SIZE_T ndwords = len / sizeof(DWORD);
+	size_t ndwords = len / sizeof(DWORD);
 	DWORD* pInt = (DWORD*)buf;
 	while(ndwords)
 		cnt += __popcnt(pInt[--ndwords]); // performance optimization: Removed ptr addition.
@@ -665,10 +664,10 @@ static RES POPCNT_HardwareSubbuN(const BYTE * buf, SIZE_T len) {
 	return cnt;
 }
 
-static RES POPCNT_HardwareUnrolled(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_HardwareUnrolled(const BYTE * buf, size_t len) {
 	RES cnt = 0;
 	
-	SIZE_T align = sizeof(DWORD) - (INT_PTR)buf & (sizeof(DWORD) - 1);
+	size_t align = sizeof(DWORD) - (INT_PTR)buf & (sizeof(DWORD) - 1);
 	align = (len < align) ? 0 : align;
 	if (align) {
 		buf = (BYTE *)( (INT_PTR)buf & (-(INT_PTR)sizeof(DWORD)) );
@@ -679,7 +678,7 @@ static RES POPCNT_HardwareUnrolled(const BYTE * buf, SIZE_T len) {
 		len -= align;
 	}
 
-	SIZE_T ndqwords = len / (sizeof(DWORD) * 4);
+	size_t ndqwords = len / (sizeof(DWORD) * 4);
 	for(; ndqwords; ndqwords--) {
 		cnt += __popcnt(*(DWORD*)buf) +
 			   __popcnt(*(DWORD*)(buf + sizeof(DWORD) )) +
@@ -695,16 +694,16 @@ static RES POPCNT_HardwareUnrolled(const BYTE * buf, SIZE_T len) {
 	return cnt;
 }
 
-/*static RES POPCNT_HardwareUnrolled_Loop(const BYTE * buf, SIZE_T len) {
+/*static RES POPCNT_HardwareUnrolled_Loop(const BYTE * buf, size_t len) {
 	RES cnt = 0;
 	
-	SIZE_T align = sizeof(DWORD) - (INT_PTR)buf & (sizeof(DWORD) - 1);
+	size_t align = sizeof(DWORD) - (INT_PTR)buf & (sizeof(DWORD) - 1);
 	align = Min(align, len);
 	len -= align;
 	for (; align; align--)
 		cnt += __popcnt(*buf++);
 
-	SIZE_T ndqwords = len / (sizeof(DWORD) * 4);
+	size_t ndqwords = len / (sizeof(DWORD) * 4);
 	for(; ndqwords; ndqwords--) {
 		cnt += __popcnt(*(DWORD*)buf) +
 			   __popcnt(*(DWORD*)(buf + sizeof(DWORD) )) +
@@ -718,9 +717,9 @@ static RES POPCNT_HardwareUnrolled(const BYTE * buf, SIZE_T len) {
 	return cnt;
 }
 
-static RES POPCNT_HardwareUnrolled_NoAlign(const BYTE * buf, SIZE_T len) {
+static RES POPCNT_HardwareUnrolled_NoAlign(const BYTE * buf, size_t len) {
 	RES cnt = 0;
-	SIZE_T ndqwords = len / (sizeof(DWORD) * 4);
+	size_t ndqwords = len / (sizeof(DWORD) * 4);
 	for(; ndqwords; ndqwords--) {
 		cnt += __popcnt(*(DWORD*)buf) +
 			   __popcnt(*(DWORD*)(buf + sizeof(DWORD) )) +
@@ -738,7 +737,7 @@ static RES POPCNT_HardwareUnrolled_NoAlign(const BYTE * buf, SIZE_T len) {
 
 // ======= Benchmarks ============
 
-UINT64 inline GetRDTSC() {
+uint32_t64 inline GetRDTSC() {
    __asm {
       ; Flush the pipeline
       XOR eax, eax
@@ -748,14 +747,14 @@ UINT64 inline GetRDTSC() {
    }
 }
 
-UINT Benchmark(CRC_FUNC func, const BYTE * buffer, SIZE_T length, OUT RES & result) {
-	UINT min_time = UINT_MAX;
+uint32_t Benchmark(CRC_FUNC func, const BYTE * buffer, size_t length, OUT RES & result) {
+	uint32_t min_time = uint32_t_MAX;
 	RES res = 0;
 
-	for (UINT j = 0; j < 20; j++) {
-		UINT64 start_time = GetRDTSC();
+	for (uint32_t j = 0; j < 20; j++) {
+		uint32_t64 start_time = GetRDTSC();
 		res = func(buffer, length);
-		UINT time = (UINT)(GetRDTSC() - start_time);
+		uint32_t time = (uint32_t)(GetRDTSC() - start_time);
 		min_time = min(min_time, time);
 	}
 	result = res;
@@ -764,7 +763,7 @@ UINT Benchmark(CRC_FUNC func, const BYTE * buffer, SIZE_T length, OUT RES & resu
 
 BYTE g_buffer[1024 * 1024];
 // Length is not always a power of 2 to avoid bias in favor of unrolled implementations.
-static const SIZE_T g_lengths[] = {250, 1025, 4103, 16384, 65537, 262151, NUM_OF(g_buffer)};
+static const size_t g_lengths[] = {250, 1025, 4103, 16384, 65537, 262151, NUM_OF(g_buffer)};
 
 
 void BenchmarkFunction(CRC_FUNC func, const CHAR * func_name, const CHAR * func_long_name) {
@@ -776,15 +775,15 @@ void BenchmarkFunction(CRC_FUNC func, const CHAR * func_name, const CHAR * func_
 		printf("%-15s", func_name);
 	#endif
 
-	for (SIZE_T len_index = 0; len_index < NUM_OF(g_lengths); len_index++) {
+	for (size_t len_index = 0; len_index < NUM_OF(g_lengths); len_index++) {
 		RES res;
-		UINT time;
+		uint32_t time;
 		time = Benchmark(func, g_buffer + 1, g_lengths[len_index] - 1, OUT res);
 
 		#ifdef HTML_OUTPUT
-			printf("<td>%d</td>", (UINT)time);
+			printf("<td>%d</td>", (uint32_t)time);
 		#else
-			printf("%8d [%8x]", (UINT)time, res);
+			printf("%8d [%8x]", (uint32_t)time, res);
 		#endif
 	}
 
@@ -799,12 +798,12 @@ void PrintHeader() {
 	// Header
 	#ifdef HTML_OUTPUT
 		printf("<table><tr><th>File size, bytes</th>");
-		for (SIZE_T len_index = 0; len_index < NUM_OF(g_lengths); len_index++)
+		for (size_t len_index = 0; len_index < NUM_OF(g_lengths); len_index++)
 			printf("<th>%d</th>", g_lengths[len_index]);
 		printf("</tr>");
 	#else
 		printf("%15c", ' ');
-		for (SIZE_T len_index = 0; len_index < NUM_OF(g_lengths); len_index++)
+		for (size_t len_index = 0; len_index < NUM_OF(g_lengths); len_index++)
 			printf("%19d", g_lengths[len_index]);
 		printf("\n");
 	#endif
@@ -878,7 +877,7 @@ int main() {
 	CRC_SlicingInit();
 
 	srand(2015695684); // Initialize to some fixed number
-	for (SIZE_T i = 0; i < NUM_OF(g_buffer); i++)
+	for (size_t i = 0; i < NUM_OF(g_buffer); i++)
 		g_buffer[i] = rand() & 0xFF;
 
 	const INT POPCNT_SUPPORTED = 1 << 23, SSE4_2_SUPPORTED = 1 << 20, SSSE3_SUPPORTED = 1 << 9;
@@ -887,14 +886,14 @@ int main() {
 
 	// =============
 	// Tests
-	for (SIZE_T i = 0; i < NUM_OF(crc_funcs); i++)
+	for (size_t i = 0; i < NUM_OF(crc_funcs); i++)
 		TestCRCFunc(crc_funcs[i]);
 	if (a[2] & SSE4_2_SUPPORTED) {
 		TestCRCFunc(CRC_Hardware);
 		TestCRCFunc(CRC_HardwareUnrolled);
 	}
 
-	for (SIZE_T i = 0; i < NUM_OF(popcnt_funcs); i++)
+	for (size_t i = 0; i < NUM_OF(popcnt_funcs); i++)
 		TestPopCntFunc(popcnt_funcs[i]);
 	if (a[2] & POPCNT_SUPPORTED) {
 		TestPopCntFunc(POPCNT_Hardware);
@@ -912,7 +911,7 @@ int main() {
 	// CRC benchmark
 	PrintHeader();
 
-	for (SIZE_T i = 0; i < NUM_OF(crc_funcs); i++)
+	for (size_t i = 0; i < NUM_OF(crc_funcs); i++)
 		BenchmarkFunction(crc_funcs[i], crc_func_names[i], crc_long_names[i]);
 
 	if (a[2] & SSE4_2_SUPPORTED) {
@@ -928,7 +927,7 @@ int main() {
 	// POPCNT benchmark
 	PrintHeader();
 
-	for (SIZE_T i = 0; i < NUM_OF(popcnt_funcs); i++)
+	for (size_t i = 0; i < NUM_OF(popcnt_funcs); i++)
 		BenchmarkFunction(popcnt_funcs[i], popcnt_func_names[i], popcnt_long_names[i]);
 	printf("\n");
 
