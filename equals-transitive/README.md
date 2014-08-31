@@ -64,12 +64,12 @@ Prelude> min 1 nan
 NaN
 ~~~
 The following table fails to display correctly because github wont' render a six column table. If you really want to see the table, try this [markdown rendering engine](http://markdown-here.com/livedemo.html).
-| Language | Pass 1st | Pass 2nd | Pass NaN | Pass non-NaN | Exception |
+| Language | 1st | 2nd | NaN | non-NaN | Exception |
 | --- | --- | --- | --- | --- | --- |
 | Scheme (racket) | | | X | | |
 | Clojure 1.1 | | X | | | |
 | C# Mono 2.10.8.1 | | | X | | |
-| Ruby 1.8.7 | | | X | | X |
+| Ruby 1.8.7 | | | | | X |
 | Java 1.7 | | | X | | |
 | Scala 2.9.2 | | | X | | |
 | Haskell 7.4.1 | | X | | |
