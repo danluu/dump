@@ -7,7 +7,6 @@
 #define LINE_SIZE 128
 #define ITERATIONS 1000000
 
-unsigned long long buffer[LEN] __attribute__((aligned(LINE_SIZE)));
 
 // Hardware-accelerated population count (using POPCNT instruction)
 int builtin_popcnt(const unsigned long long* buf, int len) {
@@ -18,12 +17,16 @@ int builtin_popcnt(const unsigned long long* buf, int len) {
   return cnt;
 }
 
-int run_builtin_popcnt(const unsigned long long* buf, int len, int iterations) {
+int run_builtin_popcnt(int len, int iterations) {
+  unsigned long long buffer[LEN] __attribute__((aligned(LINE_SIZE)));
+
+
   int total = 0;
   uint64_t tsc_before, tsc_after, tsc, min_tsc;
-  min_tsc = UINT64_MAX;
+  min_tsc = 0;
+  min_tsc--;
 
-  asm volatile("" :: "m" (buffer));
+  asm volatile("" :: "m" (buffer[0]));
 
   for (int i = 0; i < 1000; ++i) {
     RDTSC_START(tsc_before);
@@ -38,6 +41,6 @@ int run_builtin_popcnt(const unsigned long long* buf, int len, int iterations) {
 }
 
 int main() {
-  printf("%i\n", run_builtin_popcnt(buffer, LEN, ITERATIONS));
+  printf("%i\n", run_builtin_popcnt(LEN, ITERATIONS));
 }
 
