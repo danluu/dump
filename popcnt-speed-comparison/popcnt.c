@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <x86intrin.h>
+#include "../rdtsc.h"
 
 #define LEN 4096
 #define LINE_SIZE 128
@@ -19,18 +20,24 @@ int builtin_popcnt(const unsigned long long* buf, int len) {
 
 int run_builtin_popcnt(const unsigned long long* buf, int len, int iterations) {
   int total = 0;
+  uint64_t tsc_before, tsc_after, tsc, min_tsc;
+  min_tsc = UINT64_MAX;
 
   asm volatile("" :: "m" (buffer));
 
   for (int i = 0; i < 1000; ++i) {
+    RDTSC_START(tsc_before);
     total += builtin_popcnt(buffer, LEN);
+    RDTSC_STOP(tsc_after);
+    tsc = tsc_after - tsc_before;
+    min_tsc = min_tsc < tsc ? min_tsc : tsc;
   }
 
   asm volatile("" :: "m" (total));
-  return total;
+  return min_tsc;
 }
 
 int main() {
-  printf("%i", run_builtin_popcnt(buffer, LEN, ITERATIONS));
+  printf("%i\n", run_builtin_popcnt(buffer, LEN, ITERATIONS));
 }
 
