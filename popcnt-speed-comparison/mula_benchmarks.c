@@ -320,12 +320,7 @@ static uint8_t mask0f[16] = {0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0f, 0x0
 uint32_t result = 0;
 int i, n, k;
 
-#ifdef DEBUG
 assert(chunks % 4 == 0)
-#ifndef ALIGN_DATA
-assert(false);
-#endif
-#endif
 
 __asm__ volatile ("movdqu (%%eax), %%xmm5" : : "a" (mask55));
 __asm__ volatile ("movdqu (%%eax), %%xmm6" : : "a" (mask33));

@@ -1,3 +1,6 @@
+// TODO: add BSD license. This code should be BSD licensed beacuse it uses
+// some BSD licensed code, so making it BSD is the simplest thing.
+
 #include <stdio.h>
 #include <string.h>
 #include <x86intrin.h>
@@ -15,7 +18,7 @@ void setup_buffer(int len) {
   buffer[len-1] = 3;
 }
 
-// Hardware-accelerated population count (using POPCNT instruction)
+// Note that this emits a popcnt with gcc but not clang.
 uint32_t builtin_popcnt(const uint64_t* buf, int len) {
   int cnt = 0;
   for (int i = 0; i < len; ++i) {
@@ -36,7 +39,9 @@ uint32_t builtin_popcnt_unrolled(const uint64_t* buf, int len) {
   return cnt;
 }
 
-// Attempt to work out false depdency errata.
+// Attempt to work around false depdency errata.
+// gcc is too smart to fall for this and re-creates the dependency unless
+// compiled with -funroll-loops or something similar.
 uint32_t builtin_popcnt_unrolled_errata(const uint64_t* buf, int len) {
   assert(len % 4 == 0);
   int cnt[4];
@@ -53,7 +58,8 @@ uint32_t builtin_popcnt_unrolled_errata(const uint64_t* buf, int len) {
   return cnt[0] + cnt[1] + cnt[2] + cnt[3];
 }
 
-
+// TODO: refactor the following fns into a single fn that takes a function
+// pointer. This might also be a good excuse to switch to C++ and use a std::function.
 int run_builtin_popcnt(int len, int iterations) {
 
   uint32_t total = 0;
