@@ -9,7 +9,7 @@
 
 
 // Hardware-accelerated population count (using POPCNT instruction)
-int builtin_popcnt(const unsigned long long* buf, int len) {
+uint32_t builtin_popcnt(const uint64_t* buf, int len) {
   int cnt = 0;
   for (int i = 0; i < len; ++i) {
     cnt += __builtin_popcountll(buf[i]);
@@ -18,10 +18,10 @@ int builtin_popcnt(const unsigned long long* buf, int len) {
 }
 
 int run_builtin_popcnt(int len, int iterations) {
-  unsigned long long buffer[LEN] __attribute__((aligned(LINE_SIZE)));
+  uint64_t buffer[LEN] __attribute__((aligned(LINE_SIZE)));
 
 
-  int total = 0;
+  uint32_t total = 0;
   uint64_t tsc_before, tsc_after, tsc, min_tsc;
   min_tsc = 0;
   min_tsc--;
