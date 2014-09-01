@@ -24,6 +24,36 @@ uint32_t builtin_popcnt(const uint64_t* buf, int len) {
   return cnt;
 }
 
+uint32_t builtin_popcnt_unrolled(const uint64_t* buf, int len) {
+  assert(len % 4 == 0);
+  int cnt = 0;
+  for (int i = 0; i < len; i+=4) {
+    cnt += __builtin_popcountll(buf[i]);
+    cnt += __builtin_popcountll(buf[i+1]);
+    cnt += __builtin_popcountll(buf[i+2]);
+    cnt += __builtin_popcountll(buf[i+3]);
+  }
+  return cnt;
+}
+
+// Attempt to work out false depdency errata.
+uint32_t builtin_popcnt_unrolled_errata(const uint64_t* buf, int len) {
+  assert(len % 4 == 0);
+  int cnt[4];
+  for (int i = 0; i < 4; ++i) {
+    cnt[i] = 0;
+  }
+
+  for (int i = 0; i < len; i+=4) {
+    cnt[0] += __builtin_popcountll(buf[i]);
+    cnt[1] += __builtin_popcountll(buf[i+1]);
+    cnt[2] += __builtin_popcountll(buf[i+2]);
+    cnt[3] += __builtin_popcountll(buf[i+3]);
+  }
+  return cnt[0] + cnt[1] + cnt[2] + cnt[3];
+}
+
+
 int run_builtin_popcnt(int len, int iterations) {
 
   uint32_t total = 0;
@@ -46,6 +76,53 @@ int run_builtin_popcnt(int len, int iterations) {
   asm volatile("" :: "m" (total));
   return min_tsc;
 }
+
+int run_builtin_popcnt_unrolled(int len, int iterations) {
+
+  uint32_t total = 0;
+  uint64_t tsc_before, tsc_after, tsc, min_tsc;
+  min_tsc = 0;
+  min_tsc--;
+
+  asm volatile("" :: "m" (buffer[0]));
+
+  for (int i = 0; i < iterations; ++i) {
+    RDTSC_START(tsc_before);
+    total += builtin_popcnt_unrolled(buffer, LEN);
+    RDTSC_STOP(tsc_after);
+    tsc = tsc_after - tsc_before;
+    min_tsc = min_tsc < tsc ? min_tsc : tsc;
+  }
+
+  assert(total == iterations * 3); // Check that we don't have an off by one error.
+
+  asm volatile("" :: "m" (total));
+  return min_tsc;
+}
+
+int run_builtin_popcnt_unrolled_errata(int len, int iterations) {
+
+  uint32_t total = 0;
+  uint64_t tsc_before, tsc_after, tsc, min_tsc;
+  min_tsc = 0;
+  min_tsc--;
+
+  asm volatile("" :: "m" (buffer[0]));
+
+  for (int i = 0; i < iterations; ++i) {
+    RDTSC_START(tsc_before);
+    total += builtin_popcnt_unrolled_errata(buffer, LEN);
+    RDTSC_STOP(tsc_after);
+    tsc = tsc_after - tsc_before;
+    min_tsc = min_tsc < tsc ? min_tsc : tsc;
+  }
+
+  assert(total == iterations * 3); // Check that we don't have an off by one error.
+
+  asm volatile("" :: "m" (total));
+  return min_tsc;
+}
+
 
 // Code from Wojciech Mula.
 
@@ -174,9 +251,13 @@ int run_mula_popcnt(int len, int iterations) {
 
 int main() {
   setup_buffer();
+  printf("builtin: %i\n", run_builtin_popcnt(LEN, ITERATIONS));
+  printf("builtin unrolled: %i\n", run_builtin_popcnt_unrolled(LEN, ITERATIONS));
+  printf("builtin errata: %i\n", run_builtin_popcnt_unrolled_errata(LEN, ITERATIONS));
+  printf("SSSE3: %i\n", run_mula_popcnt(LEN, ITERATIONS));
   printf("%i\n", run_builtin_popcnt(LEN, ITERATIONS));
-  printf("%i\n", run_mula_popcnt(LEN, ITERATIONS));
-  printf("%i\n", run_builtin_popcnt(LEN, ITERATIONS));
+  printf("%i\n", run_builtin_popcnt_unrolled(LEN, ITERATIONS));
+  printf("%i\n", run_builtin_popcnt_unrolled_errata(LEN, ITERATIONS));
   printf("%i\n", run_mula_popcnt(LEN, ITERATIONS));
 }
 
