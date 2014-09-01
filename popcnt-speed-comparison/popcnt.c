@@ -178,14 +178,12 @@ k = chunks16;
 chunks16 = 0;
 }
 #undef MAX
-  // Note: changed movdqa to movdqu while debugging. This shouldn't change performance.
-  // TODO: change back and check.
 __asm__ volatile ("pxor %xmm4, %xmm4"); // xmm4 -- local accumulator
 for (n=0; n < k; n+=4) {
 #define body(index) \
 __asm__ volatile( \
-"movdqu  (%%eax), %%xmm0\n" \
-"movdqu    %%xmm0, %%xmm1\n" \
+"movdqa  (%%eax), %%xmm0\n" \
+"movdqa    %%xmm0, %%xmm1\n" \
 "psrlw         $4, %%xmm1\n" \
 "pand      %%xmm6, %%xmm0\n" \
 "pand      %%xmm6, %%xmm1\n" \
