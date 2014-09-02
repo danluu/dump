@@ -143,6 +143,53 @@ uint32_t builtin_popcnt_movdq_unrolled(const uint64_t* buf, int len) {
   return cnt[0] + cnt[1] + cnt[2] + cnt[3];
 }
 
+uint32_t builtin_popcnt_movdq_unrolled_manual(const uint64_t* buf, int len) {
+  uint64_t cnt[4];
+  __m128i temp_upper[2];
+  uint64_t lower64[2];
+  uint64_t upper64[2];
+
+  for (int i = 0; i < 2; ++i) {
+    cnt[i] = 0;
+  }
+
+  for (int i = 0; i < len; i+=4) {
+    __m128i x0 = _mm_load_si128((__m128i*)&buf[i]);
+    __m128i x1 = _mm_load_si128((__m128i*)&buf[i+2]);
+
+    __m128i x0_upper;
+    __m128i x1_upper;
+
+    uint64_t dummy0;
+    uint64_t dummy1;
+    uint64_t dummy0_upper;
+    uint64_t dummy1_upper;
+
+    // TODO: break input dep on popcnt
+    __asm__(    	    
+	    "movhlps %10, %6 \n\t"
+	    "movhlps %11, %7 \n\t"
+	    "movq %10, %4    \n\t"
+	    "movq %11, %5    \n\t"
+	    "movq %6, %8    \n\t"
+	    "movq %7, %9    \n\t"
+	    "popcnt %4, %4  \n\t"
+	    "add %4, %0     \n\t"
+	    "popcnt %5, %5  \n\t"
+	    "add %5, %1     \n\t"
+	    "popcnt %8, %8  \n\t"
+	    "add %8, %2     \n\t"
+	    "popcnt %9, %9  \n\t"
+	    "add %9, %3     \n\t"
+	    : "+r" (cnt[0]), "+r" (cnt[1]), "+r" (cnt[2]), "+r" (cnt[3]), 
+	      "=&r" (dummy0), "=&r" (dummy1),	"=x" (x0_upper), "=x" (x1_upper), 
+	      "=&r" (dummy0_upper), "=&r" (dummy1_upper)
+	    : "x"  (x0), "x"  (x1)
+		);
+  }
+  return cnt[0] + cnt[1] + cnt[2] + cnt[3];
+}
+
 // TODO: refactor the following fns into a single fn that takes a function
 // pointer. This might also be a good excuse to switch to C++ and use a std::function.
 int run_builtin_popcnt(int len, int iterations) {
@@ -283,6 +330,28 @@ int run_builtin_popcnt_movdq_unrolled(int len, int iterations) {
   return min_tsc;
 }
 
+int run_builtin_popcnt_movdq_unrolled_manual(int len, int iterations) {
+
+  uint32_t total = 0;
+  uint64_t tsc_before, tsc_after, tsc, min_tsc;
+  min_tsc = 0;
+  min_tsc--;
+
+  asm volatile("" :: "m" (buffer[0]));
+
+  for (int i = 0; i < iterations; ++i) {
+    RDTSC_START(tsc_before);
+    total += builtin_popcnt_movdq_unrolled_manual(buffer, len);
+    RDTSC_STOP(tsc_after);
+    tsc = tsc_after - tsc_before;
+    min_tsc = min_tsc < tsc ? min_tsc : tsc;
+  }
+
+  //  assert(total == iterations * 3); // Check that we don't have an off by one error.
+
+  asm volatile("" :: "m" (total));
+  return min_tsc;
+}
 
 // Code from Wojciech Mula.
 
@@ -415,6 +484,7 @@ int main() {
     printf("builtin manual: %i\n", run_builtin_popcnt_unrolled_errata_manual(len, ITERATIONS));
     printf("builtin movdq: %i\n", run_builtin_popcnt_movdq(len, ITERATIONS));
     printf("builtin movdq unrolled: %i\n", run_builtin_popcnt_movdq_unrolled(len, ITERATIONS));
+    printf("builtin movdq manual: %i\n", run_builtin_popcnt_movdq_unrolled_manual(len, ITERATIONS));
     #ifdef USE_SOFT 
     printf("SSSE3: %i\n", run_mula_popcnt(len, ITERATIONS));
     #endif
