@@ -59,6 +59,8 @@ uint32_t builtin_popcnt_unrolled_errata(const uint64_t* buf, int len) {
   return cnt[0] + cnt[1] + cnt[2] + cnt[3];
 }
 
+// This works as intended with clang, but gcc turns the MOVQ intrinsic into an xmm->mem 
+// operation which defeats the purpose of using MOVQ.
 uint32_t builtin_popcnt_movdq(const uint64_t* buf, int len) {
   int cnt = 0;
   __m128i temp;
