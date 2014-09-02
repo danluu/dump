@@ -7,9 +7,13 @@
 #include <assert.h>
 #include "../rdtsc.h"
 
-#define MAX_LEN 4103
+#define MAX_LEN 4096
+#define DELTA 128
 #define LINE_SIZE 128
 #define ITERATIONS 10000
+
+// Mula's SSSE3 implementation core dumps on Mac OS unless it's modified.
+// #define USE_SOFT
 
 uint64_t buffer[MAX_LEN] __attribute__((aligned(LINE_SIZE)));
 
@@ -59,6 +63,38 @@ uint32_t builtin_popcnt_unrolled_errata(const uint64_t* buf, int len) {
   return cnt[0] + cnt[1] + cnt[2] + cnt[3];
 }
 
+// Here's a version that doesn't rely on the compiler not doing
+// bad optimizations.
+
+uint32_t builtin_popcnt_unrolled_errata_manual(const uint64_t* buf, int len) {
+  assert(len % 4 == 0);
+  uint64_t cnt[4];
+  for (int i = 0; i < 4; ++i) {
+    cnt[i] = 0;
+  }
+
+  for (int i = 0; i < len; i+=4) {
+    uint64_t r0 = buf[i];
+    uint64_t r1 = buf[i+1];
+    uint64_t r2 = buf[i+2];
+    uint64_t r3 = buf[i+3];
+    __asm__(    
+	    "popcnt %4, %4  \n\t"
+	    "add %4, %0     \n\t"
+	    "popcnt %5, %5  \n\t"
+	    "add %5, %1     \n\t"
+	    "popcnt %6, %6  \n\t"
+	    "add %6, %2     \n\t"
+	    "popcnt %7, %7  \n\t"
+	    "add %7, %3     \n\t"
+	    : "+r" (cnt[0]), "+r" (cnt[1]), "+r" (cnt[2]), "+r" (cnt[3])
+	    : "r"  (r0), "r"  (r1), "r"  (r2), "r"  (r3)    
+		);
+  }
+  return cnt[0] + cnt[1] + cnt[2] + cnt[3];
+}
+
+
 // This works as intended with clang, but gcc turns the MOVQ intrinsic into an xmm->mem 
 // operation which defeats the purpose of using MOVQ.
 uint32_t builtin_popcnt_movdq(const uint64_t* buf, int len) {
@@ -80,7 +116,7 @@ uint32_t builtin_popcnt_movdq(const uint64_t* buf, int len) {
 }
 
 uint32_t builtin_popcnt_movdq_unrolled(const uint64_t* buf, int len) {
-  int cnt[2];
+  int cnt[4];
   __m128i temp[2];
   __m128i temp_upper[2];
   uint64_t lower64[2];
@@ -101,10 +137,10 @@ uint32_t builtin_popcnt_movdq_unrolled(const uint64_t* buf, int len) {
     temp_upper[1] = (__m128i)_mm_movehl_ps((__m128)temp[1], (__m128)temp[1]);
     upper64[0] = _mm_cvtsi128_si64(temp_upper[0]);
     upper64[1] = _mm_cvtsi128_si64(temp_upper[1]);
-    cnt[0] += __builtin_popcountll(upper64[0]);
-    cnt[1] += __builtin_popcountll(upper64[1]);
+    cnt[2] += __builtin_popcountll(upper64[0]);
+    cnt[3] += __builtin_popcountll(upper64[1]);
   }
-  return cnt[0] + cnt[1];
+  return cnt[0] + cnt[1] + cnt[2] + cnt[3];
 }
 
 // TODO: refactor the following fns into a single fn that takes a function
@@ -167,6 +203,29 @@ int run_builtin_popcnt_unrolled_errata(int len, int iterations) {
   for (int i = 0; i < iterations; ++i) {
     RDTSC_START(tsc_before);
     total += builtin_popcnt_unrolled_errata(buffer, len);
+    RDTSC_STOP(tsc_after);
+    tsc = tsc_after - tsc_before;
+    min_tsc = min_tsc < tsc ? min_tsc : tsc;
+  }
+
+  //  assert(total == iterations * 3); // Check that we don't have an off by one error.
+
+  asm volatile("" :: "m" (total));
+  return min_tsc;
+}
+
+int run_builtin_popcnt_unrolled_errata_manual(int len, int iterations) {
+
+  uint32_t total = 0;
+  uint64_t tsc_before, tsc_after, tsc, min_tsc;
+  min_tsc = 0;
+  min_tsc--;
+
+  asm volatile("" :: "m" (buffer[0]));
+
+  for (int i = 0; i < iterations; ++i) {
+    RDTSC_START(tsc_before);
+    total += builtin_popcnt_unrolled_errata_manual(buffer, len);
     RDTSC_STOP(tsc_after);
     tsc = tsc_after - tsc_before;
     min_tsc = min_tsc < tsc ? min_tsc : tsc;
@@ -349,13 +408,16 @@ int run_mula_popcnt(int len, int iterations) {
 }
 
 int main() {
-  for (int len = 16; len < MAX_LEN; len += 16) {
+  for (int len = DELTA; len < MAX_LEN; len *= 2) {
     printf("builtin: %i\n", run_builtin_popcnt(len, ITERATIONS));
     printf("builtin unrolled: %i\n", run_builtin_popcnt_unrolled(len, ITERATIONS));
     printf("builtin errata: %i\n", run_builtin_popcnt_unrolled_errata(len, ITERATIONS));
+    printf("builtin manual: %i\n", run_builtin_popcnt_unrolled_errata_manual(len, ITERATIONS));
     printf("builtin movdq: %i\n", run_builtin_popcnt_movdq(len, ITERATIONS));
     printf("builtin movdq unrolled: %i\n", run_builtin_popcnt_movdq_unrolled(len, ITERATIONS));
+    #ifdef USE_SOFT 
     printf("SSSE3: %i\n", run_mula_popcnt(len, ITERATIONS));
+    #endif
   }
 }
 
