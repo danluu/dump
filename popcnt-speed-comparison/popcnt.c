@@ -7,7 +7,7 @@
 #include <assert.h>
 #include "../rdtsc.h"
 
-#define MAX_LEN 4096*4096
+#define MAX_LEN 4096*384
 #define DELTA 128
 #define LINE_SIZE 128
 #define ITERATIONS 10000
