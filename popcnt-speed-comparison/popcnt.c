@@ -13,7 +13,7 @@
 #define ITERATIONS 10000
 
 // Mula's SSSE3 implementation core dumps on Mac OS unless it's modified.
-#define USE_SOFT
+// #define USE_SOFT
 
 uint64_t buffer[MAX_LEN] __attribute__((aligned(LINE_SIZE)));
 
@@ -65,6 +65,7 @@ uint32_t builtin_popcnt_unrolled_errata(const uint64_t* buf, int len) {
 
 // Here's a version that doesn't rely on the compiler not doing
 // bad optimizations.
+// This code is from Alex Yee.
 
 uint32_t builtin_popcnt_unrolled_errata_manual(const uint64_t* buf, int len) {
   assert(len % 4 == 0);
@@ -97,6 +98,7 @@ uint32_t builtin_popcnt_unrolled_errata_manual(const uint64_t* buf, int len) {
 
 // This works as intended with clang, but gcc turns the MOVQ intrinsic into an xmm->mem 
 // operation which defeats the purpose of using MOVQ.
+
 uint32_t builtin_popcnt_movdq(const uint64_t* buf, int len) {
   int cnt = 0;
   __m128i temp;
@@ -114,6 +116,11 @@ uint32_t builtin_popcnt_movdq(const uint64_t* buf, int len) {
   }
   return cnt;
 }
+
+// With gcc, this code has the same problem as the previous fn, where movq
+// gets translated into an xmm->mem movq.
+// Clang handles the movq correctly but it optimizes away the seperate cnt
+// variables, causing the popcnt false register dependcy to reduce performance.
 
 uint32_t builtin_popcnt_movdq_unrolled(const uint64_t* buf, int len) {
   int cnt[4];
@@ -165,7 +172,6 @@ uint32_t builtin_popcnt_movdq_unrolled_manual(const uint64_t* buf, int len) {
     uint64_t dummy0_upper;
     uint64_t dummy1_upper;
 
-    // TODO: break input dep on popcnt
     __asm__(    	    
 	    "movhlps %10, %6 \n\t"
 	    "movhlps %11, %7 \n\t"
