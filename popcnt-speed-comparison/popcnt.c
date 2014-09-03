@@ -7,13 +7,13 @@
 #include <assert.h>
 #include "../rdtsc.h"
 
-#define MAX_LEN 4096
+#define MAX_LEN 4096*4096
 #define DELTA 128
 #define LINE_SIZE 128
 #define ITERATIONS 10000
 
 // Mula's SSSE3 implementation core dumps on Mac OS unless it's modified.
-// #define USE_SOFT
+#define USE_SOFT
 
 uint64_t buffer[MAX_LEN] __attribute__((aligned(LINE_SIZE)));
 
@@ -477,7 +477,7 @@ int run_mula_popcnt(int len, int iterations) {
 }
 
 int main() {
-  for (int len = DELTA; len < MAX_LEN; len *= 2) {
+  for (int len = DELTA; len < MAX_LEN; len += DELTA) {
     printf("builtin: %i\n", run_builtin_popcnt(len, ITERATIONS));
     printf("builtin unrolled: %i\n", run_builtin_popcnt_unrolled(len, ITERATIONS));
     printf("builtin errata: %i\n", run_builtin_popcnt_unrolled_errata(len, ITERATIONS));
