@@ -10,7 +10,7 @@
 #define MAX_LEN 4096*384
 #define DELTA 128
 #define LINE_SIZE 128
-#define ITERATIONS 1000
+#define ITERATIONS 10000
 
 // Mula's SSSE3 implementation core dumps on Mac OS unless it's modified.
 #define USE_SOFT

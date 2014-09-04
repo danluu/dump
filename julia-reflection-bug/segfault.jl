@@ -55,4 +55,30 @@ code_native(match,(Regex,String))
 
 # Well, it calls jl_compile instead of jl_cstyle_compile, that calls to_function with cstyle=false instead of cstyle=true
 # Weirdly, it calls it on the same argument, this sf thing.
-# Hoe does this work? If We're getting a pointer to a julia function, how could we compile it as a c function?
+# How does this work? If We're getting a pointer to a julia function, how could we compile it as a c function?
+
+# Note that this works on the .3 RC, so this seems to be from a .4 change?
+# 86b567cc58d4b99503fc058e3f02e6a402028b77 (Aug 20): pass
+# 50d1778ee457735fcd6f280637222d114d765a17 (Aug 27): fail
+
+# git bisect says:
+# 015cb192887cc1ad2befa05cc5267d37b17f0016 is the first bad commit
+# commit 015cb192887cc1ad2befa05cc5267d37b17f0016
+# Author: Keno Fischer <kfischer@college.harvard.edu>
+# Date:   Wed Aug 27 15:29:34 2014 -0400
+
+#    Try to respect the style of compile better in get_llvmf
+
+# :040000 040000 448032521404d338b17af8459325e8ca9ef4f783 c1c5eedeaf5c8a002080a517a67c3c385e0a4eb1 M      src
+
+-    if (sf->linfo->functionObject == NULL) {
+-        jl_compile(sf);
++    if (getwrapper) {
++        if (sf->linfo->functionObject == NULL) {
++            jl_compile(sf);
++        }
++    } else {
++        if (sf->linfo->cFunctionObject == NULL) {
++            jl_cstyle_compile(sf);
++        }
+
