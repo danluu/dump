@@ -13,7 +13,7 @@
 #define ITERATIONS 10000
 
 // Mula's SSSE3 implementation core dumps on Mac OS unless it's modified.
-#define USE_SOFT
+// #define USE_SOFT
 
 uint64_t buffer[MAX_LEN] __attribute__((aligned(LINE_SIZE)));
 
@@ -65,6 +65,7 @@ uint32_t builtin_popcnt_unrolled_errata(const uint64_t* buf, int len) {
 
 // Here's a version that doesn't rely on the compiler not doing
 // bad optimizations.
+// This code is from Alex Yee.
 
 uint32_t builtin_popcnt_unrolled_errata_manual(const uint64_t* buf, int len) {
   assert(len % 4 == 0);
@@ -97,6 +98,7 @@ uint32_t builtin_popcnt_unrolled_errata_manual(const uint64_t* buf, int len) {
 
 // This works as intended with clang, but gcc turns the MOVQ intrinsic into an xmm->mem 
 // operation which defeats the purpose of using MOVQ.
+
 uint32_t builtin_popcnt_movdq(const uint64_t* buf, int len) {
   int cnt = 0;
   __m128i temp;
@@ -114,6 +116,11 @@ uint32_t builtin_popcnt_movdq(const uint64_t* buf, int len) {
   }
   return cnt;
 }
+
+// With gcc, this code has the same problem as the previous fn, where movq
+// gets translated into an xmm->mem movq.
+// Clang handles the movq correctly but it optimizes away the seperate cnt
+// variables, causing the popcnt false register dependcy to reduce performance.
 
 uint32_t builtin_popcnt_movdq_unrolled(const uint64_t* buf, int len) {
   int cnt[4];
@@ -165,7 +172,6 @@ uint32_t builtin_popcnt_movdq_unrolled_manual(const uint64_t* buf, int len) {
     uint64_t dummy0_upper;
     uint64_t dummy1_upper;
 
-    // TODO: break input dep on popcnt
     __asm__(    	    
 	    "movhlps %10, %6 \n\t"
 	    "movhlps %11, %7 \n\t"
@@ -190,9 +196,7 @@ uint32_t builtin_popcnt_movdq_unrolled_manual(const uint64_t* buf, int len) {
   return cnt[0] + cnt[1] + cnt[2] + cnt[3];
 }
 
-// TODO: refactor the following fns into a single fn that takes a function
-// pointer. This might also be a good excuse to switch to C++ and use a std::function.
-int run_builtin_popcnt(int len, int iterations) {
+int run_and_time_fn(int len, int iterations, uint32_t(*fn)(const uint64_t* buf, int)) {
 
   uint32_t total = 0;
   uint64_t tsc_before, tsc_after, tsc, min_tsc;
@@ -203,145 +207,7 @@ int run_builtin_popcnt(int len, int iterations) {
 
   for (int i = 0; i < iterations; ++i) {
     RDTSC_START(tsc_before);
-    total += builtin_popcnt(buffer, len);
-    RDTSC_STOP(tsc_after);
-    tsc = tsc_after - tsc_before;
-    min_tsc = min_tsc < tsc ? min_tsc : tsc;
-  }
-
-  //  assert(total == iterations * 3); // Check that we don't have an off by one error.
-
-  asm volatile("" :: "m" (total));
-  return min_tsc;
-}
-
-int run_builtin_popcnt_unrolled(int len, int iterations) {
-
-  uint32_t total = 0;
-  uint64_t tsc_before, tsc_after, tsc, min_tsc;
-  min_tsc = 0;
-  min_tsc--;
-
-  asm volatile("" :: "m" (buffer[0]));
-
-  for (int i = 0; i < iterations; ++i) {
-    RDTSC_START(tsc_before);
-    total += builtin_popcnt_unrolled(buffer, len);
-    RDTSC_STOP(tsc_after);
-    tsc = tsc_after - tsc_before;
-    min_tsc = min_tsc < tsc ? min_tsc : tsc;
-  }
-
-  //  assert(total == iterations * 3); // Check that we don't have an off by one error.
-
-  asm volatile("" :: "m" (total));
-  return min_tsc;
-}
-
-int run_builtin_popcnt_unrolled_errata(int len, int iterations) {
-
-  uint32_t total = 0;
-  uint64_t tsc_before, tsc_after, tsc, min_tsc;
-  min_tsc = 0;
-  min_tsc--;
-
-  asm volatile("" :: "m" (buffer[0]));
-
-  for (int i = 0; i < iterations; ++i) {
-    RDTSC_START(tsc_before);
-    total += builtin_popcnt_unrolled_errata(buffer, len);
-    RDTSC_STOP(tsc_after);
-    tsc = tsc_after - tsc_before;
-    min_tsc = min_tsc < tsc ? min_tsc : tsc;
-  }
-
-  //  assert(total == iterations * 3); // Check that we don't have an off by one error.
-
-  asm volatile("" :: "m" (total));
-  return min_tsc;
-}
-
-int run_builtin_popcnt_unrolled_errata_manual(int len, int iterations) {
-
-  uint32_t total = 0;
-  uint64_t tsc_before, tsc_after, tsc, min_tsc;
-  min_tsc = 0;
-  min_tsc--;
-
-  asm volatile("" :: "m" (buffer[0]));
-
-  for (int i = 0; i < iterations; ++i) {
-    RDTSC_START(tsc_before);
-    total += builtin_popcnt_unrolled_errata_manual(buffer, len);
-    RDTSC_STOP(tsc_after);
-    tsc = tsc_after - tsc_before;
-    min_tsc = min_tsc < tsc ? min_tsc : tsc;
-  }
-
-  //  assert(total == iterations * 3); // Check that we don't have an off by one error.
-
-  asm volatile("" :: "m" (total));
-  return min_tsc;
-}
-
-int run_builtin_popcnt_movdq(int len, int iterations) {
-
-  uint32_t total = 0;
-  uint64_t tsc_before, tsc_after, tsc, min_tsc;
-  min_tsc = 0;
-  min_tsc--;
-
-  asm volatile("" :: "m" (buffer[0]));
-
-  for (int i = 0; i < iterations; ++i) {
-    RDTSC_START(tsc_before);
-    total += builtin_popcnt_movdq(buffer, len);
-    RDTSC_STOP(tsc_after);
-    tsc = tsc_after - tsc_before;
-    min_tsc = min_tsc < tsc ? min_tsc : tsc;
-  }
-
-  //  assert(total == iterations * 3); // Check that we don't have an off by one error.
-
-  asm volatile("" :: "m" (total));
-  return min_tsc;
-}
-
-int run_builtin_popcnt_movdq_unrolled(int len, int iterations) {
-
-  uint32_t total = 0;
-  uint64_t tsc_before, tsc_after, tsc, min_tsc;
-  min_tsc = 0;
-  min_tsc--;
-
-  asm volatile("" :: "m" (buffer[0]));
-
-  for (int i = 0; i < iterations; ++i) {
-    RDTSC_START(tsc_before);
-    total += builtin_popcnt_movdq_unrolled(buffer, len);
-    RDTSC_STOP(tsc_after);
-    tsc = tsc_after - tsc_before;
-    min_tsc = min_tsc < tsc ? min_tsc : tsc;
-  }
-
-  //  assert(total == iterations * 3); // Check that we don't have an off by one error.
-
-  asm volatile("" :: "m" (total));
-  return min_tsc;
-}
-
-int run_builtin_popcnt_movdq_unrolled_manual(int len, int iterations) {
-
-  uint32_t total = 0;
-  uint64_t tsc_before, tsc_after, tsc, min_tsc;
-  min_tsc = 0;
-  min_tsc--;
-
-  asm volatile("" :: "m" (buffer[0]));
-
-  for (int i = 0; i < iterations; ++i) {
-    RDTSC_START(tsc_before);
-    total += builtin_popcnt_movdq_unrolled_manual(buffer, len);
+    total += fn(buffer, len);
     RDTSC_STOP(tsc_after);
     tsc = tsc_after - tsc_before;
     min_tsc = min_tsc < tsc ? min_tsc : tsc;
@@ -477,14 +343,14 @@ int run_mula_popcnt(int len, int iterations) {
 }
 
 int main() {
-  for (int len = DELTA; len < MAX_LEN; len += DELTA) {
-    printf("builtin: %i\n", run_builtin_popcnt(len, ITERATIONS));
-    printf("builtin unrolled: %i\n", run_builtin_popcnt_unrolled(len, ITERATIONS));
-    printf("builtin errata: %i\n", run_builtin_popcnt_unrolled_errata(len, ITERATIONS));
-    printf("builtin manual: %i\n", run_builtin_popcnt_unrolled_errata_manual(len, ITERATIONS));
-    printf("builtin movdq: %i\n", run_builtin_popcnt_movdq(len, ITERATIONS));
-    printf("builtin movdq unrolled: %i\n", run_builtin_popcnt_movdq_unrolled(len, ITERATIONS));
-    printf("builtin movdq manual: %i\n", run_builtin_popcnt_movdq_unrolled_manual(len, ITERATIONS));
+  for (int len = DELTA; len < MAX_LEN; len *= 2) {
+    printf("builtin: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt));
+    printf("builtin unrolled: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_unrolled));
+    printf("builtin errata: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_unrolled_errata));
+    printf("builtin manual: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_unrolled_errata_manual));
+    printf("builtin movdq: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_movdq));
+    printf("builtin movdq unrolled: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_movdq_unrolled));
+    printf("builtin movdq manual: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_movdq_unrolled_manual));
     #ifdef USE_SOFT 
     printf("SSSE3: %i\n", run_mula_popcnt(len, ITERATIONS));
     #endif
