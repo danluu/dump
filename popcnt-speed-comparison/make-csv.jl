@@ -29,7 +29,7 @@ function print_header(h, delta::Int)
     current = 0
     for i in 1:row_length
         current += delta * 8
-        print(",$(current))")
+        print(",$(current)")
     end
     print("\n")
 end
