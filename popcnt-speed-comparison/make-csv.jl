@@ -44,7 +44,7 @@ end
 # print_sideways_header(h, 128)
 # print_sideways_data_hash(h)
 
-f = open("data-0")
+f = open("data-1")
 line = readline(f)
 first_name, _ = split(line, ":")
 print("bytes")
