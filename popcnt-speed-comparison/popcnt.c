@@ -10,10 +10,10 @@
 #define MAX_LEN 4096*384
 #define DELTA 128
 #define LINE_SIZE 128
-#define ITERATIONS 10000
+#define ITERATIONS 1000
 
 // Mula's SSSE3 implementation core dumps on Mac OS unless it's modified.
-// #define USE_SOFT
+#define USE_SOFT
 
 uint64_t buffer[MAX_LEN] __attribute__((aligned(LINE_SIZE)));
 
@@ -342,17 +342,23 @@ int run_mula_popcnt(int len, int iterations) {
   return min_tsc;
 }
 
+int adjusted_iterations(int len, int iterations) {
+  int adjusted =  iterations * DELTA / len;
+  return adjusted > 10 ? adjusted : 10;
+}
+
 int main() {
-  for (int len = DELTA; len < MAX_LEN; len *= 2) {
-    printf("builtin: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt));
-    printf("builtin unrolled: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_unrolled));
-    printf("builtin errata: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_unrolled_errata));
-    printf("builtin manual: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_unrolled_errata_manual));
-    printf("builtin movdq: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_movdq));
-    printf("builtin movdq unrolled: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_movdq_unrolled));
-    printf("builtin movdq manual: %i\n", run_and_time_fn(len, ITERATIONS, &builtin_popcnt_movdq_unrolled_manual));
+  for (int len = DELTA; len < MAX_LEN; len += DELTA) {
+    int iterations = adjusted_iterations(len, ITERATIONS);
+    // printf("builtin: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt));
+    printf("builtin unrolled: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled));
+    // printf("builtin errata: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata));
+    printf("builtin manual: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata_manual));
+    // printf("builtin movdq: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_movdq));
+    // printf("builtin movdq unrolled: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_movdq_unrolled));
+    printf("builtin movdq manual: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_movdq_unrolled_manual));
     #ifdef USE_SOFT 
-    printf("SSSE3: %i\n", run_mula_popcnt(len, ITERATIONS));
+    printf("SSSE3: %i\n", run_mula_popcnt(len, iterations));
     #endif
   }
 }
