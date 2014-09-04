@@ -1,1 +1,1 @@
-![Bytes per cycle](bytes_per_cycle.svg)
+![Bytes per cycle](bytes_per_cycle.png)
