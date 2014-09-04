@@ -46606,4 +46606,3 @@ builtin movdq: 1364636
 builtin movdq unrolled: 1292650
 builtin movdq manual: 1018294
 SSSE3: 1524179
-builtin: 271167
