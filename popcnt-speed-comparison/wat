@@ -1,0 +1,2799 @@
+builtin unrolled: 680
+builtin manual: 450
+builtin movdq manual: 594
+SSSE3: 730
+builtin unrolled: 1224
+builtin manual: 738
+builtin movdq manual: 1012
+SSSE3: 1334
+builtin unrolled: 1768
+builtin manual: 1036
+builtin movdq manual: 1410
+SSSE3: 1938
+builtin unrolled: 2312
+builtin manual: 1376
+builtin movdq manual: 1836
+SSSE3: 2558
+builtin unrolled: 2856
+builtin manual: 1674
+builtin movdq manual: 2226
+SSSE3: 3196
+builtin unrolled: 3400
+builtin manual: 1938
+builtin movdq manual: 2608
+SSSE3: 1635
+builtin unrolled: 1692
+builtin manual: 976
+builtin movdq manual: 1302
+SSSE3: 1913
+builtin unrolled: 1881
+builtin manual: 1274
+builtin movdq manual: 1452
+SSSE3: 2126
+builtin unrolled: 2231
+builtin manual: 1329
+builtin movdq manual: 1715
+SSSE3: 2516
+builtin unrolled: 2479
+builtin manual: 1508
+builtin movdq manual: 1885
+SSSE3: 2791
+builtin unrolled: 2720
+builtin manual: 1821
+builtin movdq manual: 2077
+SSSE3: 2961
+builtin unrolled: 2961
+builtin manual: 1706
+builtin movdq manual: 2256
+SSSE3: 3338
+builtin unrolled: 3202
+builtin manual: 1885
+builtin movdq manual: 2423
+SSSE3: 3594
+builtin unrolled: 3443
+builtin manual: 1972
+builtin movdq manual: 2605
+SSSE3: 3678
+builtin unrolled: 3489
+builtin manual: 1996
+builtin movdq manual: 2680
+SSSE3: 3944
+builtin unrolled: 3714
+builtin manual: 2117
+builtin movdq manual: 2818
+SSSE3: 4294
+builtin unrolled: 4037
+builtin manual: 2318
+builtin movdq manual: 3061
+SSSE3: 4554
+builtin unrolled: 4279
+builtin manual: 2402
+builtin movdq manual: 3255
+SSSE3: 4710
+builtin unrolled: 4400
+builtin manual: 2519
+builtin movdq manual: 3329
+SSSE3: 4964
+builtin unrolled: 4763
+builtin manual: 2901
+builtin movdq manual: 3593
+SSSE3: 5216
+builtin unrolled: 5137
+builtin manual: 3001
+builtin movdq manual: 3879
+SSSE3: 5783
+builtin unrolled: 5378
+builtin manual: 3051
+builtin movdq manual: 4061
+SSSE3: 5893
+builtin unrolled: 5619
+builtin manual: 3641
+builtin movdq manual: 4250
+SSSE3: 6174
+builtin unrolled: 5681
+builtin manual: 3321
+builtin movdq manual: 4306
+SSSE3: 6416
+builtin unrolled: 5923
+builtin manual: 3457
+builtin movdq manual: 4485
+SSSE3: 6688
+builtin unrolled: 6165
+builtin manual: 3209
+builtin movdq manual: 4663
+SSSE3: 6765
+builtin unrolled: 6233
+builtin manual: 3666
+builtin movdq manual: 4707
+SSSE3: 7031
+builtin unrolled: 6831
+builtin manual: 3866
+builtin movdq manual: 5134
+SSSE3: 7690
+builtin unrolled: 7072
+builtin manual: 4537
+builtin movdq manual: 5329
+SSSE3: 7554
+builtin unrolled: 6919
+builtin manual: 4305
+builtin movdq manual: 5192
+SSSE3: 7803
+builtin unrolled: 7554
+builtin manual: 4269
+builtin movdq manual: 5706
+SSSE3: 8057
+builtin unrolled: 7380
+builtin manual: 4340
+builtin movdq manual: 5550
+SSSE3: 8317
+builtin unrolled: 7616
+builtin manual: 4754
+builtin movdq manual: 5724
+SSSE3: 8580
+builtin unrolled: 8277
+builtin manual: 4828
+builtin movdq manual: 6231
+SSSE3: 9316
+builtin unrolled: 8518
+builtin manual: 4778
+builtin movdq manual: 6253
+SSSE3: 9320
+builtin unrolled: 8510
+builtin manual: 5071
+builtin movdq manual: 6404
+SSSE3: 9589
+builtin unrolled: 8752
+builtin manual: 4833
+builtin movdq manual: 6582
+SSSE3: 9852
+builtin unrolled: 8997
+builtin manual: 5751
+builtin movdq manual: 6763
+SSSE3: 9875
+builtin unrolled: 9211
+builtin manual: 5801
+builtin movdq manual: 7109
+SSSE3: 10393
+builtin unrolled: 9730
+builtin manual: 5789
+builtin movdq manual: 7301
+SSSE3: 10378
+builtin unrolled: 9438
+builtin manual: 6469
+builtin movdq manual: 7108
+SSSE3: 10635
+builtin unrolled: 9674
+builtin manual: 5408
+builtin movdq manual: 7247
+SSSE3: 10898
+builtin unrolled: 10453
+builtin manual: 6101
+builtin movdq manual: 7872
+SSSE3: 11776
+builtin unrolled: 10979
+builtin manual: 6534
+builtin movdq manual: 8232
+SSSE3: 11720
+builtin unrolled: 10638
+builtin manual: 5996
+builtin movdq manual: 7982
+SSSE3: 11986
+builtin unrolled: 10880
+builtin manual: 6380
+builtin movdq manual: 8157
+SSSE3: 12261
+builtin unrolled: 11097
+builtin manual: 7459
+builtin movdq manual: 8350
+SSSE3: 12524
+builtin unrolled: 11992
+builtin manual: 6718
+builtin movdq manual: 9009
+SSSE3: 13148
+builtin unrolled: 11906
+builtin manual: 7600
+builtin movdq manual: 8951
+SSSE3: 13417
+builtin unrolled: 12469
+builtin manual: 7262
+builtin movdq manual: 9387
+SSSE3: 13322
+builtin unrolled: 12388
+builtin manual: 6917
+builtin movdq manual: 9276
+SSSE3: 13961
+builtin unrolled: 12629
+builtin manual: 8661
+builtin movdq manual: 9489
+SSSE3: 13832
+builtin unrolled: 12524
+builtin manual: 6999
+builtin movdq manual: 9408
+SSSE3: 14098
+builtin unrolled: 13111
+builtin manual: 8500
+builtin movdq manual: 9804
+SSSE3: 14774
+builtin unrolled: 13359
+builtin manual: 8531
+builtin movdq manual: 10039
+SSSE3: 14639
+builtin unrolled: 13225
+builtin manual: 8589
+builtin movdq manual: 9922
+SSSE3: 14899
+builtin unrolled: 13841
+builtin manual: 8089
+builtin movdq manual: 10385
+SSSE3: 15174
+builtin unrolled: 14082
+builtin manual: 9656
+builtin movdq manual: 10528
+SSSE3: 15884
+builtin unrolled: 14724
+builtin manual: 9348
+builtin movdq manual: 11049
+SSSE3: 16153
+builtin unrolled: 14978
+builtin manual: 9508
+builtin movdq manual: 11224
+SSSE3: 16422
+builtin unrolled: 14808
+builtin manual: 8888
+builtin movdq manual: 11124
+SSSE3: 16703
+builtin unrolled: 15455
+builtin manual: 10771
+builtin movdq manual: 11605
+SSSE3: 16972
+builtin unrolled: 15287
+builtin manual: 9764
+builtin movdq manual: 11470
+SSSE3: 17247
+builtin unrolled: 15111
+builtin manual: 8785
+builtin movdq manual: 11351
+SSSE3: 17048
+builtin unrolled: 16217
+builtin manual: 10345
+builtin movdq manual: 12167
+SSSE3: 17785
+builtin unrolled: 16471
+builtin manual: 10006
+builtin movdq manual: 12312
+SSSE3: 17580
+builtin unrolled: 16258
+builtin manual: 10002
+builtin movdq manual: 12169
+SSSE3: 18338
+builtin unrolled: 16499
+builtin manual: 10141
+builtin movdq manual: 12345
+SSSE3: 18616
+builtin unrolled: 16740
+builtin manual: 10008
+builtin movdq manual: 12555
+SSSE3: 18372
+builtin unrolled: 17456
+builtin manual: 10856
+builtin movdq manual: 12735
+SSSE3: 19160
+builtin unrolled: 17710
+builtin manual: 10780
+builtin movdq manual: 13279
+SSSE3: 19405
+builtin unrolled: 17463
+builtin manual: 10598
+builtin movdq manual: 13059
+SSSE3: 19182
+builtin unrolled: 17704
+builtin manual: 10874
+builtin movdq manual: 13266
+SSSE3: 19964
+builtin unrolled: 17952
+builtin manual: 10410
+builtin movdq manual: 13451
+SSSE3: 19686
+builtin unrolled: 17698
+builtin manual: 10787
+builtin movdq manual: 13264
+SSSE3: 19955
+builtin unrolled: 18949
+builtin manual: 11478
+builtin movdq manual: 14177
+SSSE3: 20789
+builtin unrolled: 18675
+builtin manual: 12936
+builtin movdq manual: 13974
+SSSE3: 20499
+builtin unrolled: 18916
+builtin manual: 11306
+builtin movdq manual: 14178
+SSSE3: 21336
+builtin unrolled: 19157
+builtin manual: 11761
+builtin movdq manual: 14326
+SSSE3: 21614
+builtin unrolled: 19398
+builtin manual: 11340
+builtin movdq manual: 14505
+SSSE3: 21880
+builtin unrolled: 19639
+builtin manual: 11912
+builtin movdq manual: 14691
+SSSE3: 22171
+builtin unrolled: 19887
+builtin manual: 12082
+builtin movdq manual: 14907
+SSSE3: 21817
+builtin unrolled: 20128
+builtin manual: 12234
+builtin movdq manual: 15099
+SSSE3: 22693
+builtin unrolled: 20369
+builtin manual: 12493
+builtin movdq manual: 15263
+SSSE3: 22974
+builtin unrolled: 20610
+builtin manual: 12033
+builtin movdq manual: 15467
+SSSE3: 22618
+builtin unrolled: 20285
+builtin manual: 12119
+builtin movdq manual: 15174
+SSSE3: 22887
+builtin unrolled: 20527
+builtin manual: 11977
+builtin movdq manual: 15395
+SSSE3: 23144
+builtin unrolled: 20744
+builtin manual: 12745
+builtin movdq manual: 15519
+SSSE3: 23419
+builtin unrolled: 20986
+builtin manual: 12893
+builtin movdq manual: 15685
+SSSE3: 23064
+builtin unrolled: 21228
+builtin manual: 13434
+builtin movdq manual: 16339
+SSSE3: 23951
+builtin unrolled: 22063
+builtin manual: 13146
+builtin movdq manual: 16493
+SSSE3: 23590
+builtin unrolled: 22304
+builtin manual: 13328
+builtin movdq manual: 16672
+SSSE3: 23845
+builtin unrolled: 21358
+builtin manual: 12976
+builtin movdq manual: 15968
+SSSE3: 24102
+builtin unrolled: 22171
+builtin manual: 13437
+builtin movdq manual: 16616
+SSSE3: 25027
+builtin unrolled: 22388
+builtin manual: 13579
+builtin movdq manual: 16767
+SSSE3: 24622
+builtin unrolled: 23268
+builtin manual: 14274
+builtin movdq manual: 17408
+SSSE3: 24888
+builtin unrolled: 22269
+builtin manual: 13662
+builtin movdq manual: 16663
+SSSE3: 25131
+builtin unrolled: 24413
+builtin manual: 15006
+builtin movdq manual: 18297
+SSSE3: 26783
+builtin unrolled: 23991
+builtin manual: 15680
+builtin movdq manual: 17952
+SSSE3: 26338
+builtin unrolled: 24921
+builtin manual: 14903
+builtin movdq manual: 18647
+SSSE3: 25920
+builtin unrolled: 23191
+builtin manual: 14079
+builtin movdq manual: 17379
+SSSE3: 26163
+builtin unrolled: 25398
+builtin manual: 15604
+builtin movdq manual: 19052
+SSSE3: 26429
+builtin unrolled: 23641
+builtin manual: 14123
+builtin movdq manual: 17689
+SSSE3: 26689
+builtin unrolled: 24516
+builtin manual: 14652
+builtin movdq manual: 18381
+SSSE3: 26949
+builtin unrolled: 24102
+builtin manual: 14791
+builtin movdq manual: 18559
+SSSE3: 27934
+builtin unrolled: 25685
+builtin manual: 15594
+builtin movdq manual: 19229
+SSSE3: 27431
+builtin unrolled: 24563
+builtin manual: 15137
+builtin movdq manual: 18419
+SSSE3: 27715
+builtin unrolled: 26170
+builtin manual: 18178
+builtin movdq manual: 19649
+SSSE3: 27984
+builtin unrolled: 27145
+builtin manual: 16211
+builtin movdq manual: 20309
+SSSE3: 28992
+builtin unrolled: 26656
+builtin manual: 16174
+builtin movdq manual: 19979
+SSSE3: 28498
+builtin unrolled: 25474
+builtin manual: 15622
+builtin movdq manual: 19061
+SSSE3: 28750
+builtin unrolled: 27138
+builtin manual: 17204
+builtin movdq manual: 20304
+SSSE3: 29802
+builtin unrolled: 26619
+builtin manual: 15422
+builtin movdq manual: 19925
+SSSE3: 29279
+builtin unrolled: 26160
+builtin manual: 14975
+builtin movdq manual: 19575
+SSSE3: 29536
+builtin unrolled: 27103
+builtin manual: 16728
+builtin movdq manual: 20312
+SSSE3: 30600
+builtin unrolled: 27345
+builtin manual: 16574
+builtin movdq manual: 20512
+SSSE3: 30841
+builtin unrolled: 29146
+builtin manual: 17402
+builtin movdq manual: 21838
+SSSE3: 31107
+builtin unrolled: 29400
+builtin manual: 18161
+builtin movdq manual: 22035
+SSSE3: 31379
+builtin unrolled: 28046
+builtin manual: 16737
+builtin movdq manual: 20989
+SSSE3: 31639
+builtin unrolled: 29908
+builtin manual: 17477
+builtin movdq manual: 22413
+SSSE3: 32816
+builtin unrolled: 30134
+builtin manual: 18248
+builtin movdq manual: 22591
+SSSE3: 32177
+builtin unrolled: 28747
+builtin manual: 17151
+builtin movdq manual: 21491
+SSSE3: 32440
+builtin unrolled: 30639
+builtin manual: 18254
+builtin movdq manual: 22981
+SSSE3: 33632
+builtin unrolled: 30037
+builtin manual: 17918
+builtin movdq manual: 22517
+SSSE3: 32981
+builtin unrolled: 31147
+builtin manual: 18562
+builtin movdq manual: 23295
+SSSE3: 34173
+builtin unrolled: 30529
+builtin manual: 18691
+builtin movdq manual: 23501
+SSSE3: 34448
+builtin unrolled: 30767
+builtin manual: 18629
+builtin movdq manual: 23061
+SSSE3: 33776
+builtin unrolled: 31878
+builtin manual: 19037
+builtin movdq manual: 23915
+SSSE3: 35001
+builtin unrolled: 31249
+builtin manual: 19377
+builtin movdq manual: 23416
+SSSE3: 35245
+builtin unrolled: 31490
+builtin manual: 19278
+builtin movdq manual: 23593
+SSSE3: 34580
+builtin unrolled: 32640
+builtin manual: 19811
+builtin movdq manual: 24392
+SSSE3: 35817
+builtin unrolled: 31972
+builtin manual: 19584
+builtin movdq manual: 24643
+SSSE3: 35112
+builtin unrolled: 32213
+builtin manual: 19229
+builtin movdq manual: 24124
+SSSE3: 35384
+builtin unrolled: 33371
+builtin manual: 20388
+builtin movdq manual: 24972
+SSSE3: 35659
+builtin unrolled: 33625
+builtin manual: 23331
+builtin movdq manual: 25196
+SSSE3: 36908
+builtin unrolled: 32936
+builtin manual: 20178
+builtin movdq manual: 24715
+SSSE3: 37183
+builtin unrolled: 33184
+builtin manual: 21036
+builtin movdq manual: 24808
+SSSE3: 36451
+builtin unrolled: 33425
+builtin manual: 19529
+builtin movdq manual: 25036
+SSSE3: 35739
+builtin unrolled: 31895
+builtin manual: 17730
+builtin movdq manual: 23933
+SSSE3: 36005
+builtin unrolled: 32978
+builtin manual: 18317
+builtin movdq manual: 24740
+SSSE3: 37227
+builtin unrolled: 33220
+builtin manual: 21046
+builtin movdq manual: 24921
+SSSE3: 37490
+builtin unrolled: 33462
+builtin manual: 19491
+builtin movdq manual: 25048
+SSSE3: 37754
+builtin unrolled: 34630
+builtin manual: 21541
+builtin movdq manual: 25966
+SSSE3: 38028
+builtin unrolled: 34878
+builtin manual: 22115
+builtin movdq manual: 26155
+SSSE3: 37276
+builtin unrolled: 34163
+builtin manual: 22141
+builtin movdq manual: 25601
+SSSE3: 38557
+builtin unrolled: 34405
+builtin manual: 20037
+builtin movdq manual: 25713
+SSSE3: 37820
+builtin unrolled: 33728
+builtin manual: 20548
+builtin movdq manual: 25284
+SSSE3: 38083
+builtin unrolled: 35842
+builtin manual: 24616
+builtin movdq manual: 26873
+SSSE3: 39328
+builtin unrolled: 35106
+builtin manual: 24422
+builtin movdq manual: 26242
+SSSE3: 38589
+builtin unrolled: 34414
+builtin manual: 20057
+builtin movdq manual: 25807
+SSSE3: 38849
+builtin unrolled: 35565
+builtin manual: 23032
+builtin movdq manual: 26659
+SSSE3: 39079
+builtin unrolled: 36813
+builtin manual: 25608
+builtin movdq manual: 27549
+SSSE3: 39381
+builtin unrolled: 37054
+builtin manual: 22691
+builtin movdq manual: 27772
+SSSE3: 39591
+builtin unrolled: 35325
+builtin manual: 20173
+builtin movdq manual: 26446
+SSSE3: 39893
+builtin unrolled: 35561
+builtin manual: 19779
+builtin movdq manual: 26665
+SSSE3: 40150
+builtin unrolled: 37777
+builtin manual: 22010
+builtin movdq manual: 28251
+SSSE3: 40377
+builtin unrolled: 36011
+builtin manual: 20163
+builtin movdq manual: 27005
+SSSE3: 40676
+builtin unrolled: 37209
+builtin manual: 20684
+builtin movdq manual: 27801
+SSSE3: 42033
+builtin unrolled: 37451
+builtin manual: 23039
+builtin movdq manual: 28085
+SSSE3: 42284
+builtin unrolled: 38744
+builtin manual: 21531
+builtin movdq manual: 28955
+SSSE3: 42574
+builtin unrolled: 40105
+builtin manual: 22301
+builtin movdq manual: 29993
+SSSE3: 42843
+builtin unrolled: 39223
+builtin manual: 27557
+builtin movdq manual: 30249
+SSSE3: 44311
+builtin unrolled: 39464
+builtin manual: 21942
+builtin movdq manual: 29595
+SSSE3: 43347
+builtin unrolled: 38636
+builtin manual: 21618
+builtin movdq manual: 28868
+SSSE3: 43622
+builtin unrolled: 41090
+builtin manual: 22842
+builtin movdq manual: 30760
+SSSE3: 43916
+builtin unrolled: 40194
+builtin manual: 24974
+builtin movdq manual: 30032
+SSSE3: 44157
+builtin unrolled: 41570
+builtin manual: 26943
+builtin movdq manual: 31186
+SSSE3: 44423
+builtin unrolled: 40676
+builtin manual: 27775
+builtin movdq manual: 30430
+SSSE3: 45897
+builtin unrolled: 39824
+builtin manual: 23184
+builtin movdq manual: 29811
+SSSE3: 44970
+builtin unrolled: 41158
+builtin manual: 23037
+builtin movdq manual: 30776
+SSSE3: 45230
+builtin unrolled: 41399
+builtin manual: 26264
+builtin movdq manual: 30946
+SSSE3: 45496
+builtin unrolled: 41647
+builtin manual: 25496
+builtin movdq manual: 31175
+SSSE3: 45759
+builtin unrolled: 41888
+builtin manual: 28785
+builtin movdq manual: 31295
+SSSE3: 46028
+builtin unrolled: 43314
+builtin manual: 29784
+builtin movdq manual: 32383
+SSSE3: 46300
+builtin unrolled: 42370
+builtin manual: 24681
+builtin movdq manual: 31688
+SSSE3: 46554
+builtin unrolled: 41440
+builtin manual: 28315
+builtin movdq manual: 31029
+SSSE3: 46796
+builtin unrolled: 42852
+builtin manual: 24737
+builtin movdq manual: 32075
+SSSE3: 45812
+builtin unrolled: 40824
+builtin manual: 25902
+builtin movdq manual: 30615
+SSSE3: 46119
+builtin unrolled: 43341
+builtin manual: 25243
+builtin movdq manual: 32442
+SSSE3: 46382
+builtin unrolled: 42383
+builtin manual: 23597
+builtin movdq manual: 31773
+SSSE3: 46589
+builtin unrolled: 42625
+builtin manual: 26583
+builtin movdq manual: 31945
+SSSE3: 48159
+builtin unrolled: 41746
+builtin manual: 23203
+builtin movdq manual: 31218
+SSSE3: 47136
+builtin unrolled: 44305
+builtin manual: 24653
+builtin movdq manual: 33163
+SSSE3: 49986
+builtin unrolled: 44546
+builtin manual: 25964
+builtin movdq manual: 33348
+SSSE3: 47624
+builtin unrolled: 43568
+builtin manual: 27665
+builtin movdq manual: 33518
+SSSE3: 49168
+builtin unrolled: 45028
+builtin manual: 26832
+builtin movdq manual: 33709
+SSSE3: 48147
+builtin unrolled: 44027
+builtin manual: 26686
+builtin movdq manual: 32918
+SSSE3: 48446
+builtin unrolled: 45510
+builtin manual: 27095
+builtin movdq manual: 34096
+SSSE3: 48697
+builtin unrolled: 44511
+builtin manual: 28043
+builtin movdq manual: 35239
+SSSE3: 48907
+builtin unrolled: 43568
+builtin manual: 29545
+builtin movdq manual: 32637
+SSSE3: 49176
+builtin unrolled: 46240
+builtin manual: 28010
+builtin movdq manual: 34630
+SSSE3: 49475
+builtin unrolled: 44029
+builtin manual: 26951
+builtin movdq manual: 32992
+SSSE3: 49732
+builtin unrolled: 46722
+builtin manual: 28582
+builtin movdq manual: 34986
+SSSE3: 51320
+builtin unrolled: 45696
+builtin manual: 27230
+builtin movdq manual: 34154
+SSSE3: 51592
+builtin unrolled: 47204
+builtin manual: 29039
+builtin movdq manual: 35344
+SSSE3: 53293
+builtin unrolled: 48781
+builtin manual: 29527
+builtin movdq manual: 36541
+SSSE3: 53516
+builtin unrolled: 46397
+builtin manual: 28095
+builtin movdq manual: 34753
+SSSE3: 52393
+builtin unrolled: 47927
+builtin manual: 29036
+builtin movdq manual: 35895
+SSSE3: 52689
+builtin unrolled: 48175
+builtin manual: 29676
+builtin movdq manual: 35984
+SSSE3: 52964
+builtin unrolled: 49794
+builtin manual: 31579
+builtin movdq manual: 37279
+SSSE3: 53218
+builtin unrolled: 48657
+builtin manual: 29002
+builtin movdq manual: 36439
+SSSE3: 53481
+builtin unrolled: 48898
+builtin manual: 29580
+builtin movdq manual: 36646
+SSSE3: 53759
+builtin unrolled: 49139
+builtin manual: 29765
+builtin movdq manual: 36788
+SSSE3: 55488
+builtin unrolled: 49380
+builtin manual: 29917
+builtin movdq manual: 36893
+SSSE3: 54210
+builtin unrolled: 48283
+builtin manual: 29467
+builtin movdq manual: 36158
+SSSE3: 54545
+builtin unrolled: 49862
+builtin manual: 31636
+builtin movdq manual: 37338
+SSSE3: 54835
+builtin unrolled: 51541
+builtin manual: 30597
+builtin movdq manual: 37524
+SSSE3: 55089
+builtin unrolled: 50344
+builtin manual: 31685
+builtin movdq manual: 38742
+SSSE3: 55255
+builtin unrolled: 52018
+builtin manual: 32226
+builtin movdq manual: 38932
+SSSE3: 55515
+builtin unrolled: 49443
+builtin manual: 32063
+builtin movdq manual: 37016
+SSSE3: 54312
+builtin unrolled: 48381
+builtin manual: 28790
+builtin movdq manual: 36209
+SSSE3: 54578
+builtin unrolled: 51315
+builtin manual: 29815
+builtin movdq manual: 38414
+SSSE3: 54841
+builtin unrolled: 51556
+builtin manual: 32717
+builtin movdq manual: 38580
+SSSE3: 55098
+builtin unrolled: 49067
+builtin manual: 29977
+builtin movdq manual: 37705
+SSSE3: 55364
+builtin unrolled: 49303
+builtin manual: 31277
+builtin movdq manual: 36927
+SSSE3: 55598
+builtin unrolled: 50870
+builtin manual: 29905
+builtin movdq manual: 38095
+SSSE3: 55876
+builtin unrolled: 51087
+builtin manual: 32686
+builtin movdq manual: 37314
+SSSE3: 56136
+builtin unrolled: 51329
+builtin manual: 32652
+builtin movdq manual: 38418
+SSSE3: 56393
+builtin unrolled: 50225
+builtin manual: 30680
+builtin movdq manual: 37637
+SSSE3: 56656
+builtin unrolled: 53250
+builtin manual: 32192
+builtin movdq manual: 39842
+SSSE3: 58398
+builtin unrolled: 55004
+builtin manual: 32718
+builtin movdq manual: 41202
+SSSE3: 57159
+builtin unrolled: 55258
+builtin manual: 33764
+builtin movdq manual: 41368
+SSSE3: 58960
+builtin unrolled: 55512
+builtin manual: 36765
+builtin movdq manual: 41592
+SSSE3: 59223
+builtin unrolled: 55766
+builtin manual: 33713
+builtin movdq manual: 41758
+SSSE3: 59489
+builtin unrolled: 52973
+builtin manual: 31434
+builtin movdq manual: 39654
+SSSE3: 59764
+builtin unrolled: 54696
+builtin manual: 34012
+builtin movdq manual: 40979
+SSSE3: 60030
+builtin unrolled: 53457
+builtin manual: 33580
+builtin movdq manual: 41093
+SSSE3: 60305
+builtin unrolled: 55185
+builtin manual: 35014
+builtin movdq manual: 40159
+SSSE3: 60559
+builtin unrolled: 55426
+builtin manual: 34785
+builtin movdq manual: 41539
+SSSE3: 60889
+builtin unrolled: 57259
+builtin manual: 37080
+builtin movdq manual: 42837
+SSSE3: 62785
+builtin unrolled: 55908
+builtin manual: 35703
+builtin movdq manual: 41875
+SSSE3: 61363
+builtin unrolled: 56149
+builtin manual: 37298
+builtin movdq manual: 42055
+SSSE3: 61626
+builtin unrolled: 56390
+builtin manual: 35338
+builtin movdq manual: 42249
+SSSE3: 63604
+builtin unrolled: 56631
+builtin manual: 36383
+builtin movdq manual: 42423
+SSSE3: 62149
+builtin unrolled: 55318
+builtin manual: 33453
+builtin movdq manual: 41440
+SSSE3: 60772
+builtin unrolled: 57120
+builtin manual: 39459
+builtin movdq manual: 42762
+SSSE3: 61032
+builtin unrolled: 55802
+builtin manual: 35457
+builtin movdq manual: 41779
+SSSE3: 61295
+builtin unrolled: 54566
+builtin manual: 33199
+builtin movdq manual: 40865
+SSSE3: 61563
+builtin unrolled: 57843
+builtin manual: 34893
+builtin movdq manual: 43279
+SSSE3: 61818
+builtin unrolled: 58084
+builtin manual: 35963
+builtin movdq manual: 43492
+SSSE3: 62067
+builtin unrolled: 55252
+builtin manual: 33731
+builtin movdq manual: 41374
+SSSE3: 62333
+builtin unrolled: 56987
+builtin manual: 36705
+builtin movdq manual: 42604
+SSSE3: 62584
+builtin unrolled: 57204
+builtin manual: 35299
+builtin movdq manual: 42843
+SSSE3: 62844
+builtin unrolled: 55938
+builtin manual: 35020
+builtin movdq manual: 41871
+SSSE3: 63113
+builtin unrolled: 56174
+builtin manual: 35792
+builtin movdq manual: 44357
+SSSE3: 63370
+builtin unrolled: 57930
+builtin manual: 37019
+builtin movdq manual: 43321
+SSSE3: 63628
+builtin unrolled: 56624
+builtin manual: 38059
+builtin movdq manual: 42364
+SSSE3: 63885
+builtin unrolled: 58389
+builtin manual: 38624
+builtin movdq manual: 43713
+SSSE3: 65878
+builtin unrolled: 61992
+builtin manual: 37074
+builtin movdq manual: 46409
+SSSE3: 66141
+builtin unrolled: 62215
+builtin manual: 39954
+builtin movdq manual: 46581
+SSSE3: 66407
+builtin unrolled: 60742
+builtin manual: 38077
+builtin movdq manual: 45452
+SSSE3: 66670
+builtin unrolled: 60990
+builtin manual: 39601
+builtin movdq manual: 45600
+SSSE3: 66942
+builtin unrolled: 62977
+builtin manual: 38766
+builtin movdq manual: 47122
+SSSE3: 67208
+builtin unrolled: 61472
+builtin manual: 37780
+builtin movdq manual: 46048
+SSSE3: 67477
+builtin unrolled: 61713
+builtin manual: 36216
+builtin movdq manual: 46221
+SSSE3: 67752
+builtin unrolled: 60275
+builtin manual: 34671
+builtin movdq manual: 44998
+SSSE3: 68018
+builtin unrolled: 62195
+builtin manual: 38655
+builtin movdq manual: 46546
+SSSE3: 68281
+builtin unrolled: 60734
+builtin manual: 38092
+builtin movdq manual: 45475
+SSSE3: 68544
+builtin unrolled: 62677
+builtin manual: 37113
+builtin movdq manual: 46840
+SSSE3: 67004
+builtin unrolled: 59604
+builtin manual: 35215
+builtin movdq manual: 44643
+SSSE3: 67279
+builtin unrolled: 61460
+builtin manual: 40624
+builtin movdq manual: 45998
+SSSE3: 67515
+builtin unrolled: 61677
+builtin manual: 38914
+builtin movdq manual: 46240
+SSSE3: 67767
+builtin unrolled: 65455
+builtin manual: 41280
+builtin movdq manual: 49002
+SSSE3: 68042
+builtin unrolled: 62161
+builtin manual: 40996
+builtin movdq manual: 46463
+SSSE3: 68272
+builtin unrolled: 60751
+builtin manual: 37290
+builtin movdq manual: 45512
+SSSE3: 68565
+builtin unrolled: 64371
+builtin manual: 40954
+builtin movdq manual: 48221
+SSSE3: 68822
+builtin unrolled: 61212
+builtin manual: 38745
+builtin movdq manual: 45841
+SSSE3: 69103
+builtin unrolled: 61437
+builtin manual: 39112
+builtin movdq manual: 46012
+SSSE3: 69339
+builtin unrolled: 63321
+builtin manual: 36678
+builtin movdq manual: 47346
+SSSE3: 69594
+builtin unrolled: 65335
+builtin manual: 41656
+builtin movdq manual: 48923
+SSSE3: 71735
+builtin unrolled: 63805
+builtin manual: 39199
+builtin movdq manual: 47796
+SSSE3: 71998
+builtin unrolled: 65824
+builtin manual: 40503
+builtin movdq manual: 49359
+SSSE3: 72276
+builtin unrolled: 64264
+builtin manual: 38724
+builtin movdq manual: 48135
+SSSE3: 72545
+builtin unrolled: 66306
+builtin manual: 40163
+builtin movdq manual: 49726
+SSSE3: 72814
+builtin unrolled: 68441
+builtin manual: 40256
+builtin movdq manual: 51257
+SSSE3: 73086
+builtin unrolled: 68695
+builtin manual: 43544
+builtin movdq manual: 51450
+SSSE3: 73401
+builtin unrolled: 67029
+builtin manual: 42531
+builtin movdq manual: 50286
+SSSE3: 73630
+builtin unrolled: 67270
+builtin manual: 39384
+builtin movdq manual: 50447
+SSSE3: 75950
+builtin unrolled: 67511
+builtin manual: 42024
+builtin movdq manual: 50521
+SSSE3: 76212
+builtin unrolled: 69680
+builtin manual: 41102
+builtin movdq manual: 52245
+SSSE3: 72500
+builtin unrolled: 64417
+builtin manual: 41843
+builtin movdq manual: 48289
+SSSE3: 72751
+builtin unrolled: 68241
+builtin manual: 43912
+builtin movdq manual: 51185
+SSSE3: 73003
+builtin unrolled: 66609
+builtin manual: 42964
+builtin movdq manual: 49957
+SSSE3: 73204
+builtin unrolled: 65103
+builtin manual: 40614
+builtin movdq manual: 48827
+SSSE3: 73532
+builtin unrolled: 70919
+builtin manual: 45514
+builtin movdq manual: 53200
+SSSE3: 77878
+builtin unrolled: 69205
+builtin manual: 43303
+builtin movdq manual: 51856
+SSSE3: 74043
+builtin unrolled: 71427
+builtin manual: 45207
+builtin movdq manual: 53490
+SSSE3: 74309
+builtin unrolled: 69694
+builtin manual: 42991
+builtin movdq manual: 50822
+SSSE3: 74593
+builtin unrolled: 66250
+builtin manual: 38994
+builtin movdq manual: 49693
+SSSE3: 74856
+builtin unrolled: 68278
+builtin manual: 42184
+builtin movdq manual: 51139
+SSSE3: 75090
+builtin unrolled: 68520
+builtin manual: 43598
+builtin movdq manual: 51360
+SSSE3: 75385
+builtin unrolled: 72666
+builtin manual: 46678
+builtin movdq manual: 54496
+SSSE3: 77722
+builtin unrolled: 72920
+builtin manual: 42770
+builtin movdq manual: 54687
+SSSE3: 77970
+builtin unrolled: 73386
+builtin manual: 45309
+builtin movdq manual: 53275
+SSSE3: 78206
+builtin unrolled: 71381
+builtin manual: 44713
+builtin movdq manual: 53637
+SSSE3: 80617
+builtin unrolled: 71622
+builtin manual: 44138
+builtin movdq manual: 53754
+SSSE3: 78835
+builtin unrolled: 71863
+builtin manual: 42979
+builtin movdq manual: 53921
+SSSE3: 79052
+builtin unrolled: 72111
+builtin manual: 44623
+builtin movdq manual: 54057
+SSSE3: 79303
+builtin unrolled: 72352
+builtin manual: 43675
+builtin movdq manual: 54224
+SSSE3: 79551
+builtin unrolled: 72593
+builtin manual: 45211
+builtin movdq manual: 54496
+SSSE3: 79844
+builtin unrolled: 72834
+builtin manual: 43258
+builtin movdq manual: 56210
+SSSE3: 77976
+builtin unrolled: 71085
+builtin manual: 45052
+builtin movdq manual: 53230
+SSSE3: 78233
+builtin unrolled: 73316
+builtin manual: 46067
+builtin movdq manual: 55021
+SSSE3: 78505
+builtin unrolled: 75652
+builtin manual: 48522
+builtin movdq manual: 56769
+SSSE3: 78747
+builtin unrolled: 69916
+builtin manual: 41569
+builtin movdq manual: 52475
+SSSE3: 78981
+builtin unrolled: 72025
+builtin manual: 45563
+builtin movdq manual: 53992
+SSSE3: 79258
+builtin unrolled: 74287
+builtin manual: 46660
+builtin movdq manual: 55736
+SSSE3: 79542
+builtin unrolled: 70602
+builtin manual: 41332
+builtin movdq manual: 52975
+SSSE3: 79802
+builtin unrolled: 74769
+builtin manual: 46005
+builtin movdq manual: 56091
+SSSE3: 80048
+builtin unrolled: 77145
+builtin manual: 48235
+builtin movdq manual: 57927
+SSSE3: 80355
+builtin unrolled: 75251
+builtin manual: 43724
+builtin movdq manual: 56434
+SSSE3: 82730
+builtin unrolled: 73452
+builtin manual: 45427
+builtin movdq manual: 55149
+SSSE3: 82999
+builtin unrolled: 77876
+builtin manual: 45333
+builtin movdq manual: 58471
+SSSE3: 83353
+builtin unrolled: 78130
+builtin manual: 50459
+builtin movdq manual: 58664
+SSSE3: 83567
+builtin unrolled: 76215
+builtin manual: 48636
+builtin movdq manual: 57228
+SSSE3: 83879
+builtin unrolled: 78638
+builtin manual: 49791
+builtin movdq manual: 59048
+SSSE3: 86471
+builtin unrolled: 76704
+builtin manual: 48255
+builtin movdq manual: 57571
+SSSE3: 84407
+builtin unrolled: 76945
+builtin manual: 49155
+builtin movdq manual: 57720
+SSSE3: 84631
+builtin unrolled: 77186
+builtin manual: 45131
+builtin movdq manual: 58007
+SSSE3: 84915
+builtin unrolled: 75313
+builtin manual: 47537
+builtin movdq manual: 56537
+SSSE3: 82990
+builtin unrolled: 75555
+builtin manual: 45916
+builtin movdq manual: 56712
+SSSE3: 83184
+builtin unrolled: 73807
+builtin manual: 46772
+builtin movdq manual: 55417
+SSSE3: 83466
+builtin unrolled: 76039
+builtin manual: 46385
+builtin movdq manual: 57114
+SSSE3: 83705
+builtin unrolled: 80639
+builtin manual: 46823
+builtin movdq manual: 60580
+SSSE3: 86275
+builtin unrolled: 78639
+builtin manual: 46416
+builtin movdq manual: 59055
+SSSE3: 84237
+builtin unrolled: 78880
+builtin manual: 50456
+builtin movdq manual: 59274
+SSSE3: 84518
+builtin unrolled: 81370
+builtin manual: 47476
+builtin movdq manual: 61194
+SSSE3: 84775
+builtin unrolled: 77202
+builtin manual: 48806
+builtin movdq manual: 58051
+SSSE3: 85024
+builtin unrolled: 75415
+builtin manual: 43753
+builtin movdq manual: 56679
+SSSE3: 85260
+builtin unrolled: 77683
+builtin manual: 45385
+builtin movdq manual: 58323
+SSSE3: 87916
+builtin unrolled: 80085
+builtin manual: 47322
+builtin movdq manual: 60186
+SSSE3: 88122
+builtin unrolled: 78142
+builtin manual: 49295
+builtin movdq manual: 58637
+SSSE3: 88379
+builtin unrolled: 80574
+builtin manual: 50752
+builtin movdq manual: 60477
+SSSE3: 88705
+builtin unrolled: 80808
+builtin manual: 50665
+builtin movdq manual: 62436
+SSSE3: 88947
+builtin unrolled: 83371
+builtin manual: 52689
+builtin movdq manual: 62657
+SSSE3: 89171
+builtin unrolled: 83594
+builtin manual: 50163
+builtin movdq manual: 62799
+SSSE3: 91930
+builtin unrolled: 81538
+builtin manual: 50873
+builtin movdq manual: 61194
+SSSE3: 89690
+builtin unrolled: 81779
+builtin manual: 52063
+builtin movdq manual: 61410
+SSSE3: 87590
+builtin unrolled: 82020
+builtin manual: 48713
+builtin movdq manual: 61617
+SSSE3: 87853
+builtin unrolled: 80028
+builtin manual: 49864
+builtin movdq manual: 60015
+SSSE3: 88125
+builtin unrolled: 80270
+builtin manual: 45646
+builtin movdq manual: 58707
+SSSE3: 88367
+builtin unrolled: 78384
+builtin manual: 49190
+builtin movdq manual: 58909
+SSSE3: 88684
+builtin unrolled: 78620
+builtin manual: 47470
+builtin movdq manual: 59012
+SSSE3: 88906
+builtin unrolled: 78845
+builtin manual: 49566
+builtin movdq manual: 59207
+SSSE3: 89145
+builtin unrolled: 83473
+builtin manual: 52215
+builtin movdq manual: 62711
+SSSE3: 89506
+builtin unrolled: 83714
+builtin manual: 51479
+builtin movdq manual: 62909
+SSSE3: 89709
+builtin unrolled: 79542
+builtin manual: 49495
+builtin movdq manual: 59752
+SSSE3: 89952
+builtin unrolled: 81942
+builtin manual: 51749
+builtin movdq manual: 61554
+SSSE3: 92655
+builtin unrolled: 82156
+builtin manual: 51148
+builtin movdq manual: 61708
+SSSE3: 92921
+builtin unrolled: 84678
+builtin manual: 53559
+builtin movdq manual: 63700
+SSSE3: 93217
+builtin unrolled: 84919
+builtin manual: 51995
+builtin movdq manual: 63790
+SSSE3: 93441
+builtin unrolled: 85160
+builtin manual: 49794
+builtin movdq manual: 63870
+SSSE3: 93764
+builtin unrolled: 87850
+builtin manual: 53904
+builtin movdq manual: 65963
+SSSE3: 94033
+builtin unrolled: 88073
+builtin manual: 51520
+builtin movdq manual: 66223
+SSSE3: 94348
+builtin unrolled: 85890
+builtin manual: 57570
+builtin movdq manual: 64526
+SSSE3: 92072
+builtin unrolled: 83800
+builtin manual: 53309
+builtin movdq manual: 62986
+SSSE3: 92293
+builtin unrolled: 84017
+builtin manual: 49701
+builtin movdq manual: 63110
+SSSE3: 92575
+builtin unrolled: 84259
+builtin manual: 53191
+builtin movdq manual: 63361
+SSSE3: 92994
+builtin unrolled: 86854
+builtin manual: 55058
+builtin movdq manual: 65212
+SSSE3: 93077
+builtin unrolled: 87098
+builtin manual: 50422
+builtin movdq manual: 65416
+SSSE3: 93332
+builtin unrolled: 84960
+builtin manual: 55071
+builtin movdq manual: 63902
+SSSE3: 93604
+builtin unrolled: 90074
+builtin manual: 56785
+builtin movdq manual: 67679
+SSSE3: 93902
+builtin unrolled: 87825
+builtin manual: 55043
+builtin movdq manual: 65997
+SSSE3: 94127
+builtin unrolled: 88066
+builtin manual: 51559
+builtin movdq manual: 66232
+SSSE3: 94399
+builtin unrolled: 88307
+builtin manual: 56564
+builtin movdq manual: 66300
+SSSE3: 97237
+builtin unrolled: 88548
+builtin manual: 55853
+builtin movdq manual: 66596
+SSSE3: 97557
+builtin unrolled: 88789
+builtin manual: 54351
+builtin movdq manual: 66736
+SSSE3: 97757
+builtin unrolled: 89030
+builtin manual: 57083
+builtin movdq manual: 66890
+SSSE3: 100711
+builtin unrolled: 91821
+builtin manual: 57117
+builtin movdq manual: 69076
+SSSE3: 98261
+builtin unrolled: 89519
+builtin manual: 52029
+builtin movdq manual: 67252
+SSSE3: 98573
+builtin unrolled: 89760
+builtin manual: 56712
+builtin movdq manual: 67453
+SSSE3: 98820
+builtin unrolled: 90001
+builtin manual: 55383
+builtin movdq manual: 67604
+SSSE3: 96483
+builtin unrolled: 87814
+builtin manual: 57812
+builtin movdq manual: 67787
+SSSE3: 96737
+builtin unrolled: 88031
+builtin manual: 56056
+builtin movdq manual: 66141
+SSSE3: 97015
+builtin unrolled: 88273
+builtin manual: 56056
+builtin movdq manual: 66172
+SSSE3: 97279
+builtin unrolled: 90965
+builtin manual: 57881
+builtin movdq manual: 68303
+SSSE3: 97527
+builtin unrolled: 91206
+builtin manual: 56755
+builtin movdq manual: 68556
+SSSE3: 97767
+builtin unrolled: 91454
+builtin manual: 56230
+builtin movdq manual: 68748
+SSSE3: 98003
+builtin unrolled: 91688
+builtin manual: 55850
+builtin movdq manual: 68906
+SSSE3: 98313
+builtin unrolled: 89439
+builtin manual: 57531
+builtin movdq manual: 69125
+SSSE3: 98580
+builtin unrolled: 89675
+builtin manual: 56767
+builtin movdq manual: 69252
+SSSE3: 101504
+builtin unrolled: 92418
+builtin manual: 58972
+builtin movdq manual: 69404
+SSSE3: 101776
+builtin unrolled: 92659
+builtin manual: 57513
+builtin movdq manual: 69635
+SSSE3: 104850
+builtin unrolled: 92900
+builtin manual: 57544
+builtin movdq manual: 69802
+SSSE3: 102339
+builtin unrolled: 93141
+builtin manual: 55754
+builtin movdq manual: 69981
+SSSE3: 102589
+builtin unrolled: 93385
+builtin manual: 55976
+builtin movdq manual: 70179
+SSSE3: 105660
+builtin unrolled: 93630
+builtin manual: 58313
+builtin movdq manual: 70374
+SSSE3: 103103
+builtin unrolled: 93864
+builtin manual: 59537
+builtin movdq manual: 70535
+SSSE3: 100652
+builtin unrolled: 96777
+builtin manual: 60390
+builtin movdq manual: 72669
+SSSE3: 100886
+builtin unrolled: 94353
+builtin manual: 59923
+builtin movdq manual: 70884
+SSSE3: 103886
+builtin unrolled: 92045
+builtin manual: 57389
+builtin movdq manual: 69040
+SSSE3: 101409
+builtin unrolled: 94835
+builtin manual: 58006
+builtin movdq manual: 69324
+SSSE3: 101684
+builtin unrolled: 92504
+builtin manual: 56503
+builtin movdq manual: 69535
+SSSE3: 101935
+builtin unrolled: 95317
+builtin manual: 59979
+builtin movdq manual: 71666
+SSSE3: 102240
+builtin unrolled: 95558
+builtin manual: 60294
+builtin movdq manual: 71824
+SSSE3: 102429
+builtin unrolled: 98524
+builtin manual: 61741
+builtin movdq manual: 74099
+SSSE3: 105466
+builtin unrolled: 98778
+builtin manual: 60943
+builtin movdq manual: 72194
+SSSE3: 105775
+builtin unrolled: 96288
+builtin manual: 59173
+builtin movdq manual: 72299
+SSSE3: 106022
+builtin unrolled: 96529
+builtin manual: 56591
+builtin movdq manual: 72587
+SSSE3: 106310
+builtin unrolled: 96770
+builtin manual: 56480
+builtin movdq manual: 74882
+SSSE3: 109542
+builtin unrolled: 99763
+builtin manual: 63062
+builtin movdq manual: 74930
+SSSE3: 106857
+builtin unrolled: 100017
+builtin manual: 62403
+builtin movdq manual: 75153
+SSSE3: 107068
+builtin unrolled: 94849
+builtin manual: 55071
+builtin movdq manual: 71267
+SSSE3: 104545
+builtin unrolled: 97734
+builtin manual: 59787
+builtin movdq manual: 71551
+SSSE3: 104805
+builtin unrolled: 97975
+builtin manual: 58854
+builtin movdq manual: 73619
+SSSE3: 105066
+builtin unrolled: 93048
+builtin manual: 54441
+builtin movdq manual: 69913
+SSSE3: 105329
+builtin unrolled: 98464
+builtin manual: 58722
+builtin movdq manual: 70079
+SSSE3: 105604
+builtin unrolled: 98705
+builtin manual: 57466
+builtin movdq manual: 74206
+SSSE3: 105823
+builtin unrolled: 96276
+builtin manual: 56183
+builtin movdq manual: 72425
+SSSE3: 106060
+builtin unrolled: 93959
+builtin manual: 56401
+builtin movdq manual: 72500
+SSSE3: 109208
+builtin unrolled: 99428
+builtin manual: 61732
+builtin movdq manual: 74769
+SSSE3: 109550
+builtin unrolled: 99669
+builtin manual: 58069
+builtin movdq manual: 74951
+SSSE3: 109803
+builtin unrolled: 99910
+builtin manual: 62643
+builtin movdq manual: 75100
+SSSE3: 110075
+builtin unrolled: 100158
+builtin manual: 59929
+builtin movdq manual: 75310
+SSSE3: 110335
+builtin unrolled: 100427
+builtin manual: 61947
+builtin movdq manual: 75434
+SSSE3: 110559
+builtin unrolled: 103511
+builtin manual: 58658
+builtin movdq manual: 77741
+SSSE3: 110889
+builtin unrolled: 100881
+builtin manual: 66888
+builtin movdq manual: 77940
+SSSE3: 111112
+builtin unrolled: 101122
+builtin manual: 63868
+builtin movdq manual: 75981
+SSSE3: 108469
+builtin unrolled: 96028
+builtin manual: 60059
+builtin movdq manual: 72160
+SSSE3: 108676
+builtin unrolled: 101611
+builtin manual: 65510
+builtin movdq manual: 78542
+SSSE3: 108957
+builtin unrolled: 99080
+builtin manual: 61723
+builtin movdq manual: 74489
+SSSE3: 109208
+builtin unrolled: 96714
+builtin manual: 59964
+builtin movdq manual: 72639
+SSSE3: 109506
+builtin unrolled: 99564
+builtin manual: 62370
+builtin movdq manual: 74812
+SSSE3: 109764
+builtin unrolled: 102568
+builtin manual: 64334
+builtin movdq manual: 77118
+SSSE3: 110012
+builtin unrolled: 100023
+builtin manual: 66785
+builtin movdq manual: 79454
+SSSE3: 113267
+builtin unrolled: 105989
+builtin manual: 63733
+builtin movdq manual: 79648
+SSSE3: 113511
+builtin unrolled: 106243
+builtin manual: 63170
+builtin movdq manual: 79862
+SSSE3: 113820
+builtin unrolled: 106497
+builtin manual: 66553
+builtin movdq manual: 80053
+SSSE3: 114161
+builtin unrolled: 103780
+builtin manual: 64229
+builtin movdq manual: 77984
+SSSE3: 114325
+builtin unrolled: 104021
+builtin manual: 64183
+builtin movdq manual: 78178
+SSSE3: 114566
+builtin unrolled: 104262
+builtin manual: 65039
+builtin movdq manual: 78481
+SSSE3: 114926
+builtin unrolled: 101667
+builtin manual: 64455
+builtin movdq manual: 78636
+SSSE3: 112117
+builtin unrolled: 99236
+builtin manual: 63615
+builtin movdq manual: 76644
+SSSE3: 112345
+builtin unrolled: 99458
+builtin manual: 62923
+builtin movdq manual: 74776
+SSSE3: 112617
+builtin unrolled: 105233
+builtin manual: 67175
+builtin movdq manual: 79115
+SSSE3: 112874
+builtin unrolled: 102610
+builtin manual: 64116
+builtin movdq manual: 77217
+SSSE3: 113137
+builtin unrolled: 105715
+builtin manual: 61151
+builtin movdq manual: 79492
+SSSE3: 113380
+builtin unrolled: 103094
+builtin manual: 66482
+builtin movdq manual: 79643
+SSSE3: 113693
+builtin unrolled: 106197
+builtin manual: 64425
+builtin movdq manual: 77752
+SSSE3: 120187
+builtin unrolled: 109483
+builtin manual: 68311
+builtin movdq manual: 80070
+SSSE3: 117244
+builtin unrolled: 106679
+builtin manual: 66884
+builtin movdq manual: 82449
+SSSE3: 117519
+builtin unrolled: 106920
+builtin manual: 67184
+builtin movdq manual: 80379
+SSSE3: 117821
+builtin unrolled: 107168
+builtin manual: 62696
+builtin movdq manual: 80595
+SSSE3: 118132
+builtin unrolled: 107409
+builtin manual: 65255
+builtin movdq manual: 80812
+SSSE3: 118277
+builtin unrolled: 107650
+builtin manual: 62535
+builtin movdq manual: 80948
+SSSE3: 115470
+builtin unrolled: 107891
+builtin manual: 67388
+builtin movdq manual: 81136
+SSSE3: 115701
+builtin unrolled: 108132
+builtin manual: 67805
+builtin movdq manual: 81257
+SSSE3: 115961
+builtin unrolled: 102663
+builtin manual: 64538
+builtin movdq manual: 77204
+SSSE3: 116236
+builtin unrolled: 105681
+builtin manual: 62802
+builtin movdq manual: 79418
+SSSE3: 116505
+builtin unrolled: 108855
+builtin manual: 66992
+builtin movdq manual: 81832
+SSSE3: 116750
+builtin unrolled: 109096
+builtin manual: 61708
+builtin movdq manual: 79793
+SSSE3: 117004
+builtin unrolled: 109344
+builtin manual: 68541
+builtin movdq manual: 82215
+SSSE3: 120514
+builtin unrolled: 109585
+builtin manual: 69249
+builtin movdq manual: 82373
+SSSE3: 120734
+builtin unrolled: 109826
+builtin manual: 68640
+builtin movdq manual: 82546
+SSSE3: 124353
+builtin unrolled: 113200
+builtin manual: 68296
+builtin movdq manual: 85109
+SSSE3: 121264
+builtin unrolled: 110308
+builtin manual: 67329
+builtin movdq manual: 82960
+SSSE3: 121630
+builtin unrolled: 110549
+builtin manual: 69950
+builtin movdq manual: 83142
+SSSE3: 121838
+builtin unrolled: 110790
+builtin manual: 62971
+builtin movdq manual: 83303
+SSSE3: 118864
+builtin unrolled: 105182
+builtin manual: 66102
+builtin movdq manual: 78877
+SSSE3: 119080
+builtin unrolled: 105418
+builtin manual: 66126
+builtin movdq manual: 81470
+SSSE3: 119343
+builtin unrolled: 111520
+builtin manual: 69255
+builtin movdq manual: 83794
+SSSE3: 119615
+builtin unrolled: 105879
+builtin manual: 68275
+builtin movdq manual: 81790
+SSSE3: 119869
+builtin unrolled: 106104
+builtin manual: 60115
+builtin movdq manual: 79826
+SSSE3: 120132
+builtin unrolled: 106329
+builtin manual: 63823
+builtin movdq manual: 80030
+SSSE3: 120419
+builtin unrolled: 112484
+builtin manual: 65005
+builtin movdq manual: 84542
+SSSE3: 123948
+builtin unrolled: 109670
+builtin manual: 67235
+builtin movdq manual: 82528
+SSSE3: 124201
+builtin unrolled: 109912
+builtin manual: 63781
+builtin movdq manual: 85016
+SSSE3: 124446
+builtin unrolled: 116440
+builtin manual: 70043
+builtin movdq manual: 85207
+SSSE3: 124760
+builtin unrolled: 113455
+builtin manual: 70322
+builtin movdq manual: 85303
+SSSE3: 125020
+builtin unrolled: 113696
+builtin manual: 71452
+builtin movdq manual: 85550
+SSSE3: 125331
+builtin unrolled: 110855
+builtin manual: 69118
+builtin movdq manual: 83296
+SSSE3: 122237
+builtin unrolled: 111072
+builtin manual: 64981
+builtin movdq manual: 83564
+SSSE3: 122471
+builtin unrolled: 114419
+builtin manual: 70877
+builtin movdq manual: 83682
+SSSE3: 122755
+builtin unrolled: 111556
+builtin manual: 66549
+builtin movdq manual: 81635
+SSSE3: 122956
+builtin unrolled: 114901
+builtin manual: 70355
+builtin movdq manual: 86478
+SSSE3: 123240
+builtin unrolled: 115142
+builtin manual: 71740
+builtin movdq manual: 86604
+SSSE3: 123533
+builtin unrolled: 112257
+builtin manual: 70251
+builtin movdq manual: 84432
+SSSE3: 123813
+builtin unrolled: 118918
+builtin manual: 73171
+builtin movdq manual: 89382
+SSSE3: 127399
+builtin unrolled: 119172
+builtin manual: 69714
+builtin movdq manual: 89639
+SSSE3: 127713
+builtin unrolled: 116113
+builtin manual: 70330
+builtin movdq manual: 87346
+SSSE3: 127991
+builtin unrolled: 116354
+builtin manual: 67812
+builtin movdq manual: 90014
+SSSE3: 128212
+builtin unrolled: 116595
+builtin manual: 72367
+builtin movdq manual: 87720
+SSSE3: 128511
+builtin unrolled: 120157
+builtin manual: 74220
+builtin movdq manual: 90331
+SSSE3: 128692
+builtin unrolled: 117077
+builtin manual: 72246
+builtin movdq manual: 88048
+SSSE3: 125576
+builtin unrolled: 117318
+builtin manual: 69898
+builtin movdq manual: 88273
+SSSE3: 125800
+builtin unrolled: 111367
+builtin manual: 68568
+builtin movdq manual: 83832
+SSSE3: 126122
+builtin unrolled: 111603
+builtin manual: 70779
+builtin movdq manual: 83909
+SSSE3: 126392
+builtin unrolled: 111828
+builtin manual: 66903
+builtin movdq manual: 84113
+SSSE3: 126669
+builtin unrolled: 118289
+builtin manual: 73761
+builtin movdq manual: 88938
+SSSE3: 126909
+builtin unrolled: 118530
+builtin manual: 74751
+builtin movdq manual: 89222
+SSSE3: 134198
+builtin unrolled: 118771
+builtin manual: 74278
+builtin movdq manual: 89358
+SSSE3: 130868
+builtin unrolled: 119012
+builtin manual: 74809
+builtin movdq manual: 89506
+SSSE3: 131203
+builtin unrolled: 119253
+builtin manual: 73137
+builtin movdq manual: 89587
+SSSE3: 131403
+builtin unrolled: 122889
+builtin manual: 74156
+builtin movdq manual: 92365
+SSSE3: 135292
+builtin unrolled: 119742
+builtin manual: 74544
+builtin movdq manual: 90081
+SSSE3: 131954
+builtin unrolled: 119976
+builtin manual: 74565
+builtin movdq manual: 90159
+SSSE3: 128772
+builtin unrolled: 116972
+builtin manual: 72195
+builtin movdq manual: 88026
+SSSE3: 128955
+builtin unrolled: 120465
+builtin manual: 74778
+builtin movdq manual: 90631
+SSSE3: 129212
+builtin unrolled: 117431
+builtin manual: 68048
+builtin movdq manual: 88318
+SSSE3: 129525
+builtin unrolled: 117673
+builtin manual: 75443
+builtin movdq manual: 90941
+SSSE3: 129809
+builtin unrolled: 124667
+builtin manual: 77109
+builtin movdq manual: 93756
+SSSE3: 133600
+builtin unrolled: 125525
+builtin manual: 81292
+builtin movdq manual: 94233
+SSSE3: 130274
+builtin unrolled: 118374
+builtin manual: 71618
+builtin movdq manual: 89001
+SSSE3: 134081
+builtin unrolled: 121911
+builtin manual: 73285
+builtin movdq manual: 91682
+SSSE3: 134344
+builtin unrolled: 122152
+builtin manual: 73951
+builtin movdq manual: 89403
+SSSE3: 134652
+builtin unrolled: 122400
+builtin manual: 74899
+builtin movdq manual: 92001
+SSSE3: 134903
+builtin unrolled: 126129
+builtin manual: 78457
+builtin movdq manual: 94846
+SSSE3: 135187
+builtin unrolled: 122882
+builtin manual: 74080
+builtin movdq manual: 92394
+SSSE3: 131831
+builtin unrolled: 123123
+builtin manual: 74497
+builtin movdq manual: 92585
+SSSE3: 132059
+builtin unrolled: 120018
+builtin manual: 69714
+builtin movdq manual: 87992
+SSSE3: 132360
+builtin unrolled: 120260
+builtin manual: 73452
+builtin movdq manual: 90404
+SSSE3: 132585
+builtin unrolled: 120502
+builtin manual: 76813
+builtin movdq manual: 90515
+SSSE3: 132887
+builtin unrolled: 124087
+builtin manual: 78556
+builtin movdq manual: 93330
+SSSE3: 133156
+builtin unrolled: 120961
+builtin manual: 76713
+builtin movdq manual: 90996
+SSSE3: 136985
+builtin unrolled: 124576
+builtin manual: 77591
+builtin movdq manual: 93723
+SSSE3: 137309
+builtin unrolled: 124817
+builtin manual: 78169
+builtin movdq manual: 91434
+SSSE3: 137581
+builtin unrolled: 121662
+builtin manual: 74461
+builtin movdq manual: 91428
+SSSE3: 137849
+builtin unrolled: 128861
+builtin manual: 80026
+builtin movdq manual: 96763
+SSSE3: 138133
+builtin unrolled: 122171
+builtin manual: 76130
+builtin movdq manual: 91939
+SSSE3: 138421
+builtin unrolled: 125781
+builtin manual: 76735
+builtin movdq manual: 94607
+SSSE3: 134936
+builtin unrolled: 119399
+builtin manual: 73647
+builtin movdq manual: 89799
+SSSE3: 135252
+builtin unrolled: 119621
+builtin manual: 73139
+builtin movdq manual: 89970
+SSSE3: 135477
+builtin unrolled: 123089
+builtin manual: 74177
+builtin movdq manual: 95095
+SSSE3: 135734
+builtin unrolled: 123309
+builtin manual: 77720
+builtin movdq manual: 90396
+SSSE3: 136012
+builtin unrolled: 120307
+builtin manual: 72003
+builtin movdq manual: 90469
+SSSE3: 136252
+builtin unrolled: 130862
+builtin manual: 80446
+builtin movdq manual: 98518
+SSSE3: 140207
+builtin unrolled: 124032
+builtin manual: 71847
+builtin movdq manual: 93281
+SSSE3: 140458
+builtin unrolled: 127716
+builtin manual: 74064
+builtin movdq manual: 96112
+SSSE3: 140724
+builtin unrolled: 131593
+builtin manual: 80010
+builtin movdq manual: 99068
+SSSE3: 141062
+builtin unrolled: 128198
+builtin manual: 79575
+builtin movdq manual: 96452
+SSSE3: 141313
+builtin unrolled: 128439
+builtin manual: 79693
+builtin movdq manual: 96671
+SSSE3: 137786
+builtin unrolled: 128687
+builtin manual: 74834
+builtin movdq manual: 96705
+SSSE3: 138096
+builtin unrolled: 125434
+builtin manual: 75184
+builtin movdq manual: 94387
+SSSE3: 138285
+builtin unrolled: 125676
+builtin manual: 77847
+builtin movdq manual: 94441
+SSSE3: 138602
+builtin unrolled: 129410
+builtin manual: 80515
+builtin movdq manual: 97388
+SSSE3: 138859
+builtin unrolled: 122826
+builtin manual: 76618
+builtin movdq manual: 92447
+SSSE3: 139131
+builtin unrolled: 126380
+builtin manual: 78979
+builtin movdq manual: 97762
+SSSE3: 143120
+builtin unrolled: 133848
+builtin manual: 78593
+builtin movdq manual: 95285
+SSSE3: 143441
+builtin unrolled: 130374
+builtin manual: 75876
+builtin movdq manual: 98093
+SSSE3: 143722
+builtin unrolled: 130615
+builtin manual: 80778
+builtin movdq manual: 98229
+SSSE3: 143997
+builtin unrolled: 130863
+builtin manual: 82636
+builtin movdq manual: 98396
+SSSE3: 144190
+builtin unrolled: 131104
+builtin manual: 81272
+builtin movdq manual: 98786
+SSSE3: 140683
+builtin unrolled: 127779
+builtin manual: 76293
+builtin movdq manual: 96158
+SSSE3: 140935
+builtin unrolled: 128021
+builtin manual: 76967
+builtin movdq manual: 96279
+SSSE3: 141213
+builtin unrolled: 124887
+builtin manual: 74496
+builtin movdq manual: 93979
+SSSE3: 141449
+builtin unrolled: 125120
+builtin manual: 80064
+builtin movdq manual: 96762
+SSSE3: 141721
+builtin unrolled: 128722
+builtin manual: 77118
+builtin movdq manual: 96660
+SSSE3: 141996
+builtin unrolled: 132550
+builtin manual: 79455
+builtin movdq manual: 99657
+SSSE3: 146115
+builtin unrolled: 132791
+builtin manual: 81514
+builtin movdq manual: 99827
+SSSE3: 146357
+builtin unrolled: 136834
+builtin manual: 79140
+builtin movdq manual: 102989
+SSSE3: 146732
+builtin unrolled: 133280
+builtin manual: 81291
+builtin movdq manual: 100220
+SSSE3: 146949
+builtin unrolled: 133521
+builtin manual: 81922
+builtin movdq manual: 100495
+SSSE3: 147176
+builtin unrolled: 133762
+builtin manual: 81334
+builtin movdq manual: 100637
+SSSE3: 143474
+builtin unrolled: 126953
+builtin manual: 78321
+builtin movdq manual: 95579
+SSSE3: 143802
+builtin unrolled: 130608
+builtin manual: 81485
+builtin movdq manual: 98455
+SSSE3: 144089
+builtin unrolled: 127406
+builtin manual: 78658
+builtin movdq manual: 95815
+SSSE3: 144329
+builtin unrolled: 127639
+builtin manual: 79229
+builtin movdq manual: 96013
+SSSE3: 144544
+builtin unrolled: 131309
+builtin manual: 81618
+builtin movdq manual: 98724
+SSSE3: 144846
+builtin unrolled: 139058
+builtin manual: 86272
+builtin movdq manual: 104678
+SSSE3: 149035
+builtin unrolled: 131793
+builtin manual: 76402
+builtin movdq manual: 101889
+SSSE3: 149337
+builtin unrolled: 135697
+builtin manual: 79291
+builtin movdq manual: 102059
+SSSE3: 149609
+builtin unrolled: 135938
+builtin manual: 82064
+builtin movdq manual: 102263
+SSSE3: 149875
+builtin unrolled: 136179
+builtin manual: 82190
+builtin movdq manual: 102405
+SSSE3: 150065
+builtin unrolled: 136420
+builtin manual: 84289
+builtin movdq manual: 102615
+SSSE3: 146398
+builtin unrolled: 132953
+builtin manual: 79926
+builtin movdq manual: 100165
+SSSE3: 146620
+builtin unrolled: 133195
+builtin manual: 81842
+builtin movdq manual: 100438
+SSSE3: 146868
+builtin unrolled: 129922
+builtin manual: 75494
+builtin movdq manual: 97740
+SSSE3: 147181
+builtin unrolled: 133679
+builtin manual: 81839
+builtin movdq manual: 100489
+SSSE3: 147421
+builtin unrolled: 133896
+builtin manual: 78203
+builtin movdq manual: 100864
+SSSE3: 151703
+builtin unrolled: 141790
+builtin manual: 84782
+builtin movdq manual: 106796
+SSSE3: 151957
+builtin unrolled: 138114
+builtin manual: 83291
+builtin movdq manual: 106908
+SSSE3: 152217
+builtin unrolled: 145498
+builtin manual: 85689
+builtin movdq manual: 104080
+SSSE3: 152526
+builtin unrolled: 138596
+builtin manual: 84753
+builtin movdq manual: 104300
+SSSE3: 152755
+builtin unrolled: 135081
+builtin manual: 77922
+builtin movdq manual: 101592
+SSSE3: 149038
+builtin unrolled: 131755
+builtin manual: 77586
+builtin movdq manual: 99150
+SSSE3: 149230
+builtin unrolled: 131991
+builtin manual: 78221
+builtin movdq manual: 101934
+SSSE3: 149532
+builtin unrolled: 139560
+builtin manual: 85881
+builtin movdq manual: 105035
+SSSE3: 149795
+builtin unrolled: 139808
+builtin manual: 86666
+builtin movdq manual: 105230
+SSSE3: 150050
+builtin unrolled: 132677
+builtin manual: 81260
+builtin movdq manual: 99889
+SSSE3: 150292
+builtin unrolled: 140290
+builtin manual: 90063
+builtin movdq manual: 108746
+SSSE3: 154659
+builtin unrolled: 136725
+builtin manual: 84815
+builtin movdq manual: 102861
+SSSE3: 154925
+builtin unrolled: 140772
+builtin manual: 86879
+builtin movdq manual: 105898
+SSSE3: 155185
+builtin unrolled: 141013
+builtin manual: 81733
+builtin movdq manual: 106238
+SSSE3: 155487
+builtin unrolled: 141257
+builtin manual: 85275
+builtin movdq manual: 106321
+SSSE3: 155690
+builtin unrolled: 137668
+builtin manual: 84601
+builtin movdq manual: 103451
+SSSE3: 155995
+builtin unrolled: 141736
+builtin manual: 85544
+builtin movdq manual: 106695
+SSSE3: 156219
+builtin unrolled: 138127
+builtin manual: 83029
+builtin movdq manual: 103970
+SSSE3: 156505
+builtin unrolled: 146269
+builtin manual: 85263
+builtin movdq manual: 107091
+SSSE3: 152710
+builtin unrolled: 134971
+builtin manual: 85621
+builtin movdq manual: 107184
+SSSE3: 152926
+builtin unrolled: 142707
+builtin manual: 85459
+builtin movdq manual: 104508
+SSSE3: 157297
+builtin unrolled: 142948
+builtin manual: 85859
+builtin movdq manual: 107551
+SSSE3: 157627
+builtin unrolled: 143189
+builtin manual: 88190
+builtin movdq manual: 107737
+SSSE3: 157878
+builtin unrolled: 143430
+builtin manual: 85501
+builtin movdq manual: 107971
+SSSE3: 158068
+builtin unrolled: 139771
+builtin manual: 86650
+builtin movdq manual: 105258
+SSSE3: 154298
+builtin unrolled: 140013
+builtin manual: 86792
+builtin movdq manual: 105312
+SSSE3: 154461
+builtin unrolled: 140255
+builtin manual: 84138
+builtin movdq manual: 105494
+SSSE3: 154739
+builtin unrolled: 140497
+builtin manual: 84265
+builtin movdq manual: 105711
+SSSE3: 154960
+builtin unrolled: 137029
+builtin manual: 80781
+builtin movdq manual: 103144
+SSSE3: 155232
+builtin unrolled: 149001
+builtin manual: 92093
+builtin movdq manual: 112218
+SSSE3: 155472
+builtin unrolled: 149255
+builtin manual: 89485
+builtin movdq manual: 109193
+SSSE3: 159951
+builtin unrolled: 141440
+builtin manual: 84888
+builtin movdq manual: 106433
+SSSE3: 160214
+builtin unrolled: 145609
+builtin manual: 90845
+builtin movdq manual: 109517
+SSSE3: 160531
+builtin unrolled: 150017
+builtin manual: 95430
+builtin movdq manual: 112877
+SSSE3: 160846
+builtin unrolled: 146095
+builtin manual: 89123
+builtin movdq manual: 109851
+SSSE3: 156823
+builtin unrolled: 146336
+builtin manual: 92520
+builtin movdq manual: 110039
+SSSE3: 157107
+builtin unrolled: 146577
+builtin manual: 88418
+builtin movdq manual: 110333
+SSSE3: 157329
+builtin unrolled: 142842
+builtin manual: 85139
+builtin movdq manual: 110645
+SSSE3: 157553
+builtin unrolled: 147059
+builtin manual: 91982
+builtin movdq manual: 110710
+SSSE3: 157801
+builtin unrolled: 139548
+builtin manual: 81183
+builtin movdq manual: 104895
+SSSE3: 158106
+builtin unrolled: 147541
+builtin manual: 86196
+builtin movdq manual: 110979
+SSSE3: 162586
+builtin unrolled: 147782
+builtin manual: 92025
+builtin movdq manual: 111263
+SSSE3: 162916
+builtin unrolled: 148030
+builtin manual: 89293
+builtin movdq manual: 111418
+SSSE3: 163179
+builtin unrolled: 152495
+builtin manual: 88784
+builtin movdq manual: 114847
+SSSE3: 168015
+builtin unrolled: 148512
+builtin manual: 89584
+builtin movdq manual: 111857
+SSSE3: 159418
+builtin unrolled: 148753
+builtin manual: 90536
+builtin movdq manual: 111928
+SSSE3: 159691
+builtin unrolled: 148994
+builtin manual: 91593
+builtin movdq manual: 112163
+SSSE3: 159883
+builtin unrolled: 145187
+builtin manual: 87617
+builtin movdq manual: 109171
+SSSE3: 160116
+builtin unrolled: 141606
+builtin manual: 87250
+builtin movdq manual: 106559
+SSSE3: 160409
+builtin unrolled: 141831
+builtin manual: 85047
+builtin movdq manual: 106780
+SSSE3: 160693
+builtin unrolled: 149958
+builtin manual: 92415
+builtin movdq manual: 112911
+SSSE3: 165300
+builtin unrolled: 150206
+builtin manual: 92412
+builtin movdq manual: 112960
+SSSE3: 165536
+builtin unrolled: 150440
+builtin manual: 93568
+builtin movdq manual: 113195
+SSSE3: 165905
+builtin unrolled: 150688
+builtin manual: 92975
+builtin movdq manual: 116597
+SSSE3: 166122
+builtin unrolled: 155227
+builtin manual: 95484
+builtin movdq manual: 110529
+SSSE3: 161999
+builtin unrolled: 143214
+builtin manual: 89260
+builtin movdq manual: 107715
+SSSE3: 162269
+builtin unrolled: 143439
+builtin manual: 81316
+builtin movdq manual: 107798
+SSSE3: 162547
+builtin unrolled: 151652
+builtin manual: 95234
+builtin movdq manual: 114067
+SSSE3: 162774
+builtin unrolled: 147774
+builtin manual: 87457
+builtin movdq manual: 114342
+SSSE3: 163046
+builtin unrolled: 148016
+builtin manual: 93637
+builtin movdq manual: 111369
+SSSE3: 163463
+builtin unrolled: 156720
+builtin manual: 94184
+builtin movdq manual: 117897
+SSSE3: 168000
+builtin unrolled: 156974
+builtin manual: 97584
+builtin movdq manual: 114933
+SSSE3: 168268
+builtin unrolled: 157228
+builtin manual: 96923
+builtin movdq manual: 118378
+SSSE3: 168498
+builtin unrolled: 153105
+builtin manual: 88808
+builtin movdq manual: 115316
+SSSE3: 164391
+builtin unrolled: 149201
+builtin manual: 91649
+builtin movdq manual: 112215
+SSSE3: 164575
+builtin unrolled: 145497
+builtin manual: 89067
+builtin movdq manual: 115548
+SSSE3: 164838
+builtin unrolled: 145733
+builtin manual: 87590
+builtin movdq manual: 109651
+SSSE3: 165152
+builtin unrolled: 154069
+builtin manual: 90190
+builtin movdq manual: 115950
+SSSE3: 165379
+builtin unrolled: 146194
+builtin manual: 85582
+builtin movdq manual: 110012
+SSSE3: 165630
+builtin unrolled: 154551
+builtin manual: 89692
+builtin movdq manual: 116314
+SSSE3: 170405
+builtin unrolled: 154799
+builtin manual: 96058
+builtin movdq manual: 113490
+SSSE3: 170740
+builtin unrolled: 159452
+builtin manual: 95783
+builtin movdq manual: 120058
+SSSE3: 170973
+builtin unrolled: 159706
+builtin manual: 101486
+builtin movdq manual: 120143
+SSSE3: 171176
+builtin unrolled: 155522
+builtin manual: 97367
+builtin movdq manual: 117084
+SSSE3: 166955
+builtin unrolled: 155763
+builtin manual: 93649
+builtin movdq manual: 117365
+SSSE3: 167147
+builtin unrolled: 147791
+builtin manual: 91306
+builtin movdq manual: 111215
+SSSE3: 167481
+builtin unrolled: 160691
+builtin manual: 98582
+builtin movdq manual: 120904
+SSSE3: 167732
+builtin unrolled: 156486
+builtin manual: 94124
+builtin movdq manual: 117748
+SSSE3: 167972
+builtin unrolled: 161199
+builtin manual: 100972
+builtin movdq manual: 121255
+SSSE3: 177560
+builtin unrolled: 161453
+builtin manual: 102940
+builtin movdq manual: 121602
+SSSE3: 173125
+builtin unrolled: 161707
+builtin manual: 100220
+builtin movdq manual: 121590
+SSSE3: 173340
+builtin unrolled: 153190
+builtin manual: 93797
+builtin movdq manual: 115174
+SSSE3: 173578
+builtin unrolled: 157698
+builtin manual: 94375
+builtin movdq manual: 118586
+SSSE3: 169297
+builtin unrolled: 162438
+builtin manual: 100440
+builtin movdq manual: 118966
+SSSE3: 169542
+builtin unrolled: 153891
+builtin manual: 89222
+builtin movdq manual: 115642
+SSSE3: 169784
+builtin unrolled: 154133
+builtin manual: 95372
+builtin movdq manual: 115978
+SSSE3: 170080
+builtin unrolled: 154375
+builtin manual: 89427
+builtin movdq manual: 116056
+SSSE3: 170343
+builtin unrolled: 154617
+builtin manual: 89588
+builtin movdq manual: 116250
+SSSE3: 175192
+builtin unrolled: 154834
+builtin manual: 89724
+builtin movdq manual: 116600
+SSSE3: 175461
+builtin unrolled: 159392
+builtin manual: 95512
+builtin movdq manual: 119992
+SSSE3: 175763
+builtin unrolled: 164185
+builtin manual: 99011
+builtin movdq manual: 123606
+SSSE3: 176026
+builtin unrolled: 159874
+builtin manual: 92718
+builtin movdq manual: 120357
+SSSE3: 171612
+builtin unrolled: 155777
+builtin manual: 99506
+builtin movdq manual: 120447
+SSSE3: 176489
+builtin unrolled: 156019
+builtin manual: 90540
+builtin movdq manual: 117286
+SSSE3: 172170
+builtin unrolled: 156236
+builtin manual: 95665
+builtin movdq manual: 117531
+SSSE3: 172398
+builtin unrolled: 152379
+builtin manual: 93728
+builtin movdq manual: 117755
+SSSE3: 172670
+builtin unrolled: 156720
+builtin manual: 99437
+builtin movdq manual: 117994
+SSSE3: 177592
+builtin unrolled: 161327
+builtin manual: 100903
+builtin movdq manual: 121287
+SSSE3: 177888
+builtin unrolled: 161568
+builtin manual: 101124
+builtin movdq manual: 125077
+SSSE3: 178130
+builtin unrolled: 161809
+builtin manual: 100007
+builtin movdq manual: 121766
+SSSE3: 173737
+builtin unrolled: 162050
+builtin manual: 91788
+builtin movdq manual: 122032
+SSSE3: 173959
+builtin unrolled: 153751
+builtin manual: 93648
+builtin movdq manual: 115532
+SSSE3: 174228
+builtin unrolled: 153976
+builtin manual: 95108
+builtin movdq manual: 115919
+SSSE3: 174500
+builtin unrolled: 154212
+builtin manual: 98150
+builtin movdq manual: 119157
+SSSE3: 174760
+builtin unrolled: 158606
+builtin manual: 98234
+builtin movdq manual: 119432
+SSSE3: 174997
+builtin unrolled: 163262
+builtin manual: 100755
+builtin movdq manual: 122857
+SSSE3: 180007
+builtin unrolled: 159068
+builtin manual: 97699
+builtin movdq manual: 119683
+SSSE3: 180315
+builtin unrolled: 163744
+builtin manual: 99793
+builtin movdq manual: 123318
+SSSE3: 180547
+builtin unrolled: 163985
+builtin manual: 94946
+builtin movdq manual: 123519
+SSSE3: 180828
+builtin unrolled: 164226
+builtin manual: 95181
+builtin movdq manual: 123633
+SSSE3: 176321
+builtin unrolled: 187961
+builtin manual: 154432
+builtin movdq manual: 207899
+SSSE3: 176552
+builtin unrolled: 156037
+builtin manual: 96140
+builtin movdq manual: 117545
+SSSE3: 176785
+builtin unrolled: 160492
+builtin manual: 96381
+builtin movdq manual: 124267
+SSSE3: 177057
+builtin unrolled: 156495
+builtin manual: 96448
+builtin movdq manual: 117806
+SSSE3: 177374
+builtin unrolled: 170157
+builtin manual: 98313
+builtin movdq manual: 127961
+SSSE3: 182470
+builtin unrolled: 165672
+builtin manual: 99576
+builtin movdq manual: 124727
+SSSE3: 182684
+builtin unrolled: 161435
+builtin manual: 101722
+builtin movdq manual: 124987
+SSSE3: 182981
+builtin unrolled: 166161
+builtin manual: 102983
+builtin movdq manual: 125046
+SSSE3: 178400
+builtin unrolled: 166402
+builtin manual: 101861
+builtin movdq manual: 125241
+SSSE3: 178610
+builtin unrolled: 162136
+builtin manual: 101371
+builtin movdq manual: 122019
+SSSE3: 178875
+builtin unrolled: 162353
+builtin manual: 99555
+builtin movdq manual: 118885
+SSSE3: 179135
+builtin unrolled: 167125
+builtin manual: 104720
+builtin movdq manual: 125794
+SSSE3: 179349
+builtin unrolled: 158564
+builtin manual: 91002
+builtin movdq manual: 119287
+SSSE3: 179721
+builtin unrolled: 172381
+builtin manual: 105512
+builtin movdq manual: 129850
+SSSE3: 184772
+builtin unrolled: 167848
+builtin manual: 105125
+builtin movdq manual: 126378
+SSSE3: 185087
+builtin unrolled: 163538
+builtin manual: 99993
+builtin movdq manual: 129953
+SSSE3: 185356
+builtin unrolled: 173143
+builtin manual: 103638
+builtin movdq manual: 130206
+SSSE3: 180747
+builtin unrolled: 168578
+builtin manual: 99621
+builtin movdq manual: 127101
+SSSE3: 180945
+builtin unrolled: 164239
+builtin manual: 97172
+builtin movdq manual: 123854
+SSSE3: 181223
+builtin unrolled: 164481
+builtin manual: 99168
+builtin movdq manual: 123850
+SSSE3: 181486
+builtin unrolled: 164723
+builtin manual: 99301
+builtin movdq manual: 1
