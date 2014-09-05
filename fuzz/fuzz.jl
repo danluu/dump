@@ -26,7 +26,7 @@ function bogus()
         methods_of_name = methods(eval(name))
         print("$methods_of_name\n")
         some_method = start(methods_of_name)
-        print("$some_method\n")
+        print("$some_method $(typeof(some_method))\n")
     end
 
 end
