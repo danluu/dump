@@ -34,3 +34,7 @@ function randstring_len_test()
     end
 end
 
+while true
+    pcregrep_fail_check()
+    randstring_len_test()
+end

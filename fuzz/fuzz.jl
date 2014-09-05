@@ -11,11 +11,25 @@ end
 
 # generate_tests(2^12)
 
-function bogus()
-    potential_names = names(Base)
-    name = potential_names[rand(1:end)]
+function checkable_name(name)
+    (typeof(eval(name)) == Function && isgeneric(typeof(eval(name)))) ||
+#    typeof(eval(name)) == DataType
+    false # killing above line for now because we can't call start on DataType 'methods'
+end
 
-    print(methods(eval(name)))
+function bogus()
+    potential_names = sort(names(Base)) # names are returned in a random order.
+#    name = potential_names[rand(1:end)]
+    potential_names = filter(checkable_name, potential_names)
+
+    for name in potential_names
+        print("$name\n")
+        methods_of_name = methods(eval(name))
+        print("$methods_of_name\n")
+        some_method = start(methods_of_name)
+        print("$some_method\n")
+    end
+
 end
 
 bogus()
