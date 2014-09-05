@@ -14,7 +14,7 @@ end
 
 # find shorter PCRE bug.
 # This turned out to be a bug in pcregrep and not pcre itself.
-function foo()
+function pcregrep_fail_check()
     prefix_len = rand(0:8000000)
     postfix_len = rand(0:80)
     text = "not defined"
@@ -25,6 +25,12 @@ function foo()
     end
 end
 
-while true
-    foo()
+# inspried by the above. Seems ok.
+function randstring_len_test()
+    n = rand(0:2^28)
+    s = randstring(n)
+    if !(length(s) == n)
+        print("ERROR: $n $s\n")
+    end
 end
+
