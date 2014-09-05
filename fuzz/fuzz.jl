@@ -9,4 +9,13 @@ function generate_tests(n::Int)
     end
 end
 
-generate_tests(2^12)
+# generate_tests(2^12)
+
+function bogus()
+    potential_names = names(Base)
+    name = potential_names[rand(1:end)]
+
+    print(methods(eval(name)))
+end
+
+bogus()
