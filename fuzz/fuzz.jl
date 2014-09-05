@@ -12,9 +12,8 @@ end
 # generate_tests(2^12)
 
 function checkable_name(name)
-    (typeof(eval(name)) == Function && isgeneric(typeof(eval(name)))) ||
-#    typeof(eval(name)) == DataType
-    false # killing above line for now because we can't call start on DataType 'methods'
+    typeof(eval(name)) == Function && isgeneric(typeof(eval(name)))
+#    || typeof(eval(name)) == DataType # killing for now because we can't call start on DataType 'methods'
 end
 
 function bogus()
