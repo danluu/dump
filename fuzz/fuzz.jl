@@ -22,11 +22,11 @@ function bogus()
     potential_names = filter(checkable_name, potential_names)
 
     for name in potential_names
-        print("$name\n")
+ #       print("$name\n")
         methods_of_name = methods(eval(name))
-        print("$methods_of_name\n")
         some_method = start(methods_of_name)
-        print("$some_method $(typeof(some_method))\n")
+        print("$some_method type:$(typeof(some_method))\n")
+        print("  sig: $(some_method.sig)\n")
     end
 
 end
