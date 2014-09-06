@@ -1,14 +1,9 @@
 const test_dir = "jl_input"
 
-<<<<<<< HEAD
 # Note that it takes a really long time for julia
 # to construct a huge string. Seems like a super
 # low priority performance bug to debug someday.
 function generate_tests(n::Int, string::Bool)
-=======
-# Find shortest too-long symbol bug.
-function generate_tests(n::Int)
->>>>>>> origin/master
     for i in 1:n
         len = 2^i
         f = open("$(test_dir)/$(i)","w")
@@ -23,10 +18,7 @@ function generate_tests(n::Int)
     end
 end
 
-<<<<<<< HEAD
 generate_tests(20, false)
-=======
-# generate_tests(20)
 
 # find shorter PCRE bug.
 # This turned out to be a bug in pcregrep and not pcre itself.
@@ -54,4 +46,4 @@ while true
     pcregrep_fail_check()
     randstring_len_test()
 end
->>>>>>> origin/master
+
