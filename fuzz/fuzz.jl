@@ -1,4 +1,5 @@
 const test_dir = "jl_input"
+const max_rand_string_len = 2^16
 
 function generate_rand_strings(n::Int)
     for i in 1:n
@@ -26,9 +27,21 @@ function bogus()
         methods_of_name = methods(eval(name))
         some_method = start(methods_of_name)
         print("$some_method type:$(typeof(some_method))\n")
-        print("  sig: $(some_method.sig)\n")
+#        print("  sig: $(some_method.sig) type:$(typeof(some_method.sig))\n")
+        some_sig = some_method.sig
+        print(generate_rand_data(some_sig))
     end
 
+end
+
+function generate_rand_data(x::String)
+    return randstring(rand(1:max_rand_string_len))
+end
+
+function generate_rand_data(sig::Tuple)
+    for t in sig
+        print("  t: $t\n")
+    end
 end
 
 bogus()
