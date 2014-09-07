@@ -47,10 +47,8 @@ function bogus(fn_log)
     fn_text = ""
     while fn_text == ""
         name = potential_names[rand(1:end)]
-        # print("$name\n")
         fn_text = gen_rand_fn(name)
     end
-    # print("$fn_text\n")    
     write(fn_log, "$fn_text")
     flush(fn_log)
     eval(parse(fn_text))
@@ -73,7 +71,6 @@ function generate_rand_data(sig::Tuple)
     can_generate = true
     args = ""
     for t in sig        
-#        print("  t: $t $(typeof(t))\n")
         if typeof(t) == DataType
             randarg = generate_rand_data(t)
             if randarg != ""
@@ -86,7 +83,6 @@ function generate_rand_data(sig::Tuple)
             # by picking one of its types.
             return ""
         end
-#        print("    args: $args\n")
     end
         
     if can_generate
