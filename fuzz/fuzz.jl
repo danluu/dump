@@ -78,11 +78,13 @@ function generate_rand_data(sig::Tuple)
             randarg = generate_rand_data(t)
             if randarg != ""
                 args = "$args$randarg,"
+            else
+                return ""
             end
         else
             # Likely a union type, which should be handled
             # by picking one of its types.
-            can_generate = false
+            return ""
         end
 #        print("    args: $args\n")
     end
