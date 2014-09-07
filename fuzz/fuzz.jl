@@ -105,7 +105,7 @@ function try_bogus()
             if is(err, ErrorException)
                 exit()
             else
-                write(fn_log, string(err,"\n"))
+                write(fn_log, string("#", err,"\n"))
             end
         end
     end
