@@ -26,18 +26,20 @@ function banned_name(name)
 end
 
 function gen_rand_fn(name)    
-#    print("$name $(typeof(name))\n")
+    args = ""
     methods_of_name = methods(eval(name))
     some_method = start(methods_of_name)
-    #        print("$some_method type:$(typeof(some_method))\n")
-    #        print("  sig: $(some_method.sig) type:$(typeof(some_method.sig))\n")
-    some_sig = some_method.sig
-    args = generate_rand_data(some_sig)
-    if args != ""
-        return("$name($args)\n")
-    else 
-        return ""
+
+    while args == "" && some_method != ()
+        some_sig = some_method.sig
+        args = generate_rand_data(some_sig)
+        if args != ""
+            return("$name($args)\n")
+        else 
+            some_method = some_method.next
+        end
     end
+    return ""
 end
 
 function bogus(fn_log)
@@ -104,4 +106,23 @@ function try_bogus()
     close(fn_log)
 end
 
-try_bogus()
+# We often get a hang when we call displayable after someting has happened.
+# Is displayable alone sufficient or do we need something else first?
+# A single call is never sufficient, but maybe we can build up some funny 
+# state with a lot of calls?
+function try_displayable()
+    fn_log = open("log","w")
+    while true
+        try
+            text = gen_rand_fn(:displayable)
+            write(fn_log, text)
+            flush(fn_log)
+            eval(parse(text))
+        catch
+        end
+    end
+    close(fn_log)
+end
+
+# try_bogus()
+try_displayable()
