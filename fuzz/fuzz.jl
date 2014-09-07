@@ -1,5 +1,5 @@
 const test_dir = "jl_input"
-const max_rand_string_len = 10
+const max_rand_string_len = 100
 
 function generate_rand_strings(n::Int)
     for i in 1:n
@@ -17,8 +17,14 @@ function checkable_name(name)
 #    || typeof(eval(name)) == DataType # killing for now because we can't call start on DataType 'methods'
 end
 
+function banned_name(name)
+    return name == :touch || name == :edit || name == :download ||
+    name == :symlink || name == :kill || name == :mkdir || name == :cp ||
+    name == :writedlm || name == :mv
+end
+
 function gen_rand_fn(name)    
-    #        print("$name\n")
+#    print("$name $(typeof(name))\n")
     methods_of_name = methods(eval(name))
     some_method = start(methods_of_name)
     #        print("$some_method type:$(typeof(some_method))\n")
@@ -35,13 +41,15 @@ end
 function bogus()
     potential_names = sort(names(Base)) # names are returned in a random order.
     potential_names = filter(checkable_name, potential_names)
+    potential_names = filter(x -> !banned_name(x), potential_names)
     fn_text = ""
     while fn_text == ""
         name = potential_names[rand(1:end)]
         print("$name\n")
         fn_text = gen_rand_fn(name)
     end
-    print(fn_text)
+    print("$fn_text\n")
+    eval(parse(fn_text))
 end
 
 function generate_rand_data(t::DataType)
@@ -49,6 +57,10 @@ function generate_rand_data(t::DataType)
         return string("\"",randstring(rand(1:max_rand_string_len)),"\"")
     elseif t == Int || t == Integer
         return string(rand(Int))
+    elseif t == Float32
+        return string(rand(Float32))
+    elseif t == Float64 || t == Number || t == FloatingPoint
+        return string(rand(Float64))
     end
     return ""
 end
@@ -79,6 +91,11 @@ function generate_rand_data(sig::Tuple)
     end
 end
 
-bogus()
+while true
+    try
+        bogus()
+    catch
+    end
+end
 
 
