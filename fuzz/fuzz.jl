@@ -101,7 +101,12 @@ function try_bogus()
     while true
         try
             bogus(fn_log)
-        catch
+        catch err
+            if is(err, ErrorException)
+                exit()
+            else
+                write(fn_log, string(err,"\n"))
+            end
         end
     end
     close(fn_log)
@@ -125,5 +130,5 @@ function try_displayable()
     close(fn_log)
 end
 
-# try_bogus()
-try_displayable()
+try_bogus()
+# try_displayable()
