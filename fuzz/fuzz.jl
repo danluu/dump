@@ -21,8 +21,9 @@ function banned_name(name)
     return name == :touch || name == :edit || name == :download ||
     name == :symlink || name == :kill || name == :mkdir || name == :cp ||
     name == :writedlm || name == :mv || name == :rm || name == :tmpdir ||
-    name == :mktmpdir || name == :cd || name == :mkpath
-    
+    name == :mktmpdir || name == :cd || name == :mkpath ||
+    name == :ndigits || # issue #8266
+    name == :displayable # causes a hard to reproduce hang
 end
 
 function gen_rand_fn(name)    
