@@ -20,7 +20,9 @@ end
 function banned_name(name)
     return name == :touch || name == :edit || name == :download ||
     name == :symlink || name == :kill || name == :mkdir || name == :cp ||
-    name == :writedlm || name == :mv
+    name == :writedlm || name == :mv || name == :rm || name == :tmpdir ||
+    name == :mktmpdir || name == :cd
+    
 end
 
 function gen_rand_fn(name)    
@@ -38,17 +40,19 @@ function gen_rand_fn(name)
     end
 end
 
-function bogus()
+function bogus(fn_log)
     potential_names = sort(names(Base)) # names are returned in a random order.
     potential_names = filter(checkable_name, potential_names)
     potential_names = filter(x -> !banned_name(x), potential_names)
     fn_text = ""
     while fn_text == ""
         name = potential_names[rand(1:end)]
-        print("$name\n")
+        # print("$name\n")
         fn_text = gen_rand_fn(name)
     end
-    print("$fn_text\n")
+    # print("$fn_text\n")    
+    write(fn_log, "$fn_text\n")
+    flush(fn_log)
     eval(parse(fn_text))
 end
 
@@ -91,11 +95,15 @@ function generate_rand_data(sig::Tuple)
     end
 end
 
-while true
-    try
-        bogus()
-    catch
+function try_bogus()
+    fn_log = open("log","w")
+    while true
+        try
+            bogus(fn_log)
+        catch
+        end
     end
+    close(fn_log)
 end
 
-
+try_bogus()
