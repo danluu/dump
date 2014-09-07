@@ -51,7 +51,7 @@ function bogus(fn_log)
         fn_text = gen_rand_fn(name)
     end
     # print("$fn_text\n")    
-    write(fn_log, "$fn_text\n")
+    write(fn_log, "$fn_text")
     flush(fn_log)
     eval(parse(fn_text))
 end
