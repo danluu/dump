@@ -21,7 +21,7 @@ function banned_name(name)
     return name == :touch || name == :edit || name == :download ||
     name == :symlink || name == :kill || name == :mkdir || name == :cp ||
     name == :writedlm || name == :mv || name == :rm || name == :tmpdir ||
-    name == :mktmpdir || name == :cd
+    name == :mktmpdir || name == :cd || name == :mkpath
     
 end
 
