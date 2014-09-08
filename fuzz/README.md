@@ -6,6 +6,8 @@ Just messing around with software fuzzing for Julia. Not much here, since I don'
 
 [8239: segfault on code_native/code_llvm](https://github.com/JuliaLang/julia/pull/8239)
 
+And then there are surprising things that aren't bugs:
+
 [Inconsistent handling of some operators](https://groups.google.com/forum/#!topic/julia-users/ljQ-nHpXitU)
 
 
