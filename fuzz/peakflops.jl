@@ -10,7 +10,6 @@ function wheee0()
             i += 1
             peakflops(1954784290346684782)
         catch
-            print(i)
         end
     end
 end
@@ -25,7 +24,6 @@ function wheee1()
             end
             peakflops(1954784290346684782)
         catch
-            print(i)
         end
     end
 end
@@ -58,9 +56,14 @@ function pre_inc()
 end
 
 
-# print(code_typed(wheee, ()))
-# print(code_llvm(wheee, ()))
+print(code_typed(wheee0, ()))
+print(code_llvm(wheee0, ()))
+
+print(code_typed(wheee1, ()))
+print(code_llvm(wheee1, ()))
+
 
 # mid_inc()
 # pre_inc()
 
+# wheee0()
