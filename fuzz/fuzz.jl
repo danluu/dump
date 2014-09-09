@@ -23,7 +23,9 @@ function banned_name(name)
     name == :writedlm || name == :mv || name == :rm || name == :tmpdir ||
     name == :mktmpdir || name == :cd || name == :mkpath ||
     name == :ndigits || # issue #8266
-    name == :displayable # causes a hard to reproduce hang
+    name == :displayable || # causes a hard to reproduce hang
+    name == :$ || name == :& || name == :(::) || # can't invoke fns that are also special unary operators
+    name == :binomial # takes too long with a rand BigInt. TODO: make value depend on name.
 end
 
 function gen_rand_fn(name)    
@@ -60,13 +62,20 @@ end
 function generate_rand_data(t::DataType)
     if t == String
         return string("\"",randstring(rand(1:max_rand_string_len)),"\"")
-    elseif t == Int || t == Integer
-        return string(rand(Int))
+    elseif t == Int || t == Uint64 || t == Uint32 || t == Uint16
+        return string(rand(t))
+    elseif t == Integer
+        return string(rand(Int128))
+    elseif t == Unsigned
+        return string(rand(UInt128))
+    elseif t == BigInt
+        return string("big(",rand(Int128),")")
     elseif t == Float32
         return string(rand(Float32))
     elseif t == Float64 || t == Number || t == FloatingPoint
         return string(rand(Float64))
     end
+#    print("#Don't know how to generate $t\n")
     return ""
 end
 
