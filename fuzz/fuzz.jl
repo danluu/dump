@@ -25,7 +25,9 @@ function banned_name(name)
     name == :ndigits || # issue #8266
     name == :displayable || # causes a hard to reproduce hang
     name == :$ || name == :& || name == :(::) || # can't invoke fns that are also special unary operators
-    name == :binomial # takes too long with a rand BigInt. TODO: make value depend on name.
+    name == :binomial || # takes too long with a rand BigInt. TODO: make value depend on name.
+    name == :^ || # issue #8286
+    name == :open # sometimes creates files. TODO: only give it options that don't make files
 end
 
 function gen_rand_fn(name)    
@@ -70,6 +72,8 @@ function generate_rand_data(t::DataType)
         return string(rand(UInt128))
     elseif t == BigInt
         return string("big(",rand(Int128),")")
+    elseif t == Bool
+        return string(rand(0:1) == 0)
     elseif t == Float32
         return string(rand(Float32))
     elseif t == Float64 || t == Number || t == FloatingPoint
