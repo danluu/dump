@@ -64,7 +64,13 @@ end
 function generate_rand_data(t::DataType)
     if t == String
         return string("\"",randstring(rand(1:max_rand_string_len)),"\"")
-    elseif t == Int || t == Uint64 || t == Uint32 || t == Uint16
+    elseif t == Char
+        # TODO: track down bug where methods that use these don't get logged.
+        return string("'"char(rand(Uint16))"'") # TODO: generate different types of chars
+    elseif t == Symbol
+        return  string(symbol(randstring(rand(1:max_rand_string_len))))
+    elseif t == Int || t == Uint128 || t == Uint64 || t == Uint32 || t == Uint16 || t == Uint8 ||
+        t == Int128 || t == Int64 || t == Int32 || t == Int16 || t == Int8
         return string(rand(t))
     elseif t == Integer
         return string(rand(Int128))
