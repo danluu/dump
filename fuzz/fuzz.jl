@@ -21,17 +21,21 @@ function banned_name(name)
     return name == :touch || name == :edit || name == :download ||
     name == :symlink || name == :kill || name == :mkdir || name == :cp ||
     name == :writedlm || name == :mv || name == :rm || name == :tmpdir ||
-    name == :mktmpdir || name == :cd || name == :mkpath ||
+    name == :mktmpdir || name == :cd || name == :mkpath || name == :evalfile ||
     name == :ndigits || # issue #8266
     name == :displayable || # causes a hard to reproduce hang
     name == :peakflops || # causes hard to reproduce core dump
     name == :$ || name == :& || name == :(::) || # can't invoke fns that are also special unary operators
-    name == :binomial || # takes too long with a rand BigInt. TODO: make value depend on name.
+    name == :binomial || # takes too long with a rand BigInt. TODO: make value depend on name
     name == :^ || # issue #8286
-    name == :open # sometimes creates files. TODO: only give it options that don't make files
+    name == :open || # sometimes creates files. TODO: only give it options that don't make files
+    name == :versioninfo || # uninteresting and produces a lot of spam
+    name == :bessely # too slow unless arg sizes are limited
 end
 
 function gen_rand_fn(name)    
+    # Note that this won't work for functions that take no args. That seems ok since those 
+    # are unlikely to crash julia or hang.
     args = ""
     methods_of_name = methods(eval(name))
     some_method = start(methods_of_name)
@@ -62,6 +66,18 @@ function bogus(fn_log)
     eval(parse(fn_text))
 end
 
+function rand_float(t)
+    if t == Float64
+        return string(reinterpret(Float64, rand(Uint64)))
+    elseif t == Float32
+        return string(reinterpret(Float32, rand(Uint32)))
+    elseif t == Float16
+        return string(reinterpret(Float16, rand(Uint16)))
+    else
+        throw(ErrorException("Bad float type"))
+    end
+end
+
 function generate_rand_data(t::DataType)
     if t == String
         return string("\"",randstring(rand(1:max_rand_string_len)),"\"")
@@ -72,20 +88,24 @@ function generate_rand_data(t::DataType)
     elseif t == Int || t == Uint128 || t == Uint64 || t == Uint32 || t == Uint16 || t == Uint8 ||
         t == Int128 || t == Int64 || t == Int32 || t == Int16 || t == Int8
         return string(rand(t))
-    elseif t == Integer
-        return string(rand(Int128))
+    elseif t == Float16 || t == Float32 || t == Float64
+        return rand_float(t)
+    elseif t == Integer        
+        return string(rand(Int128))        
     elseif t == Unsigned
-        return string(rand(UInt128))
+        return string(rand(Uint128))
+    elseif t == Signed
+        return string(rand(Int128))
     elseif t == BigInt
         return string("big(",rand(Int128),")")
     elseif t == Bool
         return string(rand(0:1) == 0)
     elseif t == Float32
         return string(rand(Float32))
-    elseif t == Float64 || t == Number || t == FloatingPoint
+    elseif t == Number || t == FloatingPoint
         return string(rand(Float64))
     end
-#    print("#Don't know how to generate $t\n")
+    # print("#Don't know how to generate $t\n")
     return ""
 end
 
