@@ -24,6 +24,7 @@ function banned_name(name)
     name == :mktmpdir || name == :cd || name == :mkpath ||
     name == :ndigits || # issue #8266
     name == :displayable || # causes a hard to reproduce hang
+    name == :peakflops || # causes hard to reproduce core dump
     name == :$ || name == :& || name == :(::) || # can't invoke fns that are also special unary operators
     name == :binomial || # takes too long with a rand BigInt. TODO: make value depend on name.
     name == :^ || # issue #8286
@@ -65,8 +66,7 @@ function generate_rand_data(t::DataType)
     if t == String
         return string("\"",randstring(rand(1:max_rand_string_len)),"\"")
     elseif t == Char
-        # TODO: track down bug where methods that use these don't get logged.
-        return string("'"char(rand(Uint16))"'") # TODO: generate different types of chars
+        return string("'",char(rand(Uint16)),"'") # TODO: generate different types of chars
     elseif t == Symbol
         return  string(symbol(randstring(rand(1:max_rand_string_len))))
     elseif t == Int || t == Uint128 || t == Uint64 || t == Uint32 || t == Uint16 || t == Uint8 ||
@@ -109,7 +109,7 @@ function generate_rand_data(sig::Tuple)
         
     if can_generate
         # delete trailing comma.    
-        return args[1:length(args)-1]
+        return args[1:end-1]
     else
         return ""
     end

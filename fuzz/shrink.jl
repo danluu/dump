@@ -18,7 +18,7 @@ function generate_tests(n::Int, string::Bool)
     end
 end
 
-generate_tests(20, false)
+# generate_tests(20, false)
 
 # find shorter PCRE bug.
 # This turned out to be a bug in pcregrep and not pcre itself.
@@ -42,8 +42,19 @@ function randstring_len_test()
     end
 end
 
-while true
-    pcregrep_fail_check()
-    randstring_len_test()
+# while true
+#     pcregrep_fail_check()
+#     randstring_len_test()
+# end
+
+function shrink_UTFstr_bug()
+    wat = '䏏'
+    print(wat)
+
+    f = open("log", "w")
+    write(f, wat)
+    flush(f)
+    close(f)
 end
 
+shrink_UTFstr_bug()
