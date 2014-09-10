@@ -1,5 +1,6 @@
-Just messing around with software fuzzing for Julia. Not much here, since I don't know how software fuzzers should work and don't know Julia. Despite that, this has found the following bugs:
+Just messing around with software fuzzing for Julia. Not much here, since I don't know how software fuzzers should work and don't know Julia. Despite that, this it's found a few things:
 
+### Confirmed bugs
 
 [8286: exponent of large number causes crashes with SIGABRT](https://github.com/JuliaLang/julia/issues/8286)
 
@@ -11,13 +12,7 @@ Just messing around with software fuzzing for Julia. Not much here, since I don'
 
 [8239: segfault on code_native/code_llvm](https://github.com/JuliaLang/julia/pull/8239)
 
-And then there are surprising things that aren't bugs:
-
-[Inconsistent handling of some operators](https://groups.google.com/forum/#!topic/julia-users/ljQ-nHpXitU)
-
-Address space randomiziation causes some methods to be randomized across invocations of julia.
-
-And there are things I haven't gotten around to debugging/patching yet:
+### TODO: debug these bugs
 
 `searchindex` returns an unclear error message: 
 ~~~
@@ -32,5 +27,12 @@ ERROR: error compiling searchindex: error compiling _searchindex: cannot convert
 `displayable` psuedo-randomly hangs.
 
 `peakflops` segfaults
+
+### Odd non-bugs
+
+[Inconsistent handling of some operators](https://groups.google.com/forum/#!topic/julia-users/ljQ-nHpXitU)
+
+Address space randomiziation causes some methods to be randomized across invocations of julia.
+
 
 
