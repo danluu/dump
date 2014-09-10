@@ -18,8 +18,8 @@ function checkable_name(name)
 end
 
 function banned_name(name)
-    return name == :touch || name == :edit || name == :download ||
-    name == :symlink || name == :kill || name == :mkdir || name == :cp ||
+    return name == :touch || name == :edit || name == :download || name == :less ||
+    name == :symlink || name == :kill || name == :mkdir || name == :cp || name == :edit ||
     name == :writedlm || name == :mv || name == :rm || name == :tmpdir ||
     name == :mktmpdir || name == :cd || name == :mkpath || name == :evalfile ||
     name == :ndigits || # issue #8266
@@ -30,7 +30,9 @@ function banned_name(name)
     name == :^ || # issue #8286
     name == :open || # sometimes creates files. TODO: only give it options that don't make files
     name == :versioninfo || # uninteresting and produces a lot of spam
-    name == :bessely # too slow unless arg sizes are limited
+    name == :bessely || # too slow unless arg sizes are limited
+    name == :sprandn # hang bug
+
 end
 
 function gen_rand_fn(name)    
@@ -76,15 +78,46 @@ function rand_float(t)
     else
         throw(ErrorException("Bad float type"))
     end
+    assert(false)
+end
+
+function rand_char_raw()
+    if rand(0:1) == 0
+        return char(rand(Uint8))
+    elseif rand(0:1) == 0
+        return char(rand(Uint16))
+    else
+        return char(rand(Uint32))
+    end
+    assert(false)
+end
+
+
+function rand_char()
+    return string("'",rand_char_raw(),"'") 
+end
+
+function rand_string(n::Integer)
+    len = rand(1:n)
+    if rand(0:1) == 0
+        return string("\"",randstring(rand(1:len)),"\"")
+    else         
+        arr = Array(Char, len)
+        for i in 1:len
+            arr[i] = rand_char_raw()
+        end
+        return string("\"",join(arr),"\"")
+    end
+    assert(false)
 end
 
 function generate_rand_data(t::DataType)
     if t == String
-        return string("\"",randstring(rand(1:max_rand_string_len)),"\"")
+        return rand_string(max_rand_string_len)
     elseif t == Char
-        return string("'",char(rand(Uint16)),"'") # TODO: generate different types of chars
+        return rand_char()
     elseif t == Symbol
-        return  string(symbol(randstring(rand(1:max_rand_string_len))))
+        return  string(symbol(rand_string(max_rand_string_len)))
     elseif t == Int || t == Uint128 || t == Uint64 || t == Uint32 || t == Uint16 || t == Uint8 ||
         t == Int128 || t == Int64 || t == Int32 || t == Int16 || t == Int8
         return string(rand(t))
