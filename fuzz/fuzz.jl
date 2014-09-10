@@ -1,17 +1,6 @@
 const test_dir = "jl_input"
 const max_rand_string_len = 100
 
-function generate_rand_strings(n::Int)
-    for i in 1:n
-        len = rand(1:2^19-5000)
-        f = open("$(test_dir)/$(i)","w")
-        write(f, randstring(len))
-        close(f)
-    end
-end
-
-# generate_rand_strings(3)
-
 function checkable_name(name)
     typeof(eval(name)) == Function && isgeneric(eval(name))
 #    || typeof(eval(name)) == DataType # killing for now because we can't call start on DataType 'methods'
@@ -97,18 +86,22 @@ function rand_char()
     return string("'",rand_char_raw(),"'") 
 end
 
-function rand_string(n::Integer)
+function rand_string_raw(n::Integer)
     len = rand(1:n)
     if rand(0:1) == 0
-        return string("\"",randstring(rand(1:len)),"\"")
+        return randstring(rand(1:len))
     else         
         arr = Array(Char, len)
         for i in 1:len
             arr[i] = rand_char_raw()
         end
-        return string("\"",join(arr),"\"")
+        return join(arr)
     end
     assert(false)
+end
+
+function rand_string(n::Integer)
+    return string("\"",rand_string_raw(n),"\"")
 end
 
 function generate_rand_data(t::DataType)
@@ -202,5 +195,17 @@ function try_displayable()
     close(fn_log)
 end
 
-try_bogus()
+function generate_rand_strings(n::Int)
+    for i in 1:n
+        len = rand(1:2^18)
+        f = open("$(test_dir)/$(i)","w")
+#        write(f, randstring(len))
+        write(f, rand_string_raw(len))
+        close(f)
+    end
+end
+
+generate_rand_strings(20)
+
+# try_bogus()
 # try_displayable()
