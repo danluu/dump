@@ -1,7 +1,7 @@
 Just messing around with software fuzzing for Julia. Not much here, since I don't know how software fuzzers should work and don't know Julia. Despite that, this has found the following bugs:
 
 
-[8286: exponent of large number causes crash \(SIGABRT\)(https://github.com/JuliaLang/julia/issues/8286)
+[8286: exponent of large number causes crashes with SIGABRT](https://github.com/JuliaLang/julia/issues/8286)
 
 [8277: code near exception incorrectly optimized out](https://github.com/JuliaLang/julia/issues/8277)
 
