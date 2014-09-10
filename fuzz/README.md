@@ -1,6 +1,6 @@
 Just messing around with software fuzzing for Julia. Not much here, since I don't know how software fuzzers should work and don't know Julia. Despite that, this it's found a few things:
 
-### Confirmed bugs
+### Confirmed/debugged bugs
 
 [8286: exponent of large number causes crashes with SIGABRT](https://github.com/JuliaLang/julia/issues/8286)
 
@@ -31,6 +31,8 @@ ERROR: error compiling searchindex: error compiling _searchindex: cannot convert
 deprecated syntax warning shows up with non-sensical line number and sometimes non-sensical source file.
 
 `addprocs` of negative `Int128` causes something crazy to happen.
+
+`Array(Int, some_int128_var)` doesn't work correctly.
 
 ### Odd non-bugs
 
