@@ -26,9 +26,11 @@ ERROR: error compiling searchindex: error compiling _searchindex: cannot convert
 
 `displayable` psuedo-randomly hangs.
 
-`peakflops` segfaults
+`peakflops` segfaults.
 
 deprecated syntax warning shows up with non-sensical line number and sometimes non-sensical source file.
+
+`addprocs` of negative `Int128` causes something crazy to happen.
 
 ### Odd non-bugs
 
