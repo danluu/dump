@@ -28,6 +28,8 @@ ERROR: error compiling searchindex: error compiling _searchindex: cannot convert
 
 `peakflops` segfaults
 
+deprecated syntax warning shows up with non-sensical line number and sometimes non-sensical source file.
+
 ### Odd non-bugs
 
 [Inconsistent handling of some operators](https://groups.google.com/forum/#!topic/julia-users/ljQ-nHpXitU)
