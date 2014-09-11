@@ -72,9 +72,9 @@ The following table fails to display correctly because github wont' render a six
 | Ruby 1.8.7 | | | | | X |
 | Java 1.7 | | | X | | |
 | Scala 2.9.2 | | | X | | |
-| Haskell 7.4.1 | | X | | |
+| Haskell 7.4.1 | | X | | | |
 | C gcc 4.6.4 | | | | X | |
-| perl 5.14.2 | X | | | |
+| perl 5.14.2 | X | | | | |
 | Julia 0.3 rc1[^S] | | | | X | |
 | Go 1.3 | | | X | | | |
 | Lisp SBCL 1.0.55 | | | | | X |
