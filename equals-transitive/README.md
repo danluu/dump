@@ -63,7 +63,6 @@ Prelude> min nan 1
 Prelude> min 1 nan
 NaN
 ~~~
-The following table fails to display correctly because github wont' render a six column table. If you really want to see the table, try this [markdown rendering engine](http://markdown-here.com/livedemo.html).
 
 | Language | 1st | 2nd | NaN | non-NaN | Exception |
 | --- | --- | --- | --- | --- | --- |
