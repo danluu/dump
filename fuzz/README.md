@@ -1,6 +1,8 @@
-Just messing around with software fuzzing for Julia. Not much here, since I don't know how software fuzzers should work and don't know Julia. Despite that, this it's found a few things:
+You probably don't want to use this. I spent a few minutes writing the most naive possible fuzzer, to see if it would turn up any bugs. Turns out, this terrible method can generate bugs faster than I can debug them. However, the general approach and the specific implementation are pretty lame. If you're looking at this, you probably want something like [Csmith](http://embed.cs.utah.edu/csmith/) or [jsfunfuzz](https://bugzilla.mozilla.org/show_bug.cgi?id=jsfunfuzz).
 
-### Confirmed bugs
+I'm planning to, eventually, write a real fuzzer to see if something that generates random expressions turns up more bugs than this. Suggestions / pull requests welcome.
+
+### Confirmed/debugged bugs
 
 [8286: exponent of large number causes crashes with SIGABRT](https://github.com/JuliaLang/julia/issues/8286)
 
@@ -26,13 +28,17 @@ ERROR: error compiling searchindex: error compiling _searchindex: cannot convert
 
 `displayable` psuedo-randomly hangs.
 
-`peakflops` segfaults
+`peakflops` segfaults.
 
 deprecated syntax warning shows up with non-sensical line number and sometimes non-sensical source file.
 
+`addprocs` of negative `Int128` causes something crazy to happen.
+
+`Array(Int, some_int128_var)` doesn't work correctly.
+
 ### Odd non-bugs
 
-[Inconsistent handling of some operators](https://groups.google.com/forum/#!topic/julia-users/ljQ-nHpXitU)
+[Special casing of some operators](https://groups.google.com/forum/#!topic/julia-users/ljQ-nHpXitU)
 
 Address space randomiziation causes some methods to be randomized across invocations of julia.
 
