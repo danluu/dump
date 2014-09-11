@@ -205,7 +205,7 @@ function generate_rand_strings(n::Int)
     end
 end
 
-generate_rand_strings(20)
+# generate_rand_strings(20)
 
-# try_bogus()
+try_bogus()
 # try_displayable()

@@ -6,6 +6,9 @@ function rerun()
     line = readline(f)
     while line != ""
         try
+            if line[1] == "#"
+                continue
+            end
             eval(parse(line))
         catch
         end
