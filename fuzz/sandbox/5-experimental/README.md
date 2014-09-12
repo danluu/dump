@@ -26,3 +26,17 @@ The backtrace is
 #2  0x00007ffff6ade182 in start_thread (arg=0x7fffebcc6700) at pthread_create.c:312
 #3  0x00007ffff680afbd in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
 ~~~
+
+Segfaults appears to come from 
+pthread_cond_wait(&thread_status[cpu].wakeup, &thread_status[cpu].lock);
+
+Enabling debug prints and inserting some extra ones shows that the same thread spawns twice?
+
+DEBUG creating 11
+Server[11] Calculation started.  Mode = 0x2001 M = 100 N=100 K=100
+THREAD[11] : Running2.
+Total number of suspended ... 7
+Server[11] Thread has just been spawned!
+Segmentation fault (core dumped)
+
+It seems that the setting the number of threads spawns the thread, as does the init/wakeup routine. If there's enough time between the two, the thread gets killed before it gets respwaned? otherwise, something bad happens.

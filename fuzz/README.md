@@ -24,11 +24,11 @@ ERROR: error compiling searchindex: error compiling _searchindex: cannot convert
  in searchindex at string.jl:307
 ~~~
 
-`sprandn` with bad args can take an arbitrary long time before erroring out.
+`sprandn` with bad args can take an arbitraily long time before erroring out.
 
 `displayable` psuedo-randomly hangs.
 
-`peakflops` segfaults. After halway, this is a weirdly hard to reproduce segfault on a multiply.
+`peakflops` segfaults. This looks like it might be an openblas threading bug.
 
 deprecated syntax warning shows up with non-sensical line number and sometimes non-sensical source file.
 
