@@ -28,13 +28,15 @@ ERROR: error compiling searchindex: error compiling _searchindex: cannot convert
 
 `displayable` psuedo-randomly hangs.
 
-`peakflops` segfaults.
+`peakflops` segfaults. After halway, this is a weirdly hard to reproduce segfault on a multiply.
 
 deprecated syntax warning shows up with non-sensical line number and sometimes non-sensical source file.
 
 `addprocs` of negative `Int128` causes something crazy to happen.
 
 `Array(Int, some_int128_var)` doesn't work correctly.
+
+Passing a bad unicode string that has a `"` in it to a functions that takes strings sometimes produces a hard to reproduce hang.
 
 ### Odd non-bugs
 

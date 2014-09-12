@@ -1,0 +1,4 @@
+peakflops(1000)
+dlopen_e("wat")
+blas_set_num_threads(12)
+peakflops(1000)
