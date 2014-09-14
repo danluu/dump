@@ -4,6 +4,10 @@ I'm planning to, eventually, write a real fuzzer to see if something that genera
 
 ### Confirmed/debugged bugs
 
+[8341: EOF mixed up in unicode hangs parser](https://github.com/JuliaLang/julia/issues/8341)
+
+[8302: array sized incorrectly](https://github.com/JuliaLang/julia/pull/8302)
+
 [8286: exponent of large number causes crashes with SIGABRT](https://github.com/JuliaLang/julia/issues/8286)
 
 [8277: code near exception incorrectly optimized out](https://github.com/JuliaLang/julia/issues/8277)
@@ -34,9 +38,6 @@ deprecated syntax warning shows up with non-sensical line number and sometimes n
 
 `addprocs` of negative `Int128` causes something crazy to happen.
 
-`Array(Int, some_int128_var)` doesn't work correctly.
-
-Passing a bad unicode string that has a `"` in it to a functions that takes strings sometimes produces a hard to reproduce hang.
 
 ### Odd non-bugs
 

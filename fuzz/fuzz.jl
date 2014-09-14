@@ -163,6 +163,8 @@ end
 
 function try_bogus()
     fn_log = open("log","w")
+    (err_in, err_out) = redirect_stderr()
+    close(err_out)
     while true
         try
             bogus(fn_log)
