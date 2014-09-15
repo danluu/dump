@@ -3,8 +3,17 @@ function err_result(s::String)
 end
 
 function canonicalize_path(s::String)
-    s = replace(s, r"/Users/danluu","")
-    s = replace(s, r"/home/dluu","")
+    # check istext to work around issue with bad strings.
+    if istext(s)
+        println("canon-debug")
+        print(s)
+        s = replace(s, r"/Users/danluu","")
+        println("canon-debug2")
+        print(s)
+        s = replace(s, r"/home/dluu","")
+    else
+        s
+    end
 end
 
 function check_logs(fname1::String, fname2::String)
@@ -15,7 +24,6 @@ function check_logs(fname1::String, fname2::String)
     i = 0
     while line1 != ""  && line2 != ""
         i += 1
-        println(i)
         line1 = canonicalize_path(line1)
         line2 = canonicalize_path(line2)
     	if err_result(line1) || err_result(line2)
