@@ -12,8 +12,8 @@ function canonicalize_path(s::String)
         print(s)
         s = replace(s, r"/home/dluu","")
     else
-        s
     end
+    s
 end
 
 function check_logs(fname1::String, fname2::String)
