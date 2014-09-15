@@ -54,7 +54,9 @@ function bogus(fn_log)
     end
     write(fn_log, "$fn_text")
     flush(fn_log)
-    eval(parse(fn_text))
+    res = eval(parse(fn_text))
+    write(fn_log, "# $res\n")
+    flush(fn_log)
 end
 
 function rand_float(t)
@@ -162,17 +164,21 @@ function generate_rand_data(sig::Tuple)
 end
 
 function try_bogus()
+    srand(1)
+    i = 0
     fn_log = open("log","w")
-    (err_in, err_out) = redirect_stderr()
-    close(err_out)
+#    (err_in, err_out) = redirect_stderr()
+#    close(err_out)
     while true
+        i += 1
+        i > 10000 && exit()
         try
             bogus(fn_log)
         catch err
             if is(err, ErrorException)
                 exit()
             else
-                write(fn_log, string("#", err,"\n"))
+                write(fn_log, string("# CAUGHT: ", err,"\n"))
             end
         end
     end
