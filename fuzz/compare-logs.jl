@@ -36,4 +36,4 @@ function check_logs(fname1::String, fname2::String)
     end
 end
 
-check_logs("log", "log-lin64")
+check_logs("linux-arm32", "linux-x64")
