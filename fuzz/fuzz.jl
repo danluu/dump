@@ -35,7 +35,7 @@ function gen_rand_fn(name)
         some_sig = some_method.sig
         args = generate_rand_data(some_sig)
         if args != ""
-            return("$name($args)\n")
+            return("$name($args) #$some_sig\n")
         else 
             some_method = some_method.next
         end
@@ -113,7 +113,9 @@ function generate_rand_data(t::DataType)
         return rand_char()
     elseif t == Symbol
         return  string(symbol(rand_string(max_rand_string_len)))
-    elseif t == Int || t == Uint128 || t == Uint64 || t == Uint32 || t == Uint16 || t == Uint8 ||
+    elseif t == Int # Try to stop 32/64-bit rand divergence
+        return string(rand(Int64))
+    elseif t == Uint128 || t == Uint64 || t == Uint32 || t == Uint16 || t == Uint8 ||
         t == Int128 || t == Int64 || t == Int32 || t == Int16 || t == Int8
         return string(rand(t))
     elseif t == Float16 || t == Float32 || t == Float64
@@ -203,7 +205,7 @@ function try_displayable()
     close(fn_log)
 end
 
-function generate_rand_strings(n::Int)
+function generate_rand_strings(n::Int64)
     for i in 1:n
         len = rand(1:2^18)
         f = open("$(test_dir)/$(i)","w")
