@@ -73,14 +73,14 @@ NaN
 | Scala 2.9.2 | | | X | | |
 | Go 1.3 | | | X | | |
 | javascript | | | X | | |
-| Octave 3.6.2 | | | X | | |
 | Haskell 7.4.1 | | X | | | |
-| Ocaml 3.12.1 | | X | | | |
+| Ocaml 3.12.1 | | X| | | |
 | Lua | X | | | | |
 | perl 5.14.2 | X | | | | |
 | Python 2.7.3 | X | | | | |
 | C gcc 4.6.4 | | | | X | |
 | Julia 0.3 rc1[^S] | | | | X | |
+| Octave 3.8.1 | | | | X | |
 | Lisp SBCL 1.0.55 | | | | | X |
 | Ruby 1.8.7 | | | | | X |
 | Ruby 2.0 | | | | | X |
