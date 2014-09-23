@@ -371,7 +371,7 @@ int adjusted_iterations(int len, int iterations) {
 int main() {
   for (int len = MIN_LEN; len <= MAX_LEN; len *= DELTA) {
     //    int iterations = adjusted_iterations(len, ITERATIONS);
-    printf("int %lu long long %lu\n", sizeof(int), sizeof(long long));
+    // printf("int %lu long long %lu\n", sizeof(int), sizeof(long long));
 
     int iterations = ITERATIONS;
     // printf("builtin32: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt32));
