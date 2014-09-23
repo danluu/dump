@@ -75,10 +75,6 @@ uint32_t builtin_popcnt_unrolled_errata_manual(const uint64_t* buf, int len) {
   }
 
   for (int i = 0; i < len; i+=4) {
-    uint64_t r0 = buf[i];
-    uint64_t r1 = buf[i+1];
-    uint64_t r2 = buf[i+2];
-    uint64_t r3 = buf[i+3];
     __asm__(    
 	    "popcnt %4, %4  \n\t"
 	    "add %4, %0     \n\t"
@@ -89,7 +85,7 @@ uint32_t builtin_popcnt_unrolled_errata_manual(const uint64_t* buf, int len) {
 	    "popcnt %7, %7  \n\t"
 	    "add %7, %3     \n\t"
 	    : "+r" (cnt[0]), "+r" (cnt[1]), "+r" (cnt[2]), "+r" (cnt[3])
-	    : "r"  (r0), "r"  (r1), "r"  (r2), "r"  (r3)    
+	    : "r"  (buf[i]), "r"  (buf[i+1]), "r"  (buf[i+2]), "r"  (buf[i+3])    
 		);
   }
   return cnt[0] + cnt[1] + cnt[2] + cnt[3];
@@ -350,7 +346,7 @@ int adjusted_iterations(int len, int iterations) {
 int main() {
   for (int len = DELTA; len < MAX_LEN; len += DELTA) {
     int iterations = adjusted_iterations(len, ITERATIONS);
-    // printf("builtin: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt));
+    printf("builtin: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt));
     printf("builtin unrolled: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled));
     // printf("builtin errata: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata));
     printf("builtin manual: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata_manual));
