@@ -1,42 +1,60 @@
-int 4 long long 8
-builtin: 976
-builtin unrolled: 507
-builtin errata: 453
-builtin manual: 305
-SSSE3: 559
-int 4 long long 8
-builtin: 3770
-builtin unrolled: 1881
-builtin errata: 1653
-builtin manual: 1091
-SSSE3: 2129
-int 4 long long 8
-builtin: 14969
-builtin unrolled: 7380
-builtin errata: 6528
-builtin manual: 4261
-SSSE3: 8305
-int 4 long long 8
-builtin: 59799
-builtin unrolled: 29376
-builtin errata: 26731
-builtin manual: 17275
-SSSE3: 33096
-int 4 long long 8
-builtin: 238825
-builtin unrolled: 117327
-builtin errata: 104454
-builtin manual: 67846
-SSSE3: 132662
-int 4 long long 8
-builtin: 955527
-builtin unrolled: 469153
-builtin errata: 419383
-builtin manual: 267660
-SSSE3: 531284
-int 4 long long 8
-builtin: 3821881
-builtin unrolled: 1876892
-builtin errata: 1704763
-builtin manual: 1159125
-SSSE3: 2235474
+bytes: 256
+builtin: 6.00
+builtin unrolled: 11.16
+builtin errata: 4.27
+builtin manual: 4.89
+SSSE3: 3.54
+bytes: 1024
+builtin: 6.87
+builtin unrolled: 12.52
+builtin errata: 14.27
+builtin manual: 17.50
+SSSE3: 11.53
+bytes: 4096
+builtin: 7.28
+builtin unrolled: 14.36
+builtin errata: 16.29
+builtin manual: 23.64
+SSSE3: 13.00
+bytes: 16384
+builtin: 7.42
+builtin unrolled: 15.00
+builtin errata: 17.02
+builtin manual: 25.32
+SSSE3: 13.32
+bytes: 65536
+builtin: 7.45
+builtin unrolled: 15.15
+builtin errata: 17.16
+builtin manual: 25.26
+SSSE3: 13.44
+bytes: 262144
+builtin: 7.46
+builtin unrolled: 15.19
+builtin errata: 17.15
+builtin manual: 26.30
+SSSE3: 13.13
+bytes: 1048576
+builtin: 7.47
+builtin unrolled: 15.20
+builtin errata: 17.04
+builtin manual: 26.28
+SSSE3: 13.43
+bytes: 4194304
+builtin: 7.46
+builtin unrolled: 15.20
+builtin errata: 16.83
+builtin manual: 25.29
+SSSE3: 12.97
+bytes: 16777216
+builtin: 7.47
+builtin unrolled: 15.20
+builtin errata: 16.68
+builtin manual: 24.27
+SSSE3: 12.65
+bytes: 67108864
+builtin: 7.46
+builtin unrolled: 15.19
+builtin errata: 16.63
+builtin manual: 24.09
+SSSE3: 12.57

@@ -7,7 +7,7 @@
 #include <assert.h>
 #include "../rdtsc.h"
 
-#define MIN_LEN 256
+#define MIN_LEN 256/8
 #define MAX_LEN 1048576*16
 #define DELTA 4
 #define LINE_SIZE 128
@@ -368,9 +368,10 @@ int adjusted_iterations(int len, int iterations) {
   return adjusted > 10 ? adjusted : 10;
 }
 
-double bytes_per_cycle(int cycles, int len) {
+double gb_per_s(int cycles, int len) {
   double bytes = len * 8;
-  return bytes / (double) cycles;
+  return (double) 3.4 * bytes / (double) cycles;
+  // this 3.4 constant depends on the chip.
 }
 
 int main() {
@@ -380,16 +381,17 @@ int main() {
 
     int iterations = ITERATIONS;
     // printf("builtin32: %.2f\n", run_and_time_fn(len, iterations, &builtin_popcnt32));
-    printf("builtin: %.2f\n", bytes_per_cycle(run_and_time_fn(len, iterations, &builtin_popcnt), len));
-    printf("builtin unrolled: %.2f\n", bytes_per_cycle(run_and_time_fn(len, iterations, &builtin_popcnt_unrolled), len));
-    // printf("builtin unrolled32: %.2f\n", bytes_per_cycle(run_and_time_fn(len, iterations, &builtin_popcnt_unrolled32));
-    printf("builtin errata: %.2f\n", bytes_per_cycle(run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata), len));
-    printf("builtin manual: %.2f\n", bytes_per_cycle(run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata_manual), len));
-    // printf("builtin movdq: %.2f\n", bytes_per_cycle(run_and_time_fn(len, iterations, &builtin_popcnt_movdq), len));
-    // printf("builtin movdq unrolled: %.2f\n", bytes_per_cycle(run_and_time_fn(len, iterations, &builtin_popcnt_movdq_unrolled), len));
-    // printf("builtin movdq manual: %.2f\n", bytes_per_cycle(run_and_time_fn(len, iterations, &builtin_popcnt_movdq_unrolled_manual));
+    printf("bytes: %i\n", 8*len);
+    printf("builtin: %.2f\n", gb_per_s(run_and_time_fn(len, iterations, &builtin_popcnt), len));
+    printf("builtin unrolled: %.2f\n", gb_per_s(run_and_time_fn(len, iterations, &builtin_popcnt_unrolled), len));
+    // printf("builtin unrolled32: %.2f\n", gb_per_s(run_and_time_fn(len, iterations, &builtin_popcnt_unrolled32));
+    printf("builtin errata: %.2f\n", gb_per_s(run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata), len));
+    printf("builtin manual: %.2f\n", gb_per_s(run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata_manual), len));
+    // printf("builtin movdq: %.2f\n", gb_per_s(run_and_time_fn(len, iterations, &builtin_popcnt_movdq), len));
+    // printf("builtin movdq unrolled: %.2f\n", gb_per_s(run_and_time_fn(len, iterations, &builtin_popcnt_movdq_unrolled), len));
+    // printf("builtin movdq manual: %.2f\n", gb_per_s(run_and_time_fn(len, iterations, &builtin_popcnt_movdq_unrolled_manual));
     #ifdef USE_SOFT 
-    printf("SSSE3: %.2f\n", bytes_per_cycle(run_mula_popcnt(len, iterations), len));
+    printf("SSSE3: %.2f\n", gb_per_s(run_mula_popcnt(len, iterations), len));
     #endif
   }
 }
