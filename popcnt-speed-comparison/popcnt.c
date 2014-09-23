@@ -7,8 +7,9 @@
 #include <assert.h>
 #include "../rdtsc.h"
 
-#define MAX_LEN 4096*384
-#define DELTA 128
+#define MIN_LEN 256
+#define MAX_LEN 1048576
+#define DELTA 4
 #define LINE_SIZE 128
 #define ITERATIONS 10000
 
@@ -31,6 +32,16 @@ uint32_t builtin_popcnt(const uint64_t* buf, int len) {
   return cnt;
 }
 
+uint32_t builtin_popcnt32(const uint64_t* buf64, int len64) {
+  int cnt = 0;
+  const uint32_t* buf = (const uint32_t*) buf64;
+  int len = len64 * 2;
+  for (int i = 0; i < len; ++i) {
+    cnt += __builtin_popcount(buf[i]);
+  }
+  return cnt;
+}
+
 uint32_t builtin_popcnt_unrolled(const uint64_t* buf, int len) {
   assert(len % 4 == 0);
   int cnt = 0;
@@ -39,6 +50,20 @@ uint32_t builtin_popcnt_unrolled(const uint64_t* buf, int len) {
     cnt += __builtin_popcountll(buf[i+1]);
     cnt += __builtin_popcountll(buf[i+2]);
     cnt += __builtin_popcountll(buf[i+3]);
+  }
+  return cnt;
+}
+
+uint32_t builtin_popcnt_unrolled32(const uint64_t* buf64, int len64) {
+  const uint32_t* buf = (const uint32_t*) buf64;
+  int len = len64 * 2;
+  assert(len % 4 == 0);
+  int cnt = 0;
+  for (int i = 0; i < len; i+=4) {
+    cnt += __builtin_popcount(buf[i]);
+    cnt += __builtin_popcount(buf[i+1]);
+    cnt += __builtin_popcount(buf[i+2]);
+    cnt += __builtin_popcount(buf[i+3]);
   }
   return cnt;
 }
@@ -344,15 +369,20 @@ int adjusted_iterations(int len, int iterations) {
 }
 
 int main() {
-  for (int len = DELTA; len < MAX_LEN; len += DELTA) {
-    int iterations = adjusted_iterations(len, ITERATIONS);
+  for (int len = MIN_LEN; len <= MAX_LEN; len *= DELTA) {
+    //    int iterations = adjusted_iterations(len, ITERATIONS);
+    printf("int %lu long long %lu\n", sizeof(int), sizeof(long long));
+
+    int iterations = ITERATIONS;
+    // printf("builtin32: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt32));
     printf("builtin: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt));
     printf("builtin unrolled: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled));
-    // printf("builtin errata: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata));
+    // printf("builtin unrolled32: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled32));
+    printf("builtin errata: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata));
     printf("builtin manual: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_unrolled_errata_manual));
     // printf("builtin movdq: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_movdq));
     // printf("builtin movdq unrolled: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_movdq_unrolled));
-    printf("builtin movdq manual: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_movdq_unrolled_manual));
+    // printf("builtin movdq manual: %i\n", run_and_time_fn(len, iterations, &builtin_popcnt_movdq_unrolled_manual));
     #ifdef USE_SOFT 
     printf("SSSE3: %i\n", run_mula_popcnt(len, iterations));
     #endif
