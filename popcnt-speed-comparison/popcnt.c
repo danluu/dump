@@ -8,7 +8,7 @@
 #include "../rdtsc.h"
 
 #define MIN_LEN 256/8
-#define MAX_LEN 1048576*16
+#define MIN_LEN 1048576*16
 #define DELTA 4
 #define LINE_SIZE 128
 #define ITERATIONS 10000
@@ -224,9 +224,10 @@ int run_and_time_fn(int len, int iterations, uint32_t(*fn)(const uint64_t* buf, 
   min_tsc = 0;
   min_tsc--;
 
-  asm volatile("" :: "m" (buffer[0]));
-
   for (int i = 0; i < iterations; ++i) {
+    for (int i = 0; i < len; ++i) {
+      asm volatile("" :: "m" (buffer[i]));
+    }
     RDTSC_START(tsc_before);
     total += fn(buffer, len);
     RDTSC_STOP(tsc_after);
