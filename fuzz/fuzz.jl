@@ -166,14 +166,14 @@ function generate_rand_data(sig::Tuple)
 end
 
 function try_bogus()
-    srand(1)
+    # srand(1)
     i = 0
     fn_log = open("log","w")
 #    (err_in, err_out) = redirect_stderr()
 #    close(err_out)
     while true
         i += 1
-        i > 10000 && exit()
+#        i > 10000 && exit()
         try
             bogus(fn_log)
         catch err

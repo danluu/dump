@@ -10,7 +10,7 @@ double wat(double x) {
 }
 
 int main() {
-  double bogus;
+  double bogus = 0.0;
   asm volatile("" :: "m" (bogus));  
   double res = wat(bogus);
   asm volatile("" :: "m" (res));  
