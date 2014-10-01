@@ -24,3 +24,4 @@ open # TODO: only give it opens that don't create files
 versioninfo # uinteresting and produces a lot of output
 bessely # too slow unless arg sizes are limited
 sprandn # hang bug
+readlines # defaults to STDIN, which will cause the fuzzer to hang

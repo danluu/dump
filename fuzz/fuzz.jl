@@ -3,9 +3,10 @@ const max_rand_string_len = 100
 
 function checkable_name(name)
     typeof(eval(name)) == Function && isgeneric(eval(name))
-#    || typeof(eval(name)) == DataType # killing for now because we can't call start on DataType 'methods'
+    # it should be possible to add support for 'DataType'
 end
 
+# get list of functions to avoid calling.
 function get_fn_exclusion_list(fname)
     banned = Set{Symbol}()
     f = open(fname)
@@ -19,23 +20,25 @@ function get_fn_exclusion_list(fname)
     return banned
 end
 
+# Somewhat involved because MethodTable doesn't provide any means of indexing.
+function get_rand_method(mt::MethodTable)
+    some_method = start(mt)
+    n = rand(1:length(mt))
+    for i in 2:n
+        some_method = some_method.next
+    end
+    return some_method
+end
+
 function gen_rand_fn(name)    
     # Note that this won't work for functions that take no args. That seems ok since those 
     # are unlikely to crash julia or hang.
     args = ""
     methods_of_name = methods(eval(name))
-    some_method = start(methods_of_name)
 
-    while args == "" && some_method != ()
-        some_sig = some_method.sig
-        args = generate_rand_data(some_sig)
-        if args != ""
-            return("$name($args) #$some_sig\n")
-        else 
-            some_method = some_method.next
-        end
-    end
-    return ""
+    some_sig = get_rand_method(methods_of_name).sig
+    args = generate_rand_data(some_sig)        
+    return("$name($args) #$some_sig\n")
 end
 
 function call_rand_fn(fn_log, banned_fns::Set{Symbol})
