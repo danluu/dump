@@ -6,6 +6,19 @@ function checkable_name(name)
 #    || typeof(eval(name)) == DataType # killing for now because we can't call start on DataType 'methods'
 end
 
+function get_fn_exclusion_list(fname)
+    banned = Set{Symbol}()
+    f = open(fname)
+    line = chomp(readline(f))
+    while line != ""
+        stripped = replace(line, r"\s*#.*", "") # remove comments.
+        push!(banned, symbol(stripped))
+        line = chomp(readline(f))
+    end
+    close(f)
+    return banned
+end
+
 function banned_name(name)
     return name == :touch || name == :edit || name == :download || name == :less ||
     name == :symlink || name == :kill || name == :mkdir || name == :cp || name == :edit ||
@@ -42,10 +55,10 @@ function gen_rand_fn(name)
     return ""
 end
 
-function call_rand_fn(fn_log)
+function call_rand_fn(fn_log, banned_fns::Set{Symbol})
     potential_names = sort(names(Base)) # names are returned in a random order.
     potential_names = filter(checkable_name, potential_names)
-    potential_names = filter(x -> !banned_name(x), potential_names)
+    potential_names = filter(x -> !in(x, banned_fns), potential_names)
     fn_text = ""
     while fn_text == ""
         name = potential_names[rand(1:end)]
@@ -171,7 +184,7 @@ function bogus_displayable(fn_log)
     eval(parse(text))
 end
 
-function try_fns()
+function try_fns(banned_fns::Set{Symbol})
     srand(26)
     i = 0
     fn_log = open("log","w")
@@ -186,7 +199,7 @@ function try_fns()
             if (rand(1:100) == 1)
                 bogus_displayable(fn_log)
             else
-                call_rand_fn(fn_log)
+                call_rand_fn(fn_log, banned_fns)
             end
         catch err
             if is(err, ErrorException)
@@ -227,7 +240,11 @@ function generate_rand_strings(n::Int64)
     end
 end
 
-# generate_rand_strings(20)
+function fuzz_fns()
+    banned_fns = get_fn_exclusion_list("../../banned.txt")
+    try_fns(banned_fns)
+end
 
-try_fns()
+# generate_rand_strings(20)
+fuzz_fns()
 # try_displayable()
