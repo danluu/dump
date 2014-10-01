@@ -19,23 +19,6 @@ function get_fn_exclusion_list(fname)
     return banned
 end
 
-function banned_name(name)
-    return name == :touch || name == :edit || name == :download || name == :less ||
-    name == :symlink || name == :kill || name == :mkdir || name == :cp || name == :edit ||
-    name == :writedlm || name == :mv || name == :rm || name == :tmpdir ||
-    name == :mktmpdir || name == :cd || name == :mkpath || name == :evalfile ||
-    name == :ndigits || # issue #8266
-#    name == :displayable || # causes a hard to reproduce hang
-    name == :blas_set_num_threads || # issue #8329
-    name == :$ || name == :& || name == :(::) || # can't invoke fns that are also special unary operators
-    name == :binomial || # takes too long with a rand BigInt. TODO: make value depend on name
-    name == :^ || # issue #8286
-    name == :open || # sometimes creates files. TODO: only give it options that don't make files
-    name == :versioninfo || # uninteresting and produces a lot of spam
-    name == :bessely || # too slow unless arg sizes are limited
-    name == :sprandn # hang bug
-end
-
 function gen_rand_fn(name)    
     # Note that this won't work for functions that take no args. That seems ok since those 
     # are unlikely to crash julia or hang.
