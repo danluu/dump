@@ -57,4 +57,13 @@ function shrink_UTFstr_bug()
     close(f)
 end
 
-shrink_UTFstr_bug()
+# shrink_UTFstr_bug()
+
+# displayable produces a hard to reproduce segfault. How simple can a segfaulting case be?
+function shrink_displayable()
+    while true
+        displayable("wat")
+    end
+end
+
+shrink_displayable()

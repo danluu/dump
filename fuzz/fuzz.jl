@@ -21,7 +21,6 @@ function banned_name(name)
     name == :versioninfo || # uninteresting and produces a lot of spam
     name == :bessely || # too slow unless arg sizes are limited
     name == :sprandn # hang bug
-
 end
 
 function gen_rand_fn(name)    
@@ -43,7 +42,7 @@ function gen_rand_fn(name)
     return ""
 end
 
-function bogus(fn_log)
+function call_rand_fn(fn_log)
     potential_names = sort(names(Base)) # names are returned in a random order.
     potential_names = filter(checkable_name, potential_names)
     potential_names = filter(x -> !banned_name(x), potential_names)
@@ -165,8 +164,15 @@ function generate_rand_data(sig::Tuple)
     end
 end
 
-function try_bogus()
-    # srand(1)
+function bogus_displayable(fn_log)
+    text = gen_rand_fn(:displayable)
+    write(fn_log, text)
+    flush(fn_log)
+    eval(parse(text))
+end
+
+function try_fns()
+    srand(26)
     i = 0
     fn_log = open("log","w")
 #    (err_in, err_out) = redirect_stderr()
@@ -175,7 +181,13 @@ function try_bogus()
         i += 1
 #        i > 10000 && exit()
         try
-            bogus(fn_log)
+            # try to catch unreproducible displayable bug more quickly
+            # calling displayable by itself isn't sufficient.
+            if (rand(1:100) == 1)
+                bogus_displayable(fn_log)
+            else
+                call_rand_fn(fn_log)
+            end
         catch err
             if is(err, ErrorException)
                 exit()
@@ -217,5 +229,5 @@ end
 
 # generate_rand_strings(20)
 
-try_bogus()
+try_fns()
 # try_displayable()
