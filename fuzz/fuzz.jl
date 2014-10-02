@@ -37,8 +37,12 @@ function gen_rand_fn(name)
     methods_of_name = methods(eval(name))
 
     some_sig = get_rand_method(methods_of_name).sig
-    args = generate_rand_data(some_sig)        
-    return("$name($args) #$some_sig\n")
+    args = generate_rand_data(some_sig)
+    if args != ""
+        return("$name($args) #$some_sig\n")
+    else
+        return ""
+    end
 end
 
 function call_rand_fn(fn_log, banned_fns::Set{Symbol})
