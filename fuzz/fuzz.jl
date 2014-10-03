@@ -111,16 +111,16 @@ end
 function get_concrete_type(t::DataType)
     if length(subtypes(t)) == 0
         return t
-    elseif subtypes(t)[1] == t # some types are cyclic.
+    elseif length(subtypes(t)) == 1 && subtypes(t)[1] == t # some types are cyclic.
         return t
     else 
         return get_concrete_type(subtypes(t)[rand(1:end)])
     end
 end
 
-function generate_rand_data(big_t::DataType)
-    t = get_concrete_type(big_t)
-
+function generate_rand_data(t::DataType)
+    # First, try to generate data based on the type.
+    # If we can't and it's an abstract type, pick a random concrete type and try again.
     if t == String
         return rand_string(max_rand_string_len)
     elseif t == Char
@@ -142,15 +142,33 @@ function generate_rand_data(big_t::DataType)
         return string(rand(Int128))
     elseif t == BigInt
         return string("big(",rand(Int128),")")
+    elseif t == BigFloat
+        return string("big(",rand(Float64),")")
     elseif t == Bool
         return string(rand(0:1) == 0)
     elseif t == Float32
         return string(rand(Float32))
     elseif t == Number || t == FloatingPoint
         return string(rand(Float64))
+    elseif t == Function
+        return "x -> x" # TODO: generate a random function
+    elseif t == IntSet
+        # TODO: randomize
+        numbers = Array(Int, rand(1:128), 1)
+        num_str = join(numbers, ",")
+        return "Intset($num_str)"
+    elseif t == Regex
+        regex_str = rand_string(max_rand_string_len)
+        return "r\"$regex_str\""
     end
-    # print("# Don't know how to generate $t\n")
-    return ""
+
+    if length(subtypes(t)) > 0 && !(length(subtypes(t)) == 1 && subtypes(t)[1] == t)
+        return generate_rand_data(get_concrete_type(t))
+    else        
+        print("# Don't know how to generate $t\n")
+        return ""
+    end
+    assert(false)
 end
 
 function generate_rand_data(sig::Tuple)
