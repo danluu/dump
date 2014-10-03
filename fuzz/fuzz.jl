@@ -185,7 +185,6 @@ function bogus_displayable(fn_log)
 end
 
 function try_fns(banned_fns::Set{Symbol})
-    srand(26)
     i = 0
     fn_log = open("log","w")
 #    (err_in, err_out) = redirect_stderr()
@@ -217,6 +216,7 @@ end
 # A single call is never sufficient, but maybe we can build up some funny 
 # state with a lot of calls?
 function try_displayable()
+    srand(1)
     fn_log = open("log","w")
     while true
         try
@@ -240,11 +240,12 @@ function generate_rand_strings(n::Int64)
     end
 end
 
-function fuzz_fns()
+function fuzz_fns(args)
+    srand(int(args[1])) # rand seed is arg
     banned_fns = get_fn_exclusion_list("../../banned.txt")
     try_fns(banned_fns)
 end
 
 # generate_rand_strings(20)
-fuzz_fns()
+fuzz_fns(ARGS)
 # try_displayable()
