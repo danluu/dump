@@ -108,7 +108,17 @@ function rand_string(n::Integer)
     return string("\"",rand_string_raw(n),"\"")
 end
 
-function generate_rand_data(t::DataType)
+function get_concrete_type(t::DataType)
+    if length(subtypes(t)) == 0
+        return t
+    else
+        return get_concrete_type(subtypes(t)[rand(1:end)])
+    end
+end
+
+function generate_rand_data(big_t::DataType)
+    t = get_concrete_type(big_t)
+
     if t == String
         return rand_string(max_rand_string_len)
     elseif t == Char
@@ -137,7 +147,7 @@ function generate_rand_data(t::DataType)
     elseif t == Number || t == FloatingPoint
         return string(rand(Float64))
     end
-    # print("#Don't know how to generate $t\n")
+    # print("# Don't know how to generate $t\n")
     return ""
 end
 
