@@ -31,6 +31,7 @@ function get_rand_method(mt::MethodTable)
 end
 
 function gen_rand_fn(name)    
+    # println("gen_rand_fn $name")
     # Note that this won't work for functions that take no args. That seems ok since those 
     # are unlikely to crash julia or hang.
     args = ""
@@ -109,6 +110,7 @@ function rand_string(n::Integer)
 end
 
 function get_concrete_type(t::DataType)
+    # println("get_concrete_type $t")
     if length(subtypes(t)) == 0
         return t
     elseif length(subtypes(t)) == 1 && subtypes(t)[1] == t # some types are cyclic.
@@ -119,6 +121,7 @@ function get_concrete_type(t::DataType)
 end
 
 function generate_rand_data(t::DataType)
+    # println("generate_rand_data $t")
     # First, try to generate data based on the type.
     # If we can't and it's an abstract type, pick a random concrete type and try again.
     if t == String
@@ -152,11 +155,12 @@ function generate_rand_data(t::DataType)
         return string(rand(Float64))
     elseif t == Function
         return "x -> x" # TODO: generate a random function
-    elseif t == IntSet
-        # TODO: randomize
-        numbers = Array(Int, rand(1:128), 1)
-        num_str = join(numbers, ",")
-        return "Intset($num_str)"
+    # issue #8570
+    # elseif t == IntSet
+    #     # TODO: randomize array
+    #     numbers = Array(Int, rand(1:16), 1)
+    #     num_str = join(numbers, ",")
+    #     return "IntSet($num_str)"
     elseif t == Regex
         regex_str = rand_string(max_rand_string_len)
         return "r\"$regex_str\""
@@ -165,7 +169,7 @@ function generate_rand_data(t::DataType)
     if length(subtypes(t)) > 0 && !(length(subtypes(t)) == 1 && subtypes(t)[1] == t)
         return generate_rand_data(get_concrete_type(t))
     else        
-        print("# Don't know how to generate $t\n")
+        # print("# Don't know how to generate $t\n")
         return ""
     end
     assert(false)
