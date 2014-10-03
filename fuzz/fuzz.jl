@@ -111,7 +111,9 @@ end
 function get_concrete_type(t::DataType)
     if length(subtypes(t)) == 0
         return t
-    else
+    elseif subtypes(t)[1] == t # some types are cyclic.
+        return t
+    else 
         return get_concrete_type(subtypes(t)[rand(1:end)])
     end
 end
