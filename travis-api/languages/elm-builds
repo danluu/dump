@@ -1,0 +1,184 @@
+2014-10-01 02:45:38 #700 passed:     master Merge pull request #802 from Dandandan/master
+2014-09-27 03:23:20 #697 passed:     master Merge pull request #795 from Boshen/fix-color-documentation-links
+2014-09-25 13:22:11 #695 passed:     master Update instructions to match modern install/build process
+2014-09-23 18:36:06 #694 passed:     master Merge pull request #792 from jvoigtlaender/patch-1
+2014-09-22 18:37:01 #692 passed:     master Merge pull request #786 from JasonJAyalaP/patch-1
+2014-09-21 15:53:04 #691 passed:     master Merge branch 'stable'
+2014-09-21 15:37:56 #688 passed:     master Make a bit more consistent
+2014-09-21 13:37:02 #687 passed:     master Merge pull request #791 from Boshen/add-list-and-dict-tests
+2014-09-18 22:28:24 #685 passed:     master Merge pull request #790 from michaelbjames/master
+2014-09-14 19:13:52 #683 passed:     master Attempt to resolve #785, pointer-events being set to 'none' by accident
+2014-09-13 13:54:14 #681 passed:     master Fix #783, resolve scoping bug with shadowing in case patterns
+2014-09-12 09:48:03 #680 passed:     master Update to talk about (.) being replaced by (<<)
+2014-09-11 22:06:28 #679 passed:     master reorder things and add a section on style guides
+2014-09-11 19:45:10 #678 passed:     master Clean up the info a bit
+2014-09-11 19:05:25 #677 passed:     master Fix removal of hoverables and change pointerEvents to 'none' only when necessary
+2014-09-11 15:57:37 #676 passed:     master Add unit () to error message that lists valid port values
+2014-09-11 15:49:17 #675 passed:     master Support unit values flowing through ports
+2014-09-11 09:55:11 #674 passed:     master Fix #769, stop using infix ops that are not filled in properly
+2014-09-09 06:17:56 #673 passed:     master Fix #780, correct implementation of Keyboard.lastPressed
+2014-09-06 07:02:47 #672 passed:     master Temporary fix for elm-doc for the 0.13 release
+2014-09-05 13:31:48 #671 passed:     master Merge pull request #779 from michaelbjames/rename/swap
+2014-08-27 18:36:29 #669 passed:     master Fix #772, make case expression variable names safe
+2014-08-26 06:57:41 #667 passed:     master Merge pull request #767 from mgold/clarify_string_docs
+2014-08-25 11:57:24 #663 passed:     master Simplify setup code, trim lots of extra stuff.
+2014-08-25 07:20:18 #662 passed:     master Revert "Add back (.) to make transition smoother"
+2014-08-24 16:54:08 #661 passed:     master Fix compiler path in tests
+2014-08-24 15:06:58 #657 failed:     master cosmetic: name argument
+2014-08-24 12:22:45 #656 failed:     master Begin testing custom imports and exports
+2014-08-23 19:45:54 #655 passed:     master Filter exports only when we are trying to import from a module
+2014-08-23 18:34:13 #654 passed:     master Clean up to reflect latest facts
+2014-08-23 18:09:14 #653 passed:     master cosmetic: change indentation a bit
+2014-08-23 09:36:35 #652 passed:     master Merge pull request #765 from maxsnew/update-submodules
+2014-08-22 20:19:20 #650 failed:     master Quit using (.) in testing code
+2014-08-22 17:17:09 #649 failed:     master Revert "Implement "min", "max", and "clamp" in Elm"
+2014-08-22 17:03:42 #648 failed:     master Merge branch 'fun-comp'
+2014-08-22 04:49:02 #647 passed:     master Merge pull request #763 from andreywix/master
+2014-08-21 10:59:18 #645 passed:     master Merge pull request #761 from michaelbjames/master
+2014-08-21 10:47:39 #644 passed:     master Merge pull request #762 from maxsnew/cabal-dependency-bump
+2014-08-20 18:16:51 #640 passed:     master Merge pull request #759 from maxsnew/repl-fix
+2014-08-20 18:15:09 #639 passed:     master Look for static assets in compiler/ subdirectory
+2014-08-20 06:05:22 #635 passed:     master cosmetic: improve whitespace consistency
+2014-08-18 08:05:37 #633 passed:     master Merge pull request #755 from michaelbjames/bugfix/every
+2014-08-18 06:22:22 #630 passed:     master Fix #748, properly detect mouse up events
+2014-08-18 06:17:49 #629 passed:     master Get rid of nodeType variable
+2014-08-18 06:04:57 #628 passed:     master Stop truncating numbers
+2014-08-18 05:56:29 #627 passed:     master Better comments for new Debug functions
+2014-08-17 12:34:59 #625 passed:     master Fix #750, do a deeper copy for extra fields
+2014-08-15 06:19:48 #622 passed:     master Merge branch 'debugger'
+2014-08-14 10:46:31 #620 passed:     master Fix #734 regarding overlapping open imports
+2014-08-12 14:11:24 #612 passed:     master Provide a nicer error message when ELM_HOME is not found
+2014-08-12 08:04:36 #609 passed:     master style: conform to style of all other test suites
+2014-08-11 18:53:12 #604 passed:     master Stop depending on Basics
+2014-08-09 05:32:11 #594 passed:     master Merge pull request #737 from Xashili/fixAppend
+2014-08-08 19:14:16 #591 passed:     master Merge pull request #735 from Xashili/fixSlice
+2014-08-06 06:04:47 #578 passed:     master Merge pull request #726 from maxsnew/end-cabal-hell
+2014-08-04 11:52:24 #572 passed:     master Filter out dependencies used to make pandoc more stable
+2014-08-04 10:34:19 #571 failed:     master Merge branch 'markdown'
+2014-07-28 05:57:58 #541 errored:    master Fix opacity for toForm'd elements
+2014-07-28 05:36:21 #538 errored:    master cosmetic: whitespace in some variable definitions
+2014-07-28 05:29:03 #537 errored:    master cosmetic: improve indentation
+2014-07-25 10:18:17 #531 passed:     master Fix #630, correctly determine type of as-patterns
+2014-07-24 20:34:44 #528 passed:     master Fix #655, bad hsl values outside of unit circle
+2014-07-24 20:06:36 #527 passed:     master Fix #670, properly update drop down options
+2014-07-24 19:16:42 #526 passed:     master Fix #668, #672, and make link+customButton work
+2014-07-24 12:02:24 #524 passed:     master Be stingier with default Maybe imports
+2014-07-24 09:39:59 #520 failed:     master Fix #673, fix rendering with multiple embedded elements
+2014-07-24 09:00:17 #518 failed:     master Fix #678, fix behavior of keysDown on window blur
+2014-07-24 05:41:23 #514 failed:     master Merge pull request #666 from Dandandan/select-layout
+2014-07-23 10:38:20 #510 failed:     master Add Maybe.map
+2014-07-23 10:26:49 #508 passed:     master Augment the List library
+2014-07-23 05:59:37 #501 passed:     master docs: correct the definition of asText
+2014-07-22 06:24:09 #497 failed:     master Drop higher kinded polymorphism (hkp) for now
+2014-07-18 08:41:26 #490 passed:     master Merge pull request #690 from maxsnew/test-fix
+2014-07-15 09:25:24 #478 passed:     master Merge pull request #685 from alexander-b/linescom
+2014-07-11 09:46:51 #473 passed:     master Add note about --bundle-runtime flag
+2014-07-11 07:41:39 #471 passed:     master Add note about Debug.crash
+2014-07-10 09:06:00 #470 passed:     master Improve docs for (.) a bit
+2014-07-09 07:46:09 #469 passed:     master Add note about new keys
+2014-06-17 12:51:00 #454 passed:     master Fix #659, prefer local types and patterns
+2014-06-15 09:45:39 #452 passed:     master Properly import the Text type by default
+2014-06-15 08:13:37 #451 passed:     master Move all infix ops out of elm to get code gen right
+2014-06-13 05:53:48 #450 passed:     master Merge branch 'canonicalize'
+2014-06-12 14:24:39 #446 passed:     master Add notes about 0.12.3
+2014-06-12 07:58:03 #444 passed:     master Add Debug.crash to help with developing large functions
+2014-06-11 09:27:52 #441 passed:     master Merge pull request #651 from maxsnew/char
+2014-06-09 12:35:47 #436 passed:     master Merge pull request #650 from Xashili/patch-2
+2014-06-09 12:29:32 #435 passed:     master Merge pull request #649 from Xashili/patch-1
+2014-06-04 21:52:49 #409 passed:     master Merge pull request #641 from alexander-b/gitignore
+2014-05-30 12:27:00 #398 passed:     master Merge pull request #636 from Apanatshka/websocket-string-fix
+2014-05-28 16:08:49 #392 passed:     master Merge pull request #634 from mgold/fix-evancz-link
+2014-05-28 13:28:50 #390 passed:     master Merge pull request #633 from Apanatshka/patch-1
+2014-05-22 18:07:04 #385 passed:     master Add zipN and zipWithN for N in {3,4,5}
+2014-05-19 18:50:01 #382 passed:     master By popular demand, name shader blocks glsl
+2014-05-19 18:13:04 #381 passed:     master Put minimum bound on language-glsl
+2014-05-15 22:19:11 #374 passed:     master Bump version number
+2014-05-15 00:23:17 #373 passed:     master Merge pull request #631 from maxsnew/cabal
+2014-05-13 23:26:43 #371 errored:    master Add a function to read imports
+2014-05-12 18:35:53 #370 passed:     master Merge pull request #629 from maxsnew/cabal
+2014-05-11 14:12:38 #367 errored:    master Merge branch 'webgl'
+2014-05-07 11:35:37 #362 errored:    master Revert "Add GHC 7.8 testing to Travis config"
+2014-05-06 17:50:29 #358 errored:    master Merge branch 'pr/622'
+2014-05-06 14:31:27 #353 errored:    master Merge pull request #619 from maxsnew/eq
+2014-05-02 14:16:13 #338 passed:     master Merge pull request #611 from maxsnew/travis
+2014-05-02 05:43:49 #335 errored:    master Merge pull request #607 from maxsnew/travis
+2014-05-02 05:16:17 #334 errored:    master Merge branch 'master' of https://github.com/elm-lang/Elm
+2014-05-02 01:02:06 #332 passed:     master Revert "Attempt at adding ghc 7.8 Travis testing"
+2014-05-01 14:52:16 #329 passed:     master Merge branch 'pr/606'
+2014-04-30 21:00:16 #319 passed:     master Get zero-indexing right in get examples
+2014-04-30 20:14:22 #318 passed:     master Make meaning of Array.slice match String.slice
+2014-04-30 18:57:02 #317 passed:     master Fix silly type error with Array tests
+2014-04-30 18:38:37 #316 failed:     master Merge branch 'pr/603'
+2014-04-29 20:41:09 #313 passed:     master Merge pull request #602 from juhp/patch-1
+2014-04-29 13:35:26 #310 passed:     master resolve #538, correct error for appendable
+2014-04-29 13:25:58 #309 passed:     master Make error message a bit better
+2014-04-28 15:54:34 #305 passed:     master Merge pull request #598 from maxsnew/tojson
+2014-04-28 11:29:44 #304 passed:     master Merge pull request #599 from maxsnew/test-suites
+2014-04-28 01:56:44 #301 passed:     master Add Array library
+2014-04-28 00:58:34 #299 passed:     master Relax version requirements in tests
+2014-04-27 15:05:00 #297 passed:     master Switch standard library to the @elm-lang repo
+2014-04-27 12:55:10 #295 passed:     master Bump version numbers
+2014-04-27 10:52:50 #293 passed:     master Update to include recent improvements
+2014-04-25 03:08:05 #291 passed:     master Add newline to make docs look nice
+2014-04-25 02:54:58 #289 passed:     master Merge pull request #595 from maxsnew/list-funs
+2014-04-23 11:00:17 #285 passed:     master Merge pull request #593 from Xashili/arrayPerf
+2014-04-18 19:27:50 #279 passed:     master Move files over to elm-server repo
+2014-04-18 16:44:37 #278 passed:     master Fix circular dependency in core libraries
+2014-04-18 13:58:40 #277 failed:     master Cosmetic, make indentation consistent
+2014-04-17 17:28:46 #275 failed:     master Make lookup names to be consistent with Array
+2014-04-16 18:42:48 #272 passed:     master Add a filter function
+2014-04-16 17:56:13 #271 passed:     master Merge pull request #586 from hdgarrood/dict-filter
+2014-04-16 17:15:28 #270 passed:     master Move to commits that ignore build artifacts
+2014-04-15 18:10:31 #263 passed:     master Merge pull request #585 from Xashili/array
+2014-04-15 00:53:56 #258 passed:     master Ignore node_modules/
+2014-04-15 00:23:27 #257 passed:     master Merge branch 'array'
+2014-04-13 12:13:37 #248 passed:     master Merge pull request #581 from klangner/master
+2014-04-08 12:17:21 #240 passed:     master Update to match new branch structure, fixes #574
+2014-04-05 23:32:43 #235 passed:     master Merge pull request #573 from mgold/patch-1
+2014-04-05 18:53:38 #232 passed:     master Fix issue, text did not always capture clicks
+2014-04-05 18:48:27 #231 passed:     master Fix issue in which links did not detect hovers
+2014-04-05 11:12:10 #230 passed:     master Merge pull request #572 from maxsnew/binary-cabal
+2014-04-05 03:51:37 #228 passed:     master Fix weird hover issue
+2014-04-04 02:56:21 #223 passed:     master Fix #563
+2014-04-03 22:19:24 #222 passed:     master Merge pull request #564 from maxsnew/fix-test
+2014-04-03 14:49:36 #220 failed:     master Merge pull request #560 from pseudonom/master
+2014-04-03 14:24:52 #218 failed:     master Merge pull request #551 from maxsnew/test
+2014-04-03 14:02:01 #217 passed:     master Merge pull request #561 from maxsnew/remove-array
+2014-04-03 05:30:00 #214 passed:     master Remove Array for now, migrate to vector branch
+2014-04-03 05:22:45 #212 passed:     master Merge pull request #559 from pseudonom/master
+2014-04-03 02:51:07 #210 passed:     master Resolve issue with getting negative indices
+2014-04-03 01:46:04 #209 passed:     master Work on docs and simplify/normalize API
+2014-04-02 22:49:09 #208 passed:     master Fix #557
+2014-04-02 13:46:59 #207 passed:     master Fix issue #271
+2014-04-01 12:44:23 #203 passed:     master Resolve documentation problems reported in #550
+2014-04-01 12:32:26 #202 passed:     master Fix issue #549
+2014-04-01 12:22:11 #201 passed:     master Merge pull request #552 from maxsnew/split
+2014-04-01 00:25:48 #195 passed:     master Merge pull request #547 from johnpmayer/master
+2014-03-31 18:29:03 #191 passed:     master Merge pull request #546 from Xashili/array
+2014-03-31 17:58:26 #188 passed:     master Stop relying on Native.JavaScript which no longer exists
+2014-03-31 14:48:16 #187 passed:     master Cosmetic
+2014-03-31 14:11:24 #186 passed:     master Merge branch 'master' of https://github.com/elm-lang/Elm
+2014-03-31 13:48:35 #185 passed:     master Merge pull request #542 from Xashili/array
+2014-03-27 22:13:44 #180 passed:     master Update to point to the right repos
+2014-03-27 22:10:44 #179 passed:     master Update to match changes to Json/JS libraries and to ports
+2014-03-27 21:13:21 #178 passed:     master Merge branch 'dev'
+2014-03-25 17:02:04 #167 passed:     master Actually show docs for Debug.log
+2014-03-25 03:16:47 #166 passed:     master Merge pull request #534 from yogsototh/patch-1
+2014-03-23 20:11:04 #164 passed:     master Add a way to specify the runtime location
+2014-03-23 19:33:31 #162 passed:     master Get rid of broken links in docs
+2014-03-23 19:10:18 #161 passed:     master Use renamed change log
+2014-03-23 17:40:06 #160 passed:     master Fix #532, correct behavior of click handlers
+2014-03-22 00:23:25 #158 passed:     master Merge pull request #531 from maxsnew/test-quickcheck2-error
+2014-03-21 19:15:45 #156 errored:    master Update version number and description
+2014-03-21 18:55:35 #155 errored:    master Merge branch 'dev'
+2014-03-21 18:48:24 #152 errored:    master Merge pull request #529 from maxsnew/2014
+2014-03-21 17:38:03 #150 errored:    master Merge branch 'dev'
+2014-02-19 07:06:17 #93 passed:      master Merge pull request #503 from pseudonom/patch-1
+2014-01-23 11:59:10 #39 passed:      master Merge pull request #473 from maxsnew/window
+2014-01-21 07:05:19 #35 passed:      master Update to address problems reported in #457
+2014-01-20 17:13:43 #33 passed:      master Get rid of extra word
+2014-01-20 17:07:55 #31 passed:      master Bump to 0.11
+2014-01-20 16:48:09 #30 passed:      master Move documentation to make haddock happy
+2014-01-20 15:59:25 #29 passed:      master Bump version number
+2014-01-20 15:27:21 #27 passed:      master Merge branch 'dev'
+2014-01-18 13:47:00 #4 passed:       master Merge branch 'dev'

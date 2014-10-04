@@ -1,0 +1,93 @@
+2014-09-03 14:58:47 #141 passed:     master Initial number from bench-dmm. Pretty slow right now.
+2014-08-05 14:46:58 #140 passed:     master Removing commented out code.
+2014-08-05 14:10:37 #139 failed:     master Added verbosity levels. Use -vv to get the old behavior.
+2014-07-14 13:51:39 #138 passed:     master Dump out a few of the bodies and forces to see if the numbers are reasonable.
+2014-07-14 13:13:20 #137 passed:     master Attempting to bump up the region sized used for benchmarks.
+2014-06-11 03:17:49 #135 passed:     master Commenting out the rest of the raytrace benchmark in scripts.
+2014-06-11 03:04:11 #134 failed:     master Don't include bench-raytrace.kfc in build-benchmarks.
+2014-06-11 02:16:57 #133 failed:     master Added more READMEs.
+2014-06-10 23:33:10 #132 passed:     master Run and graph raytrace benchmark.
+2014-06-10 16:24:20 #131 failed:     master Added NBody benchmark.
+2014-06-10 12:46:56 #130 passed:     master Added a README for the frontend.
+2014-06-10 12:21:58 #129 passed:     master Expanding the readme file.
+2014-06-09 14:47:39 #128 passed:     master More teletype font!
+2014-06-09 14:40:12 #127 passed:     master Moving the build status icon.
+2014-06-09 14:40:34 #126 passed:     master Adding Travis Build Status Icon.
+2014-06-09 14:20:05 #125 passed:     master Cleaning out some cruft and improving the README.
+2014-06-02 11:09:22 #124 passed:     master More informative names on kernels.
+2014-05-16 14:12:31 #123 passed:     master Lowering the stride length in reduce, since Apple's OpenCL for CPUs struggles witht his.
+2014-05-07 13:24:12 #122 passed:     master Use lazy string concatenation for better time and memory behavior.
+2014-05-05 16:15:47 #121 failed:     master Further memory reduction.
+2014-05-05 16:03:57 #120 failed:     master Splitting up languages.scm, which leads to significantly less memory usage.
+2014-04-23 12:52:08 #116 failed:     master Add flush-stdout.
+2014-04-22 17:18:49 #115 failed:     master Skip 0-length reads, since these are technically illegal according to OpenCL.
+2014-04-22 16:51:40 #114 failed:     master Adding a #define so that SVNu64 gets defined by inttypes.h
+2014-04-22 15:47:09 #113 failed:     master Switching HSBencher to HTTPs for Travis.
+2014-04-21 16:58:50 #110 errored:    master Added reading of uint64_t integers.
+2014-04-17 10:38:38 #108 errored:    master First attempt at updating for hsbencher 1.8
+2014-03-31 13:20:52 #107 errored:    master Add a missing u64 case.
+2014-03-27 17:53:39 #106 errored:    master Adding enough file I/O support to read integers.
+2014-03-21 16:41:59 #86 passed:      master Enable compilation when using full Chez Scheme.
+2014-02-25 16:55:01 #78 passed:      master Enough of this nonsense. xfailing css-selectors.
+2014-02-25 16:18:40 #77 failed:      master ...and another paren matching mistake.
+2014-02-25 16:14:34 #76 failed:      master Fixing paren-matching mistake.
+2014-02-25 16:00:17 #75 failed:      master Fixing a type error in css-selectors.kfc
+2014-02-25 15:49:25 #74 failed:      master Fixing installation scripts.
+2014-02-25 15:36:16 #73 errored:     master Add a few more harlani commands.
+2014-02-25 15:29:56 #72 errored:     master Adjust Travis scripts to install only one scheme, and use parallel builds for vicare.
+2014-02-25 15:27:11 #71 failed:      master Add file and line number to OpenCL failures.
+2014-02-25 15:07:05 #70 failed:      master Follow the OpenCL spec better.
+2014-02-25 14:28:26 #69 failed:      master Display failure logs by default when running make check.
+2014-02-25 12:25:14 #68 failed:      master Starting on a CSS Selector Matching example.
+2014-02-25 10:11:46 #66 failed:      master Be more robust in the face of multiple OpenCL platforms.
+2014-02-24 16:30:00 #63 failed:      master rewrote remove-danger in nanopass.
+2014-02-19 15:32:26 #60 failed:      master Added a color-based and a distance-based bfs.
+2014-02-18 23:50:52 #58 failed:      master Report more accurate timings on BFS.
+2014-02-18 15:34:52 #55 passed:      master Add support for another OpenCL error code.
+2014-02-18 12:09:38 #54 passed:      master Only report the minimum region size once when controlled by an environment variable.
+2014-02-18 12:01:10 #53 passed:      master Let BFS accept command line arguments for the graph size.
+2014-02-18 11:50:44 #52 passed:      master Updating elegant weapons to support unsigned integer literals.
+2014-01-23 13:54:02 #51 passed:      master Use .dylib for shared libraries on Mac. Fixes #104.
+2014-01-23 11:18:53 #50 passed:      master harlani now uses rlwrap if available. Fixes #123.
+2014-01-22 17:32:57 #49 passed:      master Make harlani path-independent. Fixes #117.
+2014-01-22 16:55:17 #48 passed:      master Use #ifndef instead of '#pramga once'. Fixes #120.
+2014-01-16 16:00:29 #47 passed:      master Seriously turn down the let lifting so we get correct results on mandelbrot.kfc again.
+2014-01-16 10:50:47 #46 passed:      master HARLAN_DEVICE is now case-insensitive, and it reports an error for invalid values. Fixes #115.
+2013-12-31 16:58:15 #45 passed:      master Add get-environment-variable. Fixes #100.
+2013-12-23 20:02:24 #44 passed:      master Update README.md
+2013-12-19 18:38:11 #43 passed:      master Added a string to number parser written purely in Harlan, but it's commented out because it crashes OpenCL.
+2013-12-19 17:03:48 #42 passed:      master Move int->float and float->int into the library.
+2013-12-19 13:02:09 #41 passed:      master Added command-line builtin. Fixes #101.
+2013-12-19 12:36:09 #40 passed:      master main is now in the runtime library and Harlan programs instead implement harlan_main.
+2013-12-17 17:58:14 #39 passed:      master Use new random library in bench-bfs.
+2013-12-17 14:31:43 #38 passed:      master Report more precise floating point values.
+2013-12-17 14:02:44 #37 passed:      master Better reseeding of the random number generator.
+2013-12-17 12:16:10 #36 passed:      master Add bitwise shifting operators.
+2013-12-13 13:17:44 #35 passed:      master Modernizing BFS.
+2013-12-10 15:56:56 #34 passed:      master Report OpenCL version as well.
+2013-12-09 23:34:21 #33 passed:      master Report OpenCL platform information too.
+2013-12-09 17:43:54 #32 passed:      master More language pruning.
+2013-12-09 17:25:55 #31 failed:      master Comment out uglify-vectors-new, since it uses a now nonexistant language.
+2013-12-09 15:37:59 #30 failed:      master We aren't using M7.2 at all, so no point spending time macro expanding it.
+2013-12-09 15:38:43 #29 failed:      master Pruning the languages slightly.
+2013-12-06 12:09:50 #28 failed:      master Tell Travis to test both Vicare and Petite.
+2013-12-06 00:21:02 #23 failed:      master Save test output to stderr as well.
+2013-12-05 13:01:16 #20 failed:      master Added a test case for issue #56. This isn't quite sufficient to expose the bug, but it's a start.
+2013-12-05 12:45:54 #19 failed:      master Box complex kernel arguments. Fixes #105, fixes #109.
+2013-12-05 10:30:38 #18 failed:      master Pruning parsers to hopefully reduce memory usage.
+2013-12-04 16:02:19 #17 failed:      master Added another nanopass language to put remove-complex-kernel-args before lower-vectors (#105)
+2013-11-27 19:01:26 #16 passed:      master Travis doesn't actually have GPUs, so don't try to use them.
+2013-11-27 18:57:12 #15 failed:      master Test both CPU and GPU in Travis.
+2013-11-27 18:49:19 #14 passed:      master The stack actually lives in the private address space.
+2013-11-27 18:36:20 #13 failed:      master Use __local pointers into the stack. Fixes #108
+2013-11-27 17:25:13 #12 failed:      master Another attempt at making Travis CI work (#107)
+2013-11-27 17:15:24 #11 failed:      master Rephrasing typedef to try to make this work on Travis CI
+2013-11-27 16:52:19 #10 failed:      master Update elegant weapons to put __global before the type name. (Issue #107)
+2013-11-27 16:37:22 #9 failed:       master Region variable passing is fixed, so this test works now.
+2013-11-27 16:33:28 #8 failed:       master Match caller and callee regions correctly. This avoids errors saying a function needed 4 parameters but only got 3, for example.
+2013-10-14 17:07:33 #6 failed:       master Following the OpenCL standard more closely for clGetDeviceIDs.
+2013-10-14 16:44:52 #5 failed:       master Add a new error reporting macro to get better reporting when OpenCL calls fail in the runtime.
+2013-10-14 16:13:10 #4 failed:       master Add a recursive tag to tests that use recursion in kernels so we can skip them to avoid locking up the machine on less robust GPUs.
+2013-10-11 17:00:30 #3 failed:       master Oops, also forgot the Travis CI support files.
+2013-10-11 16:50:37 #2 errored:      master Oops, we need to  first.
+2013-10-11 16:45:41 #1 errored:      master Enabling Travis CI
