@@ -28,6 +28,9 @@ readlines # defaults to STDIN, which will cause the fuzzer to hang
 << # often slow with large shifts
 produce # will hang if called directly
 poll_fd
+poll_file
 c_malloc
+c_calloc
+c_realloc
 sleep
 addprocs # TODO: enable this in a limited fashion.
