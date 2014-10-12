@@ -2,7 +2,7 @@
 #include "wat3.h"
 
 void wat(int* mutable) {
-  mutable += 1;
+  *mutable += 1;
 }
 
 void wat2(int* mutable) {
@@ -18,4 +18,6 @@ int main() {
   printf("%i\n", immutable);
   wat3((int*) &immutable);
   printf("%i\n", immutable);
+
+  return 0;
 }
