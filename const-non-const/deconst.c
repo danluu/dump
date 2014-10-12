@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void wat(int* mutable) {
-  mutable += 1;
+  *mutable += 1;
 }
 
 void wat2(int* mutable) {
