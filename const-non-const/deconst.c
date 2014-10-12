@@ -15,4 +15,6 @@ int main() {
   printf("%i\n", immutable);
   wat2((int*) &immutable);
   printf("%i\n", immutable);
+
+  return 0;
 }
