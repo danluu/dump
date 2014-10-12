@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "wat3.h"
 
 void wat(int* mutable) {
   mutable += 1;
@@ -14,5 +15,7 @@ int main() {
   wat((int*) &immutable);
   printf("%i\n", immutable);
   wat2((int*) &immutable);
+  printf("%i\n", immutable);
+  wat3((int*) &immutable);
   printf("%i\n", immutable);
 }
