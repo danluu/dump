@@ -5,6 +5,8 @@ import Window
 mario = { x=0, y=500, vx=0, vy=0, dir="right" }
 
 platform = { xmin=-250, xmax=200, y = 250 }
+platform2 = { xmin=0, xmax=400, y = 100 }
+allPlatforms = [platform, platform2]
 
 near m platform = m.x < platform.xmax && m.x > platform.xmin
 throughPlatform t m p = (m.y <= p.y && m.y - t*m.vy >= p.y) &&
