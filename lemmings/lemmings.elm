@@ -7,12 +7,15 @@ mario = { x=0, y=500, vx=0, vy=0, dir="right" }
 platform = { xmin=-250, xmax=200, y = 250 }
 
 near m platform = m.x < platform.xmax && m.x > platform.xmin
+throughPlatform t m p = (m.y <= p.y && m.y - t*m.vy >= p.y) &&
+  near m p
+onPlatform m p = m.y == p.y && near m platform
+onSurface m = onPlatform m platform || m.y == 0
 
 -- UPDATE -- ("m" is for Mario)
 jump {y} m = if y > 0 && m.y == 0 then { m | vy <- 5 } else m
 gravity t m = 
-  if ((m.y <= platform.y && m.y - t*m.vy >= platform.y) && 
-    near m platform)
+  if throughPlatform t m platform
     then {m | vy <- 0, y <- platform.y}
   else if m.y <= 0
     then {m | vy <- 0, y <- 0}
@@ -20,7 +23,7 @@ gravity t m =
     { m | vy <- m.vy - t/4 }
 physics t m = { m | x <- m.x + t*m.vx , y <- max 0 (m.y + t*m.vy) }
 walk {x} m = 
-  if m.vx == 0 && (m.y == 0 || (m.y == platform.y && near m platform))
+  if m.vx == 0 && onSurface m
     then { m | vx <- 2}
   else if m.x > 300 && m.y == 0
     then { m | vx <- -2}
