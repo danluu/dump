@@ -8,8 +8,10 @@ mario1:Lemming
 mario1 = { x=20, y=900, vx=0, vy=0, dir="right", onSurface=False }
 mario2:Lemming
 mario2 = { x=60, y=900, vx=0, vy=0, dir="right", onSurface=False }
+mario3:Lemming
+mario3 = { x=100, y=900, vx=0, vy=0, dir="right", onSurface=False }
 allMarios: [Lemming]
-allMarios = [mario1] --, mario2]
+allMarios = [mario1, mario2, mario3]
 
 type Platform = {xmin:Int, xmax:Int, ymin:Int, ymax:Int}
 platform0:Platform
@@ -99,12 +101,12 @@ renderMario (w',h') mario =
   |> move ((toFloat mario.x)/1000 * w' - w'/2, ((toFloat mario.y)/1000 * h') + 14 - h'/2)  
   
 
-render (w',h') mario =
+render (w',h') marios =
   let (w,h) = (toFloat w', toFloat h')
   in collage w' h'
       ([ rect w h  |> filled (rgb 174 238 238)
-      , renderMario (w, h) mario
-      ] ++ (List.map (renderPlatform (w,h)) allPlatforms))
+      ] ++ (List.map (renderPlatform (w,h)) allPlatforms)
+      ++ (List.map (renderMario (w,h)) marios))
 
 -- MARIO
 input = let delta = lift (\t -> t/20) (fps 60)
