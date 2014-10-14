@@ -1,28 +1,31 @@
 import Keyboard
 import Window
 import List
+import Mouse
 
 -- MODEL
 type Lemming = {x:Int, y:Int, vx:Float, vy:Float, dir:String, onSurface:Bool}
 mario1:Lemming
-mario1 = { x=20, y=900, vx=0, vy=0, dir="right", onSurface=False }
+mario1 = { x=800, y=1050, vx=0, vy=0, dir="left", onSurface=False }
 mario2:Lemming
-mario2 = { x=60, y=900, vx=0, vy=0, dir="right", onSurface=False }
+mario2 = { x=840, y=1050, vx=0, vy=0, dir="left", onSurface=False }
 mario3:Lemming
-mario3 = { x=100, y=900, vx=0, vy=0, dir="right", onSurface=False }
+mario3 = { x=880, y=1050, vx=0, vy=0, dir="left", onSurface=False }
+mario4 = { x=920, y=1050, vx=0, vy=0, dir="left", onSurface=False }
 allMarios: [Lemming]
-allMarios = [mario1, mario2, mario3]
+allMarios = [mario1, mario2, mario3, mario4]
 
 type Platform = {xmin:Int, xmax:Int, ymin:Int, ymax:Int}
 platform0:Platform
 -- Ground extends past edge to make sure we don't fall off if there's lag
-platform0 = { xmin=-1000, xmax=2000, ymin = 0, ymax = 50 }
+platform0 = { xmin=-1000, xmax=2000, ymin=0, ymax=50 }
 platform1:Platform
-platform1 = { xmin=100, xmax=2000, ymin = 200, ymax = 250 }
+platform1 = { xmin=100, xmax=2000, ymin=200, ymax=250 }
 platform2:Platform
 platform2 = { xmin=0, xmax=400, ymin = 300, ymax = 315 }
+platform10 = { xmin=500, xmax=2000, ymin=1010, ymax=1040}
 allPlatforms: [Platform]
-allPlatforms = [platform0, platform1, platform2]
+allPlatforms = [platform0, platform1, platform2, platform10]
 
 near: Lemming -> Platform -> Bool
 near m platform = m.x < platform.xmax && m.x > platform.xmin
@@ -51,6 +54,7 @@ hitPlatform t m ps =
 allGravity: Float -> [Lemming] -> [Lemming]
 allGravity t ms = List.map (gravity t) ms
 
+-- Fall unless on a surface
 gravity: Float -> Lemming -> Lemming
 gravity t m = 
   case hitPlatform t m allPlatforms of
@@ -61,15 +65,17 @@ gravity t m =
 allPhysics: Float -> [Lemming] -> [Lemming]
 allPhysics t ms = List.map (physics t) ms
 
+-- Add velocity to position
 physics: Float -> Lemming -> Lemming
 physics t m = { m | x <- m.x + (round (t*m.vx)) , y <- max 0 (m.y + (round (t*m.vy))) }
 
 
-allWalk: [Lemming] -> [Lemming]
-allWalk ms = List.map walk ms
+allWalk: a -> [Lemming] -> [Lemming]
+allWalk mouse ms = List.map (walk mouse) ms
 
-walk: Lemming -> Lemming
-walk m = 
+-- Set velocity when on surface
+walk: a -> Lemming -> Lemming
+walk mouse m = 
   if m.vx == 0 && m.onSurface
     then { m | vx <- 2, dir <- "right"}
   else if m.x > 990 && m.onSurface
@@ -80,7 +86,7 @@ walk m =
     m
 
 step: (Float, a) -> [Lemming] -> [Lemming]
-step (dt, keys) = allGravity dt >> allWalk >> allPhysics dt
+step (dt, mouse) = allGravity dt >> allWalk mouse >> allPhysics dt
 
 
 -- DISPLAY
@@ -110,6 +116,6 @@ render (w',h') marios =
 
 -- MARIO
 input = let delta = lift (\t -> t/20) (fps 60)
-        in  sampleOn delta (lift2 (,) delta Keyboard.arrows)
+        in  sampleOn delta (lift2 (,) delta Mouse.position)
 
 main = lift2 render Window.dimensions (foldp step allMarios input)
