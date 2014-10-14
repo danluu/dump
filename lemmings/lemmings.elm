@@ -1,5 +1,6 @@
 import Keyboard
 import Window
+import List
 
 -- MODEL
 type Lemming = {x:Int, y:Int, vx:Float, vy:Float, dir:String, onSurface:Bool}
@@ -7,6 +8,7 @@ mario1:Lemming
 mario1 = { x=20, y=900, vx=0, vy=0, dir="right", onSurface=False }
 mario2:Lemming
 mario2 = { x=60, y=900, vx=0, vy=0, dir="right", onSurface=False }
+allMarios: [Lemming]
 allMarios = [mario1, mario2]
 
 type Platform = {xmin:Int, xmax:Int, ymin:Int, ymax:Int}
@@ -21,9 +23,6 @@ allPlatforms = [platform0, platform1, platform2]
 
 near: Lemming -> Platform -> Bool
 near m platform = m.x < platform.xmax && m.x > platform.xmin
-
---centerPlatform: Platform -> (Float,Float)
---centerPlatform {xmin, xmax, ymin, ymax} = (toFloat(xmin + (xmax - xmin)/2), toFloat(ymin + (ymax - ymin)/2))
 
 centerPlatform: Platform -> (Int, Int)
 centerPlatform {xmin, xmax, ymin, ymax} = 
@@ -46,6 +45,9 @@ hitPlatform t m ps =
         hitPlatform t m shortnamesarebad
 
 -- UPDATE -- ("m" is for Mario)
+allGravity: Float -> [Lemming] -> [Lemming]
+allGravity t ms = List.map (gravity t) ms
+
 gravity: Float -> Lemming -> Lemming
 gravity t m = 
   case hitPlatform t m allPlatforms of
@@ -53,9 +55,15 @@ gravity t m =
     Nothing -> { m | vy <- m.vy - t/4, onSurface <- False }
   
  
-    
+allPhysics: Float -> [Lemming] -> [Lemming]
+allPhysics t ms = List.map (physics t) ms
+
 physics: Float -> Lemming -> Lemming
 physics t m = { m | x <- m.x + (round (t*m.vx)) , y <- max 0 (m.y + (round (t*m.vy))) }
+
+
+allWalk: [Lemming] -> [Lemming]
+allWalk ms = List.map walk ms
 
 walk: Lemming -> Lemming
 walk m = 
@@ -68,7 +76,7 @@ walk m =
   else
     m
 
-step (dt, keys) = gravity dt >> walk >> physics dt
+step (dt, keys) = allGravity dt >> allWalk >> allPhysics dt
 
 
 -- DISPLAY
@@ -100,4 +108,4 @@ render (w',h') mario =
 input = let delta = lift (\t -> t/20) (fps 60)
         in  sampleOn delta (lift2 (,) delta Keyboard.arrows)
 
-main = lift2 render Window.dimensions foldp step allMarios input
+main = lift2 render Window.dimensions (foldp step allMarios input)
