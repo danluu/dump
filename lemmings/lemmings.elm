@@ -9,7 +9,7 @@ mario1 = { x=20, y=900, vx=0, vy=0, dir="right", onSurface=False }
 mario2:Lemming
 mario2 = { x=60, y=900, vx=0, vy=0, dir="right", onSurface=False }
 allMarios: [Lemming]
-allMarios = [mario1, mario2]
+allMarios = [mario1] --, mario2]
 
 type Platform = {xmin:Int, xmax:Int, ymin:Int, ymax:Int}
 platform0:Platform
@@ -19,6 +19,7 @@ platform1:Platform
 platform1 = { xmin=100, xmax=2000, ymin = 200, ymax = 250 }
 platform2:Platform
 platform2 = { xmin=0, xmax=400, ymin = 300, ymax = 315 }
+allPlatforms: [Platform]
 allPlatforms = [platform0, platform1, platform2]
 
 near: Lemming -> Platform -> Bool
@@ -76,6 +77,7 @@ walk m =
   else
     m
 
+step: (Float, a) -> [Lemming] -> [Lemming]
 step (dt, keys) = allGravity dt >> allWalk >> allPhysics dt
 
 
@@ -102,7 +104,7 @@ render (w',h') mario =
   in collage w' h'
       ([ rect w h  |> filled (rgb 174 238 238)
       , renderMario (w, h) mario
-      ] ++ (map (renderPlatform (w,h)) allPlatforms))
+      ] ++ (List.map (renderPlatform (w,h)) allPlatforms))
 
 -- MARIO
 input = let delta = lift (\t -> t/20) (fps 60)
