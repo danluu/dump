@@ -86,7 +86,8 @@ walk mouse m =
     m
 
 -- convert from mouse coordinate system to our reference coordinate system
-mouseToReference (x,y) (w,h) = (x, y-h)
+mouseToReference (x,y) (w,h) = (((toFloat x) / (toFloat w)) * 1000 ,
+  (((toFloat y) - (toFloat h)) / (toFloat h)) * 1000)
 
 step: (Float, a) -> [Lemming] -> [Lemming]
 step (dt, mouse) = allGravity dt >> allWalk mouse >> allPhysics dt
