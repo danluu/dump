@@ -18,10 +18,10 @@ function grab_pop(fname::String)
     #     time_lines)
     times::Array{Int} = 
     map(l -> 
-        int(match(time_match, l).captures[1]) / 1000,
+        iround(int(match(time_match, l).captures[1]) / (1000 * 60)),
         time_lines)
     
-    df = DataFrame(x = times, y=data, label="Players")    
+    df = DataFrame(x=times, y=data, label="Players")    
 end
 
 # function plot_junk(data::Array{Int})
@@ -34,6 +34,68 @@ end
 
 #     plot(x=1:length(smdata), y=smdata, Geom.line, 
 #          layer(Geom.smooth, Theme(default_color=color("red"))))
+
+#     plot(x=1:length(sdata), y=sdata, Geom.line, layer(Geom.smooth, Theme(default_color=color("red"))))
+
 # end
 
 # grab_pop("raw.data")
+
+
+function heinous_bug_workaround(df::DataFrame)
+    start_time = df[1][1]
+    end_time = df[1][end]
+    
+    len = end_time - start_time + 1
+    arr = Array(Int8, len)
+    for i in 1:size(df,1)-1
+        idx = df[1][i] - start_time + 1
+        idx_n = df[1][i+1] - start_time + 1
+        # println("Setting $idx:$idx_n to $(df[2][i])")
+        for j in idx:idx_n
+            arr[j] = df[2][i]
+        end
+    end
+    arr
+end
+
+function daily_average()
+    df = grab_pop("raw.data")
+    a = heinous_bug_workaround(df)
+    sa::Array{Float32} = [mean(a[i-1339:i]) for i = 1440:length(a)]
+end
+
+function daily_zero_pop()
+    df = grab_pop("raw.data")
+    a::Array{Int8} = heinous_bug_workaround(df)
+    a = map(x -> min(x, 1), a)
+    sa::Array{Float32} = [mean(a[i-1339:i]) for i = 1440:length(a)]
+end
+
+function squash(x, n)
+    if x <= n
+        0
+    else
+        1
+    end
+end
+
+function daily_n_pop(n::Int)
+    df = grab_pop("raw.data")
+    a::Array{Int8} = heinous_bug_workaround(df)
+    a = map(x -> squash(x, n), a)
+    sa::Array{Float32} = [mean(a[i-1339:i]) for i = 1440:length(a)]
+end
+
+function plot_daily_n_pops()
+    sa1 = daily_n_pop(1)
+    sa5 = daily_n_pop(5)
+    sa10 = daily_n_pop(10)
+    sa20 = daily_n_pop(20)
+
+    plot(layer(x=1:length(sa1), y=sa1, Geom.line), layer(x=1:length(sa1), y=sa1, Geom.smooth, Theme(default_color=color("red"))),
+         layer(x=1:length(sa5), y=sa5, Geom.line), layer(x=1:length(sa5), y=sa5, Geom.smooth, Theme(default_color=color("red"))),
+         layer(x=1:length(sa10), y=sa10, Geom.line), layer(x=1:length(sa10), y=sa10, Geom.smooth, Theme(default_color=color("red"))),
+         layer(x=1:length(sa20), y=sa20, Geom.line), layer(x=1:length(sa20), y=sa20, Geom.smooth, Theme(default_color=color("red")))
+         )
+end
