@@ -34,3 +34,39 @@ function prime_sum(m)
 end
 
 # print(prime_sum([15, 21, 24, 30, 49]))
+
+function shingle(s::ASCIIString, n::Int)
+    h = Set{ASCIIString}()
+    idx_delta = n-1
+    for i in 1:(length(s) - idx_delta)
+        end_idx = i + idx_delta
+        push!(h, s[i:end_idx])
+    end
+    return h
+end
+
+function shingle_stuff()
+    test0 = shingle("ABRACADABRA", 2)
+    test1 = shingle("BRICABRAC", 2)
+    common = intersect(test0, test1)
+    total = union(test0, test1)
+    println(test0)
+    println(test1)
+    println(common)
+    println(length(common) / length(total))
+end
+
+# shingle_stuff()
+
+function distance(p)
+    l1a = norm(p - [0,0], 1)
+    l2a = norm(p - [0,0], 2)
+    l1b = norm(p - [100,40], 1)
+    l2b = norm(p - [100,40], 2)
+    return l1a < l1b && l2a > l2b
+end
+
+println(distance([53,18]))
+println(distance([56,13]))
+println(distance([66,5]))
+println(distance([50,18]))
