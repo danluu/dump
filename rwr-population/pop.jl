@@ -1,6 +1,17 @@
+# Grab data from http://modulaatio.com/rwr_server_list/player_count_graph.php
+
 # using Gadfly
 using Dates
 using DataFrames
+
+# First two digits of population is randomly wrong sometimes
+# For example, 9 is 1009, 2009, or 3009
+# This is easy to work around since population is never above 100, let alone 1000
+function fix_pop_glitches(x::Int)
+    fixed_pop = x % 1000    
+    assert(fixed_pop < 900)
+    return fixed_pop
+end
 
 function grab_pop(fname::String)
     f = open(fname)
@@ -10,6 +21,7 @@ function grab_pop(fname::String)
     time_lines = filter(time_match, lines)
     data_lines = filter(pop_match, lines)
     data::Array{Int} = map(l -> int(match(pop_match, l).captures[1]), data_lines)
+    data = map(fix_pop_glitches, data)
     # Not using DateTime because there's a bug in Gadfly that seems to be pretty old
     # that makes DateTime dataframes blow up. Not sure if/when it will be fixed.
     # times::Array{DateTime} = 
