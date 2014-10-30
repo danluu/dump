@@ -1,0 +1,1248 @@
+commit 90660ec3c3e3f463a3cc7005213345b6c9ecfab9
+Author: Jason Davis <jason@rightthere.net>
+Date:   Sat Apr 16 15:24:53 2005 -0700
+
+    [PATCH] x86_64 genapic update
+    
+    x86_64 genapic mechanism should be aware of machines that use physical APIC
+    mode regardless of how many clusters/processors are detected.
+    
+    ACPI 3.0 FADT makes this determination very simple by providing a feature
+    flag "force_apic_physical_destination_mode" to state whether the machine
+    unconditionally uses physical APIC mode.
+    
+    Unisys' next generation x86_64 ES7000 will need to utilize this FADT
+    feature flag in order to boot the x86_64 kernel in the correct APIC mode.
+    This patch has been tested on both x86_64 commodity and ES7000 boxes.
+    
+    Signed-off-by: Jason Davis <jason.davis@unisys.com>
+    Acked-by: Andi Kleen <ak@suse.de>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 107ce721abddbd876aa6203ac982821e405400e9
+Author: Andi Kleen <ak@suse.de>
+Date:   Sat Apr 16 15:24:52 2005 -0700
+
+    [PATCH] x86_64: disable interrupts during SMP bogomips checking
+    
+    Port over a i386 kludge from rusty to x86-64
+    
+    I don't think it is a full solution, but the upcomming smp bootup rewrite
+    will solve it.
+    
+    This fixes BUGs at bootup on bigger x86-64 systems.
+    
+    Signed-off-by: Andi Kleen <ak@suse.de>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit f18de453eb52dae49bc512ccfa638d9a0f153771
+Author: Andi Kleen <ak@suse.de>
+Date:   Sat Apr 16 15:24:51 2005 -0700
+
+    [PATCH] x86-64: Fix BUG()
+    
+    Use the correct file name in BUG()
+    
+    Signed-off-by: Andi Kleen <ak@suse.de>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit db4686812835a497d6f5de1e6cf6e8010a3fc0c7
+Author: Andi Kleen <ak@suse.de>
+Date:   Sat Apr 16 15:24:51 2005 -0700
+
+    [PATCH] x86-64/i386: Revert cpuinfo siblings behaviour back to 2.6.10
+    
+    Only display physical id/siblings when there are siblings or dual core.
+    
+    In 2.6.11 I accidentially broke it and it was always displaying these
+    fields But for compatibility to all these /proc parsers around it is better
+    to do it in the old way again.
+    
+    Noticed by Suresh Siddha
+    
+    Cc: <Suresh.b.siddha@intel.com>
+    Signed-off-by: Andi Kleen <ak@suse.de>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit e09b8c0b2006f5e6b543f7458b684d6ebd99e271
+Author: Roland McGrath <roland@redhat.com>
+Date:   Sat Apr 16 15:24:50 2005 -0700
+
+    [PATCH] x86-64: i386 vDSO: add PT_NOTE segment
+    
+    Use the i386 PT_NOTE segment in x86_64 as well.
+    
+    Signed-off-by: Roland McGrath <roland@redhat.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit c97db4a0a7d4d5be8c64a8d649a4425ee195b05c
+Author: Roland McGrath <roland@redhat.com>
+Date:   Sat Apr 16 15:24:48 2005 -0700
+
+    [PATCH] i386 vDSO: add PT_NOTE segment
+    
+    This patch adds an ELF note to the vDSO giving the LINUX_VERSION_CODE
+    value.  Having this in the vDSO lets the dynamic linker avoid the `uname'
+    syscall it now always does at startup to ascertain the kernel ABI
+    available.
+    
+    Signed-off-by: Roland McGrath <roland@redhat.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit ecd02dddd1d5bfc2141cbd0e205a53fb9d849c9e
+Author: Roland McGrath <roland@redhat.com>
+Date:   Sat Apr 16 15:24:46 2005 -0700
+
+    [PATCH] i386: Use loaddebug macro consistently
+    
+    This moves the macro loaddebug from asm-i386/suspend.h to
+    asm-i386/processor.h, which is the place that makes sense for it to be
+    defined, removes the extra copy of the same macro in
+    arch/i386/kernel/process.c, and makes arch/i386/kernel/signal.c use the
+    macro in place of its expansion.
+    
+    This is a purely cosmetic cleanup for the normal i386 kernel.  However, it
+    is handy for Xen to be able to just redefine the loaddebug macro once
+    instead of also changing the signal.c code.
+    
+    Signed-off-by: Roland McGrath <roland@redhat.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit b0a70b57f909647d79e0cc30772a0664fbf9830a
+Author: Jason Gaston <jason.d.gaston@intel.com>
+Date:   Sat Apr 16 15:24:45 2005 -0700
+
+    [PATCH] i2c-i801: I2C patch for Intel ESB2
+    
+    This patch adds the Intel ESB2 DID's to the i2c-i801.c and Kconfig files for
+    I2C support.
+    
+    Signed-off-by: �Jason Gaston <Jason.d.gaston@intel.com>
+    Cc: Greg KH <greg@kroah.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 680d32357a0235fbadfba8e52dd40e80f55b6b05
+Author: Jason Gaston <jason.d.gaston@intel.com>
+Date:   Sat Apr 16 15:24:45 2005 -0700
+
+    [PATCH] ahci: AHCI mode SATA patch for Intel ESB2
+    
+    This patch adds the Intel ESB2 DID's to the ahci.c file for AHCI mode SATA
+    support.
+    
+    Signed-off-by: Jason Gaston <Jason.d.gaston@intel.com>
+    Cc: <linux-scsi@vger.kernel.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit c368ca4ef471aa8e82ee1de7086cb7ef5053cb95
+Author: Jason Gaston <jason.d.gaston@intel.com>
+Date:   Sat Apr 16 15:24:44 2005 -0700
+
+    [PATCH] ata_piix: IDE mode SATA patch for Intel ESB2
+    
+    This patch adds the Intel ESB2 DID's to the ata_piix.c and quirks.c file for
+    IDE mode SATA support.
+    
+    Signed-off-by: Jason Gaston <Jason.d.gaston@intel.com>
+    Cc: Jeff Garzik <jgarzik@pobox.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit c4c8ea948aa21527d502e87227b2f1d951bc506d
+Author: Jason Gaston <jason.d.gaston@intel.com>
+Date:   Sat Apr 16 15:24:43 2005 -0700
+
+    [PATCH] intel8x0: AC'97 audio patch for Intel ESB2
+    
+    This patch adds the Intel ESB2 DID's to the intel8x0.c file for AC'97 audio
+    support.
+    
+    Signed-off-by: �Jason Gaston <Jason.d.gaston@intel.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit d69332b875efb52ea5276d5638ce572fcd7375f2
+Author: Jason Gaston <jason.d.gaston@intel.com>
+Date:   Sat Apr 16 15:24:42 2005 -0700
+
+    [PATCH] piix: IDE PATA patch for Intel ESB2
+    
+    This patch adds the Intel ESB2 DID's to the piix.c file for IDE PATA support.
+    
+    Signed-off-by: Jason Gaston <Jason.d.gaston@intel.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit e285f8091b4ae9972f812400dc8b4b40ee779010
+Author: Jason Gaston <jason.d.gaston@intel.com>
+Date:   Sat Apr 16 15:24:41 2005 -0700
+
+    [PATCH] irq and pci_ids: patch for Intel ESB2
+    
+    This patch adds the Intel ESB2 DID's to the irq.c and pci_ids.h files.
+    
+    Signed-off-by: Jason Gaston <Jason.d.gaston@intel.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 48bb35831bb0344abc9aecb39467fd006b2f5d7d
+Author: Yoichi Yuasa <yuasa@hh.iij4u.or.jp>
+Date:   Sat Apr 16 15:24:41 2005 -0700
+
+    [PATCH] mips: remove #include <linux/audit.h> two times
+    
+    This patch removes #include <linux/audit.h>.  Because it includes it two
+    times.
+    
+    Signed-off-by: Yoichi Yuasa <yuasa@hh.iij4u.or.jp>
+    Cc: Ralf Baechle <ralf@linux-mips.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 5dfa9c1b4f5d399a2800d8486ca188988900db87
+Author: Yoichi Yuasa <yuasa@hh.iij4u.or.jp>
+Date:   Sat Apr 16 15:24:40 2005 -0700
+
+    [PATCH] mips: update VR41xx CPU-PCI bridge support
+    
+    This patch updates NEC VR4100 series CPU-PCI bridge support.
+    
+    Signed-off-by: Yoichi Yuasa <yuasa@hh.iij4u.or.jp>
+    Cc: Ralf Baechle <ralf@linux-mips.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 4bfa437cf137fc653b286c110d849ff1ad2aee2b
+Author: Yoichi Yuasa <yuasa@hh.iij4u.or.jp>
+Date:   Sat Apr 16 15:24:39 2005 -0700
+
+    [PATCH] mips: remove obsolete VR41xx RTC function from vr41xx.h
+    
+    This patch had removed obsolete VR41xx RTC function from vr41xx.h .  I
+    forgot to put this change in "update VR41xx RTC support".
+    
+    Signed-off-by: Yoichi Yuasa <yuasa@hh.iij4u.or.jp>
+    Cc: Ralf Baechle <ralf@linux-mips.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit e63f8f439de010b6227c0c9c6f56e2c44dbe5dae
+Author: Olof Johansson <olof@austin.ibm.com>
+Date:   Sat Apr 16 15:24:38 2005 -0700
+
+    [PATCH] ppc64: no prefetch for NULL pointers
+    
+    For prefetches of NULL (as when walking a short linked list), PPC64 will in
+    some cases take a performance hit.  The hardware needs to do the TLB walk,
+    and said walk will always miss, which means (up to) two L2 misses as
+    penalty.  This seems to hurt overall performance, so for NULL pointers skip
+    the prefetch alltogether.
+    
+    Signed-off-by: Olof Johansson <olof@austin.ibm.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 89e09f5ebba4bcde9852e4be4af536d5b691f20a
+Author: Anton Blanchard <anton@samba.org>
+Date:   Sat Apr 16 15:24:37 2005 -0700
+
+    [PATCH] ppc64: remove -fno-omit-frame-pointer
+    
+    During some code inspection using gcc 4.0 I noticed a stack frame was being
+    created for a number of functions that didnt require it.  For example:
+    
+    c0000000000df944 <._spin_unlock>:
+    c0000000000df944:       fb e1 ff f0     std     r31,-16(r1)
+    c0000000000df948:       f8 21 ff c1     stdu    r1,-64(r1)
+    c0000000000df94c:       7c 3f 0b 78     mr      r31,r1
+    c0000000000df950:       7c 20 04 ac     lwsync
+    c0000000000df954:       e8 21 00 00     ld      r1,0(r1)
+    c0000000000df958:       38 00 00 00     li      r0,0
+    c0000000000df95c:       90 03 00 00     stw     r0,0(r3)
+    c0000000000df960:       eb e1 ff f0     ld      r31,-16(r1)
+    c0000000000df964:       4e 80 00 20     blr
+    
+    It turns out we are adding -fno-omit-frame-pointer to ppc64 which is
+    causing the above behaviour.  Removing that flag results in much better
+    code:
+    
+    c0000000000d5b30 <._spin_unlock>:
+    c0000000000d5b30:       7c 20 04 ac     lwsync
+    c0000000000d5b34:       38 00 00 00     li      r0,0
+    c0000000000d5b38:       90 03 00 00     stw     r0,0(r3)
+    c0000000000d5b3c:       4e 80 00 20     blr
+    
+    We dont require a frame pointer to debug on ppc64, so remove it.
+    
+    Signed-off-by: Anton Blanchard <anton@samba.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 50bfb2e0329d45dd46fdc34f70cdaabe2d8a1dc7
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:37 2005 -0700
+
+    [PATCH] ppc64: remove bogus f50 hack in prom.c
+    
+    The code that parses the OF device tree contains an old bogus hack which
+    was killed a long time ago on ppc32, but survived in ppc64.  It was
+    supposed to help with a problem on the f50 which is ...  a 32 bits machine
+    :) Additionally, that hack is causing problems, so let's just get rid of
+    it.
+    
+    Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 187335a4ec72c9bc7f3f168d6858a41fcfb63302
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:36 2005 -0700
+
+    [PATCH] ppc64: Detect altivec via firmware on unknown CPUs
+    
+    This patch adds detection of the Altivec capability of the CPU via the
+    firmware in addition to the cpu table.  This allows newer CPUs that aren't
+    in the table to still have working altivec support in the kernel.
+    
+    It also fixes a problem where if a CPU isn't recognized as having altivec
+    features, and takes an altivec unavailable exception due to userland
+    issuing altivec instructions, the kernel would happily enable it and
+    context switch the registers ...  but not all of them (it would basically
+    forget vrsave).  With this patch, the kernel will refuse to enable altivec
+    when the feature isn't detected for the CPU (SIGILL).
+    
+    Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 547ee84cea37696d25c93306e909378a87db2f66
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:35 2005 -0700
+
+    [PATCH] ppc64: Improve mapping of vDSO
+    
+    This patch reworks the way the ppc64 is mapped in user memory by the kernel
+    to make it more robust against possible collisions with executable
+    segments.  Instead of just whacking a VMA at 1Mb, I now use
+    get_unmapped_area() with a hint, and I moved the mapping of the vDSO to
+    after the mapping of the various ELF segments and of the interpreter, so
+    that conflicts get caught properly (it still has to be before
+    create_elf_tables since the later will fill the AT_SYSINFO_EHDR with the
+    proper address).
+    
+    While I was at it, I also changed the 32 and 64 bits vDSO's to link at
+    their "natural" address of 1Mb instead of 0.  This is the address where
+    they are normally mapped in absence of conflict.  By doing so, it should be
+    possible to properly prelink one it's been verified to work on glibc.
+    
+    Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit fa89c5092eddcbcb425a1416f85906e3cc519793
+Author: Paul Mackerras <paulus@samba.org>
+Date:   Sat Apr 16 15:24:34 2005 -0700
+
+    [PATCH] ppc64: fix export of wrong symbol
+    
+    In arch/ppc64/kernel/ppc_ksyms.c, we are still exporting
+    flush_icache_range, but that has been changed to be an inline in
+    include/asm-ppc64/cacheflush.h which calls __flush_icache_range (defined in
+    arch/ppc64/kernel/misc.S).
+    
+    This patch changes the export to __flush_icache_range, thus allowing
+    modules to use the inline flush_icache_range.
+    
+    Signed-off-by: Paul Mackerras <paulus@samba.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit dfbacdc1a0b568dfa69fb2c1b39b608074001083
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:33 2005 -0700
+
+    [PATCH] ppc64: Fix semantics of __ioremap
+    
+    This patch fixes ppc64 __ioremap() so that it stops adding implicitely
+    _PAGE_GUARDED when the cache is not writeback, and instead, let the callers
+    provide the flag they want here.  This allows things like framebuffers to
+    explicitely request a non-cacheable and non-guarded mapping which is more
+    efficient for that type of memory without side effects.  The patch also
+    fixes all current callers to add _PAGE_GUARDED except btext, which is fine
+    without it.
+    
+    Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 7bbd827750e630003896c96d0212962276ee5d91
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:32 2005 -0700
+
+    [PATCH] ppc64: very basic desktop g5 sound support
+    
+    This patch hacks the current PowerMac Alsa driver to add some basic support
+    of analog sound output to some desktop G5s.  It has severe limitations
+    though:
+    
+     - Only 44100Khz 16 bits
+     - Only work on G5 models using a TAS3004 analog code, that is early
+       single CPU desktops and all dual CPU desktops at this date, but none
+       of the more recent ones like iMac G5.
+     - It does analog only, no digital/SPDIF support at all, no native
+       AC3 support
+    
+    Better support would require a complete rewrite of the driver (which I am
+    working on, but don't hold your breath), to properly support the diversity
+    of apple sound HW setup, including dual codecs, several i2s busses, all the
+    new codecs used in the new machines, proper clock switching with digital,
+    etc etc etc...
+    
+    This patch applies on top of the other PowerMac sound patches I posted in
+    the past couple of days (new powerbook support and sleep fixes).
+    
+    Note: This is a FAQ entry for PowerMac sound support with TI codecs: They
+    have a feature called "DRC" which is automatically enabled for the internal
+    speaker (at least when auto mute control is enabled) which will cause your
+    sound to fade out to nothing after half a second of playback if you don't
+    set a proper "DRC Range" in the mixer.  So if you have a problem like that,
+    check alsamixer and raise your DRC Range to something reasonable.
+    
+    Note2: This patch will also add auto-mute of the speaker when line-out jack
+    is used on some earlier desktop G4s (and on the G5) in addition to the
+    headphone jack.  If that behaviour isn't what you want, just disable
+    auto-muting and use the manual mute controls in alsamixer.
+    
+    Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit b20af5f59797796d28b701f5d337e47c8a142eb2
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:32 2005 -0700
+
+    [PATCH] pmac: Improve sleep code of tumbler driver
+    
+    This patch improves the behaviour of the "tumbler/snapper" driver used on
+    newer PowerMacs during sleep.  It properly set the HW mutes to shut down
+    amplifiers and does an analog shutdown of the codec.  That might improve
+    power consumption during sleep on a number of machines.
+    
+    Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit b75550e1bc6b3b2c80b628e68628fca015634071
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:31 2005 -0700
+
+    [PATCH] pmac: sound support for latest laptops
+    
+    This patch hacks the current Alsa snd-powermac driver to add support for
+    recent machine models with the tas3004 chip, that is basically new laptop
+    models.  The Mac Mini is _NOT_ yet supported by this patch (soon soon ...).
+     The G5s (iMac or Desktop) will need the rewritten sound driver on which
+    I'm working on (I _might_ get a hack for analog only on some G5s on the
+    current driver, but no promise).
+    
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 16b817579fb61050f1abcc0e81089974328a9c27
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:30 2005 -0700
+
+    [PATCH] ppc32: MV643XX ethernet is an option for Pegasos
+    
+    This patch allows Kconfig to build the MV643xx ethernet driver on Pegasos
+    (CONFIG_PPC_MULTIPLATFORM) and adds what I think is a missing fix from
+    Dale's batch, that is remove SA_INTERRUPT and add SA_SHIRQ in there as the
+    interrupt is shared if I understand things correctly.
+    
+    Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+    Signed-off-by: Fabio Massimo Di Nitto <fabbione@ubuntu.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit d8f6098d5b0e9755c79d05e30b185a6e964fd3fa
+Author: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
+Date:   Sat Apr 16 15:24:29 2005 -0700
+
+    [PATCH] ppc32: fix compilation error in arch/ppc/syslib/open_pic_defs.h
+    
+    make defconfig give the following error on ppc (gcc-4):
+    
+    arch/ppc/syslib/open_pic.c:36: error: static declaration of ‘OpenPIC’ follows non-static declaration
+    arch/ppc/syslib/open_pic_defs.h:175: error: previous declaration of ‘OpenPIC’ was here
+    
+    Signed-Off-By: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit cd2c169e6a2d15dce3f526b1e2f97e843f8f5787
+Author: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
+Date:   Sat Apr 16 15:24:28 2005 -0700
+
+    [PATCH] ppc32: fix compilation error in include/asm/prom.h
+    
+    make defconfig give the following error on ppc (gcc-4):
+    
+    arch/ppc/syslib/prom_init.c:120: error: static declaration of ‘prom_display_paths’ follows non-static declaration
+    include/asm/prom.h:17: error: previous declaration of ‘prom_display_paths’ was here
+    arch/ppc/syslib/prom_init.c:122: error: static declaration of ‘prom_num_displays’ follows non-static declaration
+    include/asm/prom.h:18: error: previous declaration of ‘prom_num_displays’ was here
+    
+    Signed-Off-By: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 51e6606491a0f5deaba52fb00c0374b9cb612f98
+Author: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
+Date:   Sat Apr 16 15:24:28 2005 -0700
+
+    [PATCH] ppc32: fix compilation error in arch/ppc/kernel/time.c
+    
+    make defconfig give the following error on ppc (gcc-4):
+    
+    arch/ppc/kernel/time.c:92: error: static declaration of ‘time_offset’
+    follows non-static declaration
+    include/linux/timex.h:236: error: previous declaration of ‘time_offset’
+    was here
+    
+    The following patch solves it (time_offset is declared in timer.c).
+    
+    Signed-Off-By: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 9ce3a719bc5772bc84ab6f50ef505da6992778ff
+Author: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
+Date:   Sat Apr 16 15:24:27 2005 -0700
+
+    [PATCH] ppc32: fix compilation error in include/asm-m68k/setup.h
+    
+    make defconfig give the following error on ppc (gcc-4):
+    
+    include/asm-m68k/setup.h:365: error: array type has incomplete element
+    type
+    
+    Signed-Off-By: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit b625a2b85221821b6831a387ee23ff7d93ffb7d1
+Author: Leigh Brown <leigh@solinno.co.uk>
+Date:   Sat Apr 16 15:24:26 2005 -0700
+
+    [PATCH] ppc32: Make the Powerstack II Pro4000 boot again
+    
+    This patch restores the original behaviour of prep_pcibios_fixup() to only
+    call prep_pib_init() on machines with an openpic.  This allows the
+    Powerstack II Pro4000 to boot again.
+    
+    Signed-off-by: Leigh Brown <leigh@solinno.co.uk>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit ef2f3253f061cbb86da25411a6e6e6a69a84b6ac
+Author: Tom Rini <trini@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:25 2005 -0700
+
+    [PATCH] ppc32: Fix building 32bit kernel for 64bit machines
+    
+    When building a ppc32 MULTIPLATFORM kernel for a 64bit pmac, we try and
+    build certain files or use certain functions that make no sense in that
+    context.  This catches the last of these.
+    
+    Signed-off-by: Tom Rini <trini@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 54095a6ec7b11a008c07c5016b025206a051f560
+Author: Giovambattista Pulcini <gpulcini@swintel.it>
+Date:   Sat Apr 16 15:24:24 2005 -0700
+
+    [PATCH] ppc32: Fix a problem with NTP on !(chrp||gemini)
+    
+    The following problem was found by Giovambattista Pulcini
+    <gpulcini@swintel.it>, who also provided a partial patch, and this has been
+    verified by our time guru Gabriel Paubert <paubert@iram.es>.
+    
+    The problem is that in do_settimeofday() we always set time_state to
+    TIME_ERROR and except on two platforms, never re-set it.  This meant that
+    ntp_gettime() and ntp_adjtime() always returned TIME_ERROR, incorrectly.
+    Based on Gabriel's analysis, time_state is used for leap-second processing,
+    and ppc shouldn't be mucking with it.
+    
+    Signed-off-by: Tom Rini <trini@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit fd16230a05751af5a221a1f1c988bb519fd66679
+Author: Tom Rini <trini@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:23 2005 -0700
+
+    [PATCH] ppc32: Fix mpc8xx watchdog
+    
+    The CONFIG_8xx_WDT option got broken in the generic hardirq update as ppc32
+    had its own different request_irq that worked when other arches used
+    setup_irq.  This is the trivial fix for the problem.
+    
+    From: Carsten Juttner <carjay@gmx.net>
+    Signed-off-by: Tom Rini <trini@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit f50b153b1966230e78034d5ab1641ca4bb5db56d
+Author: Kumar Gala <galak@freescale.com>
+Date:   Sat Apr 16 15:24:22 2005 -0700
+
+    [PATCH] ppc32: Support 36-bit physical addressing on e500
+    
+    To add support for 36-bit physical addressing on e500 the following changes
+    have been made.  The changes are generalized to support any physical address
+    size larger than 32-bits:
+    
+    * Allow FSL Book-E parts to use a 64-bit PTE, it is 44-bits of pfn, 20-bits
+      of flags.
+    
+    * Introduced new CPU feature (CPU_FTR_BIG_PHYS) to allow runtime handling of
+      updating hardware register (SPRN_MAS7) which holds the upper 32-bits of
+      physical address that will be written into the TLB.  This is useful since
+      not all e500 cores support 36-bit physical addressing.
+    
+    * Currently have a pass through implementation of fixup_bigphys_addr
+    
+    * Moved _PAGE_DIRTY in the 64-bit PTE case to free room for three additional
+      storage attributes that may exist in future FSL Book-E cores and updated
+      fault handler to copy these bits into the hardware TLBs.
+    
+    Signed-off-by: Kumar Gala <kumar.gala@freescale.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit b464fce5edc08a825907e9d48a2d2f1af0393fef
+Author: Kumar Gala <galak@freescale.com>
+Date:   Sat Apr 16 15:24:21 2005 -0700
+
+    [PATCH] ppc32: Allow adjust of pfn offset in pte
+    
+    Allow the pfn to be offset by more than just PAGE_SHIFT in the pte.  Today,
+    PAGE_SHIFT tends to allow us to have 12-bits of flags in the pte.  In the
+    future if we have a larger pte we can allocate more bits for flags by
+    offsetting the pfn even further.
+    
+    Signed-off-by: Kumar Gala <kumar.gala@freescale.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit a85f6d4aca822acdb49d27c44519cd6514b06a1d
+Author: Kumar Gala <galak@freescale.com>
+Date:   Sat Apr 16 15:24:21 2005 -0700
+
+    [PATCH] ppc32: make usage of CONFIG_PTE_64BIT & CONFIG_PHYS_64BIT consistent
+    
+    CONFIG_PTE_64BIT & CONFIG_PHYS_64BIT are not currently consistently used in
+    the code base.  Fixed up the usage such that CONFIG_PTE_64BIT is used when we
+    have a 64-bit PTE regardless of physical address width.  CONFIG_PHYS_64BIT is
+    used if the physical address width is larger than 32-bits, regardless of PTE
+    size.
+    
+    These changes required a few sub-arch specific ifdef's to be fixed and the
+    introduction of a physical address format string.
+    
+    Signed-off-by: Kumar Gala <kumar.gala@freescale.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 7a1e335085ead05da08f791340f58b493126894d
+Author: Kumar Gala <galak@freescale.com>
+Date:   Sat Apr 16 15:24:20 2005 -0700
+
+    [PATCH] ppc32: Fix pte_update for 64-bit PTEs
+    
+    While the existing pte_update code handled atomically modifying a 64-bit PTE,
+    it did not return all 64-bits of the PTE before it was modified.  This causes
+    problems in some places that expect the full PTE to be returned, like
+    ptep_get_and_clear().
+    
+    Created a new pte_update function that is conditional on CONFIG_PTE_64BIT.  It
+    atomically reads the low PTE word which all PTE flags are required to be in
+    and returns a premodified full 64-bit PTE.
+    
+    Since we now have an explicit 64-bit PTE version of pte_update we can also
+    remove the hack that existed to get the low PTE word regardless of size.
+    
+    Signed-off-by: Kumar Gala <kumar.gala@freescale.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 0c541b4406a68e74d94ddb667c69d9e03bce8681
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:19 2005 -0700
+
+    [PATCH] ppc32: Fix AGP and sleep again
+    
+    My previous patch that added sleep support for uninorth-agp and some AGP
+    "off" stuff in radeonfb and aty128fb is breaking some configs.  More
+    specifically, it has problems with rage128 setups since the DRI code for
+    these in X doesn't properly re-enable AGP on wakeup or console switch
+    (unlike the radeon DRM).
+    
+    This patch fixes the problem for pmac once for all by using a different
+    approach.  The AGP driver "registers" special suspend/resume callbacks with
+    some arch code that the fbdev's can later on call to suspend and resume
+    AGP, making sure it's resumed back in the same state it was when suspended.
+     This is platform specific for now.  It would be too complicated to try to
+    do a generic implementation of this at this point due to all sort of weird
+    things going on with AGP on other architectures.  We'll re-work that whole
+    problem cleanly once we finally merge fbdev's and DRI.
+    
+    In the meantime, please apply this patch which brings back some r128 based
+    laptops into working condition as far as system sleep is concerned.
+    
+    Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 7a648b9ec09f32606fe0f27fb9d095311cf968ca
+Author: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+Date:   Sat Apr 16 15:24:18 2005 -0700
+
+    [PATCH] ppc32: Fix cpufreq problems
+    
+    This patch updates the PowerMac cpufreq driver.  It depends on the addition
+    of the suspend() method (my previous patch) and on the new flag I defined
+    to silence some warnings that are normal for us.
+    
+    It fixes various issues related to cpufreq on pmac, including some crashes
+    on some models when sleeping the machine while in low speed, proper voltage
+    control on some newer machines, and adds voltage control on 750FX based G3
+    laptops.
+    
+    Signed-off-by: Benjamin Herrenschmidt <benh@kernel.crashing.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 6c26e03b2db4b66d79bfb774628c1fc9b458b943
+Author: Paul Mackerras <paulus@samba.org>
+Date:   Sat Apr 16 15:24:17 2005 -0700
+
+    [PATCH] ppc32: fix single-stepping of emulated instructions
+    
+    On ppc, we emulate instructions that cause alignment exceptions.  If we are
+    single-stepping an instruction and it causes an alignment exception, we
+    will currently do the next instruction as well before taking the
+    single-step exception.  This patch fixes that, so we take the single-step
+    exception after emulating the instruction.
+    
+    Signed-off-by: Paul Mackerras <paulus@samba.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit e378cc16b0d3c1610857c4444345907020e03ece
+Author: Paul Mackerras <paulus@samba.org>
+Date:   Sat Apr 16 15:24:17 2005 -0700
+
+    [PATCH] ppc32: oops on kernel altivec assist exceptions
+    
+    If we should happen to get an altivec assist exception while executing in
+    the kernel, we will currently try to handle it and fail, and end up oopsing
+    with (apparently) a segfault.  (An altivec assist exception occurs for
+    floating-point altivec instructions with denormalized inputs or outputs if
+    the altivec unit is in java mode.)
+    
+    This patch checks explicitly if we are in user mode and prints a useful
+    message if not.
+    
+    Signed-off-by: Paul Mackerras <paulus@samba.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 6460b4cceba0181308042c8d8794eb679bfa22e5
+Author: Paul Mackerras <paulus@samba.org>
+Date:   Sat Apr 16 15:24:16 2005 -0700
+
+    [PATCH] ppc32: improve timebase sync for SMP
+    
+    Currently the procedure in the ppc32 kernel that synchronizes the timebase
+    registers across an SMP powermac system does so by setting both timebases
+    to zero.  That is OK at boot but causes problems if done later.  So that we
+    can do hotplug CPU on these machines, this patch changes the code so it
+    reads the timebase from one CPU and transfers the value to the other CPU.
+    (Hotplug CPU is needed for sleep (aka suspend to RAM) to work.)
+    
+    Signed-off-by: Paul Mackerras <paulus@samba.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 35b535d9cc8dce79c3b72f47c4417c3159d7a8c9
+Author: Eugene Surovegin <ebs@ebshome.net>
+Date:   Sat Apr 16 15:24:15 2005 -0700
+
+    [PATCH] ppc32: ppc4xx_pic - add acknowledge when enabling level-sensitive IRQ
+    
+    This patch adds interrupt acknowledge to the PPC4xx PIC enable_irq
+    implementation for level-sensitive IRQ sources.  This helps in cases when
+    enable/disable_irq is used in interrupt handlers for hardware, which
+    requires IRQ acknowledge to be issued from non-interrupt context (e.g.
+    when actual ACK in device needs an I2C transaction).  For such strange
+    hardware, interrupt handler disables IRQ and defers actual ACK to some
+    other context.  When this happens, IRQ is enabled again.  For
+    level-sensitive sources we get spurious triggering right after IRQ is
+    enabled.  This patch fixes this.
+    
+    Suggested by Tolunay Orkun <listmember@orkun.us>.
+    
+    Signed-off-by: Eugene Surovegin <ebs@ebshome.net>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 16acbc624e2b7b750570cb672341d05a816051f4
+Author: Paul Mackerras <paulus@samba.org>
+Date:   Sat Apr 16 15:24:14 2005 -0700
+
+    [PATCH] ppc32: fix bogosity in process-freezing code
+    
+    The code that went into arch/ppc/kernel/signal.c recently to handle process
+    freezing seems to contain a dubious assumption: that a process that calls
+    do_signal when PF_FREEZE is set will have entered the kernel because of a
+    system call.  This patch removes that assumption.
+    
+    Signed-off-by: Paul Mackerras <paulus@samba.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 0c9b79429c83a404a04908be65baa9d97836bbb6
+Author: James Morris <jmorris@redhat.com>
+Date:   Sat Apr 16 15:24:13 2005 -0700
+
+    [PATCH] SELinux: add support for NETLINK_KOBJECT_UEVENT
+    
+    This patch adds SELinux support for the KOBJECT_UEVENT Netlink family, so
+    that SELinux can apply finer grained controls to it.  For example, security
+    policy for hald can be locked down to the KOBJECT_UEVENT Netlink family
+    only.  Currently, this family simply defaults to the default Netlink socket
+    class.
+    
+    Note that some new permission definitions are added to sync with changes in
+    the core userspace policy package, which auto-generates header files.
+    
+    Signed-off-by: James Morris <jmorris@redhat.com>
+    Signed-off-by: Stephen Smalley <sds@tycho.nsa.gov>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 7e5c6bc0a600c49e5922591ad41ff41987f54eb4
+Author: Jean Tourrilhes <jt@hpl.hp.com>
+Date:   Sat Apr 16 15:24:11 2005 -0700
+
+    [PATCH] irda_device() oops fix
+    
+    Acked-by: "David S. Miller" <davem@davemloft.net>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 6775cab98b89b2caa10dce4b07e2c81999e45517
+Author: Herbert Xu <herbert@gondor.apana.org.au>
+Date:   Sat Apr 16 15:24:10 2005 -0700
+
+    [PATCH] Fix dst_destroy() race
+    
+    When we are not the real parent of the dst (e.g., when we're xfrm_dst and
+    the child is an rtentry), it may already be on the GC list.
+    
+    In fact the current code is buggy to, we need to check dst->flags before
+    the dec as dst may no longer be valid afterwards.
+    
+    Signed-off-by: Herbert Xu <herbert@gondor.apana.org.au>
+    Signed-off-by: David S. Miller <davem@davemloft.net>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 2a27805127aee1e7e62854bcf9ca8c355c23b73e
+Author: Arnaldo Carvalho de Melo <acme@conectiva.com.br>
+Date:   Sat Apr 16 15:24:09 2005 -0700
+
+    [PATCH] net: don't call kmem_cache_create with a spinlock held
+    
+    This fixes the warning reported by Marcel Holtmann (Thanks!).
+    
+    Signed-off-by: Arnaldo Carvalho de Melo <acme@conectiva.com.br>
+    Signed-off-by: David S. Miller <davem@davemloft.net>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 9f3786dc8b1d6229dbe76e364323f0d787e7a0ea
+Author: David S. Miller <davem@davemloft.net>
+Date:   Sat Apr 16 15:24:09 2005 -0700
+
+    [PATCH] Fix linux/atalk.h header
+    
+    This recently got changed to include a lot of kernel internal stuff in the
+    non-__KERNEL__ area of the header, which isn't so kosher and breaks libc
+    builds.
+    
+    The fix is pretty simple.
+    
+    Signed-off-by: David S. Miller <davem@davemloft.net>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 4c4c402d6caba5d938ffbbb49961659ecac709d4
+Author: Martin Hicks <mort@sgi.com>
+Date:   Sat Apr 16 15:24:08 2005 -0700
+
+    [PATCH] meminfo: add Cached underflow check
+    
+    Working on some code lately I've been getting huge values for "Cached".
+    The cause is that get_page_cache_size() is an approximate value, and for a
+    sufficiently small returned value of get_page_cache_size() the value
+    underflows.
+    
+    Signed-off-by:  Martin Hicks <mort@sgi.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 76c3073a888ae7f4790a146784bb5c34fc24b9d2
+Author: akpm@osdl.org <akpm@osdl.org>
+Date:   Sat Apr 16 15:24:07 2005 -0700
+
+    [PATCH] end_buffer_write_sync() avoid pointless assignments
+    
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 323aca6c0bda611d0f31b3234d9fe291d31a9207
+Author: akpm@osdl.org <akpm@osdl.org>
+Date:   Sat Apr 16 15:24:06 2005 -0700
+
+    [PATCH] vmscan: pageout(): remove unneeded test
+    
+    )
+    
+    
+    
+    We only call pageout() for dirty pages, so this test is redundant.
+    
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 79befd0c08c4766f8fa27e37ac2a70e40840a56a
+Author: Andrea Arcangeli <andrea@suse.de>
+Date:   Sat Apr 16 15:24:05 2005 -0700
+
+    [PATCH] oom-killer disable for iscsi/lvm2/multipath userland critical sections
+    
+    iscsi/lvm2/multipath needs guaranteed protection from the oom-killer, so
+    make the magical value of -17 in /proc/<pid>/oom_adj defeat the oom-killer
+    altogether.
+    
+    (akpm: we still need to document oom_adj and friends in
+    Documentation/filesystems/proc.txt!)
+    
+    Signed-off-by: Andrea Arcangeli <andrea@suse.de>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit d345734267dbec642f4e34a9d392d2fd85b5fa9b
+Author: Jeff Moyer <jmoyer@redhat.com>
+Date:   Sat Apr 16 15:24:05 2005 -0700
+
+    [PATCH] filemap_getpage can block when MAP_NONBLOCK specified
+    
+    We will return NULL from filemap_getpage when a page does not exist in the
+    page cache and MAP_NONBLOCK is specified, here:
+    
+    	page = find_get_page(mapping, pgoff);
+    	if (!page) {
+    		if (nonblock)
+    			return NULL;
+    		goto no_cached_page;
+    	}
+    
+    But we forget to do so when the page in the cache is not uptodate.  The
+    following could result in a blocking call:
+    
+    	/*
+    	 * Ok, found a page in the page cache, now we need to check
+    	 * that it's up-to-date.
+    	 */
+    	if (!PageUptodate(page))
+    		goto page_not_uptodate;
+    
+    
+    
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 41aac24f8fb5a21ff3d0f6f56f85fad3cf0e88a9
+Author: Dave Airlie <airlied@linux.ie>
+Date:   Sat Apr 16 15:24:04 2005 -0700
+
+    [PATCH] r128_state.c: break missing in switch statement
+    
+    drm: fix r128_state.c switch statements..  in drivers/char/drm/r128_state.c
+    (linux-2.6.12-rc2), some breaks are missing in the switch statement.  See
+    trivial fix below.
+    
+    Signed-off-by: Hansjoerg Lipp <hjlipp@web.de>
+    Signed-off-by: Dave Airlie <airlied@linux.ie>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 388c69789a2a2e50965e805e3e641418082b352c
+Author: James Morris <jmorris@redhat.com>
+Date:   Sat Apr 16 15:24:03 2005 -0700
+
+    [PATCH] SELinux: fix bug in Netlink message type detection
+    
+    This patch fixes a bug in the SELinux Netlink message type detection code,
+    where the wrong constant was being used in a case statement.  The incorrect
+    value is not valid for this class of object so it would not have been
+    reached, and fallen through to a default handler for all Netlink messages.
+    
+    Signed-off-by: James Morris <jmorris@redhat.com>
+    Signed-off-by: Stephen Smalley <sds@tycho.nsa.gov>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 1db7fc75a410d9a15cbc58a9b073a688669c6d42
+Author: akpm@osdl.org <akpm@osdl.org>
+Date:   Sat Apr 16 15:24:02 2005 -0700
+
+    [PATCH] fix Bug 4395: modprobe bttv freezes the computer
+    
+    )
+    
+    
+    From: Johannes Stezenbach <js@linuxtv.org>
+    
+    Fix http://bugme.osdl.org/show_bug.cgi?id=4395.
+    
+    Patch by Manu Abraham and Gerd Knorr:
+    
+    Remove redundant bttv_reset_audio() which caused the computer to freeze
+    with some bt8xx based DVB cards when loading the bttv driver.
+    
+    Signed-off-by: Johannes Stezenbach <js@linuxtv.org>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 51410d3c53d85da0f24277f9580cbec1260ffc8f
+Author: David S. Miller <davem@davemloft.net>
+Date:   Sat Apr 16 15:24:01 2005 -0700
+
+    [PATCH] Fix get_compat_sigevent()
+    
+    I have no idea how a bug like this lasted so long.  Anyways, obvious
+    memset()'ing of incorrect pointer.
+    
+    Signed-off-by: David S. Miller <davem@davemloft.net>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 5df240826c90afdc7956f55a004ea6b702df9203
+Author: Stas Sergeev <stsp@aknet.ru>
+Date:   Sat Apr 16 15:24:01 2005 -0700
+
+    [PATCH] fix crash in entry.S restore_all
+    
+    Fix the access-above-bottom-of-stack crash.
+    
+    1. Allows to preserve the valueable optimization
+    
+    2. Works for NMIs
+    
+    3.  Doesn't care whether or not there are more of the like instances
+       where the stack is left empty.
+    
+    4. Seems to work for me without the crashes:)
+    
+    (akpm: this is still under discussion, although I _think_ it's OK.  You might
+    want to hold off)
+    
+    Signed-off-by: Stas Sergeev <stsp@aknet.ru>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit e493073d8d053429fbb42331b57a95dd0d61cadb
+Author: akpm@osdl.org <akpm@osdl.org>
+Date:   Sat Apr 16 15:24:00 2005 -0700
+
+    [PATCH] Fix acl Oops
+    
+    )
+    
+    
+    From: Andreas Gruenbacher <agruen@suse.de>
+    
+    ext[23]_get_acl will return an error when reading the attribute fails or
+    out-of-memory occurs.  Catch this case.
+    
+    Signed-off-by: Andreas Gruenbacher <agruen@suse.de>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 81ddef77bb774e771db8588b937665cd38f40cee
+Author: James Bottomley <James.Bottomley@SteelEye.com>
+Date:   Sat Apr 16 15:23:59 2005 -0700
+
+    [PATCH] re-export cancel_rearming_delayed_workqueue
+    
+    This was unexported by Arjan because we have no current users.
+    
+    However, during a conversion from tasklets to workqueues of the parisc led
+    functions, we ran across a case where this was needed.  In particular, the
+    open coded equivalent of cancel_rearming_delayed_workqueue was implemented
+    incorrectly, which is, I think, all the evidence necessary that this is a
+    useful API.
+    
+    Signed-off-by: James Bottomley <James.Bottomley@SteelEye.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 9ffb7146f0aa9c0070cda3d8701b0a89e34913d1
+Author: Artem B. Bityuckiy <dedekind@infradead.org>
+Date:   Sat Apr 16 15:23:58 2005 -0700
+
+    [PATCH] crypto: call zlib end functions on deflate exit path
+    
+    In the deflate_[compress|uncompress|pcompress] functions we call the
+    zlib_[in|de]flateReset function at the beginning.  This is OK.  But when we
+    unload the deflate module we don't call zlib_[in|de]flateEnd to free all
+    the zlib internal data.  It looks like a bug for me.  Please, consider the
+    attached patch.
+    
+    Signed-off-by: Artem B. Bityuckiy <dedekind@infradead.org>
+    Signed-off-by: Herbert Xu <herbert@gondor.apana.org.au>
+    Cc: "David S. Miller" <davem@davemloft.net>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit d42ce812b8a32adddeee3a692005f82f95ff15a3
+Author: akpm@osdl.org <akpm@osdl.org>
+Date:   Sat Apr 16 15:23:57 2005 -0700
+
+    [PATCH] arm: add comment about max_low_pfn/max_pfn
+    
+    )
+    
+    
+    From: Russell King <rmk+lkml@arm.linux.org.uk>
+    
+    Oddly, max_low_pfn/max_pfn end up being the number of pages in the system,
+    rather than the maximum PFN on ARM.  This doesn't seem to cause any problems,
+    so just add a note about it.
+    
+    Signed-off-by: Russell King <rmk@arm.linux.org.uk>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 7a228aaa879c119c9fb9b9d7e062ac13cb1a9079
+Author: akpm@osdl.org <akpm@osdl.org>
+Date:   Sat Apr 16 15:23:57 2005 -0700
+
+    [PATCH] arm: add comment about dma_supported()
+    
+    )
+    
+    
+    From: Russell King <rmk+lkml@arm.linux.org.uk>
+    
+    The ARM dma_supported() is rather basic, and I don't think it takes into
+    account everything that it should do (eg, whether the mask agrees with what
+    we'd return for GFP_DMA allocations).  Note this.
+    
+    Signed-off-by: Russell King <rmk@arm.linux.org.uk>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 7aa52f5128b06d1df9b2ee65c06d401af27da0a4
+Author: akpm@osdl.org <akpm@osdl.org>
+Date:   Sat Apr 16 15:23:56 2005 -0700
+
+    [PATCH] arm: fix help text for ixdp465
+    
+    )
+    
+    
+    From: Russell King <rmk+lkml@arm.linux.org.uk>
+    
+    For some reason, this help text was missed when the file was last audited
+    by the documentation referencing folk.  Fix this incorrect documentation
+    reference.
+    
+    Signed-off-by: Russell King <rmk@arm.linux.org.uk>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 2d137c24e9f433e37ffd10b3d5f418157589a8d2
+Author: akpm@osdl.org <akpm@osdl.org>
+Date:   Sat Apr 16 15:23:55 2005 -0700
+
+    [PATCH] arm: fix SIGBUS handling
+    
+    )
+    
+    
+    From: Russell King <rmk+lkml@arm.linux.org.uk>
+    
+    ARM wasn't raising a SIGBUS with a siginfo structure.  Fix
+    __do_user_fault() to allow us to use it for SIGBUS conditions, and arrange
+    for the sigbus path to use this.
+    
+    We need to prevent the siginfo code being called if we do not have a user
+    space context to call it, so consolidate the "user_mode()" tests.
+    
+    Thanks to Ian Campbell who spotted this oversight.
+    
+    Signed-off-by: Russell King <rmk@arm.linux.org.uk>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit baaa2c512dc1c47e3afeb9d558c5323c9240bd21
+Author: Neil Brown <neilb@cse.unsw.edu.au>
+Date:   Sat Apr 16 15:23:54 2005 -0700
+
+    [PATCH] Avoid deadlock in sync_page_io by using GFP_NOIO
+    
+    ..as sync_page_io can be called on the write-out path.
+    
+    Signed-off-by: Neil Brown <neilb@cse.unsw.edu.au>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 8d38eadb7a97f265f7b3a9e8a30df358c3a546c8
+Author: Christoph Lameter <clameter@engr.sgi.com>
+Date:   Sat Apr 16 15:23:53 2005 -0700
+
+    [PATCH] mmtimer build fix
+    
+    Signed-off-by: Christoph Lameter <clameter@sgi.com>
+    Signed-off-by: Andrew Morton <akpm@osdl.org>
+    Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+
+commit 1da177e4c3f41524e886b7f1b8a0c1fc7321cac2
+Author: Linus Torvalds <torvalds@ppc970.osdl.org>
+Date:   Sat Apr 16 15:20:36 2005 -0700
+
+    Linux-2.6.12-rc2
+    
+    Initial git repository build. I'm not bothering with the full history,
+    even though we have it. We can create a separate "historical" git
+    archive of that later if we want to, and in the meantime it's about
+    3.2GB when imported into git - space that would just make the early
+    git days unnecessarily complicated, when we don't have a lot of good
+    infrastructure for it.
+    
+    Let it rip!

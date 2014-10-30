@@ -1,0 +1,422 @@
+commit 3a2f22b7d0cc64482a91529e23c2570aa0602fa6
+Merge: 9471292 a942535
+Author: Linus Torvalds <torvalds@linux-foundation.org>
+Date:   Thu Oct 30 09:34:35 2014 -0700
+
+    Merge tag 'fbdev-fixes-3.18' of git://git.kernel.org/pub/scm/linux/kernel/git/tomba/linux
+    
+    Pull fbdev fixes from Tomi Valkeinen:
+    
+     - fix fb console option parsing
+    
+     - fixes for OMAPDSS/OMAPFB crashes related to module unloading and
+       device/driver binding & unbinding.
+    
+     - fix for OMAP HDMI PLL locking failing in certain cases
+    
+     - misc minor fixes for atmel lcdfb and OMAP
+    
+    * tag 'fbdev-fixes-3.18' of git://git.kernel.org/pub/scm/linux/kernel/git/tomba/linux:
+      omap: dss: connector-analog-tv: Add missing module device table
+      OMAPDSS: DSI: Fix PLL_SELFEQDCO field width
+      OMAPDSS: fix dispc register dump for preload & mflag
+      OMAPDSS: DISPC: fix mflag offset
+      OMAPDSS: HDMI: fix regsd write
+      OMAPDSS: HDMI: fix PLL GO bit handling
+      OMAPFB: fix releasing overlays
+      OMAPFB: fix overlay disable when freeing resources.
+      OMAPDSS: apply: wait pending updates on manager disable
+      OMAPFB: remove __exit annotation
+      OMAPDSS: set suppress_bind_attrs
+      OMAPFB: add missing MODULE_ALIAS()
+      drivers: video: fbdev: atmel_lcdfb.c: remove unnecessary header
+      video/console: Resolve several shadow warnings
+      fbcon: Fix option parsing control flow in fb_console_setup
+
+commit 94712927d06c19b785bae92db07ef84b89f156c8
+Merge: a7ca10f 3b70bdb
+Author: Linus Torvalds <torvalds@linux-foundation.org>
+Date:   Thu Oct 30 09:11:38 2014 -0700
+
+    Merge tag 'sound-3.18-rc3' of git://git.kernel.org/pub/scm/linux/kernel/git/tiwai/sound
+    
+    Pull sound fixes from Takashi Iwai:
+     "Although the diffstat looks scary, it's just because of the removal of
+      the dead code (s6000), thus it must not affect anything serious.
+    
+      Other than that, all small fixes.  The only core fix is zero-clear for
+      a PCM compat ioctl.  The rest are driver-specific, bebob, sgtl500,
+      adau1761, intel-sst, ad1889 and a few HD-audio quirks as usual"
+    
+    * tag 'sound-3.18-rc3' of git://git.kernel.org/pub/scm/linux/kernel/git/tiwai/sound:
+      ALSA: hda - Add workaround for CMI8888 snoop behavior
+      ALSA: pcm: Zero-clear reserved fields of PCM status ioctl in compat mode
+      ALSA: bebob: Uninitialized id returned by saffirepro_both_clk_src_get
+      ALSA: hda/realtek - New SSID for Headset quirk
+      ALSA: ad1889: Fix probable mask then right shift defects
+      ALSA: bebob: fix wrong decoding of clock information for Terratec PHASE 88 Rack FW
+      ALSA: hda/realtek - Update restore default value for ALC283
+      ALSA: hda/realtek - Update restore default value for ALC282
+      ASoC: fsl: use strncpy() to prevent copying of over-long names
+      ASoC: adau1761: Fix input PGA volume
+      ASoC: s6000: remove driver
+      ASoC: Intel: HSW/BDW only support S16 and S24 formats.
+      ASoC: sgtl500: Document the required supplies
+
+commit a942535d6e5c23f0015d6674d28c91dd59a720e4
+Merge: d0124f0 4ee9d9d
+Author: Tomi Valkeinen <tomi.valkeinen@ti.com>
+Date:   Thu Oct 30 14:53:49 2014 +0200
+
+    Merge branch '3.18/omapdss-fixes' into 3.18/fbdev-fixes
+
+commit 4ee9d9d2c294c175b78f8350bf6231d448597a65
+Author: Marek Belisko <marek@goldelico.com>
+Date:   Mon Oct 27 21:24:03 2014 +0100
+
+    omap: dss: connector-analog-tv: Add missing module device table
+    
+    Without that fix connector-analog-tv driver isn't probed when compiled
+    as module.
+    
+    Signed-off-by: H. Nikolaus Schaller <hns@goldelico.com>
+    Signed-off-by: Tomi Valkeinen <tomi.valkeinen@ti.com>
+
+commit a7ca10f263d7e673c74d8e0946d6b9993405cc9c
+Merge: d506aa68 4d88e6f
+Author: Linus Torvalds <torvalds@linux-foundation.org>
+Date:   Wed Oct 29 16:38:48 2014 -0700
+
+    Merge branch 'akpm' (incoming from Andrew Morton)
+    
+    Merge misc fixes from Andrew Morton:
+     "21 fixes"
+    
+    * emailed patches from Andrew Morton <akpm@linux-foundation.org>: (21 commits)
+      mm/balloon_compaction: fix deflation when compaction is disabled
+      sh: fix sh770x SCIF memory regions
+      zram: avoid NULL pointer access in concurrent situation
+      mm/slab_common: don't check for duplicate cache names
+      ocfs2: fix d_splice_alias() return code checking
+      mm: rmap: split out page_remove_file_rmap()
+      mm: memcontrol: fix missed end-writeback page accounting
+      mm: page-writeback: inline account_page_dirtied() into single caller
+      lib/bitmap.c: fix undefined shift in __bitmap_shift_{left|right}()
+      drivers/rtc/rtc-bq32k.c: fix register value
+      memory-hotplug: clear pgdat which is allocated by bootmem in try_offline_node()
+      drivers/rtc/rtc-s3c.c: fix initialization failure without rtc source clock
+      kernel/kmod: fix use-after-free of the sub_info structure
+      drivers/rtc/rtc-pm8xxx.c: rework to support pm8941 rtc
+      mm, thp: fix collapsing of hugepages on madvise
+      drivers: of: add return value to of_reserved_mem_device_init()
+      mm: free compound page with correct order
+      gcov: add ARM64 to GCOV_PROFILE_ALL
+      fsnotify: next_i is freed during fsnotify_unmount_inodes.
+      mm/compaction.c: avoid premature range skip in isolate_migratepages_range
+      ...
+
+commit 4d88e6f7d5ffc84e6094a47925870f4a130555c2
+Author: Konstantin Khlebnikov <k.khlebnikov@samsung.com>
+Date:   Wed Oct 29 14:51:02 2014 -0700
+
+    mm/balloon_compaction: fix deflation when compaction is disabled
+    
+    If CONFIG_BALLOON_COMPACTION=n balloon_page_insert() does not link pages
+    with balloon and doesn't set PagePrivate flag, as a result
+    balloon_page_dequeue() cannot get any pages because it thinks that all
+    of them are isolated.  Without balloon compaction nobody can isolate
+    ballooned pages.  It's safe to remove this check.
+    
+    Fixes: d6d86c0a7f8d ("mm/balloon_compaction: redesign ballooned pages management").
+    Signed-off-by: Konstantin Khlebnikov <k.khlebnikov@samsung.com>
+    Reported-by: Matt Mullins <mmullins@mmlx.us>
+    Cc: <stable@vger.kernel.org>	[3.17]
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit 5417421b270229bfce0795ccc99a4b481e4954ca
+Author: Andriy Skulysh <askulysh@gmail.com>
+Date:   Wed Oct 29 14:50:59 2014 -0700
+
+    sh: fix sh770x SCIF memory regions
+    
+    Resources scif1_resources & scif2_resources overlap.  Actual SCIF region
+    size is 0x10.
+    
+    This is regression from commit d850acf975be ("sh: Declare SCIF register
+    base and IRQ as resources")
+    
+    Signed-off-by: Andriy Skulysh <askulysh@gmail.com>
+    Acked-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+    Cc: Geert Uytterhoeven <geert@linux-m68k.org>
+    Cc: <stable@vger.kernel.org>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit 5a99e95b8d1cd47f6feddcdca6c71d22060df8a2
+Author: Weijie Yang <weijie.yang@samsung.com>
+Date:   Wed Oct 29 14:50:57 2014 -0700
+
+    zram: avoid NULL pointer access in concurrent situation
+    
+    There is a rare NULL pointer bug in mem_used_total_show() and
+    mem_used_max_store() in concurrent situation, like this:
+    
+    zram is not initialized, process A is a mem_used_total reader which runs
+    periodically, while process B try to init zram.
+    
+    	process A 				process B
+      access meta, get a NULL value
+    						init zram, done
+      init_done() is true
+      access meta->mem_pool, get a NULL pointer BUG
+    
+    This patch fixes this issue.
+    
+    Signed-off-by: Weijie Yang <weijie.yang@samsung.com>
+    Acked-by: Minchan Kim <minchan@kernel.org>
+    Acked-by: Sergey Senozhatsky <sergey.senozhatsky@gmail.com>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit 8aba7e0a2c02355f9a7dec629635cb7093fe0508
+Author: Mikulas Patocka <mpatocka@redhat.com>
+Date:   Wed Oct 29 14:50:55 2014 -0700
+
+    mm/slab_common: don't check for duplicate cache names
+    
+    The SLUB cache merges caches with the same size and alignment and there
+    was long standing bug with this behavior:
+    
+     - create the cache named "foo"
+     - create the cache named "bar" (which is merged with "foo")
+     - delete the cache named "foo" (but it stays allocated because "bar"
+       uses it)
+     - create the cache named "foo" again - it fails because the name "foo"
+       is already used
+    
+    That bug was fixed in commit 694617474e33 ("slab_common: fix the check
+    for duplicate slab names") by not warning on duplicate cache names when
+    the SLUB subsystem is used.
+    
+    Recently, cache merging was implemented the with SLAB subsystem too, in
+    12220dea07f1 ("mm/slab: support slab merge")).  Therefore we need stop
+    checking for duplicate names even for the SLAB subsystem.
+    
+    This patch fixes the bug by removing the check.
+    
+    Signed-off-by: Mikulas Patocka <mpatocka@redhat.com>
+    Acked-by: Christoph Lameter <cl@linux.com>
+    Cc: Pekka Enberg <penberg@kernel.org>
+    Cc: David Rientjes <rientjes@google.com>
+    Cc: Joonsoo Kim <iamjoonsoo.kim@lge.com>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit d3556babd7facb8fbc596bada0d67139e3b22330
+Author: Richard Weinberger <richard@nod.at>
+Date:   Wed Oct 29 14:50:53 2014 -0700
+
+    ocfs2: fix d_splice_alias() return code checking
+    
+    d_splice_alias() can return a valid dentry, NULL or an ERR_PTR.
+    Currently the code checks not for ERR_PTR and will cuase an oops in
+    ocfs2_dentry_attach_lock().  Fix this by using IS_ERR_OR_NULL().
+    
+    Signed-off-by: Richard Weinberger <richard@nod.at>
+    Cc: Mark Fasheh <mfasheh@suse.com>
+    Cc: Joel Becker <jlbec@evilplan.org>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit 8186eb6a799e4e32f984b55858d8e393938be0c1
+Author: Johannes Weiner <hannes@cmpxchg.org>
+Date:   Wed Oct 29 14:50:51 2014 -0700
+
+    mm: rmap: split out page_remove_file_rmap()
+    
+    page_remove_rmap() has too many branches on PageAnon() and is hard to
+    follow.  Move the file part into a separate function.
+    
+    Signed-off-by: Johannes Weiner <hannes@cmpxchg.org>
+    Reviewed-by: Michal Hocko <mhocko@suse.cz>
+    Cc: Vladimir Davydov <vdavydov@parallels.com>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit d7365e783edb858279be1d03f61bc8d5d3383d90
+Author: Johannes Weiner <hannes@cmpxchg.org>
+Date:   Wed Oct 29 14:50:48 2014 -0700
+
+    mm: memcontrol: fix missed end-writeback page accounting
+    
+    Commit 0a31bc97c80c ("mm: memcontrol: rewrite uncharge API") changed
+    page migration to uncharge the old page right away.  The page is locked,
+    unmapped, truncated, and off the LRU, but it could race with writeback
+    ending, which then doesn't unaccount the page properly:
+    
+    test_clear_page_writeback()              migration
+                                               wait_on_page_writeback()
+      TestClearPageWriteback()
+                                               mem_cgroup_migrate()
+                                                 clear PCG_USED
+      mem_cgroup_update_page_stat()
+        if (PageCgroupUsed(pc))
+          decrease memcg pages under writeback
+    
+      release pc->mem_cgroup->move_lock
+    
+    The per-page statistics interface is heavily optimized to avoid a
+    function call and a lookup_page_cgroup() in the file unmap fast path,
+    which means it doesn't verify whether a page is still charged before
+    clearing PageWriteback() and it has to do it in the stat update later.
+    
+    Rework it so that it looks up the page's memcg once at the beginning of
+    the transaction and then uses it throughout.  The charge will be
+    verified before clearing PageWriteback() and migration can't uncharge
+    the page as long as that is still set.  The RCU lock will protect the
+    memcg past uncharge.
+    
+    As far as losing the optimization goes, the following test results are
+    from a microbenchmark that maps, faults, and unmaps a 4GB sparse file
+    three times in a nested fashion, so that there are two negative passes
+    that don't account but still go through the new transaction overhead.
+    There is no actual difference:
+    
+     old:     33.195102545 seconds time elapsed       ( +-  0.01% )
+     new:     33.199231369 seconds time elapsed       ( +-  0.03% )
+    
+    The time spent in page_remove_rmap()'s callees still adds up to the
+    same, but the time spent in the function itself seems reduced:
+    
+         # Children      Self  Command        Shared Object       Symbol
+     old:     0.12%     0.11%  filemapstress  [kernel.kallsyms]   [k] page_remove_rmap
+     new:     0.12%     0.08%  filemapstress  [kernel.kallsyms]   [k] page_remove_rmap
+    
+    Signed-off-by: Johannes Weiner <hannes@cmpxchg.org>
+    Acked-by: Michal Hocko <mhocko@suse.cz>
+    Cc: Vladimir Davydov <vdavydov@parallels.com>
+    Cc: <stable@vger.kernel.org>	[3.17.x]
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit 3a3c02ecf7f2852f122d6d16fb9b3d9cb0c6f201
+Author: Johannes Weiner <hannes@cmpxchg.org>
+Date:   Wed Oct 29 14:50:46 2014 -0700
+
+    mm: page-writeback: inline account_page_dirtied() into single caller
+    
+    A follow-up patch would have changed the call signature.  To save the
+    trouble, just fold it instead.
+    
+    Signed-off-by: Johannes Weiner <hannes@cmpxchg.org>
+    Acked-by: Michal Hocko <mhocko@suse.cz>
+    Cc: Vladimir Davydov <vdavydov@parallels.com>
+    Cc: <stable@vger.kernel.org>	[3.17.x]
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit ea5d05b34aca25c066e0699512d0ffbd8ee6ac3e
+Author: Jan Kara <jack@suse.cz>
+Date:   Wed Oct 29 14:50:44 2014 -0700
+
+    lib/bitmap.c: fix undefined shift in __bitmap_shift_{left|right}()
+    
+    If __bitmap_shift_left() or __bitmap_shift_right() are asked to shift by
+    a multiple of BITS_PER_LONG, they will try to shift a long value by
+    BITS_PER_LONG bits which is undefined.  Change the functions to avoid
+    the undefined shift.
+    
+    Coverity id: 1192175
+    Coverity id: 1192174
+    Signed-off-by: Jan Kara <jack@suse.cz>
+    Cc: Rasmus Villemoes <linux@rasmusvillemoes.dk>
+    Cc: <stable@vger.kernel.org>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit 5a6e7599d3f8000496068b12276492311efad5ea
+Author: Pavel Machek <pavel@ucw.cz>
+Date:   Wed Oct 29 14:50:42 2014 -0700
+
+    drivers/rtc/rtc-bq32k.c: fix register value
+    
+    Fix register value in bq32000 trickle charging.
+    
+    Mike reported that I'm using wrong value in one trickle-charging case,
+    and after checking docs, I must admit he's right.
+    
+    Signed-off-by: Pavel Machek <pavel@denx.de>
+    Reported-by: Mike Bremford <mike@bfo.com>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit 35dca71c1fad13616d9ea336c05730071793b63a
+Author: Yasuaki Ishimatsu <isimatu.yasuaki@jp.fujitsu.com>
+Date:   Wed Oct 29 14:50:40 2014 -0700
+
+    memory-hotplug: clear pgdat which is allocated by bootmem in try_offline_node()
+    
+    When hot adding the same memory after hot removal, the following
+    messages are shown:
+    
+      WARNING: CPU: 20 PID: 6 at mm/page_alloc.c:4968 free_area_init_node+0x3fe/0x426()
+      ...
+      Call Trace:
+        dump_stack+0x46/0x58
+        warn_slowpath_common+0x81/0xa0
+        warn_slowpath_null+0x1a/0x20
+        free_area_init_node+0x3fe/0x426
+        hotadd_new_pgdat+0x90/0x110
+        add_memory+0xd4/0x200
+        acpi_memory_device_add+0x1aa/0x289
+        acpi_bus_attach+0xfd/0x204
+        acpi_bus_attach+0x178/0x204
+        acpi_bus_scan+0x6a/0x90
+        acpi_device_hotplug+0xe8/0x418
+        acpi_hotplug_work_fn+0x1f/0x2b
+        process_one_work+0x14e/0x3f0
+        worker_thread+0x11b/0x510
+        kthread+0xe1/0x100
+        ret_from_fork+0x7c/0xb0
+    
+    The detaled explanation is as follows:
+    
+    When hot removing memory, pgdat is set to 0 in try_offline_node().  But
+    if the pgdat is allocated by bootmem allocator, the clearing step is
+    skipped.
+    
+    And when hot adding the same memory, the uninitialized pgdat is reused.
+    But free_area_init_node() checks wether pgdat is set to zero.  As a
+    result, free_area_init_node() hits WARN_ON().
+    
+    This patch clears pgdat which is allocated by bootmem allocator in
+    try_offline_node().
+    
+    Signed-off-by: Yasuaki Ishimatsu <isimatu.yasuaki@jp.fujitsu.com>
+    Cc: Zhang Zhen <zhenzhang.zhang@huawei.com>
+    Cc: Wang Nan <wangnan0@huawei.com>
+    Cc: Tang Chen <tangchen@cn.fujitsu.com>
+    Reviewed-by: Toshi Kani <toshi.kani@hp.com>
+    Cc: Dave Hansen <dave.hansen@intel.com>
+    Cc: David Rientjes <rientjes@google.com>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
+commit eaf3a659086e1d1d85dc8fbce4007e3c9076e0b3
+Author: Marek Szyprowski <m.szyprowski@samsung.com>
+Date:   Wed Oct 29 14:50:38 2014 -0700
+
+    drivers/rtc/rtc-s3c.c: fix initialization failure without rtc source clock
+    
+    Fix unconditional initialization failure on non-exynos3250 SoCs.
+    
+    Commit df9e26d093d3 ("rtc: s3c: add support for RTC of Exynos3250 SoC")
+    introduced rtc source clock support, but also added initialization
+    failure on SoCs, which doesn't need such clock.
+    
+    Signed-off-by: Marek Szyprowski <m.szyprowski@samsung.com>
+    Reviewed-by: Chanwoo Choi <cw00.choi@samsung.com>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+
