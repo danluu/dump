@@ -25,9 +25,29 @@ function increment_author_word(authors::Dict{String,Dict{String,Int}}, word::Str
     increment_word(authors[author], word)
 end
 
+function bogus_word(word::String)
+    ismatch(r"^<.*>$", word)
+end
+
+# Sort of bad, since these can demarcate things inside real identifiers.
+# But it also creates a ton of noise and doing this in a smart way seems annoying.
+function strip_punct(word::String)
+    word = replace(word, r"\(","")
+    word = replace(word, r"\)","")
+    word = replace(word, r"\.","")
+    word = replace(word, r",","")
+    word = replace(word, r"\"","")
+    word = replace(word, r"\*","")
+    word = replace(word, r"'","")
+    word = replace(word, r"`","")
+    word = replace(word, r"!","")
+    word = replace(word, r"^1$","")
+end
+
 # Takes a full commit message, minus the commit hash.
+# TODO: handle old-style merge commits with From:
 function process_chunk(chunk::String, all_words::Dict{String,Int}, author_words::Dict{String,Dict{String,Int}}, num_author_commits::Dict{String,Int})
-    # TODO: handle old-style merge commits with From:
+    exists_in_chunk = Dict{String, Bool}()
 
     # Ignore merge commits.
     if ismatch(r"^Merge:", chunk)
@@ -37,7 +57,7 @@ function process_chunk(chunk::String, all_words::Dict{String,Int}, author_words:
     author = ""
     author_match = match(r"^Author.*<(.*)@.*>\n",chunk)
     if author_match != nothing
-        author = author_match.captures[1]
+        author = lowercase(author_match.captures[1])
     else
         # fails on non-standard email address formats. Not many of these.
         # Ignoring for now.
@@ -47,17 +67,36 @@ function process_chunk(chunk::String, all_words::Dict{String,Int}, author_words:
     # TODO: attribute some commits to other people.
 
     # println("DEBUG--------------------------CHUNK")
-    chunk_words = split(chunk)
+    first_line = search(chunk, '\n')                # strip Author
+    second_line = search(chunk, '\n', first_line+1) # strip Date
+
+    # search returns a BoundsError if not found, so we have to try/catch this.
+    # Seems like an API mistake/bug since this isn't how search for a char
+    # behaves
+    chunk_words = Array(String,0)
+    try
+        sign_off = search(chunk,r"Signed-off-by:")[1]-1
+        # println(chunk[second_line:sign_off])
+        chunk_words = split(chunk[second_line:sign_off])
+    catch
+        # println(chunk[second_line:end])
+        chunk_words = split(chunk[second_line:end])
+    end
 
     increment_word(num_author_commits,author)
 
     for w in chunk_words
-        increment_word(all_words, w)
-        increment_author_word(author_words, w, author)
+        if !bogus_word(w)
+            exists_in_chunk[lowercase(strip_punct(w))] = true
+        end
+        # increment_author_word(author_words, w, author)
     end
 
-    println(length(chunk_words))
-    return length(chunk_words)
+    for (w,_) in exists_in_chunk
+            increment_word(all_words, w)
+            increment_author_word(author_words, w, author)
+    end
+    return 1
 end
 
 function sort_authors(num_author_commits::Dict{String,Int})
@@ -77,7 +116,9 @@ function top_words_for_author(all_words::Dict{String,Int}, their_words::Dict{Str
     i = 1
     for (word, count) in their_words
         try 
-            idf = log(num_words / all_words[word])
+            # println("IDF: $word $count all: $num_words $(all_words[word])\n")
+            ratio = (1+num_words) / all_words[word]
+            idf = ratio > .1 ? 0 : log(ratio)
             tf_idf = count * idf
             word_arr[i] = (word, tf_idf)
         catch
@@ -104,7 +145,7 @@ function read_log(fname::String)
     author_words = Dict{String,Dict{String,Int}}()
     all_words = Dict{String,Int}()
     num_author_commits = Dict{String,Int}()
-    num_words = 0
+    num_chunks = 0
 
     f = open(fname)
     chunk = ""
@@ -113,7 +154,7 @@ function read_log(fname::String)
         line = readline(f)
         # Start of new commit. Previous chunk is complete and should be processed.
         if ismatch(r"^commit ", line)
-            num_words += process_chunk(chunk, all_words, author_words, num_author_commits)
+            num_chunks += process_chunk(chunk, all_words, author_words, num_author_commits)
             chunk = ""
         else
             chunk *= line
@@ -122,10 +163,11 @@ function read_log(fname::String)
     
     sorted_authors = sort_authors(num_author_commits)
     for (author,count) in sorted_authors
-        top_words_for_author(all_words, author_words[author], author, num_words)
+        top_words_for_author(all_words, author_words[author], author, num_chunks)
     end
 end
 
 #println(read_log("linux-log-mini-recent"))
 #println(read_log("linux-log-mini-old"))
 print(read_log("linux-log"))
+#print(read_log("linux-log-small"))
