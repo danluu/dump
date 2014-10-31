@@ -1,3 +1,5 @@
+# This is a total hack. You probably don't want to read this.
+
 # Increment a count in a dict.
 # This has its own function to encapsulate some heinous bug workaround
 # code.
@@ -17,6 +19,7 @@ function increment_word(words::Dict{String,Int}, word::String)
     end
 end
 
+# DefaultDict, basically.
 function increment_author_word(authors::Dict{String,Dict{String,Int}}, word::String, author::String)
     if !haskey(authors, author)
         authors[author] = Dict{String,Int}()
@@ -25,10 +28,12 @@ function increment_author_word(authors::Dict{String,Dict{String,Int}}, word::Str
     increment_word(authors[author], word)
 end
 
+# Ignore email addresses
 function bogus_word(word::String)
     ismatch(r"^<.*>$", word)
 end
 
+# Strip stuff like commas.
 # Sort of bad, since these can demarcate things inside real identifiers.
 # But it also creates a ton of noise and doing this in a smart way seems annoying.
 function strip_punct(word::String)
@@ -51,7 +56,7 @@ function process_chunk(chunk::String, all_words::Dict{String,Int}, author_words:
 
     # Ignore merge commits.
     if ismatch(r"^Merge:", chunk)
-        return 0
+        return 0 # number of chunks processed = 0
     end
     
     author = ""
@@ -61,30 +66,26 @@ function process_chunk(chunk::String, all_words::Dict{String,Int}, author_words:
     else
         # fails on non-standard email address formats. Not many of these.
         # Ignoring for now.
-        # println("AUTHOR MATCH FAIL------------------------")
-        # println(chunk)
     end
-    # TODO: attribute some commits to other people.
 
     # println("DEBUG--------------------------CHUNK")
     first_line = search(chunk, '\n')                # strip Author
     second_line = search(chunk, '\n', first_line+1) # strip Date
 
     # search returns a BoundsError if not found, so we have to try/catch this.
-    # Seems like an API mistake/bug since this isn't how search for a char
-    # behaves
+    # Seems like an API mistake/bug since this inconsistent with other 'search'
+    # methods.
     chunk_words = Array(String,0)
     try
         sign_off = search(chunk,r"Signed-off-by:")[1]-1
-        # println(chunk[second_line:sign_off])
         chunk_words = split(chunk[second_line:sign_off])
     catch
-        # println(chunk[second_line:end])
         chunk_words = split(chunk[second_line:end])
     end
 
     increment_word(num_author_commits,author)
 
+    # only count each word once per chunk.
     for w in chunk_words
         if !bogus_word(w)
             exists_in_chunk[lowercase(strip_punct(w))] = true
@@ -96,11 +97,11 @@ function process_chunk(chunk::String, all_words::Dict{String,Int}, author_words:
             increment_word(all_words, w)
             increment_author_word(author_words, w, author)
     end
-    return 1
+    return 1 # number of chunks processed = 1
 end
 
+# Take dict and return a sorted array of (String, Int) tuples, sorted by the Int.
 function sort_authors(num_author_commits::Dict{String,Int})
-    # Make an array and use built-in sort on number of commits per author
     author_arr = Array((String,Int), length(num_author_commits))
     i = 1
     for (author,num) in num_author_commits
@@ -116,13 +117,13 @@ function top_words_for_author(all_words::Dict{String,Int}, their_words::Dict{Str
     i = 1
     for (word, count) in their_words
         try 
-            # println("IDF: $word $count all: $num_words $(all_words[word])\n")
+            # "1+" is to avoid degenerate case that should never happen anyway.
             ratio = (1+num_words) / all_words[word]
-            idf = ratio > .1 ? 0 : log(ratio)
+            idf = ratio > .1 ? 0 : log(ratio) # secondary filter for common words.
             tf_idf = count * idf
             word_arr[i] = (word, tf_idf)
         catch
-            # Unicode string hash bug
+            # try/catch is workaround for unicode string hash bug
             word_arr[i] = (word, 0)
         end
         i += 1
@@ -141,6 +142,8 @@ function top_words_for_author(all_words::Dict{String,Int}, their_words::Dict{Str
     println("")
 end
 
+# Reads a git commit log. Does some magic that assumes linux kernel format, but shouldn't break on an arbitrary
+# log
 function read_log(fname::String)
     author_words = Dict{String,Dict{String,Int}}()
     all_words = Dict{String,Int}()
@@ -167,7 +170,4 @@ function read_log(fname::String)
     end
 end
 
-#println(read_log("linux-log-mini-recent"))
-#println(read_log("linux-log-mini-old"))
-print(read_log("linux-log"))
-#print(read_log("linux-log-small"))
+print(read_log(ARGS[1]))
