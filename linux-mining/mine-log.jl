@@ -31,13 +31,10 @@ function process_chunk(chunk::String, all_words::Dict{String,Int}, author_words:
 
     # Ignore merge commits.
     if ismatch(r"^Merge:", chunk)
-        return
+        return 0
     end
     
     author = ""
-
-    # println("DEBUG--------------------------CHUNK")
-    chunk_words = split(chunk)
     author_match = match(r"^Author.*<(.*)@.*>\n",chunk)
     if author_match != nothing
         author = author_match.captures[1]
@@ -48,12 +45,19 @@ function process_chunk(chunk::String, all_words::Dict{String,Int}, author_words:
         # println(chunk)
     end
     # TODO: attribute some commits to other people.
+
+    # println("DEBUG--------------------------CHUNK")
+    chunk_words = split(chunk)
+
     increment_word(num_author_commits,author)
 
     for w in chunk_words
         increment_word(all_words, w)
         increment_author_word(author_words, w, author)
     end
+
+    println(length(chunk_words))
+    return length(chunk_words)
 end
 
 function sort_authors(num_author_commits::Dict{String,Int})
@@ -67,10 +71,40 @@ function sort_authors(num_author_commits::Dict{String,Int})
     sort!(author_arr,by= x -> -x[2])
 end
 
+# Horribly abusing tf-idf. This is really not what it's intended for.
+function top_words_for_author(all_words::Dict{String,Int}, their_words::Dict{String,Int}, author::String, num_words::Int)
+    word_arr = Array((String,Float64), length(their_words))
+    i = 1
+    for (word, count) in their_words
+        try 
+            idf = log(num_words / all_words[word])
+            tf_idf = count * idf
+            word_arr[i] = (word, tf_idf)
+        catch
+            # Unicode string hash bug
+            word_arr[i] = (word, 0)
+        end
+        i += 1
+    end
+
+    print("$author")
+    sort!(word_arr,by= x -> -x[2])
+    i = 0
+    for (word, count) in word_arr
+        print(",$word")
+        i += 1
+        if i > 20
+            break
+        end
+    end
+    println("")
+end
+
 function read_log(fname::String)
     author_words = Dict{String,Dict{String,Int}}()
     all_words = Dict{String,Int}()
     num_author_commits = Dict{String,Int}()
+    num_words = 0
 
     f = open(fname)
     chunk = ""
@@ -79,7 +113,7 @@ function read_log(fname::String)
         line = readline(f)
         # Start of new commit. Previous chunk is complete and should be processed.
         if ismatch(r"^commit ", line)
-            process_chunk(chunk, all_words, author_words, num_author_commits)
+            num_words += process_chunk(chunk, all_words, author_words, num_author_commits)
             chunk = ""
         else
             chunk *= line
@@ -87,6 +121,9 @@ function read_log(fname::String)
     end
     
     sorted_authors = sort_authors(num_author_commits)
+    for (author,count) in sorted_authors
+        top_words_for_author(all_words, author_words[author], author, num_words)
+    end
 end
 
 #println(read_log("linux-log-mini-recent"))
