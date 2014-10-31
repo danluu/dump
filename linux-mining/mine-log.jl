@@ -46,6 +46,7 @@ function strip_punct(word::String)
     word = replace(word, r"'","")
     word = replace(word, r"`","")
     word = replace(word, r"!","")
+    word = replace(word, r";","")
     word = replace(word, r"^1$","")
 end
 
