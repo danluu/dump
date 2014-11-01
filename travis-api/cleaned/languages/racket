@@ -1,0 +1,2119 @@
+2014-10-05 07:19:05 #2939 errored:   master make 2htdp/image's equality function ignore baselines
+2014-10-04 17:00:06 #2937 passed:    master require only original-enough? syntax for require annotations
+2014-10-04 16:44:57 #2936 passed:    master add show-content as a simple way to get started with the
+2014-10-04 09:30:39 #2935 passed:    master fix syntax error check in 'bitmap'
+2014-10-04 05:25:13 #2934 passed:    master Add more XSync to clear the queue to avoid crashes with repeated use
+2014-10-03 22:15:03 #2933 passed:    master move the module browser into the drracket-tool-lib pkg
+2014-10-03 15:55:16 #2932 passed:    master use a new strategy for computing the baseline for the various beside functions
+2014-10-03 15:16:55 #2931 passed:    master Added support for core OpenGL profiles in Linux (see `set-legacy?`)
+2014-10-03 15:08:07 #2930 passed:    master Change prose about RacketCon videos.
+2014-10-03 12:59:09 #2929 passed:    master db: stick to ASCII for pg generated names
+2014-10-03 12:04:01 #2928 passed:    master Use gl-config% multisample size as an upper bound instead of a lower bound
+2014-10-03 10:16:06 #2927 passed:    master disable this file in 'raco test'
+2014-10-03 07:50:18 #2926 passed:    master fix UDP improvement for Windows
+2014-10-03 06:49:28 #2925 passed:    master new unix bitmaps for redex tests to sate drdr
+2014-10-02 20:15:27 #2924 passed:    master remove equality to make the program easier to read
+2014-10-02 18:48:18 #2923 errored:   master add support for macro-specified tooltips to check syntax
+2014-10-02 17:02:31 #2922 passed:    master Only ask for multisampling of GLX 1.4 or higher; make getting context atomic
+2014-10-02 13:00:17 #2921 passed:    master John's slides.
+2014-10-02 12:34:56 #2920 passed:    master racket/gui Cocoa: fix test for 10.9
+2014-10-02 11:17:26 #2919 failed:    master more Rackety, useless exn msg
+2014-10-02 10:52:17 #2918 passed:    master Add Fogus's slides.
+2014-10-01 21:54:18 #2917 passed:    master Added warning about GLX choosing indirect rendering
+2014-10-01 21:45:01 #2916 passed:    master fix some random generators broken when refactoring things to improve contract-stronger?
+2014-10-01 14:18:04 #2915 passed:    master JIT: fix allocation of `letrec`-bound closure over unboxed flonums
+2014-10-01 12:55:50 #2914 passed:    master Fix types for eq/eqv/equal-hash-code
+2014-10-01 09:56:30 #2913 passed:    master syntax/parse: support pvar:literal patterns
+2014-10-01 10:51:36 #2912 passed:    master call/input-url - support headers and polymorphism
+2014-10-01 08:09:25 #2911 failed:    master Removing separate processes and trying to get faster turn-around, plus a few little things
+2014-09-30 21:03:20 #2910 passed:    master change the recursive contract stronger implementation
+2014-09-30 20:57:49 #2909 passed:    master Fix embarrassing bug in OO subtyping
+2014-09-30 17:33:25 #2908 passed:    master redex: try harder when checking non-terminals
+2014-09-30 15:23:23 #2907 passed:    master Add Neil's slides.
+2014-09-30 10:11:01 #2906 passed:    master update docs for syntax pattern expanders
+2014-09-29 22:24:08 #2905 passed:    master 2htdp/universe: adjust world `loop` to make it a loop
+2014-09-29 15:04:17 #2903 passed:    master Add links to videos, and add links to slides/code in the schedule.
+2014-09-29 11:08:44 #2902 failed:    master Revert "fix a bug in f669c47c1"
+2014-09-29 09:03:57 #2901 failed:    master improve magic opening square bracket for for/fold
+2014-09-28 18:27:32 #2899 passed:    master added secret state code for Oliver
+2014-09-28 17:15:18 #2898 passed:    master added for/fold back into the pref defaults for the magic opening
+2014-09-28 15:17:59 #2897 passed:    master fix for/fold indentation
+2014-09-28 09:42:00 #2896 passed:    master DrRacket: drop numpad Enter treatment as force-evaluation
+2014-09-27 22:04:42 #2895 passed:    master Windows: fix handling of junctions as links
+2014-09-26 07:46:28 #2894 passed:    master racket/place: fix nested-place termination
+2014-09-25 17:43:55 #2893 passed:    master add hash/c stronger
+2014-09-25 19:05:18 #2892 passed:    master racket/gui Windows: rely on patched Cairo instead of workaround
+2014-09-25 16:24:19 #2891 passed:    master More accurate captions.
+2014-09-25 15:14:56 #2890 failed:    master racket/gui: use cairo_paint() to copy buffer to screen
+2014-09-24 18:35:15 #2889 passed:    master Jack Clay: use concatenate instead of juxtapose, better for students
+2014-09-24 18:21:43 #2888 passed:    master add stronger for parametric->/c
+2014-09-24 09:42:51 #2887 passed:    master racket/gui Unix: avoid startup output
+2014-09-24 09:20:03 #2886 failed:    master Video links, RacketCon is past tense.
+2014-09-24 06:52:09 #2885 passed:    master add a stronger to class/c
+2014-09-23 17:00:47 #2884 passed:    master fix parsing for when dot produces numbers in scientific notation
+2014-09-22 21:57:45 #2882 passed:    master improve contract stronger for promise/c
+2014-09-22 15:23:39 #2880 passed:    master fix a bug in f669c47c1
+2014-09-22 13:01:02 #2879 failed:    master improve contract-stronger for list-related contracts
+2014-09-21 21:04:00 #2878 passed:    master improve stronger for flat-named-contract
+2014-09-21 17:55:49 #2877 passed:    master closes PR 14744 , Rackety
+2014-09-21 16:56:20 #2876 passed:    master improve chaperone-procedure error messages a little
+2014-09-21 12:16:00 #2875 failed:    master chaperones: allow procedure chaperones that supplies no redirection
+2014-09-21 06:15:07 #2874 passed:    master improve contract-stronger for instanceof/c
+2014-09-21 00:58:25 #2873 passed:    master Fixes to FrTime dynamic value snips (for textual content, at least).
+2014-09-20 09:54:30 #2871 passed:    master Comment out deinprogramm/image test cases with dubious semantics, that
+2014-09-20 09:11:35 #2870 passed:    master Synch German string constants with latest.
+2014-09-19 23:30:07 #2869 failed:    master add a proper stronger implementation based for recursive-contract
+2014-09-19 14:11:30 #2868 passed:    master Fix test failure in `archive` tests.
+2014-09-19 13:19:33 #2867 failed:    master docs and tests related to a0880f740
+2014-09-19 12:25:25 #2865 passed:    master Add `raco pkg archive`.
+2014-09-19 08:29:16 #2863 passed:    master Fix to the RacketCon web page source.
+2014-09-18 22:22:41 #2862 passed:    master RacketCon Logistics info.
+2014-09-18 06:24:11 #2861 passed:    master avoid stack-overflow in scheduler-triggered foreign calls
+2014-09-17 11:52:04 #2859 passed:    master redex: fix recursive calls to use premises clauses
+2014-09-16 15:38:05 #2858 passed:    master Fix type for text:line-numbers-mixin
+2014-09-16 14:56:18 #2857 passed:    master Add more typed bindings for framework and for GUI
+2014-09-16 14:21:49 #2856 passed:    master redex: favor recursive rules above the bound
+2014-09-14 10:02:31 #2855 passed:    master fix "r6rs-test" dependency declaration
+2014-09-14 10:01:20 #2854 passed:    master fix `peek` implementation in R6RS input ports
+2014-09-14 02:10:59 #2853 passed:    master Unbreak the build on FreeBSD 10.
+2014-09-13 10:42:11 #2852 passed:    master Fix the TR fix in efd482c30ff80f
+2014-09-12 18:34:14 #2851 failed:    master fixed docs for integer-sqrt, as reported on users, take 2
+2014-09-12 18:08:29 #2850 passed:    master unbreak macro stepper
+2014-09-12 17:33:36 #2849 passed:    master Fix unannotated defines with bad number of values
+2014-09-12 17:15:42 #2848 passed:    master adjust drracket's online expansion to terminate out-of-memory expansion attempts
+2014-09-12 15:55:36 #2847 passed:    master Fix TR reference discussion of filters
+2014-09-12 15:33:53 #2846 passed:    master fix PLTSTRINGCONSTANTS printouts
+2014-09-12 15:08:27 #2845 passed:    master restore accidentally removed GC check
+2014-09-12 10:11:24 #2844 passed:    master Fix more doc links.
+2014-09-11 10:07:39 #2842 passed:    master Fix contract.
+2014-09-10 16:58:52 #2841 passed:    master make some arity error messages for ->i contracted functions
+2014-09-10 13:32:00 #2840 passed:    master Fix the fix to type queries.
+2014-09-09 15:38:50 #2838 passed:    master Fix type queries.
+2014-09-08 21:35:48 #2837 errored:   master fixed error message according to Oliver Flatt's suggestion, take 2
+2014-09-08 20:36:30 #2836 errored:   master Fix some typos
+2014-09-08 16:30:13 #2832 passed:    master Added trace-define, trace-let, trace-lambda
+2014-09-08 15:36:00 #2831 passed:    master Fix opt-lambda property on opt-lambda methods
+2014-09-08 10:00:56 #2830 passed:    master improve parametric->/c's cooperation with a few bells and whistles in contract error reporting
+2014-09-08 07:06:37 #2829 passed:    master optimizer: move more things inside let and begin
+2014-09-07 20:04:42 #2825 passed:    master JIT: fix problem with arity checking with >= 25 arguments
+2014-09-07 16:27:01 #2824 passed:    master Handle methods that have opt args but no kws
+2014-09-07 15:35:45 #2823 passed:    master Open Require Path: ignore .bak files under windows, but ~ files elsewhere
+2014-09-07 14:57:32 #2822 passed:    master Fix use of tc-literal
+2014-09-07 09:25:34 #2821 passed:    master Handle data descriptor signatures in file/unzip
+2014-09-06 21:48:13 #2820 passed:    master Fixes and additions for some GUI class types
+2014-09-06 16:40:36 #2819 passed:    master Adjust types for stx-map and syntax->list
+2014-09-05 23:07:59 #2818 passed:    master string-normalize-...: fix memcpy that should be memmove
+2014-09-05 18:54:24 #2816 passed:    master treat OS page manager (especially Linux) more gently
+2014-09-05 17:54:51 #2815 passed:    master module caching: ensure consistency of directory paths
+2014-09-05 14:56:11 #2814 failed:    master check result of mprotect()
+2014-09-05 11:44:26 #2811 failed:    master ffi/unsafe win32: fix inefficiency in call-in-orig-thread mode
+2014-09-04 17:08:47 #2808 failed:    master minor cleanup on thread termination
+2014-09-04 11:29:21 #2805 failed:    master Couple of grammar fixes.
+2014-09-04 09:45:11 #2804 failed:    master Fix typo in math/matrix docs.
+2014-09-03 09:55:37 #2801 failed:    master Revert "Fix PR14692"
+2014-09-03 09:45:38 #2800 failed:    master Fix PR14692
+2014-09-03 05:27:36 #2799 failed:    master fix module-code caching
+2014-09-02 13:15:04 #2798 passed:    master Fix last commit for hv-alternating algorithm
+2014-09-02 11:23:06 #2795 passed:    master Add edge-width option to tree-layout
+2014-09-02 05:23:01 #2793 passed:    master fix typo, Closes PR14720
+2014-09-01 10:48:30 #2789 passed:    master make font size changes also change the font of the edge
+2014-09-01 09:43:53 #2788 passed:    master interpolation for recorded animation; for David for now
+2014-09-01 08:29:27 #2787 passed:    master Windows installer: uninstall "collects"
+2014-09-01 05:09:32 #2786 passed:    master make installers: avoid dot-files (like ".gitignore") in installers
+2014-09-01 04:12:48 #2785 passed:    master fix dot layout when children are deleted
+2014-08-31 10:37:23 #2782 passed:    master racket/gui keymap: adjust handling of 'control, etc., events
+2014-08-29 21:13:04 #2778 passed:    master Add `get-all-pkg-scopes`.
+2014-08-29 16:29:29 #2776 passed:    master racket/gui cocoa: adjust control font for 10.10
+2014-08-29 15:45:28 #2775 passed:    master Altered `keymap%` to not claim to handle key events that it doesn't
+2014-08-29 15:15:13 #2774 passed:    master ffi/unsafe/objc: fix `objc-is-a?` to recognize subclass instances
+2014-08-29 11:15:41 #2773 passed:    master racket/gui gtk: workaround problem with async IBus input method
+2014-08-28 10:38:21 #2770 passed:    master Remove out of date OC docs and replace with pointer to the OC package.
+2014-08-27 14:29:57 #2769 passed:    master Fix links on RacketCon web page.
+2014-08-26 16:51:20 #2767 passed:    master make server: snapshot source catalog, set local cache
+2014-08-26 11:07:37 #2764 passed:    master ffi/unsafe: changed the way `ffi-lib` uses a version number with ".dll"
+2014-08-26 10:01:33 #2763 passed:    master Link talks in schedule with their description.
+2014-08-26 08:55:26 #2762 passed:    master Treat fully-annotated plain `define` as an annotated defintion.
+2014-08-25 18:46:12 #2760 passed:    master raco setup: fix ".dylib" references on install
+2014-08-25 17:23:47 #2759 passed:    master RacketCon schedule.
+2014-08-24 08:49:06 #2757 passed:    master racket/gui: change placement of children in `panel%` and `pane%`
+2014-08-24 02:15:23 #2756 passed:    master add an optional argument example to ->i docs
+2014-08-23 13:18:43 #2754 passed:    master optimizer: another ((begin ... proc) x) to (begin ... (proc x))
+2014-08-22 14:50:54 #2752 passed:    master scribble/srcdoc: add `form-doc`
+2014-08-21 16:21:18 #2750 passed:    master Allow type annotations after for clauses in the for macros.
+2014-08-21 12:02:49 #2749 passed:    master optimizer: more optimizations for unary operations
+2014-08-21 10:16:11 #2748 failed:    master Mac OS X PPC: fix dylib paths
+2014-08-21 08:53:09 #2747 passed:    master update dns tests based on change at nwu
+2014-08-20 22:27:10 #2746 passed:    master add slide-pict/center
+2014-08-20 18:42:16 #2745 passed:    master fix cross compile on QNX
+2014-08-20 12:47:05 #2743 passed:    master Update PLT sites
+2014-08-19 08:05:17 #2736 passed:    master factored out a common pattern in tests
+2014-08-18 12:56:01 #2734 passed:    master Fix URL query parsing in Firefox.
+2014-08-15 10:30:40 #2731 passed:    master Add net/http-client to Typed Racket
+2014-08-15 10:17:10 #2730 passed:    master package-system docs: add FAQ entry on installing without documentation
+2014-08-14 12:01:53 #2727 passed:    master remove accidentally added files
+2014-08-14 10:02:22 #2726 errored:   master racket/gui: fix problems with canvas autoscroll
+2014-08-13 07:42:52 #2724 errored:   master reegxp-match: fix problem with lazy string decoding and output port
+2014-08-13 01:35:54 #2723 errored:   master build less when a pre-built `racket` is supplied
+2014-08-12 16:43:45 #2719 passed:    master Fix TR type for current-check-around
+2014-08-12 12:15:10 #2718 passed:    master windows: better approach to manifest
+2014-08-12 10:49:36 #2717 passed:    master Revert "windows: remove custom manifest"
+2014-08-12 10:01:25 #2716 passed:    master fix no-places, no-futures build
+2014-08-12 04:12:28 #2715 passed:    master remove accidentally added file
+2014-08-12 02:49:19 #2714 passed:    master avoid NULL argument to memcpy()
+2014-08-11 23:16:55 #2713 passed:    master racketcgc: use SenoraGC instead of Boehm GC by default
+2014-08-11 17:22:43 #2712 passed:    master Change RacketCon talk title.
+2014-08-11 05:28:09 #2711 passed:    master racket/place: protect place-creation bindings
+2014-08-11 03:38:58 #2710 passed:    master web pages: update news to v6.1
+2014-08-11 01:59:50 #2709 passed:    master fix "props" for "pict-snip-pkgs"
+2014-08-10 06:55:40 #2708 passed:    master fix rule reference in tutoral, also spell-check
+2014-08-10 06:54:41 #2707 passed:    master fix r6rs link just link in 8d3fd26c6
+2014-08-09 23:17:36 #2706 passed:    master stop doing slow computation whose results were useless
+2014-08-08 14:29:05 #2703 passed:    master Add sponsors to RacketCon page.
+2014-08-08 00:42:52 #2702 passed:    master fix SRFI-62 link
+2014-08-07 08:40:53 #2701 passed:    master use path->relative-string/library's cache argument to
+2014-08-07 03:09:55 #2700 passed:    master add examples directly to judgment-holds docs
+2014-08-06 02:51:43 #2699 passed:    master racket/draw and racket/snip: avoid some undefined-checking wrappers
+2014-08-05 10:38:16 #2698 passed:    master meta/new-web: handle versionless source variant
+2014-08-05 01:57:03 #2697 passed:    master modernize stlc.rkt and eliminate ellipses so that well-typed generation works
+2014-08-03 13:17:53 #2696 passed:    master Synch German string constants with latest.
+2014-08-02 19:28:25 #2694 passed:    master a little more extra info for drdr
+2014-08-02 14:04:21 #2693 passed:    master Use blueboxes cache in xrepl
+2014-08-02 12:38:08 #2689 passed:    master v6.1 announcement text
+2014-08-02 09:13:01 #2687 passed:    master add a will-executor example
+2014-08-02 08:13:17 #2686 passed:    master signatures broke a while back and nobody uses then in *SL
+2014-08-02 07:28:43 #2685 passed:    master Show blueboxes info in xrepl with ,describe
+2014-08-02 06:23:25 #2684 passed:    master change a hash so it doesn't map from syntax objects directly, but
+2014-08-02 02:33:04 #2683 passed:    master add some debugging output to try to figure out what's different about drdr
+2014-08-02 01:54:04 #2682 passed:    master use scribble/blueboxes
+2014-08-01 21:58:46 #2681 passed:    master bring back structure type w/o re-enabling broken signatures
+2014-08-01 20:18:37 #2680 passed:    master disabled signatures instead of allowing renaming because they are not working anyway (?)
+2014-08-01 12:54:25 #2679 passed:    master some Racket-y, mostly focused on 102
+2014-08-01 08:01:49 #2678 passed:    master some Racket-y (102); arrows and renaming for define-struct in teaching languages; need to find and run lang tests
+2014-07-31 10:08:30 #2677 passed:    master racket/gui cocoa: revive `make-gl-bitmap` for Mac OS X 10.7 and up
+2014-07-31 04:23:58 #2676 passed:    master win32: fix 32-bit `get-seconds`
+2014-07-31 01:38:39 #2675 passed:    master fix link to drracket docs
+2014-07-30 19:01:51 #2674 passed:    master Shorten strings shown in C-S-o
+2014-07-30 18:08:38 #2672 passed:    master Remove long lines in typecheck-tests.rkt
+2014-07-30 14:03:25 #2669 passed:    master Fix typo for syntax-shift-phase-level docs
+2014-07-30 12:18:02 #2668 passed:    master clean up doc
+2014-07-30 10:28:33 #2667 passed:    master how to add a new check- feature to test-engine
+2014-07-30 08:03:36 #2666 passed:    master increase timeout for "teachpack.rkt" test
+2014-07-30 04:40:43 #2665 passed:    master fix `expand` on a `module` containing lifts from expression
+2014-07-30 03:18:53 #2664 failed:    master fix `expand` on a `module` containing a `#%declare` form
+2014-07-30 01:00:21 #2663 passed:    master fix switch of `gracket`-based DrDr tests
+2014-07-30 00:35:12 #2661 passed:    master allow `expand` on cross-phase-persistent modules
+2014-07-29 23:28:13 #2660 passed:    master scribble: recognize 'exact-chars even when a style name is #f
+2014-07-29 21:17:32 #2659 passed:    master extend 'open collection path' menu item to support local files,
+2014-07-29 20:04:09 #2658 passed:    master Fix typo in GUI type
+2014-07-29 11:57:42 #2655 passed:    master catching up with Robby's fix and making drdr happy -- clearly this export should not come from a teachpack, so something will have to change
+2014-07-29 10:00:56 #2654 passed:    master fix contract random generation for -> when the range is 'any'
+2014-07-29 09:27:58 #2653 passed:    master meta/pkg-build/main: fix salvage in case of different versions
+2014-07-29 07:04:12 #2652 passed:    master remove obsolete distribution specs
+2014-07-28 18:33:38 #2651 passed:    master fix real-in naming test cases
+2014-07-28 11:25:11 #2649 passed:    master Fix `Values` in type annotations
+2014-07-28 10:34:55 #2648 passed:    master raco pkg update: don't claim conflict with package being updated
+2014-07-28 09:23:44 #2647 passed:    master meta/pkg-push: improve status and error reporting
+2014-07-28 08:39:01 #2646 passed:    master adjust real-in implementation so that it prints as (real-in ...) instead
+2014-07-26 00:44:53 #2644 passed:    master fix language extension bug in reduction-relation
+2014-07-25 23:55:05 #2643 passed:    master fix test
+2014-07-25 20:37:38 #2642 passed:    master fix contracts
+2014-07-25 18:57:48 #2641 passed:    master add some contracts to pict/code
+2014-07-25 18:39:40 #2640 passed:    master improve judgment form performance in some situations when
+2014-07-25 17:32:28 #2639 passed:    master Check with-handlers better in TR
+2014-07-25 16:31:29 #2638 passed:    master Send fewer emails from Travis.
+2014-07-25 15:48:33 #2637 passed:    master Refactor and organize imports
+2014-07-25 09:40:47 #2635 passed:    master Windows: use native Win32 API for dates
+2014-07-25 05:25:07 #2634 passed:    master macro expander: fix `#%top` via `local-expand`
+2014-07-25 05:04:27 #2633 passed:    master close hole in chaperone implementation
+2014-07-25 03:46:15 #2632 passed:    master The implementation of `#%top` within a `module` has, for a while,
+2014-07-24 19:56:14 #2629 passed:    master Fix `inherit` in methods without type annotations
+2014-07-24 13:06:08 #2628 passed:    master Revert label phase check, do correct thing
+2014-07-24 12:42:52 #2627 passed:    master doc typos
+2014-07-24 12:19:37 #2626 passed:    master update “Installing a Language” section to refer to package manager
+2014-07-24 11:50:16 #2625 passed:    master fix doc typo
+2014-07-24 10:27:15 #2623 passed:    master regexp-match: tune chunking of UTF-8 decoding
+2014-07-24 08:31:59 #2622 passed:    master filesystem-change-evt: report inotify_init() error correctly
+2014-07-24 01:28:01 #2621 passed:    master move udp tests out of weird nesting within file tests
+2014-07-23 15:53:40 #2618 errored:   master Test for `begin` at label phase
+2014-07-23 11:10:34 #2616 passed:    master fix submodule export of enclosing module's binding
+2014-07-23 10:50:05 #2615 passed:    master documented addition of check-random; please include in 6.1
+2014-07-23 10:22:57 #2614 passed:    master Move `margin-note*` in math docs to work around issue with Firefox
+2014-07-23 07:57:12 #2613 errored:   master Adding legacy/core decision in gl-config/canvas
+2014-07-23 06:53:10 #2612 passed:    master Fix `compiled-bitmap` and `compiled-bitmap-list` on 2x bitmaps, lossy compression
+2014-07-23 05:19:55 #2611 passed:    master meta/pkg-build/thread: fix test
+2014-07-23 04:45:09 #2610 passed:    master web pages: fix platform sorting on download pages
+2014-07-23 03:45:55 #2609 passed:    master web pages: use UTC for computing month names
+2014-07-23 02:45:03 #2608 passed:    master racket/draw: fix `get-argb-pixels` for unscaled and just-alpha
+2014-07-22 22:45:40 #2607 passed:    master fix bug in ->i
+2014-07-22 18:19:22 #2605 failed:    master remove call to 'time'
+2014-07-22 16:39:19 #2604 passed:    master Add doc examples for `flatten-begin`
+2014-07-22 15:55:13 #2603 passed:    master redex: fix error messages for #:satisfying
+2014-07-22 14:30:49 #2602 passed:    master redex: add #:pre to define-judgment-form
+2014-07-22 13:18:34 #2601 passed:    master More titles and abstracts for RacketCon.
+2014-07-22 08:56:28 #2600 passed:    master misc improvements around read-language (uses and docs)
+2014-07-21 22:28:19 #2598 passed:    master heap-remove! sometimes needs to heapify up
+2014-07-21 20:04:28 #2596 passed:    master Commented out some test cases that intentionally failed, so as to not
+2014-07-21 16:41:37 #2594 passed:    master Start filling in RacketCon titles and abstracts.
+2014-07-21 15:44:19 #2593 passed:    master Update TR history.
+2014-07-21 10:46:51 #2592 passed:    master boldface for performance note
+2014-07-20 07:06:30 #2591 passed:    master fix compatible-closure to deal properly with language extension
+2014-07-19 18:08:28 #2590 passed:    master Rewrite the delay-by primitive so it's easier to understand.
+2014-07-19 00:28:13 #2589 passed:    master Reorder some recursive definitions to avoid undefined references.
+2014-07-18 23:37:22 #2588 passed:    master renaming bug in file/convertible's contract
+2014-07-18 20:59:56 #2587 passed:    master add contracts to file/convertible
+2014-07-18 20:34:34 #2586 passed:    master add missing argument
+2014-07-18 15:38:44 #2585 passed:    master fixed macro stepper test
+2014-07-18 09:27:00 #2583 passed:    master add plot-font-face and use the-font-list to cache fonts
+2014-07-18 08:19:32 #2582 passed:    master stop telling the traces windows to re-format expressions when the font size changes
+2014-07-18 06:23:47 #2581 passed:    master update HISTORY for 6.1
+2014-07-18 01:57:11 #2580 passed:    master update racket/HISTORY.txt
+2014-07-18 01:00:39 #2579 passed:    master scribble: fix PDF rendering for image without bounding-box info
+2014-07-17 18:58:44 #2578 passed:    master Fix type of range
+2014-07-17 17:07:17 #2577 passed:    master Fix PR 14638
+2014-07-17 11:03:38 #2575 passed:    master future: fix completion of a future that ends with a delayed tail call
+2014-07-17 06:10:32 #2573 passed:    master fix bug introduced in c7dd72ab4be702f
+2014-07-17 01:55:11 #2571 passed:    master fix sleep timeout in scheduler
+2014-07-17 00:50:23 #2570 passed:    master add a contract to make-card (to protect drracket, really)
+2014-07-16 13:49:18 #2557 passed:    master Add TR tests for `replace-evt`
+2014-07-16 11:21:38 #2556 errored:   master raco pkg install: reject overlapping package directories
+2014-07-16 10:03:06 #2555 errored:   master fix mistake
+2014-07-16 09:53:55 #2554 passed:    master add support for the ellipses in the error messages
+2014-07-16 07:39:24 #2553 passed:    master pkg test harness: fix race condition in I/O handling
+2014-07-16 05:33:20 #2552 passed:    master pkg tests: fix tests that accidentally install packages in place
+2014-07-16 04:28:12 #2551 failed:    master meta/pkg-build: add ".txt" extension to log files
+2014-07-15 18:39:24 #2549 errored:   master fix keyword arguments mismatch in traces and traces/ps
+2014-07-15 13:16:59 #2547 passed:    master Add a type for `replace-evt`
+2014-07-15 09:49:41 #2545 passed:    master pkg/lib: make `pkg-directory->additional-installs` recognize root docs
+2014-07-15 08:58:58 #2544 passed:    master make the code in the contract have a nicer name.
+2014-07-15 07:57:33 #2543 passed:    master fix a bug uncovered by  1b3fd890adb725
+2014-07-15 06:06:13 #2542 passed:    master spell check pict docs
+2014-07-15 04:46:15 #2541 passed:    master pkg/lib: fix `pkg-directory->additional-installs`
+2014-07-15 01:26:25 #2540 failed:    master pkg/lib: make `pkg-directory->additional-installs` use 'compile-omit-paths
+2014-07-14 12:47:18 #2537 passed:    master use test submodule in lazy racket tests
+2014-07-14 11:11:32 #2536 passed:    master meta/pkg-push: allow separate src and dest catalog URLs
+2014-07-14 09:58:31 #2534 passed:    master meta/pkg-build: fix break-enabled status in VM-running thread
+2014-07-14 09:40:19 #2533 passed:    master Fixing flawed test. The result arity does matter.
+2014-07-14 09:29:59 #2532 passed:    master Fix kw in typed/pict
+2014-07-14 08:11:50 #2531 passed:    master add contract-correct caveat to contract violation error messages
+2014-07-14 05:51:40 #2530 passed:    master scribble: fix documentation for `tt` and `racketfont`
+2014-07-14 04:51:55 #2529 passed:    master at-exp and scribble: adjust reader to compose better with readtable extensions
+2014-07-13 22:32:26 #2528 passed:    master Rackety
+2014-07-13 13:36:05 #2527 passed:    master xform: fix bad parsing of array sizes
+2014-07-13 08:47:58 #2526 passed:    master use simple-form-path instead of normalize-path
+2014-07-13 08:46:45 #2525 passed:    master add contract to cellophane
+2014-07-12 10:48:19 #2522 passed:    master Remove defined-ness checks in insert-large-letters.
+2014-07-12 09:39:28 #2520 passed:    master Initial implementation of struct-type contract generation.
+2014-07-12 02:31:28 #2518 failed:    master ffi/unsafe/com: convert to `date*`, document limitations
+2014-07-11 17:01:49 #2517 passed:    master in lazy: separate values tests; add more tests
+2014-07-11 08:18:49 #2514 passed:    master optimizer: fix tail-position bug in recent optimizer change
+2014-07-11 00:38:52 #2512 failed:    master net/http-client: adjust `data-procedure/c` contract
+2014-07-11 00:07:14 #2510 failed:    master optimizer: generalize moving expressions to single-value context
+2014-07-10 19:42:33 #2509 failed:    master fix author parsing for the case where a name ends with the letters 'and'
+2014-07-10 08:26:40 #2504 passed:    master fix esc;n keystroke in REPL
+2014-07-10 04:56:59 #2503 failed:    master unbreak contract system
+2014-07-10 04:06:52 #2502 failed:    master improve the random checking for ->i so that it can exercise
+2014-07-10 01:32:09 #2501 errored:   master fix guard on references to unsafe functions in bytecode
+2014-07-09 23:19:30 #2500 passed:    master add test case for new behavior (that I think was
+2014-07-09 08:48:51 #2498 passed:    master Moved type transformation logic out of annotate-classes back into prims.
+2014-07-09 08:46:32 #2497 passed:    master Allow http-conn-send! to take a procedure as its #:data parameter
+2014-07-09 07:02:45 #2496 passed:    master meta/pkg-build: avoid losing docs due to transient errors
+2014-07-09 05:59:08 #2495 passed:    master add Burke as an author of Redex
+2014-07-08 20:33:28 #2494 passed:    master Post-release version for the v6.1 release
+2014-07-08 11:38:30 #2490 passed:    master meta/pkg-build: use Etag header to avoid installer download
+2014-07-08 10:36:59 #2489 errored:   master pkg-build: tweak format of summary page
+2014-07-08 05:42:41 #2484 passed:    master meta/pkg-build: extract/salvage docs for conflicting and failed packages
+2014-07-08 02:10:35 #2483 passed:    master fix doc typo
+2014-07-08 01:13:34 #2482 failed:    master pkg-build/thread: fix test
+2014-07-07 23:49:48 #2481 passed:    master meta/pkg-build: first cut at result-summary page
+2014-07-07 18:26:38 #2478 passed:    master Check function depth for parsing object indices
+2014-07-07 11:27:50 #2476 passed:    master Add code to handle when the test expression is neither true nor false.
+2014-07-07 03:52:41 #2475 failed:    master raco setup: make `--check-pkg-deps` require dependency declarations
+2014-07-07 00:34:04 #2471 passed:    master Define SCHEME_PLATFORM_LIBRARY_SUBPATH for some architectures on OpenBSD
+2014-07-06 23:00:54 #2470 errored:   master Make parse-type raise the right error for incorrect use of ->.
+2014-07-06 22:27:21 #2469 passed:    master Add docs about optional type annotation to let/ec and let/ec:.
+2014-07-06 20:55:58 #2468 failed:    master Add omit-define-syntaxes to secondary form of define-type-alias.
+2014-07-06 19:24:49 #2466 failed:    master Add test for pr14567.
+2014-07-06 18:08:47 #2464 passed:    master spell check redex reference
+2014-07-06 15:52:08 #2463 failed:    master Fix array tests after TR change
+2014-07-06 00:59:19 #2461 failed:    master propagate some source locations for better error reporting
+2014-07-05 20:27:59 #2458 failed:    master fix metafunction rewriting
+2014-07-05 20:06:14 #2457 passed:    master Make with-type disarm/arm the body expressions.
+2014-07-05 18:56:42 #2456 passed:    master Fix typechecking of list* with no args.
+2014-07-05 18:43:48 #2455 failed:    master Make tc/funapp follow contract in error case.
+2014-07-05 17:02:19 #2453 failed:    master Fix docs for `takef`
+2014-07-05 13:43:03 #2450 failed:    master Cleanup type-env-structs.
+2014-07-05 03:41:32 #2449 passed:    master main doc page: use `margin-note` instead of `margin-note*`
+2014-07-04 07:19:45 #2447 passed:    master distro-/pkg-info: empty test
+2014-07-04 05:57:29 #2446 failed:    master meta/pkg-build: detect conflicts among packages with documentation
+2014-07-04 01:25:50 #2445 passed:    master clarify that document names are meant to be globally unique
+2014-07-04 00:50:17 #2444 passed:    master added list-contract?
+2014-07-03 16:27:04 #2443 passed:    master Fix `possible-domains' function in TR internals
+2014-07-03 13:41:20 #2442 passed:    master redex: cleanups after refactoring unifier
+2014-07-02 06:16:12 #2436 failed:    master optimizer: fix crashing bug
+2014-07-02 05:05:59 #2435 passed:    master raco setup: constrain Scribbled document names
+2014-07-01 17:20:01 #2432 failed:    master Improve error for applying vals of Procedure type
+2014-07-01 15:02:57 #2431 failed:    master Document other TR wrapper libraries
+2014-07-01 13:10:04 #2430 failed:    master add @history[] notes for typed/racket/async
+2014-06-30 23:30:00 #2427 passed:    master Merge V, X, and Y arguments into a single context in infer.
+2014-06-30 23:10:43 #2426 passed:    master Do not add filters to the prop environment.
+2014-06-30 22:59:11 #2425 failed:    master Make union simplification not happen during subtyping.
+2014-06-30 15:54:55 #2424 failed:    master Remove wrapping in typed/racket/async-channel
+2014-06-30 13:06:21 #2422 errored:   master tools doc: fix use of block in an element
+2014-06-30 09:58:22 #2421 failed:    master added @history[] note for e8bfd42d36
+2014-06-30 09:52:01 #2420 passed:    master fix async-channel static contract in TR
+2014-06-30 04:21:24 #2419 failed:    master raco test: add history note on `--heartbeat`
+2014-06-30 01:32:31 #2418 failed:    master Replace procedure-rename with eta-expansion.
+2014-06-29 18:02:34 #2414 passed:    master Add tests for generated syntax of static contracts.
+2014-06-29 16:46:08 #2413 failed:    master Improve speed of partitions
+2014-06-29 13:42:19 #2412 passed:    master Have TR log regexp operations that use non-regexp patterns.
+2014-06-27 11:49:56 #2405 failed:    master scribble: use 'pdf-bytes+bounds8, etc.
+2014-06-27 09:50:27 #2404 passed:    master update the unix tests based on drdr's results, related to ac169edfcf
+2014-06-27 07:56:37 #2403 passed:    master fix default argument to #:convert-as-ps-not-pdf?
+2014-06-27 06:46:37 #2402 passed:    master add note about --dvipdf to redex docs
+2014-06-27 03:31:42 #2401 failed:    master add the --dvipdf flag to scribble
+2014-06-27 02:06:11 #2400 passed:    master racket/port: fix problem with `reencode-input-port`
+2014-06-27 01:48:25 #2399 passed:    master Fix TR test regexp
+2014-06-26 23:21:07 #2397 failed:    master Fix for/fold typechecking on null accumulator
+2014-06-26 20:38:39 #2396 passed:    master Add test case from Matthew for ac169edfcf
+2014-06-26 15:23:42 #2395 passed:    master Add types and tests for racket/format
+2014-06-26 14:44:43 #2394 failed:    master Initial internal Typed Racket documentation.
+2014-06-26 12:02:46 #2393 passed:    master reference & guide: improve explanation of regexp performance
+2014-06-26 07:27:29 #2392 passed:    master redex: fix for `render-language` with `extend-language-show-union` as #t
+2014-06-26 01:23:16 #2390 passed:    master Fix error for application Procedure type values
+2014-06-25 11:09:47 #2388 passed:    master Make Unions of function typechecking work again.
+2014-06-25 04:04:43 #2386 passed:    master work around bug(?) in Mac OS X select()
+2014-06-25 02:55:19 #2384 errored:   master Make tc-lambda-unit have one centralized definition of how to extend the environment.
+2014-06-25 02:04:15 #2382 passed:    master Fix infer dotted cases when there are constraints on the dbound.
+2014-06-25 01:37:44 #2381 failed:    master Make interning work on Rep-seq for Reps with complicated fields.
+2014-06-24 23:49:54 #2377 passed:    master add typed/racket/async-channel
+2014-06-24 22:44:48 #2375 passed:    master optimizer: test use of virtual clock in branches
+2014-06-24 21:12:05 #2373 passed:    master Add equality operations for Reps.
+2014-06-24 18:00:02 #2369 failed:    master racket/tcp: use %E instead of %e for socket error reporting
+2014-06-24 00:03:51 #2367 passed:    master Use (listof tc-result?) instead of tc-results? when inferring types.
+2014-06-23 23:46:01 #2366 failed:    master Simplify and document compact.
+2014-06-23 14:49:16 #2364 passed:    master Optimize match patterns of the form (list x ...).
+2014-06-23 13:17:03 #2363 errored:   master distro-build: add "versionless" option
+2014-06-23 12:09:48 #2361 failed:    master Fix type for syntax-local-phase-level
+2014-06-23 11:05:08 #2359 errored:   master Fix reading of badly encoded symbols from bytecode
+2014-06-23 09:38:15 #2356 passed:    master Fix UTF-8 symbol repair
+2014-06-23 07:30:01 #2354 failed:    master avoid getting stuck on non-UTF-8 symbol encodings in bytecode
+2014-06-23 05:51:43 #2353 failed:    master fix use of wrong comparsion macro
+2014-06-23 00:46:07 #2351 failed:    master Scribble: improve Unicode handling for Latex/PDF output
+2014-06-22 23:43:02 #2350 passed:    master add crop/align
+2014-06-22 22:11:02 #2347 passed:    master Add contracts to filter-ops.
+2014-06-22 09:10:47 #2334 passed:    master in text mode, don't do "The Racket Language"-specific things
+2014-06-21 06:55:54 #2331 passed:    master Synch German string constants with latest.
+2014-06-21 05:25:36 #2330 passed:    master Make combine-results work with tc-result/c.
+2014-06-21 07:24:19 #2329 passed:    master update the expected results for the redex bitmap tests
+2014-06-21 02:49:59 #2328 passed:    master Fix subtype for filters in AnyValues.
+2014-06-21 03:20:05 #2325 passed:    master Add test cases for subtyping of -Bottom.
+2014-06-21 01:49:48 #2324 passed:    master Add match expander for functions and arities together.
+2014-06-21 01:02:28 #2323 passed:    master adjust the 'Skip to Next Misspelled Word' menu key shortcut to try to avoid conflicts
+2014-06-21 01:22:22 #2322 passed:    master add abbreviate-given-names
+2014-06-20 23:21:33 #2321 passed:    master Closes PR14589.
+2014-06-20 11:30:32 #2316 errored:   master Give more information for kw errors in TR
+2014-06-20 07:05:32 #2314 passed:    master optimizer: improvements mostly for splitting of multiple-value bindings
+2014-06-20 00:42:33 #2313 passed:    master optimizer: fix `with-continuation-mark` optimization
+2014-06-19 20:02:08 #2311 passed:    master improve check syntax so opening the context-sensitive menu is faster
+2014-06-19 16:13:50 #2309 passed:    master Rework how keyword methods are handled by TR
+2014-06-19 10:08:03 #2308 passed:    master make installers: give MSVC setup "x86_amd64" instead of "x64" by default
+2014-06-19 08:41:34 #2307 passed:    master Update web page news.
+2014-06-19 00:22:26 #2304 passed:    master unbreak build
+2014-06-18 22:20:23 #2301 passed:    master Make TypeFilter and NotTypeFilter have a Path as a subcomponent.
+2014-06-18 20:49:49 #2299 passed:    master Make type of make-vector more precise.
+2014-06-18 19:30:02 #2298 passed:    master Readline-to-Racket: Rename file to mzrl.rkt to rktrl.rkt
+2014-06-18 16:22:59 #2297 passed:    master redex: adjust benchmark contracts and provides
+2014-06-18 01:28:17 #2296 passed:    master fix bitmap rotate/flip interaction
+2014-06-17 15:06:34 #2294 passed:    master redex: refactor benchmark plotting
+2014-06-17 06:42:22 #2291 passed:    master optimizer: unwrap `let` and `begin` around constant test in `if`
+2014-06-17 03:29:47 #2290 passed:    master improve drracket to offer spelling suggestions and to jump to next misspelled word
+2014-06-17 01:19:05 #2289 passed:    master bitwise-bit-field: repair fixnum overflow problems
+2014-06-17 01:10:54 #2288 passed:    master Correctly instantiate poly dots during inference.
+2014-06-16 23:19:15 #2287 passed:    master Replace abstract-results with replace-names.
+2014-06-16 07:12:07 #2286 passed:    master win32-in-place: fix prep of libraries needed by `raco setup`
+2014-06-15 04:17:04 #2285 passed:    master add keyboard shortcuts to unsaved dialog warning on mac os x
+2014-06-15 03:37:09 #2284 passed:    master INSTALL.txt: fix instructions for `make unix-style`
+2014-06-14 17:55:56 #2282 passed:    master Add vars to tvar environment when infering poly function applications.
+2014-06-14 14:12:52 #2280 passed:    master fixed indexing and typo; Closes PR 14575, Closes PR 14564
+2014-06-14 13:55:28 #2279 passed:    master Remove ability to check unreachable code.
+2014-06-14 06:05:57 #2278 passed:    master add missing guard
+2014-06-14 04:04:13 #2277 passed:    master fix struct/dc's flatness test so that contracts with lazy fields aren't flat
+2014-06-14 00:47:37 #2276 passed:    master Fix occurrence typing when comparing Byte and Positive-Rationa.
+2014-06-13 14:18:59 #2275 passed:    master add note in syntax-parse docs about #:with and #:declare interaction
+2014-06-13 11:18:05 #2274 passed:    master fix glib build for Windows 64
+2014-06-13 10:32:46 #2273 passed:    master bring back accidentally clobbered value-contract tests
+2014-06-13 09:06:45 #2272 passed:    master add has-blame? and value-blame
+2014-06-13 06:24:32 #2271 passed:    master add a test for behavior that's not currently liked
+2014-06-13 03:03:25 #2270 passed:    master add a test case to be sure recursive-contract accepts
+2014-06-12 23:55:42 #2269 passed:    master change recursive-contract to reject cyclic values
+2014-06-12 18:45:00 #2268 passed:    master db/postgresql: disconnect on EOF at ready-for-query
+2014-06-12 08:00:44 #2267 passed:    master adjust recursive-contract so that it terminates on cyclic values
+2014-06-12 03:47:40 #2266 passed:    master pict: improve error for failure in `pict->bitmap`
+2014-06-11 22:31:16 #2262 passed:    master Fix type of stx->list.
+2014-06-11 16:56:44 #2261 passed:    master Fix check-unreachable-code? mode in TR
+2014-06-11 12:54:01 #2260 passed:    master redex: fix benchmark package dependencies
+2014-06-11 14:15:00 #2259 errored:   master Fix test case for last commit.
+2014-06-11 12:46:25 #2258 failed:    master Fix bug in type of `apply-pattern-substitute`.
+2014-06-11 09:34:40 #2257 errored:   master Fix link to Kevin Tew's RacketCon 2012 talk.
+2014-06-11 04:16:02 #2256 passed:    master racket/runtime-path: fix problems with 'so paths
+2014-06-10 19:19:00 #2255 passed:    master Make description of future-event agree with the implementation.
+2014-06-10 13:22:15 #2254 errored:   master raco setup: fix dependency checking for "racket" as a dependency
+2014-06-10 12:17:45 #2253 passed:    master fixed the ~e sensitive test
+2014-06-10 10:59:14 #2252 passed:    master Handle union of different values for functions too
+2014-06-10 09:35:17 #2251 passed:    master fixed error reporting code to see string
+2014-06-10 08:04:26 #2250 errored:   master fix rendering of underscores
+2014-06-10 01:34:21 #2249 passed:    master Fix contract on tc-result.
+2014-06-09 22:42:12 #2248 passed:    master Remove distinction between check and non check variant of check-subforms-unit.
+2014-06-09 13:07:13 #2246 passed:    master Adjust TR error message for consistency
+2014-06-09 12:40:35 #2245 passed:    master Fix printing for certain list types with a mu var
+2014-06-09 08:00:45 #2244 passed:    master win32: repair for VS Studio build
+2014-06-09 04:41:24 #2243 passed:    master unbreak drracket
+2014-06-09 03:05:47 #2242 passed:    master fix many more 3-argument calls to the module name resolver
+2014-06-05 10:40:22 #2238 passed:    master Don't lose syntax locations for TR define
+2014-06-04 14:06:34 #2235 passed:    master raco setup: fix PLTCOMPILEDROOTS handling when checking pkg deps
+2014-06-04 11:12:02 #2233 passed:    master raco pkg install: change interpretation of archive with a single directory
+2014-06-04 04:32:39 #2232 passed:    master raco pkg create: adjust rules for for `{binary,source}-keep-files`
+2014-06-03 07:54:02 #2231 failed:    master 2htdp/universe tests: try other port numbers
+2014-06-03 06:01:05 #2230 passed:    master raco test: refine override-"info.rkt" behavior of specifying a file
+2014-06-03 04:06:16 #2229 passed:    master slatex: generate files in temporary directory
+2014-06-03 00:55:25 #2228 errored:   master Correctly combine or filters in combine-props.
+2014-06-02 19:32:25 #2227 passed:    master adding plt-log
+2014-06-02 15:51:57 #2226 failed:    master racket/base: fix `module-compiled-submodules` name handling
+2014-06-02 11:52:10 #2225 passed:    master fix typo in Windows "build.bat"
+2014-06-02 03:44:48 #2224 passed:    master fix typo and add test suite for invariant-assertion
+2014-06-01 12:30:17 #2223 passed:    master Add links to speaker web pages. Formatting.
+2014-06-01 12:16:59 #2222 passed:    master Fix TR unit tests.
+2014-05-31 19:51:26 #2221 passed:    master Add more abbreviations to init-envs.
+2014-05-31 17:34:52 #2220 passed:    master Fix broken match clause for accessors.
+2014-05-31 16:35:36 #2219 passed:    master Simplify 8 cases of filter printing to 2.
+2014-05-31 14:46:48 #2218 passed:    master removed _contract_ language from _invariant-..._ as much as possible
+2014-05-31 14:27:08 #2217 passed:    master update bytecode compiler/optimizer overview in source comments
+2014-05-31 12:42:26 #2216 passed:    master Make small primes faster.
+2014-05-31 12:30:45 #2215 passed:    master Make inference on (list a ..) work better.
+2014-05-31 01:59:41 #2214 passed:    master remove stupid printfs
+2014-05-31 01:57:24 #2213 passed:    master adjust online check syntax to record source locations for regular
+2014-05-30 21:06:48 #2212 passed:    master added invariant-contract
+2014-05-30 13:53:38 #2211 passed:    master optimizer: fix inference bug
+2014-05-30 07:13:53 #2210 passed:    master clarify comment in JIT implementation
+2014-05-30 03:12:01 #2209 passed:    master JIT: better code for floating-point constants on x86+SSE
+2014-05-29 07:44:35 #2204 passed:    master pkg/db: make local package database's path relative to installation name
+2014-05-29 04:00:21 #2203 passed:    master setup/parallel-build: repair test
+2014-05-28 14:28:01 #2199 errored:   master optimizer: ad hoc optimization of predicates applied to constructions
+2014-05-28 10:57:06 #2198 passed:    master Fuse loops in promote-demote.
+2014-05-28 07:16:10 #2197 passed:    master scriblib/figure: make figure hyperlinks show start of figure
+2014-05-28 00:16:12 #2196 passed:    master Remove #{id : Type} annotations from unit tests.
+2014-05-27 03:28:30 #2193 failed:    master optimizer: treat known procedure bindings, etc., as #t for `if`
+2014-05-27 03:03:40 #2192 errored:   master Update SCG section based on Sam-TH and Greg's comments
+2014-05-27 01:19:31 #2191 passed:    master raco decompile: improve argument checking and reporting
+2014-05-26 21:05:33 #2188 passed:    master Move the unconditional prop addition to with-lexical-env/extend-props.
+2014-05-26 20:14:38 #2187 passed:    master Cleanup combine-props.
+2014-05-26 19:40:03 #2186 passed:    master use drracket:default-filters and drracket:default-extension in datalog
+2014-05-26 19:34:20 #2185 passed:    master Move replace-names from tc-metafunctions to tc-subst.
+2014-05-26 16:17:06 #2183 passed:    master fix undefined field in odbc connection
+2014-05-26 14:54:50 #2181 passed:    master make c:x;c:f keybinding use file-menu:open-callback (when it can)
+2014-05-26 14:04:19 #2180 passed:    master Fix printing of AnyValues with filters.
+2014-05-26 13:45:05 #2179 passed:    master Add support for tc-any-results having a filter.
+2014-05-26 12:58:24 #2178 passed:    master raco make: improve parallelism
+2014-05-26 11:58:04 #2177 passed:    master Fix contract breakage in TR.
+2014-05-26 10:34:19 #2175 passed:    master Make ... <: * case more correct.
+2014-05-26 10:22:09 #2174 passed:    master Add performance hint to var-promote.
+2014-05-26 04:48:47 #2173 passed:    master racket/unit: fix signature handling of `define-values/invoke-unit/infer`
+2014-05-26 02:15:10 #2172 passed:    master Re-exported types from openssl.
+2014-05-25 15:46:35 #2171 passed:    master repair JIT bug
+2014-05-25 03:40:47 #2169 passed:    master remove the "variable not a prefix" side-condition from the r6rs model
+2014-05-24 11:59:23 #2167 passed:    master fix bug in recent _!_ semantics change
+2014-05-23 21:58:43 #2166 passed:    master Change the semantics for _!_ variables when they are under ellipses
+2014-05-23 17:40:48 #2165 passed:    master added non-terminal-gap-space
+2014-05-23 12:59:44 #2164 passed:    master racket/unit: repairs related to signature extension
+2014-05-23 12:53:00 #2163 passed:    master redex: fix stepper
+2014-05-23 10:18:33 #2162 passed:    master vectorof contract: add some tests and make flat variant subscribe to the val-first protocol
+2014-05-22 20:50:08 #2161 passed:    master Make group-by preserve the ordering of the original list.
+2014-05-22 14:34:22 #2159 failed:    master fix mangling of drracket io test
+2014-05-22 14:29:43 #2158 passed:    master bring down below 102 columns
+2014-05-22 11:54:29 #2157 passed:    master Makefile: add `IF EXISTS` guard on `del` for a Win32 target
+2014-05-21 23:43:52 #2156 passed:    master adjust box/c to use the val-first-projection protocol
+2014-05-21 12:16:48 #2155 failed:    master minor cleanups to contract-random-generate's API
+2014-05-21 11:47:49 #2154 errored:   master Make unfold use typecase instead of subst.
+2014-05-21 11:23:12 #2153 passed:    master Add section on separate compilation to reference
+2014-05-21 10:57:00 #2152 errored:   master add -z flag
+2014-05-21 03:25:22 #2150 passed:    master MzCOM: avoid the ATL framework
+2014-05-20 23:04:46 #2144 passed:    master Remove unused variable in constraint struct.
+2014-05-20 22:55:24 #2143 passed:    master Re-enable Values and cgen/seq, and fix contracts on substitute.
+2014-05-20 17:27:06 #2142 passed:    master do a better job of keeping the err/out ports IO in the right order
+2014-05-20 03:37:40 #2141 passed:    master add scheme_jit_now()
+2014-05-20 02:06:59 #2140 passed:    master Rollback using cgen/seq for values because the generated substitutions have issues.
+2014-05-19 23:43:33 #2137 passed:    master Split out shared code for generating dbound prefixes.
+2014-05-19 21:44:19 #2136 passed:    master make the backtrace arrows scale with the font size
+2014-05-19 16:51:53 #2135 passed:    master Extend timeout
+2014-05-19 15:53:32 #2134 failed:    master Fix printing to match the desired format.
+2014-05-19 14:54:03 #2133 failed:    master Add a benchmark for inference.
+2014-05-19 13:36:51 #2132 passed:    master make struct/dc cooperate better with check syntax so that the struct name gets an arrow
+2014-05-19 10:06:57 #2131 passed:    master fix a problem that leads to spurious 'file has changed on disk' messages
+2014-05-18 22:09:15 #2130 passed:    master Improve TR error messages for class instantiation
+2014-05-18 21:47:54 #2129 passed:    master adjust option/c so that function mis-application errors use the right name
+2014-05-18 13:25:01 #2123 passed:    master Unbreak TR contracted build.
+2014-05-18 07:54:33 #2122 passed:    master make plot tests more drdr friendly
+2014-05-18 02:21:12 #2121 passed:    master tiny test for letrec
+2014-05-18 00:15:21 #2120 passed:    master Add some more results to infer-tests.
+2014-05-17 22:55:40 #2119 passed:    master fix default node pict so it doesn't draw outside of its bounding box
+2014-05-17 22:23:17 #2118 passed:    master use the name in the exists contract in its error message
+2014-05-17 22:22:29 #2117 passed:    master adjust check syntax to track which submodule a reference occurs in
+2014-05-17 17:09:50 #2116 passed:    master draw error highlight before calling super
+2014-05-17 16:07:21 #2115 passed:    master fix cons/c for combinators that insist on projections for subcontracts
+2014-05-17 15:29:19 #2114 failed:    master fix build for module name resolver cache change
+2014-05-17 01:21:30 #2113 passed:    master add scheme_jit_find_code_end
+2014-05-16 22:44:38 #2112 failed:    master add generator for (and/c real? (not/c negative?)) and (and/c rational? (not/c negative?))
+2014-05-16 17:14:13 #2111 passed:    master improve ->i's printing so it saves some of the source text of the dependent contracts
+2014-05-16 15:06:20 #2110 passed:    master Fix rest arg contract generation for case-> types
+2014-05-15 22:40:11 #2104 passed:    master add table example
+2014-05-15 22:34:47 #2103 failed:    master improve contract-exercise so that it can take multiple arguments
+2014-05-15 00:41:24 #2102 errored:   master Correctly use a pattern variable in tc-app-apply.
+2014-05-14 22:06:55 #2101 passed:    master Add Dr. Chang to acks.
+2014-05-14 14:52:57 #2100 passed:    master template: pre-allocate local env vectors for nested ellipses
+2014-05-14 14:24:21 #2099 passed:    master Fix GUI types and add missing types
+2014-05-14 11:02:18 #2098 failed:    master Enable OS X testing on Travis.
+2014-05-14 11:50:18 #2097 passed:    master scribble docs: fix example for `literal`
+2014-05-14 01:07:57 #2096 passed:    master Make inst fail on results that are not single valued.
+2014-05-14 00:45:16 #2095 passed:    master Fix type printing for simple latent filters
+2014-05-13 22:49:56 #2094 passed:    master add a random generator for struct/c
+2014-05-13 18:07:57 #2093 passed:    master fix doc header
+2014-05-13 17:51:51 #2092 passed:    master ffi/unsafe: correct and improve docs on `_cpointer`
+2014-05-13 16:29:02 #2091 passed:    master Fix typo in symbols.scrbl
+2014-05-13 15:31:45 #2090 passed:    master remove printf
+2014-05-13 15:24:32 #2089 passed:    master Rackety (102 columns)
+2014-05-13 15:21:42 #2088 passed:    master fix mailing list link
+2014-05-13 11:32:21 #2087 passed:    master Fix return tc-results when typechecking kw lambda.
+2014-05-12 21:38:30 #2086 passed:    master fix angle conversion problem
+2014-05-12 21:14:48 #2085 passed:    master scribble: fix HTML scaling of GIFs
+2014-05-12 10:20:27 #2083 passed:    master Actually fix all of the contract errors in substitute.rkt
+2014-05-12 10:09:31 #2082 passed:    master fix struct/dc's flat-contract mode predicate
+2014-05-12 09:52:16 #2081 failed:    master add random generation for polymorphic contracts
+2014-05-12 09:50:57 #2080 passed:    master fix bug in insertion of guards to prevent use before definition
+2014-05-12 06:50:55 #2079 passed:    master reduce calls to `current-process-milliseconds` on thread swap
+2014-05-11 23:03:04 #2075 passed:    master Fix subst-all contract.
+2014-05-11 22:31:10 #2074 passed:    master add pict->argb-pixels and argb-pixels->pict
+2014-05-11 19:44:54 #2073 passed:    master Correctly handle moving dotted vars to the dmap.
+2014-05-11 19:30:10 #2072 passed:    master Add support for 1 sided contracts on Top types.
+2014-05-11 09:36:55 #2071 passed:    master net/sendurl: improve docs on encoding in `send-url` and other functions
+2014-05-10 20:31:26 #2070 passed:    master fix accidental disabling of thread-specific process-milliseconds
+2014-05-10 20:02:54 #2069 passed:    master fix a performance bug in drracket's REPL IO.
+2014-05-10 11:13:16 #2068 passed:    master fix raco test -c
+2014-05-10 10:02:18 #2067 passed:    master cleanups to old, broken test suite and some bug fixes it uncovered
+2014-05-10 08:30:02 #2066 passed:    master Synch German string constants with latest.
+2014-05-10 07:54:49 #2065 passed:    master distro-build: fix catalog dir creation for built packages
+2014-05-09 22:27:50 #2063 passed:    master Add explicit -Null abbreviation.
+2014-05-09 18:05:33 #2062 passed:    master racket/sandbox: fix guard on attempt to flush sandbox plumber
+2014-05-09 16:47:54 #2061 passed:    master file/gzip: compensate for too-far lookahead
+2014-05-09 12:40:47 #2060 passed:    master adjust keybindings doc to be more informative, but
+2014-05-09 11:40:42 #2058 passed:    master changing valid char to XML 1.1 rather than 1.0 and reverting changes from recent PR
+2014-05-09 11:34:50 #2057 failed:    master distro-build: fix catalog relative paths
+2014-05-09 10:44:08 #2055 errored:   master change DrRacket doc to not attempt to render a control character
+2014-05-09 09:57:45 #2054 passed:    master drracket: plumber for user process
+2014-05-08 15:39:33 #2053 passed:    master Fix contract.
+2014-05-08 15:13:21 #2050 passed:    master v6.0.1 announcement
+2014-05-08 15:01:30 #2049 passed:    master v6.0.1 installers info
+2014-05-08 13:49:40 #2048 passed:    master add `raco pkg catalog-archive`
+2014-05-07 23:39:52 #2044 passed:    master Remove duplicate case in infer.
+2014-05-07 21:34:52 #2043 passed:    master fix contract test suite responsibilities
+2014-05-07 21:30:26 #2042 passed:    master improve any/c's random generation
+2014-05-07 19:26:16 #2041 passed:    master fix mzlib contract tests for or/c stronger improvements
+2014-05-07 17:20:44 #2039 passed:    master Increase timeout.
+2014-05-07 16:44:12 #2038 passed:    master Fixing PR14478
+2014-05-07 13:43:58 #2034 passed:    master Fix contract profiler path shortening.
+2014-05-07 11:33:32 #2032 passed:    master Add test that runs TR unit tests with contracts on.
+2014-05-07 10:24:14 #2031 passed:    master Fix registration of Opaque type alias in REPL
+2014-05-07 09:12:16 #2030 passed:    master fix `vector-map!` to not mutate immutable vectors
+2014-05-07 00:51:55 #2029 passed:    master Fix check-subforms and reenable TR contracts.
+2014-05-06 23:28:12 #2028 passed:    master Add docs for TR's filter syntax
+2014-05-06 21:30:04 #2027 passed:    master document contract-exercise
+2014-05-06 19:31:01 #2026 passed:    master Allow TR contracts to be turned on with an env variable.
+2014-05-06 16:37:55 #2025 passed:    master make or/c and contract-stronger? collaborate
+2014-05-06 15:41:24 #2024 passed:    master meta/new-web/sync: add `--save-temps` flag
+2014-05-06 13:24:30 #2023 passed:    master Remove dependencies on `unstable/debug`.
+2014-05-06 11:38:12 #2022 passed:    master Add types for more of pict in typed/pict
+2014-05-06 10:45:26 #2021 passed:    master Add several examples to TR class reference docs
+2014-05-05 12:03:20 #2010 passed:    master docs search: avoid accumulating "q" queries
+2014-05-05 11:32:18 #2009 passed:    master fix struct/dc chaperone/flat/impersonator-ness when #:inv is used
+2014-05-04 17:56:47 #2008 passed:    master Racket-y
+2014-05-04 14:36:31 #2007 passed:    master fix random generation environment usage
+2014-05-04 12:48:18 #2006 passed:    master enable DWARF-based stack unwind for x86
+2014-05-04 11:17:47 #2004 passed:    master Adjust `open-input-file` type for new keyword
+2014-05-04 10:45:32 #2003 passed:    master raco pkg config: add `doc-open-url` key
+2014-05-03 22:22:55 #2002 passed:    master fix contract-stronger for struct/dc with #:inv clauses
+2014-05-03 22:06:17 #2001 passed:    master scribble/manual: clicking on a section title shows linking information
+2014-05-03 21:08:40 #2000 passed:    master racket/gui: adapt `text-editor-load-handler` to missing-module exception
+2014-05-03 19:05:20 #1998 passed:    master pkg/lib: add `#:catalogs` & `#:set-catalogs?` args to `pkg-catalog-update-local`
+2014-05-03 17:28:34 #1997 passed:    master Split out tc-expression to a separate file.
+2014-05-03 16:50:57 #1996 passed:    master Make external check be on an #%expression.
+2014-05-03 16:25:53 #1995 passed:    master Change ascription to annotate the #%expression.
+2014-05-03 12:40:01 #1994 passed:    master Typed Racket history for 6.0.1.
+2014-05-03 10:32:38 #1992 passed:    master add invariant clauses to struct/dc (keyword #:inv)
+2014-05-02 16:18:13 #1991 passed:    master racket/gui: fix for Mac OS X 10.6
+2014-05-02 14:35:40 #1990 passed:    master New indentation rules implemented and fixed typo and bug
+2014-05-02 13:58:32 #1987 errored:   master setup/getinfo: shortcut for simple modules
+2014-05-02 12:06:29 #1985 passed:    master Make inst mark the #%expression.
+2014-05-02 06:18:19 #1983 passed:    master Fix bugs in tuple reconstruction and slice/e
+2014-05-01 20:26:46 #1981 passed:    master places: improve comments on msg_chain treatment
+2014-05-01 17:34:31 #1978 passed:    master note on ordering of discrete-dist-probs and discrete-dist-values
+2014-05-01 17:05:36 #1977 passed:    master Fix expected source location for improved location preservation.
+2014-05-01 15:29:10 #1976 passed:    master Add an explanation of the test case for PR 14389
+2014-05-01 15:03:45 #1975 passed:    master Don't track syntax with unknown source locations
+2014-05-01 13:25:28 #1973 errored:   master Export analysis function for use by the feature-specific profiler.
+2014-05-01 07:48:34 #1972 passed:    master Fixed uses of free-identifier=? guards
+2014-05-01 06:41:23 #1971 passed:    master add missing file
+2014-05-01 02:19:32 #1970 passed:    master Make inst not do crazy splitting.
+2014-05-01 01:39:53 #1969 passed:    master Replace 'apply -lst*' with -Tuple*
+2014-04-30 21:59:15 #1968 passed:    master fix srcloc for metafunction errors
+2014-04-30 16:14:20 #1967 passed:    master racket/draw Cocoa: fix dylib list as needed for `raco exe`
+2014-04-30 14:05:05 #1965 passed:    master Improve TR's overlap checking for StructTop types
+2014-04-30 11:51:16 #1963 passed:    master Make tc-results: and Results: not use ... over patterns.
+2014-04-30 00:34:12 #1959 passed:    master Allow more inference on ... lists.
+2014-04-29 21:59:15 #1958 passed:    master Refactor TR's no-check-helper module
+2014-04-29 14:28:16 #1957 passed:    master fix test
+2014-04-29 08:08:05 #1955 passed:    master add some extra test cases on `equal?` and chaperones
+2014-04-28 20:12:03 #1954 passed:    master raco setup: fix info-domain cleanup of unlinked planet packages
+2014-04-28 14:35:39 #1952 passed:    master configure: for BSDs, enable pthreads by default, but don't force enabled
+2014-04-28 13:31:05 #1948 passed:    master Remove code that handles #<undefined> in TR
+2014-04-28 12:29:39 #1947 passed:    master generalize the random contract generation so that it can exercise
+2014-04-28 02:15:53 #1946 passed:    master Change test to use exact flonums instead of 0.1
+2014-04-27 21:52:51 #1945 passed:    master racket/gui Win32: fix use-before-definition problem for `choice%`
+2014-04-27 18:15:25 #1944 passed:    master win64: fix longdouble DLL
+2014-04-27 14:52:00 #1943 passed:    master Add tests for new letrec semantics.
+2014-04-27 14:14:47 #1942 passed:    master fix 'planet remove' commandline argument checking
+2014-04-27 11:31:24 #1940 passed:    master file/zip: recognize string ports as seekable
+2014-04-27 10:16:59 #1939 passed:    master fix clean-up handling for the main thread of a terminated place
+2014-04-27 07:35:45 #1938 passed:    master improve or/c random generation and get rid of old, not-working
+2014-04-27 07:11:40 #1937 passed:    master improve random contract generation
+2014-04-26 21:11:41 #1936 passed:    master no getprotobyname on Android
+2014-04-26 11:50:27 #1934 passed:    master Add a test suite for infer.
+2014-04-25 23:39:37 #1933 passed:    master Fix apply with (Listof A) args.
+2014-04-25 16:49:09 #1932 passed:    master redex: fix _ docs typo
+2014-04-25 15:57:53 #1931 passed:    master Revert edit to expected result.
+2014-04-25 15:19:19 #1930 passed:    master redex: allow named ellipses to be bound as term-ids.
+2014-04-25 13:18:22 #1929 passed:    master Proper indentation for syntax-parse in DrRacket.
+2014-04-25 12:46:12 #1928 passed:    master Keep dead case-lambda clauses around to avoid changing arity.
+2014-04-25 10:38:39 #1927 passed:    master Fix type in docs.
+2014-04-25 09:18:27 #1926 passed:    master Avoid feeding inexact numbers to random while generating contract-satisfying values.
+2014-04-24 17:52:30 #1923 passed:    master racket/gui Gtk: `choice%` and `combo%` repair for some Gtk variants
+2014-04-24 15:43:48 #1922 passed:    master history update
+2014-04-24 14:50:48 #1920 passed:    master Use quotient/remainder in bezout
+2014-04-24 13:37:07 #1919 passed:    master Update RacketCon page.
+2014-04-24 12:03:11 #1916 passed:    master Add check to avoid degenerate planes in BSP tree build
+2014-04-24 11:31:23 #1915 passed:    master fix doc bug
+2014-04-24 11:29:58 #1914 passed:    master Fix Plot for new undefined behavior: #<undefined> is not a truth value
+2014-04-24 09:54:06 #1913 passed:    master Avoid precision problems in TR tests.
+2014-04-24 09:23:20 #1912 passed:    master Add pointer to the `syntax/modresolve` docs.
+2014-04-24 08:00:16 #1911 passed:    master adjust language test for new letrec semantics
+2014-04-24 01:59:14 #1910 passed:    master Fix inference for dotted and starred arr types.
+2014-04-23 17:43:20 #1909 passed:    master Add remaining racket/list functions to TR base-env
+2014-04-23 17:19:13 #1908 passed:    master Up timeout for `tests/racket/link`.
+2014-04-23 17:01:42 #1907 passed:    master Add -l flag to `raco test`.
+2014-04-23 11:47:45 #1904 passed:    master Optimize expt on floats.
+2014-04-23 11:27:42 #1903 errored:   master Re-enable and fix a TR class test
+2014-04-22 22:15:41 #1902 passed:    master more fixing redex / undefined interactions
+2014-04-22 19:39:35 #1901 passed:    master fix test cases
+2014-04-22 16:28:23 #1900 passed:    master Small oversight in random testing.
+2014-04-22 16:18:17 #1899 passed:    master Consider underflow in float conversion functions.
+2014-04-22 13:33:49 #1898 passed:    master when selecting the teaching languages radio box,
+2014-04-22 11:57:46 #1896 passed:    master Added flfma/error and flfma
+2014-04-22 11:05:58 #1894 passed:    master Add contract enforcing expected values don't get returned.
+2014-04-22 11:01:41 #1893 passed:    master ffi documentation: add overview section on places and thread-safety
+2014-04-22 09:00:27 #1892 passed:    master Fix definition of `defined?`.
+2014-04-22 01:02:29 #1891 passed:    master Fix case lambda to only check cases with arities that haven't been covered yet.
+2014-04-21 21:43:01 #1890 passed:    master fix a bug in naive layered and improve docs a little
+2014-04-21 17:04:16 #1889 passed:    master Start on a tree layout library
+2014-04-21 16:44:06 #1888 passed:    master fix incorrect sharing of submodule-declaration tables
+2014-04-21 16:28:48 #1887 passed:    master fix pr14460
+2014-04-20 21:28:54 #1884 passed:    master fix props for removed file
+2014-04-20 19:56:06 #1883 passed:    master fix list / list/c typos in pict docs
+2014-04-19 18:09:48 #1882 passed:    master restore the fullscreen button
+2014-04-19 16:22:12 #1881 passed:    master fix type mismatch in JIT
+2014-04-19 15:36:34 #1880 passed:    master racket/gui Windows: repair for use-before-initialization
+2014-04-19 12:20:02 #1879 passed:    master update docs on "undefined"
+2014-04-19 09:45:50 #1878 passed:    master fix drracket-specific keybindings to work with alt-as-meta preference
+2014-04-18 23:09:20 #1877 passed:    master Improve code for checking init args for TR classes
+2014-04-18 21:14:21 #1876 passed:    master Merge branch 'master' of pltgit:plt
+2014-04-18 12:26:54 #1875 passed:    master Update HISTORY.txt for stepper
+2014-04-18 11:10:31 #1874 passed:    master Clarify Datalog/Racket interaction re Matthias
+2014-04-18 10:17:03 #1873 passed:    master Fix `typecheck-fail` in TR
+2014-04-18 06:58:31 #1872 passed:    master fix a non-buggy set!-before-initialization in syntax-browser
+2014-04-18 02:48:00 #1871 passed:    master Sync German string constants with latest.
+2014-04-17 22:39:57 #1870 passed:    master add missing release notes
+2014-04-17 16:52:38 #1869 passed:    master update Redex to cooperate with the new undefined semantics
+2014-04-17 14:37:00 #1868 passed:    master More TR class adjustments for expansion changes
+2014-04-17 11:52:57 #1867 passed:    master racket/class: fix empty `define-values`
+2014-04-17 11:39:01 #1866 passed:    master fix redex docs
+2014-04-17 09:53:42 #1865 passed:    master fixing how to count
+2014-04-17 09:07:51 #1863 passed:    master Fix mzlib/unit tests for new undefined handling.
+2014-04-17 08:00:04 #1862 passed:    master add 'undefined-error-name property for `letrec` bindings
+2014-04-17 07:35:09 #1861 passed:    master fix use before definition bug
+2014-04-16 22:08:01 #1860 passed:    master accidentally pushed a commit I didn't intend to
+2014-04-16 22:07:06 #1859 passed:    master IN PROGRESS: started on redex undefined check update
+2014-04-16 16:54:07 #1858 passed:    master Minor fix for TR docs for `struct`
+2014-04-16 16:43:21 #1857 passed:    master increase pkg timeout
+2014-04-16 16:36:39 #1856 passed:    master Fix TR reference docs for `for`
+2014-04-16 14:35:06 #1854 passed:    master Fix shapes with borders to work with pen styles.
+2014-04-16 14:18:19 #1853 passed:    master Demonstrate Racket/Datalog interop more and add unsyntax
+2014-04-16 14:06:23 #1852 passed:    master Mark class support as experimental in the TR docs
+2014-04-16 13:59:48 #1851 passed:    master racket/draw Cocoa: fix surroate-pair patch for Pango
+2014-04-16 13:43:04 #1850 passed:    master Add FAQ section
+2014-04-16 09:10:43 #1849 passed:    master fix use-before-definition bug in HtDP language implementation
+2014-04-16 08:05:46 #1848 passed:    master adjust errortrace to record potential use-before-definition sites
+2014-04-15 23:34:57 #1846 passed:    master Update HISTORY file for mzlib/class100 removal
+2014-04-15 23:33:18 #1845 passed:    master Remove the mzlib/class100 library.
+2014-04-15 21:15:59 #1844 passed:    master racket/shared: fix test
+2014-04-15 20:21:16 #1843 failed:    master Fix TR class support for new class expansion
+2014-04-15 17:42:19 #1842 failed:    master redex: temporary fix for `undefined` change
+2014-04-15 16:41:54 #1840 failed:    master removing dead code in fun.c
+2014-04-15 13:37:04 #1839 passed:    master racket/gui Cocoa: repairs for Cairo and Pango
+2014-04-14 17:04:16 #1836 passed:    master point to the contract profiler
+2014-04-14 16:11:25 #1835 passed:    master Fix raco dependencies-graph on relative paths.
+2014-04-14 11:28:27 #1834 errored:   master fix `equal?` on chaperoned values
+2014-04-14 08:47:07 #1833 passed:    master upgrade OpenSSL in old Windows packages, just in case
+2014-04-14 07:31:15 #1832 passed:    master drdr cleanup
+2014-04-13 23:57:47 #1831 passed:    master Use racket/base instead of racket in TR
+2014-04-13 21:22:05 #1830 passed:    master avoid overflow in poll() timeout calculation
+2014-04-13 19:29:46 #1829 failed:    master dont rebind void
+2014-04-13 15:07:01 #1828 passed:    master unbreak view|show module browser
+2014-04-13 11:40:00 #1827 passed:    master Reduce dependencies of TR's base-contracted.rkt
+2014-04-13 09:58:35 #1826 passed:    master fix `equal-[secondary-]hash-code` for impersonators
+2014-04-12 15:53:27 #1825 passed:    master docs and tests for DHE and ECDHE support; simplify curve name code
+2014-04-12 13:29:55 #1824 passed:    master add 'raco dependencies-graph'
+2014-04-12 10:36:26 #1823 passed:    master fix a leak related to submodules
+2014-04-12 10:31:59 #1822 passed:    master include a phase summary in module browser
+2014-04-12 08:35:25 #1821 passed:    master fixed source location reporting, test annotation; Rackety tests
+2014-04-12 08:07:33 #1820 passed:    master improve ellipsis-related error messages
+2014-04-11 16:28:55 #1819 failed:    master log major gcs in benchmark
+2014-04-11 15:29:48 #1817 passed:    master Fix RacketCon date on web page.
+2014-04-11 11:43:25 #1816 passed:    master Fix type of sequence-filter.
+2014-04-11 11:40:05 #1815 passed:    master comments, rackunit-y
+2014-04-11 07:38:56 #1814 failed:    master compile: fix namespace leak related to submodules and compilation
+2014-04-10 21:02:23 #1813 passed:    master use --deps search-auto for "Available from Catalog" installs
+2014-04-10 15:07:49 #1812 passed:    master make the module browser report the search result counts
+2014-04-10 14:42:02 #1811 passed:    master add module-browser test (should have been included in 6949473b)
+2014-04-10 14:39:15 #1810 passed:    master fix module browser for submodules
+2014-04-10 12:51:50 #1809 passed:    master change benchmark logging to use s-exps
+2014-04-10 11:00:13 #1808 passed:    master remove non-deterministic test, junk file
+2014-04-10 06:27:56 #1807 passed:    master raco pkg: improve error for failed package-source download
+2014-04-09 19:32:29 #1806 passed:    master fix use before definition bug from c8f3974a2
+2014-04-09 15:28:25 #1805 errored:   master Fix zsh auto-completion
+2014-04-09 09:28:19 #1803 passed:    master fix `typed/test-engine`
+2014-04-09 02:42:17 #1800 passed:    master fixed structure printing, added example to check-range
+2014-04-08 21:48:09 #1799 passed:    master Fix types in typed/file/gif
+2014-04-08 15:09:59 #1797 passed:    master Fix internal-external name mapping for TR classes
+2014-04-08 14:36:27 #1796 passed:    master Preserve source locations.
+2014-04-08 12:31:28 #1795 passed:    master racket/undefined: remove `undefined?` and `check-not-undefined`
+2014-04-08 11:06:46 #1794 passed:    master Allow functions with rest args in with-handlers.
+2014-04-08 08:09:42 #1793 passed:    master Post-release version for the v6.0.1 release
+2014-04-07 22:19:57 #1790 passed:    master fix object/c & fields that just have to exist
+2014-04-07 21:38:43 #1789 passed:    master Use mixed fair and finite list/e and delete unused test file
+2014-04-07 17:04:28 #1787 passed:    master Revert "Add output of a few front page examples in explanations."
+2014-04-07 15:34:42 #1786 passed:    master Make parse-type errors align with new Racket style
+2014-04-07 14:57:49 #1785 passed:    master Add output of a few front page examples in explanations.
+2014-04-06 20:41:45 #1783 passed:    master fix scale so it cooperates with the dc's current transformation
+2014-04-06 17:50:42 #1782 passed:    master Improve DrRacket .plt installation functionality so that it prints
+2014-04-06 08:39:57 #1781 passed:    master fix 2htdp/image for text-only mode and add a test case that
+2014-04-06 02:16:44 #1780 passed:    master Weaken exception testing for DrDr
+2014-04-05 20:57:23 #1779 passed:    master avoid calling pkg-directory so much
+2014-04-05 20:56:54 #1778 passed:    master missing semicolon in Scribble CSS
+2014-04-05 17:59:53 #1776 passed:    master pkg/path: fix for when the argument = a pkgs install directory
+2014-04-05 17:24:32 #1775 passed:    master Create plot frames in current eventspace; fix plot snip resize override
+2014-04-05 12:48:18 #1773 passed:    master Fix wrongly raised exception when 3D rectangles are entirely clipped out
+2014-04-05 11:56:15 #1772 passed:    master enable fullscreen for drracket in mac os x
+2014-04-05 09:09:12 #1771 passed:    master scribble manual style: remove toc hack
+2014-04-05 07:39:14 #1770 passed:    master fix bug in val-first version of or/c
+2014-04-04 23:49:08 #1769 passed:    master Remove a special case for NoFilter/NoObject in check below.
+2014-04-04 22:46:32 #1768 passed:    master Use sequence/c's #:min-count for better error messages in `lines' and others
+2014-04-04 20:03:41 #1767 passed:    master Documented typed/untyped-utils
+2014-04-04 16:48:52 #1766 passed:    master add missing for-label require
+2014-04-04 15:58:03 #1765 passed:    master Preliminary logging for the benchmark.
+2014-04-04 14:01:43 #1764 passed:    master Optimize fx->fl when safe.
+2014-04-04 13:09:42 #1763 passed:    master Removed all flonum speed hacks; plots are usually no slower and are sometimes faster now
+2014-04-04 11:32:35 #1762 passed:    master add `racket/undefined`
+2014-04-03 11:48:27 #1761 passed:    master adjust the dns tests so they stop failing
+2014-04-03 11:42:40 #1760 passed:    master Make it so that handlers lookup arrities other than the first.
+2014-04-03 08:18:29 #1759 passed:    master meta/new-web: fix `#:html-only?` keyword arguments
+2014-04-03 00:21:58 #1757 passed:    master Changed PDF/PS backend to use 1.0 x 1.0 scaling
+2014-04-02 23:49:54 #1755 passed:    master Add a bunch of new check below tests.
+2014-04-02 23:10:42 #1754 passed:    master Add contracts to filters.
+2014-04-02 12:49:11 #1753 passed:    master Add script to find good p-values, adjust models.
+2014-04-02 12:46:19 #1752 passed:    master Fixed error in drawing connected lines with axis transforms
+2014-04-02 12:27:37 #1751 passed:    master Reduce point3d rendering time by 50-70% by keeping points grouped
+2014-04-02 10:35:36 #1750 passed:    master print out check's input on exceptions
+2014-04-02 07:38:30 #1749 passed:    master adjust let poly bug #4 so that the check procedure catches
+2014-04-02 00:03:23 #1748 passed:    master Add some HISTORY lines for TR 6.0.1.
+2014-04-01 23:47:28 #1747 passed:    master Use filters when typechecking using tc-body.
+2014-04-01 19:18:13 #1745 passed:    master module: disallow definition skipping
+2014-04-01 17:01:27 #1744 errored:   master Changed let-poly's unification algorithm
+2014-04-01 16:01:39 #1743 passed:    master refactor benchmark loops for clarity
+2014-04-01 13:47:41 #1741 passed:    master fix extra message on timeouts
+2014-04-01 03:10:11 #1738 passed:    master Replaced plot's 3D depth sort hack with a BSP tree
+2014-04-01 00:45:50 #1737 passed:    master Real fix for the issue in the math docs
+2014-03-31 22:01:05 #1736 passed:    master add some error checking for when reading in the content of files
+2014-03-31 17:29:18 #1735 passed:    master Refactor TR `define` to avoid a performance bug
+2014-03-31 16:01:32 #1734 passed:    master Fix of PR 14413
+2014-03-31 15:11:12 #1733 passed:    master Extend heaps to allow removing arbitrary elements via an additional equality operator.
+2014-03-31 10:26:35 #1730 passed:    master Fix typos spotted by Ambrose Bonnaire-Sergeant.
+2014-03-31 10:19:00 #1729 passed:    master Fix typo in readtables documentation
+2014-03-31 09:43:00 #1728 passed:    master Add a test for 2dmatch + Typed Racket.
+2014-03-31 09:34:19 #1727 passed:    master Add annotations to 2dmatch to help typecheck.
+2014-03-31 09:15:49 #1725 passed:    master Use the form name from `match*/derived` to improve error messages.
+2014-03-30 21:16:59 #1724 passed:    master fix let-poly's check function so it always terminates
+2014-03-30 17:32:41 #1723 passed:    master add missing require
+2014-03-30 17:26:34 #1722 passed:    master adjust benchmark so that the 'check' functions are required to be
+2014-03-30 15:57:34 #1721 passed:    master tweak run-muts to clarify args in help
+2014-03-30 10:18:16 #1720 passed:    master adjust let-poly check functions so they count exns as failure,
+2014-03-29 22:36:54 #1719 passed:    master Add in let-poly bugs
+2014-03-29 16:22:03 #1718 passed:    master racket/gui gtk: fix -singleInstance for paths that don't work as strings
+2014-03-28 21:31:59 #1717 passed:    master add ref cells and make primitives behave polymorphically and some general cleanup
+2014-03-28 16:19:24 #1716 passed:    master ffi/unsafe/com: fix VT_BOOL representation
+2014-03-28 16:00:27 #1715 passed:    master a start on a system to explore that classic "let polymorphism+ref cells" bug
+2014-03-28 15:28:29 #1714 passed:    master Remove unused require in class-prims
+2014-03-28 13:12:47 #1713 passed:    master Cut out class dependencies for typed/racket/base
+2014-03-28 07:37:40 #1712 passed:    master Revert "avoid calling pkg->path from DrRacket's manager-skip-file-handler"
+2014-03-27 23:11:34 #1711 passed:    master avoid calling pkg->path from DrRacket's manager-skip-file-handler
+2014-03-27 15:38:46 #1710 passed:    master unboxing improvement in the JIT
+2014-03-27 15:36:59 #1709 passed:    master Reorder profiler docs.
+2014-03-27 11:30:28 #1707 passed:    master Make domain-mismatches have a more sensible default value.
+2014-03-27 10:45:44 #1706 passed:    master fix dumb mistake in 093fba97d93781f9bd9caef8fcb2028cc38dd34f
+2014-03-27 07:45:06 #1704 passed:    master make DrRacket cache path->pkg calls within a single 'Run'
+2014-03-27 01:34:42 #1702 passed:    master Add test cases for fixed PRs.
+2014-03-26 23:52:58 #1701 passed:    master fix handling of un-enumerable patterns to avoid
+2014-03-26 20:02:42 #1699 passed:    master Defer building tables; drops 600ms from (require math) on my machine
+2014-03-26 16:30:44 #1698 failed:    master Reimplement shapes with borders to deal with transparency better.
+2014-03-26 13:59:55 #1697 passed:    master avoid compiler warnings
+2014-03-26 13:31:29 #1696 passed:    master Make TR random tester more robust against special values.
+2014-03-26 11:24:32 #1695 errored:   master Add invert-filter and use it in -imp.
+2014-03-26 09:44:48 #1694 passed:    master fix performance problem in list-machine test suite
+2014-03-26 01:13:12 #1692 passed:    master Make let correctly implement the TC-Let rule from the paper.
+2014-03-26 00:41:00 #1691 passed:    master note redex-check change in redex history
+2014-03-26 00:39:40 #1690 passed:    master change redex-check's default strategy to do both
+2014-03-25 23:29:53 #1689 passed:    master Add test case for PR12985.
+2014-03-25 23:22:59 #1688 passed:    master Avoid a parameter for controlling resolve caching
+2014-03-25 21:25:32 #1686 passed:    master Add test case for PR 11747.
+2014-03-25 20:58:46 #1684 passed:    master Fix tc-let for mutable variables.
+2014-03-25 15:36:44 #1683 passed:    master scribble/base: add `#:{column,row,cell}-properties` arguments to `tabular`
+2014-03-25 15:04:47 #1682 passed:    master adjust plot so that it uses "rvm" for the verification model
+2014-03-25 14:31:40 #1681 passed:    master fix type comment
+2014-03-25 14:21:22 #1680 passed:    master clean up pick-an-index for inclusion in a paper
+2014-03-25 11:56:58 #1678 passed:    master Add support for contracts on non-returning functions with filters.
+2014-03-25 10:17:40 #1677 failed:    master Fix description of `read-html-as-xml`.
+2014-03-25 09:07:44 #1676 passed:    master Use `lazy-require` to avoid dependency for `fv`.
+2014-03-25 06:48:21 #1675 passed:    master fix explanation of stlc bug #2
+2014-03-25 03:18:17 #1674 passed:    master Make TR use rest annotations over expected type.
+2014-03-25 02:10:49 #1672 passed:    master Make -imp simplify more, and use it in more places.
+2014-03-24 22:30:12 #1669 passed:    master Make Bottom not a special case for tc-any-results.
+2014-03-24 09:20:41 #1668 passed:    master misc cleanups to graphing code so sizing is easier and
+2014-03-24 02:13:21 #1666 passed:    master Make -filter and -not-filter do more simplification.
+2014-03-24 00:51:43 #1665 passed:    master Remove dead code in tc-metafunctions.
+2014-03-23 16:55:53 #1662 passed:    master forgot bug #5 description (and clarify bug #4 wrt to bug #5)
+2014-03-23 16:46:20 #1661 passed:    master proper descriptions of the rvm model bugs
+2014-03-23 16:41:16 #1660 passed:    master Make typecheck tests provide more information.
+2014-03-23 14:08:25 #1659 passed:    master add small(ish) counterexample to delim-cont-3
+2014-03-22 19:24:02 #1658 passed:    master fix rvm ordered generation to not do test every time
+2014-03-22 19:13:30 #1657 passed:    master Fixup rec-lambda contract
+2014-03-22 16:00:15 #1656 passed:    master apppend unexposed bugs to the rhs of the benchmark plot
+2014-03-22 01:46:44 #1655 failed:    master Remove duplicate top-filter empty case.
+2014-03-22 01:08:56 #1654 passed:    master Fix misuse of expected in tc-send.
+2014-03-22 00:21:02 #1653 passed:    master fixup
+2014-03-22 00:00:01 #1651 passed:    master Fix many/e enum bug (probably impossible to observe at redex level)
+2014-03-21 23:44:57 #1649 passed:    master fix property to actually use Kleene equality (instead
+2014-03-21 14:55:03 #1648 passed:    master find slightly smaller counter examples for a few bugs
+2014-03-21 13:57:58 #1647 passed:    master add stlc-sub with type soundness property
+2014-03-21 11:08:30 #1644 passed:    master Make version of tc-err that checks return types.
+2014-03-21 06:42:49 #1643 passed:    master Modified Scribble Indentation functions to support "line push back"(combine concurrent short lines)
+2014-03-20 23:47:35 #1641 passed:    master adjust vm correctness property, update diffs
+2014-03-20 23:13:36 #1640 passed:    master Make abbreviation for make-Event to match others.
+2014-03-20 22:43:05 #1638 passed:    master Add type key to ClassTop.
+2014-03-20 22:23:21 #1636 passed:    master Simplify typechecking of extend-parameterization.
+2014-03-20 22:18:42 #1635 passed:    master add some convenience to the enumerators and change call-with-values
+2014-03-20 19:29:26 #1634 passed:    master distro-build: use `plt-web` style for site or snapshot page
+2014-03-20 16:08:02 #1633 passed:    master add delim-cont counterexamples, adjust check property
+2014-03-20 12:02:54 #1632 failed:    master add tests to ensure counter examples in buggy versions of stlc-sub aren't
+2014-03-20 11:50:41 #1631 passed:    master adjust stlc-sub to have a new property that
+2014-03-20 10:40:23 #1629 passed:    master Fix polymorphic class checking.
+2014-03-20 01:00:09 #1628 passed:    master Fix uses of expected in tc-app-list.
+2014-03-20 00:41:59 #1627 passed:    master Remove extraneous uses of expected in tc-app-hetero.
+2014-03-19 23:10:24 #1625 passed:    master Simplify tc-expr testcase.
+2014-03-19 17:41:26 #1621 passed:    master delim cont 1
+2014-03-19 16:35:43 #1620 passed:    master add bug6 to verifier benchmark
+2014-03-19 15:42:06 #1619 passed:    master make the list/e combinator be more fair
+2014-03-19 15:01:52 #1618 passed:    master add counter examples to rbtrees
+2014-03-19 13:57:44 #1617 passed:    master fix performance bug in Redex
+2014-03-19 13:36:51 #1616 passed:    master add exit message with counts
+2014-03-19 13:24:43 #1614 passed:    master exception handling for vm model
+2014-03-19 13:00:02 #1613 passed:    master don't refresh generator on timeouts to avoid looping timeouts
+2014-03-19 12:23:15 #1610 passed:    master rename make-mutants because these aren't mutants in the usual sense of the testing literature
+2014-03-19 11:34:59 #1609 passed:    master add + to poly-stlc
+2014-03-19 10:59:34 #1608 passed:    master add tests to the poly-stlc model
+2014-03-19 00:58:07 #1607 passed:    master Remove unused imports and a useless comment
+2014-03-18 23:30:50 #1606 passed:    master redex: update virtual machine benchmark diffs
+2014-03-18 23:18:21 #1605 passed:    master adjust enum distributions
+2014-03-18 22:40:56 #1604 passed:    master new slate of stlc-sub bugs
+2014-03-18 17:18:54 #1603 passed:    master redex: add virtual machine model to benchmark
+2014-03-18 17:04:02 #1602 passed:    master unbreak stlc-sub test #9
+2014-03-18 17:02:14 #1601 passed:    master Make TR class tests run successfully on their own
+2014-03-18 16:46:09 #1600 passed:    master Misc cleanups to stlc and stlc-sub benchmarks:
+2014-03-18 15:32:33 #1599 passed:    master remove links synthesized information from drracket bug report
+2014-03-18 15:30:40 #1598 passed:    master Fix description of citet requirements.
+2014-03-18 14:54:56 #1597 passed:    master add Michał Pałka's l
+2014-03-18 14:45:13 #1596 passed:    master Adjust fixed mode and add new stlc counterexamples
+2014-03-18 12:51:51 #1595 passed:    master meta/new-web: gzip ".css" and ".js" on upload to S3
+2014-03-18 10:25:56 #1593 passed:    master Make tc-l test cases give better error messages.
+2014-03-18 10:20:40 #1592 passed:    master fix compiler--validator mismatch on bitwise specializations
+2014-03-17 21:35:47 #1587 passed:    master Adding fixed test mode and small examples for all diffs
+2014-03-17 11:48:11 #1586 passed:    master Make TR test infrastructure support being run from different directories.
+2014-03-17 01:41:10 #1584 passed:    master Add Top and Bot to contradictory and complementary checks.
+2014-03-16 16:07:22 #1583 passed:    master scribblings/local-redirect: break xref-key directs into on-demand parts
+2014-03-15 15:36:54 #1581 passed:    master Change "Class and units" to "Unsupported features"
+2014-03-15 10:42:29 #1580 passed:    master meta/new-web: adjust download-site list
+2014-03-14 21:02:22 #1577 errored:   master Fix implied-atomic to work on -top and -bot.
+2014-03-14 20:27:41 #1576 passed:    master Make check-below-tests check more things and give more debug info.
+2014-03-14 13:42:31 #1575 passed:    master Adjust error messages for send typechecking
+2014-03-14 12:25:38 #1574 passed:    master Fix class typechecking for Name types
+2014-03-14 10:20:21 #1571 passed:    master Support rest args for TR class methods
+2014-03-14 09:33:39 #1570 passed:    master Revise Scribble docs for the new package system
+2014-03-13 23:25:05 #1569 passed:    master Make check-below only accept arguments of the same kind.
+2014-03-13 14:25:23 #1566 passed:    master handle the case where the links file contains an absolute path
+2014-03-13 08:22:10 #1565 passed:    master racket/gui gtk: fix reference count on widget extracted in choice%
+2014-03-12 21:13:22 #1563 passed:    master Fix tc-results->values and filter-tc-results to handle polydots.
+2014-03-12 20:15:07 #1562 passed:    master Make check-exn/check-not-exn keep the check failure message.
+2014-03-12 19:46:10 #1561 passed:    master Another makefile CFLAGS/CPPFLAGS adjustment
+2014-03-12 17:20:49 #1559 passed:    master Revise "get started" para.
+2014-03-12 16:35:02 #1558 passed:    master Margin at the bottom.
+2014-03-12 15:46:47 #1556 passed:    master Fix jerkiness of navbar navigation.
+2014-03-12 12:49:38 #1553 passed:    master small improvements to style of examples on front page
+2014-03-12 12:24:49 #1552 passed:    master Fix two missing '.'.
+2014-03-12 11:10:40 #1549 passed:    master Fix small typo in the "Find Racket files" example.
+2014-03-12 09:58:01 #1548 passed:    master Fix handling of chunked response headers
+2014-03-12 09:16:51 #1547 passed:    master Change error messages for two TR unit tests
+2014-03-12 07:17:48 #1546 passed:    master meta/new-web: minor repairs and sync script
+2014-03-12 00:19:28 #1545 passed:    master Correctly check letrec-values clauses with no vars
+2014-03-11 22:50:01 #1544 failed:    master Clarify a few comments in TR
+2014-03-11 22:05:20 #1543 failed:    master Use Tarjan's algorithm for typechecking letrecs
+2014-03-11 20:22:08 #1542 passed:    master base: update package version
+2014-03-11 16:41:01 #1541 errored:   master Add type annotations for GUI libraries
+2014-03-11 15:04:12 #1540 passed:    master fix compiler to not move allocation across continuation capture
+2014-03-11 15:01:06 #1539 passed:    master redex: add 'ordered' to benchmark plots
+2014-03-11 09:45:04 #1537 passed:    master fix syntax checking for `#%declare`
+2014-03-10 23:50:02 #1536 passed:    master Make TR tests work with contracts enabled.
+2014-03-10 16:04:23 #1534 passed:    master Fix TR tests for new error messages
+2014-03-10 15:59:57 #1533 passed:    master redex: add in-order enumeration to the benchmark
+2014-03-10 14:24:06 #1532 passed:    master Fix doc contract for `syntax-local-phase-level`
+2014-03-10 07:58:25 #1531 passed:    master changed introductory paragraph, used active voice in news, we need exact date
+2014-03-09 22:02:17 #1530 passed:    master subprocess: allocate for environment variables before fork
+2014-03-09 09:48:26 #1529 passed:    master create-embedding-executable: fix namespace and module-declaration problem
+2014-03-08 22:53:20 #1528 passed:    master meta/new-web: avoid "paradigms"
+2014-03-08 12:11:20 #1526 passed:    master Restyle mirror page.
+2014-03-08 11:25:43 #1525 passed:    master meta/new-web: streamline download sequence
+2014-03-08 06:26:39 #1524 passed:    master rename "con" to "rcon"
+2014-03-07 22:46:32 #1523 passed:    master meta/new-web: add con.racket-lang.org
+2014-03-07 16:35:42 #1522 passed:    master meta/new-web: fill in corners
+2014-03-07 00:31:47 #1521 passed:    master Changes printer to be more consistent.
+2014-03-05 22:56:16 #1519 passed:    master Merge branch 'interleave' of https://github.com/maxsnew/racket
+2014-03-05 15:45:09 #1517 passed:    master add tests for scribble/eval
+2014-03-05 11:51:11 #1516 passed:    master scribble/render: fix contract on `render` to include #:warn-undefined?
+2014-03-05 08:26:34 #1515 passed:    master TR: better error for invalid super-make-object
+2014-03-04 13:33:16 #1514 passed:    master One more "undefined identifier" change in TR
+2014-03-04 13:04:03 #1513 passed:    master Change TR's "untyped identifier" error messages
+2014-03-03 18:32:03 #1510 passed:    master Always use a monospace font, even on old browsers.
+2014-03-03 17:31:11 #1509 passed:    master Use "explain" on the explanation button for the short front-page examples.
+2014-03-03 12:54:32 #1507 passed:    master Allow flvectors/fxvectors in Any contract
+2014-03-03 06:55:48 #1506 passed:    master plt-web: record directory-to-URL mapping in destination
+2014-03-02 16:03:13 #1505 passed:    master Fix indentation on sierpinski example.
+2014-03-01 21:49:51 #1504 passed:    master Remove unused image from new website directory
+2014-03-01 21:09:15 #1503 passed:    master Add import for evaluator in match docs
+2014-03-01 21:01:14 #1502 passed:    master new web pages: adjust explanation of GIT_DIR
+2014-03-01 20:50:11 #1501 passed:    master Improve Guide section on other editors
+2014-03-01 12:43:37 #1500 passed:    master Add more tests for PR 14380
+2014-03-01 08:55:38 #1499 passed:    master Fix doc typo.
+2014-02-28 21:53:27 #1498 passed:    master Use abbreviations and default values for filters more in unit tests.
+2014-02-28 19:58:02 #1496 passed:    master Add #:literal-sets for several TR optimizer cases
+2014-02-28 16:56:02 #1495 passed:    master [unsafe-]fl{real,image}-part: fix contracts in docs and errors
+2014-02-28 15:49:19 #1494 passed:    master Add make-input-port, make-output-port to TR
+2014-02-28 13:32:03 #1493 passed:    master Add install info to TR optimization guide section
+2014-02-28 12:46:32 #1492 passed:    master fix bignum allocation
+2014-02-28 11:41:39 #1491 passed:    master revert part of 58e7d033f79b20f0d9e55d9e8a843f64b8957c5f
+2014-02-28 10:48:34 #1490 passed:    master support older Cairo and GDK versions
+2014-02-28 10:37:57 #1489 passed:    master More docs about contract costs in TR.
+2014-02-28 10:01:26 #1488 passed:    master fix ada splash screen
+2014-02-28 06:52:18 #1487 passed:    master improve error message of object=?
+2014-02-27 17:43:50 #1485 passed:    master Fix a TR bug for row polymorphic application
+2014-02-27 16:59:02 #1484 passed:    master Windows installer: fix recording of document-icon paths
+2014-02-27 16:19:38 #1483 passed:    master Adjust handling of types for non-expressions
+2014-02-27 13:22:12 #1482 passed:    master JIT: enable unboxing of flonum arguments in mutual recursion
+2014-02-27 11:13:10 #1481 passed:    master docs improvements
+2014-02-27 00:14:15 #1480 passed:    master Fix type of - to not be wrong on negative fixnums
+2014-02-26 22:13:41 #1479 passed:    master Catch syntax lifting at the top-level in TR
+2014-02-26 17:59:30 #1478 passed:    master fix tutorial exercise
+2014-02-26 17:29:58 #1477 passed:    master Make row inference slightly smarter
+2014-02-26 16:22:45 #1474 passed:    master description for unix-specific srcs
+2014-02-26 10:01:43 #1472 passed:    master remove random-seed test from things that run
+2014-02-26 08:42:40 #1471 passed:    master Prep array-broadcast.rkt for TR negation fix
+2014-02-26 06:11:54 #1470 passed:    master fix call to raise-argument-error and fix docs for with-roots
+2014-02-26 02:43:46 #1469 passed:    master Revert "Fix type of - to not be wrong on negative fixnums."
+2014-02-25 22:23:18 #1468 failed:    master redex: adjust benchmark time calculations
+2014-02-25 17:14:31 #1467 failed:    master redex: parallelize benchmark generation modes
+2014-02-25 17:12:11 #1466 failed:    master add PLTUSERHOME
+2014-02-25 14:54:00 #1465 failed:    master raco exe: fix GUI executables for runnnig without a preference file
+2014-02-25 12:01:29 #1464 failed:    master Fix type of - to not be wrong on negative fixnums.
+2014-02-25 11:49:35 #1463 passed:    master including test for PR 14369 in xtest
+2014-02-25 11:03:53 #1462 passed:    master use private pseudo-random-generator
+2014-02-25 07:35:54 #1461 passed:    master racket/gui: small speed-ups in editor drawing path
+2014-02-25 06:25:49 #1460 passed:    master adjust probability of zero for the enumerator in the various
+2014-02-25 02:32:17 #1459 passed:    master Add missed optimization tests for add1/sub1.
+2014-02-25 00:49:49 #1458 passed:    master Revert split of float-ops because the remaining ones never trigger.
+2014-02-25 00:36:22 #1457 passed:    master Add TR rep-tests to the main unit tests file
+2014-02-25 00:32:27 #1456 passed:    master Remove some debugging code in subtype checker
+2014-02-24 22:13:34 #1455 passed:    master fix package dependencies
+2014-02-24 20:51:54 #1454 passed:    master drop (indirect) dependency on racket/gui/base
+2014-02-24 17:08:00 #1453 passed:    master Fix infinite loop in List: expander in subtyping
+2014-02-24 12:28:32 #1452 passed:    master adjust enumeration-based generator to make terms that are less
+2014-02-24 11:35:16 #1451 passed:    master Better layout for module view.
+2014-02-24 11:33:01 #1450 passed:    master Fix bad diff
+2014-02-24 09:55:52 #1449 passed:    master Support ValuesDots in a typechecking a funapp
+2014-02-24 01:53:08 #1448 passed:    master Add more optimizations for projections.
+2014-02-23 17:02:21 #1445 passed:    master JIT: enable unboxing in branches of `if` and end of `begin`
+2014-02-23 09:37:20 #1444 passed:    master change the meaning of the #:enum argument to redex-check
+2014-02-22 20:22:45 #1443 passed:    master add 'simple-root' for students to use in test suites that call gc:cons
+2014-02-22 14:09:17 #1441 passed:    master Add delays to unboxed let to avoid optimizing twice.
+2014-02-22 08:05:35 #1440 passed:    master update drracket HISTORY.txt
+2014-02-22 07:53:25 #1439 passed:    master fix careless error (apologies future git bisecters)
+2014-02-22 07:46:13 #1438 failed:    master always show the memory use and the () status indicators in drracket's status line
+2014-02-21 17:31:17 #1437 passed:    master add a test case to make sure 'Insert Large Letters' doesn't crash
+2014-02-21 13:48:04 #1436 passed:    master Fix DrRacket's insert-large-letters
+2014-02-21 13:04:22 #1435 passed:    master Move typed class unit tests into a separate file
+2014-02-20 23:16:40 #1434 passed:    master Fix type for first argument of dynamic-place
+2014-02-20 17:02:30 #1433 passed:    master Expand on docs for TR class init/init-rest args
+2014-02-20 15:54:03 #1432 passed:    master Revise TR classes & docs based on feedback
+2014-02-20 14:31:15 #1431 passed:    master mcons doc typo fix
+2014-02-20 14:05:00 #1430 passed:    master Restore optimization for two DrRacket TR files
+2014-02-20 13:16:35 #1429 passed:    master Make TR's `for/hash` form more flexible
+2014-02-20 08:18:53 #1428 passed:    master Another makefile CFLAGS/CPPFLAGS adjustment
+2014-02-20 08:03:51 #1427 passed:    master makefiles: adjust definition and handling of CFLAGS and CPPFLAGS
+2014-02-19 23:08:51 #1426 passed:    master Add test for PR 13937
+2014-02-19 20:22:23 #1425 passed:    master Document legacy forms with a : suffix
+2014-02-19 15:45:04 #1424 passed:    master Revise TR Reference for new :-less forms
+2014-02-19 14:47:29 #1423 passed:    master add some tests and start a "known bugs" test suite for the contract system
+2014-02-18 22:29:43 #1422 passed:    master Fix TR double cast bug
+2014-02-18 21:39:20 #1421 passed:    master updating option contract tests
+2014-02-18 17:45:34 #1420 passed:    master Add typed/pict which exports part of pict
+2014-02-18 11:57:42 #1418 passed:    master redex: add enum to benchmark plotting
+2014-02-18 08:36:46 #1417 passed:    master setup/unixstyle-install: fix up only installed ".desktop" files
+2014-02-17 17:42:13 #1415 passed:    master Swap remaining unsafe and chaperone-unsafe operation in the TR optimizer.
+2014-02-17 16:31:00 #1414 passed:    master redex: fix some more benchmark paths
+2014-02-17 16:18:47 #1413 passed:    master world changes for bitmaps as images in universe
+2014-02-17 14:59:06 #1412 passed:    master add enum generation to stlc
+2014-02-16 10:39:23 #1411 passed:    master Improve type inference for ListDots
+2014-02-15 16:00:10 #1410 passed:    master raco setup: fix the way that "stamp" is compiled for avoided files
+2014-02-15 10:39:15 #1409 passed:    master setup/dirs: fix `get-apps-dir`
+2014-02-14 23:16:42 #1408 passed:    master Fix TR regression and use abstraction recipe
+2014-02-14 23:03:38 #1407 passed:    master fix error message
+2014-02-14 18:17:20 #1406 passed:    master Update TR doc pkg dependencies
+2014-02-14 17:46:42 #1405 passed:    master Fixed some problems with 2D plots not rendering due to +nan.0 and +inf.0
+2014-02-14 16:34:25 #1404 passed:    master Add a top blurb to the TR Reference
+2014-02-13 23:31:45 #1403 passed:    master move delim-cont tests into a separate file
+2014-02-13 16:26:28 #1401 passed:    master racket/draw: fix serializaiton of bitmap drawing in `record-dc%`
+2014-02-13 12:38:00 #1400 passed:    master add missing redex-examples dependencies
+2014-02-13 12:24:15 #1399 errored:   master Reorganize documentation for -> form in TR
+2014-02-13 12:11:50 #1398 passed:    master remove unnecessary file
+2014-02-13 00:35:41 #1397 passed:    master Fix TR reference typo
+2014-02-13 00:30:48 #1396 passed:    master Document the new prefix function type constructors
+2014-02-12 19:48:03 #1394 passed:    master typos and notes
+2014-02-12 18:45:03 #1393 passed:    master Add the random generation bechmark.
+2014-02-12 11:11:41 #1391 passed:    master more unexpected strange things broke, so disable new class/c yet again
+2014-02-12 06:46:48 #1390 passed:    master Improvement and bug fixes to the new class/c; try again to re-enable it
+2014-02-11 13:07:00 #1387 passed:    master Fix TR optimizer test.
+2014-02-11 11:28:46 #1386 passed:    master scribble/manual: delay expressions that require collection-based files
+2014-02-11 09:30:51 #1385 passed:    master Simplify types for flvector and fxvector operations.
+2014-02-11 06:58:47 #1384 passed:    master scribble/html: add 'index flag in `url-roots`
+2014-02-11 00:29:58 #1383 passed:    master Add in-flvector, in-fxvector to TR base environment
+2014-02-10 22:59:48 #1382 passed:    master Add an ignore-table for TR's optimizer
+2014-02-10 13:27:27 #1380 passed:    master restore "getting started" link
+2014-02-10 13:24:27 #1379 passed:    master fix careless error
+2014-02-10 10:59:53 #1378 passed:    master adjust test/spec-passed so that tests continue when exns are raised
+2014-02-10 07:51:26 #1377 passed:    master fix checking of attempt to impersonte non-struct via mutator
+2014-02-10 07:21:40 #1376 passed:    master Update redex enumeration docs
+2014-02-09 10:15:56 #1372 passed:    master Add doc examples for `define/contract`
+2014-02-09 08:18:51 #1371 passed:    master scribble/text: add `outputable/c` and contract checks
+2014-02-08 22:52:33 #1369 passed:    master check context closure language requirements properly
+2014-02-08 21:17:16 #1368 passed:    master edit define/contract boundary discussion
+2014-02-08 20:43:11 #1367 passed:    master disable the new class/c implementation for now
+2014-02-08 20:29:51 #1366 passed:    master Add initial prose for define/contract in the Guide
+2014-02-08 18:08:43 #1365 passed:    master fix bugs in the interaction between subclasses and external class/c contracts
+2014-02-08 09:10:33 #1364 passed:    master fix interaction of mixins and contracted classes
+2014-02-08 09:01:27 #1363 passed:    master Add other future/place primitives to TR base-env
+2014-02-08 08:13:36 #1362 passed:    master scribblings/html/resource: allow #f renderer for URL conversion
+2014-02-07 23:18:29 #1361 passed:    master add forgotten file
+2014-02-07 22:27:35 #1360 failed:    master change class/c to keep a vector of wrapper methods, not a hash table
+2014-02-07 15:43:13 #1359 passed:    master Report unspecialized comparisons.
+2014-02-07 00:43:09 #1358 passed:    master improve error message for bad attribute values
+2014-02-06 16:38:16 #1357 passed:    master Fix doc contract for list-box%
+2014-02-06 15:06:08 #1356 passed:    master Fix TR optimizer tests for new source locations.
+2014-02-06 14:48:21 #1355 passed:    master Expose missing blame parties to the contract profiler.
+2014-02-06 06:49:37 #1354 passed:    master scribble-{doc,lib}: fix package dependencies
+2014-02-05 23:01:58 #1351 failed:    master scribble/html: first cut at documentation
+2014-02-05 15:06:41 #1350 passed:    master unbreak racket: disable the new class/c in favor of the old one (for now)
+2014-02-05 13:43:09 #1349 failed:    master Adjust class/c to use the new strategy for the external
+2014-02-05 11:08:54 #1347 passed:    master Add contracts for synchronizable events
+2014-02-04 22:01:15 #1344 passed:    master macro expander repair
+2014-02-04 19:59:33 #1343 passed:    master racket/draw and racket/gui: fix error reporting
+2014-02-04 17:38:38 #1342 passed:    master JIT: fix fast path for `with-continuation-mark`
+2014-02-04 17:17:18 #1341 passed:    master Simplify printing for list type special cases
+2014-02-04 15:53:44 #1340 passed:    master places: improve and extend logging of place-related events
+2014-02-04 15:22:27 #1339 passed:    master Fix printing of rest argument types in TR
+2014-02-04 15:03:01 #1338 passed:    master Fix typo in Reference
+2014-02-04 10:27:59 #1337 passed:    master add dynamic-require/expose
+2014-02-04 07:47:42 #1336 passed:    master makefile: add dependency of ".app"s "Info.plist" on Racket version
+2014-02-03 13:07:40 #1335 passed:    master Add indexing for style guide.
+2014-02-03 12:33:17 #1334 passed:    master Fix typo in redex docs
+2014-02-03 11:41:23 #1333 passed:    master Add tests for fixnum operations on the boundary conditions.
+2014-02-03 10:09:37 #1331 passed:    master fix error message for set-field! and dynamic-set-field!
+2014-02-02 22:00:53 #1330 passed:    master add missing provide
+2014-02-02 21:57:45 #1329 failed:    master adjust class/c so the expansion is slightly smaller
+2014-02-02 08:30:56 #1328 passed:    master break up class/c's representation into the internal and external parts
+2014-02-02 07:36:34 #1327 passed:    master edito
+2014-02-01 10:47:48 #1326 passed:    master raco setup: fix test for installing doc CSS to user-specific location
+2014-02-01 08:20:08 #1325 passed:    master Synch German string constants with latest.
+2014-01-31 17:22:38 #1322 passed:    master v5.93 installers info
+2014-01-31 10:37:09 #1320 passed:    master Update typed/net/url
+2014-01-31 09:21:41 #1319 passed:    master minor clarification to specify #:opaque more fully
+2014-01-31 09:08:53 #1318 passed:    master add one more missing require from recent class/c file rearrangement
+2014-01-31 08:06:14 #1317 passed:    master srfi/34: work with `else` frmo `racket` or `mzscheme`
+2014-01-31 01:35:40 #1316 passed:    master Remove extra in-set type annotation.
+2014-01-30 22:43:30 #1313 passed:    master add missing export
+2014-01-30 16:38:41 #1311 passed:    master move the class/c implementation into its own file
+2014-01-30 10:52:23 #1310 errored:   master Handle kw λs when useful annotations are missing
+2014-01-29 19:14:57 #1307 passed:    master unix-style install: preserve build stamp
+2014-01-29 17:28:19 #1306 passed:    master fix another potential overflow in fixnum `expt`
+2014-01-28 23:01:31 #1305 passed:    master Minor doc fixes in Reference and Inside
+2014-01-28 13:30:26 #1302 passed:    master racket/gui: fixups for mod3-5 event additions
+2014-01-28 08:38:38 #1299 passed:    master Record information about other key modifiers on X11/GTK
+2014-01-28 08:35:18 #1298 passed:    master distro-build: record "" build stamp (especially for release mode)
+2014-01-27 23:16:46 #1297 passed:    master Fix keyword function type conversion in TR
+2014-01-27 12:40:51 #1296 passed:    master Doc fixes to Inside guide
+2014-01-27 10:57:19 #1295 passed:    master Fix type of parameter? to correctly account for variance.
+2014-01-27 10:38:52 #1294 passed:    master Add rough draft of docs for Top/Bot to quiet DrDr.
+2014-01-27 09:53:39 #1293 passed:    master unix: fix `gracket`-based launcher creation
+2014-01-26 22:04:49 #1292 passed:    master expt: avoid undefined integer overflow in fixnum implementation
+2014-01-26 20:40:52 #1291 passed:    master fix `in-directory` for a non-#f argument, not inline `for` clause
+2014-01-26 19:59:14 #1290 passed:    master add default-equiv and some examples in docs
+2014-01-26 19:39:32 #1289 passed:    master racket/gui cocoa: fix atomicity of refresh
+2014-01-26 17:03:37 #1286 passed:    master how to run tests
+2014-01-25 22:02:42 #1282 passed:    master up timeout for test-htdp.rkt
+2014-01-25 21:42:44 #1281 passed:    master fix (hopefully) the Move Tab Left and Move Tab Right shortcut keybindings
+2014-01-25 19:54:19 #1280 passed:    master Make parse type use literal-syntax-classes.
+2014-01-25 11:30:36 #1278 passed:    master Minor fix for REPL type printing
+2014-01-25 10:44:57 #1275 passed:    master v5.92 installers info
+2014-01-25 10:01:35 #1274 passed:    master DrRacket: add support for icon files, etc. for created executables
+2014-01-24 21:19:59 #1271 passed:    master add symlink to releases dir
+2014-01-24 10:26:53 #1269 passed:    master Allow typecheck tests to specify a failure regexp.
+2014-01-24 09:54:57 #1268 passed:    master configure test for powl(), which is used for extflonums
+2014-01-23 23:43:25 #1267 passed:    master Fix a printing bug for some type results
+2014-01-23 21:38:22 #1266 passed:    master run-collapsed doesn't work with WXME mode
+2014-01-23 11:19:20 #1265 passed:    master Allow other kinds of for clauses in for/hash:
+2014-01-22 21:37:03 #1263 passed:    master fix contract test case
+2014-01-22 21:21:08 #1262 passed:    master racket/gui win32: fix handling of @2x bitmaps
+2014-01-21 20:23:43 #1260 passed:    master Make TR tests pass with contracts on again
+2014-01-21 17:55:20 #1259 passed:    master Add doc examples for other TR REPL commands
+2014-01-21 14:35:35 #1258 passed:    master 2013 -> 2014
+2014-01-21 09:47:47 #1257 failed:    master attempt to clarify define-match-expander behavior
+2014-01-21 09:41:18 #1256 passed:    master Fix arity of `write-to-file` method in text%
+2014-01-20 21:43:54 #1255 passed:    master Fix editor canvas admin bug found by TR
+2014-01-19 15:17:11 #1253 passed:    master Make case-> reduce to -> when it can.
+2014-01-19 15:15:07 #1252 passed:    master Correct typos: INSTALL.txt, MzCOM, ffi/com
+2014-01-19 10:19:48 #1250 passed:    master Remove unnecessary keyword from generics examples
+2014-01-17 09:24:21 #1247 passed:    master Fix doc typos
+2014-01-16 17:01:02 #1246 passed:    master Fix type inference helper on AnyValues range
+2014-01-15 21:34:10 #1239 passed:    master adjust the source location on metafunction def-before-use errors
+2014-01-15 15:13:42 #1238 passed:    master doc clarification on init-auto-scrollbars
+2014-01-15 13:56:45 #1237 passed:    master some small changes to the fonts (perhaps for the update to osx 10.9)
+2014-01-15 11:42:53 #1236 passed:    master scribble/manual: improve `defstruct` layout
+2014-01-15 10:54:11 #1235 passed:    master Optimize cons/sc contracts.
+2014-01-14 23:31:54 #1233 passed:    master Remove unused require.
+2014-01-14 17:10:03 #1232 passed:    master make sure redex-match? does the duplicate non-terminals check
+2014-01-14 11:10:13 #1231 passed:    master Add possible to TR optimizer message
+2014-01-13 23:12:13 #1229 passed:    master Fix class static contracts and add tests.
+2014-01-13 17:03:40 #1228 passed:    master Replace `chomp` with `string-trim`, delete former
+2014-01-13 16:13:18 #1227 passed:    master Fix printer tests when run individually
+2014-01-13 14:41:19 #1226 passed:    master Add type printer tests
+2014-01-13 12:04:33 #1225 passed:    master Make parallel compile not call exit.
+2014-01-13 11:02:15 #1224 passed:    master Make kw-subtypes* consistent with s and t ordering
+2014-01-12 23:37:59 #1221 passed:    master fix arity error
+2014-01-12 23:25:45 #1220 passed:    master Added #:unscaled? keyword argument to `bitmap->flomap'
+2014-01-12 22:13:48 #1219 passed:    master Add "when to add type annotations?" to TR Guide
+2014-01-12 15:28:47 #1218 passed:    master Ensure that we coerce to double flonums.
+2014-01-12 14:55:06 #1216 passed:    master Mark TR exp bug as fixed.
+2014-01-12 11:58:00 #1213 passed:    master Fixup anyvalue handling in call-with-values.
+2014-01-12 11:47:10 #1212 passed:    master Reduce duplication in init-env code and clean up its interface.
+2014-01-11 20:47:27 #1210 passed:    master scribble/manual: fix `history` for Latex/PDF
+2014-01-11 18:42:30 #1209 passed:    master Added #:value keyword to `defproc', `defparam', `defthing' and related
+2014-01-11 14:35:27 #1208 passed:    master Improve compile-omit-paths for typed-racket tests.
+2014-01-11 11:04:57 #1204 passed:    master fix docs for `test-engine/racket-test`
+2014-01-10 16:35:51 #1201 passed:    master Fix reference typos
+2014-01-10 10:39:42 #1198 errored:   master Fix typos in french string constants.
+2014-01-10 06:55:34 #1197 passed:    master fix memory problem with places & built-in structure types
+2014-01-10 03:18:28 #1196 passed:    master yearly french update, and fixed a couple of typos in english version
+2014-01-09 23:49:47 #1195 passed:    master remove attempt to purify an already pure port
+2014-01-09 14:23:36 #1193 passed:    master package binary strip: work on "info.rkt" files that use `(module ....)
+2014-01-08 23:09:07 #1191 passed:    master racket/gui win32: fix for backing-scale
+2014-01-08 14:05:12 #1190 passed:    master strengthen shortcut-prefix contract
+2014-01-08 08:52:37 #1188 passed:    master scribble: document all `scribble/base` CSS style classes
+2014-01-07 17:26:18 #1186 passed:    master scribble/manual: make `racketblock` fall back to `racket`-style spacing
+2014-01-07 13:37:09 #1182 passed:    master Fix broken TR test
+2014-01-07 13:08:08 #1181 passed:    master Add documentation for struct-type types
+2014-01-07 12:41:33 #1180 passed:    master Add types for `syntax/stx` as `typed/syntax/stx`
+2014-01-07 12:22:55 #1179 passed:    master fix (more) closure type tracking for a procedure with only an unused rest arg
+2014-01-07 11:12:43 #1177 passed:    master Convert check-below.rkt error msgs to new format
+2014-01-06 23:17:09 #1175 passed:    master Add caching for collects-relative->path.
+2014-01-06 22:40:40 #1174 passed:    master racket/snip: fix `image-snip%` to convert to 'png@2x-bytes
+2014-01-06 20:39:47 #1173 passed:    master path-element? should disallow '.' and '..'
+2014-01-06 17:22:14 #1172 passed:    master Fix raco test on relative paths.
+2014-01-06 11:10:55 #1169 passed:    master Make parse type and type annotation tests run at the right phase.
+2014-01-05 22:14:51 #1167 passed:    master Draw plots to bitmaps using #:backing-scale for Retina displays
+2014-01-05 19:50:11 #1166 passed:    master make server: fix config setup for pkg build
+2014-01-05 18:58:27 #1165 passed:    master image-snip%: preserve bitmap backing scale on save & load
+2014-01-05 16:36:24 #1164 passed:    master fix error message for unsupported patterns
+2014-01-05 09:55:48 #1163 passed:    master fix alignment for a drawing context with a backing scale
+2014-01-04 16:58:02 #1162 passed:    master Provide and document `match-expander?` and `legacy-match-expander?`.
+2014-01-04 16:32:36 #1161 passed:    master Document alternative type annotation form
+2014-01-03 23:16:06 #1160 passed:    master Remove info file from test directory.
+2014-01-03 23:07:19 #1159 passed:    master Add tc-toplevel/full and tc-module/full and use them.
+2014-01-03 19:13:50 #1158 passed:    master if a bitmap has a non-1 backing scale, always draw smoothly to other contexts
+2014-01-03 13:54:21 #1156 passed:    master Removed recently broken "doc-tests.rkt"
+2014-01-03 11:23:59 #1155 passed:    master racket-style.css: move margin-note img formatting to Guide/Ref icon
+2014-01-02 20:29:04 #1154 passed:    master images/icons: add `backing-scale` arguments
+2014-01-01 11:04:51 #1153 passed:    master allow looking at a pkg lockfile in the sandbox
+2014-01-01 09:24:14 #1152 passed:    master copy `drdr:random` command props to test configs
+2013-12-31 21:27:37 #1151 passed:    master whoops: remove duplicate test submodule
+2013-12-31 21:24:11 #1150 passed:    master move planet test specifications into the test files and out of info.rkt
+2013-12-31 18:02:53 #1149 passed:    master add deps
+2013-12-31 15:48:55 #1148 passed:    master disable planet tests except run-all.rkt
+2013-12-31 12:42:47 #1147 passed:    master Added add-polygon and scene+polygon functions.
+2013-12-31 11:56:06 #1146 passed:    master MzCom: fix command-line parsing
+2013-12-31 11:24:49 #1145 passed:    master Look for randomness notification
+2013-12-31 10:48:38 #1144 passed:    master Add HTML tests to main-distribution-test
+2013-12-31 07:50:57 #1143 passed:    master fix CPP guard on clang pragmas
+2013-12-31 07:20:39 #1142 passed:    master A possible fix to a memory leak in errortrace
+2013-12-30 21:06:59 #1141 passed:    master make me and christos responsible for the options contracts tests
+2013-12-30 18:50:17 #1140 passed:    master raco test: add -m/--modules flag, exit code 2 for timeout
+2013-12-30 17:25:44 #1139 passed:    master fix ordering bug in place termination
+2013-12-30 13:53:19 #1138 passed:    master add missing dependency in "r6rs-test"
+2013-12-30 13:24:30 #1137 passed:    master sync test configuration for non-".rkt" files
+2013-12-30 08:26:32 #1136 passed:    master German string constant for install-pkg-not-rentrant.
+2013-12-29 22:33:48 #1135 passed:    master fix populate-compiled.rkt test
+2013-12-29 09:41:29 #1132 passed:    master raco test: fix process command-line handling and adjust timeout handling
+2013-12-29 06:41:40 #1131 passed:    master raco test: default mode more like before
+2013-12-28 20:51:23 #1129 passed:    master adjust the installation package GUI so it doesn't install during
+2013-12-28 20:34:57 #1128 passed:    master fix some tests
+2013-12-28 16:16:16 #1127 passed:    master fix bug in ->* contract combinator
+2013-12-27 21:29:28 #1126 passed:    master tighten contracts in a way that appears
+2013-12-25 09:00:27 #1123 passed:    master Add rackunit HISTORY.txt for version 6.0.
+2013-12-24 18:04:23 #1122 passed:    master raco setup: fix dependency checking for "racket" package
+2013-12-24 15:35:43 #1121 passed:    master forgot to add a file to the last commit
+2013-12-24 15:03:47 #1120 failed:    master improve the speed of "second order" -> contacts
+2013-12-24 09:56:55 #1119 passed:    master make installers: fix quoting for windows/bash ssh
+2013-12-22 09:20:23 #1117 passed:    master Synch German string constants with latest.
+2013-12-21 20:25:06 #1116 passed:    master fix problem with doc database in read-only mode
+2013-12-21 09:45:51 #1114 passed:    master fix sqlite rollback-transaction in case of auto-rollback error
+2013-12-21 09:13:23 #1113 passed:    master Add history file for the profiler.
+2013-12-20 17:32:55 #1112 passed:    master Adding suggestion about 1.0 package versions
+2013-12-20 15:45:44 #1110 passed:    master update HISTORY based on some of Jay's changes
+2013-12-20 15:09:04 #1109 passed:    master Correct pkgs urls, please include in v6
+2013-12-20 14:17:52 #1108 failed:    master Add a HISTORY file for unstable
+2013-12-20 07:25:58 #1107 passed:    master fill in some missing history notes
+2013-12-19 22:36:57 #1105 passed:    master add missing HISTORY entries based on my changes leading up to 6.0
+2013-12-19 16:53:01 #1104 passed:    master raco setup: fix corners where db might not exist
+2013-12-19 08:36:57 #1103 passed:    master scribble: fix a test to make it independent of the enclosing package
+2013-12-19 01:01:39 #1102 passed:    master remove extraneous CRLF after message-body
+2013-12-18 23:13:44 #1101 passed:    master apply signature in productbuild, not pkgbuild
+2013-12-18 21:04:59 #1100 passed:    master history for 2htdp teachpacks
+2013-12-18 20:03:45 #1099 passed:    master enable scribble tests for DrDr
+2013-12-18 19:12:05 #1098 passed:    master Test the error message instead of a predicate
+2013-12-18 16:32:37 #1096 passed:    master fix `chaperone-procedure` wth extra properies
+2013-12-18 15:52:37 #1095 passed:    master make installers: fixes for `parallel` mode and timeouts
+2013-12-18 13:16:25 #1094 passed:    master Fix test cases for close?
+2013-12-18 13:04:14 #1093 passed:    master fix any-wrap/c for promises
+2013-12-18 11:45:20 #1091 passed:    master oops 6.0 not 5.6, silly rabbit.
+2013-12-18 11:44:28 #1090 passed:    master updated stepper HISTORY.
+2013-12-18 07:43:00 #1089 passed:    master fix chaperones and `prop:procedure` functions with keyword arguments
+2013-12-17 14:09:34 #1080 passed:    master Corrected expected error message to match actual error message.  Now
+2013-12-17 13:49:21 #1079 passed:    master Refactor tc-utils
+2013-12-17 08:12:24 #1078 passed:    master raco setup: more on docindex database creation
+2013-12-17 00:39:29 #1077 passed:    master Fix base env types that are too conservative
+2013-12-16 23:05:28 #1076 passed:    master Add a bunch of tests for contract creation error messages.
+2013-12-16 22:38:29 #1074 passed:    master remove use of exported set!'d identifier from contract examples
+2013-12-16 22:22:33 #1073 passed:    master MzCOM: fix versioning and collection path
+2013-12-16 19:53:32 #1072 passed:    master raco setup: create docindex database before trying to read
+2013-12-16 16:11:20 #1071 failed:    master Update Typed Racket history.
+2013-12-16 16:09:52 #1070 failed:    master Remove dependencies of typed-racket-more.
+2013-12-16 15:42:32 #1069 failed:    master setup/doc-db: propagate read-only flag for database connection
+2013-12-16 12:06:32 #1068 passed:    master Add test to track tr memory usage.
+2013-12-16 10:09:25 #1067 passed:    master more repairs to function-name inference
+2013-12-16 08:18:03 #1066 passed:    master fixes for keyboard navigation and tab panels
+2013-12-15 21:21:47 #1065 passed:    master catch networking errors and show a dialog
+2013-12-15 19:01:31 #1064 passed:    master Fix broken TR code.
+2013-12-15 17:34:34 #1063 passed:    master Make top interaction commands lazily loaded.
+2013-12-15 16:01:53 #1060 passed:    master Remove unused export.
+2013-12-14 22:36:08 #1057 passed:    master fix incorrect propagation of name via `syntax-local-name`
+2013-12-14 15:48:15 #1054 passed:    master implement a little bit of the random generation for the new ->
+2013-12-14 12:01:42 #1050 passed:    master Cleanup duplication in check-subforms-unit.
+2013-12-14 09:01:48 #1049 passed:    master Fix PR14247
+2013-12-13 19:20:19 #1047 passed:    master another fix to the first-order check I added earlier today
+2013-12-13 18:46:53 #1046 passed:    master tiny doc typo
+2013-12-13 16:23:31 #1045 passed:    master fix class/c first-order check for interface contracts
+2013-12-13 12:04:53 #1043 passed:    master improve the first-order checking for the current class/c implementation
+2013-12-12 22:49:52 #1042 passed:    master fix some bugs in the traversal function in any-wrap that I introduced
+2013-12-12 15:27:44 #1041 passed:    master Quote the identifier in the declaration error msg
+2013-12-12 15:26:10 #1040 passed:    master fix spelling error
+2013-12-12 13:49:01 #1039 passed:    master fix reducing arity or chaperoning keyword-valued `prop:procedure`
+2013-12-12 10:36:29 #1038 passed:    master Add types to hasheq and hasheqv.
+2013-12-11 20:56:30 #1037 passed:    master Mac OS X: fix executable creation for LC_DYLIB_CODE_SIGN_DRS
+2013-12-11 12:09:44 #1036 errored:   master Change contract system so that projections are more first-order friendly
+2013-12-10 12:38:40 #1035 passed:    master fix stacks when in test coverage mode
+2013-12-10 11:04:55 #1034 errored:   master Document version exceptions.
+2013-12-09 23:00:20 #1033 passed:    master Fix types for `remove` and friends.
+2013-12-09 13:11:42 #1032 passed:    master Make type of expt more precise on floats.
+2013-12-08 09:45:03 #1028 passed:    master scribble/comment-reader doc tweaks
+2013-12-08 08:22:39 #1027 passed:    master Describe how to make packages compatible with 5.3.5 and 5.3.6.
+2013-12-07 22:00:16 #1026 passed:    master Add more documentation for `Procedure` type
+2013-12-07 11:22:25 #1025 passed:    master fix a synchronization problem in the GC for places
+2013-12-07 07:37:48 #1024 passed:    master Synch German string constants with latest.
+2013-12-06 22:20:33 #1023 passed:    master net/http-client: fix `http-conn-live?` result
+2013-12-06 13:48:33 #1020 passed:    master Fix typoed character ranges (A-z => A-Z)
+2013-12-06 12:19:15 #1019 errored:   master racket/draw: fix problem with text drawing and scale
+2013-12-06 08:33:44 #1016 passed:    master Clean up cons/e enumerator.
+2013-12-05 22:43:08 #1014 passed:    master Add tests for some recent base type additions
+2013-12-05 13:10:41 #1012 passed:    master fix nested ?? in template form
+2013-12-05 11:16:05 #1011 passed:    master Fix doc typo.
+2013-12-05 08:34:54 #1010 passed:    master scriblib/figure: fix figures as ref targets
+2013-12-05 02:05:53 #1009 passed:    master Add type for `regexp-replaces`
+2013-12-04 20:23:16 #1007 passed:    master scriblib/fgure: hyperlink figure references in PDF
+2013-12-04 10:56:49 #1002 passed:    master add missing weight of Source Code font
+2013-12-04 09:53:56 #1000 passed:    master fix cons/c use in contract
+2013-12-03 09:49:33 #999 passed:     master followup fix that should probably have been in a7c6dfa05
+2013-12-02 14:17:24 #996 passed:     master Fix PR14207, thanks ryanc
+2013-12-02 13:18:19 #995 passed:     master Fix Scribble doc typos
+2013-12-02 12:20:42 #994 errored:    master Misc redex enumerator tweaks:
+2013-12-01 18:41:47 #991 passed:     master fix a #f/no-contract conflation in the init arg processing for class/c
+2013-12-01 16:16:18 #990 passed:     master clarify class/c docs
+2013-12-01 13:32:23 #989 passed:     master Add #f as a special case for hash-ref, fix hash-ref!.
+2013-12-01 10:01:46 #988 failed:     master change semaphore breaking tests to not care about the keyboard focus
+2013-12-01 09:42:09 #987 passed:     master move `setup/xref` from "scribble-lib" to "racket-index"
+2013-11-30 22:01:30 #986 passed:     master racket/gui win32: reset canvas backing size when scroll bars change
+2013-11-30 21:34:07 #985 passed:     master fix active keybindings computation
+2013-11-30 09:09:16 #984 passed:     master raco exe: suppress expected stderr output
+2013-11-29 14:27:30 #983 passed:     master point to keybindings docs in a place that would have been
+2013-11-29 14:15:06 #982 passed:     master raco exe: add `--config-path` option, default to "etc"
+2013-11-29 07:17:10 #981 passed:     master unbreak unix framework
+2013-11-28 21:21:28 #980 passed:     master add support for alt-as-meta to the mac os x drracket
+2013-11-28 19:13:59 #979 passed:     master raco dist: fix for Unix GUI executables
+2013-11-28 18:44:32 #978 passed:     master doc search & redirect: user as an extension of main
+2013-11-28 14:11:07 #977 passed:     master fix contract in docs
+2013-11-28 11:00:26 #976 passed:     master Prevent shelly tests from printing to STDERR (but shelly will if there's a problem)
+2013-11-28 09:58:49 #975 passed:     master doc search: fix manual-title table
+2013-11-27 20:24:04 #974 passed:     master Explain how to control whether Planet auto-installation is enabled
+2013-11-27 19:43:24 #973 passed:     master Explicitly enabling download? and install? on user initiated installs
+2013-11-27 16:41:45 #972 passed:     master Removing add tag button when not logged in re mflatt
+2013-11-27 12:42:12 #971 passed:     master Removing singletons from Web Server internals
+2013-11-27 09:11:03 #970 passed:     master reference: add information on the cost of hashing
+2013-11-26 23:39:54 #968 passed:     master Minimize xrepl-lib dependencies
+2013-11-26 22:47:32 #967 passed:     master adjust check syntax so it can show info before expansion completes
+2013-11-26 22:41:46 #966 passed:     master Add more examples for `struct` in Reference
+2013-11-26 19:20:50 #964 passed:     master Restore indentation to blockquotes
+2013-11-26 17:03:56 #962 passed:     master introduce deep time vs shallow time in sandbox
+2013-11-26 16:12:52 #961 passed:     master GUI doc fixes
+2013-11-26 14:28:41 #959 errored:    master add a shortcut to file|revert
+2013-11-26 12:53:06 #958 passed:     master Minor formatting fix for ae641cdfc539
+2013-11-26 12:45:58 #957 passed:     master Add an example paper for scribble/lncs docs
+2013-11-26 09:59:15 #956 passed:     master Adding user-agent as some services require
+2013-11-26 09:50:51 #955 passed:     master Fix typo in engine docs.
+2013-11-26 08:27:22 #954 passed:     master Fix props mistake in 0bafa882bf
+2013-11-26 01:03:21 #953 passed:     master Fix props for xrepl tests
+2013-11-25 16:29:26 #952 passed:     master Fix PR14194
+2013-11-25 13:40:25 #951 passed:     master fix ODBC numeric/decimal param precision and scale
+2013-11-25 11:49:15 #950 passed:     master racket/gui cocoa: fix flipped drawing for `combo-field%` content
+2013-11-25 11:18:34 #949 passed:     master Fix format string for GC debug log message
+2013-11-25 11:34:03 #948 passed:     master adjust multi-file search to make it support searching in multiple directories
+2013-11-25 10:54:36 #946 errored:    master racket-doc/scribblings/raco/config.scrbl: typo
+2013-11-24 22:21:02 #945 passed:     master adjust the normalize-paste mixin to, by default,
+2013-11-24 20:51:23 #943 passed:     master racket/gui cocoa: repair for canvas creation in hidden top-level window
+2013-11-24 18:11:18 #941 passed:     master forgot new net-lib dependency, please push into 6.0
+2013-11-24 18:06:06 #940 passed:     master fixed bug report from Norman on header for XHTML files; please add to 6.0
+2013-11-24 15:09:50 #939 failed:     master increase timeouts
+2013-11-24 11:43:53 #938 passed:     master make pkg tests work more by setting PATH
+2013-11-24 09:29:04 #937 errored:    master repair to package manager GUI
+2013-11-23 21:18:34 #936 passed:     master fix #:make-docs? argument of `setup`
+2013-11-23 13:00:07 #935 passed:     master slideshow: add pict->pre-render-pict
+2013-11-23 11:30:29 #934 passed:     master clarify text sizes
+2013-11-23 11:02:49 #933 passed:     master restore the color schemes
+2013-11-22 16:00:44 #932 passed:     master reflow release notes for v6.0
+2013-11-22 15:56:20 #931 passed:     master fix line breaking for text/font
+2013-11-22 15:27:51 #930 passed:     master Ensure that threads created within call-with-limits are accounted during the time/space limits
+2013-11-22 14:39:12 #929 passed:     master racket/gui cocoa: fix border of `combo-field%` for recent Mac OS X
+2013-11-22 11:38:50 #928 passed:     master fix focus
+2013-11-22 08:50:19 #927 passed:     master define-runtime-path: add support for version search to 'so form
+2013-11-21 21:55:13 #926 passed:     master Improve type of `negate`
+2013-11-21 21:33:58 #925 passed:     master configure: add fallback when checking for ar
+2013-11-21 08:08:00 #923 passed:     master raco setup: fix a read-only use on the docindex database
+2013-11-21 01:56:11 #922 passed:     master Improve comments and change name for unboxable-funs.
+2013-11-21 01:15:30 #921 passed:     master Add benchmarks to TR test dependencies.
+2013-11-20 23:32:14 #920 passed:     master Correctly typecheck all subelements of vector literals.
+2013-11-20 19:12:11 #919 failed:     master raco pkg config: show all by default
+2013-11-20 17:51:04 #918 passed:     master Fix `provide:` when it's after the definition
+2013-11-20 17:13:08 #917 passed:     master Fix `make-predicate` at the top-level
+2013-11-20 15:16:28 #916 passed:     master Add types for remaining `in-foo` functions
+2013-11-20 13:18:26 #914 passed:     master Post-release version for the v6.0 release
+2013-11-20 09:02:05 #912 passed:     master raco setup: quieter output on a build step for user-scope docs
+2013-11-19 23:56:55 #911 passed:     master work around lack of sqlite3_next_stmt on Mac OS X 10.5.*
+2013-11-19 19:12:06 #910 passed:     master fix installation path of "Racket Documentation"
+2013-11-19 17:45:12 #909 failed:     master Fix source syntax recovery.
+2013-11-19 17:00:55 #908 passed:     master bring drracket's history file up to date with 6.0 changes
+2013-11-19 15:32:33 #907 passed:     master Fixing GC test
+2013-11-19 15:21:50 #906 passed:     master Continue fixing PR14175 by looking at all links files
+2013-11-19 14:23:46 #905 passed:     master Fix PR14175
+2013-11-19 13:32:50 #904 passed:     master Only recommend expanding union types.
+2013-11-19 13:18:18 #903 passed:     master Update profile docs to be consistent with output of errortrace mode.
+2013-11-19 11:04:23 #902 passed:     master Generate channel contracts in TR
+2013-11-19 09:55:50 #901 passed:     master Fixing PR14169
+2013-11-19 08:32:41 #900 passed:     master racket/gui cocoa: fix for Mac OS X before 10.7
+2013-11-19 00:42:20 #899 passed:     master Add channel contracts
+2013-11-18 21:50:16 #898 passed:     master clean up mistakes in 21807d3
+2013-11-18 21:19:39 #897 passed:     master Fix in-hole enum bug and add test case
+2013-11-18 19:29:40 #895 passed:     master add a collector that moves things around (in a dumb kind of a way)
+2013-11-18 18:41:56 #894 passed:     master fix JIT slow path for `bitwise-bit-set?`
+2013-11-18 14:34:28 #893 passed:     master Add quoting to error message.
+2013-11-18 14:11:26 #892 passed:     master Fix line breaks in the docs.
+2013-11-18 13:20:14 #891 passed:     master Update hourly
+2013-11-18 10:47:22 #889 passed:     master integer in random explanation becomes natural
+2013-11-17 22:20:00 #885 passed:     master Add newline in query-type/result.
+2013-11-17 22:12:55 #884 passed:     master on more attempt to fix this contract
+2013-11-17 22:09:01 #883 passed:     master add a special splash screen for Ada Lovelace's bday (Dec 10)
+2013-11-17 17:55:23 #877 passed:     master add check for check-exn predicate
+2013-11-17 16:35:00 #876 passed:     master Guard drag-ok? so it handles the empty list properly
+2013-11-17 16:01:40 #875 passed:     master use the same colors as in the docs for the text & label in the blue boxes
+2013-11-17 12:54:25 #873 passed:     master Simplify type of hash-has-key?.
+2013-11-17 12:53:15 #872 passed:     master integer is now natural, Closes PR14156
+2013-11-17 12:35:40 #871 passed:     master Correct type of hash-has-key?.
+2013-11-16 20:22:12 #870 passed:     master fix contract
+2013-11-16 17:04:36 #869 passed:     master fix some junk from yesteryear in the contracts reference
+2013-11-16 15:43:20 #868 passed:     master Update excluded docs for TR.
+2013-11-16 15:40:10 #867 passed:     master restore old Scribble default style, but make new style default for manuals
+2013-11-16 14:50:07 #866 passed:     master add support for getting directories via the collection paths
+2013-11-16 13:20:15 #865 passed:     master Revert mismatch name support and move base type enumerators
+2013-11-16 07:50:30 #862 passed:     master Synch German string constants with latest.
+2013-11-14 21:43:33 #859 passed:     master Make thread cell top type consistent with docs
+2013-11-14 19:57:58 #858 passed:     master use the enumerator in a new option to redex-check
+2013-11-14 16:44:03 #857 passed:     master Make more people responsible for more of TR.
+2013-11-14 15:38:35 #856 passed:     master Fix test.
+2013-11-14 14:23:41 #855 passed:     master Log non-optimized fixnum-specific ops as hidden costs.
+2013-11-14 12:41:36 #854 passed:     master scribble: fix a rendering and cross-reference problem
+2013-11-14 09:15:38 #853 passed:     master fix build for platforms with disabled threads + inline allocation
+2013-11-14 08:40:01 #852 passed:     master Bring DrRacket docs in sync with Help menu actual contents
+2013-11-13 22:50:35 #851 passed:     master misc <menukey>-shift-o improvements
+2013-11-13 15:11:48 #850 passed:     master add `flrandom` and `unsafe-flrandom`
+2013-11-13 10:41:35 #849 passed:     master Change name of failed-typecheck.
+2013-11-12 22:03:04 #846 passed:     master racket/gui cocoa: fix 'resize-border style for `dialog%`
+2013-11-12 15:40:25 #845 passed:     master Add disequation tests.
+2013-11-12 14:59:42 #844 passed:     master Disunification bug fix.
+2013-11-12 12:08:32 #843 passed:     master make return take the first item in the list all the time
+2013-11-12 12:03:44 #842 passed:     master some improvements to <menukey>-shift-o for opening files in drracket
+2013-11-12 10:38:39 #841 passed:     master guard a file-exists? call properly
+2013-11-12 10:30:56 #840 passed:     master make snapshot-site: don't treat removed builds as failing
+2013-11-12 09:40:04 #839 passed:     master Improve type of `random` on fixnums.
+2013-11-12 09:14:54 #838 passed:     master Rackety
+2013-11-11 22:44:45 #837 passed:     master fix print in drracket in the case when the depth is passed
+2013-11-11 22:25:24 #836 passed:     master Disable occurrence typing for top-level variables
+2013-11-11 18:12:15 #835 passed:     master Always treat top-level redefinitions as annotated
+2013-11-11 14:58:38 #834 passed:     master distro-build: add `--pkgs` to a call to `raco pkg install`
+2013-11-11 14:20:31 #833 passed:     master Tweak complex unboxing missed optimization message.
+2013-11-11 13:09:08 #831 passed:     master improve the wording for the command-line menu item
+2013-11-11 11:56:37 #830 passed:     master Remove unused code.
+2013-11-11 10:30:08 #829 passed:     master Fix line numbers on logs.
+2013-11-11 10:30:26 #828 passed:     master Add missing logs.
+2013-11-11 06:55:03 #827 passed:     master fix "base" and "compatibility" test drivers
+2013-11-10 21:26:03 #826 passed:     master missed some edits in my last attempt ...
+2013-11-10 21:22:58 #825 passed:     master use find-console-bin-dir instead of find-system-path to find the bin dir
+2013-11-10 21:06:50 #824 passed:     master Rackety
+2013-11-10 18:37:47 #823 passed:     master Add redex support for mismatch repeat patterns
+2013-11-10 15:43:02 #821 passed:     master use now renamed render-convertible-as
+2013-11-10 15:10:15 #820 passed:     master fix typos in html pkg docs
+2013-11-10 07:36:50 #819 passed:     master adjust struct-out docs to avoid 'name' and to have a better width
+2013-11-09 20:19:17 #818 passed:     master get rid of the 'pending' and 'finished' online expansion messages
+2013-11-09 18:27:08 #817 passed:     master adjust test for moved file
+2013-11-09 17:35:03 #816 failed:     master add forgotten file; should be have been in 9f30af820
+2013-11-09 16:46:05 #815 failed:     master improve the open-collection-path menu item
+2013-11-09 09:59:37 #814 failed:     master "racket-test" clean-up
+2013-11-09 09:20:09 #813 passed:     master don't just wait for the first log message; wait for the first
+2013-11-09 06:43:25 #812 passed:     master Synch German string constants with latest.
+2013-11-09 00:25:53 #811 passed:     master fix no-write-and-frame-leak.rkt test case
+2013-11-08 21:24:59 #810 passed:     master fix test after moving raco exe tests
+2013-11-08 19:15:14 #809 passed:     master serializable-struct, etc.: export deserialization info in submodule
+2013-11-08 18:24:36 #808 passed:     master Render scribble doc examples in the page
+2013-11-08 16:23:47 #807 passed:     master Have optimizer ignore #%top expressions.
+2013-11-08 10:36:41 #806 passed:     master adjust default autosave delay to 30 seconds (down from 5 minutes)
+2013-11-08 09:26:35 #805 passed:     master make snapshot-site: better failure display & linking
+2013-11-08 09:27:13 #804 passed:     master fix def/c macro to use pub again
+2013-11-08 08:37:36 #803 passed:     master distro-build: recognize timeout and exceptions as failure
+2013-11-07 22:07:44 #802 passed:     master adjusted arg to raise-argument-error to produce sensible error msg
+2013-11-07 16:41:16 #800 passed:     master racket/gui cocoa: remove `warp-pointer` delay
+2013-11-07 12:47:48 #799 errored:    master rackunit: make check-exn/check-not-exn raise error if given a non-thunk
+2013-11-07 08:32:33 #798 passed:     master Use in-set now that it's typed
+2013-11-06 20:37:21 #793 passed:     master scribble/manual: add `#:escapes?` argument to `to-paragraph`, etc.
+2013-11-06 17:06:55 #792 passed:     master Fix props script sorting.
+2013-11-06 16:59:41 #791 passed:     master raco pkg: repairs for SQLite-based catalogs
+2013-11-06 14:28:33 #790 passed:     master fix place test require
+2013-11-06 13:22:37 #789 passed:     master Revert type key change from 0a6537a6cbed7ca477d153
+2013-11-06 13:14:27 #788 passed:     master Name and print top types consistently
+2013-11-06 11:03:15 #787 passed:     master make new file|open variant start you out in the module path
+2013-11-06 10:14:33 #786 passed:     master adjust the sierpinski carpet examples to be bitmaps
+2013-11-05 17:13:33 #785 passed:     master guard against collection path directories that don't exist
+2013-11-05 16:05:49 #784 passed:     master racket/gui cocoa: make 'border handling more flexible
+2013-11-05 16:05:30 #783 passed:     master add "File|Open Collection Path" to DrRacket
+2013-11-05 13:40:50 #782 passed:     master Get more info to diagnose intermittent failure on DrDr.
+2013-11-05 12:23:33 #781 passed:     master Fix PR14142 by allowing 'tolerant' line endings acording to Appendix B of the HTTP spec
+2013-11-04 23:58:50 #778 passed:     master add some corner cases in for.rktl tests
+2013-11-04 19:13:13 #776 passed:     master Be more picky about Opaque type parsing
+2013-11-04 17:38:21 #775 passed:     master Adding test case for PR14136 re: the great Robby
+2013-11-04 17:18:44 #774 passed:     master Add `in-set` to Typed Racket
+2013-11-04 17:02:17 #773 passed:     master Fix PR 14140
+2013-11-04 16:42:22 #771 passed:     master Clarify docs for `collection-path'.
+2013-11-04 14:57:41 #770 passed:     master Clarify docs for `collection-path' to discourage its use.
+2013-11-04 14:44:39 #769 passed:     master Add a TR test that I forgot to commit
+2013-11-04 13:47:34 #768 passed:     master Fix macro stepper icons.
+2013-11-03 11:11:22 #767 passed:     master path-replace-suffix: raise exception when result should be an empty path
+2013-11-03 08:40:15 #766 passed:     master Fix tests when running on linux
+2013-11-02 21:43:00 #764 passed:     master fix underlay & pinhole combination
+2013-11-02 21:39:18 #763 passed:     master DrRacket Unix/X: make ".desktop" launch single-instance mode
+2013-11-02 21:33:16 #762 passed:     master fix a use of collection-path
+2013-11-02 15:00:57 #760 passed:     master drop unneeded #include
+2013-11-02 10:08:52 #759 passed:     master unbreak TR (more of my stupidity)
+2013-11-02 09:52:18 #758 passed:     master Sorry all; stupid mistake
+2013-11-02 09:49:40 #757 passed:     master IN PROGRESS: working on changing the protocol between the
+2013-11-02 02:49:28 #756 passed:     master Synch German string constants with latest.
+2013-11-01 23:48:30 #755 passed:     master db/sqlite3: fix memory-management problem
+2013-11-01 23:17:32 #754 passed:     master Fixing PR14136
+2013-11-01 16:50:06 #753 passed:     master Use the new #:keep-going? option for TR random testing.
+2013-11-01 12:54:26 #752 passed:     master Update HISTORY
+2013-11-01 12:33:54 #751 passed:     master Add channel chaperones
+2013-10-31 22:24:16 #750 passed:     master Fix doc typo
+2013-10-31 13:37:32 #749 passed:     master Add #:when to more places in match docs
+2013-10-31 10:18:42 #748 passed:     master Mac OS X: support Retina mode
+2013-10-30 21:43:57 #747 passed:     master added the #:keep-going keyword argument to redex-check
+2013-10-30 13:38:04 #746 passed:     master handle sets in `any-wrap/c`
+2013-10-30 07:05:04 #745 passed:     master slideshow: fix error exit with `interactive`
+2013-10-29 23:51:27 #744 passed:     master Add new known bug.
+2013-10-29 23:05:34 #743 passed:     master Correct type for processor-count.
+2013-10-29 22:49:42 #742 passed:     master Make unary float complex operations optimize.
+2013-10-29 15:07:59 #740 passed:     master fix bitmap creation in bitmap/url
+2013-10-28 21:23:13 #736 passed:     master try a different comment color
+2013-10-28 19:57:02 #735 passed:     master another attempt at color-blindness friendly colors
+2013-10-28 14:24:00 #733 passed:     master Fix PR14129
+2013-10-27 11:58:27 #731 passed:     master Add more bugs to known bugs list.
+2013-10-27 11:25:40 #730 passed:     master Reduce testcases for known bugs and document the root causes.
+2013-10-26 13:58:42 #728 failed:     master add two (hopefully) color-blindness friendly color schemes
+2013-10-25 23:14:11 #727 passed:     master Swap conditional order
+2013-10-25 22:56:11 #726 passed:     master add menu item to control spell checking text
+2013-10-25 22:23:02 #725 passed:     master Allow re-definition at TR top-level
+2013-10-25 17:02:12 #723 passed:     master Makefile: make PLT_SETUP_ARGS work more sensibly
+2013-10-25 15:45:41 #722 passed:     master racket/gui: default application-file handler requeues on active-frame change
+2013-10-25 14:01:48 #721 passed:     master add c:s:pageup/down keybindings to move tabs around in a frame
+2013-10-24 21:37:35 #720 passed:     master fix unstable/2d reader for ports with specials
+2013-10-24 12:06:49 #718 passed:     master Use "Keyboard Shortcuts" as the tag to avoid breaking links
+2013-10-24 11:57:15 #717 passed:     master point from the 2d cond description to the keybindings docs
+2013-10-23 21:47:31 #715 passed:     master fix a bug in the syntax colorer
+2013-10-23 18:42:25 #714 passed:     master tests, doc edits, and minor changes for unix sockets
+2013-10-23 15:41:19 #713 passed:     master don't die when pkg-catalog-suggestions-for-module raises an error
+2013-10-22 18:27:59 #711 passed:     master Major revision of subtyping code for performance.
+2013-10-22 14:59:03 #708 passed:     master Fix sandbox docs
+2013-10-22 14:45:03 #707 passed:     master Fix `db` dependency warning.
+2013-10-22 10:46:39 #706 passed:     master Make known bugs executable.
+2013-10-22 10:45:48 #705 passed:     master Replace calls to display with write-string.
+2013-10-22 10:23:26 #704 passed:     master fix missing sqlite3.dll with raco distribute
+2013-10-21 16:23:07 #696 passed:     master fix bug in 82bb5ba4c8; also add test case
+2013-10-21 16:14:07 #695 passed:     master Add access to the failure continuation in `match`.
+2013-10-21 13:18:13 #694 passed:     master actually fix PR 14102
+2013-10-20 10:09:52 #686 passed:     master Check that all in-repository packages have description and authors.
+2013-10-20 08:54:09 #685 passed:     master Fix pkg infor for `distributed-places-test`.
+2013-10-19 19:38:54 #684 passed:     master `racket-test` needs `pconvert-lib`.
+2013-10-19 18:40:09 #683 failed:     master Move timing test for typed futures to benchmark collection.
+2013-10-19 18:07:13 #682 passed:     master Edit `racket-test` requires.
+2013-10-19 10:48:24 #677 passed:     master Fix Reference contract typos
+2013-10-19 08:56:51 #676 passed:     master make snapshot-site: add "current" links for installers
+2013-10-19 08:18:26 #675 passed:     master Synch German string constants with latest.
+2013-10-19 01:57:18 #674 passed:     master fix scribble interaction error msg
+2013-10-18 15:20:56 #673 passed:     master add pkg desc for "racket-benchmarks"
+2013-10-18 14:49:35 #672 passed:     master Adjust contract on make-pred-ty
+2013-10-18 14:38:01 #671 passed:     master moved run to xrun file
+2013-10-18 11:00:41 #669 passed:     master Fix props for benchmark move
+2013-10-18 09:02:18 #666 passed:     master Move doc completeness check to where it belongs.
+2013-10-17 23:21:25 #659 passed:     master Small changes/fixes to rackunit.
+2013-10-17 23:12:56 #658 failed:     master describe some additional errors in docs for require
+2013-10-17 16:59:43 #656 passed:     master Better error messages for class/object contracts
+2013-10-16 19:34:38 #654 passed:     master Use new match-a-pattern macro where appropriate
+2013-10-16 16:04:48 #652 passed:     master More TR caveats
+2013-10-16 13:43:32 #651 passed:     master Abstract out "Expected foo, but got bar" errors
+2013-10-16 11:30:43 #650 errored:    master Enable smoothing for svgs
+2013-10-16 11:18:30 #649 passed:     master fix name of a directory containing packages
+2013-10-16 09:06:20 #648 passed:     master Use `#:usage-help` to describe the behavior of `raco pkg install`.
+2013-10-15 22:24:55 #647 passed:     master fix dependencies of "racket-test"
+2013-10-15 21:08:33 #646 failed:     master fix net tests on travis
+2013-10-15 19:31:40 #645 failed:     master add recent lib+doc packages to "main-distribution"
+2013-10-15 18:59:44 #644 failed:     master remove some unneeded dependencies
+2013-10-15 18:23:40 #643 passed:     master Add a caveats and limitations chapter to TR guide
+2013-10-15 14:40:30 #642 passed:     master fix doc package deps
+2013-10-15 12:40:56 #641 passed:     master Made `fl2exp' and `fl2log' not depend on correctly rounded `flexpt'
+2013-10-15 12:06:07 #640 passed:     master Fixing broken build and improving error message
+2013-10-15 11:49:20 #639 failed:     master Fixing PR14088 by showing entire path
+2013-10-15 11:42:31 #638 passed:     master adjust image docs to use svg instead of png
+2013-10-15 10:13:07 #637 passed:     master OpenBSD: another approach to finding stack bounds
+2013-10-15 08:27:04 #636 passed:     master raco pkg: fix access of 'default version info
+2013-10-15 08:25:23 #635 passed:     master Move test to mark that it is supposed to fail
+2013-10-15 07:38:22 #634 errored:    master Typo in comment
+2013-10-14 22:30:09 #632 passed:     master Windows: pass current directory CreateProcess instead of setting
+2013-10-14 22:12:04 #631 passed:     master raco pkg install: work around un-deletable directories
+2013-10-14 19:01:47 #630 passed:     master a start on a variant of match-a-pattern
+2013-10-14 17:26:37 #629 passed:     master Changed behaviour of render-part-content with respect to html-render-pict-as
+2013-10-14 16:36:27 #628 passed:     master Fix default for html-render-pict-as
+2013-10-14 16:08:00 #627 passed:     master fix problems with pipe limits
+2013-10-14 15:32:25 #626 passed:     master Use html-render-pict-as to control whether html-render uses pngs or svgs
+2013-10-14 14:23:40 #625 passed:     master adjust 'move tab left/right' keybindings to avoid
+2013-10-14 13:13:24 #624 passed:     master Make 'raco pkg install' with no arguments install the current directory.
+2013-10-14 11:56:41 #622 passed:     master Avoid creating temporary file
+2013-10-14 10:57:57 #619 errored:    master Added pict to svg conversion. Added parameter to Scribble's html renderer to control choice between png and svg.
+2013-10-14 06:58:52 #618 passed:     master Fix typo in for documentation
+2013-10-13 20:41:20 #616 passed:     master Add new test for redex production sort.
+2013-10-13 17:09:14 #614 passed:     master disable test case
+2013-10-13 16:15:17 #613 passed:     master avoid invalidating the line numbers when doing things like drawing arrows in check syntax
+2013-10-13 10:18:45 #612 passed:     master fix some pkg tests
+2013-10-13 10:15:26 #611 passed:     master adjust the way the header is saved in teaching language files
+2013-10-13 08:33:41 #609 passed:     master rename the preference drracket uses to remember the
+2013-10-12 18:48:17 #607 passed:     master Fix collapse-newline in the case that the insertion point
+2013-10-12 18:46:28 #606 passed:     master add keybindings for the tab movement keybindings
+2013-10-12 09:47:51 #605 passed:     master further tighten eq-hash code generation
+2013-10-11 17:40:16 #602 passed:     master Final S3 changes
+2013-10-11 17:24:54 #601 passed:     master Fix pkg documentation to reflect implementation.
+2013-10-11 17:18:06 #600 passed:     master Fix `path-replace-suffix' and `path-add-suffix' on path for some system
+2013-10-11 15:40:36 #599 passed:     master fix custodian-related memory-management problem
+2013-10-10 23:33:40 #598 passed:     master fix math/number-theory docs, permutations example
+2013-10-10 19:17:54 #597 passed:     master fix an inconsistency in `free-identifier=?`
+2013-10-10 16:35:56 #596 passed:     master TR for clause specialization: Report specialization failures.
+2013-10-10 16:20:56 #595 passed:     master Make references to fast-X in prose match fast-X in code.
+2013-10-10 13:09:21 #594 passed:     master Fix RacketCon link
+2013-10-09 21:24:55 #593 passed:     master Fix props
+2013-10-09 19:45:19 #592 passed:     master Use new plot/pict module for math docs
+2013-10-09 19:17:58 #591 passed:     master Split "math" package into "math", "math-lib", "math-doc" and "math-test"
+2013-10-09 18:52:06 #590 passed:     master Removed dependency on "plot-compat" from "plot" package
+2013-10-09 18:43:11 #589 passed:     master Split "plot" package into five packages
+2013-10-09 16:25:18 #588 passed:     master Plot source reorg before separating "plot" into multiple packages
+2013-10-09 08:15:54 #587 passed:     master fix .zo marshal of a syntax object containing a hash table in a list
+2013-10-08 20:53:17 #584 passed:     master repair for 5eee14032f
+2013-10-08 14:25:16 #583 passed:     master Fix error message for misuse of #:methods
+2013-10-08 11:08:13 #582 passed:     master Make : error on unbound identifiers
+2013-10-08 10:40:03 #579 passed:     master Filled out pin-arrow-label-line interface to match pin-arrow-line.
+2013-10-07 08:35:47 #573 passed:     master updated tests
+2013-10-06 22:29:20 #572 passed:     master Increse timeouts.
+2013-10-06 18:58:01 #571 passed:     master fix test for previous commit
+2013-10-06 18:25:19 #570 failed:     master raco setup et al.: fix problem with relative paths that exit a collection
+2013-10-06 08:23:03 #569 passed:     master fix name of struct constructor built by struct-out
+2013-10-05 14:22:07 #568 passed:     master fix attr check for ~optional defaults
+2013-10-05 12:20:22 #567 passed:     master Fix props for cext-lib pkg.
+2013-10-05 11:03:57 #566 passed:     master fix bug with boolean result check in stop-when, Rackety
+2013-10-04 14:59:11 #565 passed:     master Added `point-label3d', notion of layers (back, area, front) to 3D plots
+2013-10-04 14:13:55 #564 passed:     master fixed test with display line
+2013-10-04 10:10:52 #563 passed:     master fix image list coercion
+2013-10-04 09:23:20 #562 passed:     master Fix TR constructor detection.
+2013-10-03 19:08:42 #561 passed:     master fix the conversion to a [0,360) interval for angles in 2htdp/image
+2013-10-03 12:15:16 #560 passed:     master Add (very simple) type for `hash`.
+2013-10-03 10:54:21 #559 passed:     master Follow 480afa4c4de10ff428521405b6b9718a1edba055 in deinprogramm.
+2013-10-03 07:10:25 #558 passed:     master Remove unnecessary names before enumerating.
+2013-10-02 11:18:31 #556 passed:     master contracts & units are not getting along; unbreak the build for now
+2013-10-02 10:09:51 #555 failed:     master tweaks to try to get more information on a new error in case it happens again
+2013-10-02 10:04:07 #554 passed:     master Add 'distributed-places' to 'main-distribution'.
+2013-10-01 17:36:15 #553 passed:     master Conservative extension to match so that app patterns may produce and consume multiple values.
+2013-09-30 20:15:32 #550 passed:     master Fix checksum goof
+2013-09-30 17:17:28 #549 passed:     master more helpful message for contract failure
+2013-09-30 17:21:35 #548 passed:     master add place-images and place-images/align
+2013-09-30 14:30:11 #547 passed:     master raco setup: fix command-line argument handling
+2013-09-28 16:57:51 #542 passed:     master fix JIT bug related to unboxed arguments in self tail calls
+2013-09-28 16:47:12 #541 passed:     master Add Asumu and Eric to the TR credits.
+2013-09-28 15:41:31 #540 passed:     master Fix running individual optimizer tests.
+2013-09-28 14:28:41 #539 passed:     master Fix the obligatory Stupid Mistake.
+2013-09-28 13:52:40 #538 passed:     master Add a `doctype' convenience.
+2013-09-27 13:49:00 #537 passed:     master slideshow: fix tutorial show
+2013-09-27 05:37:00 #536 passed:     master slideshow: more efficient `bitmap`
+2013-09-27 00:17:50 #535 passed:     master Add an .htaccess symlink to the toplevel of the irc-logs directory.
+2013-09-26 22:03:55 #534 passed:     master fix bitmap printing in the teaching languages
+2013-09-26 17:59:20 #533 passed:     master Fix dynamic loading of parameters in `mzc`.
+2013-09-26 14:45:14 #532 passed:     master Remove units in parts of `compiler`, `dynext`, `setup` and create the `cext-lib` package.
+2013-09-26 13:53:07 #531 passed:     master box-cas!: less JIT-generated work if the boolean result is ignored
+2013-09-22 10:32:16 #528 passed:     master Added a missing word in the lambda section of syntax.scrbl
+2013-09-21 13:16:11 #524 passed:     master Fix a bug in color scheme setup
+2013-09-20 16:30:16 #522 passed:     master add 'require' to the begin keywords
+2013-09-20 15:06:51 #520 passed:     master Improve error message for misuse of type names
+2013-09-20 14:39:39 #519 passed:     master added struct-doc and struct*-doc to scribble/srcdoc
+2013-09-20 08:27:40 #518 passed:     master fix custodian-limit checking for phantom byte strings
+2013-09-19 11:23:42 #517 passed:     master Typed Racket reference: use `#:indirect` to fix some docs
+2013-09-19 07:30:07 #515 passed:     master fix `local-expand` on module body with phase-2 binding
+2013-09-19 07:08:42 #514 passed:     master Memoize redex thunk/e's.
+2013-09-18 06:42:48 #508 passed:     master Tweak sum/e behavior for nicer Redex enumeration and simplify repeats.
+2013-09-17 19:48:28 #506 passed:     master Improve type->contract error messages
+2013-09-17 14:44:03 #501 passed:     master fixup for showing dependencies during update
+2013-09-17 09:47:23 #500 passed:     master make pict boxes work again
+2013-09-17 08:03:26 #498 passed:     master Remove links to `math` and `plot` docs until we can do them correctly.
+2013-09-17 03:39:09 #497 passed:     master add missing dependency declarations
+2013-09-16 16:00:25 #496 passed:     master Expand TR reference section on libraries
+2013-09-16 13:58:43 #495 passed:     master unbreak undo in drracket
+2013-09-16 11:56:02 #494 passed:     master fix props file for image-pkgs moves
+2013-09-16 11:44:21 #493 passed:     master fix props
+2013-09-16 11:31:49 #492 passed:     master Fix a crash of racket on OpenBSD systems, when pixman is compiled with SSE support and racket tries to load cairo using libffi.
+2013-09-16 11:00:04 #490 passed:     master split up images pkg into images-lib, images-gui-lib, images-doc, and images-tests
+2013-09-15 23:46:20 #489 passed:     master show timing for suites in rackunit gui
+2013-09-15 09:31:38 #488 passed:     master rackt/gui gtk: fix focus handing of `group-panel%`
+2013-09-15 07:40:54 #487 passed:     master bring dns tests up to date with what appears to be reality
+2013-09-14 19:34:00 #486 passed:     master audit drracket begin-edit-sequence calls
+2013-09-14 17:46:29 #485 passed:     master fix datalog colorer for specials
+2013-09-14 17:16:03 #484 passed:     master move the drracket/tool module declaraction to the beginning of the manual
+2013-09-14 07:18:45 #483 passed:     master Synch German string constants with latest.
+2013-09-13 22:37:37 #482 passed:     master add a proper 48x48 to the .ico for the pkg manager gui
+2013-09-13 22:20:05 #481 passed:     master work around problem with ".ico" file handling
+2013-09-13 21:45:23 #480 passed:     master adjust esc;w so that it clears the anchor
+2013-09-13 21:19:38 #479 passed:     master color scheme improvements
+2013-09-13 18:25:46 #478 passed:     master sync thread dynamic-place contract with builtin
+2013-09-13 16:05:00 #477 passed:     master tweaks to fix multi-line labels (via newlines) in button%
+2013-09-13 13:03:30 #476 passed:     master fix sqlite lib runtime-path
+2013-09-13 12:18:11 #475 passed:     master raco distribute should include sqlite dll on Windows
+2013-09-13 12:05:49 #474 passed:     master remove dependency from string-constants on compatibility-lib
+2013-09-13 11:33:21 #473 passed:     master Make unboxed let not double optimize. TODO fix logs.
+2013-09-13 10:41:42 #472 passed:     master Improve error messages for bad uses of `:type` etc.
+2013-09-13 10:40:35 #471 passed:     master Rackety (102 columns)
+2013-09-13 07:15:22 #470 passed:     master Fix redex repeat enum bug.
+2013-09-13 01:55:31 #468 passed:     master Documented double-double flonum operations
+2013-09-12 22:26:53 #467 passed:     master Cleanup float complex optimizations.
+2013-09-12 19:53:51 #466 passed:     master racket/gui gtk: drop initial selection of list-box item
+2013-09-12 19:01:49 #465 passed:     master fix teachpack tests to match commit 480afa4c4
+2013-09-12 10:21:11 #464 passed:     master Allow user to write new pair filter objects
+2013-09-12 10:04:15 #463 passed:     master distro-build/download-page: strip "{...}" anywhere, not just at start
+2013-09-12 06:52:38 #462 passed:     master Revise the irc log pages setup.
+2013-09-12 02:04:20 #458 passed:     master Make struct: form have the correct bindings in struct info.
+2013-09-12 00:56:06 #456 passed:     master Document new known bugs.
+2013-09-12 00:31:52 #455 passed:     master Make more code use n-ary->binary.
+2013-09-12 00:18:20 #454 passed:     master New version of TR unit tests.
+2013-09-11 21:06:44 #453 passed:     master fixed check and error message for stop-when; Closes PR14009
+2013-09-11 18:01:22 #452 failed:     master Make use of more function type helpers in serialization.
+2013-09-11 15:38:00 #448 passed:     master Shrink serialized type representations more.
+2013-09-11 09:39:34 #446 passed:     master `site' and `snapshot-site' targets: make page prettier
+2013-09-11 09:30:12 #445 passed:     master allow strings as formlet parameters
+2013-09-10 16:35:38 #442 passed:     master Correct username for Carl: "carleastlund" -> "cce"
+2013-09-10 12:44:35 #441 passed:     master some improvements to color schemes
+2013-09-10 09:43:34 #439 passed:     master Added to _bitmask auto increment bit numbers
+2013-09-10 03:04:55 #438 passed:     master Hack the mailman template files to fit the newer installation.
+2013-09-09 22:09:41 #436 passed:     master JIT: fix slow path branch patch for structure-field assignment
+2013-09-09 20:43:12 #435 passed:     master fix some set-label calls to ensure they are always label-string?s
+2013-09-09 17:10:33 #434 passed:     master teachpack dialog improvements
+2013-09-09 14:26:52 #432 passed:     master Call out to sec. 5 in sec. 2
+2013-09-09 14:04:26 #431 passed:     master Add a caveat about set!
+2013-09-09 13:26:53 #430 passed:     master Add a TR Guide section on occurrence typing
+2013-09-09 08:50:20 #428 passed:     master attempt to clarify the drracket:tool-exports^ docs
+2013-09-09 06:16:01 #427 passed:     master Move contents to winooski instead of champlain.
+2013-09-08 11:24:37 #426 passed:     master clean up get-current-color-scheme{-name}
+2013-09-08 07:54:45 #425 passed:     master restore "native-pkgs" commit
+2013-09-08 02:05:36 #424 passed:     master add more for/X tests
+2013-09-07 17:16:34 #423 passed:     master Fix TR unit tests
+2013-09-07 13:13:02 #422 passed:     master add support for color schemes to the framework and use it in DrRacket
+2013-09-06 22:39:15 #421 passed:     master bundle libsqlite3.0.dylib for PPC Mac OS X
+2013-09-06 22:23:15 #420 passed:     master Fix Redex variable enumeration bug
+2013-09-06 21:34:02 #418 passed:     master ARM JIT: make calls & returns visible for branch prediction
+2013-09-06 18:23:16 #417 passed:     master Remove 'marshalled' field from `Base` type representation.
+2013-09-06 18:02:37 #416 passed:     master syntax/for-transform -> syntax/unsafe/for-transform
+2013-09-06 17:15:35 #415 passed:     master Remember types that are defined, and use them in serialization.
+2013-09-06 15:48:02 #414 passed:     master add syntax/for-transform
+2013-09-06 15:39:42 #413 passed:     master add basic support for #lang line-specific editing
+2013-09-06 14:50:36 #412 passed:     master Add #:satisfying to redex-check.
+2013-09-06 12:05:24 #410 passed:     master add a guard against deserialization failure
+2013-09-06 11:54:04 #409 errored:    master Fix Redex variable-not-otherwise-mentioned bug.
+2013-09-06 10:20:25 #407 passed:     master Refactor and add purpose statements
+2013-09-06 07:37:21 #406 passed:     master Implement variable-not-otherwise-mentioned pattern for Redex.
+2013-09-05 21:48:55 #402 passed:     master Improve TR assertion error message
+2013-09-05 16:09:22 #401 passed:     master racket/gui: fix `get-plain-label` and docs about labels
+2013-09-05 09:53:35 #398 passed:     master Print a summary of auto installs/updates rather than as we go
+2013-09-04 23:07:48 #394 passed:     master Make pair-opt cleaner.
+2013-09-04 19:41:13 #393 passed:     master Fix variable prefix/except bug.
+2013-09-04 16:33:10 #392 passed:     master fix teachpack test
+2013-09-04 15:35:11 #391 passed:     master Handle all variable pats in pattern unification.
+2013-09-04 13:23:46 #389 passed:     master Follow 90e9e5cb30d3589a584f4d365c408484da9bdbdd for DMdA languages.
+2013-09-04 13:21:34 #388 passed:     master move unstable/2d out of the gui-lib pkg
+2013-09-04 13:04:54 #387 passed:     master Add tests for error message pruning.
+2013-09-04 10:06:10 #385 passed:     master Support gzip encoded HTTP responses
+2013-09-04 09:46:19 #384 passed:     master make catalog-based installer build work
+2013-09-04 09:43:46 #383 errored:    master fix bug in DrRacket
+2013-09-03 21:46:19 #382 passed:     master Adjust test for API coverage
+2013-09-03 20:19:40 #381 passed:     master fix string-constants
+2013-09-03 20:13:00 #380 passed:     master Fix indentation
+2013-09-03 16:02:26 #379 passed:     master clean up string-constants expansion and add dynamic-string-constant[s]
+2013-09-03 13:35:42 #378 passed:     master Use `case` instead of `cond`
+2013-09-03 12:34:20 #377 passed:     master updated command line in docs
+2013-09-03 10:34:48 #375 passed:     master Add an example for #:defaults.
+2013-09-03 10:18:34 #373 passed:     master Cleanup dead-code.rkt
+2013-09-03 10:08:35 #372 passed:     master Remove lfilters and make true/false-filter have a - prefix.
+2013-09-02 23:57:23 #370 passed:     master Remove unused dependencies.
+2013-09-02 19:55:05 #369 passed:     master Remove unused require.
+2013-09-02 18:36:36 #368 passed:     master Constructed a test related to PR 13982.
+2013-09-02 15:08:41 #366 passed:     master Changing Typed Racket test back to using set?, the line I had just changed
+2013-09-02 14:56:34 #365 passed:     master Renamed set? to generic-set? in Typed Racket test.
+2013-09-02 11:13:02 #364 errored:    master Add package serialize-cstruct-lib for cpointer serialization
+2013-09-02 10:06:03 #363 passed:     master add support for colors with alpha to get-color-from-user
+2013-09-01 15:07:31 #361 passed:     master fix another error message from the preferences system
+2013-09-01 11:41:11 #360 passed:     master Make benchmark code run in parallel.
+2013-09-01 10:41:04 #354 passed:     master Remove reset-unboxed-bindings and unboxed-gensym.
+2013-09-01 10:31:42 #353 passed:     master Remove unnecessary #:proc forms in TR unit tests.
+2013-09-01 07:57:57 #352 passed:     master add custom writers for a bunch of contracts
+2013-09-01 07:35:37 #351 passed:     master Adjust the DMdA teachpacks to be found via info.rkt files.
+2013-09-01 03:12:43 #350 passed:     master Removing "collects".
+2013-08-31 17:38:56 #349 passed:     master add a case-> contract example
+2013-08-31 13:13:03 #348 passed:     master Direct people to temporary snapshot pages.
+2013-08-31 08:42:40 #347 passed:     master licenses for native packages
+2013-08-31 07:27:18 #346 passed:     master include license with each package
+2013-08-30 21:09:29 #345 passed:     master Fix type of generic-set? for hash set default.
+2013-08-30 20:56:32 #344 passed:     master fix string-contains?
+2013-08-30 15:56:39 #343 passed:     master fix for abc7f9a873
+2013-08-30 14:56:47 #342 passed:     master Improve type for generic-set?.
+2013-08-30 11:49:31 #341 passed:     master net/url: fix problems with new implementation on `net/http-client`
+2013-08-30 07:31:02 #336 passed:     master fix default text adjustment
+2013-08-29 20:55:11 #333 passed:     master Fix set? in TR.
+2013-08-29 20:17:39 #331 passed:     master Make transform run in parrallel.
+2013-08-29 16:30:06 #330 errored:    master fix use of in-producer outside of for loops
+2013-08-29 15:40:21 #329 passed:     master add docs example for in-generator, where arity > 1
+2013-08-29 13:24:56 #328 passed:     master scriblib/figure: add `suppress-floats`
+2013-08-29 01:21:51 #321 passed:     master Add endobson as responsible for TR in DrDr.
+2013-08-28 21:03:43 #320 passed:     master remove uses of scheme/* in src
+2013-08-28 14:55:10 #319 passed:     master fix deinprogramm props based on new location
+2013-08-28 12:16:27 #318 passed:     master move the teachpack/deinprogramm collection into
+2013-08-28 11:06:46 #316 passed:     master scribble/sigplan: add `doi'
+2013-08-28 00:49:42 #313 passed:     master Renamed set? to generic-set? and set-immutable? to set? in tests.
+2013-08-27 22:20:27 #312 passed:     master Fixed define-generics so that predicate definitions follow method definitions.
+2013-08-27 19:51:22 #311 passed:     master add "collects/realm/README.txt"
+2013-08-27 13:01:23 #310 failed:     master Move test file to the right place.
+2013-08-27 11:25:36 #309 failed:     master Add missing fender to define-cstruct
+2013-08-27 11:00:42 #308 passed:     master Remove certifiers for Opaque and Refinement types
+2013-08-27 10:24:43 #306 passed:     master note
+2013-08-27 08:32:54 #304 passed:     master Fix automated tests for systems without IPv6
+2013-08-27 06:33:35 #301 passed:     master Add real test for check-type and remove unit tests.
+2013-08-26 22:01:52 #300 passed:     master futures: fix rest-arg list creation
+2013-08-26 15:46:39 #299 passed:     master Add a reference to pkg docs from notation section
+2013-08-26 15:19:06 #298 passed:     master Add a notation subsection for structs
+2013-08-26 14:31:40 #297 passed:     master Remove inaccurate comment
+2013-08-26 13:24:08 #296 passed:     master Preprocess nt patterns in pattern unification.
+2013-08-26 06:48:24 #295 passed:     master another fix to the 102 column guide
+2013-08-26 03:46:38 #294 passed:     master add test case for 56a313caa
+2013-08-25 22:22:28 #293 passed:     master Fix boolean/pattern confusion for term generation..
+2013-08-25 13:57:09 #292 passed:     master ARM JIT: fix test for VFP
+2013-08-25 09:35:00 #291 passed:     master update Guide to describe adding a collection via a package
+2013-08-25 07:22:06 #290 passed:     master adjust DrRacket to not compile files in installation's "share"
+2013-08-24 17:06:31 #289 passed:     master fix `{put,head}-[im]pure-port'
+2013-08-24 11:40:07 #288 passed:     master ARM JIT: fix soft-float `round'
+2013-08-23 14:23:39 #287 passed:     master Fix hash-clear doc typos
+2013-08-23 14:08:40 #286 passed:     master Fix typo
+2013-08-23 13:43:01 #285 passed:     master Adding net/http-client and using it underneath net/url
+2013-08-23 10:45:32 #284 passed:     master change the default colors a bit based on color-blindness feedback
+2013-08-23 09:39:02 #283 passed:     master package system: change syntax of a GitHub package source to "git://..."
+2013-08-22 15:30:26 #281 passed:     master SRFI docs: fix inclusion of static, standard documents
+2013-08-22 11:48:54 #280 passed:     master setup/dirs: fix "config.rktd" reader
+2013-08-22 09:41:32 #279 passed:     master raco pkg: improve package-source checking and error reporting
+2013-08-21 16:12:39 #275 passed:     master Require Procedure contract to be a chaperone
+2013-08-21 12:22:22 #274 passed:     master GUI package manager: further refinements
+2013-08-20 21:57:54 #273 passed:     master raco pkg install: make `--force` override scope-conflict errors
+2013-08-20 18:19:53 #272 passed:     master fix various problems with the GUI package manager
+2013-08-20 17:26:36 #271 failed:     master protect package-source parsing against non-path strings
+2013-08-20 13:02:48 #270 passed:     master improve source location reporting in 2dmatch for empty cells
+2013-08-20 08:20:16 #269 errored:    master increase the resolution of the fairness tests
+2013-08-20 07:54:25 #268 passed:     master typesetting repairs for "info.rkt" docs
+2013-08-20 07:00:19 #267 passed:     master fix `hash-clear!' on impersonated hash tables
+2013-08-20 00:21:43 #266 passed:     master adjust the square-bracket prefs so they are saved
+2013-08-19 23:39:51 #265 failed:     master don't evaluate (sync (system-idle-evt)) since it might not
+2013-08-19 20:08:11 #264 passed:     master Revert "Revert "make user PLaneT install path use installation name instead of version""
+2013-08-19 08:19:32 #263 passed:     master raco pkg: make `search-ask` mode work for Windows (CRLF)
+2013-08-19 01:38:10 #262 passed:     master Fix a use of `fresh-line'.
+2013-08-18 18:14:32 #261 passed:     master attempt to clarify the eof insertion that drracket's repl does
+2013-08-18 18:09:40 #260 passed:     master distro-build/drive-clients: print time before each command
+2013-08-18 14:40:42 #259 passed:     master fix a bug introduced in efd26833015a
+2013-08-18 14:39:37 #258 passed:     master raco pkg install: fix problem with version-triggered updates
+2013-08-18 12:19:19 #257 passed:     master net/win32-ssl: a native Windows SSL layer
+2013-08-17 21:14:21 #256 passed:     master make drracket's language dialog cope with the
+2013-08-17 20:48:07 #255 passed:     master fix PR 13970 is a slightly less ugly way
+2013-08-17 15:01:36 #254 passed:     master meta/pkg-push/push-catalog: don't run in DrDr
+2013-08-17 13:13:33 #253 passed:     master fix benchmark harness for compiled test directories
+2013-08-17 09:53:10 #252 passed:     master add PLT_DUMP_JIT_RANGES
+2013-08-17 08:08:17 #251 passed:     master on second thought 5aeca646 is probably wrong and this is probably the right fix
+2013-08-17 08:02:48 #250 passed:     master Synch German string constants with latest.
+2013-08-17 07:16:41 #249 passed:     master raco pkg update: allow packages sources as replacements
+2013-08-17 06:10:44 #248 passed:     master fix a bug found by the lexer stress test
+2013-08-16 18:00:50 #247 passed:     master scribble-lib package: keep "doc" subcollection in source package
+2013-08-16 16:26:59 #246 passed:     master meta/pkg-push: extra dependency note
+2013-08-16 16:12:39 #245 passed:     master adjust htdp tests for the change to require in 736c8ca12b
+2013-08-16 14:11:15 #244 passed:     master adjust the drracket, menu-based teachpacks to be found via info.rkt files
+2013-08-16 13:01:42 #243 passed:     master fix immutable hash tree balancing
+2013-08-15 19:14:57 #241 passed:     master Moved tech terms for "implemented" and "supported" generic methods.
+2013-08-15 12:54:54 #240 passed:     master Define the pre-installed teachpacks to be those teachpacks
+2013-08-15 07:22:42 #239 passed:     master cm: change an "internal" error to show OS-level error
+2013-08-14 21:24:55 #238 passed:     master fix unstable/2d/match so that it doesn't duplicate the bodies of
+2013-08-14 20:19:59 #237 passed:     master Fix props errors
+2013-08-14 17:47:25 #236 passed:     master overwrite mode repairs
+2013-08-14 16:22:37 #235 passed:     master Comment typo.
+2013-08-14 15:53:38 #234 failed:     master Fix output of keys.
+2013-08-14 15:47:26 #233 passed:     master add error message with the right form name
+2013-08-14 07:21:42 #232 failed:     master adjust 2dmatch so that it copies more code
+2013-08-13 19:12:17 #231 passed:     master Support non-GNU `make'
+2013-08-13 15:04:02 #230 passed:     master Fix reference typo for datum->syntax
+2013-08-13 12:56:24 #229 passed:     master Refine define-runtime-path type
+2013-08-13 11:17:01 #228 failed:     master Add Typed Racket support for racket/runtime-path
+2013-08-13 07:22:10 #227 passed:     master add forgotten file
+2013-08-13 07:15:25 #226 passed:     master adjust info.rkt files for recent commit
+2013-08-13 07:01:53 #225 passed:     master move more htdp tests to htdp-test package
+2013-08-12 21:18:46 #224 failed:     master increase stack safety margin for 64-bit platforms
+2013-08-12 18:35:27 #223 passed:     master move 2htdp tests into the htdp-test pkg
+2013-08-12 18:25:52 #222 passed:     master enable JIT stack trace on arity errors
+2013-08-12 14:02:25 #221 passed:     master Fix doc identifier links
+2013-08-12 12:28:27 #220 passed:     master increase planet test suite timeout
+2013-08-12 11:08:17 #219 passed:     master distro-build/config: fix `parallel' constructor
+2013-08-12 08:54:08 #218 passed:     master setup/getinfo: add `#:bootstrap?' mode
+2013-08-11 16:15:07 #217 passed:     master declare depedency on html-lib
+2013-08-11 15:31:16 #216 passed:     master first cut at script to push PLT packages to pkg.racket-lang.org
+2013-08-11 15:17:28 #215 passed:     master documentation for Xexpr readers and auxiliaries
+2013-08-11 14:49:36 #214 passed:     master adjust dependencies to depend only on drracket-plugin-lib
+2013-08-11 14:38:45 #213 passed:     master move rackunit's drracket plugin into its own pkg,
+2013-08-11 09:50:14 #212 passed:     master with-color and with-thickness now preserve pen cap and join
+2013-08-11 08:34:37 #211 passed:     master Added get-path-bounding-box take 2
+2013-08-11 06:57:14 #210 passed:     master try to be more accomodating to low-permission contexts
+2013-08-10 13:53:16 #209 passed:     master Add ".desktop" file support
+2013-08-10 09:35:02 #208 passed:     master adjust framework tests to properly find the racket executable
+2013-08-10 07:47:29 #206 passed:     master v5.3.6 installers info
+2013-08-10 05:35:17 #204 passed:     master adjust props: make me responsible for all racket/contract files
+2013-08-09 20:58:03 #203 passed:     master Solaris: disable places and futures by default
+2013-08-09 18:06:12 #202 passed:     master clean up drracket tests
+2013-08-09 17:41:10 #201 passed:     master Update html generation bit.
+2013-08-09 16:07:18 #200 passed:     master Moving pp program re test-docs-complete
+2013-08-09 15:38:03 #199 passed:     master fix stack size of threads that implement places
+2013-08-09 11:52:13 #196 passed:     master Solaris: various repairs
+2013-08-09 10:09:09 #195 passed:     master Update gc2 based on an error found by Robby's student
+2013-08-09 09:38:40 #194 passed:     master Moving file accidentally committed in old place
+2013-08-09 08:56:33 #193 passed:     master fix subprocess issues
+2013-08-09 06:38:16 #192 passed:     master tweak the pdflatex finding code to work in drracket when
+2013-08-09 06:10:36 #191 passed:     master use new position-integer? predicate
+2013-08-08 21:39:36 #190 passed:     master JIT: add missing check on inlined `procedure-arity-includes?'
+2013-08-08 16:19:51 #189 passed:     master move check syntax's context menu items to the front of the menu
+2013-08-08 14:17:36 #188 passed:     master Forgot to add CHUNK docs
+2013-08-08 13:53:40 #187 passed:     master Clean up GC2 docs
+2013-08-08 13:24:21 #186 passed:     master Comment typo.
+2013-08-08 12:13:24 #185 passed:     master Doc fix for silly mistake in 495c70c
+2013-08-08 11:52:34 #184 passed:     master Doc fixes in htdp/image
+2013-08-07 15:52:07 #183 passed:     master Adjust contract-out so it uses the provide transformer machinery properly
+2013-08-07 10:52:09 #182 passed:     master adjust `compiler/zo-marshal' for bytecode-file change
+2013-08-07 10:49:41 #181 passed:     master fix bytecode-format bug
+2013-08-07 08:49:33 #180 passed:     master Fix guide typo.
+2013-08-05 14:23:34 #179 passed:     master Fix mrlib doc typo
+2013-08-05 13:25:59 #178 passed:     master Increase DrDr benchmark timeout
+2013-08-05 12:49:17 #177 passed:     master fix typos in macro guide
+2013-08-05 12:22:20 #176 passed:     master Update documentation source location link
+2013-08-05 01:12:32 #175 passed:     master fix exit:exit docs
+2013-08-04 11:36:25 #174 passed:     master Revert "make user PLaneT install path use installation name instead of version"
+2013-08-03 17:43:26 #173 failed:     master added nearest below & above to find-seconds error message
+2013-08-03 14:57:30 #171 failed:     master add missing lock acquire
+2013-08-03 13:49:14 #170 failed:     master overhaul documentation for the package manager
+2013-08-03 11:11:39 #169 failed:     master Remove install-pkg-inferred-as duplicate
+2013-08-03 09:54:10 #168 failed:     master Synch German string constants with latest.
+2013-08-03 01:22:59 #167 failed:     master Revised installer tests.
+2013-08-02 15:36:33 #166 failed:     master raco planet create: fix scribbling
+2013-08-02 14:35:28 #165 failed:     master Eventspace doc fixes and improvements
+2013-08-02 12:28:47 #164 failed:     master make user PLaneT install path use installation name instead of version
+2013-08-02 09:29:58 #163 passed:     master latest "sigplanconf.cls"
+2013-08-02 09:30:19 #162 passed:     master add `current-library-collection-links' parameter
+2013-08-01 20:17:26 #160 passed:     master Fix a TR internal error
+2013-08-01 18:29:03 #159 passed:     master indent multi-line details, export more helpers
+2013-08-01 08:02:31 #158 passed:     master raco pkg install: use `--link' by default for directory sources
+2013-07-31 23:19:29 #157 passed:     master Add type for `in-hash-pairs`
+2013-07-31 18:43:51 #156 passed:     master ffi/unsafe/objc: fix selector definition lifting
+2013-07-31 16:39:17 #155 passed:     master keep testing line numbers when compiled
+2013-07-31 15:56:04 #154 passed:     master Document `require/typed` more precisely
+2013-07-31 13:13:53 #153 passed:     master fix `raco link -l'
+2013-07-31 12:50:09 #152 passed:     master Use asymmetric filters for some evt predicates
+2013-07-31 08:10:46 #151 passed:     master distro-build: merge and improve package packing and cataloging
+2013-07-30 17:42:28 #150 passed:     master Fix responsible props for shell completion scripts.
+2013-07-30 16:04:47 #149 passed:     master Add more events to the base type environment
+2013-07-30 12:25:51 #148 passed:     master fix a bug in the way bitmap scaling was being handled
+2013-07-30 12:05:23 #146 passed:     master fix macro-stepper tests
+2013-07-30 11:28:32 #145 passed:     master Revert "Add contract for run-tests."
+2013-07-29 23:25:55 #143 passed:     master Adjust TR and docs for alarm-evt's domain
+2013-07-29 19:15:35 #142 passed:     master Add support for synchronizable events
+2013-07-29 12:47:01 #141 passed:     master attempt to document when flat contracts are predicates
+2013-07-29 12:00:11 #140 passed:     master configure: fix `--enable-portable-binary' addition
+2013-07-29 08:04:15 #139 passed:     master distro-build: add `#:pause-before' and `#:pause-after' options
+2013-07-29 00:34:24 #138 passed:     master Add syntax/srcloc tests to racket test suite (for all.rktl, quiet.rktl, etc.).
+2013-07-28 22:54:58 #137 passed:     master Updated tests for set/c.
+2013-07-28 20:02:35 #136 passed:     master Update RacketCon 2012 link
+2013-07-28 16:15:04 #135 passed:     master rename "typed-racket-tests" package to "typed-racket-test"
+2013-07-27 13:43:33 #134 passed:     master fix examples path in run-tests.rkt
+2013-07-27 13:23:51 #133 passed:     master scribble/manual: add space before "packages:" to look better in text output
+2013-07-27 12:37:02 #132 passed:     master Fixed a few bugs in set/c's keyword options, and one test for set/c.
+2013-07-27 10:19:37 #131 failed:     master fix contract test suite infrastructure
+2013-07-27 08:19:20 #130 failed:     master distro-build: fix reference to "native-pkgs"
+2013-07-27 08:11:36 #129 failed:     master raco setup: print "summary of errors" before the summary of errors
+2013-07-26 19:06:36 #128 failed:     master Support 'sub-range-binders property
+2013-07-26 15:57:21 #127 failed:     master fix icon for "Racket Documentation" launcher
+2013-07-25 21:43:40 #125 failed:     master fix `get-output-{bytes,string}' with bad starting index, no ending index
+2013-07-25 20:29:53 #124 failed:     master Add TR Guide section on typed-untyped interaction
+2013-07-25 15:42:48 #123 failed:     master Add examples for most evt bindings
+2013-07-25 15:08:03 #122 failed:     master Fix typo in reference
+2013-07-25 12:58:35 #121 failed:     master Documented forms for generic instance chaperones, impersonators, and contracts.
+2013-07-25 11:45:59 #120 failed:     master file/tar: limit pipe size between tar and gzip
+2013-07-24 02:00:19 #117 failed:     master Make Bottom generalize to Any instead of Integer.
+2013-07-24 00:41:32 #116 failed:     master Make tc-literal deal with complicated expected types better.
+2013-07-23 21:40:42 #115 failed:     master more safe-dereference repairs for DWARF native stack trace (on ARM)
+2013-07-23 20:47:39 #114 failed:     master fix for inotify() use with places and futures disabled
+2013-07-23 18:49:59 #113 failed:     master fix x86_64 DWARF-based stack trace
+2013-07-23 13:58:18 #112 failed:     master Increase timeout & set random prop on generics benchmark
+2013-07-23 13:14:17 #111 failed:     master Oops don't mention file reorg in stepper HISTORY.txt
+2013-07-23 12:45:11 #110 failed:     master updated HISTORY
+2013-07-22 23:28:51 #109 failed:     master Re-enable reasonable Travis setup.
+2013-07-22 22:18:47 #108 failed:     master distro-build: allow missing "man" directory (for Windows)
+2013-07-22 21:44:10 #107 failed:     master Added a benchmark file for performance of gen:dict and gen:stream generics.
+2013-07-22 19:34:26 #106 failed:     master fix `raco setup' package-dependency check when PLaneT package is installed
+2013-07-22 16:45:43 #105 failed:     master remove bogus cross-phase-persistent declaration
+2013-07-22 15:31:23 #104 failed:     master create "man1" directory before trying to put a man page there
+2013-07-22 14:50:39 #103 failed:     master configure installation of man pages
+2013-07-22 11:56:41 #102 failed:     master adjust backward-containing-sexp so that it returns #f
+2013-07-22 11:04:33 #101 failed:     master fix spacing in contract error message
+2013-07-22 06:33:35 #99 failed:      master Memoized redex dependent enumeration.
+2013-07-21 22:59:06 #98 failed:      master avoid a compiler warning
+2013-07-21 21:00:48 #96 failed:      master fix some tests
+2013-07-21 17:58:25 #95 failed:      master fix a test
+2013-07-21 11:19:43 #94 failed:      master r6rs: fix `div' and `mod'
+2013-07-20 14:46:15 #91 failed:      master distro-build: change `#:source?' config to mean source packages, too
+2013-07-20 11:22:58 #90 failed:      master fix "etc" vs. "config" in `make install' step
+2013-07-20 11:18:37 #89 failed:      master add catalog, source, and Mac OS X instructions to basic README
+2013-07-20 08:49:06 #86 failed:      master Add ffi array-type and in-array
+2013-07-20 01:03:07 #84 failed:      master Minor optimizer cleanup.
+2013-07-19 14:18:39 #82 failed:      master fix problems with "collects" path and GUI executables
+2013-07-19 13:09:40 #81 failed:      master distro-build: add support for source installers
+2013-07-19 06:40:31 #74 failed:      master fix (I think) a redrawing problem with the 102 chars column guide
+2013-07-19 06:39:24 #73 failed:      master update for moved drracket tests
+2013-07-18 20:56:29 #71 failed:      master move `planet/resolver' back to core
+2013-07-18 18:24:42 #70 failed:      master adjust the places <-> distributed-places connection
+2013-07-18 15:57:02 #69 failed:      master Include eli-tester
+2013-07-18 15:44:39 #68 failed:      master Build only some of the racket-test's dependencies in Travis.
+2013-07-18 14:26:11 #64 errored:     master Move distributed places to their own package.
+2013-07-18 12:54:03 #60 errored:     master raco pkg update: setup collections of dependent packages
+2013-07-18 09:56:03 #59 errored:     master Fix deps.
+2013-07-17 19:33:34 #58 errored:     master clean up places benchmark compilation
+2013-07-16 19:47:36 #55 errored:     master enable compilation of tests formerly in "racket-test"; reorganize
+2013-07-16 17:41:56 #54 passed:      master fix typo
+2013-07-16 16:55:05 #53 passed:      master removed #% from 'symbol table'; clarify that they are not symbols
+2013-07-16 12:07:50 #52 passed:      master GC clean-ups related to disabled collections and place-shared space
+2013-07-16 10:54:31 #51 passed:      master fix bug in ->
+2013-07-16 10:21:52 #50 passed:      master Move slatex rubber support to lib directory on install.
+2013-07-16 07:14:09 #49 passed:      master configure: fix a CC vs. CC_FOR_BUILD mismatch
+2013-07-15 21:04:26 #48 passed:      master Mac OS X installers: use "ds-store" package instead of scripting Finder
+2013-07-15 13:18:56 #47 passed:      master Changed 'produces' to 'consumes' in ports documentation
+2013-07-15 10:11:32 #46 passed:      master use `filesystem-change-evt' for collection paths only if low-latency
+2013-07-14 18:17:06 #44 passed:      master fix for `get-current-mouse-state' on Mac OS X 10.5 and earlier
+2013-07-14 08:57:45 #43 passed:      master disable inotify()-based `filesystem-change-evt'

@@ -1,0 +1,439 @@
+2014-09-21 04:17:58 #882 passed:     master Merge pull request #883 from ab/404-xss
+2014-09-19 12:30:08 #881 passed:     master Merge pull request #930 from 0x203/master
+2014-09-13 20:03:53 #879 passed:     master Merge pull request #929 from burningTyger/master
+2014-09-11 16:38:26 #878 failed:     master Merge pull request #927 from namusyaka/fix-test
+2014-09-10 08:18:43 #876 failed:     master Merge pull request #925 from T145/master
+2014-08-31 18:14:34 #874 passed:     master Kill empty test.
+2014-08-25 01:03:11 #871 passed:     master Merge pull request #919 from 7stud/improve_readme
+2014-08-22 09:01:50 #869 passed:     master Merge pull request #918 from joshk/patch-1
+2014-08-20 11:49:46 #867 passed:     master Merge pull request #916 from wuleicanada/patch-3
+2014-08-14 10:18:15 #865 passed:     master Merge pull request #915 from vipulnsward/fix-error-access
+2014-08-12 05:38:24 #863 passed:     master Merge pull request #912 from sinatra/revert-897-master
+2014-08-10 22:34:52 #860 passed:     master Merge pull request #907 from kgrz/fix-error-with-rack-master
+2014-08-10 22:29:32 #859 failed:     master Merge pull request #897 from markbates/master
+2014-08-10 22:16:01 #858 failed:     master Prefer strings over symbols in Japanese README
+2014-08-10 22:08:52 #857 failed:     master Use default strftime in exception log added in #909
+2014-08-10 22:03:12 #856 failed:     master Merge pull request #909 from tayler1/master
+2014-08-04 20:45:32 #854 failed:     master Merge pull request #910 from ausmarton/readme-symbols-to-strings
+2014-07-26 23:49:39 #849 failed:     master Merge pull request #908 from shenqihui/patch-1
+2014-07-22 13:23:35 #846 failed:     master Merge pull request #905 from yegortimoschenko/tilt-2-compat
+2014-07-22 02:08:53 #842 failed:     master Merge pull request #904 from sinatra/hwia-docs-fr
+2014-07-21 23:34:54 #839 failed:     master Merge pull request #902 from kgrz/convert-symbols-to-strings-in-readme
+2014-07-04 02:21:18 #835 passed:     master Update README.pt-br.md
+2014-07-04 00:17:29 #834 passed:     master Merge pull request #899 from marocchino/ko-update
+2014-07-04 00:11:43 #833 passed:     master Merge pull request #898 from jeremyevans/encoded-colon
+2014-07-01 09:52:31 #829 passed:     master Merge pull request #894 from jeremyevans/execjs-unavailable
+2014-06-21 07:31:25 #824 passed:     master Merge pull request #892 from DamirSvrtan/master
+2014-06-20 09:46:07 #822 passed:     master Merge pull request #891 from DamirSvrtan/master
+2014-06-20 08:01:51 #820 passed:     master Merge pull request #890 from DamirSvrtan/master
+2014-06-19 08:06:02 #817 passed:     master Merge pull request #888 from huoxito/mention-after-handler-option
+2014-06-17 09:47:38 #815 passed:     master Merge pull request #886 from jc00ke/patch-1
+2014-06-12 08:58:54 #811 passed:     master Merge pull request #882 from marocchino/ko-readme
+2014-06-06 17:14:53 #807 passed:     master lock to minitest 4.x
+2014-06-05 13:12:50 #806 failed:     master update authors file
+2014-06-04 16:34:25 #805 failed:     master Merge pull request #877 from karouf/french-readme
+2014-05-31 10:34:43 #804 failed:     master Merge pull request #879 from krissi/master
+2014-05-12 16:56:11 #799 failed:     master Merge pull request #873 from Ferenc-/master
+2014-05-09 15:58:13 #797 failed:     master Merge pull request #871 from johnvoloski/master
+2014-05-08 10:32:25 #795 failed:     master Merge pull request #870 from sinatrasapporo/japanese
+2014-04-14 03:39:50 #786 failed:     master Merge pull request #863 from melborne/readme-patch
+2014-04-08 14:37:44 #784 failed:     master Merge pull request #861 from kant/patch-1
+2014-04-08 10:22:53 #782 passed:     master v1.4.5
+2014-04-08 09:56:52 #781 passed:     master Merge pull request #842 from marocchino/fix-ko-md
+2014-04-08 09:42:26 #780 passed:     master Merge pull request #855 from vipulnsward/static-test-warnings
+2014-04-07 10:28:20 #779 passed:     master Merge pull request #852 from deitrick/query_params_docs
+2014-04-01 12:12:28 #778 passed:     master Merge pull request #858 from msgehard/sinatra_application_mentions
+2014-03-19 08:26:02 #773 passed:     master Merge pull request #851 from vipulnsward/init-pref-ext
+2014-02-24 09:10:05 #771 passed:     master Merge pull request #849 from kintamanimatt/bad_link_to_coderack
+2014-02-23 02:27:09 #768 passed:     master Merge pull request #847 from gogotanaka/add_readme_ja
+2014-02-21 03:54:24 #765 passed:     master Merge pull request #790 from GateGuru/feature/enable-options-in-static-method
+not yet #764 canceled:   master Merge pull request #791 from somu/readme-traps
+not yet #763 canceled:   master Merge branch 'master' of github.com:sinatra/sinatra
+not yet #762 canceled:   master Merge pull request #827 from ka8725/default_value_for_hash
+not yet #761 canceled:   master Merge branch 'mediawiki-support' of https://github.com/somu/sinatra
+not yet #760 canceled:   master Merge pull request #828 from Wolg/patch-3
+not yet #759 canceled:   master Fix minor code type
+not yet #758 canceled:   master Merge pull request #835 from melborne/fix-readme
+not yet #757 canceled:   master Merge pull request #837 from melborne/fix-readme-ja
+2014-02-21 03:26:28 #756 canceled:   master Merge pull request #845 from vipulnsward/sass-2-1
+2014-02-21 02:28:11 #755 passed:     master Merge pull request #846 from sholden/master
+2014-02-18 12:49:04 #753 passed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2014-01-26 16:34:08 #745 passed:     master Merge pull request #834 from marocchino/ko-readme
+2014-01-25 11:45:43 #744 passed:     master Merge pull request #836 from melborne/fix-readme-jp
+2014-01-24 13:22:28 #740 passed:     master Merge pull request #833 from romankuznietsov/master
+2014-01-22 03:31:29 #738 passed:     master Merge pull request #832 from melborne/update-readme-jp
+2014-01-20 06:56:24 #735 passed:     master Merge pull request #829 from chastell/warning_fix
+2014-01-13 08:26:48 #731 passed:     master Merge pull request #826 from tricknotes/fix-readme-jp
+2014-01-08 02:51:41 #727 passed:     master Merge pull request #824 from namusyaka/patch-jruby
+2014-01-07 02:09:37 #725 passed:     master Merge pull request #823 from namusyaka/fix-incorrect-regexp
+2013-12-27 04:21:28 #723 failed:     master reduce number of template languages tested on 1.8, most of them do not support it anymore or will drop support soon
+2013-12-27 04:04:56 #722 failed:     master drop some rubies
+2013-12-27 03:55:43 #721 errored:    master Merge pull request #822 from salimane/pr_ruby_2_1_0
+2013-11-17 09:44:22 #719 failed:     master Merge pull request #817 from kgrz/master
+2013-11-10 17:09:07 #717 passed:     master Merge pull request #813 from sborrazas/json-mime-type
+2013-11-09 16:20:44 #715 passed:     master Merge pull request #812 from wuleicanada/patch-2
+2013-11-09 09:29:46 #713 passed:     master Merge pull request #811 from wuleicanada/patch-1
+2013-11-08 09:57:01 #711 passed:     master Merge pull request #810 from patriciomacadden/typo
+2013-11-01 14:29:44 #709 passed:     master Merge pull request #805 from sbonami/fix-Request#accept-no_method_error
+2013-10-29 04:25:16 #706 passed:     master Merge pull request #806 from JonRowe/disable_path_traversal_protection_for_path_test
+2013-10-21 09:20:13 #702 errored:    master another typo fix
+2013-10-21 05:40:34 #699 failed:     master fix language is change log
+2013-10-21 05:13:03 #698 failed:     master v1.4.4
+2013-10-21 04:46:09 #697 failed:     master Merge pull request #788 from somu/fix-streaming-content-length-test
+2013-10-21 04:32:06 #696 failed:     master Merge pull request #789 from vipulnsward/change_warning_message
+2013-10-21 04:21:08 #695 passed:     master Merge pull request #799 from scudelletti/ds-improve-brazilian-readme-file
+2013-10-17 16:26:16 #693 passed:     master Merge pull request #798 from michelc/master
+2013-10-15 07:22:45 #691 passed:     master allow jruby-head to fail
+2013-10-15 07:09:09 #690 failed:     master Merge pull request #796 from vipulnsward/snake_case
+2013-10-04 03:57:02 #688 passed:     master Merge pull request #795 from francisgo/patch-1
+2013-09-25 08:25:46 #675 passed:     master Merge pull request #787 from somu/static-send-file-fix
+2013-09-25 07:11:07 #673 passed:     master Merge pull request #786 from somu/streaming-content-length-fix
+2013-09-24 16:20:33 #669 passed:     master Merge pull request #785 from somu/traps-setting
+2013-09-24 15:46:28 #667 passed:     master Merge pull request #784 from somu/patch-1
+2013-09-24 10:29:46 #664 passed:     master Merge pull request #781 from vipulnsward/remove_explicit_blocks
+2013-09-23 04:37:46 #662 passed:     master Merge pull request #780 from vipulnsward/map_changes
+2013-09-23 04:26:38 #661 passed:     master Merge pull request #778 from utenmiki/translation
+2013-09-22 16:41:08 #657 passed:     master Merge pull request #779 from vipulnsward/public_dir
+2013-09-22 08:57:14 #655 passed:     master Merge pull request #777 from patriciomacadden/uri_const
+2013-09-18 10:19:19 #651 errored:    master Merge pull request #773 from tbuehlmann/reel_rack_handler
+2013-09-18 09:34:38 #649 passed:     master Merge pull request #770 from patriciomacadden/send_file
+2013-09-15 17:32:04 #646 passed:     master Merge pull request #767 from vipulnsward/change_attr_wrapper
+2013-09-15 15:13:23 #645 passed:     master Merge pull request #768 from patriciomacadden/accept
+2013-09-12 18:10:19 #642 passed:     master Merge pull request #765 from mattwildig/yardopts-markdown
+2013-09-09 14:55:43 #640 passed:     master Merge pull request #743 from vipulnsward/minor_optimizations
+2013-09-09 12:41:08 #639 passed:     master Merge pull request #733 from vipulnsward/warn-1
+2013-09-09 12:23:19 #638 passed:     master Merge pull request #728 from mattwildig/false-layouts
+2013-09-09 12:08:35 #637 passed:     master Merge pull request #710 from tbuehlmann/self-hosted_server
+2013-09-09 11:46:19 #636 passed:     master Merge pull request #708 from rlivsey/pass_block-with-superclass
+2013-09-09 11:59:53 #635 passed:     master Merge pull request #758 from somu/unused-options-hash
+2013-08-23 10:09:59 #633 passed:     master Merge pull request #751 from patriciomacadden/fix-dependencies
+2013-08-04 08:37:27 #626 errored:    master Merge pull request #748 from michelc/master
+2013-07-22 07:00:11 #623 errored:    master Merge pull request #726 from wilkie/bugfix/request_accept_wildcards
+2013-07-21 14:52:25 #622 errored:    master Merge pull request #745 from vipulnsward/typo-1
+2013-07-20 14:52:21 #617 errored:    master Merge pull request #742 from vipulnsward/1warn_1
+2013-07-11 15:53:08 #615 errored:    master Merge pull request #738 from edg3r/master
+2013-07-02 15:31:32 #612 errored:    master Merge pull request #734 from vipulnsward/ambiguous
+2013-07-01 03:35:15 #609 errored:    master Merge pull request #732 from vipulnsward/enable_warnings
+2013-06-25 10:13:57 #607 errored:    master Merge pull request #730 from dariocravero/docs
+2013-06-07 16:19:57 #603 errored:    master 1.4.3 release
+2013-06-06 02:23:28 #602 passed:     master Merge pull request #723 from anachronistic/adjust_accept_query_behavior
+2013-06-03 06:08:48 #600 passed:     master allow rbx-19mode to fail again
+2013-05-27 10:13:40 #599 failed:     master Merge pull request #718 from doems/master
+2013-05-23 08:54:13 #597 failed:     master Update .travis.yml
+2013-05-22 05:09:24 #594 errored:    master Merge branch 'master' of github.com:sinatra/sinatra
+2013-05-01 09:05:50 #591 errored:    master Merge pull request #709 from scudelletti/patch-1
+2013-04-14 15:04:32 #588 passed:     master revert more of f069b53
+2013-04-14 14:56:59 #587 passed:     master revert part of f069b53
+2013-04-14 14:46:51 #586 passed:     master Merge pull request #707 from patriciomacadden/typo
+2013-04-11 02:16:21 #584 passed:     master Merge pull request #704 from patriciomacadden/reorder
+2013-04-07 14:08:55 #583 passed:     master Merge pull request #703 from viliampucik/master
+2013-03-31 14:51:44 #580 passed:     master Merge pull request #701 from craiglittle/master
+2013-03-31 06:28:32 #578 passed:     master Merge pull request #702 from tmm1/expose-sinatra-route
+2013-03-26 12:01:41 #575 passed:     master Merge pull request #699 from patriciomacadden/reindentation
+2013-03-25 13:47:58 #573 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2013-03-25 11:41:29 #572 passed:     master Merge pull request #698 from noxqsgit/master
+2013-03-25 04:37:54 #570 passed:     master Merge pull request #696 from burningTyger/master
+2013-03-24 13:32:23 #568 passed:     master whitespace removal
+2013-03-21 10:23:45 #563 passed:     master allow rbx-19mode to fail for now
+2013-03-21 04:21:18 #562 failed:     master fix typo
+2013-03-21 04:13:29 #561 failed:     master 1.4.2 release
+2013-03-21 03:46:42 #560 errored:    master Merge pull request #692 from floere/master
+2013-03-20 14:58:26 #555 failed:     master Merge pull request #691 from jbottigliero/master
+2013-03-20 11:26:51 #553 failed:     master Merge pull request #689 from zooml/missing-accept-hdr
+2013-03-20 04:49:34 #552 failed:     master more failing tests related to #688
+2013-03-20 04:38:51 #551 failed:     master add non-failing related tests
+2013-03-17 12:07:15 #549 passed:     master Merge pull request #685 from patriciomacadden/readme_improvements
+2013-03-17 12:00:00 #548 passed:     master Merge pull request #686 from patriciomacadden/spanish_readme_improvements
+2013-03-15 12:22:23 #545 passed:     master 1.4.1 release
+2013-03-15 12:07:44 #544 passed:     master delegate methods in classic mode from rackup file, fixes #682
+2013-03-15 08:04:52 #543 passed:     master 1.4.0 release
+2013-03-15 06:38:19 #542 passed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2013-03-15 05:33:48 #536 passed:     master Merge pull request #680 from vipulnsward/cleanup_tests
+2013-03-15 04:34:31 #534 passed:     master fix headings in russian readme, I hope
+2013-03-15 04:31:15 #533 passed:     master add toc to german readme
+2013-03-15 04:17:42 #532 passed:     master update changes
+2013-03-14 13:35:29 #531 passed:     master Merge pull request #681 from vipulnsward/cleanup_typos
+2013-03-14 11:46:34 #528 passed:     master Merge pull request #679 from patriciomacadden/provides
+2013-03-13 18:34:17 #525 errored:    master Merge pull request #678 from nesquena/fix_exception_handling_for_filters
+2013-03-12 15:29:19 #523 passed:     master Merge pull request #674 from kgrz/master
+2013-03-12 04:58:01 #521 passed:     master Merge pull request #671 from patriciomacadden/fix-integration-tests
+2013-03-11 02:33:01 #519 passed:     master Merge pull request #672 from erikj/master
+2013-03-10 11:01:54 #515 passed:     master make use mime_type returns a string or nil
+2013-03-10 07:14:37 #514 failed:     master avoid to_enum warning on 2.0
+2013-03-10 07:17:03 #513 failed:     master fix test for Ruby 2.0
+2013-03-10 06:40:00 #512 failed:     master make AcceptEntry behave like string
+2013-03-10 06:36:15 #511 failed:     master update list of http methods
+2013-03-10 04:29:18 #510 errored:    master fix section hierarchy in readme
+2013-03-10 03:16:44 #509 errored:    master fix markup
+2013-03-10 03:05:30 #508 errored:    master update Requirement section
+2013-03-10 01:54:19 #507 errored:    master Merge branch 'master' of github.com:sinatra/sinatra
+2013-03-10 04:43:19 #506 errored:    master Merge pull request #669 from burningTyger/master
+2013-03-09 15:09:19 #504 passed:     master Merge pull request #668 from patriciomacadden/gemfile-bluecloth
+2013-03-09 13:50:55 #502 passed:     master Merge pull request #666 from patriciomacadden/gemfile-therubyracer
+2013-03-09 11:22:31 #498 passed:     master fix rake thanks
+2013-03-09 11:11:44 #497 passed:     master add support for LINK and UNLINK requests
+2013-03-09 10:51:41 #496 passed:     master update changes
+2013-03-08 07:14:56 #495 passed:     master Merge pull request #665 from patriciomacadden/silence_cookie_warning
+2013-03-08 01:36:31 #493 failed:     master Merge pull request #663 from loveky/master
+2013-03-08 01:39:33 #492 passed:     master Merge pull request #662 from patriciomacadden/gemfile-source
+2013-03-07 16:42:31 #489 passed:     master use rdoc 3.x on 1.8
+2013-03-07 16:31:36 #488 failed:     master test pass with rdoc 4 now
+2013-03-07 16:25:41 #487 passed:     master Merge pull request #660 from bkabrda/master
+2013-03-07 16:20:44 #486 passed:     master Merge pull request #661 from gcapizzi/chinese_readme_md
+2013-03-07 11:58:12 #484 passed:     master Merge pull request #659 from patriciomacadden/header-headers
+2013-03-05 06:31:46 #481 passed:     master Merge pull request #656 from yb66/convert-jp-rdoc-to-md
+2013-03-05 04:21:53 #480 passed:     master Merge pull request #657 from gcapizzi/portuguese_readme_md
+2013-03-04 22:11:42 #476 passed:     master remove obsolete README.pt-br.rdoc
+2013-03-04 11:37:16 #475 errored:    master Merge pull request #655 from gcapizzi/brasilian_readme_md
+2013-03-02 23:57:22 #472 passed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2013-03-02 23:31:55 #471 failed:     master Merge pull request #651 from gcapizzi/spanish_readme_md
+2013-03-02 23:27:31 #470 failed:     master Merge pull request #652 from nonzer0/readme-hungarian-to-markdown
+2013-02-28 23:08:26 #467 errored:    master Merge branch 'master' of github.com:sinatra/sinatra
+2013-02-27 06:02:04 #466 passed:     master Update README.md
+2013-02-27 05:55:24 #465 passed:     master Update README.md
+2013-02-27 05:49:28 #464 passed:     master Merge pull request #650 from kgrz/master
+2013-02-26 17:34:35 #461 passed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2013-02-26 17:28:43 #460 passed:     master Merge pull request #647 from kgrz/master
+2013-02-26 17:16:17 #458 passed:     master update CHANGES
+2013-02-26 08:04:01 #453 passed:     master changes don't have to be up to date for a prerelease
+2013-02-26 05:40:03 #451 passed:     master fix rake task for ruby 1.8
+2013-02-26 05:31:46 #450 failed:     master Merge branch 'toc'
+2013-02-26 04:04:04 #448 passed:     master don't run stylus on rbx 1.9 mode
+2013-02-26 02:50:47 #442 passed:     master turn Modular vs. Classic Style comparison into a proper table
+2013-02-26 02:26:18 #441 passed:     master improve code markup in English readme
+2013-02-26 00:58:45 #439 passed:     master use binread for parsing CHANGES
+2013-02-26 01:05:43 #438 passed:     master add tests to show body is already working properly, fixes #512
+2013-02-26 00:38:38 #437 passed:     master remove trailing whitespace from readme
+2013-02-26 00:25:53 #436 passed:     master add session option to protection, fixes #601
+2013-02-26 00:13:46 #435 passed:     master add layout_options, fixes #495
+2013-02-25 23:25:01 #434 passed:     master resetting body should drop Content-Length, fixes #608
+2013-02-25 23:05:27 #433 passed:     master make not_found also trigger on NotFound exception directly, fixes #500
+2013-02-25 23:00:25 #432 passed:     master added test for #500
+2013-02-25 21:38:07 #431 passed:     master setting status to 404 in error handler should not trigger not_found handler, fixes #541
+2013-02-25 21:25:43 #430 passed:     master no longer override define_singleton_method, fixes #567
+2013-02-25 21:11:05 #429 passed:     master take views into account for template caching, fixes #631
+2013-02-25 20:36:18 #428 passed:     master update changes, fixes #633 and #639
+2013-02-25 19:43:20 #427 passed:     master Merge pull request #641 from alexeymuranov/template-helpers-with-blocks
+2013-02-25 08:25:25 #424 passed:     master Merge pull request #617 from robin850/syntax_fix
+2013-02-25 06:33:25 #423 passed:     master Merge pull request #628 from richo/bugs/falsy_layouts
+2013-02-25 05:57:20 #422 passed:     master Merge pull request #626 from pvande/improving-accept-headers
+2013-02-25 04:31:41 #419 passed:     master Merge pull request #632 from mcfiredrill/chat-example-fix
+2013-02-25 03:33:32 #414 passed:     master Merge pull request #643 from udzura/master
+2013-02-24 20:55:50 #411 passed:     master run against 2.0.0 on travis
+2013-02-24 20:43:54 #410 passed:     master fix rdoc version
+2013-02-24 20:41:47 #409 errored:    master lock to rdoc 1.x for now
+2013-02-24 20:35:37 #408 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2013-02-24 20:18:27 #407 errored:    master Merge pull request #634 from postmodern/localhost_development
+2013-02-05 03:13:03 #393 errored:    master Merge pull request #629 from mcfiredrill/streaming-code-readme-typo
+2013-01-27 06:43:07 #384 passed:     master Merge pull request #625 from burningTyger/master
+2013-01-27 03:35:50 #382 passed:     master Merge pull request #624 from burningTyger/md
+2013-01-26 07:18:21 #375 passed:     master rubinius is segfaulting
+2013-01-26 07:19:32 #374 failed:     master rbx-19mode is segfaulting on travis
+2013-01-26 03:48:15 #373 failed:     master disable wlang on rbx in 1.8 mode, too
+2013-01-26 03:37:11 #372 failed:     master do not call super in Response#finish to avoid infinite loop or body proxy
+2013-01-26 03:12:30 #371 failed:     master unloadable library might raise NameError in tilt master
+2013-01-26 03:03:53 #370 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2013-01-26 02:21:58 #369 failed:     master Merge pull request #614 from zaki/fix-routing-regex
+2013-01-25 17:21:38 #368 failed:     master Merge pull request #616 from robin850/master
+2013-01-20 17:01:19 #363 failed:     master Changed the README from .rdoc to .md
+2013-01-16 23:32:12 #358 failed:     master Merge pull request #613 from sonots/no_destructive_halt
+2013-01-07 04:03:48 #352 failed:     master Merge pull request #605 from foca/master
+2013-01-05 17:12:51 #350 failed:     master Merge pull request #603 from raggi/rack-1.4
+2012-12-22 14:08:07 #348 failed:     master Merge pull request #599 from yeban/update_stream_documentation
+2012-12-22 03:10:49 #345 failed:     master Merge pull request #597 from ymmtmsys/fix_typo
+2012-12-13 07:33:20 #342 failed:     master Merge pull request #592 from modclothpair/intro-dsl-link
+2012-12-13 07:28:54 #341 failed:     master Merge pull request #535 from yeban/stream_closed
+2012-12-13 07:08:02 #340 failed:     master Merge pull request #579 from acco/master
+2012-12-13 07:04:16 #339 failed:     master Merge pull request #590 from splattael/patch-1
+2012-12-13 07:01:06 #338 failed:     master add notes about rackup, fixes #313
+2012-12-12 08:22:22 #337 failed:     master also add file name to inline send_file
+2012-12-12 05:42:31 #336 failed:     master fix test name generation for tilt master
+2012-12-12 04:44:27 #335 failed:     master reduce build matrix, depend on newer rack
+2012-12-03 15:16:54 #331 failed:     master typo
+2012-10-18 10:36:27 #329 failed:     master also delegate register
+2012-09-13 17:30:23 #326 failed:     master allow engine specific layout to be true, too
+2012-09-13 17:17:47 #325 failed:     master Merge pull request #574 from zzak/fallback_to_engine_layout
+2012-09-13 14:15:37 #323 failed:     master do not use hash-bang in travis ci urls
+2012-09-13 14:11:09 #322 failed:     master Merge pull request #573 from zzak/master
+2012-09-13 13:13:57 #320 failed:     master Merge pull request #572 from ferrous26/patch-1
+2012-09-13 11:18:30 #318 failed:     master Merge pull request #571 from Wolg/docs-fixes
+2012-09-04 02:51:21 #316 failed:     master Merge pull request #569 from kgrz/patch-2
+2012-08-21 05:30:30 #315 failed:     master update AUTHORS
+2012-08-21 05:12:51 #314 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-08-20 12:34:59 #313 failed:     master Merge pull request #562 from timfel/master
+2012-08-17 16:35:08 #308 failed:     master Merge pull request #561 from timfel/fix-settings-test-maglev
+2012-08-10 06:33:31 #306 failed:     master Merge pull request #558 from burningTyger/master
+2012-08-02 02:49:23 #304 failed:     master Merge pull request #557 from rogeriozambon/master
+2012-08-01 02:40:14 #302 failed:     master switch back to default jdk
+2012-07-31 14:05:00 #301 failed:     master switch back to default jdk
+2012-07-31 13:45:32 #300 failed:     master Merge pull request #555 from michaelklishin/patch-1
+2012-07-31 02:05:22 #298 failed:     master Merge pull request #554 from neektza/master
+2012-07-31 02:03:03 #297 passed:     master use $PORT if set
+2012-07-30 13:09:04 #296 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-07-20 09:37:33 #293 passed:     master Merge pull request #552 from vast/ru-readme-sync
+2012-07-18 14:45:43 #290 failed:     master Merge pull request #550 from etehtsea/trailing-whitespaces
+2012-07-12 06:42:14 #288 failed:     master Merge pull request #492 from floere/master
+2012-07-07 07:39:56 #286 failed:     master Merge pull request #549 from Wolg/readme-ru
+2012-07-06 16:58:57 #284 failed:     master Merge pull request #544 from mhutchin/typo-patch
+2012-07-06 16:50:59 #283 failed:     master Merge pull request #548 from kgrz/issue-504
+2012-07-06 16:42:01 #282 failed:     master Merge pull request #547 from matschaffer/doc/after-handler
+2012-07-02 03:54:08 #279 failed:     master Merge pull request #546 from ohhgabriel/readme-es
+2012-06-28 03:07:02 #276 passed:     master Merge pull request #539 from mhutchin/patch-1
+2012-06-25 03:05:55 #274 failed:     master Merge pull request #538 from maccman/patch-1
+2012-06-23 04:10:29 #271 failed:     master Merge pull request #533 from 12k/master
+2012-06-23 04:00:43 #270 failed:     master Merge branch 'rabl' of https://github.com/jc00ke/sinatra into jc00ke-rabl
+2012-06-19 08:13:57 #268 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-06-12 06:20:44 #250 passed:     master Merge pull request #528 from blambeau/wlang
+2012-06-06 03:03:47 #246 passed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-05-30 12:48:42 #244 passed:     master Merge pull request #520 from mattwildig/haml-link
+2012-05-30 01:18:30 #242 passed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-05-29 17:58:43 #240 passed:     master Merge pull request #519 from mattwildig/missing-tests
+2012-05-22 16:00:46 #237 passed:     master Merge pull request #516 from SaberUK/typo-fix
+2012-05-21 16:30:05 #235 passed:     master Merge pull request #515 from zzak/block_styles
+2012-05-16 08:09:30 #233 passed:     master add first class support for trinidad, fixes #482
+2012-05-13 17:23:13 #232 passed:     master add first class support for trinidad, fixes #482
+2012-05-13 14:54:39 #230 passed:     master wrap sinatra stack for nicer handling, fixes #496
+2012-05-13 14:07:11 #229 passed:     master let use_code default to false, remove warning. fixes #497
+2012-05-13 14:00:18 #228 passed:     master be smarter about servers
+2012-04-26 01:48:51 #226 passed:     master sometimes puma does not log in test mode
+2012-04-26 01:43:59 #225 failed:     master Merge pull request #507 from GordonDiggs/master
+2012-04-26 01:40:12 #224 failed:     master Merge pull request #506 from snaggled/master
+2012-04-20 04:24:41 #220 failed:     master do not encourage disabling protection
+2012-04-02 08:56:10 #218 failed:     master Merge pull request #498 from sjoonk/master
+2012-04-02 04:52:46 #216 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-03-23 16:25:29 #215 failed:     master Merge pull request #494 from jaseg/showexceptions_accept_headers
+2012-03-23 11:51:47 #214 failed:     master Merge pull request #493 from sjoonk/master
+2012-03-19 04:56:04 #212 failed:     master retry failing integration tests
+2012-03-18 08:34:26 #210 failed:     master retry failing integration tests
+2012-03-18 07:26:50 #209 failed:     master add puma to Gemfile
+2012-03-18 07:22:46 #208 failed:     master there is no assert_equal on 1.8
+2012-03-18 07:07:27 #207 failed:     master do not make assumptions about first log line in integration test (might be a warning)
+2012-03-18 05:52:12 #206 failed:     master install less 1.0 on 1.8
+2012-03-18 04:34:01 #204 failed:     master do not use URI.encode on 1.9 (deprecated)
+2012-03-15 04:17:24 #201 failed:     master fix gemfile
+2012-03-15 04:03:54 #200 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-03-15 03:53:14 #199 failed:     master Merge pull request #488 from michelc/master
+2012-03-15 03:31:01 #198 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-03-15 03:25:19 #197 failed:     master Merge pull request #486 from mjijackson/clean_build
+2012-03-15 03:20:42 #196 failed:     master add :server_settings to pass options to :server, merges #431
+2012-03-15 03:14:05 #195 failed:     master Merge pull request #480 from ohhgabriel/readme-es
+2012-03-15 03:09:21 #194 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-03-15 03:00:11 #193 failed:     master Merge pull request #487 from trevor/indepedant
+2012-03-14 16:46:58 #192 failed:     master Merge pull request #485 from trevor/patch-1
+2012-03-13 05:16:30 #184 passed:     master also rescue OpenURI::HTTPError for heartbeat ping in integration test
+2012-03-13 04:50:20 #181 passed:     master increase timeout for integration test
+2012-03-13 04:29:05 #180 failed:     master haml still ships with sass
+2012-03-11 08:57:41 #178 passed:     master don't trust git encoding
+2012-03-11 07:45:46 #175 failed:     master don't trust git encoding
+2012-03-11 07:11:12 #173 passed:     master don't install Sass/SCSS on Ruby 2.0
+2012-03-11 06:58:50 #172 passed:     master Revert "allow 1.9.2 to fail with rack master on travis"
+2012-03-11 05:51:02 #171 failed:     master allow 1.9.2 to fail with rack master on travis
+2012-03-11 05:46:25 #170 failed:     master fix "unused variable" warning
+2012-03-11 04:47:20 #168 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-03-10 18:00:25 #167 failed:     master Merge pull request #479 from nicksieger/jruby-integration-tests
+2012-03-10 10:35:01 #165 failed:     master don't run thin tests on jruby
+2012-03-10 10:17:30 #164 failed:     master JRuby raises SystemCallError instead of Errno::ECONNRESET
+2012-03-10 10:11:09 #163 failed:     master JRuby raises an Exception if process is already dead
+2012-03-08 09:08:55 #161 failed:     master Merge pull request #477 from burningTyger/master
+2012-03-08 02:58:21 #160 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-03-08 02:28:12 #159 failed:     master Merge pull request #476 from michelc/master
+2012-03-08 02:13:13 #158 failed:     master add puma
+2012-03-08 02:01:51 #157 failed:     master test against rack 1.4.1 and 1.3.6
+2012-03-08 01:55:37 #156 failed:     master fix double logging issue properly
+2012-03-08 00:27:05 #155 failed:     master add a comment to integration test
+2012-03-07 09:51:52 #154 failed:     master do not concatinate params. fixes #452, fixes #453.
+2012-03-07 09:30:19 #153 failed:     master deprecate RUBY_IGNORE_CALLERS, fixes #444
+2012-03-07 09:26:56 #152 failed:     master do not install json on jruby in 1.9 mode
+2012-03-06 02:23:57 #151 failed:     master Merge pull request #474 from michelc/master
+2012-02-10 15:11:33 #150 failed:     master Merge pull request #464 from boucher/master
+2012-02-01 15:53:41 #149 failed:     master Merge pull request #455 from ohhgabriel/readme-es
+2012-02-01 15:44:57 #148 failed:     master Merge pull request #461 from chanks/indifferent-params-in-arrays
+2012-01-31 03:14:02 #147 failed:     master Merge pull request #460 from vast/ru-readme-sync-2-judgement-day
+2012-01-22 07:07:02 #146 failed:     master Merge pull request #457 from raggi/fix_head_requests
+2012-01-18 05:52:22 #145 failed:     master no C exts on JRuby on travis
+2012-01-18 05:40:13 #144 failed:     master enable jruby 1.9 mode on travis, fix rack env
+2012-01-10 04:46:28 #143 failed:     master Merge pull request #451 from michaelklishin/patch-1
+2012-01-10 02:21:28 #142 failed:     master add support for yajl templates, merges #450
+2012-01-05 14:01:40 #141 failed:     master update changes
+2012-01-05 13:39:45 #138 failed:     master set up async.close on thin and friends. fixes #446.
+2012-01-03 17:34:28 #137 failed:     master set status, headers and body before hitting after filters. fixes #402.
+2012-01-03 11:01:47 #136 failed:     master do not modify load path
+2012-01-03 08:20:59 #135 failed:     master update delegator links
+2012-01-02 11:42:33 #133 failed:     master improve helpers documentation
+2012-01-02 11:35:34 #132 failed:     master Merge pull request #440 from yeban/readme
+2012-01-02 11:29:56 #131 failed:     master make #provides respect Content-Type. fixes #408.
+2012-01-02 09:39:04 #130 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2012-01-01 08:01:58 #129 failed:     master Merge pull request #439 from ohhgabriel/readme-es
+2011-12-31 06:52:52 #128 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2011-12-31 05:13:35 #127 failed:     master Merge pull request #438 from burningTyger/doc
+2011-12-30 15:38:14 #126 failed:     master update changes
+2011-12-30 06:58:53 #124 failed:     master 1.3.2 release
+2011-12-30 06:48:19 #122 failed:     master update changes
+2011-12-30 06:28:02 #121 failed:     master redcarpet support in tilt is broken under 1.9
+2011-12-30 06:15:53 #120 failed:     master upgrade rack-protection dependecy, remove escaped_params hack
+2011-12-30 05:54:42 #119 failed:     master allow access to route params in stream block, fixes #418
+2011-12-30 05:15:47 #118 failed:     master Rack 1.4 returns Content-Length: 0 for HEAD requests
+2011-12-30 04:15:23 #117 failed:     master Merge pull request #432 from tjeden/master
+2011-12-07 03:10:22 #116 failed:     master Merge pull request #424 from adamvaughan/comment-fix
+2011-11-28 16:50:22 #115 failed:     master Merge pull request #419 from ohhgabriel/readme-es
+2011-11-24 02:54:11 #114 errored:    master fix markup in French readme
+2011-11-19 07:22:24 #113 errored:    master Merge pull request #416 from lest/command-line-options-help
+2011-11-17 09:09:03 #112 failed:     master Merge pull request #415 from lest/fix-protection-typo-in-readme
+2011-11-14 16:34:40 #111 failed:     master Merge pull request #413 from eckz/fix-readme-typo
+2011-11-14 12:51:23 #110 failed:     master Merge pull request #412 from lest/fix-integration-test
+2011-11-14 10:40:35 #109 failed:     master Merge pull request #411 from cypher/improve-settings-description
+2011-11-09 13:53:11 #108 failed:     master Merge pull request #404 from lest/coffee-test-fix
+2011-11-06 21:40:54 #107 errored:    master Merge pull request #401 from ohhgabriel/readme-es
+2011-11-06 07:22:56 #106 failed:     master comment out rubies that don't exist on travis
+2011-11-06 07:10:48 #105 failed:     master use #system if Process.kill is not supported, use KILL instead of TERM if something went wrong
+2011-11-06 07:03:04 #104 errored:    master update travis config with current rubies
+2011-11-06 06:56:04 #103 errored:    master increase timeout, jruby (and sometime rubinius) do not make it in time
+2011-11-05 17:26:12 #102 failed:     master Merge branch 'master' of github.com:sinatra/sinatra
+2011-11-05 17:08:49 #101 failed:     master Merge pull request #399 from ohhgabriel/readme-es
+2011-10-31 18:31:54 #99 failed:      master print server log in case integration test fails
+2011-10-31 18:04:11 #98 failed:      master allow running two integration tests in parallel
+2011-10-31 16:56:28 #97 errored:     master retry integration test if server is not yet up and running
+2011-10-31 16:46:25 #96 failed:      master add integration test
+2011-10-30 15:09:49 #95 passed:      master add specs for manipulating params in a before filter, fixes #367
+2011-10-30 14:59:02 #94 passed:      master refactor process_route
+2011-10-30 14:41:38 #93 passed:      master simplify handling of captures
+2011-10-30 11:48:28 #92 passed:      master Merge branch 'master' of github.com:sinatra/sinatra
+2011-10-28 16:16:42 #91 passed:      master Merge pull request #395 from ohhgabriel/readme-es
+2011-10-28 12:03:42 #90 passed:      master add note about shotgun
+2011-10-23 11:15:47 #89 passed:      master Merge pull request #392 from ohhgabriel/readme-es
+2011-10-15 01:10:40 #88 passed:      master fix logging test
+2011-10-14 18:17:54 #86 passed:      master Merge pull request #389 from zzak/25e8aec3
+2011-10-14 10:53:05 #85 passed:      master Merge pull request #388 from nbaum/master
+2011-10-10 22:43:36 #83 passed:      master Merge pull request #382 from timfel/patch-1
+2011-10-10 22:09:02 #82 passed:      master Merge pull request #379 from timfel/support-rdoc-3.10
+2011-10-10 21:05:22 #81 failed:      master Merge pull request #378 from timfel/support-rdoc-3.10
+2011-10-07 14:59:09 #80 passed:      master Merge pull request #375 from nashby/master
+2011-10-07 00:20:09 #79 passed:      master Merge pull request #373 from timfel/master
+2011-10-06 23:54:30 #78 passed:      master Merge pull request #372 from timfel/patch/revert-less
+2011-10-05 11:57:02 #77 failed:      master add CHANGES check to release task
+2011-10-05 11:42:34 #76 failed:      master Merge pull request #370 from rbq/patch-1
+2011-10-04 20:34:36 #75 failed:      master 1.3.1 release
+2011-10-04 20:10:57 #74 failed:      master do not include .gitignore and .travis.yml in gem
+2011-10-04 18:42:06 #73 failed:      master avoid infinite loop on thin when running a modular application, fixes #369
+2011-10-04 17:18:43 #72 failed:      master dont include escaped_params because some other protection option has been set, related to rkh/rack-protection#6
+2011-10-03 17:12:00 #71 failed:      master adjust travis envs to gemspec changes
+2011-10-03 16:45:17 #70 failed:      master be more strict about dependencies
+2011-10-03 15:26:16 #69 failed:      master Merge branch 'master' of github.com:sinatra/sinatra
+2011-09-29 11:55:40 #66 failed:      master Merge pull request #363 from dekellum/jruby-warning-fixes
+2011-09-25 16:44:48 #64 failed:      master Merge branch 'master' of github.com:sinatra/sinatra
+2011-09-22 17:59:52 #63 passed:      master Also mention Jacob Burkhart
+2011-09-22 17:53:25 #62 passed:      master Add Josh Lane to CHANGES.
+2011-09-22 17:47:21 #61 passed:      master Merge pull request #362 from engineyard/dont_escape_params
+2011-09-22 17:31:56 #60 passed:      master Merge pull request #361 from engineyard/dont_escape_params
+2011-09-21 17:29:37 #59 passed:      master Merge pull request #359 from timfel/master
+2011-09-19 16:49:09 #58 errored:     master Merge pull request #358 from timfel/master
+2011-09-19 13:17:14 #57 passed:      master Merge pull request #357 from ohhgabriel/readme-typo
+2011-09-19 13:12:22 #56 passed:      master Merge pull request #356 from ohhgabriel/readme-es
+2011-09-17 17:23:19 #55 errored:     master fix typo
+2011-09-17 17:19:44 #54 passed:      master make #etag_matches? private
+2011-09-17 16:31:51 #53 passed:      master properly implement If-Matches and If-None-Matches handling according to RFC 2616, fixes #355
+2011-09-14 16:19:39 #52 passed:      master better error message if passing nil (or something else) to a render method
+2011-09-14 14:21:57 #49 passed:      master add tests to check compatiblity with Rack::Lock, related to #352
+2011-09-12 17:16:51 #48 passed:      master wording in CHANGES
+2011-09-08 16:11:47 #46 passed:      master Merge pull request #351 from burningTyger/doc
+2011-09-04 20:24:00 #45 passed:      master Merge pull request #349 from ohhgabriel/readme-es

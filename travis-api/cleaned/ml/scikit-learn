@@ -1,0 +1,2009 @@
+2014-10-05 07:48:49 #8806 passed:    master DOC reduce table width through less-qualified function names
+2014-10-05 07:40:29 #8805 passed:    master DOC on negation of loss functions used as scoring parameters
+2014-10-04 14:39:52 #8802 passed:    master TST: Added tests to test Deprecation warning
+2014-10-03 02:36:16 #8778 passed:    master Merge pull request #3732 from queqichao/fix_typo
+2014-10-03 01:34:33 #8777 passed:    master Merge pull request #3731 from ndawe/master
+2014-10-02 04:39:50 #8769 passed:    master MAINT missing numpy / scipy for the Python 3.3 build
+2014-10-02 03:36:53 #8768 passed:    master Merge pull request #3730 from ogrisel/fix-libsvm-random-seed
+2014-10-01 21:36:13 #8763 passed:    master Fix sparse_cg solver when max_iter is specified.
+2014-10-01 19:05:11 #8762 passed:    master Enable grid search with classifiers that may throw an error on individual fits.
+2014-10-01 09:07:02 #8758 passed:    master MAINT use Python versions provided by AppVeyor CI
+2014-09-30 11:08:04 #8740 passed:    master Merge pull request #3724 from mlopezantequera/patch-1
+2014-09-30 01:42:38 #8733 passed:    master Raise exception for sparse inputs in the case of svd solver
+2014-09-29 15:54:45 #8729 passed:    master Merge branch 'pr/3710'
+2014-09-29 15:34:25 #8727 passed:    master DOC Add solido testimonial
+2014-09-29 06:45:29 #8721 passed:    master Merge pull request #3713 from akshayah3/Boost
+2014-09-29 01:50:34 #8719 passed:    master Merge pull request #3715 from trevorstephens/correct-gbc-docstring
+2014-09-26 02:09:26 #8706 passed:    master Merge pull request #3705 from floydsoft/patch-1
+2014-09-25 13:01:36 #8700 passed:    master Merge pull request #3656 from dougalsutherland/fix-rbf-samp
+2014-09-25 12:43:17 #8699 passed:    master Merge pull request #3695 from dougalsutherland/kde-docs
+2014-09-25 12:40:14 #8698 passed:    master Merge branch 'pr/3696'
+2014-09-25 06:55:43 #8695 passed:    master Merge pull request #3687 from perimosocordiae/fast-l1-dist
+2014-09-24 05:29:17 #8691 passed:    master Merge pull request #3697 from luispedro/cv_doc_fix
+2014-09-23 11:06:19 #8683 passed:    master Merge pull request #3285 from kastnerkyle/incremental_pca
+2014-09-23 05:36:14 #8677 passed:    master MAINT: set attributes as last action in DictVectorizer.fit
+2014-09-22 10:34:38 #8670 passed:    master DOC single-pass DictVectorizer in what's new
+2014-09-22 10:03:46 #8669 passed:    master TST more robust test for MemoryError from Tree._resize
+2014-09-22 07:23:52 #8663 errored:   master FIX propagate MemoryError from Tree._resize
+2014-09-22 04:54:57 #8659 passed:    master FIX don't compare strings with 'is'
+2014-09-22 04:02:53 #8657 passed:    master MAINT move comment to the appropriate place
+2014-09-22 02:58:14 #8656 passed:    master MAINT add a deprecation version
+2014-09-22 02:34:33 #8655 passed:    master Merge pull request #3224 from pprett/gbrt-sample-weight
+2014-09-21 23:05:26 #8653 passed:    master Fix typo.
+2014-09-20 05:00:02 #8636 passed:    master Wording.
+2014-09-19 10:06:52 #8630 passed:    master Merge pull request #3678 from akshayah3/LinearReg
+2014-09-19 02:34:17 #8619 passed:    master Merge pull request #3674 from MechCoder/fix_l1_penalty
+2014-09-18 21:43:39 #8617 passed:    master Merge pull request #3676 from danfrankj/master
+2014-09-17 09:44:37 #8609 passed:    master DOC document copy_X parameter from LinearRegression
+2014-09-17 03:18:27 #8602 passed:    master Merge pull request #3667 from ajschumacher/patch-6
+2014-09-17 03:09:00 #8601 passed:    master Fix wrong attribute doc in BaggingRegressor.
+2014-09-13 09:04:45 #8568 passed:    master adding escape characters to regex
+2014-09-13 08:55:37 #8567 passed:    master DOC fix broken URL
+2014-09-11 16:02:25 #8559 passed:    master ENH comment on drop for good not being triggered in the tests
+2014-09-11 02:09:29 #8552 passed:    master Merge pull request #3587 from jnothman/transforms-doc
+2014-09-10 04:06:22 #8538 passed:    master Merge pull request #3653 from MechCoder/minor_opt
+2014-09-05 18:16:30 #8507 passed:    master MAINT CI: reflect CLI change in wheelhouse-uploader tool
+2014-09-05 06:48:13 #8504 passed:    master DOC: Explain prediction when decision_function is zero
+2014-09-05 03:46:54 #8502 passed:    master Merge pull request #3564 from jnothman/bounds
+2014-09-04 15:31:15 #8490 errored:   master Merge branch 'pr/3613'
+2014-09-04 12:19:38 #8489 passed:    master FIX more tolerant early stopping for least angle
+2014-09-04 09:14:10 #8484 passed:    master MAINT big refactor of sklearn.cluster.bicluster
+2014-09-04 08:55:50 #8482 passed:    master FIX division by zero warning in LassoLarsIC
+2014-09-04 08:28:15 #8481 passed:    master ENH Speed up and simplify cartesian product
+2014-09-04 07:38:43 #8476 passed:    master DOC fixes in 0.15.2
+2014-09-04 06:52:29 #8472 passed:    master ENH upload Windows wheels to rackspace
+2014-09-04 05:48:33 #8466 passed:    master MAINT remove unused MST code
+2014-09-04 03:08:51 #8463 passed:    master FIX finfo.eps should be used instead of tiny for equality checks
+2014-09-04 02:51:46 #8462 passed:    master FIX heisenfailure on 32 bit python + speedup
+2014-09-03 13:02:28 #8460 passed:    master Merge pull request #3629 from ogrisel/fix-unstable-lars-test
+2014-09-03 06:49:14 #8446 passed:    master ENH improved CSC matrix handling in VarianceThreshold
+2014-09-03 05:57:41 #8443 passed:    master ENH friendlier message for calling predict before fit on SVMs
+2014-09-03 05:04:56 #8438 passed:    master MAINT remove harmless, but useless, double call to csr_matrix
+2014-09-02 09:28:44 #8428 passed:    master FIX Windows CI: use prebuilt numpy / scipy
+2014-09-02 04:42:36 #8421 passed:    master FIX define CC and CXX for travis
+2014-09-02 04:28:17 #8418 failed:    master FIX update sklearn.__all__ to include all end-user submodules
+2014-09-02 04:20:16 #8416 failed:    master MAINT optimize machinalis.png, -9kB/42%
+2014-09-02 04:14:32 #8403 failed:    master Merge pull request #3619 from ogrisel/fix-miniconda
+2014-09-01 08:34:43 #8399 failed:    master Merge pull request #3611 from ogrisel/fix-isfinite-windows
+2014-09-01 04:44:02 #8394 failed:    master Merge pull request #3580 from jnothman/gridsearch-score
+2014-09-01 04:22:20 #8393 failed:    master FIX: divide each row of the CM by the true support
+2014-09-01 03:18:58 #8391 failed:    master ENH cosmetic reorg of the confusion matrix example
+2014-08-31 16:45:17 #8390 failed:    master Merge pull request #3612 from calvingiles/fix-resource-warnings
+2014-08-31 10:46:16 #8386 passed:    master Merge pull request #3608 from agramfort/fix_gnb_proba
+2014-08-31 07:28:59 #8377 passed:    master COSMIT: explicit comment
+2014-08-31 06:47:56 #8373 passed:    master ENH: Remove unused copy
+2014-08-31 06:01:46 #8372 passed:    master ENH: minor speed-up in k-means
+2014-08-31 04:57:45 #8370 passed:    master BUG: n_samples instead of n_features in cd_fast
+2014-08-30 09:04:47 #8362 passed:    master DOC: more explicit title
+2014-08-30 07:22:54 #8361 passed:    master DOC multi_output parameter on validation function
+2014-08-30 06:22:52 #8360 passed:    master Merge pull request #3591 from MechCoder/refactor_logreg
+2014-08-30 06:10:40 #8359 passed:    master DOC dtype parameter on validation functions
+2014-08-29 16:29:21 #8354 passed:    master DOC rename "imputation.py" to "missing_values.py"
+2014-08-29 16:25:54 #8353 passed:    master Merge pull request #3603 from MechCoder/fix_imputation_example
+2014-08-29 10:11:34 #8352 passed:    master Merge pull request #3604 from rahiel/patch-1
+2014-08-29 10:10:05 #8351 passed:    master Merge pull request #3598 from GaelVaroquaux/np_warnings
+2014-08-26 09:24:40 #8331 passed:    master Merge pull request #3593 from MechCoder/row_norms_doc_fix
+2014-08-25 20:58:51 #8323 passed:    master Merge pull request #3588 from tejesh95/patch-1
+2014-08-25 16:51:49 #8319 errored:   master TST fix doctest for k-NN
+2014-08-25 16:31:43 #8318 errored:   master TST fix doctest for k-NN
+2014-08-25 10:57:08 #8314 errored:   master FIX bug with set_params on minkowski 'p'.
+2014-08-25 04:39:05 #8311 passed:    master Merge pull request #3001 from jnothman/doc_sample_gens
+2014-08-24 09:19:21 #8306 passed:    master DOC fix link embedding regexp
+2014-08-24 08:29:40 #8305 passed:    master DOC Updated what's new
+2014-08-24 03:58:24 #8303 passed:    master Merge pull request #3586 from MechCoder/python3_installation
+2014-08-21 17:04:26 #8279 failed:    master DOC document MultiLabelBinarizer.sparse_output param
+2014-08-21 10:41:29 #8276 passed:    master DOC: Changed docstring style for optional arguments
+2014-08-20 06:02:35 #8269 passed:    master DOC fix line references in tutorial
+2014-08-20 03:53:17 #8267 passed:    master MAINT: better gitignore
+2014-08-19 22:32:53 #8266 passed:    master FIX out-of-core example had been broken
+2014-08-19 09:07:56 #8263 errored:   master DOC more explicit parameter descriptions in make_multilabel_classification
+2014-08-19 03:52:01 #8258 passed:    master MAINT: add license info
+2014-08-18 09:45:34 #8254 passed:    master Merge pull request #3573 from MechCoder/high_dimensional_enetcv
+2014-08-18 07:34:22 #8251 passed:    master DOC vectorizers were referring to a private function in public docs
+2014-08-18 06:18:12 #8250 passed:    master Merge pull request #3572 from AndrewWalker/patch-1
+2014-08-18 04:25:51 #8247 passed:    master MAINT Remove note that assert_warns comes with Numpy 1.7
+2014-08-17 09:23:04 #8240 passed:    master Merge pull request #3438 from hamsal/sprs-out-dmy
+2014-08-14 04:11:05 #8192 passed:    master DOC correct shape of Tree.value
+2014-08-14 02:58:40 #8188 passed:    master MAINT simplify covertype benchmark
+2014-08-13 22:31:32 #8186 passed:    master DOC add missing details to what's new
+2014-08-13 03:56:12 #8160 passed:    master Deprecate vectorizer fixed_vocabulary attribute
+2014-08-12 21:59:29 #8159 passed:    master DOC correct default value
+2014-08-12 13:46:57 #8155 passed:    master Merge branch 'pr/3395'
+2014-08-12 13:36:30 #8154 passed:    master DOC GP fixes in what's new
+2014-08-12 09:17:07 #8149 passed:    master DOC:Typo in doc
+2014-08-11 06:20:13 #8138 passed:    master Merge branch 'pr/3545'
+2014-08-11 02:33:10 #8135 passed:    master DOC update what's new
+2014-08-10 20:39:29 #8134 passed:    master DOC specify X shape for precomputed
+2014-08-10 19:42:18 #8133 passed:    master DOC fix typo
+2014-08-07 16:49:53 #8109 passed:    master DOC fix typo
+2014-08-07 12:04:07 #8103 passed:    master MAINT NumPy 1.10-safe version comparisons in joblib
+2014-08-07 11:33:39 #8102 errored:   master Merge branch 'pr/3535'
+2014-08-07 06:36:53 #8093 passed:    master FIX Verbose message in RFE to count from 1, not 0
+2014-08-07 06:21:49 #8092 passed:    master COSMIT Move imports in example
+2014-08-07 06:15:02 #8091 passed:    master Merge pull request #3539 from jnothman/fast_indexing
+2014-08-06 07:44:49 #8077 passed:    master DOC What's new
+2014-08-06 04:48:55 #8071 passed:    master ENH: parallel feature importances for forests
+2014-08-06 04:30:35 #8069 passed:    master DOC add link toward Jatin Shash webpage
+2014-08-05 07:02:12 #8043 passed:    master Merge pull request #3527 from jnothman/unnest-model-evaluation
+2014-08-04 06:41:56 #8004 passed:    master Merge pull request #3528 from MechCoder/fix_heisen
+2014-08-02 05:20:50 #7967 failed:    master DOC remove backticks from around attribute name + PEP8
+2014-08-02 05:15:37 #7966 failed:    master Merge pull request #3489 from jnothman/attributes-doc
+2014-08-02 05:14:29 #7965 failed:    master Merge pull request #3509 from arjoly/fix-rp-sparse
+2014-08-01 11:05:22 #7959 passed:    master FIX wording in whats new in 0.15.1
+2014-08-01 08:06:32 #7951 passed:    master FIX #3485: class_weight='auto' on SGDClassifier
+2014-08-01 06:26:30 #7947 passed:    master Merge pull request #3522 from ugurthemaster/patch-1
+2014-08-01 05:16:57 #7940 passed:    master TST: Added test to check ConvergenceWarning
+2014-08-01 03:50:35 #7936 passed:    master FIX six issue with module imports
+2014-07-31 16:49:43 #7925 passed:    master fix: i might be undefined
+2014-07-31 09:22:10 #7914 passed:    master DOC whats_new.rst: missing backported fixes for 0.15.1
+2014-07-30 03:17:03 #7876 passed:    master Add sample_weight parameter to metrics.jaccard_similarity_score
+2014-07-29 09:38:12 #7853 passed:    master FIX Support unseen labels LabelBinarizer and test
+2014-07-29 05:06:05 #7847 passed:    master FIX Implemented correct handling of multilabel y in cross_val_score
+2014-07-29 03:24:49 #7843 passed:    master ENH Stochastic Coordinate Descent for ElasticNet & Lasso
+2014-07-29 01:57:12 #7840 passed:    master MAINT fix prng in test_f_oneway_ints
+2014-07-29 00:46:30 #7839 passed:    master DOC fix markup error
+2014-07-28 23:57:34 #7838 passed:    master Merge pull request #3491 from ogrisel/fix-warning-test-cross-val
+2014-07-28 23:50:24 #7836 passed:    master DOC fix see also references
+2014-07-28 10:32:02 #7821 passed:    master DOC: added Machinalis testimonial
+2014-07-28 09:36:13 #7815 passed:    master DOC fix styling of method signatures
+2014-07-28 09:19:50 #7812 passed:    master DOC fix styling of See Also sections
+2014-07-28 08:47:07 #7811 passed:    master MAINT: Effectively remove deprecated parameters
+2014-07-28 07:12:52 #7806 passed:    master Merge pull request #3492 from furukama/patch-2
+2014-07-28 07:02:47 #7805 passed:    master FIX revert changes introduced by mistake in previous commit
+2014-07-28 03:42:23 #7794 failed:    master TST stabilize check_transformer_n_iter
+2014-07-27 22:16:04 #7792 passed:    master DOC fix doc errors in utils.testing
+2014-07-27 12:44:14 #7788 passed:    master Merge pull request #3454 from ldirer/confusion_matrix_example
+2014-07-26 05:06:11 #7775 passed:    master DOC mistake in comment
+2014-07-25 07:15:02 #7761 passed:    master DOC whats_new.rst entry for warm_start forests
+2014-07-25 06:59:28 #7760 passed:    master Added warm start to random forests.
+2014-07-25 06:49:42 #7758 passed:    master TST: Fix warnings in np 1.9
+2014-07-25 04:37:39 #7752 passed:    master DOC fix references to moved examples
+2014-07-24 17:22:55 #7750 passed:    master FIX numerically unstable test_logistic.py
+2014-07-24 03:34:58 #7732 passed:    master Merge pull request #3465 from pvnguyen/patch-1
+2014-07-23 12:18:37 #7730 passed:    master FIX unstable test on 32 bit windows
+2014-07-23 11:13:41 #7729 passed:    master Merge pull request #3479 from MechCoder/improve_logcv_docs
+2014-07-23 10:33:19 #7727 passed:    master Merge pull request #3477 from kastnerkyle/docbuild_fix
+2014-07-23 09:29:38 #7725 passed:    master Merge pull request #2862 from MechCoder/LogCV
+2014-07-23 09:21:25 #7724 passed:    master DOC typo in warning
+2014-07-23 08:57:22 #7721 passed:    master Merge pull request #3441 from ogrisel/travis-no-verbose-tests
+2014-07-22 09:21:50 #7697 passed:    master COSMIT clean up tests with pyflakes
+2014-07-22 09:18:42 #7696 passed:    master MAINT remove sklearn.test
+2014-07-22 09:07:56 #7695 passed:    master MAINT remove deprecated code from preprocessing
+2014-07-22 09:04:18 #7694 passed:    master MAINT remove deprecated sklearn.pls module
+2014-07-22 08:56:07 #7693 passed:    master MAINT remove deprecated code from trees and forests
+2014-07-22 08:49:43 #7692 passed:    master MAINT remove deprecated PCA code
+2014-07-22 08:14:51 #7691 passed:    master MAINT: Fixed a few docstrings and cosmits
+2014-07-22 08:04:32 #7690 passed:    master Merge pull request #3472 from arjoly/fix-metrics-division
+2014-07-22 04:49:29 #7684 passed:    master DOC: Fix class link
+2014-07-22 04:28:59 #7681 errored:   master Merge pull request #3470 from ogrisel/fix-sparse-randomized-pca-deprecation
+2014-07-22 00:50:10 #7677 passed:    master DOC fix opaque background glitch when hovering example icons
+2014-07-21 09:19:58 #7655 passed:    master Merge pull request #2777 from jnothman/doc_linkcode
+2014-07-21 09:00:18 #7654 passed:    master Merge pull request #3460 from jnothman/fix_nn_example_doc
+2014-07-21 06:52:30 #7649 passed:    master FIX Py3k support for out-of-core example
+2014-07-21 03:43:32 #7646 passed:    master DOC fix 'Return' -> 'Returns'
+2014-07-21 02:05:50 #7639 passed:    master Merge pull request #3327 from jnothman/examples_in_apiref
+2014-07-21 01:56:05 #7638 errored:   master DOC mention doc-building dependency on Pillow
+2014-07-20 17:32:26 #7636 passed:    master FIX classes name in OvR
+2014-07-20 08:52:28 #7615 passed:    master Merge pull request #3447 from amueller/input_validation_b
+2014-07-20 03:52:19 #7587 passed:    master Merge pull request #3443 from amueller/input_validation_refactoring
+2014-07-19 17:58:25 #7581 passed:    master TST: fix tests on numpy 1.9.b2
+2014-07-19 13:13:36 #7575 passed:    master Merge pull request #3445 from arjoly/flatten-metrics
+2014-07-19 13:08:24 #7574 passed:    master Merge pull request #3442 from arjoly/split-metrics-module
+2014-07-19 11:32:44 #7571 passed:    master Merge pull request #3401 from vene/scorer_weights
+2014-07-19 09:06:42 #7555 passed:    master Merge pull request #3444 from arjoly/explain-default-score
+2014-07-19 05:21:30 #7543 passed:    master MAINT deprecate fit_ovr, fit_ovo, fit_ecoc, predict_ovr, predict_ovo, predict_ecoc and predict_proba_ovr
+2014-07-19 05:08:37 #7540 passed:    master DOC update what's new
+2014-07-19 05:06:14 #7539 passed:    master Merge pull request #2804 from arjoly/lrap
+2014-07-19 04:45:27 #7536 passed:    master Merge pull request #3439 from arjoly/test-commons
+2014-07-19 03:23:30 #7527 passed:    master ENH Make all decision functions have the same shape. Fixes SVC and GradientBoosting. Closes #1490.
+2014-07-18 12:36:16 #7516 passed:    master Added a parameter check on n_estimators in BaseEnsemble to raise error if it is not strictly positive.
+2014-07-18 12:23:03 #7514 passed:    master Merge pull request #3433 from lesteve/remove-non-integer-deprecation-warnings
+2014-07-18 12:14:38 #7513 passed:    master Merge pull request #3430 from amueller/test_list_input
+2014-07-18 10:43:15 #7502 passed:    master slight speedup
+2014-07-18 10:27:18 #7500 errored:   master Closes #2360. Fix tiebreaking.
+2014-07-18 07:47:04 #7486 passed:    master split test_common.py into checks and test file.
+2014-07-18 05:41:45 #7472 passed:    master DOC fix docstrings; add @hamsal to authors
+2014-07-18 05:12:13 #7467 passed:    master Modified sparse OvR to handle sparse target data
+2014-07-18 05:08:16 #7466 passed:    master FIX: Remove raw_coef_ attribute that eats up memory
+2014-07-18 03:43:51 #7460 passed:    master DOC sample_weight attribute
+2014-07-18 03:30:29 #7458 passed:    master DOC update what's new
+2014-07-18 03:25:49 #7457 passed:    master Merge pull request #3418 from arjoly/dummy-weight
+2014-07-18 03:06:22 #7454 passed:    master ENH don't convert dataframes in grid search and cross-validation
+2014-07-17 12:36:24 #7440 passed:    master Merge pull request #3403 from ogrisel/speedup-tests
+2014-07-17 11:56:01 #7437 passed:    master Merge pull request #3414 from lesteve/scheduled-removal-from-0.15
+2014-07-17 10:18:23 #7429 passed:    master Merge pull request #3411 from lesteve/scheduled-removal-from-0.15
+2014-07-17 10:11:40 #7428 passed:    master Merge pull request #3412 from brentp/logistic_l1_l2_ex
+2014-07-17 07:35:41 #7409 passed:    master FIX DBSCAN input validation
+2014-07-17 07:32:10 #7408 passed:    master Add related project to website.
+2014-07-17 05:14:26 #7399 passed:    master FIX broken test
+2014-07-17 04:55:37 #7397 failed:    master COSMIT:
+2014-07-17 02:41:37 #7391 passed:    master move around examples for better structure.
+2014-07-17 02:08:13 #7390 passed:    master Merge pull request #3406 from jnothman/minor
+2014-07-16 13:00:17 #7378 passed:    master Merge pull request #2694 from amueller/allow_y_lists
+2014-07-16 11:05:18 #7367 passed:    master Merge pull request #3397 from arjoly/tree-factor-rand
+2014-07-16 10:35:05 #7365 passed:    master Merge pull request #3396 from amueller/less_loud_randomized_lasso
+2014-07-16 10:14:02 #7363 passed:    master Merge pull request #3400 from arjoly/forest-test-oob
+2014-07-16 08:40:57 #7352 passed:    master BUG: Support array interface
+2014-07-16 07:00:13 #7339 passed:    master Merge pull request #3349 from MechCoder/return_niter
+2014-07-15 12:23:49 #7322 passed:    master MAINT 32 bit unstable tests are unstable on all OSs
+2014-07-15 11:06:56 #7316 passed:    master MAINT temporary fix to handle cython renaming in 0.15
+2014-07-15 10:06:59 #7313 passed:    master MISC: <= rather than < in tol check (KMeans)
+2014-07-15 09:39:53 #7312 passed:    master test case on rtfe grid_scores fix
+2014-07-15 06:50:04 #7303 passed:    master FIX potential overflow in _tree.safe_realloc
+2014-07-15 06:49:26 #7302 errored:   master FIX potential overflow in _tree.safe_realloc
+2014-07-15 05:44:46 #7301 passed:    master Turn useless line of code into descriptive comment
+2014-07-15 05:10:54 #7297 passed:    master TYPO remove mutli (did you mean Muttley?)
+2014-07-15 04:29:12 #7296 passed:    master MAINT point to the configuration of the docbuilder server
+2014-07-15 03:56:28 #7293 passed:    master MAINT update doc version links in support.rst
+2014-07-15 03:51:42 #7292 passed:    master MAINT: minor mailmap update
+2014-07-15 03:13:41 #7291 passed:    master DOC: expand documentation for logistic regression
+2014-07-15 02:57:49 #7290 passed:    master Merge pull request #3377 from ldirer/hashing_fix3356
+2014-07-14 17:32:09 #7280 passed:    master MAINT update doc version navigation
+2014-07-14 17:19:47 #7279 passed:    master Merge pull request #3385 from GaelVaroquaux/fix_intp
+2014-07-14 17:02:52 #7275 passed:    master DOC broken formating for the People list of 0.15
+2014-07-14 16:39:52 #7271 passed:    master DOC update news on the homepage
+2014-07-14 16:10:22 #7266 passed:    master FIX expit bug with out != None
+2014-07-14 16:01:09 #7264 passed:    master MAINT whats_new: contributors for 0.15
+2014-07-14 15:56:22 #7263 passed:    master MAINT .mailmap update
+2014-07-14 15:35:54 #7259 passed:    master Merge pull request #3382 from ogrisel/install-doc-update
+2014-07-14 15:21:44 #7257 passed:    master DOC whats_new.rst format fix
+2014-07-14 15:06:05 #7254 passed:    master MAINT master to 0.16-git
+2014-07-14 14:58:24 #7253 passed:    master Merge pull request #3376 from GaelVaroquaux/fix_mb_kmeans
+2014-07-14 14:18:43 #7247 passed:    master Merge pull request #3363 from ogrisel/appveyor-ci
+2014-07-14 13:58:24 #7244 passed:    master Merge pull request #3381 from kastnerkyle/skip_omp_cv_regressors
+2014-07-14 12:29:16 #7235 failed:    master TEST: metrics sample_weight test: almost_equal
+2014-07-14 12:26:29 #7234 passed:    master Cosmetic np.abs -> abs
+2014-07-14 11:50:56 #7229 passed:    master DOC: fix classes not referenced in docs
+2014-07-14 11:47:58 #7228 failed:    master DOC: more readable whats_new
+2014-07-14 11:38:35 #7227 failed:    master Lift division out of loop in _isotonic_regression.
+2014-07-14 10:32:03 #7218 passed:    master Merge pull request #3378 from kastnerkyle/dense_cholesky_warnings
+2014-07-14 09:06:37 #7206 failed:    master MAINT: more explicit glob pattern in doc generation
+2014-07-14 07:58:00 #7196 passed:    master Merge pull request #3375 from ldirer/hashing_fix3356
+2014-07-14 04:37:58 #7189 passed:    master Merge pull request #3353 from kastnerkyle/skip_ompcv_travis
+2014-07-14 01:47:56 #7182 failed:    master FIX #3372: unstable input check test for RANSACRegressor
+2014-07-13 11:52:55 #7180 passed:    master MAINT mailmap update
+2014-07-13 11:49:40 #7179 passed:    master MAINT explicit float64 in sparsefuncs_fast
+2014-07-13 11:44:38 #7178 passed:    master FIX MinMaxScaler behavior on 1D inputs.
+2014-07-13 11:43:07 #7177 errored:   master MAINT explicit float64 in sparsefuncs_fast
+2014-07-13 11:36:24 #7176 passed:    master FIX MinMaxScaler behavior on 1D inputs.
+2014-07-13 11:24:45 #7174 passed:    master FIX multilabel deprecation warning in RidgeClassifierCV
+2014-07-13 09:52:08 #7172 passed:    master Merge branch 'pr/3316'
+2014-07-12 10:49:09 #7164 passed:    master DOC: add transpose and intercept to formula of logistic regression
+2014-07-12 09:34:12 #7163 passed:    master MAINT Re-order argument to put deprecated one at the end
+2014-07-12 09:21:34 #7162 passed:    master Merge branch 'pr/3358'
+2014-07-12 09:12:11 #7161 passed:    master Merge pull request #3369 from NelleV/install_doc
+2014-07-11 16:28:06 #7147 passed:    master Merge pull request #3368 from stevetjoa/typo-diriclet
+2014-07-11 09:37:45 #7141 passed:    master Merge pull request #3366 from MechCoder/link-to-blog
+2014-07-11 07:39:15 #7139 passed:    master Merge pull request #3365 from fabianp/master
+2014-07-10 11:57:55 #7129 passed:    master FIX assert_array_almost_equal for windows tests
+2014-07-10 10:30:18 #7125 passed:    master Merge pull request #3361 from ogrisel/travis-no-multiprocessing-joblib
+2014-07-10 09:43:04 #7121 passed:    master TST fix precision failure on windows
+2014-07-09 15:20:22 #7095 errored:   master Merge pull request #3357 from houbysoft/patch-1
+2014-07-09 14:55:30 #7092 passed:    master Merge pull request #3355 from larsmans/optipng
+2014-07-09 10:47:55 #7086 errored:   master DOC optimize some PNG images, shaves off 24kB
+2014-07-08 10:37:22 #7077 passed:    master DOC more explicit docstring for preprocessing.normalize
+2014-07-08 05:23:17 #7072 passed:    master FIX failing tests due to the change of the underlying sample generator
+2014-07-08 04:19:26 #7071 errored:   master Update what's new
+2014-07-06 09:28:16 #7062 passed:    master COSMIT use explicit RandomState in KDE tests
+2014-07-06 09:22:21 #7061 passed:    master FIX Gaussian KDE should return array, not scalar
+2014-07-06 07:46:34 #7060 passed:    master TST crank up preprocessing tests to 99% coverage
+2014-07-06 07:20:01 #7059 passed:    master DOC double backticks for fixed-width (code) font
+2014-07-05 02:36:10 #7049 passed:    master Merge pull request #3344 from ihaque/remove_dup_fit
+2014-07-04 14:31:13 #7043 passed:    master Merge pull request #3343 from ihaque/doc_partial_fit
+2014-07-04 08:43:13 #7040 passed:    master DOC what's new: GaussianNB.partial_fit + typo in comment
+2014-07-04 08:33:15 #7039 passed:    master MAINT Include binary_tree.pxi in source distribution
+2014-07-04 08:12:44 #7038 passed:    master Typo
+2014-07-04 08:09:33 #7037 passed:    master Merge pull request #3333 from ogrisel/maint-skip-download-tests
+2014-07-02 08:21:15 #6998 failed:    master Merge pull request #3334 from ami-GS/external
+2014-07-02 04:57:15 #6992 passed:    master Update what's new
+2014-07-01 13:02:51 #6975 passed:    master MAINT remove residual sparsefuncs*.so when compiling
+2014-07-01 09:36:09 #6972 passed:    master DOC SVMs take string class labels as well as integers
+2014-07-01 08:43:34 #6970 passed:    master Merge pull request #3328 from ogrisel/joblib-0.8.2
+2014-07-01 02:59:15 #6964 passed:    master Merge pull request #3268 from jblackburne/nonrepeating_roc_thresholds
+2014-06-30 08:15:16 #6953 errored:   master Convert windows_testing_downloader.ps1 from UTF-16le to UTF-8
+2014-06-27 08:04:26 #6926 passed:    master Merge pull request #3317 from pignacio/model_persistence_doc
+2014-06-27 06:26:26 #6924 passed:    master Merge pull request #3256 from kastnerkyle/windows_download_helper
+2014-06-26 04:41:33 #6914 passed:    master Merge pull request #3318 from abhishekkrthakur/master
+2014-06-26 03:49:11 #6912 passed:    master DOC typos in feature_extraction.text
+2014-06-26 01:22:18 #6910 passed:    master DOC Improve documentation of the olivetti dataset
+2014-06-25 17:06:04 #6900 passed:    master FIX Forced dtype to int when densifying array in label_binarize
+2014-06-25 15:17:05 #6892 errored:   master ENH sparse matrix support in label binarization
+2014-06-25 14:47:40 #6890 errored:   master DOC Document return of fetch_olivetti_faces
+2014-06-25 07:58:22 #6873 passed:    master DOC add missing plt.figure() for multiplot support in ROC example
+2014-06-25 07:26:51 #6872 passed:    master DOC remove spurious plt.clf() from ROC example
+2014-06-25 07:13:56 #6870 passed:    master DOC remove reference to the bootstrap target
+2014-06-25 04:44:54 #6869 errored:   master FIX Anisotropic hyperparam optimization of GP bounds
+2014-06-25 04:37:48 #6868 errored:   master DOC hmm example has been removed
+2014-06-25 02:16:59 #6867 errored:   master Merge pull request #3308 from jnothman/ovr_constant_predict_proba
+2014-06-24 09:21:47 #6859 errored:   master FIX Python 3 support for examples/applications/plot_prediction_latency.py
+2014-06-24 08:03:53 #6858 passed:    master Merge pull request #3309 from argriffing/remove-symeig
+2014-06-24 07:01:42 #6855 passed:    master FIX Python 3 support for examples/applications/plot_out_of_core_classification.py
+2014-06-24 06:16:50 #6854 passed:    master DOC one formatting fix in whats_new.rst
+2014-06-24 04:27:39 #6853 passed:    master DOC formatting fixes in whats_new.rst
+2014-06-24 04:11:07 #6852 passed:    master FIX ensure that matplotlib.use('Agg') is called first when building the docs
+2014-06-24 03:44:02 #6850 passed:    master FIX Python 3 support for datasets.species_distributions
+2014-06-23 10:47:22 #6841 errored:   master DOC safer way to run the tests under windows
+2014-06-23 06:56:09 #6835 passed:    master FIX python 3 compat for plot_bias_variance.py
+2014-06-23 07:35:30 #6834 passed:    master DOC fix bad formatting in decomposition.rst
+2014-06-23 03:32:26 #6831 passed:    master Merge pull request #3295 from rphlypo/bootstrap_traintest
+2014-06-22 22:57:56 #6825 errored:   master Merge pull request #3165 from jnothman/links_in_examples
+2014-06-22 22:56:53 #6824 passed:    master COSMIT factor out split data as struct
+2014-06-20 16:16:58 #6806 passed:    master DOC Note shape of binary binarized output
+2014-06-19 17:41:53 #6778 passed:    master DOC give example of binarizing binary targets
+2014-06-19 13:18:36 #6773 passed:    master MAINT reduce amount of boiler code using standard C operations
+2014-06-19 09:04:28 #6762 passed:    master Merge pull request #3297 from esc/doc/random_kitchen_sink
+2014-06-18 17:06:04 #6754 passed:    master DOC typo in ExtraTrees
+2014-06-18 16:32:05 #6750 passed:    master DOC correct bagging docs regarding sparse inputs
+2014-06-18 04:02:59 #6744 passed:    master ENH fix astype usage to prevent copying
+2014-06-18 03:42:35 #6743 passed:    master Merge pull request #3286 from ilam/seconddoc
+2014-06-17 08:06:51 #6729 errored:   master DOC fix versions of requirements in README.rst
+2014-06-17 01:12:41 #6728 passed:    master Merge pull request #3280 from larsmans/remove-hmm-docs
+2014-06-15 17:48:38 #6716 passed:    master Merge pull request #3102 from MechCoder/gil-enet
+2014-06-15 09:51:24 #6713 passed:    master ENH save a bit of memory in Euclidean distances
+2014-06-15 09:06:32 #6712 passed:    master DOC: copyedit log loss, hint how multiclass generalizes binary
+2014-06-15 08:46:12 #6711 passed:    master FIX: examples with more than 10 images
+2014-06-15 07:28:30 #6707 errored:   master FIX : allow nd X for cross_val_score (was working in 0.14)
+2014-06-10 07:23:32 #6656 passed:    master Merge pull request #3250 from mjbommar/isotonic-refactor-2
+2014-06-09 14:28:44 #6649 passed:    master DOC add Data Publica testimonial
+2014-06-09 11:04:17 #6645 passed:    master MAINT removed shadowed broken test
+2014-06-09 07:54:48 #6635 passed:    master MAINT: restore -git version in the master branch after the last release merge
+2014-06-09 07:48:10 #6634 passed:    master Merge branch 'pr/3263': minor fixes from the 0.15.X branch
+2014-06-09 05:59:29 #6630 passed:    master DOC typo in FastICA docs
+2014-06-08 14:32:32 #6626 passed:    master Merge pull request #3261 from larsmans/test-interaction-features
+2014-06-08 10:57:33 #6625 passed:    master TST reduce max_depth for numerical stability
+2014-06-08 07:27:54 #6622 passed:    master FIX wrong parameter name in deprecation warning
+2014-06-08 06:31:20 #6619 passed:    master TST silence spectral test/test warning message
+2014-06-08 04:26:53 #6618 passed:    master DOC : clarify error message in _binary_roc_auc_score
+2014-06-08 04:09:03 #6617 errored:   master Merge pull request #3260 from larsmans/cd-deprecation
+2014-06-08 03:35:53 #6616 passed:    master DOC missing verb in README
+2014-06-06 04:45:43 #6598 passed:    master DOC: fix 2 covariance examples rst math markup.
+2014-06-05 15:37:15 #6592 passed:    master Merge pull request #3254 from laurentluce/presentations-links-fix
+2014-06-05 13:18:13 #6590 passed:    master FIX PCA error handling for invalid n_components
+2014-06-05 11:26:37 #6589 passed:    master COSMIT remove duplicate key 'hamming' in METRIC_MAPPING
+2014-06-05 11:04:39 #6588 passed:    master Merge pull request #3239 from larsmans/faster-poly-features
+2014-06-05 10:05:57 #6582 passed:    master Merge pull request #3251 from ogrisel/fix-msvc-INFINITY
+2014-06-05 07:57:07 #6577 passed:    master Merge pull request #3240 from JelleZijlstra/fix-defaultdict
+2014-06-05 07:12:29 #6574 passed:    master Merge branch 'pr/3247'
+2014-06-05 06:45:06 #6573 passed:    master Merge pull request #3246 from ogrisel/rebased-pr-2657
+2014-06-05 06:35:12 #6572 passed:    master Merge pull request #3248 from MechCoder/remove_precompute_multi
+2014-06-04 08:50:44 #6541 passed:    master Merge pull request #3242 from ogrisel/joblib-0.8.1
+2014-06-04 06:54:09 #6538 passed:    master Merge pull request #2822 from AlexanderFabisch/tsne
+2014-06-04 05:11:31 #6535 passed:    master DOC we work with Python, not against it :)
+2014-06-04 04:15:29 #6533 passed:    master Update what's new with adaboost sparse input support by @hamsal
+2014-06-03 15:30:31 #6526 passed:    master Merge pull request #3161 from hamsal/ada-sparse
+2014-06-03 09:27:43 #6521 passed:    master Merge pull request #3237 from ogrisel/travis-scipy-0.14.0
+2014-06-03 05:55:45 #6512 passed:    master DOC: kmeans runs inits in parallel, not distance computations
+2014-06-02 16:15:53 #6500 passed:    master Merge pull request #3234 from ogrisel/nosetests-exe
+2014-06-01 17:06:53 #6487 passed:    master Merge pull request #3231 from bwignall/quickfix-cap
+2014-06-01 16:27:27 #6485 passed:    master Merge pull request #3230 from bwignall/quickfix-gaussian
+2014-06-01 16:26:06 #6484 passed:    master Merge pull request #3176 from agramfort/omp_default
+2014-06-01 09:35:35 #6477 passed:    master TST skip flaky label propagation test
+2014-05-31 06:51:48 #6471 errored:   master Merge pull request #3225 from bwignall/quickfix-typo
+2014-05-30 14:14:22 #6465 errored:   master ENH: use partial sort for kneighbors selection
+2014-05-28 18:48:55 #6441 passed:    master ENH Dense pipeline support for RandomTreesEmbedding via sparse_output param
+2014-05-28 18:20:18 #6440 passed:    master Merge pull request #3217 from bwignall/innerprod
+2014-05-28 09:10:28 #6430 passed:    master Merge pull request #3212 from ogrisel/joblib-0.8.0
+2014-05-27 17:11:47 #6424 passed:    master DOC: improve feature_extraction.text docstrings
+2014-05-27 16:57:24 #6423 passed:    master Merge pull request #3208 from staubda/improve_RFE_doc
+2014-05-27 16:32:14 #6422 errored:   master DOC: DBSCAN: there's no calculate_distance function
+2014-05-26 17:19:09 #6400 passed:    master Merge pull request #3198 from apw/patch-1
+2014-05-26 10:35:50 #6394 passed:    master Merge pull request #3199 from mjbommar/isotonic-out-of-bounds-2
+2014-05-26 08:12:14 #6387 passed:    master ENH: more explicit failure messages in test_common
+2014-05-26 02:12:56 #6384 passed:    master ENH: PEP257 style + small code simplication
+2014-05-26 01:53:56 #6383 passed:    master Merge pull request #3200 from ugurthemaster/patch-2
+2014-05-25 18:20:20 #6377 passed:    master Merge pull request #3197 from mjbommar/issue-3167-eradicate-todense
+2014-05-25 10:52:54 #6374 passed:    master Merge pull request #3157 from mjbommar/isotonic-increasing-auto
+2014-05-25 05:02:39 #6372 passed:    master Merge pull request #3196 from andrewclegg/master
+2014-05-24 17:33:22 #6365 passed:    master Merge pull request #3193 from mjbommar/issue-3167-eradicate-todense
+2014-05-24 14:03:27 #6363 passed:    master Merge pull request #3169 from mjbommar/issue-3167-eradicate-todense
+2014-05-24 13:52:09 #6361 passed:    master FIX: windows test failures in test_ransac
+2014-05-24 06:54:37 #6357 passed:    master DOC fix typo
+2014-05-24 06:47:51 #6356 passed:    master Merge pull request #3192 from mmaker/master
+2014-05-24 06:09:20 #6355 passed:    master DOC: better docstrings for PCA models
+2014-05-23 09:06:07 #6352 passed:    master MISC: update comment in source
+2014-05-23 07:05:01 #6345 passed:    master PY3: more gen_rst.py fixes for Python 3 compat
+2014-05-23 06:34:05 #6344 passed:    master FIX: euclidean divide in plot_image_denoising.py for Py3 support
+2014-05-23 06:08:14 #6343 passed:    master Merge pull request #3184 from YS-L/tfidfvectorizer_idf
+2014-05-23 05:08:17 #6341 passed:    master FIX: more Python 3 fixes for doc/gen_rst.py
+2014-05-23 04:42:45 #6337 passed:    master DOC multiclass: OvO needs predict_proba or decision_function
+2014-05-23 04:36:01 #6336 passed:    master Merge pull request #3189 from ogrisel/travis-doctest
+2014-05-23 03:38:12 #6334 passed:    master Merge pull request #3182 from arjoly/test-forest
+2014-05-22 04:57:42 #6313 passed:    master Merge pull request #3178 from MechCoder/Iss3174
+2014-05-20 18:01:02 #6273 passed:    master FIX unused pos_label parameter in metrics.precision_recall_curve
+2014-05-20 12:16:11 #6269 passed:    master Revert "DOC : really fix alpha docstring in dict learning"
+2014-05-20 06:25:06 #6265 passed:    master DOC : really fix alpha docstring in dict learning
+2014-05-20 04:16:14 #6263 passed:    master DOC : fix alpha docstring in dict learning
+2014-05-19 04:24:57 #6255 passed:    master FIX: use clip(0) instead of abs()
+2014-05-18 10:18:48 #6249 passed:    master Merge pull request #3156 from IvicaJovic/fixes
+2014-05-18 08:55:39 #6247 passed:    master Remove HMM examples
+2014-05-18 05:05:12 #6244 passed:    master Extend utils.sparsefuncs: inplace scale and axis min/max
+2014-05-16 05:30:41 #6238 passed:    master Merge pull request #3154 from rajatkhanduja/fixing_examples
+2014-05-16 02:06:05 #6237 passed:    master Merge pull request #3152 from jdowns/lfw-conditional-import
+2014-05-15 16:12:34 #6232 passed:    master Merge pull request #3151 from rajatkhanduja/fixing_examples
+2014-05-15 08:41:17 #6228 passed:    master FIX numerical stability in GMM with eigh sampling
+2014-05-15 07:53:46 #6226 passed:    master Merge branch 'pr/3120'
+2014-05-12 12:15:33 #6214 passed:    master DOC L1 distance works for sparse matrices
+2014-05-12 02:40:44 #6212 passed:    master Merge pull request #3145 from ogrisel/travis-coveralls
+2014-05-10 10:18:08 #6208 passed:    master DOC grid_search_digits.py does no do nested CV
+2014-05-10 09:38:36 #6207 passed:    master Revert "COSMIT skip some repeated computations in k-means"
+2014-05-10 04:06:33 #6205 passed:    master Merge pull request #3140 from MechCoder/small_fixes
+2014-05-09 07:19:11 #6201 passed:    master MAINT make export_graphviz more exception-safe
+2014-05-08 13:58:30 #6200 failed:    master Merge branch 'simplify-fselection'
+2014-05-08 03:54:26 #6199 passed:    master DOC typo
+2014-05-08 03:51:05 #6197 passed:    master DOC: add PyPy support to FAQ
+2014-05-08 01:53:55 #6195 passed:    master typo
+2014-05-08 01:34:44 #6194 errored:   master DOC faq formulation
+2014-05-06 15:34:45 #6189 passed:    master Merge pull request #3135 from ugurthemaster/patch-1
+2014-05-06 00:37:47 #6181 passed:    master Merge pull request #3134 from jrouly/string_values
+2014-05-05 19:43:16 #6179 failed:    master Merge pull request #3133 from kmike/patch-2
+2014-05-05 12:47:21 #6174 passed:    master FIX MemoryError raising in trees (+test)
+2014-05-05 02:57:35 #6169 passed:    master DOC: fix restructured text
+2014-05-05 02:44:27 #6168 passed:    master BUG: fix doctests
+2014-05-04 21:56:28 #6167 failed:    master DOC shuffled StratifiedKFold now in whats_new
+2014-05-04 21:54:05 #6166 failed:    master ENH shuffle option for StratifiedKFold
+2014-05-04 21:34:43 #6165 passed:    master DOC a note on shuffling for cross-validation
+2014-05-04 11:12:22 #6163 passed:    master ENH: use setuptools for bdist_wheel command
+2014-05-04 05:04:18 #6159 passed:    master pep8 remove unused variable
+2014-05-03 09:11:24 #6150 passed:    master DOC random_state is an arg to LogisticRegression
+2014-05-02 04:32:47 #6147 passed:    master Merge pull request #3127 from rmcgibbo/_fit_and_score-docstring
+2014-05-01 03:25:26 #6139 passed:    master Update numpy and scipy requirement
+2014-04-30 14:00:08 #6137 passed:    master Merge pull request #3104 from MechCoder/swap_sparse
+2014-04-30 06:02:59 #6133 passed:    master COSMIT: rng.permutation rather than rng.shuffle
+2014-04-28 04:25:47 #6119 passed:    master Merge pull request #3116 from eickenberg/ridge_wrong_solver_exception
+2014-04-28 03:45:54 #6118 passed:    master FIX raise memory error if constant_feature can't be realloc
+2014-04-27 11:24:04 #6112 passed:    master Merge branch 'pr/3091'
+2014-04-25 14:45:54 #6102 passed:    master Merge pull request #2936 from ugurthemaster/master
+2014-04-24 15:27:47 #6098 passed:    master DOC advertize GenericUnivariateSelect in the narrative documentation and api
+2014-04-24 10:27:48 #6092 errored:   master COSMIT six.{map,range} usage in partial_dependence
+2014-04-24 00:35:04 #6089 passed:    master BUG: test_lasso_lars_vs_lasso_cd_ill_conditioned
+2014-04-23 19:20:18 #6088 passed:    master DOC Comment on thresholds[0] for roc_curve
+2014-04-23 04:20:43 #6084 passed:    master Merge pull request #3101 from fabianp/logos
+2014-04-21 09:55:25 #6064 passed:    master FIX missing comma in METRICS_WITHOUT_SAMPLE_WEIGHT
+2014-04-21 05:27:45 #6063 failed:    master Merge pull request #3096 from ash211/patch-1
+2014-04-21 04:41:52 #6061 failed:    master TST define only one list of name for sample weight invariance testing
+2014-04-20 15:25:07 #6055 passed:    master Merge pull request #3066 from denisgarci/agglomeration-transform-constructor
+2014-04-19 11:38:52 #6046 failed:    master COSMIT: use plural, there are 2 learning curves
+2014-04-19 11:37:26 #6045 failed:    master Merge pull request #3090 from ogrisel/learning-curves-warnings
+2014-04-18 00:22:28 #6037 passed:    master Merge pull request #3086 from mdbecker/update_authors
+2014-04-18 00:12:31 #6036 passed:    master Merge pull request #3076 from msalahi/sparse-bagging-tests
+2014-04-17 21:07:37 #6035 passed:    master Merge pull request #3083 from sdenton4/enh_learning_curves
+2014-04-17 16:57:01 #6032 passed:    master Merge pull request #3067 from mdbecker/truncated_svd_calculate_explained_variance
+2014-04-17 16:48:02 #6031 passed:    master Merge pull request #3082 from ElDeveloper/install-link
+2014-04-17 16:47:19 #6030 passed:    master Merge pull request #3085 from eickenberg/update_ridge_authors
+2014-04-17 15:51:22 #6026 errored:   master Merge pull request #3069 from ssaeger/issue_3068
+2014-04-17 10:20:49 #6013 passed:    master FIX: More robust test_extmath.py, compatible with older numpy
+2014-04-17 08:03:57 #6010 passed:    master FIX: typo in gen_rst.py
+2014-04-17 02:52:24 #6009 passed:    master Merge pull request #3074 from msalahi/iris-file-warnings
+2014-04-17 01:50:36 #6008 passed:    master Merge pull request #3078 from ndawe/examples
+2014-04-16 17:05:14 #6002 failed:    master FIX: One more PY3 fix in the documentation generator
+2014-04-16 10:42:35 #5997 passed:    master Merge pull request #3063 from chalmerlowe/improved-digits-example
+2014-04-16 10:39:13 #5996 passed:    master Merge branch 'python-3-sphinx-fixes'
+2014-04-15 14:00:53 #5992 passed:    master Merge pull request #3062 from abatula/archlinux-install-doc
+2014-04-15 09:56:56 #5984 passed:    master Merge pull request #3070 from luispedro/fix-enet-doc
+2014-04-15 09:18:28 #5983 errored:   master Fix merge conflict and missing URL ref in whats_new.rst
+2014-04-14 14:53:24 #5972 passed:    master Merge pull request #3061 from jess010/ami-docs
+2014-04-14 11:21:05 #5966 passed:    master Merge pull request #3059 from mdbecker/update_from_33_to_34
+2014-04-13 15:04:09 #5963 passed:    master Merge pull request #3056 from glouppe/tree-bestfirst
+2014-04-13 10:03:47 #5961 passed:    master FIX: Add allow_nans option to check_arrays
+2014-04-13 10:01:13 #5960 errored:   master DOC remove import scikits.learn from tutorial
+2014-04-13 09:54:45 #5959 passed:    master DOC: typo: 1e-2 is 0.01 not 100
+2014-04-13 09:53:21 #5958 passed:    master ENH: Add dynamic maximum trial determination to RANSACRegressor
+2014-04-13 08:49:20 #5956 passed:    master Merge pull request #3057 from ajschumacher/patch-4
+2014-04-12 01:36:09 #5938 passed:    master Merge pull request #3053 from ajschumacher/patch-1
+2014-04-11 23:26:46 #5937 passed:    master Merge pull request #3055 from ajschumacher/patch-3
+2014-04-11 01:36:03 #5930 passed:    master Merge pull request #3049 from glouppe/tree-bestfirst
+2014-04-08 16:11:00 #5920 failed:    master ENH factor out squared norm helper
+2014-04-07 17:35:12 #5916 passed:    master Merge pull request #2952 from jnothman/future_warn_two_labels
+2014-04-07 16:57:17 #5914 passed:    master DOC: move mean_shift docs to MeanShift
+2014-04-06 10:21:43 #5898 passed:    master MAINT remove unsupported documentation formats
+2014-04-06 10:14:01 #5897 passed:    master DOC: clustering: merge discussions of k-means and inertia
+2014-04-06 07:20:01 #5896 passed:    master DOC: website: feature selection on front page
+2014-04-06 06:43:08 #5895 passed:    master TST safe_asarray for dok_matrix and lil_matrix
+2014-04-05 04:44:19 #5894 passed:    master DOC mention "shape" in AP docs
+2014-04-04 09:04:15 #5887 errored:   master FIX random_state validation on c_step
+2014-04-04 04:45:41 #5882 passed:    master ENH micro-optimize fast MCD
+2014-04-04 03:16:40 #5881 passed:    master FIX numerical stability issues on 32 bit platform
+2014-04-03 12:04:40 #5876 passed:    master MAINT remove _label attribute from SVC.
+2014-04-03 11:51:06 #5875 passed:    master Merge pull request #3022 from ogrisel/travis-old-numpy-scipy
+2014-04-03 11:37:43 #5874 passed:    master Merge pull request #3035 from ogrisel/test-sgd-stability-error
+2014-04-03 09:28:27 #5863 passed:    master DOC: Fixed roc_curve docstring
+2014-04-03 04:15:58 #5855 passed:    master ENH: more robust test_toy_bayesian_ridge_object
+2014-04-03 04:08:41 #5854 passed:    master ENH: stable test + catch warning + pep8
+2014-04-02 12:20:42 #5839 passed:    master Merge pull request #3025 from ogrisel/remove-unstable-lobpcg-test
+2014-04-02 12:04:51 #5838 passed:    master DOC: clear up the big elastic net confusion (I hope)
+2014-04-02 06:59:47 #5829 passed:    master Merge pull request #3030 from ogrisel/fix-lars-drop-for-good-test-failure
+2014-03-31 16:02:02 #5795 passed:    master FIX: checked in bad assertion in the last commit by mistake
+2014-03-31 14:11:23 #5794 failed:    master COSMIT: More readable drop for good test
+2014-03-30 11:46:02 #5776 passed:    master DOC: tfidf is actually tf*(idf+1) = tf + tf*idf
+2014-03-30 08:29:18 #5775 passed:    master DOC: tfidf is actually tf*(idf+1) = tf + tf*idf
+2014-03-30 06:11:27 #5773 passed:    master TST/COSMIT tests/comments for [sparse]center_data
+2014-03-30 05:05:43 #5772 passed:    master TST don't run fast_dot tests on numpy>=1.7.2 + pep8
+2014-03-30 04:19:26 #5769 passed:    master FIX MSVC compile error C2036: 'void *' : unknown size
+2014-03-30 02:58:14 #5767 passed:    master Merge pull request #3017 from cgohlke/patch-2
+2014-03-29 12:01:53 #5756 passed:    master COSMIT: pep8, trailing spaces
+2014-03-29 09:43:51 #5755 passed:    master BUG FeatureAgglomeration meaningless for no samples
+2014-03-28 18:59:18 #5752 passed:    master FIX: fix build under Python 2.6
+2014-03-28 18:45:55 #5751 failed:    master FIX #3014: use a different folder for covtype data under Python 3
+2014-03-28 14:26:55 #5750 passed:    master FIX: make python setup.py clean also delete __pycache__ folders
+2014-03-27 17:38:44 #5748 passed:    master Merge pull request #3010 from griffinmyers/fix-select-k-best
+2014-03-27 09:39:30 #5744 passed:    master FIX: numpy mtrand does not accept Python long instances under Windows
+2014-03-27 08:38:34 #5743 passed:    master FIX sed usage in Makefile
+2014-03-27 08:21:03 #5742 passed:    master FIX: np.random.randint expects signed 32 bit integers under Windows
+2014-03-27 06:33:30 #5741 passed:    master Merge pull request #3007 from Manoj-Kumar-S/refactor_sparsefuncs
+2014-03-27 05:45:28 #5740 passed:    master FIX cross_val_score to take y as an *optional* list
+2014-03-27 05:21:44 #5739 failed:    master FIX cross_val_score to take y as a list
+2014-03-26 09:46:39 #5727 passed:    master MAINT don't use Perl in Makefile when sed suffices
+2014-03-26 07:40:12 #5726 passed:    master Merge pull request #3006 from ogrisel/fix-implicit-init-introspection
+2014-03-26 05:43:13 #5725 passed:    master Merge conflict in whats_new.rst
+2014-03-25 07:25:22 #5716 passed:    master Merge pull request #3003 from jnothman/hyperlinked_tt_colour
+2014-03-24 08:36:04 #5696 passed:    master Merge pull request #2982 from kmike/fix-macos-hangs
+2014-03-24 08:04:37 #5695 passed:    master Merge pull request #2997 from GaelVaroquaux/okcupid_testimonial
+2014-03-24 05:19:03 #5689 passed:    master FIX TfidfVectorizer to no longer ignore binary param
+2014-03-24 05:01:34 #5688 passed:    master DOC example rendering
+2014-03-24 04:38:45 #5686 passed:    master ENH pairwise L1 distances for sparse matrices
+2014-03-24 04:05:50 #5685 passed:    master Merge pull request #2955 from larsmans/less-blas
+2014-03-23 12:47:21 #5684 passed:    master MAINT: point out HMMLearn
+2014-03-22 17:20:08 #5682 passed:    master Merge pull request #2991 from Manoj-Kumar-S/csr_sparse_center
+2014-03-22 11:42:23 #5678 passed:    master DOC: wordings
+2014-03-21 11:45:08 #5674 passed:    master Merge pull request #2977 from arjoly/tree-cleanup
+2014-03-21 04:55:22 #5664 passed:    master DOC trees/ensembles: class labels need not be integers
+2014-03-21 04:09:21 #5663 passed:    master BUG joblib writes to wrong dir
+2014-03-21 04:07:03 #5662 errored:   master BUG joblib writes to wrong dir
+2014-03-21 04:02:08 #5661 passed:    master BUG restore joblib logging behavior
+2014-03-21 03:56:22 #5660 passed:    master PY3 file handling
+2014-03-21 03:53:54 #5659 passed:    master PY3 file handling
+2014-03-20 12:31:25 #5650 passed:    master Merge pull request #2981 from matrixorz/master
+2014-03-20 10:07:04 #5647 passed:    master ENH use threads instead of multiprocessing in SGD
+2014-03-19 18:02:49 #5638 passed:    master MAINT remove deprecated functionality from SGD
+2014-03-19 16:32:08 #5634 passed:    master DOC Remove redundant parameter docs
+2014-03-19 10:05:00 #5633 passed:    master FIX: np.abs might not work on scipy.sparse matrices
+2014-03-19 07:26:06 #5632 passed:    master Merge pull request #2959 from Oscarlsson/silhouette_score_label_number
+2014-03-19 05:58:47 #5631 passed:    master DOC clarify Imputer constructor: arbitrary strings not accepted
+2014-03-19 02:19:43 #5630 passed:    master Merge pull request #2966 from maheshakya/feature_selector
+2014-03-18 17:08:08 #5628 passed:    master DOC/MAINT: clarify cblas/README.txt
+2014-03-18 16:24:12 #5627 passed:    master Merge pull request #2973 from pprett/datarobot-testimonial
+2014-03-18 08:21:14 #5622 passed:    master DOC: the search for a split does not until one valid partition is found
+2014-03-18 01:56:14 #5617 passed:    master Merge pull request #2971 from jyu-rmn/master
+2014-03-14 04:26:08 #5613 passed:    master TEST: fix test_forest:test_boston (#2965)
+2014-03-13 11:47:35 #5611 passed:    master Merge pull request #2964 from abhishekkrthakur/patch-1
+2014-03-12 14:24:10 #5607 passed:    master Merge pull request #2951 from Manoj-Kumar-S/speed_sparse
+2014-03-12 08:32:34 #5605 passed:    master Merge pull request #2960 from ethanwhite/docs-typo
+2014-03-12 08:12:36 #5603 passed:    master MAINT final occurrence of "Scaler"
+2014-03-12 07:34:27 #5602 failed:    master MAINT remove some deprecated stuff
+2014-03-12 07:13:52 #5601 passed:    master Merge pull request #2958 from hamsal/check_arrays_n_dim
+2014-03-12 01:14:46 #5600 passed:    master FIX for early numpy where astype(..., copy=...) unavailable
+2014-03-11 21:18:42 #5599 passed:    master Merge pull request #2938 from jnothman/clean_impute
+2014-03-11 11:19:16 #5594 passed:    master FIX stability in HMMs
+2014-03-11 03:29:31 #5583 passed:    master Update what's new
+2014-03-11 03:17:47 #5582 passed:    master Merge pull request #2875 from arjoly/et-skip-invalid-
+2014-03-10 21:04:44 #5581 passed:    master Merge pull request #2941 from perimosocordiae/patch-1
+2014-03-10 12:44:42 #5577 passed:    master COSMIT hinge_loss: better input validation
+2014-03-10 11:58:06 #5574 passed:    master COSMIT get rid of warning from expit import
+2014-03-10 11:33:42 #5573 passed:    master MAINT remove leftovers from solve_triangular
+2014-03-10 10:51:47 #5572 passed:    master Update what's new
+2014-03-10 10:42:40 #5571 passed:    master Merge pull request #2886 from maheshakya/dummy_regressor
+2014-03-09 17:04:56 #5550 passed:    master DOC fix rendering of fetch_mldata example
+2014-03-09 16:39:41 #5549 passed:    master ENH - Improve performance of isotonic regression
+2014-03-08 09:37:34 #5542 passed:    master FIX decouple spectral embedding from TransformerMixin
+2014-03-08 09:11:03 #5541 passed:    master ENH: update installation instructions for Ubuntu / Debian
+2014-03-08 01:58:14 #5539 passed:    master Merge pull request #2945 from maheshakya/olivetti
+2014-03-07 06:53:55 #5529 passed:    master Merge pull request #2943 from jyu-rmn/patch-1
+2014-03-07 05:52:41 #5523 passed:    master Merge pull request #2928 from ogrisel/fix-linalgerror
+2014-03-05 09:42:56 #5506 passed:    master FIX error handling in SVM
+2014-03-05 08:21:12 #5505 passed:    master DOC: docstring formating
+2014-03-05 07:07:49 #5504 passed:    master FIX Nystroem input validation, again
+2014-03-05 06:15:51 #5503 failed:    master FIX input validation in Nystroem
+2014-03-05 03:01:47 #5502 passed:    master BUG: avoid NaNs in arrays passed to scipy.linalg
+2014-03-05 02:07:53 #5499 failed:    master Merge pull request #2931 from GaelVaroquaux/rm_solve_triangular
+2014-03-05 00:36:37 #5496 passed:    master Merge pull request #2929 from ajtulloch/izip-tests
+2014-03-05 00:01:18 #5495 passed:    master Merge pull request #2199 from GaelVaroquaux/hc_linkage
+2014-03-04 03:13:43 #5489 passed:    master Fix test failure on Python3.
+2014-03-04 01:34:36 #5488 failed:    master Add test for _safe_split with pre-computed kernel.
+2014-03-03 15:05:04 #5484 passed:    master FIX + TST stability problems with scipy.special.expit
+2014-03-03 06:50:05 #5478 failed:    master Merge pull request #2925 from ajtulloch/izip-cross-validation
+2014-03-03 02:10:55 #5472 passed:    master Merge pull request #2920 from yoni/master
+2014-03-02 17:48:46 #5469 passed:    master ENH more optimizations for RBM
+2014-03-02 13:15:20 #5468 passed:    master TST: test utils.extmath more robust
+2014-03-02 12:26:16 #5466 passed:    master Merge pull request #2917 from ariddell/patch-1
+2014-03-02 06:30:40 #5460 passed:    master FIX GBRT missing from covertype benchmark usage
+2014-03-01 10:59:33 #5456 passed:    master TST fix failing doctest for OneHotEncoder
+2014-03-01 10:36:49 #5455 passed:    master DOC: note about numerical precision in euclidean_distances
+2014-03-01 10:22:14 #5454 passed:    master ENH add sparse parameter to OneHotEncoder
+2014-03-01 10:08:22 #5453 passed:    master Merge pull request #2876 from Manoj-Kumar-S/fix_auto
+2014-02-28 07:36:58 #5448 passed:    master Merge pull request #2910 from larsmans/hasattr-predict-proba
+2014-02-27 15:15:16 #5444 passed:    master FIX OneHotEncoder: check value max when n_values is integral
+2014-02-27 14:43:09 #5443 passed:    master DOC what we call poly features are called interaction features in stats
+2014-02-27 14:21:13 #5442 passed:    master DOC SVC.predict_{,log_}proba does not return X
+2014-02-27 11:32:41 #5439 passed:    master Merge pull request #2909 from ogrisel/peerindex-testimonial
+2014-02-27 03:23:47 #5432 passed:    master DOC: update examples, use matplotlib.pyplot instead of pylab
+2014-02-26 03:25:18 #5415 passed:    master Merge pull request #2897 from ugurthemaster/patch-1
+2014-02-26 01:58:37 #5413 passed:    master Merge pull request #2895 from kaushik94/master
+2014-02-25 12:53:23 #5406 passed:    master [TYPO] s/migh/might/
+2014-02-24 02:37:36 #5370 passed:    master Merge pull request #2884 from dsullivan7/clusterdoc
+2014-02-23 15:41:54 #5362 passed:    master Merge pull request #2882 from larsmans/expit
+2014-02-23 11:39:03 #5359 passed:    master TST older nosetests compat in DictVectorizer test
+2014-02-23 11:04:42 #5358 failed:    master FIX DictVectorizer handling of empty inputs
+2014-02-20 15:23:41 #5342 passed:    master ENH: small optimization to the regression criterion
+2014-02-20 11:59:21 #5341 passed:    master ENH: small optimization of the classification criterion
+2014-02-20 01:16:29 #5335 passed:    master Merge pull request #2877 from pmandera/tfidf-citation
+2014-02-18 20:36:44 #5328 passed:    master Merge pull request #2869 from jperla/master
+2014-02-18 12:46:04 #5324 passed:    master FIX numerical stability issue in BernoulliRBM
+2014-02-18 10:13:16 #5323 passed:    master FIX integer dtype for labels in DBSCAN
+2014-02-18 02:13:20 #5321 passed:    master Merge pull request #2866 from Manoj-Kumar-S/Iss2751
+2014-02-17 17:12:36 #5316 passed:    master ENH Cache features value for extra trees
+2014-02-17 10:16:14 #5314 passed:    master Merge pull request #2865 from hanke/boston_13features
+2014-02-17 04:49:03 #5309 passed:    master DOC no more "arithmetical order" for classes
+2014-02-16 11:07:59 #5307 passed:    master MAINT get rid of compiler warnings from Liblinear
+2014-02-16 09:38:48 #5305 passed:    master Merge pull request #2864 from sciunto/doc
+2014-02-16 09:30:11 #5304 passed:    master Revert "ENH sparsify and densify methods for CD models"
+2014-02-15 10:23:39 #5294 failed:    master FIX error message from trees for large inputs
+2014-02-15 10:05:49 #5293 failed:    master MAINT full name for @h10r
+2014-02-15 09:50:21 #5292 failed:    master MAINT Rename over/underfitting example
+2014-02-15 09:39:36 #5291 failed:    master FIX "ValueError: startprob must sum to 1.0" in HMMs
+2014-02-15 09:34:54 #5290 failed:    master ENH sparsify and densify methods for CD models
+2014-02-15 04:18:52 #5286 passed:    master Merge pull request #2829 from arjoly/maxfeatures-seamantics
+2014-02-14 07:03:26 #5281 passed:    master Merge pull request #2859 from eltermann/fixed-typo
+2014-02-14 02:14:14 #5277 passed:    master Merge pull request #2858 from ameasure/patch-1
+2014-02-13 13:08:49 #5272 failed:    master Merge pull request #2857 from eltermann/copyright-updated
+2014-02-12 06:50:33 #5256 passed:    master MISC: better error messages in BaseLibLinear
+2014-02-12 02:43:40 #5253 passed:    master Merge pull request #2852 from jwkvam/adaboost_test
+2014-02-12 01:11:30 #5250 passed:    master What's new: group entries by topic
+2014-02-11 10:09:49 #5245 passed:    master Merge pull request #2750 from jnothman/no-str
+2014-02-11 09:55:37 #5244 passed:    master Merge pull request #2830 from eltermann/wrt-abbreviation
+2014-02-09 20:14:01 #5234 passed:    master Merge pull request #2840 from earino/develop
+2014-02-08 07:50:45 #5224 passed:    master FIX restore _pairwise on SVMs
+2014-02-08 06:51:15 #5223 failed:    master FIX error message with sparse precomputed kernels (second try)
+2014-02-08 06:36:24 #5222 passed:    master Revert "FIX error message with sparse precomputed kernels"
+2014-02-08 05:52:41 #5221 failed:    master FIX error message with sparse precomputed kernels
+2014-02-07 12:30:16 #5215 passed:    master f_regression and degress of freedom: update whats_new + minor.
+2014-02-07 12:21:49 #5214 passed:    master DOC: Entry for #2835 + Put together entries wrt. trees and ensemble
+2014-02-07 12:12:32 #5212 passed:    master Merge pull request #2836 from glouppe/tree-importances
+2014-02-07 01:03:08 #5199 passed:    master DOC: fix rest syntax
+2014-02-06 06:02:02 #5189 passed:    master BUG: _alpha_grid undefined symbol
+2014-02-05 16:36:26 #5182 passed:    master Merge pull request #2765 from AlexanderFabisch/validation_curves
+2014-02-05 10:00:46 #5177 passed:    master Merge pull request #2831 from eltermann/doc-typo
+2014-02-04 20:11:00 #5168 passed:    master Cosmit in SGD doc.
+2014-02-04 19:47:24 #5167 passed:    master Merge pull request #2827 from amueller/fix_subgradient_equation
+2014-02-04 16:14:02 #5158 passed:    master Merge pull request #2826 from perimosocordiae/patch-1
+2014-02-04 06:10:41 #5152 passed:    master MISC plot_rfe_with_cross_validation: better comments
+2014-02-04 03:33:08 #5150 passed:    master Merge pull request #2825 from bryan-lunt/master
+2014-02-03 15:47:15 #5141 passed:    master Merge pull request #2818 from jnothman/flakes
+2014-02-03 12:03:25 #5140 passed:    master Merge pull request #2820 from ankit-maverick/issue2819
+2014-02-03 02:11:08 #5136 passed:    master Merge pull request #2768 from robertlayton/meanshiftdoc
+2014-02-02 05:09:22 #5127 passed:    master DOC: more robust compilation and CSS
+2014-02-01 13:22:56 #5124 passed:    master Merge pull request #2797 from cli248/fix-DeprecationWarning
+2014-02-01 08:33:28 #5123 passed:    master COSMIT pep8 + full stop police
+2014-02-01 08:05:42 #5120 passed:    master DOC fix roc_curve docstring.
+2014-02-01 07:56:18 #5119 passed:    master MAINT: Fix PEP8 warnings in sklearn/covariance
+2014-02-01 07:33:43 #5116 passed:    master DOC up the sales pitch for SGD
+2014-02-01 07:31:38 #5115 passed:    master COSMIT fix PEP8 errors
+2014-02-01 07:18:34 #5113 passed:    master DOC logistic regression attribute docs + authorship
+2014-01-29 09:48:40 #5097 passed:    master Merge pull request #2800 from eltermann/doc-fix-tree
+2014-01-29 09:09:07 #5095 passed:    master Merge pull request #2799 from charlescearl/charles-label-prop-doc-updates
+2014-01-27 12:54:32 #5088 passed:    master clarify what's new
+2014-01-26 16:05:46 #5086 passed:    master Merge pull request #2747 from larsmans/tree-sort
+2014-01-26 13:30:56 #5085 passed:    master update what's new
+2014-01-25 11:00:12 #5075 passed:    master Merge pull request #2794 from cli248/master
+2014-01-25 08:12:56 #5072 passed:    master DOC + FIX mean_ in PCA
+2014-01-25 07:18:07 #5071 passed:    master Merge pull request #2790 from jnothman/tree_without_cycles
+2014-01-24 09:22:22 #5059 passed:    master Merge pull request #2791 from adrinjalali/master
+2014-01-23 22:23:29 #5056 passed:    master Merge pull request #2789 from ugurthemaster/patch-2
+2014-01-21 12:28:59 #5042 passed:    master COSMIT
+2014-01-21 12:18:51 #5041 passed:    master Merge pull request #2775 from stefan-w/python-3-fix
+2014-01-21 12:18:07 #5040 passed:    master Merge pull request #2776 from DanielWeitzenfeld/master
+2014-01-21 08:45:21 #5037 passed:    master Merge pull request #2782 from blagarde/patch-2
+2014-01-21 08:43:20 #5036 passed:    master Merge pull request #2781 from blagarde/patch-1
+2014-01-21 02:13:43 #5030 passed:    master DOC: some underlines were too short
+2014-01-21 01:28:50 #5029 passed:    master Merge pull request #2780 from ugurthemaster/patch-1
+2014-01-21 01:11:42 #5025 passed:    master Merge pull request #2779 from jnothman/ref_sec_link
+2014-01-20 19:02:32 #5023 passed:    master Fix some typos in whats_new.rst, using ispell
+2014-01-20 15:51:00 #5019 passed:    master DOC make indifferent to compressed sparse orientation
+2014-01-20 15:43:12 #5018 passed:    master ENH: MultiTaskElasticNet (and Lasso) CV
+2014-01-20 15:39:59 #5017 passed:    master Merge pull request #2772 from jnothman/tfidf_no_copy
+2014-01-19 17:44:10 #5005 passed:    master DOC fix documentation to match default value
+2014-01-18 19:23:31 #4995 passed:    master Merge pull request #2767 from GaelVaroquaux/my_master
+2014-01-18 17:56:22 #4990 failed:    master TST: try to get travis to work with Py2.6
+2014-01-18 12:37:42 #4983 passed:    master Merge pull request #2760 from AlexanderFabisch/check_error_patterns
+2014-01-17 04:22:12 #4974 passed:    master ENH: made example/svm/plot_iris.py clearer
+2014-01-17 03:36:17 #4972 passed:    master BUG: dual_coef must be defined inside the try block.
+2014-01-16 19:31:30 #4967 passed:    master Merge pull request #2761 from ogrisel/thanks
+2014-01-16 19:30:32 #4966 passed:    master Merge pull request #2762 from sergiopasra/fedora-package
+2014-01-16 15:54:00 #4960 passed:    master DOC note #2732 in what's new
+2014-01-16 07:35:06 #4956 passed:    master COSMIT: Various PEP8
+2014-01-16 07:30:45 #4955 passed:    master COSMIT: PEP8 in test_imputation
+2014-01-16 07:23:23 #4954 passed:    master COSMIT: Fix some PEP8 in gradient_boosting
+2014-01-16 07:10:11 #4953 passed:    master COSMIT: PEP8 in test_gradient_boosting.py
+2014-01-16 06:48:40 #4952 passed:    master COSMIT: PEP8 + coding style
+2014-01-16 06:16:05 #4951 passed:    master Merge pull request #2732 from jnothman/two-array-tree
+2014-01-15 21:51:57 #4943 passed:    master Rename fit_and_score to _fit_and_score.
+2014-01-15 09:43:24 #4937 passed:    master FIX #2645: fix 20 newsgroups downloader under Python 3
+2014-01-15 09:36:44 #4936 passed:    master Merge pull request #2756 from ogrisel/joblib-0.8.0a3
+2014-01-15 08:48:40 #4933 passed:    master sphinx colon error fix
+2014-01-15 07:35:16 #4932 passed:    master Merge pull request #1971 from jaquesgrobler/DOC_olivier_tut
+2014-01-15 02:41:53 #4930 passed:    master COSMIT: remove unused import
+2014-01-15 01:17:19 #4929 passed:    master Fix doctest.
+2014-01-15 00:44:01 #4928 passed:    master Merge branch 'master' of https://github.com/scikit-learn/scikit-learn
+2014-01-14 15:54:57 #4927 passed:    master Merge pull request #2754 from eltermann/doc-fix-tfidf
+2014-01-14 09:54:00 #4926 passed:    master Merge pull request #2745 from arjoly/mse-criterion
+2014-01-14 05:00:24 #4922 passed:    master Merge pull request #2753 from pprett/gbrt-verbose-remaining-time
+2014-01-14 00:47:41 #4916 passed:    master More robust test for sample_weight in Ridge.
+2014-01-14 00:38:24 #4915 passed:    master Test primal-dual relationship in Ridge.
+2014-01-13 16:40:28 #4911 passed:    master FIX don't put data in source dir in bench_covtype
+2014-01-13 11:00:08 #4903 passed:    master Merge pull request #2744 from arjoly/test-impurity
+2014-01-13 10:46:00 #4902 passed:    master Merge pull request #2743 from eltermann/doc_fix
+2014-01-13 08:59:02 #4900 passed:    master DOC clarify order of output in NB predict_proba
+2014-01-12 15:07:52 #4888 passed:    master Merge pull request #2742 from ai8rahim/issue-2741
+2014-01-11 14:52:22 #4873 passed:    master update what's new
+2014-01-11 09:04:14 #4866 passed:    master MAINT remove last trail of the ArrayBuilder
+2014-01-11 09:01:41 #4865 passed:    master Merge pull request #2734 from eloj/cv-broken-format-string
+2014-01-11 09:00:20 #4864 passed:    master Merge pull request #2715 from larsmans/tree-malloc
+2014-01-11 06:56:36 #4859 passed:    master MAINT deprecate HMMs
+2014-01-11 05:52:25 #4857 passed:    master COSMIT get rid of deprecation warning in tree tests
+2014-01-09 03:08:15 #4839 passed:    master Regenerate C files
+2014-01-09 02:19:47 #4838 passed:    master Handle n_features < n_informative case in make_regression.
+2014-01-09 01:59:23 #4836 passed:    master FIX explicit type for offset variable
+2014-01-08 23:12:01 #4834 passed:    master DOC add learning_curve to what's new and API reference
+2014-01-08 19:03:31 #4833 passed:    master MISC remove accidentally commited file. Whoops!
+2014-01-08 17:37:53 #4832 passed:    master Add learning curve
+2014-01-08 13:54:30 #4831 passed:    master Merge pull request #2717 from Manoj-Kumar-S/test_log_loss
+2014-01-08 09:43:31 #4824 passed:    master uses raises instead of with assert_raises - apparently doesn't work on python3 nose version.
+2014-01-08 08:21:54 #4819 passed:    master Merge pull request #2570 from pprett/gbrt-enh-stackrec-greedy
+2014-01-08 04:36:59 #4811 passed:    master FIX: np.searchsorted numpy bug on unicode objects also impacts 1.6.1
+2014-01-08 00:51:23 #4810 passed:    master Typo in examples
+2014-01-07 12:30:45 #4807 passed:    master WEBSITE FIX spotify logo!
+2014-01-07 06:37:38 #4802 passed:    master ENH: make forests' test_parallel_train run faster
+2014-01-07 05:34:35 #4799 passed:    master FIX Use Py2.6-compatible string formatting
+2014-01-07 04:04:58 #4798 passed:    master Merge pull request #2724 from glouppe/forest-2721
+2014-01-06 17:03:46 #4796 failed:    master Merge pull request #2720 from amueller/chi2_fused_types
+2014-01-06 07:22:53 #4790 passed:    master Merge pull request #2719 from amueller/remove_description_in_common_tests
+2014-01-05 15:15:09 #4784 passed:    master ENH speed up SVMlight loader using Cython's array support
+2014-01-05 02:11:19 #4775 passed:    master Merge pull request #2714 from amormachine/master
+2014-01-03 03:11:22 #4763 passed:    master Merge pull request #2712 from glouppe/imputer-copy
+2014-01-03 02:31:37 #4760 passed:    master Merge pull request #2706 from likang7/patch-2
+2014-01-03 02:30:59 #4759 passed:    master Merge pull request #2708 from likang7/patch-3
+2014-01-03 00:10:56 #4758 passed:    master Merge pull request #2702 from glouppe/imputer-copy
+2014-01-02 23:43:21 #4757 passed:    master DOC remove duplicate reference to example
+2014-01-02 18:39:19 #4756 passed:    master DOC add missing comment for C parameter
+2014-01-02 13:41:47 #4755 passed:    master Merge pull request #2710 from eshilts/DOC-load_boston
+2014-01-01 06:04:17 #4737 passed:    master TST/COSMIT cleaner make_classification and fix tests
+2013-12-31 08:45:56 #4735 failed:    master Use internal sample_with_replacement rather than Python's random.sample
+2013-12-30 09:18:37 #4734 passed:    master Merge pull request #2700 from amueller/refactor_common_tests
+2013-12-29 15:42:25 #4727 passed:    master ENH: parallize the BaseForest.apply method with the threading backend
+2013-12-29 13:12:37 #4724 passed:    master MAINT refactor fast_dot
+2013-12-29 07:28:05 #4723 passed:    master ENH make_pipeline and make_union utility functions
+2013-12-28 08:46:09 #4722 passed:    master FIX n_init bug in k-means
+2013-12-27 18:59:16 #4721 failed:    master FIX MBKMeans w/ explicit centers and n_init>1, part 2
+2013-12-27 18:40:34 #4719 passed:    master DOC missing parts of docstrings
+2013-12-27 11:55:09 #4714 passed:    master FIX PCA.score_samples didn't do input validation
+2013-12-27 08:42:24 #4711 passed:    master DOC: typo in binary_tree docs
+2013-12-27 08:33:17 #4710 passed:    master ENH filter out zeros early in FeatureHasher
+2013-12-27 08:32:47 #4709 errored:   master ENH filter out zeros early in FeatureHasher
+2013-12-27 08:12:24 #4708 passed:    master Merge pull request #2673 from larsmans/libsvm-310
+2013-12-25 08:02:37 #4701 passed:    master DOC optimize Phimeca logo, size halved
+2013-12-25 05:00:22 #4700 passed:    master Merge pull request #2685 from bicycle1885/fix-oob-score
+2013-12-23 09:29:58 #4691 passed:    master FIX: test failure under windows caused by temp files handling
+2013-12-23 05:20:55 #4689 passed:    master Merge pull request #2684 from blagarde/master
+2013-12-22 01:31:36 #4685 passed:    master Merge pull request #2683 from blagarde/master
+2013-12-19 00:56:27 #4673 passed:    master Merge pull request #2674 from GaelVaroquaux/bug_ovo_string_y
+2013-12-18 16:53:46 #4670 passed:    master MAINT use TruncatedSVD in pipeline tests
+2013-12-16 17:25:27 #4661 passed:    master Merge pull request #2671 from agramfort/fix_f_oneway_int
+2013-12-16 14:35:40 #4658 passed:    master Merge pull request #2669 from GaelVaroquaux/phimeca
+2013-12-16 05:24:59 #4655 passed:    master Merge pull request #2660 from amueller/mbkmeans_compute_labels_fix_new
+2013-12-16 05:11:18 #4654 passed:    master Merge pull request #2664 from agramfort/fix_randomized_pca
+2013-12-15 07:01:10 #4652 passed:    master Merge pull request #2667 from kowalski87/master
+2013-12-11 19:22:45 #4633 passed:    master Merge pull request #2659 from jakevdp/gaussiannb_speedup
+2013-12-11 03:05:41 #4626 passed:    master Merge pull request #2656 from arjoly/np1.8-warnings
+2013-12-10 16:11:42 #4621 passed:    master Merge pull request #2651 from amueller/spotify_testimonial
+2013-12-10 12:43:13 #4613 passed:    master DOC: fix test failure in linear model
+2013-12-10 12:24:46 #4612 passed:    master Merge pull request #2654 from arjoly/metrics-0.15
+2013-12-10 09:22:26 #4610 passed:    master Merge pull request #2649 from jakevdp/polynomial_doc
+2013-12-10 09:01:28 #4608 passed:    master Merge pull request #2653 from jaquesgrobler/remove_ellipticenvelope_deprecation
+2013-12-09 16:17:54 #4602 passed:    master ENH: Raise explicitly on non-unique vocab.
+2013-12-09 06:08:34 #4596 passed:    master Merge pull request #2643 from jnothman/bench_mutilabel_metrics
+2013-12-09 02:17:44 #4594 passed:    master Merge pull request #2647 from trein/patch-1
+2013-12-07 18:51:48 #4587 passed:    master Revert "ENH: faster cartesian product in make_classification and document complexity"
+2013-12-07 18:11:49 #4586 failed:    master ENH: faster cartesian product in make_classification and document complexity
+2013-12-07 16:59:26 #4585 passed:    master Merge pull request #2642 from larsmans/rbm-speedup
+2013-12-07 16:43:59 #4582 passed:    master DOC Add what's new entry for #2626
+2013-12-07 11:23:04 #4581 passed:    master Merge pull request #2626 from jnothman/string_objects
+2013-12-07 11:12:29 #4580 passed:    master DOC {min,max}_df look at document freq, not term freq
+2013-12-07 07:51:00 #4579 passed:    master ENH better error message when CountVectorizer prunes away all terms
+2013-12-06 08:47:59 #4575 passed:    master Merge pull request #2488 from oddskool/pred_latency
+2013-12-05 08:23:10 #4571 passed:    master ENH use fast row_norms in dictionary learning
+2013-12-05 08:13:58 #4570 passed:    master ENH use fast row_norms helper in preprocessing.normalize
+2013-12-05 06:06:25 #4569 passed:    master DOC add sklearn.base to generated docs
+2013-12-05 03:43:53 #4565 passed:    master Merge pull request #2592 from jnothman/prf_derivative_warnings
+2013-12-04 08:28:35 #4559 passed:    master ENH: more explicit traceback + message in case of common failure on sparse input
+2013-12-04 08:10:58 #4558 passed:    master Merge pull request #2633 from josericardo/FixingTypos
+2013-12-04 04:30:29 #4556 passed:    master Merge pull request #2631 from pprett/fix-sgd-l1-ratio
+2013-12-03 07:33:38 #4550 passed:    master Update what's new
+2013-12-02 10:28:36 #4541 passed:    master Merge pull request #2629 from arjoly/fix-auc
+2013-12-02 09:27:22 #4537 passed:    master FIX: Python 3 dict keys cannot be concatenated with a list
+2013-12-02 08:44:11 #4536 passed:    master FIX: broken sparse matrix check under scipy 0.13.0
+2013-12-02 08:24:40 #4535 passed:    master Merge pull request #2460 from arjoly/auc-multilabel
+2013-12-02 06:14:16 #4534 passed:    master Merge pull request #2628 from dengemann/improve_ica_example
+2013-11-30 03:21:38 #4522 passed:    master Merge pull request #2624 from dengemann/fix_dot
+2013-11-29 11:00:51 #4519 passed:    master Merge pull request #2541 from dengemann/fix_dot
+2013-11-29 06:54:07 #4508 passed:    master fix broken link for stable version from dev version
+2013-11-29 03:47:41 #4501 passed:    master Merge pull request #2620 from jaquesgrobler/master
+2013-11-27 21:54:50 #4497 passed:    master FIX use of str.format for Py2.6
+2013-11-27 21:35:35 #4496 passed:    master FIX stop forcing deprecation warnings for external packages
+2013-11-27 05:56:57 #4486 passed:    master Merge pull request #2617 from pprett/sgd-regressor-fix
+2013-11-27 05:29:48 #4483 passed:    master DOC be more explicit on mean-shift scalability
+2013-11-27 02:15:52 #4480 passed:    master Merge pull request #2615 from rgommers/fix-numfocus-link
+2013-11-26 08:53:33 #4476 passed:    master Merge pull request #2614 from zyv/patch-1
+2013-11-25 16:56:46 #4472 passed:    master BUG lower space complexity of estimate_bandwidth to linear
+2013-11-25 12:34:19 #4466 passed:    master MAINT: use stable blas getter API
+2013-11-25 12:30:26 #4465 passed:    master BUG SVMlight loader should check whether n_features is big enough
+2013-11-25 10:27:45 #4464 passed:    master MAINT: unreachable code removed from BernoulliNB
+2013-11-25 06:00:16 #4462 passed:    master FIX verbosity of the mds
+2013-11-23 08:17:15 #4454 passed:    master Merge pull request #2585 from jakevdp/polynomial
+2013-11-22 15:26:47 #4452 passed:    master Merge pull request #2608 from jakevdp/master
+2013-11-21 13:55:48 #4440 passed:    master DOC explain ARPACK algorithm in TruncatedSVD docstring
+2013-11-20 10:01:53 #4437 passed:    master DOC: update whats_new
+2013-11-19 03:47:15 #4429 passed:    master FIX regression in CountVectorizer handling of float min_df/max_df
+2013-11-18 08:51:09 #4427 passed:    master COSMIT remove useless "if False" in kernel approximations
+2013-11-17 13:16:44 #4425 passed:    master ENH: ElasticNetCV and LassoCV raise ValueError with multitarget outputs
+2013-11-12 07:05:57 #4400 passed:    master FIX: errors in kernel parameters for OneClassSVM
+2013-11-11 14:01:02 #4398 passed:    master DOC remove confusing comment from TruncatedSVD
+2013-11-11 07:33:39 #4397 passed:    master Fix typo in test.
+2013-11-11 07:25:13 #4396 passed:    master Fix fragile test.
+2013-11-11 07:05:55 #4395 passed:    master Add lobpcg in possible solvers.
+2013-11-11 06:47:18 #4394 passed:    master Remove print statement.
+2013-11-11 02:15:36 #4393 passed:    master Merge pull request #2583 from amueller/doc_rbf_parameters
+2013-11-10 05:30:22 #4388 passed:    master Simplify fast_dot.
+2013-11-09 03:47:51 #4384 passed:    master One less warning in QDA tests.
+2013-11-09 03:23:31 #4383 passed:    master More robust unit tests for fast_dot.
+2013-11-08 22:49:10 #4381 passed:    master COSMIT: no need for parentheses.
+2013-11-08 22:42:30 #4380 passed:    master BUG: ValueError was assigned as local variable!
+2013-11-07 23:52:05 #4379 passed:    master What's new: DummyClassifier now supports constant output
+2013-11-07 23:44:41 #4378 passed:    master Merge pull request #2566 from Manoj-Kumar-S/constant-output
+2013-11-07 09:51:15 #4374 passed:    master add huber loss bug fix to whats new
+2013-11-07 04:40:57 #4371 passed:    master Add docstrings to _auc and _average_precision.
+2013-11-06 08:54:57 #4363 passed:    master Remove some warnings.
+2013-11-06 08:48:29 #4362 passed:    master Merge branch 'master' of github.com:scikit-learn/scikit-learn
+2013-11-06 03:27:21 #4361 failed:    master Merge pull request #2576 from ankit-maverick/issue2560
+2013-11-05 14:12:05 #4356 passed:    master s/n_features/n_samples in doc/datasets/index.rst
+2013-11-05 10:23:25 #4355 passed:    master MAINT: make gen_rst more robust (minor)
+2013-11-05 01:41:41 #4349 passed:    master Merge pull request #2574 from ogrisel/travis-speed
+2013-11-04 11:24:04 #4346 passed:    master Merge pull request #2571 from edran/readme
+2013-11-04 06:52:03 #4340 passed:    master sparsify test: add multi-class test too
+2013-11-04 06:08:51 #4337 passed:    master common test for sparsify + fix for SGDRegressor
+2013-11-04 00:12:57 #4335 passed:    master some cosmetic commits and delete duplicate files
+2013-11-03 16:47:49 #4333 passed:    master FIX website: css hickup
+2013-11-01 07:29:10 #4325 passed:    master Merge pull request #2565 from change/change_org_testimonial
+2013-10-30 17:36:11 #4313 passed:    master ENH: Make forest prediction code more robust to mutations of the estimators list
+2013-10-30 17:33:12 #4312 passed:    master DOC fix cross-decomposition docstrings
+2013-10-30 15:12:48 #4311 passed:    master Better title
+2013-10-29 23:57:13 #4309 passed:    master Merge pull request #2558 from Jorge-C/patch-1
+2013-10-29 05:32:59 #4302 passed:    master FIX #1622: OPTIM: remove obsolete random_state instance in the Tree class
+2013-10-27 12:02:07 #4292 passed:    master TST clean up after ourselves in SVMlight test
+2013-10-27 11:53:19 #4291 passed:    master FIX sparse matrix indexing in BernoulliRBM
+2013-10-25 10:56:23 #4279 passed:    master ENH : better shrinkage range for ShrunkCovariance
+2013-10-25 05:55:51 #4276 passed:    master Merge pull request #2550 from StevenMaude/minor-typo-fixes
+2013-10-25 03:09:49 #4274 passed:    master Merge pull request #2543 from johncollins/dev
+2013-10-25 03:07:55 #4273 passed:    master Merge pull request #2524 from rmcgibbo/hmmfix
+2013-10-24 09:44:28 #4265 passed:    master Merge branch 'master' of github.com:scikit-learn/scikit-learn
+2013-10-24 09:36:59 #4264 passed:    master OPTIM: remove memcopy for X_argsorted in GBRT models
+2013-10-24 09:27:27 #4263 passed:    master Add plot titles and newstyle plt import in OLS vs Ridge example
+2013-10-23 06:13:07 #4246 passed:    master Merge pull request #2546 from StevenMaude/patch-1
+2013-10-23 01:39:36 #4243 passed:    master Update cross_validation.rst
+2013-10-21 03:40:49 #4229 passed:    master Merge pull request #2536 from larsmans/rm-mlcomp-doc-class
+2013-10-21 02:19:43 #4228 passed:    master Merge pull request #2538 from ogrisel/test-test-common
+2013-10-20 13:47:50 #4217 passed:    master TST fix still broken test_fast_dot
+2013-10-20 12:19:09 #4215 failed:    master ENH micro-optimize NMF inner loop
+2013-10-20 10:57:23 #4214 passed:    master FIX: np.ones_like does not support dtype on old numpy
+2013-10-20 10:11:08 #4213 passed:    master FIX: make RANSACRegressor pass test_common
+2013-10-20 09:03:02 #4212 passed:    master Remove reference to web page
+2013-10-20 08:18:01 #4211 passed:    master Merge pull request #2528 from ogrisel/tree-nogil
+2013-10-19 14:55:28 #4207 passed:    master ENH optimize one more sq. distance in k-means
+2013-10-18 15:48:08 #4204 errored:   master DOC norm optimizations in what's new
+2013-10-18 07:33:15 #4199 passed:    master Merge pull request #2533 from samuelstjean/patch-1
+2013-10-17 04:50:00 #4172 passed:    master Merge pull request #2517 from jaquesgrobler/simpler-collapsible-toctrees
+2013-10-17 00:01:56 #4169 passed:    master Merge pull request #2525 from rmcgibbo/hmmfix2
+2013-10-16 11:52:01 #4161 passed:    master Merge pull request #2505 from rphlypo/master
+2013-10-16 07:25:26 #4157 passed:    master Merge pull request #2523 from ogrisel/skip-numpy-unicode-bug
+2013-10-16 07:18:00 #4156 passed:    master Merge pull request #2504 from glouppe/tree-tweaks
+2013-10-16 06:56:55 #4154 passed:    master Merge pull request #2519 from ankit-maverick/minor_docfix
+2013-10-16 01:33:29 #4146 passed:    master Merge pull request #2527 from shoyer/permutation_test_score-docstring
+2013-10-15 05:00:11 #4140 passed:    master Merge pull request #2516 from jaquesgrobler/add-copybutton-examples
+2013-10-15 04:07:46 #4139 passed:    master Merge pull request #2521 from dmedri/master
+2013-10-14 10:19:50 #4135 passed:    master Merge pull request #2515 from jaquesgrobler/add_minutes_examples
+2013-10-13 17:16:41 #4126 passed:    master MAINT simplify f_oneway in feature selection
+2013-10-13 16:22:12 #4125 passed:    master COSMIT use norm function in feature selection
+2013-10-13 10:34:45 #4124 passed:    master Merge branch 'refactor-squared-norms'
+2013-10-13 09:41:04 #4122 passed:    master MAINT use subprocess.call, not os.system
+2013-10-13 09:35:14 #4121 passed:    master FIX: clean-build target does no longer exist
+2013-10-13 08:59:24 #4120 passed:    master FIX fit followed by partial_fit in multiclass SGD
+2013-10-12 13:19:13 #4117 passed:    master DOC docstring for extmath.norm
+2013-10-12 13:16:36 #4116 passed:    master FIX parallel FeatureUnion.fit and fit_transform
+2013-10-12 13:14:32 #4115 passed:    master MAINT: use python setup.py clean in Makefile
+2013-10-12 11:35:33 #4114 passed:    master Merge pull request #2502 from ericjster/plot_dbscan
+2013-10-09 21:59:21 #4103 passed:    master Cosmit: move log_loss.
+2013-10-09 08:54:42 #4099 passed:    master Merge pull request #2487 from jaquesgrobler/DOC_speed_up_frontpage
+2013-10-09 04:33:37 #4096 passed:    master Merge pull request #2495 from jaquesgrobler/ENH_coverage_travis
+2013-10-09 01:37:44 #4095 passed:    master Merge pull request #2500 from ndawe/r2
+2013-10-08 16:06:13 #4091 passed:    master Merge pull request #2497 from dengemann/extend_fast_dot
+2013-10-05 08:57:30 #4070 passed:    master Merge pull request #2489 from samuela/patch-1
+2013-10-04 06:34:14 #4063 passed:    master ENH: small optimization in PresortBestSplitter
+2013-10-02 12:19:59 #4058 passed:    master DOC error in feature_extraction.text docstrings
+2013-10-02 12:22:01 #4057 passed:    master COSMIT pyflakes feature_extraction.text tests
+2013-10-01 11:46:48 #4056 passed:    master ENH optimize NMF inner loop
+2013-09-30 12:24:14 #4054 passed:    master ENH sparse matrix support in pairwise + optimizations
+2013-09-30 05:35:44 #4051 passed:    master DOC improve biclustering docstrings
+2013-09-30 02:09:36 #4050 passed:    master update what's new
+2013-09-29 12:12:44 #4049 passed:    master FIX : get rid of convergence warning in test_coordinate_descent
+2013-09-29 11:33:49 #4048 passed:    master MAINT list @paulgb's full name
+2013-09-29 08:20:30 #4046 passed:    master API : set return_models to False by default in path functions in coordinate descent
+2013-09-29 07:32:22 #4045 passed:    master FIX : warm_start in coordinate_descent (was ignored)
+2013-09-28 10:39:19 #4039 passed:    master DOC typo: polynominial
+2013-09-28 03:06:21 #4038 passed:    master FIX : cleanup coef_init in coordinate descent
+2013-09-26 15:29:13 #4029 passed:    master Merge pull request #2479 from larsmans/website-speed
+2013-09-26 10:31:30 #4025 passed:    master MAINT zap unused import
+2013-09-26 10:30:54 #4023 passed:    master FIX: use next(iterator) built-in instead of iterator.next()
+2013-09-25 10:52:34 #4011 passed:    master Merge pull request #2457 from untom/rbm_csr_format
+2013-09-25 09:10:42 #4008 passed:    master FIX: broken doctest impacted by stratified CV and tree RNG changes combined...
+2013-09-25 09:02:48 #4007 failed:    master Merge pull request #2463 from ogrisel/stratified-kfold
+2013-09-25 01:25:05 #3998 passed:    master FIX: unsigned int -> UINT32_t
+2013-09-24 15:40:14 #3995 passed:    master Merge pull request #2442 from glouppe/tree-shuffle
+2013-09-23 07:02:45 #3988 passed:    master fix broken logo links on homepage and remove unused duplicate images
+2013-09-23 02:51:19 #3987 passed:    master Merge pull request #2474 from glouppe/tree-tests
+2013-09-22 12:30:48 #3979 passed:    master Merge pull request #2469 from glouppe/tree-presort
+2013-09-21 20:17:47 #3974 passed:    master Merge pull request #2462 from kmike/metrics-unicode
+2013-09-21 10:42:22 #3967 passed:    master DOC typo in SVM narrative
+2013-09-21 10:39:57 #3966 passed:    master Merge pull request #2426 from larsmans/sgd-improvements
+2013-09-20 15:51:13 #3953 passed:    master FIX: more accurate description of eta0 in SGDClassifier
+2013-09-20 06:33:53 #3936 passed:    master Revert "FIX #2372: StratifiedKFold less impact on the original order of samples."
+2013-09-20 05:44:49 #3935 passed:    master More detailed entry for StratifiedKFold fix in whats_new.rst
+2013-09-20 05:14:00 #3934 passed:    master DOC: NMF narrative: describe optimization problem
+2013-09-20 05:10:35 #3933 passed:    master DOC: NMF narrative: describe optimization problem
+2013-09-18 03:20:20 #3908 passed:    master Merge pull request #2222 from FedericoV/Out_of_core_example
+2013-09-17 10:16:12 #3901 passed:    master Merge pull request #2350 from jaquesgrobler/DOC_inria_google_logos
+2013-09-16 14:51:38 #3880 passed:    master FIX : get rid of coef_init in Lasso in dict learning
+2013-09-16 12:24:55 #3876 passed:    master MAINT remove dead code from LibSVM
+2013-09-16 06:46:41 #3867 passed:    master TST speed up biclustering tests
+2013-09-16 06:41:40 #3866 passed:    master FIX issue #1993: passing a multilabel indicator is no more noop
+2013-09-16 06:39:11 #3864 passed:    master Partially revert "MAINT remove deprecated code from CD"
+2013-09-16 06:20:47 #3862 failed:    master FIX finish deprecation of indices in CV
+2013-09-16 06:11:35 #3859 failed:    master MAINT remove deprecated code from CD
+2013-09-16 04:54:19 #3855 passed:    master removing NWS from list of stock prices
+2013-09-16 04:42:31 #3854 passed:    master DOC improve encoding docs
+2013-09-13 19:57:14 #3851 passed:    master Add what's new entry for pairwise_distances_argmin_min.
+2013-09-13 10:25:58 #3849 errored:   master BUG oops, *safe_* asarray
+2013-09-13 10:09:16 #3848 failed:    master ENH: don't call astype when a copy is not needed
+2013-09-13 09:32:34 #3847 passed:    master DOC+COSMIT: typos, lots of them
+2013-09-13 09:08:05 #3846 passed:    master DOC output types should never be "array_like"
+2013-09-13 03:49:51 #3845 passed:    master MAINT Update six to version 1.4.1
+2013-09-12 10:00:10 #3844 passed:    master Update what's new
+2013-09-12 09:57:57 #3843 passed:    master Merge pull request #2438 from arjoly/tree-mem-overhead2
+2013-09-12 01:41:51 #3839 passed:    master DOC: bootstrap=True by default
+2013-09-11 15:01:28 #3837 passed:    master DOC: add docstring to _logaddexp
+2013-09-11 14:40:20 #3836 passed:    master Merge branch 'master' of github.com:scikit-learn/scikit-learn into logaddexp-fix
+2013-09-11 11:14:30 #3834 passed:    master DOC reference for k-means++ in clustering narrative
+2013-09-11 09:04:31 #3833 passed:    master What's new: bagging
+2013-09-11 06:53:08 #3832 passed:    master Merge branch 'bagging'
+2013-09-11 05:33:03 #3831 passed:    master FIX Py2.6-compatible use of str.format
+2013-09-11 04:41:01 #3829 passed:    master FIX use fixes.bincount for numpy 1.3.0 support
+2013-09-11 04:13:37 #3828 passed:    master Merge pull request #2278 from jnothman/prf_rewrite3
+2013-09-10 04:04:10 #3822 passed:    master DOC what's new: fast_dot is internal, so don't mention it
+2013-09-10 03:59:38 #3821 passed:    master DOC boolean masks in CV generators are deprecated
+2013-09-10 03:38:14 #3820 passed:    master Merge pull request #2370 from ogrisel/doc-cross-validation
+2013-09-10 02:46:25 #3819 passed:    master Merge pull request #2432 from jwkvam/docs_cluster
+2013-09-09 16:48:41 #3815 passed:    master DOC add missing Returns description
+2013-09-09 01:48:43 #3808 passed:    master Merge pull request #2430 from glouppe/forest-2414
+2013-09-08 10:55:04 #3805 passed:    master Cleanup
+2013-09-08 04:49:34 #3803 passed:    master Merge pull request #2424 from sergiopasra/no-shebang
+2013-09-08 04:44:51 #3802 passed:    master MAINT: Add COPYING and README to MANIFEST
+2013-09-06 09:55:54 #3791 passed:    master DOC: add new testimonial
+2013-09-06 03:59:43 #3785 passed:    master Fix broken link
+2013-09-06 03:40:46 #3784 passed:    master DOC: add Rangespan testimonial
+2013-09-06 02:09:49 #3783 passed:    master Merge pull request #2404 from agramfort/fix_probabilitic_pca
+2013-09-05 02:56:13 #3775 passed:    master Merge pull request #2415 from kemaleren/skip_checkerboard
+2013-09-05 02:46:13 #3774 passed:    master Merge pull request #2418 from rsivapr/typo-docs
+2013-09-04 15:19:28 #3769 passed:    master Merge pull request #2406 from dengemann/tinker_fa
+2013-09-04 12:06:48 #3767 passed:    master FIX: renable test_k_means_plus_plus_init_2_jobs on OSX 10.8
+2013-09-04 11:54:35 #3766 passed:    master BUG rename n_iterations to n_iter in TruncatedSVD
+2013-09-04 11:39:21 #3765 passed:    master MAINT dedup Brandyn A. White in mailmap
+2013-09-03 07:58:43 #3746 passed:    master ENH micro-optimize pairwise_distances_argmin_min
+2013-09-02 07:07:31 #3737 passed:    master BUG: remove remaining utf-8 characters in docstrings.
+2013-09-02 07:04:07 #3736 passed:    master FIX failing test in NMF due to negative zeros
+2013-09-01 12:46:48 #3733 failed:    master Merge pull request #2412 from rolisz/patch-2
+2013-09-01 12:08:02 #3731 failed:    master ENH prettier output from NMF example
+2013-08-31 04:34:58 #3724 passed:    master Merge pull request #2411 from Balu-Varanasi/remove_unused_import
+2013-08-31 04:34:32 #3723 passed:    master Merge pull request #2410 from Balu-Varanasi/pep8_fixes
+2013-08-30 08:44:51 #3716 passed:    master Add tests for pairwise_distances_argmin.
+2013-08-30 08:32:48 #3715 passed:    master Add pairwise_distances_argmin.
+2013-08-30 08:23:38 #3714 passed:    master Use pairwise_distances_argmin_min in examples.
+2013-08-30 08:06:04 #3713 passed:    master Use pairwise_distances_argmin_min function.
+2013-08-30 07:47:06 #3712 passed:    master Revert "CSR matrix support in pairwise_distances_argmin_min"
+2013-08-30 07:38:08 #3711 passed:    master Merge pull request #2210 from pgervais/distances_argmin
+2013-08-30 03:19:06 #3704 passed:    master ENH export randomized_svd publicly
+2013-08-29 20:20:51 #3700 passed:    master ENH speed up NMF (about 30% off topic extraction runtime)
+2013-08-28 11:26:00 #3690 passed:    master DOC ASCII only in docstrings
+2013-08-27 01:19:05 #3675 passed:    master fix: typo - y_pred instead of y_true
+2013-08-26 10:05:12 #3670 passed:    master BUG fix whitespace in error messages
+2013-08-26 07:57:27 #3668 passed:    master MAINT: remove utf-8 headers
+2013-08-26 07:49:13 #3667 passed:    master BUG: Remove UTF8 character
+2013-08-26 05:19:44 #3664 passed:    master DOC clarify distances in KMeans' _labels_inertia
+2013-08-26 04:20:37 #3663 passed:    master Merge pull request #2394 from ndawe/export_graphviz
+2013-08-25 09:10:59 #3653 passed:    master Merge pull request #2396 from dengemann/insert_fast_dot
+2013-08-25 07:07:50 #3649 passed:    master Merge pull request #2288 from dengemann/fast_dot
+2013-08-25 04:34:05 #3645 passed:    master COSMIT: remove unused import
+2013-08-25 03:59:43 #3641 passed:    master COSMIT: fix docstrings in affinity_propagation
+2013-08-24 16:01:34 #3634 passed:    master Merge pull request #2308 from pprett/gbrt-check-supported-loss
+2013-08-24 01:46:20 #3623 passed:    master Typo
+2013-08-24 01:45:30 #3622 passed:    master DOC: docstring for predict_log_proba was wrong
+2013-08-23 09:39:56 #3616 passed:    master DOC: removed duplicated Python 3 section
+2013-08-23 01:28:42 #3602 passed:    master Merge pull request #2385 from ndawe/tree
+2013-08-21 06:37:01 #3574 passed:    master WEBSITE add yhat testimonial
+2013-08-21 04:05:00 #3571 passed:    master Updated whats_new and fixed a typo in plot_precision_recall.py
+2013-08-21 03:31:30 #3570 passed:    master MISC: fix rst
+2013-08-20 07:43:26 #3550 passed:    master Add .bmp sklearn logo of correct width for Win setup
+2013-08-20 07:29:18 #3549 passed:    master ENH add VarianceThreshold feature selection method
+2013-08-20 04:28:48 #3544 passed:    master TST: fix test on scipy dev version
+2013-08-19 09:58:44 #3524 passed:    master Merge pull request #2369 from larsmans/no-warnings-in-fs
+2013-08-19 09:57:16 #3523 passed:    master Merge pull request #2368 from emsrc/cosine_distance
+2013-08-19 04:27:54 #3519 passed:    master DOC make DictVectorizer docstring refer to FeatureHasher
+2013-08-17 16:33:59 #3515 passed:    master DOC adding description for handling of the auto parameter in neighbors
+2013-08-15 08:46:37 #3513 passed:    master COSMIT: change variable name.
+2013-08-15 05:54:33 #3511 passed:    master FIX+TST non-consecutive or duplicate vocabulary indices
+2013-08-15 05:01:06 #3510 passed:    master DOC: fix metrics documentation format
+2013-08-13 16:10:31 #3506 passed:    master Merge pull request #2363 from glouppe/tree-memory
+2013-08-13 10:34:51 #3504 errored:   master DOC while we're at it, link to our own RBM docs
+2013-08-13 10:32:24 #3503 errored:   master COSMIT refactor Hungarian algorithm
+2013-08-13 08:34:30 #3502 passed:    master Merge pull request #2361 from rolisz/patch-1
+2013-08-12 05:53:16 #3500 passed:    master MAINT remove Counter from fixes; no longer used
+2013-08-10 05:56:17 #3496 passed:    master FIX + COSMIT Reuters out-of-core example
+2013-08-08 03:34:53 #3490 passed:    master FIX rm spectral_embedding import from sklearn.cluster
+2013-08-08 03:01:16 #3489 failed:    master MAINT remove deprecated parameters (the easy cases)
+2013-08-08 02:01:27 #3488 passed:    master MISC : pep8 and pyflakes on test_isotonic.py
+2013-08-08 01:25:00 #3487 passed:    master Update my URL.
+2013-08-07 18:34:59 #3483 passed:    master DOC: link to documentation, not main page
+2013-08-07 18:17:17 #3482 errored:   master MAINT/DOC: bump docs and rev numbers to 0.15-git
+2013-08-07 17:37:23 #3479 passed:    master MAINT Update mailmap
+2013-08-07 16:30:57 #3477 passed:    master MISC: deprection is in 2 releases
+2013-08-07 15:57:19 #3476 errored:   master MAINT: randn on float is deprecated
+2013-08-07 15:52:57 #3473 errored:   master TST: avoid nose running sklearn.test as a test
+2013-08-07 13:03:12 #3471 passed:    master FIX integer types in Ward clustering
+2013-08-07 12:58:42 #3469 passed:    master TST: avoid a crash in Windows + Anaconda Py3.3
+2013-08-07 09:40:11 #3463 passed:    master Merge pull request #2348 from arjoly/deprecate-auc_score
+2013-08-07 03:46:59 #3458 passed:    master DOC: button layout tweak
+2013-08-07 00:54:22 #3452 passed:    master DOC: bigger menu fonts
+2013-08-06 19:39:32 #3449 passed:    master DOC: layout tweaks
+2013-08-06 15:49:56 #3447 passed:    master ENH: custom distutils clean command
+2013-08-06 10:14:35 #3439 passed:    master DOC: reduce the number of examples
+2013-08-06 03:53:24 #3438 passed:    master MISC: deprecation notice
+2013-08-05 21:37:18 #3436 passed:    master Typo.
+2013-08-05 12:11:45 #3434 passed:    master Merge pull request #2345 from rgbkrk/patch-1
+2013-08-04 10:16:31 #3424 passed:    master DOC improve docstrings in sklearn.base
+2013-08-04 10:14:32 #3423 passed:    master DOC add link to fetch_covertype to covertype narrative docs
+2013-08-03 02:38:33 #3407 passed:    master Merge pull request #2338 from agramfort/pca_cleanup
+2013-08-02 06:56:42 #3401 passed:    master Merge pull request #2337 from jaquesgrobler/DOC_fix_cut_ML_flowchart
+2013-08-01 23:49:30 #3399 passed:    master Completely avoid for loop in _auc.
+2013-08-01 21:22:06 #3398 passed:    master Optim for Crammer-Singer formulation in binary case.
+2013-08-01 20:58:30 #3397 passed:    master Better test for auc_score.
+2013-08-01 08:30:32 #3394 passed:    master Merge pull request #2336 from jaquesgrobler/DOC_fix_whitespace_on_userguide
+2013-08-01 08:15:28 #3393 passed:    master BUG: FIX Crammer-Singer formulation in the binary case.
+2013-08-01 05:31:03 #3388 passed:    master DOC copyedit SGDClassifier docstring
+2013-07-31 16:18:50 #3382 passed:    master DOC: also point installation menu to stable
+2013-07-31 03:01:47 #3369 passed:    master Merge pull request #2331 from jaquesgrobler/master
+2013-07-30 12:47:36 #3364 passed:    master revert the tanh fix
+2013-07-30 11:10:42 #3362 passed:    master DOC typos involving Nyström
+2013-07-30 10:14:08 #3359 passed:    master FIX : backport tanh out param in old numpy
+2013-07-30 08:42:00 #3356 passed:    master Merge pull request #2290 from dengemann/more_ica_improvements
+2013-07-30 06:41:56 #3351 passed:    master FIX: remove dupplicate entry in What's new
+2013-07-30 05:44:38 #3350 passed:    master DOC fix example comments
+2013-07-30 04:16:51 #3346 passed:    master DOC: DBSCAN misc doc formatting
+2013-07-30 04:10:12 #3345 passed:    master DOC credit to @ephes and myself for log loss in metrics
+2013-07-30 03:51:15 #3344 passed:    master Merge pull request #2329 from NelleV/website
+2013-07-29 16:10:17 #3340 passed:    master DBSCAN BallTree implementation
+2013-07-29 15:33:38 #3337 passed:    master DOC added link from banner to example.
+2013-07-29 12:05:10 #3334 passed:    master Merge pull request #2324 from arjoly/missing-contributions
+2013-07-29 07:45:51 #3326 passed:    master partial_fit for naive Bayes was done for 0.14-rc, not 0.11...
+2013-07-29 07:03:08 #3325 passed:    master DOC fix comment on svm probability param
+2013-07-29 05:59:13 #3322 passed:    master Add missing credit to @smoitra87 for the Python 3 support
+2013-07-29 04:39:19 #3321 passed:    master Also clean the dist folder when calling make
+2013-07-29 03:42:30 #3319 passed:    master Fixed a typo in a contributor's name
+2013-07-29 03:40:50 #3318 passed:    master Ignore the generated MANIFEST file
+2013-07-29 01:31:20 #3317 passed:    master What's new: put major 0.14 additions in first
+2013-07-28 20:07:52 #3314 passed:    master MISC: deprecate balance_weights (it's internal)
+2013-07-28 19:42:29 #3312 passed:    master Add LibSVM random state to changelog
+2013-07-28 19:23:55 #3311 passed:    master TST: adjust test relying on change order
+2013-07-28 19:06:32 #3310 passed:    master FIX for MSVC inline fmax in dist_metrics
+2013-07-28 18:52:12 #3309 passed:    master DOC: add whats_new on the news
+2013-07-28 18:30:24 #3307 passed:    master MAINT: recompile Cython files
+2013-07-28 18:03:00 #3305 passed:    master Merge branch 'pr_2304'
+2013-07-28 17:11:56 #3303 passed:    master DOC Remove deprecated reference + acknowledge @larsman
+2013-07-28 11:32:50 #3293 passed:    master add explicit types to neighbors cython code
+2013-07-28 11:29:24 #3292 passed:    master Merge pull request #2295 from larsmans/fast-sigmoid
+2013-07-28 11:26:29 #3290 passed:    master FIX make BaseSGDClassifier an ABC
+2013-07-28 11:01:22 #3284 passed:    master MISC: fix plot_multilabel example
+2013-07-28 10:42:05 #3280 passed:    master Merge pull request #2299 from ogrisel/grid-scores
+2013-07-28 09:44:28 #3273 passed:    master Merge pull request #2293 from amueller/warning_input_shapes
+2013-07-28 09:36:03 #3272 passed:    master Move Google javascript near </body>
+2013-07-28 08:18:18 #3263 passed:    master EXAMPLES remove non-existing example from doc, don't trigger deprecated interface in enet_path, lasso_path
+2013-07-28 08:03:06 #3262 passed:    master DOC/EXAMPLES fix more documentation errors, deprecated api usages.
+2013-07-28 07:52:51 #3261 passed:    master DOC fix dropdown menu
+2013-07-28 07:11:17 #3259 passed:    master DOC XHTML fixes (unclosed tags, type="text/javascript")
+2013-07-28 06:44:06 #3257 passed:    master FIX made the building of the docs slightly more robust. readme files in folders without examples kill it otherwise.
+2013-07-28 06:36:12 #3256 passed:    master more fixes for docs, deprecated interfaces
+2013-07-28 05:59:21 #3254 passed:    master Revert "ENH add log_likelihood_score as -log_loss"
+2013-07-28 05:47:13 #3253 passed:    master Make common PLS tests more stable
+2013-07-28 05:46:50 #3252 passed:    master ENH: add a new DataConversionWarning
+2013-07-28 05:45:57 #3251 passed:    master DOC fixed z-index on the website
+2013-07-28 05:41:10 #3250 passed:    master DOC "creating features" -> "feature extraction" + minor stuff
+2013-07-28 05:39:47 #3248 passed:    master FIX minor edits on the website
+2013-07-28 05:40:34 #3247 passed:    master FIX raise tolerance in svm predict_proba test
+2013-07-28 05:39:47 #3246 passed:    master ENH speed up BernoulliNB's predictions
+2013-07-28 05:34:52 #3245 passed:    master Ignore compiled shared library files generated in the source tree under windows
+2013-07-28 05:33:48 #3244 passed:    master FIX use category and stacklevel=2 for {loss,score}_func
+2013-07-28 05:13:56 #3243 passed:    master nicer dates
+2013-07-28 05:14:54 #3239 errored:   master DOC more comments from @NelleV
+2013-07-28 05:17:05 #3237 errored:   master DOC fixed the optional arguments
+2013-07-28 05:23:10 #3236 errored:   master typo
+2013-07-28 05:28:24 #3235 errored:   master BUG: fix Py 3
+2013-07-28 02:04:36 #3234 passed:    master COSMIT: typo in examples/imputation.py
+2013-07-28 01:52:33 #3233 passed:    master COSMITS
+2013-07-27 19:57:22 #3231 passed:    master DOC reference and rename cross decomposition module
+2013-07-27 12:51:55 #3224 passed:    master more sphinx fixes
+2013-07-27 12:52:36 #3223 passed:    master Comment predict params in libsvm
+2013-07-27 12:05:04 #3215 passed:    master Merge pull request #2281 from ogrisel/improvements-to-setup-py
+2013-07-27 11:53:21 #3212 passed:    master Merge pull request #2280 from larsmans/randomsearch-scoring
+2013-07-27 11:23:38 #3203 passed:    master DOC minor copyedit to narratives
+2013-07-27 11:17:31 #3202 passed:    master DOC fixing some sphinx stuff.
+2013-07-27 11:14:20 #3200 passed:    master Py3: fix version comparison in imputation module
+2013-07-27 10:12:28 #3193 passed:    master FIX PY3: list and tuples cannot be compared in Python 3
+2013-07-27 10:03:40 #3191 passed:    master FIX PY3K warning.catch_filter set record
+2013-07-27 09:53:57 #3190 passed:    master COMPAT: no assert_warns in np 1.3
+2013-07-27 09:31:22 #3187 passed:    master PY3K remove __pycache__ in make clean
+2013-07-27 09:19:28 #3185 passed:    master Revert "Catch expected warning in sklearn/tests/test_naive_bayes.py (part of #2274)"
+2013-07-27 09:13:15 #3182 passed:    master Use scipy.nnls.optimize for dense data
+2013-07-27 09:10:51 #3181 passed:    master Merge pull request #2277 from glouppe/tree-fix-32bits
+2013-07-27 08:56:07 #3177 passed:    master Catch expected warning in sklearn/tests/test_naive_bayes.py (part of #2274)
+2013-07-27 08:45:11 #3175 passed:    master COSMIT fixing some unused imports, adding stuff to __all__,  and light pep8 (not all whitespace to make rebasing less painful)
+2013-07-27 08:20:24 #3173 passed:    master addressing @ogrisel's comments: catch warnings in test, no unneeded digits
+2013-07-27 08:02:45 #3170 passed:    master FIX warning tests in preprocessing
+2013-07-27 06:42:55 #3165 passed:    master More explicit tests in test_label_binarizer_column_y
+2013-07-27 05:39:09 #3152 passed:    master FIX: remove blank lines
+2013-07-26 18:05:20 #3139 passed:    master PY3 new overfit prevention stuff in 20newsgroups loader
+2013-07-26 16:38:53 #3134 passed:    master ENH rename eval / pseudolikelihood to score_samples
+2013-07-26 14:52:56 #3131 passed:    master ENH: make bdist_rpm work
+2013-07-26 13:28:38 #3127 passed:    master Merge pull request #2264 from jakevdp/setup_fix
+2013-07-26 12:41:57 #3125 passed:    master ENH add log_likelihood_score as -log_loss
+2013-07-26 12:15:31 #3123 passed:    master Merge pull request #2262 from NicolasTr/fix_statistics
+2013-07-26 11:27:15 #3119 passed:    master DOC ignoring gen_rst's parsing errors
+2013-07-26 11:09:15 #3117 passed:    master DOC add an extremely simple classifier code example to dev docs
+2013-07-26 11:04:46 #3115 passed:    master FIX inline rand_r to fix build on Windows
+2013-07-26 10:20:16 #3114 passed:    master use column_or_1d, move it to utils
+2013-07-26 10:15:09 #3112 passed:    master MAINT: misc change to copy_joblib
+2013-07-26 10:13:55 #3111 passed:    master pyflakes and pep8
+2013-07-26 10:11:58 #3110 passed:    master fix pycharm file ending
+2013-07-26 09:29:05 #3108 passed:    master FIX whoops sorry!
+2013-07-26 09:19:36 #3105 failed:    master Show 95% confidence interval, not 40% confidence ^^
+2013-07-26 09:10:56 #3104 passed:    master Merge pull request #2258 from NicolasTr/ignore_pycharm_files
+2013-07-26 09:09:43 #3103 passed:    master DOC update what's knn and radius-nn support multioutput data
+2013-07-26 09:05:09 #3102 passed:    master FIX small title issue
+2013-07-26 08:52:09 #3098 passed:    master cosmit typo
+2013-07-26 08:35:29 #3090 passed:    master DOC add missing links to the scorer and classication section
+2013-07-26 08:24:29 #3088 passed:    master BUG: fix kde tests
+2013-07-26 08:09:23 #3086 failed:    master TST small improvement of test for sample weight in svm
+2013-07-26 07:12:23 #3081 failed:    master Py3 fix
+2013-07-26 06:24:13 #3076 failed:    master :
+2013-07-26 06:14:49 #3075 failed:    master BUG: numpy 1.6 compat
+2013-07-26 05:43:48 #3069 passed:    master Update what's new
+2013-07-26 05:43:11 #3068 passed:    master One more Python 3 fix in feature_extraction.rst
+2013-07-26 05:25:48 #3062 passed:    master DOC correct/copyedit linear model docstrings
+2013-07-26 05:14:42 #3060 passed:    master FIX OrthogonalMatchingPursuit normalized twice
+2013-07-26 04:44:19 #3056 passed:    master FIX hopefully fixing travis.
+2013-07-26 04:23:02 #3055 passed:    master FIX hopefully fixing travis.
+2013-07-26 04:02:03 #3049 passed:    master FIX docstring
+2013-07-26 03:45:49 #3045 passed:    master Merge pull request #2247 from pgervais/docfixes
+2013-07-26 03:34:20 #3043 passed:    master Merge pull request #2241 from arjoly/grid-cv-multioutput
+2013-07-26 03:24:17 #3039 passed:    master Merge branch 'pr/2246'
+2013-07-26 03:11:53 #3036 passed:    master Merge pull request #2230 from pprett/neighbors-segfault-fix
+2013-07-26 02:55:53 #3034 passed:    master update what's new + classes.rst
+2013-07-25 19:19:06 #3027 passed:    master Merge pull request #2229 from larsmans/kernel-center-narrative
+2013-07-25 17:37:22 #3025 passed:    master FIX: imputation example
+2013-07-25 12:26:08 #3020 passed:    master ENH make spectral clustering test more stable to random seed
+2013-07-25 12:11:58 #3018 passed:    master DOC minor copyedit to FS docs
+2013-07-25 12:10:10 #3017 passed:    master DOC expand feature selection docs with an example
+2013-07-25 11:43:04 #3013 passed:    master FIX missing deprecation release information.
+2013-07-25 11:25:05 #3008 passed:    master FIX: Newer numpy causes scipy to issue a DeprecationWarning. Ignore it. Fixes #2234.
+2013-07-25 11:15:13 #3005 passed:    master Merge remote-tracking branch 'upstream/master'
+2013-07-25 11:13:28 #3004 passed:    master DOC let some example for prf metrics
+2013-07-25 11:05:18 #2999 passed:    master MAINT ignore profiling results from kernprof.py
+2013-07-25 10:47:54 #2993 passed:    master Update .travis.yml
+2013-07-25 10:40:02 #2992 errored:   master Trying to enable python 3.3 too.
+2013-07-25 10:38:43 #2991 passed:    master Merge pull request #2228 from amueller/travis_virtualenv_stuff
+2013-07-25 10:30:19 #2988 passed:    master DOC copyedit preprocessing docs
+2013-07-25 09:56:15 #2984 passed:    master FIX what's new...
+2013-07-25 09:43:36 #2982 passed:    master Merge pull request #2223 from arjoly/doc-datasets
+2013-07-25 09:26:11 #2979 passed:    master FIX: use range instead of xrange
+2013-07-25 09:15:32 #2974 passed:    master Update what's thanks @NicolasTr
+2013-07-25 08:58:29 #2971 passed:    master Fix import names
+2013-07-25 08:34:37 #2970 passed:    master fix whitespace around new tree.pyx docstring
+2013-07-25 07:51:46 #2964 passed:    master Benchmark: use specified dtype
+2013-07-25 07:31:36 #2960 passed:    master Refactored verbose output in GBRT - output much more nice
+2013-07-25 06:52:53 #2954 passed:    master Merge pull request #2194 from NicolasTr/as_float_array_copy
+2013-07-25 06:06:14 #2952 passed:    master ENH : removing warnings from tests in cd linear models
+2013-07-25 05:46:07 #2950 passed:    master doc: hedge the use of OOB estimates
+2013-07-25 05:38:51 #2949 passed:    master Update mailmap
+2013-07-25 05:35:39 #2948 passed:    master MISC : use linalg from scipy
+2013-07-25 05:03:00 #2938 passed:    master Merge pull request #2175 from ogrisel/nb-partial-fit
+2013-07-25 04:53:46 #2934 passed:    master DOC : better doc of array shapes in fastica
+2013-07-25 04:49:28 #2933 passed:    master FIX on py3k, we need explicit relative imports
+2013-07-25 04:45:50 #2931 passed:    master DOC FIX typo on fbeta, closes #2219
+2013-07-25 04:37:11 #2929 passed:    master DOC: @amueller's comments
+2013-07-25 04:30:47 #2928 passed:    master DOC+ENH: fixes in least_angle + one vectorization
+2013-07-25 04:16:15 #2926 passed:    master Merge pull request #2182 from NelleV/pls_refactor_2
+2013-07-25 04:11:53 #2924 passed:    master Merge pull request #2217 from vene/ica_fit_transform
+2013-07-25 03:50:59 #2912 passed:    master DOC pep257 + c/e in sklearn.base
+2013-07-25 02:54:23 #2901 passed:    master Merge pull request #2216 from glouppe/tree-doc
+2013-07-25 02:45:57 #2899 passed:    master DOC copyedit RBM docstrings
+2013-07-24 18:29:22 #2892 passed:    master FIX missing class attribute in ICA. Common test was failing
+2013-07-24 14:46:27 #2887 passed:    master Merge pull request #2213 from cmd-ntrf/master
+2013-07-24 13:06:31 #2885 passed:    master Merge pull request #2212 from dengemann/ica_memory
+2013-07-24 12:02:27 #2874 passed:    master Removed unused import
+2013-07-24 11:08:48 #2869 passed:    master PY3 fix RBM test
+2013-07-24 10:49:29 #2867 passed:    master cosmit : protect attributes in RBM for sphinx
+2013-07-24 10:38:47 #2866 passed:    master MAINT _logistic_sigmoid.c is "binary"
+2013-07-24 08:53:05 #2854 passed:    master Merge pull request #2205 from jaquesgrobler/ENH_rel_canonical
+2013-07-24 08:51:06 #2853 passed:    master FIX bug in scorers that take probabilities
+2013-07-24 07:48:49 #2850 passed:    master ENH simplify the Scorer API
+2013-07-24 07:20:28 #2847 passed:    master Merge pull request #2203 from agramfort/cov_doc_fix
+2013-07-24 07:02:37 #2842 passed:    master fix: python3.3 warning fix
+2013-07-24 06:47:39 #2840 passed:    master COSMIT product(..., repeat=2)
+2013-07-24 05:35:27 #2838 passed:    master fix: use asserts from sklearn.utils.testing
+2013-07-24 05:13:16 #2837 passed:    master covertype benchmark: use C-style input as default (most models require it as input)
+2013-07-24 04:53:50 #2836 passed:    master Merge branch 'gbrt-oob-improvement'
+2013-07-24 04:38:12 #2834 passed:    master Small docstring changes for plot_ward_structured_vs_unstructered example, as mentioned in PR #2017
+2013-07-24 04:27:04 #2832 passed:    master Merge pull request #2017 from jaquesgrobler/ENH_docstrings_in_gallery
+2013-07-24 04:07:20 #2827 passed:    master Merge pull request #2202 from NelleV/isotonic_reverse
+2013-07-24 03:32:29 #2825 passed:    master COSMIT explicit None check in naive Bayes
+2013-07-23 11:59:21 #2804 passed:    master Merge pull request #2195 from erg/bug-2189
+2013-07-23 11:01:04 #2795 passed:    master FIX: Py3 print statements to print functions
+2013-07-23 10:25:14 #2789 passed:    master update what's new
+2013-07-23 09:47:52 #2784 passed:    master Merge pull request #2196 from erg/labelencoder-docs-fix
+2013-07-23 09:47:32 #2783 passed:    master adding comment
+2013-07-23 08:50:38 #2777 passed:    master update ICA examples
+2013-07-23 08:45:36 #2776 passed:    master Fix broken link to web designer
+2013-07-23 08:44:43 #2775 passed:    master Fix broken link to web designer
+2013-07-23 08:18:10 #2771 passed:    master COSMIT pep8
+2013-07-23 08:03:54 #2769 passed:    master COSMIT sphinx fixes
+2013-07-23 06:45:21 #2759 passed:    master FIX faulty import in 20news docs
+2013-07-22 11:09:16 #2725 passed:    master Merge pull request #2187 from FedericoV/non_negative_style
+2013-07-22 10:58:19 #2721 passed:    master FIX signature
+2013-07-22 10:54:06 #2719 passed:    master TST remove unused tests
+2013-07-22 10:25:21 #2716 passed:    master [DOC] missing parameter description
+2013-07-22 10:00:49 #2706 passed:    master FIX ^ is a symetric difference
+2013-07-22 09:30:56 #2700 failed:    master COSMIT refactor forests, part 2
+2013-07-22 09:23:42 #2698 failed:    master COSMIT refactor random forests
+2013-07-22 09:19:08 #2695 failed:    master Merge branch 'pr_2002'
+2013-07-22 09:07:39 #2690 failed:    master TST use TruncatedSVD in random forest tests
+2013-07-22 09:01:22 #2689 passed:    master ENH better error message when estimators don't specify their parameters in the signature.
+2013-07-22 08:36:22 #2686 passed:    master FIX: ur strings are not supported in Python 3.3
+2013-07-22 08:22:22 #2685 passed:    master FIX: remove -funroll-all-loops
+2013-07-22 08:19:10 #2684 passed:    master TST skip Graphviz export docstring in trees
+2013-07-22 08:19:09 #2683 passed:    master PY3 fix string literal syntax error
+2013-07-22 08:12:58 #2682 passed:    master Merge remote-tracking branch 'upstream/master'
+2013-07-22 07:23:48 #2678 passed:    master FIX: remove debug message
+2013-07-22 07:21:04 #2677 passed:    master DOC 20news filtering with smaller set and MultinomialNB
+2013-07-22 06:03:22 #2675 passed:    master PEP8
+2013-07-22 05:53:57 #2674 passed:    master What's new: new implementation for trees
+2013-07-22 05:44:58 #2673 passed:    master Merge pull request #2131 from glouppe/trees-v2
+2013-07-22 05:28:57 #2667 passed:    master Make callable svc test more robust for MacOSX.
+2013-07-22 04:19:54 #2662 passed:    master BUG: fix sparsetools tests in old scipy
+2013-07-22 03:35:23 #2661 failed:    master Now that the folder has more than just mst in it, rename to sparsetools, which should help with referencing it.
+2013-07-22 03:26:59 #2660 passed:    master DOC/FIX twenty_newsgroups.rst should use TfidfVectorizer
+2013-07-22 03:05:42 #2657 passed:    master FIX memory usage in DictVectorizer.fit
+2013-07-19 13:35:24 #2651 passed:    master More readable condition and more precise error message
+2013-07-18 15:35:57 #2640 passed:    master DOC correct class_weight description for LogisticRegression
+2013-07-18 09:50:36 #2631 passed:    master PY3 use urllib2 or urllib.request, based on Py2/3
+2013-07-16 17:05:08 #2600 passed:    master Revert "TST r2_score float32 overflow fix"
+2013-07-16 16:31:36 #2599 failed:    master TST r2_score float32 overflow fix
+2013-07-16 06:07:53 #2597 passed:    master Update Python 3 support status
+2013-07-16 05:09:11 #2596 passed:    master FIX: Py3 / pep8 fixes in test_ball_tree / test_kd_tree
+2013-07-16 04:52:32 #2595 passed:    master FIX: pep8 and Py3 support in sklearn.neighbors.dist_metrics
+2013-07-16 04:19:07 #2594 passed:    master FIX: pep8 + Py3 fixes in test_dist_metrics
+2013-07-16 03:51:43 #2592 passed:    master FIX: Python 3 support for the neighbors doctests
+2013-07-16 03:32:10 #2591 passed:    master FIX: pep8 and Py3 support in sklearn.neighbors.base
+2013-07-15 10:08:44 #2588 passed:    master P3K developer docs
+2013-07-14 11:48:48 #2566 passed:    master Merge branch 'pr_1732'
+2013-07-14 08:45:03 #2565 passed:    master BUG: restore Python 2.6
+2013-07-14 07:42:53 #2564 passed:    master Fix two remaining python3 bugs.
+2013-07-13 21:50:29 #2562 passed:    master example yahoo stock issue fix
+2013-07-13 17:19:58 #2559 passed:    master BUG: type conversion in spectral_embedding
+2013-07-13 09:44:46 #2552 passed:    master PY3: refcounting change introduced a regression on the use of resize in LARS
+2013-07-13 08:02:58 #2550 passed:    master Merge more Py3 fixes
+2013-07-12 10:11:43 #2534 passed:    master COSMIT fix a docstring in feature_extraction.text
+2013-07-12 10:10:21 #2533 passed:    master COSMIT simplify printing of number of fits in grid search
+2013-07-12 09:59:55 #2532 passed:    master COSMIT refactor document frequency implementations
+2013-07-12 08:51:36 #2530 passed:    master Test for singular matrices in Ridge regression
+2013-07-11 09:56:57 #2511 passed:    master Merge pull request #2146 from ianozsvald/clearer_iris_decision_surfaces
+2013-07-11 09:52:53 #2510 passed:    master MISC: details about the donations
+2013-07-11 09:37:10 #2508 failed:    master BUG: replace elif by if in Ridge solver selection.
+2013-07-11 09:28:50 #2507 passed:    master Merge branch 'master' of github.com:scikit-learn/scikit-learn
+2013-07-11 08:57:27 #2506 passed:    master DOC fix erroneous docstring on preprocessing._transform_selected.
+2013-07-11 04:51:26 #2498 passed:    master ENH order *does* matter for sparse matrices
+2013-07-10 08:49:29 #2470 passed:    master Donate buttons added `About us` and front page
+2013-07-10 06:28:23 #2464 passed:    master Merge pull request #2145 from NelleV/kCCA
+2013-07-10 04:32:17 #2458 passed:    master Merge pull request #2142 from sergeyf/master
+2013-07-09 14:24:09 #2444 passed:    master Merge pull request #2140 from arjoly/ajoly-glouppe-sponsor
+2013-07-09 08:24:09 #2437 passed:    master Better status for the Py3 port
+2013-07-09 08:08:35 #2436 passed:    master DOC more explicit description of degree param on SVMs
+2013-07-08 17:00:13 #2430 passed:    master Merge pull request #2138 from NelleV/kCCA
+2013-07-08 11:36:03 #2428 passed:    master DOC what's new: faster KMeans
+2013-07-08 07:32:05 #2423 passed:    master FIX KMeans bug; argsort result apparently not always C-contiguous
+2013-07-08 07:20:15 #2422 failed:    master ENH optimize KMeans for sparse inputs
+2013-07-08 06:57:09 #2418 passed:    master ENH use a comprehension over imap
+2013-07-08 05:00:58 #2413 passed:    master Merge pull request #2135 from fhs/meanshift-doc
+2013-07-05 14:53:27 #2379 passed:    master FIX copy in OneHotEncoder and _transform_selected
+2013-07-05 13:20:17 #2378 passed:    master Merge pull request #2027 from mblondel/select_categorical
+2013-07-05 13:18:24 #2377 passed:    master TST + PY3 various fixes
+2013-07-04 09:02:24 #2370 passed:    master Fix failure in svd-based ridge solver w/ old numpy.
+2013-07-04 07:18:59 #2368 passed:    master Remove unused variable.
+2013-07-04 06:42:45 #2367 passed:    master FIX failing doctest for CountVectorizer
+2013-07-04 06:33:32 #2366 failed:    master Add warning when fall back to other solver.
+2013-07-04 06:26:43 #2365 failed:    master FIX inconsistent attributes shapes in naive Bayes
+2013-07-04 06:14:43 #2364 failed:    master FIX search bug introduced in 1327057f4258f41712ecab5c94770aac5ff01982
+2013-07-04 06:13:19 #2363 passed:    master Fix failures in grid search.
+2013-07-04 05:47:22 #2362 failed:    master Cosmit.
+2013-07-04 05:24:41 #2360 failed:    master FIX remove params from RandomizedSearchCV
+2013-07-03 12:10:03 #2357 passed:    master FIX verbose output from k-means
+2013-07-03 08:06:22 #2354 passed:    master Revert "FIX charset -> encoding in load_files"
+2013-07-03 07:53:50 #2353 failed:    master DOC typo
+2013-07-02 14:38:51 #2344 passed:    master DOC: Clarify docs on preprocessing.Binarizer.
+2013-07-02 11:57:04 #2343 passed:    master PY3: New test for the get_params handling of deprecated attributes.
+2013-07-02 05:25:42 #2341 passed:    master DOC fix some broken URLs
+2013-07-01 09:11:57 #2328 passed:    master COSMIT refactor LibSVM wrapper for safety and readability
+2013-06-30 10:07:34 #2322 passed:    master ENH lots of benchmarks fixes
+2013-06-30 09:58:06 #2321 passed:    master FIX off-by-one error in neighbors benchmark
+2013-06-30 09:52:41 #2320 passed:    master FIX mbkmeans benchmark bug (k instead of n_clusters)
+2013-06-30 08:52:11 #2319 passed:    master ENH micro-optimize RFECV
+2013-06-30 08:01:22 #2318 passed:    master DOC typo
+2013-06-30 07:59:58 #2317 passed:    master FIX/ENH mean shift clustering
+2013-06-30 07:44:01 #2316 passed:    master MAINT dedup Clay Woolam's contribs (>100 commits!)
+2013-06-30 07:37:43 #2315 passed:    master PY3 xrange, np.divide, string.uppsercase, None comparison
+2013-06-30 07:18:39 #2314 passed:    master DOC missing stuff in randomized_l1 module
+2013-06-30 07:05:48 #2313 passed:    master DOC Acknowledge sponsors for the Paris sprint
+2013-06-30 01:14:15 #2311 passed:    master Merge pull request #2118 from NelleV/DOC_fix
+2013-06-29 14:59:49 #2307 passed:    master Move the new "Decoding text files" doc section
+2013-06-29 08:33:39 #2296 passed:    master DOC spelling and clarification
+2013-06-28 11:47:36 #2286 passed:    master Merge pull request #2104 from kastnerkyle/master
+2013-06-26 13:17:52 #2272 passed:    master FIX: do not print to many messages to stdout when generating the documentation
+2013-06-26 12:24:42 #2271 passed:    master DOC fix V-measure docstring
+2013-06-24 01:50:47 #2253 passed:    master COSMIT move deprecated parameter to end
+2013-06-24 01:17:45 #2252 passed:    master Make the out-of-core example plot work when launched by the sphinx extension
+2013-06-24 01:09:05 #2251 passed:    master FIX: make doc auto-linking support any Unicode / UTF-8 content
+2013-06-23 21:46:36 #2248 passed:    master Merge pull request #2090 from kanielc/fix_weight
+2013-06-23 14:25:23 #2243 passed:    master Merge pull request #2087 from ahojnnes/examples-print-doc
+2013-06-22 17:06:04 #2238 passed:    master Merge pull request #2085 from agramfort/fix_y_score_fa
+2013-06-22 14:33:07 #2234 passed:    master FIX avoid spectral_embedding naming conflict
+2013-06-22 14:18:33 #2233 passed:    master Merge pull request #2082 from larsmans/empty-parameter-grid
+2013-06-22 12:19:41 #2231 passed:    master DOC fix some docstring/parameter list mismatches
+2013-06-22 09:56:21 #2229 passed:    master BUG delete/delete[] error in Liblinear
+2013-06-22 04:41:10 #2225 passed:    master DOC fix RandomizedPCA docstring for n_components=None
+2013-06-21 17:51:26 #2221 passed:    master DOC fix some docstring/parameter list mismatches
+2013-06-21 08:46:01 #2207 passed:    master fix: needs_threshold not plural in repr
+2013-06-21 05:28:44 #2203 passed:    master Merge pull request #2004 from oddskool/out-of-core-examples
+2013-06-20 19:09:34 #2198 passed:    master Merge pull request #2054 from ogrisel/invalid-n-folds
+2013-06-20 12:49:34 #2194 passed:    master Merge pull request #2080 from ahojnnes/dist-todo
+2013-06-18 14:27:52 #2188 passed:    master DOC much more readable formula in chi2 kernel doc
+2013-06-18 11:46:52 #2183 passed:    master FIX don't rely on Bunch behavior with fetch_covtype
+2013-06-18 01:54:24 #2179 passed:    master Merge pull request #2076 from pprett/dbscan-doc-enh
+2013-06-17 18:15:34 #2176 passed:    master DOC copy comment describing hierarchical clustering children
+2013-06-17 17:20:31 #2173 passed:    master DOC no more mention of the Bunch in the narrative docs
+2013-06-17 15:32:42 #2172 passed:    master Merge pull request #2074 from jnothman/ward_docstring
+2013-06-17 09:21:03 #2169 passed:    master FIX : use unique from fixes
+2013-06-17 08:57:23 #2168 passed:    master Merge pull request #2075 from jnothman/agglomeration_simplify
+2013-06-15 14:56:42 #2154 passed:    master Merge pull request #2071 from djv/patch-1
+2013-06-15 03:30:35 #2152 passed:    master COSMIT add underscore prefixes where forgotten in cross_validation
+2013-06-14 15:09:38 #2151 passed:    master Merge pull request #2067 from jnothman/test_binarizer
+2013-06-14 01:11:55 #2141 passed:    master Merge pull request #2055 from jnothman/cv_refactor
+2013-06-13 13:00:13 #2131 passed:    master MAINT remove deprecated gprime handling from FastICA + refactoring
+2013-06-13 10:03:43 #2129 passed:    master FIX metrics/scoring bug with LeaveOneOut CV
+2013-06-13 03:59:05 #2126 passed:    master ENH: removed leftover condition to get a wider application of the import all consistency check
+2013-06-13 03:52:38 #2124 passed:    master DOC fix docstring headings
+2013-06-12 08:52:40 #2121 passed:    master ENH: Added input checks in confusion_matrix
+2013-06-12 06:40:55 #2120 passed:    master Merge pull request #1716 from larsmans/truncated-svd
+2013-06-12 04:39:37 #2118 passed:    master Merge pull request #2056 from jnothman/leavepout_clarify
+2013-06-11 20:15:54 #2113 passed:    master COSMIT pep8 in cross_val_score
+2013-06-09 23:32:16 #2100 passed:    master FIX use Python 2.6-compatible str.format
+2013-06-09 23:02:04 #2099 passed:    master FIX inconsistent cv_scores_ generation for randomized search and re-add example
+2013-06-09 20:51:22 #2096 passed:    master FIX numpy 1.3 throws error with array of arrays
+2013-06-09 20:25:01 #2095 passed:    master FIX/TST np.squeeze in numpy1.3 fails with array of sequences
+2013-06-09 20:00:45 #2094 passed:    master FIX numpy 1.3 has no float16; use float32
+2013-06-09 07:53:07 #2092 passed:    master COSMIT remove redundant target size check
+2013-06-09 07:43:49 #2091 passed:    master FIX need explicit dtype for array of sequences in numpy 1.3
+2013-06-09 07:34:45 #2090 passed:    master FIX cannot use set notation for Py2.6
+2013-06-09 07:08:45 #2089 passed:    master FIX/COSMIT helper to identify target types
+2013-06-06 05:14:08 #2075 passed:    master Merge pull request #1914 from fabianp/ridge_svd
+2013-06-05 16:40:51 #2067 passed:    master Remove redundant test that was checked in by mistake
+2013-06-05 13:23:08 #2065 passed:    master FIX #2032, FIX #2033: ensure module names consistency with __all__
+2013-06-05 00:00:05 #2061 passed:    master Merge pull request #2031 from jnothman/tree_comments
+2013-06-04 07:02:56 #2053 passed:    master Added new files (from previous commit)
+2013-06-04 04:46:29 #2051 passed:    master Move balance_weights out of preprocessing.
+2013-06-04 00:44:38 #2050 passed:    master Documentation ERROR: mixture.DPGMM.precs_
+2013-06-03 02:13:07 #2037 passed:    master ENH remove warnings at testing time
+2013-06-01 10:43:27 #2031 passed:    master FIX yet another chi2 bug
+2013-06-01 10:27:55 #2030 failed:    master FIX bug (swapped args) in chi2
+2013-06-01 09:37:28 #2029 passed:    master DOC dependency installation with yum (Red Hat, CentOS)
+2013-05-31 02:32:10 #2024 passed:    master fix: add missing str formatting operator
+2013-05-31 02:26:29 #2023 passed:    master added SGD L2 fix to whatsnew
+2013-05-30 06:37:21 #2022 passed:    master ENH speed up sklearn.feature_selection.chi2
+2013-05-28 22:15:38 #2013 passed:    master DOC explain labels parameter to confusion_matrix
+2013-05-28 01:58:44 #2007 passed:    master ENH faster unique_labels for big sequences of sequences
+2013-05-27 18:09:37 #1998 passed:    master Fixed typo in metrics.py
+2013-05-27 07:36:01 #1989 passed:    master Merge pull request #2005 from kmike/test_pipeline_methods_preprocessing_svm
+2013-05-27 00:59:15 #1970 passed:    master Corrected a few things on the Mutual Information doc pages.
+2013-05-26 10:15:12 #1963 passed:    master BUG: old versions of numpy
+2013-05-26 09:51:21 #1962 passed:    master BUG: old versions of numpy
+2013-05-26 08:58:40 #1961 passed:    master ENH: avoid MemoryError on manhattan_distances
+2013-05-24 07:48:03 #1949 passed:    master Merge pull request #1996 from jaquesgrobler/DOC_sprint_sponser_banner
+2013-05-24 01:51:15 #1946 passed:    master Merge pull request #1998 from kgeis/fix-setup-instruction
+2013-05-23 07:13:40 #1937 passed:    master DOC correct note on handling 0-denominator in P/R/F
+2013-05-22 18:21:12 #1927 passed:    master TSTFIX use name, not metric, in test_metrics error messages
+2013-05-22 18:14:17 #1926 passed:    master COSMIT prefer partial over lambda in test_metrics
+2013-05-22 08:49:13 #1918 passed:    master TST Use assert_almost_equal in test_symmetry
+2013-05-22 04:54:45 #1912 passed:    master Merge pull request #1986 from jaquesgrobler/DOC_reference_fixes
+2013-05-21 13:20:39 #1902 passed:    master DOC clarification in Scoring objects: Its not a good sign if I don't understand my own wording.
+2013-05-21 10:16:33 #1901 passed:    master BUG: set random state in LogisticRegression
+2013-05-21 07:29:36 #1899 passed:    master DOC add some contributions to What's New
+2013-05-21 07:04:39 #1898 passed:    master DOC/COSMIT fix typos in What's New
+2013-05-21 06:55:45 #1897 passed:    master DOC rewrite descriptions of P/R/F averages and define support
+2013-05-20 22:55:11 #1893 passed:    master ENH Create FeatureSelectionMixin for shared [inverse_]transform code
+2013-05-20 15:47:28 #1890 passed:    master ignore PDFs
+2013-05-20 03:53:40 #1889 passed:    master COSMIT shorten long line for pep8
+2013-05-19 22:41:53 #1888 passed:    master DOC fix typos
+2013-05-19 22:22:35 #1886 passed:    master ENH add multilabel support to PRF metric family
+2013-05-19 09:54:13 #1884 passed:    master DOC Fixed documentation of kernel parameters: sigm uses gamma, but not degree. Closes #1972.
+2013-05-19 09:46:41 #1883 passed:    master DOC fetch_20newsgroups returns the text, not text files. see SO question: http://stackoverflow.com/questions/16615523/using-scikits-kmeans-to-cluster-ones-own-documents
+2013-05-17 10:23:21 #1877 passed:    master COSMIT refactor AdaBoost code
+2013-05-16 05:39:25 #1870 passed:    master DOC clarification of parameter search
+2013-05-16 00:20:20 #1868 passed:    master DOC rename lambda to alpha in plot_lasso_coordinate_descent_path. (Re)-Closes #903.
+2013-05-14 14:30:02 #1865 passed:    master maintenance scripts added for machine learning maps - needed for modifying the map in future
+2013-05-13 22:28:21 #1863 passed:    master DOC Fix estimator unsupervised fit method signature
+2013-05-13 12:47:27 #1858 passed:    master ENH: add pre_dispatch option to cross_val_score
+2013-05-13 07:24:22 #1856 passed:    master Fix setup.py to resolve numpy requirement
+2013-05-13 06:49:35 #1855 passed:    master Fixed precompute issue (again) in ElasticNet and enet_path
+2013-05-12 04:20:55 #1851 passed:    master Merge pull request #1880 from NicolasTr/patch_extractor_float_max_patches
+2013-05-12 02:42:56 #1850 passed:    master MAINT: refactored metrics.auc to use np.trapz
+2013-05-12 02:20:57 #1849 passed:    master FIX bug where hinge_loss(..., neg_label=1) produced incorrect results
+2013-05-12 02:15:59 #1848 passed:    master COSMIT refactor roc_curve and precision_recall_curve
+2013-05-12 00:20:55 #1846 passed:    master DOC small typographical fixes in grid_search documentation
+2013-05-10 10:52:51 #1845 passed:    master DOC typo in RandomizedSearchCV docstring
+2013-05-09 03:42:04 #1838 passed:    master Import gzip and bz2 only if necessary.
+2013-05-07 21:37:45 #1824 passed:    master ENH Use csr_matrix.sum_duplicates instead of tocoo
+2013-05-07 15:53:43 #1821 passed:    master FIX typo in test for RdigeCV
+2013-05-07 14:47:33 #1818 passed:    master COSMIT: more robust condition in inverse_transform.
+2013-05-07 14:42:24 #1817 passed:    master COSMIT: same changes in transform method.
+2013-05-07 14:38:26 #1816 passed:    master COSMIT: better notation in CountVectorizer.
+2013-05-07 10:48:06 #1814 passed:    master fixed typo
+2013-05-07 07:44:52 #1811 passed:    master TST test CountVectorizer.stop_words_ value
+2013-05-07 07:33:39 #1809 passed:    master ENH Feature selection should use CSC matrices
+2013-05-07 07:27:56 #1807 passed:    master Merge pull request #1935 from jnothman/base_filter_inv_transform
+2013-05-07 05:45:05 #1802 passed:    master Merge pull request #1944 from jnothman/selectpercentile_limit_bug
+2013-05-07 01:09:21 #1801 passed:    master DOC: cosmit - fix latex typo
+2013-05-06 11:02:51 #1793 passed:    master FIX compatibility issue with np 1.3 py 2.6
+2013-05-06 07:06:24 #1787 passed:    master COSMIT: txt -> rst
+2013-05-06 06:42:33 #1784 passed:    master ENH add jaccard similarity score metrics
+2013-05-06 04:16:43 #1779 passed:    master Merge pull request #1911 from Jim-Holmstroem/generalize_label_type_for_confusion_matrix
+2013-05-05 16:33:25 #1771 passed:    master Merge pull request #1924 from jaquesgrobler/FIX_sidebar_on_index_page
+2013-05-05 07:39:23 #1765 passed:    master DOC return_path argument, prettier references
+2013-05-05 07:25:19 #1764 passed:    master FIX test error in test common for KernelPCA that doesn't respect its n_components.
+2013-05-04 12:09:58 #1760 passed:    master FIX: restore numpy 1.3.0 compat with np.divide fix
+2013-05-04 10:18:17 #1759 passed:    master DOC added link to scipy lecture notes to tuts
+2013-05-04 10:14:13 #1758 passed:    master FIX bug in callable kernel decision function - Sorry, I think that was me.
+2013-05-04 10:11:16 #1757 passed:    master FIX DictVectorizer behavior on empty X and empty samples
+2013-05-04 07:53:12 #1754 passed:    master FIX WARN about **params being not used in GridSearchCV.fit. Closes #1815.
+2013-05-04 06:53:42 #1753 passed:    master FIX broken scorer, add non-regression test.
+2013-05-04 06:36:55 #1752 passed:    master DOC documented n_init parameter of MiniBatchKMeans. Closes #1900.
+2013-05-04 05:30:54 #1750 passed:    master Merge pull request #1884 from jaquesgrobler/ml_map
+2013-05-04 03:57:59 #1748 passed:    master FIX jenkins error on numpy 1.3.0
+2013-05-04 03:44:48 #1747 passed:    master COSMIT pep8
+2013-05-04 03:35:05 #1746 passed:    master FIX scores calculation in ovo multiclass
+2013-05-03 10:50:04 #1743 passed:    master BUG disable memory-blowing SVD for sparse input in RidgeCV
+2013-05-01 11:20:59 #1713 passed:    master Merge pull request #1913 from Jim-Holmstroem/refactored_precision_recall_fscore_support_to_count_with_integer_type
+2013-05-01 06:50:50 #1711 passed:    master FIX: use the mldata mock in docstring as well
+2013-05-01 06:38:43 #1710 passed:    master clean up mailmap/deduplicate contributors
+2013-04-30 09:08:50 #1705 passed:    master DOC typos in cross-validation description
+2013-04-30 01:36:21 #1703 passed:    master DOC: Replaced all BSD style licenses with "BSD 3 clause"
+2013-04-30 01:04:46 #1702 failed:    master COSMIT: labels in plot_lasso_coordinate_descent_path
+2013-04-29 14:59:55 #1693 passed:    master DOC define validation before cross validation
+2013-04-29 11:21:41 #1692 passed:    master DOC add 2012 GSOC students
+2013-04-29 10:22:02 #1691 passed:    master REFACTOR combine train_wrap and csr_train_wrap
+2013-04-29 10:08:55 #1689 passed:    master mailmap entry for @lqdc
+2013-04-29 10:05:45 #1688 passed:    master ENH speed up TfidfTransformer using spdiags
+2013-04-29 06:12:28 #1685 passed:    master Merge pull request #1907 from aflaxman/stratified_shuffle_split_rand_state_doc_str
+2013-04-28 09:51:04 #1678 passed:    master DOC rewrite description of k-fold CV
+2013-04-28 08:51:57 #1677 passed:    master COSMIT pep8
+2013-04-27 08:25:31 #1676 passed:    master Replaced 'for i' with 'for _' at place where i is not used.
+2013-04-27 05:46:18 #1675 passed:    master check_pairwise_arrays() preserves dtype==numpy.float32
+2013-04-26 05:58:31 #1669 passed:    master COSMIT do np.unique(y) once in SVC
+2013-04-26 05:46:09 #1668 passed:    master FIX SVR complaining about a single class in the input
+2013-04-26 05:46:57 #1667 passed:    master TST strengthen AdaBoost tests
+2013-04-26 06:07:21 #1666 failed:    master Added random_state=0 for AdaBoostRegressor
+2013-04-26 05:44:57 #1664 passed:    master DOC replace "arithmetical order" in AdaBoost docs
+2013-04-26 04:58:27 #1663 passed:    master DOC describe API, not internals, for AdaBoost
+2013-04-25 16:23:34 #1660 passed:    master COSMIT: address @agramfort's comments
+2013-04-25 11:19:06 #1659 passed:    master Merge pull request #1893 from dougalsutherland/sgd-docs
+2013-04-25 08:42:28 #1656 failed:    master removed class_weight parameter from RidgeClassifier.fit()
+2013-04-25 07:33:25 #1654 passed:    master TYPO fix
+2013-04-24 16:46:45 #1646 passed:    master Release GIL around sparse liblinear training
+2013-04-24 10:10:14 #1639 passed:    master DOC: libatlas3-base in requirement
+2013-04-24 06:38:48 #1635 passed:    master DOC I didn't mean soft-O by "tilde notation"
+2013-04-24 06:35:34 #1634 passed:    master ENH refactor and further speed up CountVectorizer
+2013-04-24 02:03:57 #1633 passed:    master Merge pull request #1886 from NelleV/DOX_fix
+2013-04-22 10:37:19 #1616 passed:    master DOC: remove typo
+2013-04-22 10:27:36 #1615 passed:    master Update hmm.rst
+2013-04-22 07:41:33 #1614 passed:    master FIX BytesIO and urllib usage in fetch_olivetti_faces
+2013-04-22 07:26:15 #1613 passed:    master DOC PR means pull request
+2013-04-20 10:07:36 #1601 passed:    master fix numbering for tutorials page
+2013-04-19 14:15:14 #1598 passed:    master ENH Rewrote CountVectorizer fit_transform to be ~40% faster
+2013-04-18 11:04:59 #1589 failed:    master Update LIBSVM_CHANGES
+2013-04-18 09:20:11 #1588 passed:    master Merge branch 'master' of github.com:scikit-learn/scikit-learn
+2013-04-18 09:04:15 #1587 passed:    master DOC: put feature extraction before pre-processing.
+2013-04-18 08:38:33 #1586 passed:    master DOC multiclass: typo and use case
+2013-04-18 07:50:48 #1585 passed:    master temp disable line-count-sort for gallery while fixing bug
+2013-04-18 06:24:48 #1582 passed:    master Merge pull request #1581 from jaquesgrobler/example_gallery_cleanup
+2013-04-18 04:29:29 #1581 passed:    master newline at end of file
+2013-04-18 04:26:21 #1580 passed:    master Switch off survey banner
+2013-04-17 09:36:06 #1574 passed:    master DOC Add labels and some explanation to confusion matrix example
+2013-04-17 09:32:16 #1573 passed:    master ENH actually use scikit-learn's PCA class in plot_pca_3d.py
+2013-04-16 08:40:06 #1568 passed:    master ENH Release GIL when entering LibSVM/Liblinear code
+2013-04-16 07:04:56 #1567 passed:    master DOC distributions produced by hashing trick depend on input
+2013-04-16 06:45:47 #1566 failed:    master ENH speed improvements in HMM
+2013-04-16 05:54:35 #1565 failed:    master ENH: output criterion name instead of "error" in export_graphviz
+2013-04-16 06:11:51 #1564 passed:    master ENH reduce size of files produced by dump_svmlight_file
+2013-04-15 16:02:45 #1563 passed:    master BUG Add lambda_ attribute to ARDRegression after fit
+2013-04-15 15:21:42 #1562 passed:    master pep8
+2013-04-15 10:56:25 #1556 passed:    master FIX setting k in KMeans and MiniBatchKMeans was silently ignored. Left over in 07c56d7cd2ddfe71e7a4399d74fc367d6000d854 Damn, that was nasty :-/
+2013-04-14 09:34:44 #1548 passed:    master COSMIT typo. the French again ;)
+2013-04-14 03:29:44 #1545 failed:    master ENH: minor changes for numpy versions
+2013-04-11 14:36:52 #1541 failed:    master Merge pull request #1852 from slattarini/typofixes
+2013-04-11 09:25:56 #1539 passed:    master DOC: document attributes fitted by DictVectorizer.
+2013-04-09 10:33:21 #1535 passed:    master Fixx doctest.
+2013-04-09 09:49:46 #1534 failed:    master Fix random state where appropriate.
+2013-04-09 09:46:21 #1533 failed:    master BUG: fix replacement for _neg.
+2013-04-09 09:27:45 #1532 failed:    master Demystify magic values in NNLS implementation.
+2013-04-09 05:57:49 #1530 failed:    master get rid of ``rho`` in sgd documentation - has been replaced by ``l1_ratio``
+2013-04-08 07:02:43 #1527 passed:    master Merge pull request #1836 from kmike/master
+2013-04-04 17:46:27 #1521 passed:    master Merge pull request #1839 from amueller/dbscan_example
+2013-04-03 11:02:22 #1514 passed:    master PY3 allow multiple base classes in six.with_metaclass
+2013-04-03 03:26:16 #1513 passed:    master BUG: ElasticNectCV choosing improper l1_ratio
+2013-04-02 07:57:00 #1508 passed:    master Merge pull request #1823 from erg/issue-1466
+2013-04-02 06:36:18 #1507 passed:    master DOC fix macports package name
+2013-04-02 06:31:13 #1506 passed:    master COSMIT pep8
+2013-04-02 03:36:19 #1502 passed:    master FIX make *SearchCV picklable
+2013-04-01 06:57:59 #1497 passed:    master PY3 + TST decouple test_metrics from random module
+2013-03-30 16:42:27 #1494 passed:    master ENH Added custom kernels to SpectralClustering
+2013-03-30 07:28:01 #1492 passed:    master DOC typos in grid search docstrings
+2013-03-30 06:35:00 #1491 passed:    master ENH multiclass probability estimates for SGDClassifier
+2013-03-30 06:14:28 #1490 passed:    master DOC further comments on SVM probabilities
+2013-03-29 10:11:37 #1488 passed:    master DOC describe SVM probability calibration (and advise against it)
+2013-03-27 02:27:18 #1479 passed:    master Merge pull request #1816 from ndawe/master
+2013-03-26 05:22:51 #1471 passed:    master Merge pull request #1812 from kmike/testing-fixes
+2013-03-25 02:50:33 #1466 passed:    master Merge branch 'master' into pr/1798
+2013-03-23 21:55:28 #1461 passed:    master Cosmit: remove needless blank lines.
+2013-03-23 00:46:12 #1460 passed:    master Merge pull request #1804 from AlexanderFabisch/fix_example_path
+2013-03-22 12:31:28 #1457 passed:    master Merge pull request #1803 from kmike/hmm
+2013-03-21 07:59:55 #1452 passed:    master PY3: long is no longer a type in Python 3
+2013-03-21 07:48:23 #1451 passed:    master Merge branch 'pr/1790' -- Python 3 support from PyCon sprint
+2013-03-20 06:25:27 #1446 passed:    master PY3 array.array wants str in Python 2.x and 3.x - give it a str
+2013-03-20 05:37:14 #1443 passed:    master ENH add normalize option to accuracy_score + FIX bug with 1d array
+2013-03-19 14:37:28 #1437 passed:    master DOC FIX: multi-target linear model attribute shapes
+2013-03-18 16:20:31 #1420 passed:    master TST fix broken doctest
+2013-03-18 15:50:00 #1416 failed:    master ENH allow additional kernels on KernelPCA
+2013-03-18 06:52:57 #1408 passed:    master TST added test of fit and transform for kernels for nystroem
+2013-03-18 05:42:37 #1407 passed:    master BUG additive_chi2 missing in KERNEL_PARAMS
+2013-03-17 09:48:41 #1401 passed:    master TST radius-neighbors regression test not entirely stable
+2013-03-17 09:38:01 #1400 failed:    master TST speed up comment tests by ~20%
+2013-03-17 06:01:30 #1399 passed:    master TST grid search/randomized search on non-BaseEstimator
+2013-03-17 06:00:32 #1398 passed:    master TST grid search/randomized search on non-BaseEstimator
+2013-03-16 15:18:52 #1396 passed:    master BUG always do cross-validation in GridSearchCV
+2013-03-16 11:58:38 #1395 passed:    master BUG deprecation of grid_scores_ in GridSearchCV
+2013-03-16 08:07:37 #1394 passed:    master DOC clarify C parameter on LogisticRegression
+2013-03-15 12:11:01 #1393 passed:    master ENH optimizations in sklearn.cross_validation
+2013-03-15 06:38:19 #1392 passed:    master BUG SGDClassifier and friends did not forget labels_ in re-fit
+2013-03-15 04:43:43 #1391 passed:    master Clarify docstring in lars_path
+2013-03-15 04:21:54 #1390 passed:    master typo
+2013-03-14 11:29:49 #1377 passed:    master TYPO fix
+2013-03-14 09:13:57 #1376 passed:    master DOC add roll your own estimator docs
+2013-03-14 08:12:20 #1374 errored:   master BUG StandardScaler would ignore with_std for CSR input
+2013-03-14 07:37:47 #1373 errored:   master Merge pull request #1773 from jnothman/prf_docstring
+2013-03-14 03:19:21 #1369 passed:    master Merge pull request #1772 from jnothman/comment_exhaustive_search
+2013-03-13 10:13:43 #1362 passed:    master DOC installation instructions: MacPorts, fix types, stdeb instructions
+2013-03-13 09:26:42 #1361 passed:    master ENH cut MiniBatchKMeans memory usage in half for large n_clusters
+2013-03-13 08:11:48 #1359 failed:    master ENH don't recompute distances in MBKMeans
+2013-03-13 06:33:59 #1357 passed:    master ENH allow SelectKBest to select all features in a parameter search
+2013-03-13 06:07:47 #1354 passed:    master DOC CountVectorizer does NOT do stopword filtering by default
+2013-03-12 17:45:42 #1346 passed:    master Merge pull request #1767 from rmcgibbo/balltree_docstring
+2013-03-12 08:42:57 #1342 passed:    master COSMIT DictVectorizer.inverse_transform readability
+2013-03-11 21:28:49 #1338 passed:    master FIX: X was converted twice.
+2013-03-11 17:42:27 #1337 passed:    master DOC more sphinx stuff.
+2013-03-11 17:04:45 #1336 passed:    master DOC fixing some more rst / sphinx errors :-/
+2013-03-11 06:41:23 #1332 passed:    master DOC clarify column ordering in SVC scores
+2013-03-11 06:27:18 #1331 passed:    master P3K all of feature_extraction passes tests on Py2 and 3
+2013-03-11 06:05:22 #1330 passed:    master DOC IsotonicRegression wasn't in the changelog at all
+2013-03-10 17:07:30 #1329 passed:    master COSMIT typo
+2013-03-10 16:36:49 #1328 passed:    master BUG failing doctest
+2013-03-10 16:24:17 #1327 failed:    master Fix comment: returns fbeta_score, not f1_score
+2013-03-10 16:21:35 #1326 failed:    master ENH - 3x speedup in the isotonic regression
+2013-03-10 13:26:37 #1321 passed:    master DOC FIX column span alignment problem in NMF ^^
+2013-03-10 13:08:44 #1318 passed:    master MISC minor fixes in examples
+2013-03-10 12:46:20 #1317 passed:    master DOC some sphinx / rst fixes
+2013-03-10 12:46:18 #1316 passed:    master Merge pull request #1758 from larsmans/kernelpca-fix
+2013-03-10 11:53:19 #1313 passed:    master PEP8 and allow non-bool truth values in CD
+2013-03-09 11:01:46 #1311 passed:    master COSMIT get rid of undocumented attributes on SVMs
+2013-03-09 06:22:56 #1305 failed:    master changed warnings in grid_search.py related to loss_func and score_func being passed
+2013-03-09 06:12:43 #1304 passed:    master ENH Function auc_score should throw an error when y_true doesn't contain two unique class values.
+2013-03-09 05:44:27 #1302 passed:    master FIX KFold should return the same result when indices=True and when indices=False.
+2013-03-08 12:34:45 #1301 passed:    master DOC oops, typo
+2013-03-08 12:33:20 #1300 failed:    master DOC OpenBLAS is more dangerous than I thought
+2013-03-08 12:18:21 #1299 passed:    master P3K some more fixes in random places
+2013-03-08 12:11:51 #1298 passed:    master Merge pull request #1753 from NelleV/FIX
+2013-03-08 11:27:20 #1296 passed:    master BUG fix compute_class_weights issue in SGD
+2013-03-08 09:47:55 #1293 failed:    master DOC formatting (k_means)
+2013-03-07 06:22:07 #1286 failed:    master BUG in SVM tests
+2013-03-06 16:48:11 #1275 failed:    master FIX compute_class_weight edge case
+2013-03-06 16:30:18 #1274 failed:    master BUG use fixes.unique
+2013-03-06 16:11:10 #1273 failed:    master ENH use bincount in compute_class_weight
+2013-03-06 16:07:51 #1272 passed:    master FIX + TST + DOC compute_class_weight
+2013-03-06 14:44:24 #1270 passed:    master TST compute_class_weight in utils
+2013-03-06 13:50:10 #1269 passed:    master Merge pull request #1741 from arjoly/metrics-fix-np-1.3
+2013-03-06 05:31:08 #1265 passed:    master Update load_svmlight_file docstring.
+2013-03-05 14:04:58 #1263 passed:    master DOC FIX links on grid search narrative
+2013-03-05 12:16:54 #1258 passed:    master COSMIT pep8
+2013-03-05 12:07:25 #1257 passed:    master Merge pull request #1740 from tjanez/move_roc_curve_test
+2013-03-05 06:53:38 #1251 passed:    master DOC improve mini-batch k-means narrative
+2013-03-05 06:48:34 #1250 passed:    master ENH set min_df in fe.text back to 1
+2013-03-05 02:52:15 #1246 passed:    master Merge pull request #1736 from jamestwebber/patch-1
+2013-03-04 01:40:42 #1239 passed:    master What's new: fix indentation
+2013-03-04 01:39:43 #1238 passed:    master What's new: float values support for max_features
+2013-03-04 01:35:56 #1237 passed:    master Merge pull request #1712 from glouppe/tree-maxfeatures
+2013-03-03 14:20:13 #1233 passed:    master DOC fixed links in whatsnew
+2013-03-03 14:00:58 #1232 passed:    master ENH add randomized hyperparameter optimization
+2013-03-03 11:25:56 #1224 passed:    master TST FIX random state for LibLinear sparse tests
+2013-03-03 11:22:15 #1223 passed:    master Merge pull request #1730 from arjoly/doc-feature-selection
+2013-03-03 03:40:00 #1220 passed:    master Merge pull request #1726 from agramfort/round_kfold
+2013-03-02 13:52:20 #1217 passed:    master BUG broke the what's new while rebasing
+2013-03-02 13:43:08 #1216 failed:    master ENH multilabel metrics: accuracy, Hamming, 0-1 loss
+2013-03-02 07:19:32 #1204 passed:    master Merge pull request #1727 from amueller/min_max_scaler_fix
+2013-03-02 07:18:34 #1203 passed:    master COSMIT use callable instead of hasattr
+2013-03-02 06:47:48 #1199 passed:    master Merge pull request #1713 from larsmans/vectorizer-memory-use
+2013-03-01 05:16:12 #1193 passed:    master TST/FIX always use "almost equal" for floats.
+2013-03-01 05:00:12 #1191 passed:    master TST/FIX set random_state in logistic regression tests
+2013-03-01 04:55:41 #1190 passed:    master DOC add random_state parameter to docs of LogisticRegression and LinearSVC
+2013-02-28 12:19:05 #1185 passed:    master StratifiedKFold: remove pointless copy of labels
+2013-02-28 10:24:37 #1181 passed:    master DOC fix broken doctests for feature_extraction.text
+2013-02-28 10:09:29 #1180 failed:    master DOC fix text vectorizer docs and add NLTK example
+2013-02-26 18:17:11 #1168 passed:    master DOC rm failing doctest on graph_laplacian
+2013-02-26 17:28:51 #1167 failed:    master BUG update graph_laplacian to upstream SciPy version
+2013-02-26 12:03:35 #1166 passed:    master COSMIT callable instead of hasattr __call__
+2013-02-26 09:42:33 #1165 passed:    master Merge branch 'sparse-coef'
+2013-02-24 18:15:37 #1153 passed:    master DOC dev guide: deprecation
+2013-02-24 18:02:40 #1152 errored:   master DOC r2_score may return negative values
+2013-02-23 12:26:54 #1150 failed:    master DOC add 0.13.1 changelog to whats_new.rst
+2013-02-23 11:40:37 #1149 passed:    master DOC developer guidelines for unit tests and classes_
+2013-02-22 18:04:55 #1140 passed:    master DOC added sentence about oob_decision_function_ containing NaN to docstring. Still need some narrative about oob score.
+2013-02-22 18:02:30 #1139 passed:    master COSMIT pep8: blank line contains whitespace
+2013-02-22 14:19:47 #1138 passed:    master Merge pull request #1705 from glouppe/tree-fix
+2013-02-22 02:29:12 #1132 passed:    master Merge pull request #1700 from erg/rf
+2013-02-20 16:30:47 #1126 passed:    master Merge pull request #1695 from mrjbq7/issue-1694
+2013-02-20 14:53:14 #1121 passed:    master FIX remove all unseeded random variables from common tests.
+2013-02-20 14:34:25 #1119 passed:    master FIX: sklearn.ensemble.forest: Refactor to remove references to parallelism in predict() functions.
+2013-02-20 11:55:50 #1117 passed:    master COSMIT update mailmap
+2013-02-20 06:52:04 #1115 failed:    master BUG fix broken grid search example
+2013-02-18 16:41:53 #1107 passed:    master TST stronger tests for arbitrary classes. make explicit what works and what doesn't.
+2013-02-18 16:21:46 #1106 passed:    master ENH get rid of most imports in test_common
+2013-02-18 13:37:47 #1105 passed:    master Merge branch 'master' into gbrt-deviance-fix
+2013-02-18 10:54:37 #1103 passed:    master BUG oops, removed validation by accident
+2013-02-18 10:38:21 #1102 failed:    master ENH speed up RBFSampler by ~10%
+2013-02-18 07:43:37 #1100 passed:    master FIX doctest kernelpca
+2013-02-18 07:36:55 #1099 failed:    master Merge pull request #1688 from hrishikeshio/fit_transform
+2013-02-18 07:31:15 #1098 failed:    master BUG in KernelPCA: wrong default value for gamma
+2013-02-17 11:08:45 #1095 passed:    master DOC: add example and ref to lars_path in lasso_path
+2013-02-17 04:27:28 #1093 passed:    master BUG: fix change of behavior in last commit
+2013-02-17 04:15:57 #1092 failed:    master BUG: highly-degenerate roc curves
+2013-02-16 13:40:15 #1085 passed:    master TST: add a test for empty reassignment in MBKmeans
+2013-02-16 12:15:51 #1084 passed:    master FIX remove dtype from covertype, add fetch_covtype to init, add missing docstrings.
+2013-02-16 09:38:32 #1083 passed:    master BUG MinMaxScaler missing from preprocessing.__all__
+2013-02-15 11:59:18 #1082 passed:    master DOC pretty math in kernel docstrings
+2013-02-15 11:15:09 #1081 passed:    master Made more changes renamed pairwise_kernel_functions, kernel_params to allcaps
+2013-02-15 00:58:27 #1079 passed:    master Fixed pep8 issues
+2013-02-14 10:43:45 #1076 passed:    master Merge pull request #1524 from amueller/break_ovo_ties
+2013-02-13 20:56:33 #1074 passed:    master P3K range vs. xrange
+2013-02-13 19:18:06 #1073 passed:    master DOC copyedit FeatureHasher narrative further
+2013-02-13 18:04:45 #1072 passed:    master BUG: update joblib to 0.7.0d
+2013-02-13 15:43:25 #1071 passed:    master TST covertype loader
+2013-02-13 04:07:33 #1069 passed:    master DOC copyedit FeatureHasher narrative
+2013-02-11 16:29:49 #1064 passed:    master P3K fix broken doctest and add forgotten print_function import
+2013-02-11 16:12:40 #1063 failed:    master P3K death to the print statement
+2013-02-11 12:28:34 #1056 passed:    master COSMIT pep8, removing unused imports
+2013-02-11 10:20:40 #1055 passed:    master ENH set the random state to avoid heisenfailures
+2013-02-11 09:18:13 #1053 passed:    master rm gender classification example
+2013-02-10 08:41:33 #1049 passed:    master BUG revert P3K changes that broke mldata tests
+2013-02-10 07:38:25 #1044 failed:    master Merge pull request #1668 from glouppe/adaboost-tree
+2013-02-09 20:27:47 #1041 failed:    master Cosmit: more explicit label.
+2013-02-09 20:22:12 #1040 failed:    master Cosmit: more explicit xlabel.
+2013-02-09 11:40:08 #1039 failed:    master DOC fix failing doctest due to unicode_literals
+2013-02-09 11:24:23 #1038 failed:    master P3K StringIO vs BytesIO
+2013-02-09 05:41:54 #1035 passed:    master FIX: variable naming inconsistency in NMF
+2013-02-08 15:17:24 #1030 failed:    master COSMIT pep8
+2013-02-08 01:41:49 #1029 passed:    master DOC: narrative documentation on feature importances
+2013-02-08 01:37:35 #1028 passed:    master EXAMPLE: compute_importances=True is no longer required (2)
+2013-02-08 01:37:16 #1027 passed:    master EXAMPLE: compute_importances=True is no longer required (1)
+2013-02-08 01:35:43 #1026 passed:    master DOC: add balance_weights to reference
+2013-02-07 17:00:08 #1025 passed:    master Merge pull request #1660 from rlmv/fe_tests
+2013-02-07 14:43:46 #1023 passed:    master Merge pull request #1657 from glouppe/feature-importances
+2013-02-05 01:43:54 #1012 passed:    master Merge pull request #1656 from rlmv/idf_diag
+2013-02-04 13:55:03 #1004 passed:    master COSMIT removed unused imports, fixed error message in test of boosting
+2013-02-04 06:37:17 #996 passed:     master What's new: Adaboost
+2013-02-04 06:23:32 #995 passed:     master Merge branch 'treeweights'
+2013-02-04 05:36:38 #994 passed:     master Merge pull request #1644 from jaquesgrobler/doc_url_error
+2013-02-03 17:57:09 #991 passed:     master BUG fix import problem in preprocessing
+2013-02-03 15:25:19 #990 failed:     master COSMIT rm Python 2.5 and Jython compat from six
+2013-02-03 13:05:36 #988 passed:     master ENH refactor univariate feature selection
+2013-02-03 10:16:24 #982 passed:     master TST smoke test repr
+2013-02-02 10:24:40 #956 passed:     master DOC add return values of cross_val_score and train_test_split to docstrings.
+2013-02-02 10:07:25 #955 passed:     master Recompiled base
+2013-02-02 10:06:12 #954 passed:     master COSMIT pep8
+2013-02-02 06:31:49 #943 passed:     master Revert "trying travis cfg with system-site-packages"
+2013-02-01 12:15:48 #941 errored:    master Merge branch 'master' of github.com:scikit-learn/scikit-learn
+2013-02-01 12:08:38 #939 errored:    master TST fix random states in all dict learning tests, make test independent of test sequence.
+2013-02-01 08:10:48 #937 errored:    master P3K: use print as a function in the examples
+2013-02-01 06:23:02 #935 errored:    master DOC: reference for discretise option
+2013-02-01 03:56:14 #934 errored:    master DOC fix typo in LinearSVC error message
+2013-01-31 10:57:37 #931 errored:    master BUG: fix test to use sparse array
+2013-01-31 10:37:37 #927 errored:    master COSMIT add lgamma to gitattributes
+2013-01-31 10:28:35 #926 errored:    master BUG: sparse vs non sparse centers
+2013-01-31 09:50:15 #924 errored:    master COSMIT translate lgamma replacement to C and clean it up
+2013-01-30 07:44:46 #922 errored:    master Added tests
+2013-01-30 04:43:13 #919 errored:    master BUG: reassignment_ratio == 0 in MiniBatchKmeans
+2013-01-29 17:35:42 #911 errored:    master TST some more tests for multi output lars
+2013-01-29 14:39:38 #909 errored:    master changed wording in linear model docs about Normalized. It was frustrating me haha
+2013-01-28 15:16:20 #907 errored:    master DOC: small fix in the regression's score method documentation
+2013-01-28 09:51:07 #901 errored:    master Merge pull request #1607 from agramfort/reconstruction_err_nmf_sparse
+2013-01-28 03:54:53 #900 errored:    master links for scipy, cleanup
+2013-01-27 12:02:34 #899 errored:    master Update travis config to remove -qq flag for scipy
+2013-01-27 06:09:53 #896 errored:    master fix paths for Windows
+2013-01-26 14:38:49 #894 errored:    master ENH rewrite radius-NN classifier's outlier handling
+2013-01-26 14:05:49 #893 errored:    master Merge pull request #1576 from mrorii/fix_kneighbors
+2013-01-26 13:27:18 #892 errored:    master BUG in RadiusNeighborClassifier outlier handling
+2013-01-26 11:26:44 #889 errored:    master COSMIT remove unused imports, pep8
+2013-01-26 11:17:08 #887 errored:    master andys suggestions and test
+2013-01-24 12:27:39 #875 passed:     master DOC: typo in warning
+2013-01-23 07:31:22 #860 passed:     master COSMIT decouple regression and classification in SVMs
+2013-01-23 05:54:19 #859 passed:     master BUG move label_ from BaseLibSVM to BaseSVC
+2013-01-23 01:02:51 #857 passed:     master BF: explicitly mark train_test_split as not the one for nosetesting
+2013-01-22 16:19:31 #852 passed:     master BUG one more failing doctest
+2013-01-22 15:41:24 #851 failed:     master BUG fix failing doctest
+2013-01-22 13:57:00 #849 failed:     master FIX: Cast floats to int before slicing in robust_covariance
+2013-01-22 13:17:56 #848 failed:     master COSMIT rm deprecated stuff
+2013-01-21 23:11:51 #833 passed:     master Merge pull request #1604 from darkrho/doc-linear-model-typo
+2013-01-21 19:59:28 #831 passed:     master BUG last references to svm.sparse
+2013-01-21 19:43:35 #830 failed:     master COSMIT rm deprecated attrs from [LQ]DA
+2013-01-21 19:29:00 #829 failed:     master COSMIT rm deprecated svm.sparse module
+2013-01-21 16:57:54 #828 passed:     master website: fix for survey bar
+2013-01-21 15:26:41 #824 passed:     master DOC updated commit counts.
+2013-01-21 15:18:07 #823 failed:     master wrapping disabled, fixed reinstated
+2013-01-21 14:54:04 #821 failed:     master COSMIT pep8
+2013-01-21 05:02:03 #816 passed:     master DOC: voronoi + kmeans picture
+2013-01-21 04:26:49 #815 passed:     master MISC: index arrays with integers
+2013-01-21 04:21:33 #814 passed:     master MISC: fix rst in whats_new
+2013-01-21 00:35:03 #813 passed:     master DOC: put math at back, simplify formulation
+2013-01-20 15:11:41 #812 passed:     master COSMIT: simplify parallel code in multiclass
+2013-01-20 12:56:27 #811 passed:     master ENH: control random_state in MiniBatchKMeans
+2013-01-20 12:51:42 #810 passed:     master DOC added commit counts for 0.13 to whatsnew, added website for Rob Zinkov aka zxtx
+2013-01-20 12:25:45 #809 passed:     master TST/BUG: test_common sample_weights in ridge
+2013-01-20 11:06:04 #807 passed:     master DOC fix indentation typo
+2013-01-20 09:16:01 #805 passed:     master Merge pull request #1598 from amueller/naive_bayes_class_prior_rename_revert
+2013-01-20 08:45:13 #804 passed:     master DOC some more minor fixes to syntax / links
+2013-01-20 08:44:17 #803 passed:     master Merge pull request #1529 from vene/lgamma_port
+2013-01-20 07:55:32 #801 passed:     master COSMIT pep8
+2013-01-20 07:49:55 #800 passed:     master EXAMPLES add header to hash_vs_dict_vectorizer.py - otherwise it won't show in the html docs.
+2013-01-20 07:23:51 #799 passed:     master DOC added user guide links to all estimators on the whatsnew page
+2013-01-20 06:16:25 #798 passed:     master DOC copyedit HashingVectorizer docs
+2013-01-19 11:58:13 #797 passed:     master TST catch deprecation warning when testing SVC label_ attribute, also test new classes_ attribute.
+2013-01-19 09:41:28 #794 passed:     master FIX example uses old parameter name
+2013-01-19 08:47:24 #793 passed:     master DOC cosmit fix column span alignment errors.
+2013-01-19 08:20:24 #792 passed:     master DOC : missing alpha doc in LassoLars
+2013-01-19 01:59:19 #791 passed:     master P3K: decode error message in svm wrapper
+2013-01-18 10:27:40 #789 failed:     master P3K: Fixed print related Python3 errors
+2013-01-18 10:06:39 #788 passed:     master P3K: division should produce integer.
+2013-01-18 08:13:02 #787 passed:     master Merge pull request #1592 from jaquesgrobler/master
+2013-01-17 14:20:18 #783 passed:     master TST catch expected warning in sparse coordinate descent test.
+2013-01-17 11:32:04 #782 passed:     master TEST: fixing randomly failing test
+2013-01-17 11:17:43 #781 passed:     master DOC improve cosine similarity docs
+2013-01-17 11:07:32 #780 passed:     master COSMIT: pep8
+2013-01-17 10:36:51 #779 failed:     master TST sorting CSR matrix indices in SVMlight file handling
+2013-01-17 10:30:30 #778 passed:     master DOC fix travis URLs in README
+2013-01-17 10:20:06 #777 passed:     master FIX sort indices in CSR matrix for SVM
+2013-01-17 05:51:28 #776 passed:     master DOC more sphinx fixes
+2013-01-16 17:57:46 #770 failed:     master BUG hotfix for issue #1501: sort indices in SVMlight i/o
+2013-01-16 17:22:53 #766 passed:     master DOC more sphinx fixes
+2013-01-16 16:52:17 #765 passed:     master COSMIT typos in hierarchical clustering warning
+2013-01-16 16:42:45 #764 passed:     master DOC don't use deprecated parameter rho in the lasso / enet examples
+2013-01-16 16:18:26 #762 passed:     master DOC mds example: suppress warning for explicit initialization
+2013-01-16 16:15:49 #761 passed:     master DOC fix in mds example (new interface)
+2013-01-16 16:16:29 #760 passed:     master DOC some sphinx fixes
+2013-01-16 10:39:09 #752 passed:     master BUG don't write comments in SVMlight dumper by default
+2013-01-16 02:35:35 #747 passed:     master FIX instead of appending numpy_doc to the list of extensions, directly add when creating the list
+2013-01-15 16:37:05 #744 passed:     master Merge pull request #1582 from ApproximateIdentity/doc-n_jobs-parallel
+2013-01-15 16:26:30 #743 passed:     master TST took the safty off the tests ;)
+2013-01-15 14:34:58 #740 passed:     master Merge pull request #1578 from zaxtax/elastic_documentation
+2013-01-15 10:58:34 #735 passed:     master update year in copyright notices
+2013-01-15 09:34:16 #734 passed:     master DOC document gamma in chi2_kernel.
+2013-01-15 01:07:21 #722 passed:     master Merge pull request #1577 from ApproximateIdentity/n_jobs-documentation
+2013-01-14 07:44:08 #712 passed:     master DOC add recall_score to new classification metrics listing
+2013-01-14 06:00:47 #709 passed:     master zero_one_loss now does normalize on default.
+2013-01-13 06:53:11 #681 passed:     master DOC: addressed more inconsistencies in metrics docstrings
+2013-01-13 04:21:06 #678 passed:     master FIX make sure laplacian in spectral clustering test is really PSD
+2013-01-12 11:42:58 #673 passed:     master DOC more accurate comment in class weight computation
+2013-01-11 20:58:07 #667 passed:     master Merge pull request #1563 from kuantkid/sparse_knn_graph
+2013-01-11 15:56:47 #665 passed:     master DOC: fixed latex and formatting in SVM docs
+2013-01-11 14:53:58 #663 passed:     master DOC: Fixed wrong link and formatting in decomposition docs
+2013-01-11 07:46:46 #659 passed:     master Merge pull request #1564 from jaquesgrobler/contributor_guide_links
+2013-01-11 03:25:53 #651 passed:     master Typo
+2013-01-11 02:38:04 #650 passed:     master Merge pull request #1536 from kyleabeauchamp/issue-1403
+2013-01-11 02:26:53 #649 passed:     master Merge pull request #1561 from kyleabeauchamp/MinMaxScaler_Inverse
+2013-01-10 18:27:01 #647 passed:     master Merge pull request #1562 from kmike/master
+2013-01-10 15:43:58 #643 passed:     master Update sklearn/metrics/metrics.py
+2013-01-10 11:34:05 #640 passed:     master COSMIT wrong path in .gitattributes
+2013-01-10 11:26:30 #639 passed:     master Merge pull request #1556 from larsmans/cython-cleanup
+2013-01-10 11:12:18 #637 passed:     master cosmit: rephrased doc
+2013-01-10 08:27:51 #636 passed:     master COSMIT remove empty file
+2013-01-10 08:14:19 #635 passed:     master FIX doctests dtype
+2013-01-10 07:24:16 #634 failed:     master Typo
+2013-01-10 00:46:29 #621 passed:     master Remove contact address.
+2013-01-09 12:58:11 #614 passed:     master COSMIT (don't change anything see sparse_random_matrix)
+2013-01-09 12:37:58 #613 passed:     master FIX catch deprecation warning
+2013-01-09 07:49:16 #609 passed:     master DOC: fix typo and formatting around MurmurHash3
+2013-01-09 02:28:46 #607 passed:     master ENH common test that set_params returns self.
+2013-01-09 02:09:08 #604 passed:     master FIX: what's new
+2013-01-08 16:42:19 #594 passed:     master Typo
+2013-01-08 16:26:51 #593 passed:     master Fixed pep8 spacing issue and floating point doctest issue
+2013-01-08 08:34:13 #582 passed:     master Add missing types to docstring.
+2013-01-08 08:23:03 #581 passed:     master X is not a constructor parameter.
+2013-01-08 02:40:32 #573 passed:     master FIX set_params needs to return ``self``
+2013-01-07 08:38:39 #568 passed:     master COSMIT simplify unique_labels in sklearn.metrics
+2013-01-07 05:12:01 #564 passed:     master Merge pull request #1530 from agramfort/doc_lasso
+2013-01-07 03:04:38 #561 passed:     master COSMIT reorganized functions in the module
+2013-01-07 02:52:05 #559 passed:     master ENH rename proximity to dissimilarity
+2013-01-06 15:48:12 #549 passed:     master DOC fix docstring of GMM
+2013-01-06 14:57:29 #545 passed:     master FIX random seed in FastICA testing.
+2013-01-06 12:23:10 #534 passed:     master Merge branch 'master' of github.com:scikit-learn/scikit-learn
+2013-01-06 09:57:24 #531 passed:     master ENH added class_weight to Naive Bayes docs.
+2013-01-06 09:23:07 #529 passed:     master DOC updated whatsnew
+2013-01-06 08:25:13 #528 passed:     master COSMIT doc formating
+2013-01-06 07:44:17 #527 passed:     master ENH cleanup in check_pairwise_arrays, raise error on sparse input in chi2_kernel and manhattan_distance
+2013-01-05 13:00:38 #520 passed:     master DOC try to be as clear as possible.
+2013-01-05 12:53:17 #519 passed:     master TST somewhat hacky fix for tests on image loading.
+2013-01-05 11:16:27 #518 passed:     master checking data.shape for each test dataset
+2013-01-05 09:50:40 #515 passed:     master DOC fix shape of coef_ for LDA.
+2013-01-05 08:54:29 #510 passed:     master Merge pull request #1517 from amueller/lda_qda_cleanup
+2013-01-05 08:14:45 #507 passed:     master Cosmit: break up long line.
+2013-01-05 08:05:15 #506 passed:     master More clean up of test_pairwise.py.
+2013-01-05 07:52:15 #504 passed:     master Clean up test_pairwise.py.
+2013-01-05 07:19:10 #503 passed:     master ENH lazy import of metrics in base, not preprocessing in metrics.
+2013-01-05 06:50:27 #502 passed:     master DOC made myself contact for authors, changed my website to blog.
+2013-01-05 01:56:45 #501 passed:     master Welcome to Wei Li and Arnaud Joly.
+2013-01-03 08:07:06 #492 passed:     master BUG Cholesky delete routines wouldn't compile on Solaris
+2013-01-03 07:04:18 #491 passed:     master FIX skip tests for naive bayes for the moment.
+2013-01-03 06:34:58 #489 passed:     master ENH move utility function into dedicated file, not __init__.py
+2013-01-03 06:27:15 #486 passed:     master COSMIT update warning, pep8
+2013-01-03 04:03:43 #484 passed:     master Merge pull request #1505 from NelleV/mds
+2013-01-02 16:58:41 #478 passed:     master threshold parameter was ignored in SquaredHinge loss.
+2013-01-02 15:59:02 #477 failed:     master ENH: add the squared hinge loss to the SGD loss example
+2013-01-02 14:16:30 #476 passed:     master ENH preserve output ndim
+2013-01-02 14:15:30 #475 passed:     master DOC typo
+2013-01-02 12:22:18 #474 passed:     master Add perceptron loss to plot.
+2013-01-02 10:29:40 #473 passed:     master Feedback from @amueller
+2013-01-01 07:23:34 #465 passed:     master Merge pull request #1504 from NelleV/isotonic
+2012-12-31 05:44:47 #455 passed:     master revert to original import placement style
+2012-12-31 05:43:12 #454 passed:     master COSMIT Typo
+2012-12-30 10:25:06 #450 passed:     master COSMIT pep8
+2012-12-28 15:35:18 #439 passed:     master FIX random_state in MDS was not initialized properly
+2012-12-27 15:38:50 #438 passed:     master ENH: issue warning when minmax scaling integer data + test
+2012-12-27 05:47:48 #436 failed:     master Add one more test for MinMaxScaler on newly transformed data
+2012-12-26 17:28:21 #432 passed:     master FIX stupid mistake
+2012-12-26 15:56:11 #431 passed:     master DOC add Nystroem kernel approximation to the references
+2012-12-26 14:14:21 #430 passed:     master DOC classifier comparison: plot data without decision boundary first, better (imho) color scheme.
+2012-12-26 07:23:34 #426 passed:     master FIX more robust test for silhouette score
+2012-12-26 07:10:28 #425 passed:     master ENH more test coverage in pairwise distances
+2012-12-25 06:19:00 #421 passed:     master Cosmit pep8
+2012-12-24 16:44:42 #420 passed:     master ENH use an array instead of a dict in RFECV
+2012-12-24 08:43:19 #416 passed:     master FIX i should trust my past self a bit more
+2012-12-24 08:17:43 #415 failed:     master DOC slight cosmit in metrics docstrings.
+2012-12-24 08:05:34 #414 failed:     master TEST flipped svd remains correct
+2012-12-24 07:59:35 #413 failed:     master ENH slight improvement of common tests.
+2012-12-24 02:29:38 #404 passed:     master Couple of small changes from comments
+2012-12-23 05:54:19 #393 passed:     master DOC add default values
+2012-12-23 05:37:48 #388 passed:     master TST make test more stable.
+2012-12-22 11:36:06 #382 passed:     master FIX typo / bug in test_common that ignored the first init parameter.
+2012-12-22 09:51:58 #380 passed:     master DOC add version when setting parameters in fit will be removed to docstring
+2012-12-22 07:32:08 #373 passed:     master Typo / fix in JL lemma example
+2012-12-22 02:23:59 #370 passed:     master Merge pull request #1483 from aweinstein/fix_doc_example
+2012-12-21 11:18:18 #367 passed:     master eps=1.0 is no longer a valid value
+2012-12-21 08:12:17 #365 passed:     master FIX don't use assert_allclose. It is not supported in numpy 1.3
+2012-12-21 07:48:54 #364 passed:     master DOC add utitilies to the doc
+2012-12-21 07:39:54 #363 passed:     master FIX: make test_commons succed with random_projection
+2012-12-21 04:42:49 #359 passed:     master Merge pull request #1465 from AWinterman/issue-1017
+2012-12-21 03:34:13 #357 failed:     master ENH Simplify estimator type checking in GridSearchCV.
+2012-12-21 03:30:09 #356 passed:     master DOC changed docstring to be more clear.
+2012-12-19 07:04:03 #321 passed:     master Add comment in test_spectral_clustering_sparse
+2012-12-19 07:00:24 #320 passed:     master Merge pull request #1470 from kuantkid/fix_spectral_cluster_test
+2012-12-17 04:01:29 #304 failed:     master Merge pull request #1451 from amueller/chunksize_batchsize_rename
+2012-12-17 03:47:21 #303 passed:     master Merge pull request #1478 from amueller/pep8
+2012-12-16 12:31:47 #298 passed:     master Delete iris.dot in tree.rst doctest
+2012-12-16 10:47:22 #296 failed:     master Merge pull request #1468 from erg/random-failures-12345
+2012-12-16 08:45:35 #293 passed:     master COSMIT pep8
+2012-12-16 07:31:18 #290 passed:     master DOC make unit test requirements a bit stricter. 80% is sub-par with current code-base
+2012-12-15 15:54:27 #288 passed:     master ENH / TST better coverage of supervised clustering metrics, slight cleanup
+2012-12-14 13:46:45 #275 passed:     master set min_density when growing deep trees during gradient boosting
+2012-12-14 03:14:14 #270 passed:     master FIX: fixed random_state for heisen doctest failure in multiclass module
+2012-12-12 15:40:29 #263 passed:     master TST better coverage in kernel_approximation
+2012-12-12 03:41:56 #257 passed:     master Update whatsnew
+2012-12-12 01:59:28 #256 passed:     master What's new: fix by @seberg
+2012-12-12 01:56:10 #255 passed:     master Merge pull request #1458 from seberg/contig_strides
+2012-12-11 14:58:57 #251 passed:     master TST better coverage for GridSearchCV, test unsupervised algorithm.
+2012-12-11 02:48:58 #241 passed:     master Merge pull request #1388 from arjoly/issue1047_gradient_boosting_uses_decision_trees
+2012-12-11 02:01:46 #238 passed:     master cosmit: remove fourth quote
+2012-12-10 17:27:20 #231 passed:     master ENH don't import * in utils __init__.py
+2012-12-10 10:55:54 #228 passed:     master ENH: use broadcasting, not tile
+2012-12-10 06:45:35 #220 passed:     master DOC updated whatsnew with Nystroem.
+2012-12-08 11:43:40 #212 passed:     master ENH fix random seed in manifold example
+2012-12-08 11:24:58 #210 passed:     master COSMIT RST in manifold sphere example.
+2012-12-08 11:02:42 #209 passed:     master FIX manifold example - sorry, my bad.
+2012-12-07 17:17:35 #204 passed:     master COSMIT some fixes in whatsnew rst
+2012-12-05 02:13:08 #182 passed:     master Display the test names to understand which test is triggering the segfault on jenkins
+2012-12-05 01:36:55 #181 passed:     master What's new: typo
+2012-12-05 01:33:13 #180 passed:     master Merge pull request #1445 from glouppe/tree-shape
+2012-12-04 08:31:51 #153 failed:     master COSMIT Mean Shift docs.
+2012-12-04 04:16:40 #150 failed:     master ZipFile context manager is only available in Python >= 2.7
+2012-12-03 14:16:14 #147 failed:     master use 100 instead of 800 n_estimators; looks the same but faster; ESLII uses 800
+2012-12-03 07:56:36 #144 failed:     master Merge pull request #1440 from amueller/matplotlib_requirement
+2012-12-02 15:13:33 #132 failed:     master TST better coverage in preprocessing module
+2012-12-02 14:19:57 #131 failed:     master TST better coverage in dict learning and cross validation
+2012-12-02 14:17:41 #130 failed:     master FIX random state in test by @briancheung. Thanks
+2012-12-02 13:27:04 #128 failed:     master TST better test-coverage in clustering module
+2012-12-02 12:33:29 #127 failed:     master FIX and test deprecated import of spectral_embedding from cluster
+2012-12-02 10:35:47 #126 passed:     master check in ``if_matplotlib`` if $DISPLAY set
+2012-12-02 10:27:23 #125 passed:     master use Agg backend with warn=False for matplotlib enabled tests
+2012-12-02 10:10:38 #124 passed:     master Merge remote-tracking branch 'upstream/master'
+2012-12-02 09:22:42 #123 failed:     master Cosmits and typos.
+2012-12-02 05:17:44 #122 passed:     master COSMIT pep8
+2012-12-02 05:04:00 #121 passed:     master ENH cleanup tests, lower tolerance
+2012-12-02 03:37:27 #120 passed:     master heading change
+2012-12-02 03:33:04 #119 passed:     master added backtick around self.classes_ in multiclass.py
+2012-12-01 22:12:48 #116 passed:     master Merge pull request #1429 from tnunes/fix_pipeline_fit_transform
+2012-12-01 19:10:27 #115 passed:     master Merge pull request #1430 from erg/issue-1407
+2012-12-01 11:56:58 #111 passed:     master Merge pull request #1428 from tnunes/feature_union_fit_transform
+2012-12-01 04:04:25 #108 passed:     master Remove doctest-options from setup.cfg as not supported in old version of nose
+2012-12-01 03:56:30 #107 passed:     master FIX #1417: move nosetests configuration parameter to setup.cfg
+2012-11-30 06:31:00 #98 passed:      master Merge branch 'master' into gbrt-random-state-fix
+2012-11-29 07:50:00 #97 failed:      master Merge pull request #1424 from jaquesgrobler/plot_omg_fix
+2012-11-29 06:13:16 #96 passed:      master TST : use assert_true and not assert in test
+2012-11-29 03:00:58 #93 passed:      master Add missing assertion.
+2012-11-28 12:49:38 #90 passed:      master Merge pull request #1425 from arjoly/enh_bench_covertype
+2012-11-27 18:36:01 #79 failed:      master COSMIT refactor input validation code; skip some issparse calls
+2012-11-27 15:57:21 #78 passed:      master FIX csr conversion in amg code in spectral embedding
+2012-11-27 15:10:58 #77 passed:      master clarify documentation for radius_neighbors
+2012-11-27 11:54:49 #76 passed:      master Merge pull request #1408 from satra/fix/rebase1396
+2012-11-27 03:41:04 #71 passed:      master Merge pull request #1418 from kuantkid/archlinux
+2012-11-27 03:33:31 #70 passed:      master Merge pull request #1415 from SnippyHolloW/travis
+2012-11-26 18:48:06 #66 passed:      master DOC credit @sjackman in what's new for BernoulliNB fix
+2012-11-26 15:47:20 #58 passed:      master FIX import assert_greater from testing module
+2012-11-26 15:19:43 #55 passed:      master ENH addressed @kuantkid's comments. Also add myself to pairwise.py authors.
+2012-11-26 07:16:57 #48 passed:      master Merge pull request #1372 from jaquesgrobler/doc-fix-dev_guide
+2012-11-26 07:06:49 #47 failed:      master FIX smoothing in Naive Bayes and refactor the discrete estimators
+2012-11-26 04:01:37 #45 passed:      master DOC explain what the test is doing.
+2012-11-25 14:25:52 #27 passed:      master Merge branch 'master' into pr/1409
+2012-11-25 13:32:59 #26 passed:      master ENH slight cleanup in common tests, less warnings.
+2012-11-24 21:39:47 #16 passed:      master Specify branch in status button.
+2012-11-24 20:20:12 #15 passed:      master Improved bench_covtype.py to load data faster and support configurable n_jobs
+2012-11-24 14:13:11 #12 passed:      master COSMIT pep8, removing unused imports and recommend ``toarray`` instead of ``todense``
+2012-11-24 08:34:57 #9 passed:       master Link to travis.
+2012-11-24 08:07:20 #8 passed:       master Fix bug in sqnorm (used by PassiveAggressive).
+2012-11-24 04:43:50 #5 passed:       master Improve error message when vocabulary is empty.
+2012-11-23 11:04:41 #1 passed:       master Merge pull request #1397 from SnippyHolloW/travis

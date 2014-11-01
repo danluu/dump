@@ -1,0 +1,1186 @@
+2014-05-08 18:45:53 #4131 passed:    master Merge pull request #2628 from jpartlow/maint/master/pup-2369-acceptance-ignores-property-value-class
+2014-05-08 18:26:25 #4129 passed:    master Merge pull request #2583 from hlindberg/pup-2357_validate-expr-no-effect
+2014-05-08 17:26:23 #4127 passed:    master Merge pull request #2627 from hlindberg/pup-2240_splat-case-and-select
+2014-05-08 16:50:12 #4125 passed:    master Merge branch 'stable'
+2014-05-08 03:51:10 #4118 passed:    master Merge pull request #2621 from jeffb-bt/feature/azn-linux-build-3.5.1
+2014-05-08 02:50:38 #4114 passed:    master Merge branch 'stable'
+2014-05-07 23:45:54 #4104 passed:    master Merge pull request #2608 from nfagerlund/docs_environment_timeout
+2014-05-07 23:35:54 #4103 passed:    master Merge pull request #2602 from peterhuene/provider/documentation
+2014-05-07 23:26:40 #4102 passed:    master Merge pull request #2609 from haus/maint/master/print_yard_warning_to_stderr
+2014-05-07 23:16:50 #4101 passed:    master Merge pull request #2600 from nfagerlund/docs_loglevel_setting
+2014-05-07 23:08:34 #4100 passed:    master Merge pull request #2581 from nfagerlund/docs_loglevel_order
+2014-05-07 22:59:26 #4099 passed:    master Merge pull request #2591 from nfagerlund/docs_file_recurse
+2014-05-07 22:47:55 #4098 passed:    master Merge pull request #2582 from nfagerlund/docs_exec_onlyif_unless
+2014-05-07 22:39:27 #4097 passed:    master Merge pull request #2569 from Sharpie/log-locale
+2014-05-07 22:30:42 #4096 passed:    master Merge pull request #2594 from nfagerlund/docs_certname_setting
+2014-05-07 22:21:02 #4095 passed:    master Merge branch 'patch-1'
+2014-05-07 22:11:18 #4094 passed:    master Merge pull request #2589 from daenney/add-ensure-type-logging
+2014-05-06 19:01:37 #4089 passed:    master Merge pull request #2542 from hlindberg/pup-2288_list-start-unless-ws
+2014-05-06 18:48:55 #4087 passed:    master Merge pull request #2588 from hlindberg/pup-2287_lambda-default-always-ovrrides
+2014-05-06 18:39:21 #4086 passed:    master Merge pull request #2532 from hlindberg/pup-2240_unfold-array
+2014-05-06 12:16:25 #4079 passed:    master Merge pull request #2617 from hlindberg/pup-957_match-vars-and-regexp-type
+2014-05-02 15:07:54 #4055 passed:    master Merge remote-tracking branch 'origin/stable'
+2014-05-02 11:55:11 #4053 passed:    master Merge pull request #2610 from peterhuene/travis/fix
+2014-05-01 18:02:37 #4049 errored:   master Merge branch 'pull-2455'
+2014-05-01 10:56:18 #4036 errored:   master Merge branch 'stable'
+2014-04-30 17:04:04 #4032 errored:   master Merge pull request #2560 from adrienthebo/issue/master/pup-1060-yum-package-enablerepo
+2014-04-30 14:38:41 #4025 errored:   master Merge branch 'stable'
+2014-04-30 11:27:01 #4020 errored:   master Merge pull request #2598 from zaphod42/issue/master/pup-1840-use-binread-on-windows
+2014-04-29 20:30:48 #4018 passed:    master Merge pull request #2597 from hlindberg/pup-2290_warn-cause-of-cert-not-found
+2014-04-29 19:57:29 #4015 passed:    master Merge pull request #2537 from adrienthebo/feature/master/pup-1840-tunable-digest-algorithm
+2014-04-29 19:44:31 #4014 passed:    master Merge pull request #2596 from jpartlow/feature/master/pup-1699-isolate-environment-context
+2014-04-29 18:33:34 #4008 passed:    master Merge pull request #2595 from nfagerlund/docs_aug_typo
+2014-04-29 15:51:43 #4004 passed:    master Merge pull request #2593 from jpartlow/maint/master/plugin-spec-for-facter-1.7.5
+2014-04-29 14:55:29 #4002 passed:    master Merge pull request #2592 from kylog/issue/pup-1932/dont-report-static-services
+2014-04-28 18:49:08 #3999 passed:    master (maint) Provide a namespace around two specs using Memory indirectors
+2014-04-28 16:42:01 #3996 passed:    master Merge pull request #2580 from jpartlow/feature/master/pup-1699-cache-environments
+2014-04-28 14:47:31 #3993 passed:    master Merge branch 'maint/master/file-content-spec-fixtures'
+2014-04-27 14:30:09 #3989 passed:    master (maint) Fix creation of Loaders
+2014-04-27 12:21:26 #3988 failed:    master (maint) Fix param mismatches in YARD docs
+2014-04-27 11:34:46 #3987 failed:    master Merge pull request #2573 from hlindberg/pup-2317_import-discontinuation-error
+2014-04-26 14:28:41 #3983 passed:    master (maint) Fix return type warnings in Pops YARD docs
+2014-04-25 20:28:19 #3982 passed:    master Merge pull request #2587 from zaphod42/issue/master/pup-2344-problem-calling-between-modules
+2014-04-25 15:09:22 #3979 passed:    master Merge remote-tracking branch 'upstream/pr/2586'
+2014-04-25 14:00:47 #3978 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-04-25 13:50:38 #3977 passed:    master Merge pull request #2585 from pvande/maint/master/work_around_platform_inconsistencies_in_Dir
+2014-04-25 12:54:39 #3974 passed:    master Merge branch 'pr/2584'
+2014-04-24 17:35:42 #3965 passed:    master Merge branch 'pr/2477'
+2014-04-24 17:23:08 #3964 passed:    master (Maint) Don't expand tar cf - sourcedir path
+2014-04-24 16:08:30 #3961 passed:    master Merge pull request #2578 from pvande/maint/master/gnu_tar_spec_fails_on_windows
+2014-04-24 15:28:37 #3960 passed:    master Merge pull request #2579 from pvande/maint/master/removing_outdated_PMT_acceptance_test
+2014-04-24 13:05:47 #3952 passed:    master Merge branch 'merge/yumrepo-priority-absent'
+2014-04-23 20:44:54 #3949 passed:    master Merge pull request #2559 from zaphod42/issue/master/pup-2306-generate-returns-strings
+2014-04-23 20:17:24 #3946 passed:    master Merge pull request #2572 from pvande/maint/master/update-acceptance-forge-hostname
+2014-04-23 19:40:19 #3943 passed:    master Merge pull request #2555 from pvande/bug/master/pup2278_fix_pmt_handling_of_paths_with_spaces
+2014-04-23 19:29:54 #3942 passed:    master Merge pull request #2539 from pvande/task/master/pup2285_add_better_readme_to_module_skeleton
+2014-04-23 19:20:46 #3941 passed:    master Merge pull request #2538 from pvande/task/master/pup2284_puppet_module_generate_interview
+2014-04-23 19:13:33 #3940 passed:    master Merge pull request #2440 from pvande/feature/master/pe3136_pregenerate_metadata.json
+2014-04-23 19:05:34 #3939 passed:    master Merge pull request #2436 from pvande/feature/master/pe3117_pmt_should_prefer_metadata.json
+2014-04-23 15:33:19 #3931 passed:    master Merge pull request #2504 from pvande/feature/master/pup2093_migrate_pmt_to_v3_api
+2014-04-23 15:05:51 #3930 passed:    master Merge branch 'cleaner-error'
+2014-04-23 14:26:45 #3927 passed:    master (maint) Include information about how PRs are handled
+2014-04-23 13:23:09 #3923 passed:    master Merge pull request #2515 from trlinkin/yumrepo
+2014-04-23 00:34:28 #3917 passed:    master Merge pull request #2564 from haus/ticket/master/pup_2347
+2014-04-22 23:19:40 #3916 passed:    master Merge pull request #2561 from zaphod42/feature/master/pup-1799-restrict-public-function-api
+2014-04-22 20:14:14 #3913 passed:    master Merge pull request #2567 from kylog/issue/pup-1712/dont-try-to-install-rubygems-on-trusty
+2014-04-22 19:26:33 #3910 passed:    master Merge branch 'maint/master/acceptance-cron-acceptance-cleanup'
+2014-04-22 17:47:44 #3906 passed:    master Merge pull request #2565 from kylog/issue/pup-1712/trusty-acceptance-use-newer-beaker
+2014-04-21 18:26:54 #3895 failed:    master Merge pull request #2562 from zaphod42/issue/master-pup-2080-function-is-a-qname
+2014-04-21 16:41:53 #3887 passed:    master Merge pull request #2534 from hlindberg/pup-2190_lookup-meta-parameter
+2014-04-21 13:40:12 #3880 passed:    master Merge pull request #2556 from jpartlow/maint/master/fix-cmdline-overrides-environment-test
+2014-04-21 12:09:12 #3877 passed:    master Merge branch 'issue/master/pup-2213-expand-path-for-spec-on-windows'
+2014-04-18 19:29:23 #3872 passed:    master Merge pull request #2554 from jpartlow/issue/master/pup-2213-config-print-section-works-with-direnvs
+2014-04-18 15:42:36 #3866 passed:    master Merge branch 'pull-2495'
+2014-04-18 13:40:40 #3864 passed:    master Merge pull request #2552 from zaphod42/revert/master/pup-2080-remove-puppet-functions
+2014-04-18 11:27:00 #3862 passed:    master Merge pull request #2550 from kylog/issue/pup-1712/trusty-acceptance
+2014-04-18 10:56:10 #3861 passed:    master (maint) Fix quotes in hiera config for dynamic_environments test
+2014-04-18 00:46:56 #3859 passed:    master Merge pull request #2551 from kylog/maint/update-parallel-spec-task
+2014-04-17 18:50:50 #3855 passed:    master Merge pull request #2533 from nespresso/fix/master/resource_paser_error_message2
+2014-04-17 18:41:19 #3854 passed:    master Merge pull request #2540 from nfagerlund/apr_2014_docs_fixes
+2014-04-17 18:26:49 #3853 passed:    master Merge pull request #2535 from hlindberg/pup-2241_add-logging-functions-to-static-loader
+2014-04-17 18:01:29 #3852 passed:    master Merge pull request #2546 from hlindberg/pup-2176_followup
+2014-04-17 15:42:29 #3850 passed:    master Merge pull request #2541 from jpartlow/feature/master/pup-1114-deprecate-environment-conf-in-puppet-conf
+2014-04-17 15:31:36 #3849 passed:    master (maint) Fix comparison error float - string
+2014-04-17 13:36:24 #3847 passed:    master Merge pull request #2548 from melissaanne/ticket/master/pup-1711
+2014-04-17 13:26:09 #3846 passed:    master (maint) Quote % in hiera.conf for dynamic environments acceptance
+2014-04-16 20:33:05 #3834 passed:    master Merge pull request #2513 from jpartlow/issue/master/pup-1986-module-dir-permissions-overwrite-libdir
+2014-04-16 20:24:32 #3833 failed:    master Merge branch 'dreamlibrarian-fix/file_content-remote-fileserver'
+2014-04-16 13:59:52 #3825 passed:    master Merge branch 'issue/master/pup-2009-dynamic-environment-acceptance'
+2014-04-16 13:44:12 #3824 passed:    master Merge pull request #2530 from rra/emacs
+2014-04-16 13:30:16 #3823 passed:    master Merge pull request #2474 from rrrene/patch-1
+2014-04-14 19:54:49 #3811 passed:    master Merge pull request #2531 from hlindberg/pup-2176_restrict-puppet-functions-to-module-namespace
+2014-04-14 18:40:30 #3807 failed:    master Merge pull request #2510 from miska/master
+2014-04-14 11:54:56 #3802 passed:    master Merge pull request #2507 from kylog/issue/pup-1932/systemd-reports-transient-services
+2014-04-10 20:35:51 #3787 passed:    master Merge branch 'stable'
+2014-04-09 18:29:15 #3774 passed:    master Merge pull request #2485 from cprice404/feature/3.5.x/PE-3076-support-dynamic-http-client-class
+2014-04-09 18:02:32 #3773 passed:    master Merge branch 'stable'
+2014-04-09 17:04:35 #3772 passed:    master Merge pull request #2523 from hlindberg/pup-2026_add-callable-type
+2014-04-09 13:51:00 #3768 passed:    master Merge pull request #2508 from dalen/egrammar_fix
+2014-04-09 10:13:35 #3766 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-04-07 20:39:18 #3756 passed:    master Merge branch 'stable'
+2014-04-07 19:51:04 #3755 passed:    master Merge pull request #2514 from hlindberg/pup-1960_change-api-resource-type
+2014-04-07 09:40:46 #3742 passed:    master Merge pull request #2509 from hlindberg/pup-1964_handle-nil-class-parameter
+2014-04-05 17:28:47 #3735 passed:    master Merge pull request #2505 from hlindberg/pup-1960_empty-resource-reference-list
+2014-04-04 18:15:13 #3733 passed:    master Merge pull request #2493 from hlindberg/pup-2035_loader-infrastructure
+2014-04-03 19:36:12 #3720 passed:    master Merge pull request #2499 from jpartlow/feature/master/pup-1433-ignore-deprecation-in-acceptance
+2014-04-03 16:33:14 #3714 passed:    master Merge pull request #2311 from carlossg/PUP-1547
+2014-04-03 15:49:12 #3713 passed:    master Merge pull request #2498 from peterhuene/maint/install_options
+2014-04-03 12:53:31 #3712 passed:    master (maint) Remove travis irc notifications
+2014-04-02 20:30:12 #3710 passed:    master Merge branch 'pr/2082'
+2014-04-02 19:09:46 #3708 passed:    master Merge pull request #2497 from kylog/maint/tweak-travis-notifications-part-deux
+2014-04-02 18:51:02 #3707 passed:    master Merge branch 'stable'
+2014-04-02 18:32:39 #3706 passed:    master (maint) Update PMT tests to match a regex
+2014-04-02 17:37:53 #3704 passed:    master Merge pull request #2496 from kylog/maint/tweak-travis-irc-notifications
+2014-04-02 13:50:19 #3699 passed:    master Merge pull request #2483 from nfagerlund/docs_fileserver_example
+2014-04-02 13:31:47 #3698 passed:    master Merge pull request #2488 from kylog/maint/travis-irc-notification
+2014-04-01 20:09:36 #3692 passed:    master (maint) Update PMT tests to expect deprecation
+2014-04-01 15:11:50 #3689 passed:    master Merge pull request #2471 from zaphod42/feature/master/pup-1433-example-environment-in-packages
+2014-04-01 14:52:59 #3688 passed:    master Merge pull request #2491 from jpartlow/feature/master/pup-1433-deprecate-implicit-environment-settings
+2014-04-01 11:57:33 #3684 passed:    master Merge pull request #2490 from ferventcoder/ticket/master/PUP-2100_deny_acl_inheritance
+2014-03-31 18:55:40 #3683 passed:    master (PUP-1937) Remove extra assignment
+2014-03-31 12:09:14 #3676 passed:    master Merge pull request #2486 from kylog/issue/pup-2048/add-show_diffs-to-augeas
+2014-03-27 19:17:44 #3662 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-03-27 18:21:10 #3658 passed:    master (maint) Document Cron autorequre of user resources
+2014-03-27 18:03:42 #3657 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-03-26 21:10:44 #3650 passed:    master (maint) Update required params when creating cron jobs
+2014-03-26 20:50:37 #3648 passed:    master Merge branch 'stable'
+2014-03-26 20:07:42 #3645 passed:    master Merge pull request #2469 from zaphod42/feature/master/pup-2033-augeas-show-diff
+2014-03-26 18:59:19 #3639 passed:    master Merge pull request #2254 from ghoneycutt/FORGE38_module_generate_skeleton_rakefile
+2014-03-26 18:18:33 #3636 passed:    master Merge pull request #2253 from ghoneycutt/PUP1046_module_generate_skeleton_spec_test
+2014-03-26 17:55:12 #3635 passed:    master Merge pull request #2475 from haus/ticket/master/pup_1332_add_more_upstart_services_to_excludes
+2014-03-26 17:28:57 #3633 passed:    master Merge remote-tracking branch 'jaredjennings/fix/master/add-sha256-20140319'
+2014-03-26 17:11:50 #3632 passed:    master Merge branch 'stable'
+2014-03-25 19:08:53 #3621 passed:    master Merge remote-tracking branch 'sathieu/patch-2'
+2014-03-25 15:43:37 #3618 passed:    master Merge branch 'stable'
+2014-03-25 13:23:17 #3616 passed:    master (maint) Remove commented out code
+2014-03-24 20:04:03 #3612 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-03-24 18:38:01 #3610 errored:   master Merge branch 'stable'
+2014-03-24 13:26:19 #3607 passed:    master (maint) Update gem provider spec for recent change.
+2014-03-24 12:38:33 #3606 passed:    master (maint) Fix package acceptance test failure caused by gem provider changes.
+2014-03-21 14:55:18 #3600 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-03-21 13:10:54 #3596 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-03-21 11:31:10 #3592 passed:    master Merge pull request #2460 from jpartlow/feature/master/pup-1596-expand-paths-for-env-on-windows
+2014-03-20 19:12:43 #3584 passed:    master (maint) Fix usage of remove_instance_variable for 1.8.7.
+2014-03-20 18:55:49 #3583 passed:    master (maint) Fix directoryservice spec order issue.
+2014-03-20 16:10:04 #3582 passed:    master Merge branch 'pr/2429'
+2014-03-20 14:39:56 #3581 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-03-19 20:14:20 #3575 passed:    master Merge pull request #2449 from Sharpie/PUP-1955-fix-ssh-purge
+2014-03-19 20:03:53 #3574 passed:    master Merge pull request #2323 from MosesMendoza/PUP-530/master/installer_check_for_hiera
+2014-03-19 19:54:50 #3573 passed:    master Merge pull request #2413 from zipkid/global_loglevel
+2014-03-19 19:45:37 #3572 passed:    master (maint) Fix yum package provider syntax for Ruby 1.8.7.
+2014-03-19 19:32:53 #3571 failed:    master Merge pull request #2441 from peterhuene/pr/2067
+2014-03-19 19:23:19 #3570 failed:    master Merge pull request #2447 from peterhuene/pup/1751
+2014-03-19 19:13:50 #3569 failed:    master Merge pull request #2415 from domcleal/tickets/master/pup-1879-rubygem-cache
+2014-03-19 17:34:40 #3565 failed:    master Merge branch 'pr/2414'
+2014-03-19 16:55:03 #3564 passed:    master Merge pull request #2450 from jpartlow/feature/master/pup-1596-fix-memory-file-on-ruby-1.8
+2014-03-19 13:42:44 #3560 failed:    master Merge pull request #2129 from adrienthebo/master-maint-simplify_autosign_settings_use
+2014-03-18 21:51:54 #3557 failed:    master (PUP-1978) Fix issues with [] operator error reporting
+2014-03-18 19:31:00 #3554 failed:    master Merge pull request #2431 from jpartlow/feature/master/pup-1596-add-environment-conf
+2014-03-18 19:20:07 #3552 passed:    master Merge pull request #2435 from kylog/issue/pup-1952/run-travis-against-jruby19
+2014-03-18 17:31:04 #3551 passed:    master (PUP-1279) Make Class[::p] remove the ::
+2014-03-18 14:43:35 #3547 passed:    master (PUP-1973) Fix getting scope vars to template for inherited scope
+2014-03-17 18:37:04 #3537 passed:    master Merge pull request #2439 from zaphod42/issue/master/pup-1552-not-authorize-reported-as-runtime-error
+2014-03-17 12:29:47 #3530 passed:    master Merge pull request #2438 from dalen/hostclasstypefix
+2014-03-15 19:54:48 #3525 passed:    master Merge pull request #2434 from KevinCorcoran/fix-deprecation-warning
+2014-03-14 19:16:59 #3522 passed:    master Merge tag '3.5.0-rc1'
+2014-03-14 11:55:08 #3513 failed:    master Merge remote-tracking branch 'upstream/stable'
+2014-03-13 18:27:04 #3512 passed:    master Merge pull request #2294 from holguinj/servicedocs
+2014-03-13 18:18:02 #3511 passed:    master Merge branch 'pull-2276'
+2014-03-13 12:57:57 #3505 passed:    master Merge pull request #2342 from ffrank/ticket/master/PUP-1585-cron-duplication-with-target
+2014-03-12 21:19:23 #3503 passed:    master (maint) Fix yet another face spec issue.
+2014-03-12 18:13:30 #3500 passed:    master Merge pull request #2378 from reidmv/fix_moduletool_tar_non_gnu
+2014-03-12 18:02:48 #3499 passed:    master Merge pull request #2112 from yo61/develop
+2014-03-12 17:53:06 #3498 passed:    master (maint) Fix face specs to not pollute global state.
+2014-03-12 17:29:29 #3497 passed:    master (PUP-1174) Use Puppet::Util.absolute_path? to validate purge_ssh_keys
+2014-03-12 16:38:53 #3496 passed:    master Merge pull request #2425 from Sharpie/fix-cron-purging
+2014-03-12 16:05:12 #3495 passed:    master Merge pull request #2430 from nfagerlund/docs_scheduled_task
+2014-03-12 15:42:42 #3493 passed:    master (maint) Revert "Fix face_collection_spec to properly restore global state."
+2014-03-12 15:06:06 #3490 passed:    master Merge pull request #2385 from ffrank/ticket/master/PUP-1041-nagios-parse-blank
+2014-03-12 14:12:16 #3488 passed:    master (maint) Fix face_collection_spec to properly restore global state.
+2014-03-12 13:29:31 #3487 passed:    master Merge pull request #2247 from ffrank/ticket/master/1581-purge-all-ssh-keys
+2014-03-10 19:39:23 #3480 passed:    master Merge branch 'pr/2403'
+2014-03-10 13:33:28 #3478 passed:    master Merge pull request #2426 from domcleal/tickets/master/pup-1905-multiple-modulepaths
+2014-03-08 22:15:41 #3475 passed:    master Merge pull request #2424 from hlindberg/pup-1897_render-single-expression
+2014-03-08 17:47:37 #3473 passed:    master Merge pull request #2412 from hlindberg/pup-979_unparenthesized-call-with-hash
+2014-03-08 14:25:25 #3471 passed:    master Merge pull request #2423 from hlindberg/pup-1897_epp-render-block
+2014-03-08 12:46:06 #3469 passed:    master (maint) Remove dead-code check if ImportExpression is r-value
+2014-03-08 12:21:41 #3468 passed:    master (maint) Remove dead code checking non existing ImportExpression
+2014-03-08 12:13:24 #3467 passed:    master (PUP-1898) Fix reference to ArgumentException
+2014-03-08 12:06:26 #3466 passed:    master (PUP-1898) Fix broken exception raising when inline_epp gets non string
+2014-03-07 20:12:04 #3463 passed:    master Merge pull request #2419 from zaphod42/issues/master/pup-1885-error-with-non-string-ignores
+2014-03-07 18:29:49 #3462 passed:    master Merge pull request #2421 from hlindberg/pup-1895_change-parens-to-pipes
+2014-03-07 16:10:14 #3457 passed:    master (maint) Fix parallel:spec rake task when dependencies are not present.
+2014-03-07 15:49:01 #3456 passed:    master Merge branch 'pr/2322'
+2014-03-07 15:16:02 #3453 passed:    master Merge pull request #2416 from peterhuene/maint/parallel_specs
+2014-03-06 21:07:05 #3450 passed:    master Merge pull request #2418 from hlindberg/pup-30_puppet-templates
+2014-03-06 19:25:30 #3447 passed:    master Merge pull request #2417 from zaphod42/issue/master/pup-1839-incorrect-settings-when-using-puppet-device
+2014-03-06 18:45:27 #3446 passed:    master Merge branch 'pr/2410'
+2014-03-06 16:08:26 #3442 passed:    master (maint) Change regex for picking up beaker hosts to match current output
+2014-03-05 20:04:53 #3438 passed:    master (maint) Remove trailing commas
+2014-03-05 18:34:45 #3437 passed:    master Merge pull request #2339 from jpartlow/maint/master/acceptance-harness-releases-pooled-hosts
+2014-03-05 17:45:35 #3435 passed:    master Merge pull request #2391 from kylog/issue/rhel7-systemd-defaultprovider
+2014-03-05 15:54:12 #3432 failed:    master (PUP-1765) Use master ssldir setting with default environment test
+2014-03-05 15:38:12 #3431 failed:    master Merge pull request #2405 from adrienthebo/issue/master/pup-1821-depend_on_facter_1.7
+2014-03-05 14:48:21 #3430 passed:    master Merge pull request #2398 from joshcooper/issue/master/PUP-1275-windows-kick
+2014-03-05 14:40:11 #3429 passed:    master Merge pull request #2362 from nfagerlund/docs_config_command
+2014-03-05 14:31:14 #3428 failed:    master Merge pull request #2304 from Sharpie/DOCUMENT-22-cron
+2014-03-05 13:42:43 #3427 passed:    master Merge pull request #2411 from jpartlow/feature/master/pup-1372-enhance-defined-function
+2014-03-05 13:18:28 #3425 passed:    master Merge pull request #2117 from ffrank/ticket/master/22800-dynamic-lookup-in-templates
+2014-03-05 11:01:33 #3423 passed:    master (PUP-1765) Change assert_not_match to assert_no_match
+2014-03-05 00:42:50 #3422 passed:    master Merge pull request #2407 from jpartlow/issue/master/pup-1765-puppet-apply-ignores-cmdline-modulepath
+2014-03-03 19:24:10 #3418 failed:    master Merge pull request #2409 from zaphod42/issue/master/pup-1839-incorrect-settings-when-using-puppet-device
+2014-03-03 18:27:32 #3415 failed:    master Merge pull request #2404 from adrienthebo/maint/master/pup-876-skip_resource_service_compare_on_redhat_6
+2014-03-03 17:57:15 #3413 passed:    master Merge pull request #2406 from peterhuene/travis/documentation
+2014-03-03 16:53:54 #3406 passed:    master (maint) Fix useradd spec when using ruby-shadow 2.3.3.
+2014-03-03 12:09:20 #3403 passed:    master Merge pull request #2392 from adrienthebo/issue/master/pup-876-redhat_6_upstart
+2014-03-03 11:53:18 #3402 failed:    master Merge branch 'stable'
+2014-03-03 10:02:58 #3401 passed:    master Merge pull request #2402 from kylog/issue/pup-1825/allow-use-of-facter-2
+2014-02-28 18:09:40 #3396 passed:    master Merge pull request #2400 from hlindberg/pup-1814_double-backslash-in-sqstring
+2014-02-28 16:26:52 #3393 passed:    master Merge branch 'adrienthebo-issue/master/pup-542-deep_freeze_arrays_numerics_booleans'
+2014-02-28 16:06:52 #3392 passed:    master Merge pull request #2399 from hlindberg/pup-1144_underscore-in-last-segment
+2014-02-28 12:26:20 #3388 failed:    master (maint) Remove desc for generate tasks
+2014-02-27 21:38:57 #3385 failed:    master (maint) Use with_puppet_running_on in backported cve tests.
+2014-02-27 18:03:52 #3383 passed:    master (maint) Fix typo in unicode escape in future lexer
+2014-02-27 17:51:41 #3382 passed:    master Merge pull request #2396 from haus/maint/master/pup_208_merge_tests_up
+2014-02-27 17:40:53 #3381 passed:    master Merge pull request #2393 from hlindberg/pup-1576_allow-hyphen-in-bare-words
+2014-02-27 16:20:50 #3377 passed:    master Merge branch 'pr/2349'
+2014-02-26 17:35:46 #3372 passed:    master Merge pull request #2319 from jhoblitt:feature/rpm_provider_uninstall_options
+2014-02-26 16:01:49 #3371 passed:    master Merge pull request #2389 from hlindberg/pup-542_structured-facts-support
+2014-02-26 15:33:34 #3369 failed:    master Merge pull request #2390 from kbarber/ticket/master/PUP-1772-profile-method-public-api
+2014-02-26 14:55:43 #3367 passed:    master Merge branch 'pr/2346'
+2014-02-26 14:05:15 #3365 passed:    master Merge pull request #2324 from duritong/fix/master/PUP-1568_fix_error_reporting
+2014-02-25 23:48:07 #3359 passed:    master Merge pull request #2354 from jjulien/pup1510
+2014-02-25 21:39:16 #3358 passed:    master Merge pull request #2361 from nfagerlund/maint_scrub_improvement
+2014-02-25 16:34:41 #3357 passed:    master Merge pull request #2368 from nfagerlund/maint_configuration_parameter
+2014-02-25 16:26:35 #3356 failed:    master Merge pull request #2365 from alexharv074/fix_typo_in_include_doco
+2014-02-25 14:38:13 #3355 passed:    master (PUP-1707) StringIO#set_encoding doesn't exist in ruby 1.8
+2014-02-25 14:00:47 #3352 failed:    master Merge pull request #2386 from joshcooper/issue/master/1707-erb-encoding
+2014-02-24 11:04:31 #3346 passed:    master Merge pull request #2382 from domcleal/tickets/master/pup-1735-current-env
+2014-02-24 10:48:43 #3345 failed:    master Merge pull request #2384 from kylog/issue/pup-1505/fix-require
+2014-02-21 19:23:15 #3340 passed:    master Merge pull request #2381 from jpartlow/feature/master/pup-1678-expand-manifest
+2014-02-21 18:20:49 #3338 failed:    master Merge pull request #2372 from kylog/issue/pup-1732/systemd
+2014-02-21 18:13:24 #3337 passed:    master Merge pull request #2380 from jpartlow/maint/master/managehome-acceptance-osrelease
+2014-02-21 18:01:39 #3335 failed:    master Merge pull request #2379 from kylog/maint/revert-to-installing-facter-stable-if-testing-from-github
+2014-02-21 17:24:04 #3331 passed:    master Merge pull request #2316 from ahpook/clean-master
+2014-02-21 15:34:32 #3326 passed:    master (maint) Remove stale comment about shortened list in http_environments
+2014-02-21 15:31:46 #3325 passed:    master Merge pull request #2375 from zaphod42/feature/master/pup-1678-only-send-environment-settings
+2014-02-21 15:04:08 #3324 passed:    master Merge branch 'maint/master/api-docs-environment-v2'
+2014-02-21 13:54:33 #3322 passed:    master Merge pull request #2376 from jpartlow/issue/master/pup-1676-allow-main-as-direnv
+2014-02-21 13:30:45 #3320 passed:    master Merge pull request #2374 from dalen/to_pson_fix
+2014-02-20 19:28:51 #3317 failed:    master Merge branch 'issue/master/pup-1676-basemodulepath-acceptance-fix'
+2014-02-20 19:23:10 #3316 passed:    master Merge branch 'pr/2359'
+2014-02-20 19:17:48 #3315 passed:    master Merge pull request #2373 from hlindberg/pup-1592_avoid-type-search
+2014-02-20 13:45:28 #3309 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-02-20 12:00:29 #3306 passed:    master Merge pull request #2369 from jpartlow/issue/master/pup-1676-puppet-config-print-and-direnvs
+2014-02-19 16:18:43 #3304 passed:    master Merge tag '3.4.3'
+2014-02-19 15:38:21 #3303 passed:    master Merge branch 'pr/2026'
+2014-02-19 13:15:39 #3301 passed:    master Merge branch 'issue/master/pup-1584-expand-path-for-specs-on-windows'
+2014-02-19 12:53:57 #3300 passed:    master Merge pull request #2363 from domcleal/tickets/master/pup-1722-yumrepo-protocols
+2014-02-19 12:17:46 #3299 passed:    master Merge pull request #2370 from peterhuene/master
+2014-02-18 21:12:19 #3294 passed:    master Merge pull request #2367 from jpartlow/issue/master/pup-1584-module-tool-and-directory-envs
+2014-02-18 20:10:10 #3293 passed:    master (pup-1636) Confine two tests to el5 and el6 which are all the tests are written for
+2014-02-18 19:53:52 #3290 passed:    master Merge pull request #2344 from kylog/issue/pup-1636/add-rhel7-to-acceptance
+2014-02-17 11:51:18 #3274 passed:    master (maint) Add newline at end-of-file under lib
+2014-02-15 10:33:33 #3268 passed:    master (maint) Fix two example command lines that were missing 'rake'
+2014-02-14 20:13:38 #3266 passed:    master (Maint) Ensure there is a fully ruby env
+2014-02-14 19:57:50 #3264 passed:    master (maint) Fix spec for UTF-8 strings in user comment properties
+2014-02-14 16:21:01 #3259 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-02-14 16:05:32 #3258 passed:    master Merge branch 'pup-1029_improve-iterative-function-errors'
+2014-02-14 15:49:39 #3257 passed:    master Merge pull request #2358 from nfagerlund/docs_evaluator_setting
+2014-02-14 15:26:14 #3255 passed:    master Merge pull request #2341 from zaphod42/issue/master/pup-751-define-type-benchmarks
+2014-02-14 13:07:56 #3250 passed:    master Merge branch 'maint/master/fixup-yumrepo-filesystem-access'
+2014-02-13 20:37:13 #3249 passed:    master (maint) Fix yumrepo inifile spec to stub the correct method
+2014-02-13 19:42:00 #3248 passed:    master Merge pull request #2357 from nfagerlund/docs_validate_cmd
+2014-02-13 18:43:57 #3245 passed:    master Merge pull request #2086 from apenney/yumrepo
+2014-02-13 17:48:02 #3238 passed:    master Merge branch 'master' of ssh://github.com/puppetlabs/puppet.git
+2014-02-13 16:03:06 #3236 passed:    master (maint) Fix pkgin package provider spec to ensure resource uses the pkgin provider.
+2014-02-13 14:28:41 #3233 passed:    master Merge branch 'pr/2023'
+2014-02-13 09:07:16 #3230 passed:    master Merge branch 'master' of ssh://github.com/puppetlabs/puppet.git
+2014-02-12 23:31:38 #3229 passed:    master (PUP-1681) Always go through the native windows methods
+2014-02-12 19:59:03 #3228 passed:    master Merge remote-tracking branch 'upstream/pr/2350'
+2014-02-12 17:33:46 #3223 passed:    master Merge pull request #2347 from dalen/file_validate_cmd
+2014-02-12 17:24:24 #3222 passed:    master Merge branch 'maint/master/rspec-tutorial-docfix'
+2014-02-12 17:17:56 #3221 passed:    master Merge pull request #2333 from zaphod42/doc/master/update-developer-intro-docs
+2014-02-12 16:59:04 #3220 passed:    master (PUP-1619) Fix typo in Tuple instance_of logic
+2014-02-12 15:39:59 #3218 passed:    master Merge branch 'issue/master/pup-1588-constrain-new-msgpack-tests'
+2014-02-12 13:26:33 #3217 passed:    master (PUP-1451) (PUP-1120) Merge branch 'relaxed_permissions'
+2014-02-12 13:07:42 #3216 passed:    master Merge branch 'issue/master/pup-713-disambiguate-cron-schedules'
+2014-02-12 12:58:31 #3215 passed:    master Merge pull request #2328 from dalen/msgpack_store
+2014-02-11 21:07:01 #3209 passed:    master Merge branch 'pr/2060'
+2014-02-11 19:36:40 #3208 passed:    master Merge branch 'pr/2024'
+2014-02-10 21:11:34 #3203 passed:    master Merge pull request #2345 from hlindberg/pup-1619_add-struct-tuple
+2014-02-10 16:01:19 #3195 passed:    master (PUP-1473) Fix issue with UTF-8 in user comments
+2014-02-10 14:42:34 #3194 passed:    master Merge pull request #2343 from nfagerlund/docs_exec_logoutput
+2014-02-07 17:05:06 #3181 passed:    master (PUP-1407) Fix specs on 187
+2014-02-07 15:09:38 #3179 failed:    master Merge branch 'pr/2238'
+2014-02-07 14:47:06 #3178 passed:    master Merge pull request #2338 from zaphod42/feature/master/pup-753-record-benchmark-times
+2014-02-07 11:26:45 #3170 passed:    master Merge pull request #2335 from ptomulik/fix/classgen_regexp
+2014-02-07 09:51:14 #3169 passed:    master (PUP-1029) Update documentation of map function
+2014-02-07 09:44:38 #3168 passed:    master Merge pull request #2337 from hlindberg/pup-1029_map-function-consistency
+2014-02-06 21:00:42 #3164 passed:    master Merge pull request #2332 from hlindberg/pup-1029_filter-function-serving-size
+2014-02-06 20:00:28 #3162 passed:    master Merge pull request #2334 from jpartlow/issue/master/pup-1574-dir-envs-prevent-applying-cmdline-manifest
+2014-02-06 19:13:46 #3160 passed:    master Merge pull request #2314 from dalen/lambda_optional_param_count
+2014-02-06 14:15:27 #3154 passed:    master Merge pull request #2330 from dalen/maint_application_comment
+2014-02-06 11:59:36 #3152 passed:    master Merge pull request #2310 from dalen/serialization_revamp
+2014-02-05 21:58:53 #3148 passed:    master (maint) Fix typo in spec
+2014-02-05 21:02:29 #3147 failed:    master (maint) Unset the defaultprovider after caching it
+2014-02-05 19:54:40 #3146 passed:    master (PUP-753) Constrain ruby-prof solely to the development group
+2014-02-05 19:09:07 #3145 passed:    master Merge pull request #2329 from zaphod42/feature/master/pup-753-generate-benchmarking-manifests
+2014-02-05 18:43:25 #3143 passed:    master (maint) Switch from -fd to -fp for specs to reduce disk space usage
+2014-02-05 18:35:34 #3142 passed:    master Merge branch 'issue/master/PUP1387_authorityKeyIdentifier'
+2014-02-05 18:10:56 #3139 passed:    master Merge pull request #2317 from Iristyle/ticket/master/PUP-1559-adsi-well-known-sids
+2014-02-05 14:33:41 #3133 passed:    master Merge branch 'stable'
+2014-02-04 19:54:42 #3128 passed:    master Merge branch 'maint/master/facter-search-path-args'
+2014-02-04 17:32:50 #3124 passed:    master Merge branch 'issue/master/pup-1551-fix-enumerate-env-test'
+2014-02-04 14:00:43 #3123 passed:    master Merge pull request #2320 from jpartlow/feature/master/pup-1551-environmentpath
+2014-02-04 12:47:07 #3119 passed:    master Merge branch 'stable'
+2014-02-04 12:12:26 #3118 passed:    master Merge branch 'pr/2277'
+2014-02-04 11:17:12 #3117 passed:    master (Maint) Remove documentation rspec output
+2014-02-04 05:17:18 #3115 passed:    master Merge pull request #2326 from hlindberg/pup-1579_rename-literal-to-scalar
+2014-02-03 17:58:33 #3113 passed:    master Merge pull request #2325 from zaphod42/issue/master/incorrect-loading-from-manifest-directories
+2014-02-03 15:30:46 #3111 passed:    master (maint) Add how-to for destroying individual hosts
+2014-01-31 19:37:02 #3103 passed:    master Merge pull request #2307 from kylog/issue/pup-640/report-schema-updates-for-error-events
+2014-01-31 13:49:30 #3094 passed:    master Merge branch 'issue/master/pup-576-fixup-store_configs-test-for-debian'
+2014-01-31 13:41:56 #3093 passed:    master Merge pull request #2315 from zaphod42/issue/master/pup-1549-v2-funky-response-phrase
+2014-01-31 12:49:58 #3089 passed:    master PUP-1450 Honor source_permissions_ignore
+2014-01-31 10:53:12 #3087 passed:    master (maint) Remove warning added during debugging
+2014-01-30 19:23:39 #3078 passed:    master Merge pull request #2313 from jpartlow/issue/master/pup-576-add-fedora19-host-to-acceptance
+2014-01-30 18:03:22 #3076 passed:    master Merge branch 'pr/2301'
+2014-01-30 17:14:39 #3075 passed:    master (PUP-1118) Convert environment for nodes on load
+2014-01-30 16:18:50 #3071 passed:    master Merge pull request #2312 from dalen/future_parser_fix
+2014-01-30 15:52:53 #3070 passed:    master (PUP-1529) Make squelch of parse error use context instead of global
+2014-01-29 17:08:11 #3063 passed:    master (maint) Fixing acceptance test failure caused by GH-2293.
+2014-01-29 16:17:25 #3061 passed:    master Merge pull request #2306 from zaphod42/feature/master/pup-1118-implement-environment-directory
+2014-01-29 15:54:50 #3060 passed:    master (Maint) Fix load order dependency
+2014-01-29 15:37:07 #3059 passed:    master Merge pull request #2308 from zaphod42/maint/master/remove-dead-port-code
+2014-01-29 14:57:52 #3056 passed:    master Merge pull request #2269 from skottler/PUP-1463
+2014-01-29 14:12:02 #3055 passed:    master Merge branch 'stable'
+2014-01-29 13:26:40 #3053 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-01-28 18:29:53 #3040 passed:    master (maint) Fix acceptance test failure caused by backtrace preservation
+2014-01-28 18:20:15 #3039 passed:    master (maint) Adding .ruby-version and .ruby-gemset to .gitignore for RVM users.
+2014-01-28 17:39:58 #3038 passed:    master Revert "Merge branch 'pull-2137'"
+2014-01-28 14:51:07 #3036 passed:    master Merge pull request #2303 from kylog/maint/fix-rspec-key
+2014-01-28 14:24:19 #3034 passed:    master Merge branch 'ticket/master/PUP-1494/remove-native-ruby-encode-UTF-16-windows'
+2014-01-28 14:17:30 #3033 passed:    master Merge pull request #2293 from Iristyle/maint/master/properly-return-backtraces
+2014-01-28 13:01:13 #3028 passed:    master Merge branch 'maint/windows/rspec-duplicate-key'
+2014-01-27 19:00:04 #3026 passed:    master Merge pull request #2295 from kylog/issue/external-facts-dir-api
+2014-01-27 16:34:21 #3023 passed:    master Merge pull request #2302 from peterhuene/fix/pup1318
+2014-01-27 15:43:04 #3021 passed:    master Merge branch 'stable'
+2014-01-27 12:01:10 #3019 passed:    master Merge branch 'pull-2137'
+2014-01-24 18:17:35 #3011 passed:    master Merge pull request #2296 from zaphod42/feature/master/pup-1118-implement-environment-directory
+2014-01-24 18:14:35 #3010 passed:    master Merge pull request #2297 from zaphod42/issue/master/pup-1151-error-when-generating-404-response
+2014-01-24 16:48:58 #3009 passed:    master Merge branch 'pull-2237'
+2014-01-24 04:41:04 #2999 passed:    master Merge pull request #2292 from mckern/add-el7-for-mocks
+2014-01-23 18:25:22 #2995 passed:    master Merge branch 'pull-2287'
+2014-01-23 16:25:14 #2992 failed:    master Merge pull request #2283 from ferventcoder/issue/master/PUP1282-windows_gem_dependencies
+2014-01-23 14:37:53 #2990 passed:    master Merge branch 'maint/master/environment-performance-regression'
+2014-01-22 17:31:57 #2980 passed:    master Merge pull request #2286 from dalen/apply_test
+2014-01-22 17:14:19 #2979 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-01-22 17:01:23 #2978 passed:    master Merge pull request #2289 from peterhuene/fix/pup1492
+2014-01-22 12:38:31 #2974 passed:    master Merge pull request #2284 from shrug/master
+2014-01-22 01:21:26 #2968 passed:    master Merge pull request #2285 from kylog/issue/pup-1369/followup-fix-to-super-bug
+2014-01-21 14:58:25 #2962 passed:    master (maint) Reset Puppet::Parser::Functions early in TestHelper.initialize
+2014-01-21 14:38:39 #2961 passed:    master Merge branch 'pr/2161'
+2014-01-21 11:34:59 #2954 passed:    master Merge pull request #2273 from highb/master
+2014-01-21 08:22:14 #2949 passed:    master Merge pull request #2263 from aperiodic/pup-1432-v2-api-errors
+2014-01-20 10:11:05 #2947 passed:    master Merge pull request #2278 from kintamanimatt/master
+2014-01-17 17:59:46 #2935 failed:    master Revert "Merge branch 'ticket/master/18342-windows-file-setting-owner-group'"
+2014-01-17 17:40:40 #2934 passed:    master Merge pull request #2272 from hlindberg/pup-1166_better-error-for-strict-var-lookup
+2014-01-17 15:37:19 #2931 passed:    master Merge pull request #2271 from zaphod42/feature/master/pup-1118-implement-environment-directory
+2014-01-17 15:06:11 #2929 passed:    master Merge pull request #2265 from jpartlow/feature/master/pup-1448-validate-user-shell
+2014-01-16 23:57:08 #2922 passed:    master (PUP-1447) Merge branch 'feature/master/PUP-1447-unless_uid_option_resource'
+2014-01-15 19:15:39 #2917 passed:    master Merge pull request #2266 from aperiodic/maint-fix-execution-tests
+2014-01-15 18:44:03 #2913 failed:    master Merge branch 'ticket/master/18342-windows-file-setting-owner-group'
+2014-01-15 18:12:42 #2910 failed:    master (PUP-1404) Don't swallow execpipe tests on windows
+2014-01-15 17:32:35 #2906 failed:    master Don't run LANG/LC_ALL tests on windows
+2014-01-15 15:18:00 #2903 passed:    master Merge pull request #2264 from kylog/issue/pup-1369/add-package-settings-property
+2014-01-15 14:20:11 #2902 passed:    master (PUP-1404) LC_ALL test to actually tests LC_ALL
+2014-01-15 13:30:08 #2900 passed:    master (PUP-1404) Merge execpipe locale settings (#2234).
+2014-01-15 11:56:36 #2898 passed:    master Merge branch 'pr/2168'
+2014-01-15 09:17:11 #2896 passed:    master Merge pull request #2051 from ptomulik/fix/package_openbsd_spurious_warning
+2014-01-14 18:45:59 #2884 passed:    master Merge pull request #2260 from glennpratt/patch-1
+2014-01-14 16:55:17 #2874 passed:    master Merge branch 'feature/master/pup-1151-environment-enumeration'
+2014-01-14 16:24:22 #2873 passed:    master (pup-923) Add a fedora 20 config
+2014-01-14 15:12:25 #2872 passed:    master Merge pull request #2259 from zaphod42/feature/master/pup-1151-environment-enumeration
+2014-01-13 20:06:20 #2867 passed:    master Merge pull request #2258 from zaphod42/feature/master/pup-1151-environment-enumeration
+2014-01-13 19:21:50 #2864 passed:    master Merge branch 'master' of ssh://github.com/puppetlabs/puppet.git
+2014-01-13 18:23:42 #2862 passed:    master (maint) Fix typo in spec test description
+2014-01-13 15:27:34 #2859 passed:    master Merge branch 'master' of ssh://github.com/puppetlabs/puppet.git
+2014-01-13 12:41:07 #2855 passed:    master Merge remote-tracking branch 'upstream/stable'
+2014-01-13 10:50:45 #2852 passed:    master Merge pull request #2252 from dalen/dead_cache_code
+2014-01-13 09:59:25 #2848 passed:    master Merge pull request #2249 from webbj74/fix/master/PUP-1421
+2014-01-13 09:58:40 #2847 passed:    master Merge pull request #2250 from crankharder/move_statemachine_2
+2014-01-13 09:34:12 #2846 passed:    master Merge pull request #2201 from fhrbek/pe_2123_do_not_fail_hard_on_unparseable_files
+2014-01-12 01:00:45 #2841 passed:    master Merge pull request #2246 from andersonmills/remove-ca_days
+2014-01-11 14:41:33 #2835 passed:    master Merge branch 'pull-2118'
+2014-01-11 14:17:08 #2833 passed:    master Merge pull request #2235 from jpartlow/maint/master/acceptance-readme-git-fork-runs
+2014-01-11 14:11:18 #2832 passed:    master Merge branch 'pull-2182'
+2014-01-11 00:23:57 #2831 passed:    master (maint) Fix typo in a RuntimeError name
+2014-01-10 23:24:10 #2830 passed:    master (maint) Derive path for status.json (rather than fixed offset from cwd)
+2014-01-10 13:43:00 #2826 passed:    master Merge pull request #2244 from jpartlow/issue/master/pup-716-win2003-lstat-spec-fix
+2014-01-10 01:09:27 #2821 passed:    master (PUP-1151) Fix the master port # (thus addressing a failure on windows)
+2014-01-09 21:56:12 #2820 passed:    master Merge branch 'maint/master/reset-hiera_puppet-instance'
+2014-01-09 21:34:05 #2819 passed:    master Merge pull request #2240 from zaphod42/feature/master/pup-1151-environment-enumeration
+2014-01-09 21:16:08 #2817 passed:    master Merge pull request #2242 from jpartlow/issue/master/pup-716-fix-exist-call-in-file19windows-impl
+2014-01-09 21:08:19 #2815 passed:    master Merge pull request #2241 from aperiodic/pup-1151-environment-enumeration-test-fix
+2014-01-09 19:46:27 #2811 passed:    master Merge pull request #2239 from zaphod42/feature/master/pup-536-environment-enumeration
+2014-01-09 09:53:28 #2809 passed:    master Merge branch 'master' of ssh://github.com/puppetlabs/puppet.git
+2014-01-08 19:30:34 #2802 passed:    master Merge pull request #2232 from hlindberg/pup-716_short-lived-objects-in-filesystem
+2014-01-08 14:52:10 #2797 passed:    master Merge branch 'pr/2162'
+2014-01-08 14:54:38 #2796 passed:    master Merge pull request #2142 from nfagerlund/docs_wiki_links
+2014-01-08 13:03:49 #2795 passed:    master Merge pull request #2186 from pedrocr/master
+2014-01-08 13:00:00 #2794 passed:    master Merge pull request #2196 from ffrank/maint/cron-command-munge
+2014-01-08 12:07:42 #2793 passed:    master Merge pull request #2215 from carlossg/template-stacktrace
+2014-01-08 04:15:02 #2790 errored:   master Merge pull request #2218 from kylog/maint/add-check-that-lmhosts-is-running
+2014-01-07 18:20:51 #2786 passed:    master Merge pull request #2231 from kylog/issue/pup-899/deprecate-parent-parameter-for-type
+2014-01-07 17:54:40 #2785 passed:    master Merge pull request #2230 from hlindberg/pup-800_improve-location-handling
+2014-01-07 13:20:13 #2779 passed:    master Merge pull request #2205 from jpartlow/maint/master/remove-acceptance-symlinks
+2014-01-06 19:36:30 #2768 passed:    master Merge pull request #2134 from nfagerlund/docs_zone_defrouter
+2014-01-06 19:23:48 #2765 passed:    master Merge branch 'pr/2169'
+2014-01-06 18:26:25 #2761 passed:    master Merge tag '3.4.2'
+2014-01-06 12:47:55 #2759 passed:    master Merge pull request #2220 from jpartlow/issue/master/pup-672-trusted-information-and-external-ca
+2014-01-05 17:01:58 #2755 passed:    master (PUP-1144) Make variable name checking stricter
+2014-01-03 19:53:25 #2741 passed:    master (PUP-1144) Fix up failing tests (pending new/better validation)
+2014-01-03 19:32:33 #2738 failed:    master Merge pull request #2219 from zaphod42/feature/master/pup-1068-submit-reports-with-basic-auth
+2014-01-03 18:55:49 #2733 failed:    master (PUP-1144) Make future parser accept $_private
+2014-01-03 17:52:11 #2728 passed:    master Merge pull request #2217 from jpartlow/maint/master/revert-6857-test-changes-and-match-fedora
+2014-01-03 12:22:01 #2722 passed:    master Merge branch 'stable'
+2014-01-03 11:12:15 #2720 passed:    master Merge pull request #2214 from jpartlow/issue/master/pup-724-autoload-mtime-test
+2014-01-02 17:44:42 #2714 passed:    master Merge pull request #2210 from jpartlow/feature/master/pup-672-csr-extensions-as-trusted
+2014-01-02 17:16:14 #2713 passed:    master Merge branch 'stable'
+2014-01-02 09:40:43 #2705 passed:    master Merge pull request #2209 from hlindberg/pup-1176_evaluator-feature-switch
+2014-01-02 09:10:32 #2702 passed:    master Merge pull request #2208 from hlindberg/maint_remove-categories-add-dynamic-layers
+2013-12-31 17:42:55 #2700 passed:    master Merge pull request #2207 from jpartlow/maint/master/simplify-confine-for-6857-test
+2013-12-30 18:05:41 #2694 passed:    master Merge pull request #2204 from hlindberg/maint_case-type-option-inconsistent
+2013-12-30 17:12:06 #2691 passed:    master Merge branch 'maint/master/future-parser-acceptance-fixes'
+2013-12-30 14:47:44 #2689 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-12-30 11:36:54 #2683 passed:    master Merge pull request #2190 from jpartlow/issue/master/pup-798-watched-files
+2013-12-29 14:11:41 #2676 passed:    master (maint) Add temp workaround for travis
+2013-12-28 19:18:30 #2673 errored:   master Merge pull request #2197 from hlindberg/maint_type-type-not-handled-correctly
+2013-12-28 08:29:31 #2670 errored:   master Merge pull request #2194 from hlindberg/maint_undef-not-correctly-handled-in-type-calculator
+2013-12-27 11:44:52 #2664 passed:    master (maint) Require json for logstash test
+2013-12-26 20:27:49 #2659 passed:    master Merge pull request #2179 from hlindberg/maint_convert-to3x-acceptance-test-fix
+2013-12-26 18:16:50 #2658 passed:    master Merge pull request #2189 from kylog/maint/reduce-log-file-verbosity
+2013-12-26 15:04:20 #2654 passed:    master Merge pull request #2188 from hlindberg/pup-546_remove-hiera2-data-in-modules
+2013-12-26 13:45:28 #2651 passed:    master Merge branch 'kylog-maint/fix_rdoc_spec_tests_for_mri_2_1_0'
+2013-12-26 13:35:09 #2650 passed:    master (maint) Update test to work on non-UTF-8 systems
+2013-12-26 12:52:01 #2647 passed:    master Merge branch 'stable'
+2013-12-26 12:39:38 #2645 passed:    master Merge pull request #2177 from aperiodic/acceptance-docs
+2013-12-26 12:31:01 #2644 passed:    master Merge branch 'drednout-master'
+2013-12-26 12:08:14 #2643 passed:    master (maint) Fix a comment.
+2013-12-26 11:57:20 #2641 passed:    master Merge pull request #2184 from jeffmccune/mri_210_fixes
+2013-12-26 11:31:59 #2640 passed:    master Merge pull request #2183 from zaphod42/maint/master/pup-986-update-references-for-jira
+2013-12-23 15:52:03 #2632 passed:    master Merge pull request #2173 from Iristyle/ticket/master/pup-1133-windows-allusersprofile-test-fails
+2013-12-23 14:18:03 #2630 passed:    master Merge pull request #2172 from adrienthebo/master-bug-22744-filter_static_compiler
+2013-12-20 14:03:05 #2614 passed:    master Merge branch 'pr/2176'
+2013-12-19 19:08:23 #2605 passed:    master Merge branch 'stable'
+2013-12-19 17:30:46 #2601 passed:    master Merge pull request #2178 from zaphod42/issue/master/pup-665-interpolating-variables-too-early
+2013-12-19 15:06:48 #2597 passed:    master Merge branch 'stable'
+2013-12-19 14:14:01 #2594 passed:    master Merge pull request #2175 from zaphod42/maint/master/allow-settings-to-be-undefined
+2013-12-19 13:30:20 #2590 failed:    master Merge tag '3.4.0'
+2013-12-19 11:58:47 #2589 errored:   master Merge pull request #2174 from zaphod42/maint/master/allow-settings-to-be-undefined
+2013-12-18 16:44:15 #2586 passed:    master (#23219) Merge branch 'ticket/#23219'
+2013-12-18 15:24:33 #2582 passed:    master (Maint) Revert including augeas
+2013-12-18 14:48:05 #2581 passed:    master Merge branch 'stable'
+2013-12-18 11:43:12 #2578 passed:    master Merge pull request #2061 from domcleal/tickets/master/17486-augeas-warn-same-lens
+2013-12-18 11:22:38 #2577 passed:    master (maint) Pin beaker to 1.2.0
+2013-12-17 22:01:29 #2569 passed:    master Merge branch 'maint/master/beaker-log-level-debug'
+2013-12-17 21:10:53 #2568 passed:    master Merge pull request #2167 from hlindberg/maint_future-evaluator-acceptance-test-2
+2013-12-17 18:56:45 #2565 passed:    master Merge branch 'stable'
+2013-12-17 18:42:07 #2564 passed:    master Merge pull request #2165 from dyarnell/rhel7
+2013-12-17 18:30:33 #2563 passed:    master Merge branch 'pr/2158'
+2013-12-17 09:38:34 #2553 passed:    master Merge pull request #2166 from jpartlow/maint/master/acceptance-should-not-reassign-checks-host-parser-setting
+2013-12-17 09:10:36 #2551 passed:    master Merge branch 'settings-reporting'
+2013-12-17 01:14:13 #2549 passed:    master Merge pull request #2164 from hlindberg/maint-future-acceptance-test-fixes
+2013-12-16 16:57:46 #2544 passed:    master Merge pull request #2159 from hlindberg/pup-865_provide-manifest-directory
+2013-12-16 11:23:47 #2543 passed:    master Merge pull request #2163 from hlindberg/pup-939_enumerable-types-support
+2013-12-15 18:07:48 #2539 passed:    master Merge pull request #2160 from hlindberg/pup-864_deprecate-mutating-array-hash-ops
+2013-12-15 17:12:35 #2537 passed:    master Merge branch 'maint/master/acceptance-ci-bootstrap-solaris-fix'
+2013-12-13 19:20:19 #2533 passed:    master Merge pull request #2135 from hlindberg/issue/pup_954-the-pattern-type-is-not-ciorrectly-implemented
+2013-12-13 18:53:50 #2530 passed:    master Merge branch 'maint/master/ci-bootstrap-fix'
+2013-12-13 18:48:16 #2529 passed:    master Merge pull request #2145 from hlindberg/issues/relationship-operator-improvements
+2013-12-13 18:33:37 #2528 passed:    master Merge pull request #2148 from hlindberg/pup-490_remove-partial-import-support
+2013-12-13 18:21:36 #2526 passed:    master Merge pull request #2157 from jpartlow/maint/master/restructure-acceptance
+2013-12-13 16:20:54 #2523 passed:    master Merge pull request #2152 from hlindberg/pup-866_deprecate-import
+2013-12-13 13:48:28 #2521 passed:    master Merge branch 'maint/master/acceptance-setup-windows-fix'
+2013-12-12 19:42:12 #2518 passed:    master Merge pull request #2154 from jpartlow/maint/master/common-acceptance-setup
+2013-12-12 16:24:40 #2510 passed:    master Merge branch 'ticket/master/7659-puppet-docstring'
+2013-12-12 12:56:39 #2505 passed:    master Merge pull request #2140 from kylog/issue/23141/mount-update-on-bsd
+2013-12-11 20:14:43 #2497 passed:    master Merge pull request #2146 from jpartlow/maint/master/acceptance-set-parser
+2013-12-11 12:31:02 #2492 passed:    master Merge branch 'ssh_ed25519'
+2013-12-10 19:47:45 #2490 passed:    master Merge pull request #2126 from raphink/dev/typo
+2013-12-10 19:37:03 #2488 passed:    master Merge pull request #2143 from nfagerlund/docs_augeas_lenses
+2013-12-10 19:35:51 #2487 passed:    master Merge pull request #2144 from nfagerlund/docs_defined_notice_notify
+2013-12-10 12:42:37 #2481 passed:    master Merge tag '3.4.0-rc2'
+2013-12-09 16:30:19 #2475 passed:    master Merge branch 'feature/master/23373-manipulate-puppet-conf-ignore-sections'
+2013-12-06 18:09:58 #2462 passed:    master (maint) Move require pops_bridge to pops.rb
+2013-12-06 15:58:47 #2458 passed:    master Merge remote-tracking branch 'Sharpie/21869-fix-ssl-recursion'
+2013-12-06 13:31:37 #2456 passed:    master Merge pull request #2123 from hlindberg/feature/master/pops-evaluator
+2013-12-06 13:07:10 #2455 passed:    master Merge branch 'stable'
+2013-12-06 11:21:29 #2449 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-12-05 19:16:30 #2445 passed:    master Merge branch 'stable'
+2013-12-05 16:33:01 #2441 passed:    master Merge branch 'stable'
+2013-12-05 14:02:57 #2437 passed:    master (maint) Fix spelling in a comment.
+2013-12-04 16:50:31 #2423 passed:    master Merge pull request #2097 from adrienthebo/maint-empty-lockfile
+2013-12-03 22:24:49 #2421 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-12-02 14:27:09 #2415 passed:    master (packaging) Update PUPPETVERSION to 3.4.0-rc1
+2013-11-27 14:25:38 #2410 passed:    master Merge pull request #2114 from nfagerlund/rpm_install_options_description
+2013-11-27 14:24:40 #2409 passed:    master Merge pull request #2115 from nfagerlund/mount_autorequire
+2013-11-27 13:34:59 #2408 passed:    master Merge remote-tracking branch 'joshcooper/ticket/master/11563-owner-group-mode-are-interdependent'
+2013-11-27 12:39:02 #2407 passed:    master Merge pull request #2113 from jpartlow/maint/master/extract-common-jenkins-setup
+2013-11-27 00:06:36 #2406 passed:    master Merge pull request #2107 from justinstoller/maint/master/configurable_gem_mirror
+2013-11-26 15:02:28 #2401 passed:    master Merge pull request #2110 from nfagerlund/source_permissions_copyedit
+2013-11-26 10:57:57 #2398 passed:    master Merge branch 'maint/master/fixup-source-tests'
+2013-11-25 19:52:18 #2394 passed:    master Merge pull request #2109 from justinstoller/maint/master/pooling
+2013-11-25 19:21:10 #2393 passed:    master Merge pull request #2104 from nfagerlund/docs_inactive_stopped
+2013-11-25 19:18:06 #2392 passed:    master Merge pull request #2106 from nfagerlund/priority_formatting
+2013-11-25 18:45:54 #2390 passed:    master Merge remote-tracking branch 'jpartlow/issue/18931/source_permissions_apply_to_local'
+2013-11-25 16:52:01 #2387 passed:    master (maint) Adds vcloud pooling to the remaining windows beaker node definitions
+2013-11-25 15:38:48 #2384 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-11-25 13:38:33 #2383 passed:    master Merge pull request #2076 from llowder/fix_for_23177
+2013-11-25 12:22:04 #2381 passed:    master Merge pull request #2105 from adrienthebo/maint/handle-malformed-csr-attributes
+2013-11-22 19:24:30 #2380 passed:    master Merge branch 'maint/master/reset-hiera-in-test-helper'
+2013-11-22 14:41:04 #2377 passed:    master Merge branch 'issue/18931/return-existing-windows-behavior'
+2013-11-22 13:06:06 #2376 passed:    master Merge pull request #2103 from nfagerlund/autosign_docs
+2013-11-21 19:26:58 #2374 passed:    master Merge pull request #2103 from nfagerlund/autosign_docs
+2013-11-21 18:26:44 #2370 passed:    master Merge pull request #2101 from adrienthebo/defect/csr-extreq-pack-single-seq
+2013-11-21 10:12:06 #2363 passed:    master Merge pull request #2098 from ferventcoder/ticket/master/23236-Mark-SUIDManager-run_and_capture-deprecated
+2013-11-20 19:31:37 #2357 passed:    master Merge branch 'maint/7244/add-tempfile-open-for-autosign'
+2013-11-20 14:58:54 #2355 passed:    master Merge pull request #2096 from adrienthebo/defect/23222/string-csr-attributes
+2013-11-20 14:28:35 #2353 passed:    master Merge remote-tracking branch 'ethan/ticket/master/15559-dont-remove-windows-SYSTEM-permissions'
+2013-11-20 13:46:43 #2351 passed:    master Merge branch 'ticket/master/18931-source-permissions'
+2013-11-19 18:46:29 #2344 passed:    master (Maint) Conform to naming conventions
+2013-11-19 18:34:01 #2343 passed:    master (Maint) Remove unstable and not useful test
+2013-11-19 18:14:21 #2342 passed:    master (Maint) Trailing comma doesn't work in ruby 187
+2013-11-19 17:47:11 #2340 failed:    master Merge pull request #2091 from jpartlow/feature/23201/csr-extension-requests
+2013-11-19 17:34:14 #2338 failed:    master Merge branch 'ticket/master/15559-dont-remove-windows-SYSTEM-permissions'
+2013-11-19 12:46:40 #2331 passed:    master Merge pull request #2088 from adrienthebo/feature/ca-extreq-whitelist
+2013-11-19 11:28:59 #2328 passed:    master Merge pull request #2084 from hlindberg/issues/issue-19514
+2013-11-18 18:05:12 #2326 passed:    master Merge pull request #2085 from adrienthebo/feature/puppet-custom-oids
+2013-11-18 17:44:30 #2325 passed:    master Merge pull request #2085 from adrienthebo/feature/puppet-custom-oids
+2013-11-18 16:59:29 #2318 passed:    master Merge branch 'feature/7243/fix-autosign-command-acceptance-subjectaltnames'
+2013-11-18 15:14:05 #2310 passed:    master Merge pull request #2083 from zaphod42/jpartlow-feature/7244/refactor-autosign-setting
+2013-11-15 18:00:22 #2299 passed:    master Merge branch 'stable'
+2013-11-15 17:34:48 #2296 passed:    master Merge pull request #2049 from domcleal/tickets/master/23115-param-nil
+2013-11-15 17:09:24 #2294 passed:    master Merge pull request #2078 from jpartlow/feature/7243/csr-attributes-test
+2013-11-15 12:41:29 #2291 passed:    master (Maint) Allow acceptance tests to be run on preserved windows hosts
+2013-11-15 02:28:25 #2289 passed:    master Merge branch 'ticket/master/19447-windows-symlinks'
+2013-11-14 19:06:54 #2287 passed:    master Merge pull request #2075 from kylog/maint/fix-nothing-to-manage-debug-message
+2013-11-14 17:32:34 #2285 passed:    master (#23124) Merge branch 'ticket/stable/23124-exit_codes_on_windows'
+2013-11-14 17:14:02 #2284 passed:    master Merge branch 'stable'
+2013-11-14 16:57:45 #2283 passed:    master Merge branch 'stable'
+2013-11-14 14:58:03 #2280 errored:   master Merge branch 'stable'
+2013-11-14 13:28:58 #2278 passed:    master Merge pull request #2073 from nfagerlund/contain_copyedit
+2013-11-14 13:19:34 #2276 passed:    master Merge pull request #2072 from kylog/issue/7244/spec-test-fixup
+2013-11-14 12:47:02 #2270 errored:   master Merge pull request #2069 from kylog/issue/7244/make-autosign-command-treat-non-zero-as-false
+2013-11-13 19:23:06 #2265 passed:    master (Maint) Make tmp directory more safely
+2013-11-13 18:41:07 #2264 passed:    master Merge pull request #2065 from kylog/issue/cannot-add-aliases-without-catalog
+2013-11-13 17:35:38 #2262 passed:    master Merge pull request #2064 from kylog/issue/9546/fix-solaris-and-windows-module-install-tests
+2013-11-13 13:31:47 #2249 passed:    master Merge branch 'ticket/master/19447-windows-symlinks-unlink-abstraction'
+2013-11-13 12:01:00 #2245 passed:    master Merge pull request #1916 from joshcooper/ticket/master/21817-ignore-duplicate-certs
+2013-11-13 09:24:01 #2236 passed:    master Merge pull request #2057 from kylog/issue/23131/empty-string-element-in-containment-path-array
+2013-11-12 18:54:36 #2227 passed:    master Merge pull request #2059 from nfagerlund/340_windows_nested_groups
+2013-11-12 18:36:27 #2225 passed:    master Merge pull request #2058 from zaphod42/feature/master/document-status
+2013-11-11 19:03:15 #2220 passed:    master (Doc) Mark the Puppet::Util::Execution public methods
+2013-11-11 18:39:32 #2219 passed:    master Merge branch 'kylog-issue/9546/make-pmt-to-preserve-execute-permissions'
+2013-11-11 13:50:03 #2215 passed:    master Merge branch 'maint/master/autosign_command-solaris-specs'
+2013-11-11 12:58:41 #2213 passed:    master Merge pull request #2022 from adrienthebo/feature/7244/add_autosign_command
+2013-11-11 12:26:07 #2209 passed:    master Merge pull request #2053 from Iristyle/ticket/master/22938-fix-mode-test-windows
+2013-11-08 19:26:53 #2199 passed:    master Merge pull request #2046 from zaphod42/feature/master/23109-document-pson
+2013-11-08 19:25:40 #2198 passed:    master Merge pull request #2047 from Iristyle/ticket/master/19447-windows-symlinks-1-abstraction
+2013-11-08 18:29:11 #2194 passed:    master Merge branch 'pull-1994'
+2013-11-08 18:10:37 #2192 passed:    master Merge pull request #2044 from jpartlow/issue/master/23096-enc-classes-with-empty-params
+2013-11-08 17:29:50 #2190 passed:    master Merge pull request #1987 from apenney/fix/improve-metadata-handling
+2013-11-08 16:48:35 #2187 passed:    master Merge branch 'djmitche-bug22938'
+2013-11-08 16:45:23 #2186 passed:    master Merge pull request #2019 from daenney/debian-init-fix
+2013-11-08 16:28:33 #2184 passed:    master Merge pull request #2030 from nfagerlund/no_definition_lists
+2013-11-08 16:17:04 #2183 passed:    master Merge pull request #2035 from skottler/bugs/23085
+2013-11-08 16:10:42 #2182 passed:    master Merge pull request #2037 from adrienthebo/doc-certificate_request_rfc_info
+2013-11-07 15:33:04 #2164 passed:    master Merge tag '3.3.2'
+2013-11-06 18:59:16 #2159 passed:    master Merge pull request #2043 from zaphod42/issue/master/23086-no-name-attribute-if-failed_because
+2013-11-06 17:37:57 #2157 passed:    master Merge pull request #2042 from nfagerlund/readme_update
+2013-11-06 13:53:17 #2153 passed:    master Merge pull request #2041 from zaphod42/issue/master/23074-no-longer-rebuild-during-signing
+2013-11-06 12:34:18 #2150 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-11-06 11:12:40 #2146 passed:    master Merge branch 'issue/master/22925-fix-assert-match-for-cached-catalog-test'
+2013-11-05 19:17:30 #2141 passed:    master Merge branch 'maint-document-csr-generate'
+2013-11-05 19:01:26 #2138 passed:    master Merge branch 'hlindberg-feature/master/allow-rebuild-of-inventory'
+2013-11-05 18:51:48 #2136 passed:    master Merge pull request #2036 from kylog/issue/23081/report-property-event-for-insync-exceptions
+2013-11-05 17:12:51 #2132 passed:    master Merge pull request #2031 from joshcooper/ticket/master/22925-cached-catalogs
+2013-11-05 00:02:10 #2123 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-11-01 12:16:20 #2092 passed:    master (#21241) Use correct constant for low priority
+2013-10-31 18:47:04 #2089 passed:    master Merge pull request #1922 from joshcooper/ticket/master/21241-priority
+2013-10-31 16:15:08 #2081 passed:    master (#9546) Fix spec tests against facter 1.6.
+2013-10-30 20:02:12 #2074 passed:    master (Maint) Reformat and remove debugging message
+2013-10-30 19:58:10 #2073 passed:    master (#693) Update file handling to work on Solaris
+2013-10-30 17:24:06 #2072 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-10-30 14:10:50 #2066 passed:    master Merge pull request #2017 from zaphod42/issue/master/693-race-conditions-in-autosigning-csrs
+2013-10-30 12:02:08 #2063 passed:    master Merge pull request #2008 from pcarlisle/performance/tagging
+2013-10-29 19:36:53 #2061 passed:    master Merge branch 'master' of ssh://github.com/puppetlabs/puppet.git
+2013-10-29 16:38:33 #2059 passed:    master (#22858) Note that ruby 2.0.0 should be at least p195.
+2013-10-29 14:04:44 #2058 passed:    master Merge branch 'lib-permissions' of https://github.com/udoprog/puppet into udoprog-lib-permissions
+2013-10-29 13:46:16 #2057 passed:    master Merge pull request #1984 from udoprog/lib-shebangs
+2013-10-29 13:05:53 #2056 passed:    master Merge branch 'samyboy-master'
+2013-10-29 11:09:02 #2054 passed:    master Merge pull request #1966 from jantman/fix/master/issue22660
+2013-10-28 20:08:51 #2052 passed:    master (#9546) Add windows and non-windows variants of one test.
+2013-10-28 17:56:27 #2051 passed:    master (#9546) Correct a typo in a setting desc.
+2013-10-28 11:57:53 #2050 passed:    master Merge pull request #2015 from djmitche/patch-1
+2013-10-27 21:51:10 #2047 passed:    master Merge pull request #1998 from jjulien/feature9546
+2013-10-27 18:31:54 #2045 passed:    master Merge pull request #2013 from nfagerlund/fqdn_rand_redux
+2013-10-25 17:33:54 #2044 passed:    master Merge pull request #2009 from jpartlow/issue/master/22180-fix-rdoc-parsing-on-ruby-1.9
+2013-10-25 14:16:52 #2038 passed:    master Merge pull request #2011 from hlindberg/feature/22962-remove-alt-lambda
+2013-10-25 14:10:48 #2037 passed:    master Merge branch 'issue/master/22918-race-in-filebuckets'
+2013-10-23 18:53:09 #2031 passed:    master Merge branch 'kylog-issue/master/22943-debian-user-resource-wrong-path'
+2013-10-23 17:05:15 #2028 passed:    master (#22910) Use memory storeconfigs backend
+2013-10-23 14:57:14 #2026 passed:    master Merge branch 'feature/master/22910-deprecate-rest-resource' of git://github.com/zaphod42/puppet
+2013-10-21 12:39:46 #2017 passed:    master Merge pull request #2005 from nfagerlund/seedstring
+2013-10-18 16:13:27 #2014 passed:    master Merge branch 'stable'
+2013-10-18 14:24:23 #2012 passed:    master (Maint) Check for `encode` when using `encode`
+2013-10-18 12:42:53 #2010 passed:    master Merge branch 'raphink-dev/user_comment_ascii'
+2013-10-17 14:20:06 #2003 passed:    master Merge branch 'stable'
+2013-10-17 13:19:04 #2001 passed:    master (docs) Document additional parameters needed to curl with ssl
+2013-10-16 17:09:25 #1997 passed:    master Merge pull request #1989 from 3flex/fix/master/21258-stale-LSB-links
+2013-10-16 16:09:10 #1996 passed:    master Merge pull request #2003 from pcarlisle/ticket/22893-control-remote-requests
+2013-10-16 15:20:52 #1993 passed:    master Merge pull request #2000 from zaphod42/issue/master/22891-respect-preferred_serialization_format_for_any_media_type
+2013-10-14 18:03:21 #1984 passed:    master Merge branch 'issues/issue-22785-rename-collect'
+2013-10-14 17:59:05 #1983 passed:    master Merge remote-tracking branch 'henrik/issues/issue-22729-remove-reject'
+2013-10-14 17:33:32 #1982 passed:    master Merge branch 'issues/issue-22792-rename-select' of git://github.com/hlindberg/puppet
+2013-10-14 15:53:34 #1980 passed:    master Merge pull request #1993 from pcarlisle/ticket/22846-document-node
+2013-10-14 13:09:54 #1978 passed:    master Merge branch 'stable'
+2013-10-14 12:47:10 #1976 passed:    master Merge pull request #1995 from adrienthebo/maint/remove-testseries-file
+2013-10-11 18:49:24 #1968 passed:    master (Maint) Only execute msgpack tests if it is present
+2013-10-11 18:03:27 #1967 passed:    master Merge branch 'dalen-msgpack'
+2013-10-11 16:09:59 #1965 passed:    master Merge branch 'ticket/22833-document-file_bucket_file' of git://github.com/pcarlisle/puppet
+2013-10-11 15:28:56 #1962 passed:    master Merge branch 'hlindberg-feature/issue-19514-trusted-facts'
+2013-10-09 19:44:45 #1953 passed:    master Merge branch 'ticket/master/17031-windows-group-provider'
+2013-10-09 14:43:17 #1942 passed:    master Merge pull request #1981 from ericalthatcher/maint/master/reduce_duplication_for_setting_log_levels
+2013-10-08 17:59:56 #1926 passed:    master Merge pull request #1979 from pcarlisle/ticket/22807-document-certificate_status
+2013-10-08 16:00:44 #1921 passed:    master Merge pull request #1980 from zaphod42/jpartlow-issue/master/22557-array-of-package-names-not-allowed
+2013-10-08 13:48:03 #1917 passed:    master Merge pull request #1965 from zacharyalexstern/master
+2013-10-08 12:53:17 #1914 passed:    master (maint) Rename api_docs to api in yardopts to fix generation
+2013-10-07 18:33:19 #1905 passed:    master Merge pull request #1961 from kylog/issue/22643-file_metadata-api-doc
+2013-10-07 17:42:47 #1904 passed:    master Merge pull request #1890 from nfagerlund/issue_22489_indent_slapstick_redux
+2013-10-07 16:54:54 #1902 passed:    master Merge pull request #1977 from kylog/issue/22768-certificate-revocation-list-api-doc
+2013-10-07 16:10:06 #1900 passed:    master Merge pull request #1932 from mklauber/fix/master/rpm_install_options
+2013-10-07 15:26:53 #1897 passed:    master Merge pull request #1976 from adrienthebo/maint/travis/change-rspec-formatter
+2013-10-07 13:00:47 #1894 passed:    master Merge branch 'stable'
+2013-10-07 12:13:23 #1891 passed:    master Merge branch 'pull-1934'
+2013-10-04 20:42:05 #1885 passed:    master Merge pull request #1972 from hlindberg/issues/issue-22784-remove-foreach
+2013-10-03 23:31:33 #1881 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-10-03 19:25:09 #1875 passed:    master Merge branch 'stable'
+2013-10-03 18:48:19 #1872 errored:   master Merge pull request #1935 from adrienthebo/issue_22665-require_mount_parents
+2013-10-03 17:18:40 #1870 passed:    master Merge pull request #1949 from adrienthebo/ticket/master/4506-define_puppet_resource_yaml_properties
+2013-10-03 16:03:24 #1868 passed:    master Merge branch 'stable'
+2013-10-03 15:47:00 #1867 passed:    master Merge pull request #1967 from kylog/maint/one-more-fixup-for-already-initialized-constant-warning
+2013-10-03 15:45:13 #1866 passed:    master Merge pull request #1952 from jjulien/fix_exception
+2013-10-03 12:45:04 #1860 errored:   master Merge branch 'stable'
+2013-10-02 15:29:42 #1853 passed:    master Merge pull request #1964 from zaphod42/hlindberg-issues/issue-19955-data-binding-rescue-and-log
+2013-10-02 14:30:32 #1852 passed:    master Merge pull request #1963 from adrienthebo/maint/logstash_event-json_require
+2013-10-02 12:59:36 #1847 passed:    master Merge tag '3.3.1-rc3'
+2013-10-01 23:40:38 #1839 passed:    master Merge branch 'stable'
+2013-10-01 18:55:22 #1837 passed:    master Merge pull request #1947 from djmitche/bug22699
+2013-10-01 12:02:49 #1833 passed:    master Merge pull request #1958 from zaphod42/hlindberg-issue-22593-brace-kw-interpolation
+2013-09-30 17:38:55 #1821 passed:    master Merge branch 'stable'
+2013-09-30 15:14:05 #1818 passed:    master Merge pull request #1953 from tchaudhri/update_puppet_face_module_gen_example_doc
+2013-09-30 12:45:40 #1814 passed:    master Merge pull request #1955 from zaphod42/maint/master/improve-coverage-of-parser-validate
+2013-09-30 10:40:21 #1810 passed:    master Merge pull request #1936 from rarruda/logstash_event_log
+2013-09-27 17:22:14 #1801 passed:    master (packaging) Update PUPPETVERSION for 3.3.1-rc2
+2013-09-27 17:14:03 #1799 passed:    master Merge pull request #1926 from jjulien/real_iss15494
+2013-09-27 16:37:12 #1798 passed:    master Merge branch 'pull-1925'
+2013-09-27 15:53:07 #1797 passed:    master Merge pull request #1914 from djmitche/bug21069
+2013-09-26 19:43:19 #1791 passed:    master Merge pull request #1948 from kylog/maint/cleanup-spec-already-initialized-warnings
+2013-09-26 18:24:57 #1789 passed:    master Merge pull request #1945 from zaphod42/issues/master/22709-doc-certificate_request
+2013-09-26 14:32:17 #1780 passed:    master Merge pull request #1924 from llange/fix/master/2437-nagios_with_semicolon
+2013-09-26 13:21:52 #1778 passed:    master Merge pull request #1940 from ericwilliamson/maint/master/reduce_logdest_duplication
+2013-09-25 15:50:12 #1761 passed:    master Merge pull request #1937 from zaphod42/maint/master/cleanup-examples-dir
+2013-09-25 14:00:04 #1759 passed:    master Merge pull request #1927 from jjulien/iss7911
+2013-09-25 13:48:16 #1758 passed:    master Merge pull request #1913 from zaphod42/issue/master/21198-missing-vars-in-data-bindings
+2013-09-24 16:56:27 #1754 passed:    master Merge pull request #1917 from mihau/patch-1
+2013-09-24 15:59:06 #1752 passed:    master Merge branch 'pull-1883'
+2013-09-23 23:50:24 #1745 passed:    master Merge remote-tracking branch 'kylo/issue/22522-facts-api-doc'
+2013-09-23 15:57:02 #1736 passed:    master Merge branch 'stable'
+2013-09-23 14:44:36 #1733 passed:    master Merge branch 'master' of ssh://github.com/puppetlabs/puppet.git
+2013-09-23 06:53:11 #1732 passed:    master Merge pull request #1923 from trlinkin/contrib_adds
+2013-09-20 00:09:42 #1717 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-09-19 19:56:41 #1715 passed:    master Merge pull request #1921 from trlinkin/post_compile_maint
+2013-09-19 18:10:11 #1711 passed:    master Merge branch 'maint-transaction_spec_types'
+2013-09-19 14:33:24 #1703 passed:    master Merge pull request #1918 from jjulien/fixbuild
+2013-09-19 13:20:54 #1701 passed:    master Merge pull request #1851 from badgerious/feature/master/3946_provider_finalize
+2013-09-19 13:17:02 #1700 passed:    master Merge pull request #1899 from jjulien/feature4424
+2013-09-18 12:40:55 #1693 passed:    master Merge pull request #1906 from zaphod42/feature/master/profile-via-apply
+2013-09-17 16:11:17 #1678 passed:    master Merge branch 'issue/master/22591-document-file_content'
+2013-09-17 15:18:58 #1675 passed:    master Merge pull request #1888 from pocams/fix/master/f8657
+2013-09-17 13:35:16 #1674 passed:    master Merge pull request #1905 from jasperla/openbsd/rcd
+2013-09-17 02:16:43 #1664 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-09-16 19:09:23 #1657 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-09-16 12:37:35 #1651 passed:    master Merge pull request #1884 from hlindberg/feature-22356-report-api-doc
+2013-09-13 16:33:28 #1643 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-09-12 13:46:28 #1633 passed:    master Merge branch 'stable'
+2013-09-12 12:18:55 #1631 passed:    master Merge branch 'pull-1882'
+2013-09-12 11:01:06 #1630 passed:    master Merge pull request #1892 from kylog/issue/22110-remove-initialization-of-version
+2013-09-11 23:38:41 #1627 passed:    master (#21373) Fix future parser transformation of node inheritence.
+2013-09-11 21:26:07 #1626 passed:    master (#22498) Stop future parser from interpreting 0 as 00 (octal 0).
+2013-09-11 18:56:32 #1624 passed:    master Merge pull request #1891 from jpartlow/issue/master/22273-puppet-manages-var-lib-puppet-owner-and-group
+2013-09-11 17:16:54 #1623 passed:    master Merge pull request #1865 from ptomulik/package_cosmetics
+2013-09-11 14:21:46 #1619 passed:    master (#22110) apply tags regex to catalog tags
+2013-09-10 18:46:52 #1614 passed:    master Merge branch 'fixup-content_unicode_string'
+2013-09-10 18:41:46 #1613 failed:    master Merge pull request #1831 from djmitche/bug22129
+2013-09-10 18:33:35 #1612 passed:    master Merge pull request #1864 from ptomulik/fix/master/rmclass_const_defined
+2013-09-10 15:55:03 #1610 passed:    master Merge pull request #1887 from kylog/issue/22356-add-json-meta-schema
+2013-09-10 12:59:56 #1608 passed:    master Merge pull request #1878 from pcarlisle/feature/8040-contain-function
+2013-09-10 12:35:05 #1606 passed:    master (maint) Fix failing test.
+2013-09-09 23:48:20 #1604 failed:    master (#22442) Add test that capitalized names are flagged as errors.
+2013-09-09 16:39:26 #1600 passed:    master Merge branch 'stable'
+2013-09-09 09:34:30 #1596 passed:    master Merge pull request #1871 from joshcooper/ticket/master/21133-report_windows_package_version
+2013-09-05 21:11:04 #1589 passed:    master Merge branch 'stable'
+2013-09-05 18:57:39 #1587 passed:    master Merge pull request #1862 from kylog/issue/22110-document-catalog
+2013-09-05 18:03:06 #1584 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-09-05 17:30:43 #1581 passed:    master Merge pull request #1861 from badgerious/fix/master/22258_failed_execs
+2013-09-05 15:59:12 #1580 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-09-05 15:42:46 #1578 passed:    master Merge pull request #1877 from nfagerlund/typeref_tweaks
+2013-09-04 19:45:24 #1570 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-09-04 14:17:02 #1562 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-09-03 16:43:08 #1555 passed:    master Merge pull request #1867 from kylog/issue/22360-reliable-json-schema-validation
+2013-09-03 10:01:00 #1551 passed:    master Merge pull request #1866 from kylog/issue/22110-reorg-api-directory
+2013-08-30 15:58:21 #1543 passed:    master Merge branch 'maint/master/21201-remove-threading-code'
+2013-08-29 20:03:36 #1538 passed:    master Merge branch 'pull-1853'
+2013-08-29 18:58:11 #1537 passed:    master Merge pull request #1842 from GregSutcliffe/master
+2013-08-29 13:27:51 #1533 passed:    master Merge branch 'stable'
+2013-08-28 17:24:02 #1528 passed:    master Merge pull request #1858 from MosesMendoza/ticket/master/22329_fix_osx_preflight
+2013-08-28 13:47:42 #1525 passed:    master Merge pull request #1830 from ccaviness/22005-install-to-top-level-site_ruby
+2013-08-28 13:34:41 #1524 passed:    master Merge pull request #1856 from MosesMendoza/ticket/master/21868_fix_apple_target
+2013-08-28 11:24:36 #1520 passed:    master Merge pull request #1855 from zaphod42/issue/master/22229-ensure-generated-resources-contained
+2013-08-26 18:40:29 #1506 passed:    master Merge pull request #1845 from kylog/issue/22250-reports-inconsistent
+2013-08-23 11:01:43 #1499 passed:    master (maint) Limit ignore to root doc/ directory
+2013-08-21 17:28:14 #1495 passed:    master Merge branch 'stable'
+2013-08-20 14:33:18 #1491 passed:    master Merge pull request #1766 from zaphod42/issue/master/21409-create_resources-differs-from-real-resource
+2013-08-19 13:51:32 #1487 passed:    master (Maint) Add docs for #relationship_graph
+2013-08-19 13:40:25 #1486 passed:    master Merge pull request #1843 from zaphod42/issue/master/22205-revert-relationship_graph-to-being-factory-method
+2013-08-19 11:19:33 #1484 passed:    master (#22205) Select manifest ordering for ordering test
+2013-08-16 18:11:08 #1475 passed:    master Merge branch 'ticket/master/22191-mark_skipped_resources'
+2013-08-16 16:33:53 #1473 passed:    master Merge pull request #1840 from zaphod42/feature/master/22205-setting-to-control-default-ordering
+2013-08-15 16:55:57 #1469 passed:    master Merge remote-tracking branch 'origin/stable'
+2013-08-15 15:41:34 #1467 passed:    master Merge branch 'stable'
+2013-08-15 14:19:44 #1465 passed:    master Merge pull request #1816 from jasperla/openbsd/install_options
+2013-08-15 13:01:01 #1461 passed:    master Merge branch 'stable' into pl_master
+2013-08-15 11:53:13 #1460 passed:    master Merge remote-tracking branch 'jeffmccune/ccaviness-6017-mcx-should-overwrite-existing-data'
+2013-08-14 22:09:42 #1459 passed:    master Merge pull request #1829 from dalen/21170_skeleton_dir
+2013-08-13 19:30:02 #1457 passed:    master Merge pull request #1838 from zaphod42/feature/master/18508-handle-generated-resources-on-agent
+2013-08-13 15:26:56 #1454 passed:    master Merge pull request #1837 from jpartlow/issue/master/22128-yum-prefetch-failure-solaris-spec-fix
+2013-08-13 12:00:58 #1450 passed:    master Merge pull request #1835 from zaphod42/maint/master/fix-path-on-windows
+2013-08-12 17:29:40 #1448 passed:    master Merge pull request #1834 from jpartlow/issue/master/22128-yum-prefetch-failure-spec-confined-on-windows
+2013-08-12 16:57:30 #1446 passed:    master (#18508) Create explicit dependencies before implicit
+2013-08-12 16:31:40 #1445 passed:    master Merge branch 'stable'
+2013-08-12 15:07:28 #1444 passed:    master Merge pull request #1833 from jpartlow/issue/master/22128-yum-prefetch-failure
+2013-08-12 12:41:06 #1440 passed:    master Merge pull request #1828 from Sharpie/21839-stringify-timestamp-fact-name
+2013-08-09 22:32:43 #1438 passed:    master (maint) Remove unused Hiera2::Backend class
+2013-08-09 22:23:29 #1437 passed:    master (maint) Fix problem reading empty file with safe yaml
+2013-08-09 19:31:52 #1436 passed:    master Merge pull request #1832 from zaphod42/agent-ordering
+2013-08-08 22:18:35 #1431 passed:    master Merge pull request #1773 from dalen/forge_relative_url
+2013-08-08 22:13:00 #1430 passed:    master Merge pull request #1812 from jasperla/openbsd/flavor
+2013-08-08 22:10:27 #1429 passed:    master Merge pull request #1751 from dalen/generic_srv_records
+2013-08-08 22:05:22 #1428 passed:    master Merge pull request #1817 from jasperla/openbsd/purge
+2013-08-08 22:03:07 #1427 passed:    master Merge pull request #1798 from jasperla/pkgconf
+2013-08-07 19:23:04 #1423 passed:    master Merge branch 'maint/master/fix-bad-timestamp-check'
+2013-08-07 19:06:14 #1422 passed:    master Remove tests depending on json-schema
+2013-08-07 17:37:48 #1420 passed:    master Merge branch 'maint/master/readme-spelling'
+2013-08-07 14:25:42 #1419 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-08-07 14:12:51 #1418 passed:    master Merge pull request #1827 from kylog/feature/binder-rebased-2
+2013-08-06 17:31:55 #1415 passed:    master Merge branch 'maint-windows_specs_unix_paths'
+2013-08-06 17:02:16 #1414 passed:    master Merge branch 'fix-json-validation'
+2013-08-06 16:38:09 #1413 passed:    master Merge pull request #1826 from adrienthebo/maint-windows_path_spec_failures
+2013-08-05 18:38:11 #1408 passed:    master Merge pull request #1825 from jpartlow/issue/master/22079-fix-hash-array-access
+2013-08-05 18:25:14 #1406 passed:    master Merge pull request #1824 from kylog/issue/21970-document-certificate
+2013-08-05 18:14:08 #1404 passed:    master Merge pull request #1823 from kylog/issue/21970-document-certificate
+2013-08-05 14:53:44 #1398 passed:    master Merge branch 'remove-json-schema'
+2013-08-05 14:07:16 #1396 passed:    master Encode the path passed to json-schema as a URI
+2013-08-02 15:42:21 #1385 passed:    master Merge pull request #1819 from hlindberg/issues/issue-22052
+2013-08-01 12:26:10 #1378 passed:    master Merge pull request #1609 from dalen/17183_static_compiler_recursive_copy
+2013-08-01 11:15:33 #1377 passed:    master Merge pull request #1809 from mruzicka/ticket/master/21961_ssl_connections_without_peer_verification
+2013-07-31 18:46:07 #1372 passed:    master Merge branch 'pull-1783'
+2013-07-31 18:30:04 #1371 passed:    master Merge remote-tracking branch 'pr/1783'
+2013-07-31 16:10:47 #1365 passed:    master Merge pull request #1803 from jpartlow/issue/21881-document-resource-type
+2013-07-30 16:55:24 #1359 passed:    master Merge pull request #1808 from adreyer/pmt-metadata-update
+2013-07-29 19:15:37 #1350 passed:    master Merge pull request #1807 from dalen/maint
+2013-07-29 18:22:11 #1347 passed:    master Merge pull request #1806 from kylog/maint/remove-subclass-loader
+2013-07-29 16:59:05 #1345 passed:    master Merge pull request #1795 from mruzicka/ticket/master/PE-834
+2013-07-29 13:57:30 #1339 passed:    master Merge pull request #1805 from zaphod42/feature/master/18508-preserver-resource-ordering-from-manifest-to-application
+2013-07-29 11:50:20 #1335 passed:    master Merge pull request #1788 from jpartlow/feature/master/utility-scripts
+2013-07-27 10:42:06 #1334 passed:    master Merge pull request #1804 from hlindberg/issues/issue-21947
+2013-07-25 15:40:31 #1331 passed:    master Merge pull request #1767 from dalen/moduletool_dependency_attrs
+2013-07-25 12:35:31 #1329 passed:    master Merge pull request #1784 from nhemingway/bug_11133_node_regex_captures
+2013-07-24 17:21:23 #1326 passed:    master Deserialize time in Status objects the same way as everywhere else
+2013-07-23 13:51:31 #1318 passed:    master (doc) Fix YARD output
+2013-07-23 11:45:13 #1316 passed:    master Merge pull request #1793 'kylog/issues/master/21831-txn-uuid'
+2013-07-22 18:25:04 #1310 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-07-22 12:52:22 #1306 passed:    master Merge pull request #1778 from ahpook/21801_rack_http_headers
+2013-07-22 12:26:48 #1304 passed:    master Merge branch 'stable'
+2013-07-19 16:26:04 #1296 passed:    master Merge pull request #1791 from zaphod42/issues/master/issue-21252
+2013-07-19 15:07:44 #1293 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-07-18 18:48:37 #1285 passed:    master Maint: Fix absolute path issue on Windows
+2013-07-18 18:40:32 #1284 passed:    master Merge pull request #1787 from jpartlow/feature/master/use-systest-templates
+2013-07-18 16:21:15 #1281 passed:    master Merge pull request #1771 from CumulusNetworks/master
+2013-07-18 16:05:38 #1280 passed:    master Merge pull request #1728 from deanwilson/yumrepo_s3_enabled
+2013-07-18 16:02:17 #1279 passed:    master Merge branch 'pull-1732'
+2013-07-18 14:02:48 #1278 passed:    master Merge pull request #1785 from pcarlisle/remove-deprecated-ruby-support
+2013-07-18 13:59:47 #1277 passed:    master Merge pull request #1738 from hlindberg/issue/issue-21470
+2013-07-18 13:52:21 #1276 passed:    master Merge remote-tracking branch 'zaphod42/issue/master/21307-missing-files-treated-as-changed'
+2013-07-18 13:49:22 #1275 passed:    master Merge pull request #1774 from jpartlow/issue/master/6112-generate-specs
+2013-07-18 08:37:33 #1270 passed:    master Merge pull request #1779 from cprice404/feature/master/21805-add-class-containment-path-to-resource-status
+2013-07-17 19:34:18 #1266 passed:    master Merge branch 'stable'
+2013-07-17 17:31:19 #1263 passed:    master (maint) Remove publicize_methods from specs
+2013-07-16 23:57:19 #1258 passed:    master Merge pull request #1765 from phinze/21087-no-debug-logging-when-augeas-lens-is-incorrect
+2013-07-16 15:00:51 #1249 passed:    master Merge branch 'stable'
+2013-07-16 14:46:11 #1247 passed:    master Merge branch 'pull-1762'
+2013-07-15 19:04:42 #1242 passed:    master Merge pull request #1772 from jpartlow/issue/master/6112-fixing-windows-acceptance-test
+2013-07-15 13:45:07 #1237 passed:    master Merge pull request #1735 from hlindberg/issue/issue-21508
+2013-07-15 13:42:41 #1236 passed:    master Merge pull request #1730 from deanwilson/yumrepo_restrict_enabled
+2013-07-15 13:32:30 #1234 passed:    master Merge pull request #1731 from JamJar/fix/master/add_plymouth-ready_to_excludes
+2013-07-15 13:12:13 #1233 passed:    master Merge pull request #1729 from masterzen/tickets/master/6561
+2013-07-15 12:59:02 #1232 passed:    master Merge pull request #1721 from masterzen/tickets/master/18255
+2013-07-15 12:53:13 #1231 passed:    master Merge pull request #1748 from zaphod42/maint/master/fix-many-yard-warnings
+2013-07-13 15:18:16 #1221 passed:    master Merge pull request #1764 from superseb/superseb/19906-modulefacerendererror
+2013-07-13 15:08:52 #1220 passed:    master Merge branch 'pull-1760'
+2013-07-13 14:50:52 #1219 passed:    master Merge pull request #1759 from superseb/superseb/21709-masterlogging
+2013-07-12 16:10:21 #1209 passed:    master (maint) Fix calling wrong should method on properties
+2013-07-12 14:03:15 #1208 passed:    master Merge pull request #1757 from jpartlow/issue/master/6112-fixing-acceptance-test
+2013-07-12 13:48:43 #1207 passed:    master Merge pull request #1754 from adrienthebo/maint_setting_type_constant
+2013-07-12 13:34:32 #1205 passed:    master Revert "Merge pull request #1756 from jpartlow/issue/master/6112-fixing-acceptance-test"
+2013-07-12 13:20:10 #1204 passed:    master Merge pull request #1756 from jpartlow/issue/master/6112-fixing-acceptance-test
+2013-07-12 11:17:47 #1203 passed:    master Merge pull request #1753 from pcarlisle/rspec-deprecations
+2013-07-11 15:07:11 #1195 passed:    master Merge branch 'stable'
+2013-07-10 13:37:08 #1191 passed:    master Merge pull request #1743 from thallgren/master
+2013-07-09 18:00:22 #1189 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-07-09 17:49:54 #1188 passed:    master Merge branch 'issue/master/6112-puppet-cert-generate-clashes-with-autosigning'
+2013-07-08 17:35:36 #1183 passed:    master Merge pull request #1746 from cprice404/bug/master/resource-status-pson-missing-timestamp
+2013-07-06 23:59:48 #1181 passed:    master Revert "Merge pull request #1711 from electrical/rename_generate_dir"
+2013-07-05 00:55:55 #1179 passed:    master Merge pull request #1749 from jasperla/flavors
+2013-07-04 20:49:58 #1177 passed:    master Merge branch 'pull-1719'
+2013-07-04 19:32:03 #1175 passed:    master Merge pull request #1711 from electrical/rename_generate_dir
+2013-07-03 18:27:03 #1173 passed:    master Merge pull request #1723 from masterzen/tickets/master/11317
+2013-07-03 17:53:07 #1172 passed:    master Merge pull request #1714 from adrienthebo/doc-mocha_version_requirements
+2013-07-02 13:17:07 #1162 passed:    master Merge pull request #1744 from 'kylog/feature/testing-against-packages'
+2013-06-28 18:07:28 #1156 passed:    master Merge pull request #1742 from pcarlisle/ticket/21427/run-fix
+2013-06-28 15:51:22 #1151 passed:    master Merge pull request #1739 from zaphod42/issue/master/21427-fix-param-reading-in-webrick
+2013-06-28 12:41:34 #1145 passed:    master Merge pull request #1685 from adrienthebo/maint-constant_lookup
+2013-06-28 10:54:35 #1142 passed:    master (#20607) Fix mode test on windows
+2013-06-28 10:32:08 #1141 passed:    master Merge pull request #1736 from thallgren/master
+2013-06-27 18:58:46 #1137 passed:    master Merge pull request #1734 from zaphod42/deprecate-yaml
+2013-06-27 12:41:48 #1130 passed:    master Merge pull request #1727 from jpartlow/maint/added-missing-spec-helper
+2013-06-27 12:33:52 #1129 passed:    master Merge pull request #1722 from masterzen/tickets/master/20607
+2013-06-24 20:58:44 #1121 passed:    master Merge branch 'stable'
+2013-06-21 18:09:33 #1111 passed:    master Merge pull request #1720 from joshcooper/maint/master/testing-against-packages
+2013-06-21 11:47:43 #1108 passed:    master Merge branch 'stable'
+2013-06-20 18:42:28 #1103 passed:    master Merge pull request #1715 from loe/21324-pip-should-be-case-insensitive
+2013-06-20 18:05:27 #1101 passed:    master Merge pull request #1716 from Sharpie/6808-warn-about-symlink-noops
+2013-06-20 14:31:21 #1098 passed:    master (maint) Remove incorrect spec in format_handler
+2013-06-19 17:50:04 #1094 failed:    master (maint) Don't use protected_format in indirector
+2013-06-19 17:42:49 #1093 failed:    master Merge branch 'refactor/formathandler'
+2013-06-19 13:47:06 #1091 passed:    master Merge pull request #1702 from adrienthebo/doc-puppet_node_environment
+2013-06-19 13:43:22 #1090 passed:    master Merge pull request #1705 from jpartlow/maint/readme-developer-bundler
+2013-06-19 12:40:08 #1088 passed:    master Merge pull request #1707 from Sharpie/21023-fix-preferred-run-mode
+2013-06-18 13:24:18 #1083 passed:    master Merge branch 'stable'
+2013-06-17 17:05:08 #1081 passed:    master Merge remote-tracking branch 'upstream/stable'
+2013-06-14 10:57:21 #1073 passed:    master Merge pull request #1708 from jjulien/remove_rundir_patch
+2013-06-13 16:02:04 #1069 passed:    master Merge pull request #1699 from stschulte/ticket/master/mount_fixes
+2013-06-13 13:32:19 #1066 passed:    master Merge branch 'stable'
+2013-06-12 18:10:21 #1064 passed:    master Merge pull request #1701 from hunner/fix/master/rgen_assert_check
+2013-06-12 17:47:44 #1063 passed:    master Merge branch 'maint/agent-logger-specs-on-windows'
+2013-06-12 13:31:09 #1061 passed:    master Merge pull request #1694 from ab/fix/master/improve_string_parse_errors
+2013-06-11 18:11:24 #1054 passed:    master Merge branch 'issue/master/14652-self-require-does-not-cause-error'
+2013-06-11 00:58:48 #1050 passed:    master Merge pull request #1688 from DavidS/fix-19112
+2013-06-10 18:09:43 #1045 passed:    master Merge pull request #1647 from jeffweiss/pe158_license_checking_too_slow
+2013-06-10 14:27:13 #1041 passed:    master Merge pull request #1690 'zaphod42/issue/master/21055-agent-holding-stdout-open'
+2013-06-10 12:59:39 #1039 passed:    master Merge pull request #1678 from jpartlow/maint/agent-logger-specs
+2013-06-07 17:27:07 #1034 passed:    master Merge pull request #1698 from jpartlow/issue/master/yaml-dir-blocking-puppet-rundir-fix
+2013-06-07 17:18:36 #1033 passed:    master Merge pull request #1665 from lollipopman/hiera_include_arity
+2013-06-07 17:12:21 #1032 passed:    master Revert "Merge pull request #1697 from zaphod42/issue/master/20967-mysterious-errors-caused-by-patch"
+2013-06-07 17:05:41 #1031 passed:    master Merge pull request #1697 from zaphod42/issue/master/20967-mysterious-errors-caused-by-patch
+2013-06-07 16:20:46 #1028 passed:    master Merge pull request #1693 from djmitche/bug21091
+2013-06-06 11:46:16 #1017 passed:    master Merge pull request #1695 from djmitche/future-parser-docs-fixes
+2013-06-04 14:38:38 #1006 passed:    master Merge branch 'adrienthebo-maint-remove_fact_stringify_warning'
+2013-06-03 13:48:23 #1003 passed:    master Revert "Merge pull request #1686 from Sharpie/12361-remove-masterlog-setting"
+2013-06-03 13:48:22 #1002 passed:    master Merge pull request #1686 from Sharpie/12361-remove-masterlog-setting
+2013-05-31 14:24:46 #996 passed:     master Merge pull request #1682 from zaphod42/issue/master/incorrect-management-of-rundir
+2013-05-31 14:21:33 #995 passed:     master Merge pull request #1679 from jpartlow/maint/pidlock-file-path-fix
+2013-05-31 13:41:34 #990 passed:     master Merge branch 'stable'
+2013-05-30 16:02:35 #987 passed:     master Merge branch 'pull-1669'
+2013-05-30 12:17:56 #985 passed:     master Merge branch 'stable'
+2013-05-30 12:05:22 #983 passed:     master Merge branch 'stable'
+2013-05-30 11:54:01 #981 passed:     master Merge branch 'stable'
+2013-05-29 20:59:37 #978 passed:     master Merge branch 'stable'
+2013-05-29 16:03:01 #972 passed:     master Merge pull request #1673 from vzctl/fix-eix-error
+2013-05-29 14:09:03 #968 passed:     master Merge pull request #1672 from dalen/simplify_search
+2013-05-29 13:34:09 #966 passed:     master (maint) Minor cleanup to mailalias
+2013-05-29 12:55:48 #965 passed:     master Merge branch 'pull-1351'
+2013-05-29 12:25:19 #964 passed:     master Merge branch 'pull-1668'
+2013-05-28 14:10:24 #959 passed:     master Merge pull request #1671 from dalen/unused_variables
+2013-05-24 15:47:34 #951 passed:     master Merge branch 'stable'
+2013-05-22 18:43:21 #939 passed:     master Merge branch 'pull-1206'
+2013-05-22 12:50:22 #938 passed:     master Merge branch 'stable'
+2013-05-21 19:33:26 #936 passed:     master Merge branch 'stable'
+2013-05-21 12:03:55 #935 passed:     master Merge pull request #1657 from ghoneycutt/tickets/master/20815_module_template_style
+2013-05-20 16:52:10 #933 passed:     master Merge pull request #1649 from richardc/fix/master/17871
+2013-05-20 15:17:47 #932 passed:     master Merge pull request #1643 from jeffweiss/20442_fix_aix_extended_attributes
+2013-05-20 15:08:48 #931 passed:     master Merge pull request #1656 from jpartlow/maint/windows-package-load-order-cleanup
+2013-05-20 13:10:55 #929 passed:     master Merge pull request #1654 from pvande/tickets/master/17824-pmt-should-not-prefer-prereleases
+2013-05-17 17:17:17 #926 passed:     master Merge branch 'stable'
+2013-05-17 16:12:44 #924 passed:     master Merge branch 'stable'
+2013-05-16 18:44:43 #922 passed:     master Merge branch 'stable'
+2013-05-16 17:26:25 #918 passed:     master Merge pull request #1652 from adrienthebo/maint-static_compiler_yardoc
+2013-05-16 17:05:12 #916 passed:     master Merge branch 'stschulte-ticket/stable/6371_reset_lastchg_on_solaris'
+2013-05-16 16:08:59 #915 passed:     master Merge branch 'pull-1648'
+2013-05-15 19:04:13 #909 passed:     master Merge branch 'maint-rcstatus_stub'
+2013-05-15 18:28:21 #906 failed:     master Merge branch 'pull-1646'
+2013-05-15 18:11:50 #905 passed:     master Merge branch 'pull-1641'
+2013-05-15 16:54:16 #904 passed:     master Merge pull request #1645 from jeffmccune/clarify_merge_up
+2013-05-15 15:16:50 #903 passed:     master Merge branch 'maint-stub_aptitude_dpkgquery'
+2013-05-14 18:32:15 #894 passed:     master Merge branch '19875-package-descriptions-feature'
+2013-05-13 18:29:32 #888 passed:     master Merge branch 'stable'
+2013-05-13 16:49:46 #882 passed:     master Merge branch 'maint/stable/filebucket_clarifications'
+2013-05-10 18:11:39 #878 passed:     master Merge pull request #1636 from adrienthebo/maint-readme_developer_explain_side_effects_in_tests
+2013-05-10 17:24:46 #877 passed:     master Merge pull request #1639 from Sharpie/18895-fix-runit-documentation
+2013-05-09 14:11:17 #872 passed:     master Merge pull request #1637 from jeffweiss/tickets/bug/18393_diffargs_broken_on_aix53
+2013-05-08 17:47:43 #868 passed:     master Merge pull request #1635 from hlindberg/issues/fix-20581
+2013-05-06 16:28:29 #860 passed:     master Merge branch 'stable'
+2013-05-03 20:17:49 #859 passed:     master (maint) Corrects manual edit in generated eparser.rb
+2013-05-03 16:39:59 #858 passed:     master Merge branch 'issue/master/20447-filetimeout0-causes-master-to-exit-full'
+2013-05-03 14:15:06 #855 passed:     master Merge branch 'stable'
+2013-05-03 13:40:13 #853 passed:     master Merge remote-tracking branch 'pr/1607'
+2013-05-03 13:15:00 #852 passed:     master Merge branch 'pull-1622'
+2013-05-02 18:24:10 #850 passed:     master Merge branch 'stable'
+2013-05-02 18:16:59 #849 passed:     master Merge branch 'stable'
+2013-05-02 17:09:17 #847 passed:     master Merge branch 'stable'
+2013-05-02 16:25:17 #844 passed:     master Merge branch 'stable'
+2013-05-02 12:18:03 #842 passed:     master Merge branch 'stable'
+2013-05-01 20:23:39 #837 passed:     master Merge branch 'stable'
+2013-05-01 17:12:06 #835 passed:     master Merge branch '20383-duplicate_resource_error_location'
+2013-05-01 15:38:49 #834 passed:     master Merge branch 'stable'
+2013-04-30 20:02:58 #828 passed:     master Merge branch 'stable'
+2013-04-30 11:32:33 #825 passed:     master Merge branch 'stable'
+2013-04-29 18:58:21 #821 passed:     master Merge branch 'stable'
+2013-04-26 17:46:02 #816 passed:     master Merge branch 'stable'
+2013-04-26 16:30:21 #812 passed:     master Merge branch 'stable'
+2013-04-25 20:08:11 #807 passed:     master Merge remote-tracking branch 'pcarlisle/ticket/20308-file-serving-recursion'
+2013-04-25 18:58:44 #803 passed:     master Merge branch 'stable'
+2013-04-25 18:36:23 #801 passed:     master Merge branch 'stable'
+2013-04-25 17:53:25 #798 passed:     master Merge branch 'stable'
+2013-04-25 17:24:13 #797 passed:     master Merge branch 'stable'
+2013-04-25 16:45:23 #794 passed:     master Merge branch 'stable'
+2013-04-25 16:28:00 #792 passed:     master Merge branch 'stable'
+2013-04-25 15:39:46 #791 passed:     master Merge branch 'nicklewis-refactor-loaded-file'
+2013-04-24 20:37:22 #789 passed:     master Merge branch 'dalen-4561_structured_facts'
+2013-04-24 15:32:24 #786 passed:     master Merge pull request #1613 from floatingatoll/pull_1
+2013-04-23 17:08:40 #777 passed:     master Merge pull request #1611 from nfagerlund/ctime_mtime
+2013-04-22 23:17:52 #773 passed:     master (maint) Fix failing WriteOnlyYaml acceptance test
+2013-04-22 18:23:06 #772 passed:     master Merge branch 'restore_gemset_m'
+2013-04-22 17:28:48 #771 passed:     master Merge branch 'stable'
+2013-04-22 15:39:37 #769 passed:     master Merge branch 'restore_gemspec'
+2013-04-22 15:33:09 #767 errored:    master Merge branch 'restore_gemset_m'
+2013-04-19 14:36:54 #757 passed:     master Merge pull request #1600 from Sharpie/17811-os-x-fix-gid-conversion
+2013-04-19 14:30:09 #756 passed:     master Merge pull request #1606 from dalen/array_render_as_s
+2013-04-19 04:05:21 #749 passed:     master Maint: Lambda arity must match number of arguments
+2013-04-17 16:41:24 #740 passed:     master Merge pull request #1602 from Sharpie/20121-fix-suse-chkconfig
+2013-04-17 16:00:30 #738 errored:    master Merge branch 'fix_pmt_build'
+2013-04-17 14:39:36 #736 failed:     master Merge branch 'fix_solaris_module_pack'
+2013-04-16 19:22:10 #734 passed:     master Merge branch 'joshcooper-ticket/master/11276-chdir-fix'
+2013-04-16 16:38:59 #730 passed:     master Merge pull request #1577 from ffrank/ticket/master/3010-cron-allow-special-absent
+2013-04-16 13:04:10 #729 passed:     master Merge pull request #1601 from joshcooper/ticket/master/11276-windows-module-tool
+2013-04-16 12:40:12 #728 passed:     master Merge pull request #1599 from hlindberg/issue-reject-select-hash
+2013-04-15 21:35:20 #724 passed:     master (Maint) Remove disused puppet.gemspec
+2013-04-15 14:57:06 #719 passed:     master Docs: Explain HTTP header name munging in ssl_client_header and ssl_client_verify_header
+2013-04-15 12:45:30 #718 passed:     master Merge pull request #1598 from haus/update_cows_and_mocks
+2013-04-15 12:43:23 #717 passed:     master Merge pull request #1596 from haus/add_rgen_depends
+2013-04-12 16:28:24 #713 passed:     master Merge pull request #1594 from pcarlisle/run-loop
+2013-04-12 15:11:24 #711 failed:     master (Maint) Downcased header name in test
+2013-04-12 11:48:59 #709 passed:     master (Maint) Properly mark ruby 2 test to not run without sqlite
+2013-04-11 19:33:44 #704 passed:     master Merge pull request #1593 from joshcooper/ticket/master/20194_no_reverse_lookups
+2013-04-11 18:39:21 #702 failed:     master (Maint) Do not overwrite file output
+2013-04-11 18:26:54 #701 passed:     master Document before and after blocks, let blocks, mocks, and stubs
+2013-04-11 17:25:38 #700 passed:     master (Maint) Provide JUnit output for jenkins
+2013-04-11 16:20:18 #699 passed:     master (Maint) Lazily load the activerecord code
+2013-04-11 16:03:45 #698 passed:     master (Maint) Ensure that activerecord tests are isolated
+2013-04-11 14:11:43 #697 passed:     master (Maint) Ensure that 'hiera-puppet' is loaded correctly
+2013-04-10 18:31:19 #692 passed:     master Merge branch 'adrienthebo-maint-enable_logging_for_all_docs'
+2013-04-10 16:23:46 #690 passed:     master (Maint) Update Gemfile to allow excluding extra gems
+2013-04-10 15:28:55 #689 passed:     master Merge pull request #1590 from zaphod42/maint/master/remove-rgen-and-vendoring
+2013-04-10 13:30:33 #687 passed:     master Merge pull request #1589 from dalen/19128_pson_unicode
+2013-04-10 12:30:29 #685 passed:     master Merge branch 'maint-rake_spec_code_loading'
+2013-04-10 12:01:14 #684 failed:     master Merge branch 'maint-execute_permission_bin_puppet'
+2013-04-09 23:50:27 #681 failed:     master (Maint) Cleanup trailing whitespace
+2013-04-09 20:14:38 #680 errored:    master Merge branch 'master' of ssh://github.com/puppetlabs/puppet.git
+2013-04-09 18:05:58 #679 passed:     master Merge pull request #1587 from haus/ticket/master/19138_19109_18985_fix_debian_package_dependencies
+2013-04-09 16:55:55 #678 passed:     master Merge pull request #1588 from haus/maint/master/update_Gemfile
+2013-04-09 15:44:20 #676 passed:     master Merge branch 'adrienthebo-maint-cron_refactor_resource_for_record'
+2013-04-09 13:38:56 #674 passed:     master Merge branch 'maint_pmt_module_face_acceptance_failures'
+2013-04-08 17:17:47 #672 passed:     master Merge pull request #1583 from ghoneycutt/tickets/master/20100_Modulefile_starts_at_0_1_0
+2013-04-08 17:13:31 #671 passed:     master Merge pull request #1586 from domcleal/tickets/master/20136-array-respond-to
+2013-04-08 15:58:41 #669 passed:     master Merge branch 'domcleal-tickets/master/20128-service-dequeue-nil'
+2013-04-08 15:56:43 #668 passed:     master (Maint) Remove accidentally left in debug statement
+2013-04-08 15:38:22 #667 passed:     master (maint) Fix undefined local variable error from afdddb8
+2013-04-08 11:14:01 #665 passed:     master (maint) Do not turn off SELinux if it is already off
+2013-04-05 18:24:56 #663 passed:     master Merge pull request #1584 from puppetlabs/feature/master/future-parser
+2013-04-05 16:37:55 #660 passed:     master Merge pull request #1497 from zaphod42/issue/master/16688-hiera-extra-vars
+2013-04-05 13:31:52 #656 passed:     master (maint) Make external CA acceptance test work with SELinux (TRY #2)
+2013-04-05 12:00:52 #655 passed:     master Merge branch 'external_ca_test_fix'
+2013-04-04 19:21:24 #651 passed:     master (maint) Fix external ca acceptance test
+2013-04-04 18:18:50 #649 passed:     master Merge branch 'external_ca_support'
+2013-04-04 17:02:15 #645 passed:     master Merge pull request #1545 from cprice-puppet/maint/master/make-profiling-output-greppable
+2013-04-04 16:27:38 #641 passed:     master Merge pull request #1581 from nfagerlund/hiera_markdown
+2013-04-04 12:24:48 #637 passed:     master Revert "Merge branch 'pull-1540'"
+2013-04-03 18:15:34 #629 passed:     master Merge branch 'pull-1540'
+2013-04-03 17:10:48 #628 passed:     master Merge pull request #1523 from pdxmph/hiera_functions
+2013-04-03 17:09:50 #627 passed:     master (Maint) Make sure we don't execute pkglist in specs
+2013-04-03 16:22:44 #626 passed:     master Merge pull request #1555 from jeffweiss/aix_into_master
+2013-04-03 16:08:56 #625 passed:     master (Maint) Don't use fails_on_windows to exclude spec tests
+2013-04-03 14:17:56 #622 passed:     master Merge branch 'pull-1575'
+2013-04-03 13:33:57 #621 passed:     master Merge pull request #1350 from mruzicka/ticket/master/14728-PMT-changes-handle-removed-files
+2013-04-03 13:06:34 #620 passed:     master Merge pull request #1576 from djmitche/fix-filetype-tests
+2013-04-03 11:50:43 #619 passed:     master Merge branch 'pull-1560'
+2013-04-01 17:33:25 #603 passed:     master Merge pull request #1559 from djmitche/indirdocs
+2013-04-01 17:25:30 #602 passed:     master Merge branch '3.1.x'
+2013-04-01 16:02:33 #598 passed:     master Be specific about our expectation
+2013-03-29 18:59:46 #590 passed:     master Merge pull request #1571 from nfagerlund/masterport_setting
+2013-03-29 17:52:16 #588 passed:     master Merge pull request #1570 from Sharpie/1453-clarify-removed-cron-parameters
+2013-03-29 17:06:18 #587 passed:     master Merge branch 'maint-opkg_stubs'
+2013-03-29 15:48:19 #585 passed:     master Merge branch 'maint-rspec_2.9_let'
+2013-03-29 13:12:37 #582 passed:     master Merge branch 'pull-1552'
+2013-03-29 11:00:59 #581 passed:     master Merge pull request #1568 from nfagerlund/hiera_config_restart
+2013-03-29 00:17:15 #580 passed:     master Remove trailing whitespace
+2013-03-28 19:04:17 #578 passed:     master Merge pull request #1567 from pdxmph/windows_scheduled_task
+2013-03-28 18:41:30 #575 passed:     master Merge pull request #1565 from ffrank/ticket/master/19876-crontab-match-regression
+2013-03-28 17:48:59 #572 passed:     master Merge branch 'pull-1541'
+2013-03-28 15:52:18 #569 passed:     master Merge pull request #1566 from adrienthebo/maint-cron_acceptance_test_failure
+2013-03-28 00:52:20 #561 passed:     master Merge branch 'djmitche-verify_callback_errors'
+2013-03-28 00:48:42 #560 passed:     master (#15561) Merge branch 'djmitche-bug15561-subject-fix'
+2013-03-28 00:34:19 #557 passed:     master Merge pull request #1564 from ffrank/ticket/master/656-cron-dont-keep-refreshing
+2013-03-27 21:32:45 #552 passed:     master Merge remote-tracking branch 'upstream/3.1.x'
+2013-03-27 13:00:55 #548 passed:     master Merge pull request #1539 from duritong/fix/master/15791_do_not_fiddle_with_global_seed
+2013-03-27 12:42:49 #547 passed:     master Merge pull request #1558 from djmitche/dupcode
+2013-03-27 12:14:50 #546 passed:     master Merge pull request #1563 from djmitche/log-exception-message
+2013-03-26 13:18:45 #534 passed:     master Merge pull request #1562 from zaphod42/maint/load-order-error
+2013-03-26 00:17:49 #530 passed:     master Explicitly require Win32API
+2013-03-26 00:03:18 #529 passed:     master Merge pull request #1440 from joshcooper/ticket/master/18986-unicode-console
+2013-03-25 18:36:40 #520 passed:     master Merge pull request #1557 from Sharpie/14764-fix-file-mode-audits
+2013-03-25 17:56:53 #518 passed:     master Merge pull request #1543 from hlindberg/vendor-rgen
+2013-03-25 15:43:50 #514 passed:     master Merge pull request #1542 from hlindberg/vendor
+2013-03-25 14:10:32 #513 passed:     master Merge branch 'maint-stub_master_compile_puts'
+2013-03-25 11:17:35 #504 passed:     master Merge branch '3.1.x'
+2013-03-22 20:17:52 #495 passed:     master Merge branch 'maint-refactor_cron_filetype_selection'
+2013-03-22 19:56:16 #494 passed:     master Merge pull request #1549 from zaphod42/maint/fix-enc-environment-regression
+2013-03-22 19:11:56 #493 passed:     master Merge branch '3.1.x'
+2013-03-21 19:07:46 #477 passed:     master Merge branch 'maint-exclude_crontab_integration_specs_on_windows'
+2013-03-21 18:38:15 #476 passed:     master Merge pull request #1511 from zaphod42/feature/master/17190-detailed-compile-profiling
+2013-03-21 17:20:36 #475 passed:     master Merge branch 'issue/master/19058-deprecate-method-access-in-templates'
+2013-03-21 16:35:38 #474 passed:     master Merge branch 'pull-1216'
+2013-03-19 20:02:48 #463 passed:     master (Maint) Ensure that kick tests don't trigger an agent run
+2013-03-19 11:33:23 #457 passed:     master Merge branch 'pull-1534'
+2013-03-18 12:40:27 #454 passed:     master Merge pull request #1533 from adrienthebo/5752-rescue_parsedfile_prefetch_errors
+2013-03-15 15:39:20 #453 passed:     master Merge pull request #1528 from Sharpie/19716-fix-duplicated-crontab-entry-docs
+2013-03-15 12:47:55 #448 passed:     master Merge pull request #1530 from robertomulabi/patch-1
+2013-03-14 17:07:17 #443 passed:     master Merge pull request #1527 from robertomulabi/patch-1
+2013-03-14 16:35:55 #442 errored:    master Merge branch 'pull-1529'
+2013-03-13 20:17:54 #436 passed:     master Merge branch 'maint-use_absolute_command'
+2013-03-13 18:56:18 #434 passed:     master Merge branch 'maint-exec_type_test_failures_187'
+2013-03-13 17:19:18 #433 failed:     master Merge pull request #1525 from Sharpie/19713-exec-commands-must-be-strings
+2013-03-12 17:13:00 #430 passed:     master Merge remote-tracking branch 'upstream/3.1.x'
+2013-03-11 16:19:18 #424 passed:     master Merge pull request #1524 from Sharpie/19379-clarify-exec-logoutput
+2013-03-08 11:20:40 #418 passed:     master Merge branch 'juniorz-patch-1'
+2013-03-07 17:46:55 #416 passed:     master Merge branch '3.1.x'
+2013-03-06 14:15:08 #410 passed:     master Merge branch 'pull-1502'
+2013-03-05 19:07:00 #409 passed:     master (#19558) Fix acceptance test failure
+2013-03-05 15:12:35 #408 passed:     master Merge branch 'domcleal-tickets/master/19558-validation-errors'
+2013-03-05 10:59:37 #407 passed:     master (Maint) Fix assertion about module tool output
+2013-03-05 00:29:31 #402 passed:     master (#19090) Fixup failing windows spec tests
+2013-03-04 18:16:25 #401 passed:     master Merge branch 'jjulien-bug#19090'
+2013-03-01 13:36:15 #394 passed:     master Merge branch 'pull-1512'
+2013-03-01 12:30:35 #393 passed:     master Merge pull request #1513 from casharma/bugfix/module/18229
+2013-03-01 01:01:50 #388 passed:     master Merge branch '3.1.x'
+2013-02-27 18:52:26 #380 passed:     master Merge branch 'pull-1506'
+2013-02-27 16:50:40 #377 passed:     master Merge pull request #1505 from djmitche/fix/bug19493/master
+2013-02-27 16:13:10 #376 passed:     master Merge branch 'pull-1504'
+2013-02-27 15:58:24 #375 passed:     master Merge pull request #1501 from adrienthebo/18092-cgi_unescape_enable_password
+2013-02-26 18:28:54 #365 passed:     master Merge branch '3.1.x'
+2013-02-26 17:15:44 #364 passed:     master Merge branch 'pull-1494'
+2013-02-25 22:20:25 #362 passed:     master Merge pull request #1499 from adrienthebo/parse-pmt-json-output
+2013-02-25 22:04:36 #358 passed:     master Merge branch '3.1.x'
+2013-02-25 21:40:41 #355 passed:     master Merge pull request #1493 from haus/ticket/master/16553_add_portmat_wait_to_excludes
+2013-02-22 11:50:10 #349 passed:     master Merge pull request #1492 from domcleal/tickets/master/19409-module-errors
+2013-02-21 17:49:13 #345 passed:     master Merge branch 'zaphod42-issue/master/14093-string-overrides-all-template-output'
+2013-02-21 17:36:49 #344 passed:     master Merge pull request #1489 from adrienthebo/maint/master/parsedfile-human-readable-match-variables
+2013-02-19 17:22:57 #341 passed:     master Merge pull request #1477 from dalen/ssl_error
+2013-02-19 17:17:53 #340 passed:     master Merge pull request #1478 from dsd/fix/master/18781-webrick-old-client-compat
+2013-02-19 13:59:32 #339 passed:     master Merge pull request #1487 from vaijab/fix/master/cmd_line_opts_with_systemd
+2013-02-19 12:22:22 #338 passed:     master Merge pull request #1483 from cprice-puppet/bug/master/replace_file_jruby_fix
+2013-02-15 19:51:54 #329 passed:     master Merge pull request #1442 from jjulien/feature#7911
+2013-02-15 18:02:11 #326 passed:     master Merge branch '3.1.x'
+2013-02-15 15:54:26 #324 passed:     master Merge branch 'pull-1479'
+2013-02-14 20:17:33 #323 passed:     master Merge pull request #1481 from ahpook/18131-describe-list
+2013-02-13 19:36:59 #315 passed:     master Merge branch 'cprice-puppet-bug/3.0rc/15187-log-fatal-errors-to-console'
+2013-02-13 19:27:48 #314 passed:     master Merge pull request #1473 from stschulte/ticket/master/initprovider_shutdowns_system
+2013-02-13 19:18:35 #313 passed:     master Merge pull request #1475 from stschulte/maint/master/systemd_test_coverage
+2013-02-13 18:05:25 #310 passed:     master Merge pull request #1474 from jeffmccune/add_yard_dependencies
+2013-02-13 16:52:43 #307 passed:     master (maint) Exclude specs on 1.8 without activerecord
+2013-02-13 12:57:08 #305 passed:     master Merge pull request #1468 from aboe76/systemd-service-archlinux
+2013-02-12 16:27:29 #303 passed:     master Merge pull request #1457 from gw0/fix-feature-detection-nil
+2013-02-12 13:22:57 #297 passed:     master (#18978) Redo acceptance test
+2013-02-12 10:45:26 #295 passed:     master (#18978) Assign HEREDOC to script variable
+2013-02-11 15:54:52 #291 passed:     master Merge branch 'domcleal-tickets/master/18494-ruby-2.0'
+2013-02-11 15:49:41 #290 passed:     master Merge branch 'domcleal-tickets/master/19167-extlookup-spec'
+2013-02-11 13:50:58 #289 passed:     master Merge branch 'domcleal-tickets/master/7165-invalidate-refreshes'
+2013-02-11 13:23:08 #288 passed:     master Merge branch 'b1-systems-fix_signal_handler'
+2013-02-08 19:07:27 #275 passed:     master Merge branch 'ticket/17474-indirection-false' of https://github.com/pcarlisle/puppet
+2013-02-08 13:21:49 #267 passed:     master (#18978) Fix stray commas
+2013-02-08 12:23:43 #266 passed:     master Merge pull request #1439 from joshcooper/ticket/master/18978-windows-cacerts
+2013-02-08 12:18:17 #265 passed:     master Merge branch 'ripienaar-feature/master/14544'
+2013-02-08 12:03:22 #264 passed:     master Merge branch 'richardc-fix/master/19148'
+2013-02-08 11:54:43 #263 passed:     master Revert "Merge branch 'jeffmccune-yard_gemfile'"
+2013-02-07 18:40:49 #256 passed:     master Merge branch 'pull-1192'
+2013-02-07 18:29:31 #255 passed:     master (main) Add puppet-acceptance/ to .gitignore
+2013-02-07 18:05:23 #254 passed:     master Merge branch 'jeffmccune-yard_gemfile'
+2013-02-07 17:58:44 #252 passed:     master Merge pull request #1464 from adrienthebo/fixup_1329
+2013-02-07 17:20:14 #247 failed:     master Merge branch 'pull-1329'
+2013-02-07 17:04:21 #246 passed:     master Merge branch 'pull-1460'
+2013-02-07 11:57:25 #240 passed:     master Merge branch '3.1.x'
+2013-02-07 11:39:05 #238 passed:     master Merge remote-tracking branch 'upstream/3.1.x'
+2013-02-06 17:36:23 #230 passed:     master Merge pull request #1458 from richardc/master
+2013-02-06 16:06:31 #228 passed:     master Merge pull request #1441 from joshcooper/maint/master/module-tool-windows
+2013-02-06 15:53:55 #227 passed:     master Merge branch '3.1.x'
+2013-02-06 14:58:57 #222 passed:     master Merge branch '3.1.x'
+2013-02-06 11:49:39 #218 passed:     master Merge branch '3.1.x'
+2013-02-06 10:35:27 #216 passed:     master Merge branch 'domcleal-tickets/master/17522-augeas-load-warn'
+2013-02-05 18:31:05 #211 passed:     master Clarify example in comment for lookup_external_data_for
+2013-02-04 18:43:11 #205 passed:     master Merge branch 'stahnma-add_in_NM_script'
+2013-02-04 12:27:48 #203 passed:     master Merge branch '3.1.x'
+2013-01-31 19:07:46 #195 passed:     master Merge branch 'dalen-modulo_operator'
+2013-01-31 13:43:24 #193 passed:     master (#1424) Make Struct::Passwd more platform agnostic
+2013-01-31 09:22:28 #187 errored:    master Merge branch 'stschulte-ticket/master/user_expiry_solaris'd closes #1424
+2013-01-31 09:20:52 #186 errored:    master Merge branch 'stschulte-ticket/master/user_expiry_solaris'd closes #1424
+2013-01-30 11:46:42 #184 passed:     master Make envpuppet run under sh
+2013-01-29 20:12:13 #183 passed:     master Revert "Merge branch 'dalen-xor_operator' closes #1436"
+2013-01-29 16:46:48 #181 passed:     master Merge branch 'dalen-xor_operator' closes #1436
+2013-01-28 20:12:47 #177 passed:     master Merge pull request #1435 from mrwacky42/patch-1
+2013-01-25 17:10:21 #169 passed:     master Update PUPPETVERSION to 3.1.0-rc2
+2013-01-24 20:17:47 #150 failed:     master Merge pull request #1427 from hlindberg/deprecate-ruby-dsl
+2013-01-24 18:48:10 #147 passed:     master Merge pull request #1426 from pcarlisle/revert-ruby-dsl
+2013-01-23 18:09:10 #138 passed:     master Merge branch 'glarizza-bug/master/16271_launchd_restart_action'
+2013-01-23 16:39:27 #136 passed:     master Merge branch 'issue/master/18636-rdoc-error-when-installing-gem' of git://github.com/zaphod42/puppet
+2013-01-23 15:11:46 #133 passed:     master Merge pull request #1379 from joshcooper/ticket/master/16752-openbsd-pkgconf
+2013-01-23 14:25:22 #132 passed:     master Merge pull request #1423 from joshcooper/ticket/master/18755-include-prerelease-gems
+2013-01-23 12:52:12 #130 passed:     master Merge pull request #1419 from hlindberg/18458-Reload-Ruby-DSL
+2013-01-23 00:01:34 #123 passed:     master Merge branch 'alexharv074-ticket/3.0.x/17295_puppet_not_sanity_checking_default_digest'
+2013-01-22 17:27:59 #115 passed:     master Merge branch 'jeffmccune-committers_doc'
+2013-01-22 14:50:37 #109 passed:     master Merge branch 'omcnet-fix/master/keywords_support_in_portage_provider'
+2013-01-18 18:01:56 #101 passed:     master Merge branch 'ticket/14782-pmt-respect-environments'
+2013-01-17 20:00:37 #93 passed:      master Merge branch '3.0.x'
+2013-01-17 16:30:36 #83 passed:      master Merge branch 'jaredcurtis-fix/master/15980'
+2013-01-17 14:23:17 #82 passed:      master Merge pull request #1404 from pdxmph/master
+2013-01-17 13:08:56 #79 passed:      master Merge pull request #1396 from pcarlisle/ticket/180260-selinux-stat-warnings
+2013-01-16 19:12:03 #68 passed:      master Merge pull request #1391 from zaphod42/issue/master/18468-confusing-message-in-deb-install
+2013-01-16 18:23:58 #67 failed:      master Merge pull request #1395 from jjulien/bug#18662
+2013-01-16 18:14:05 #66 passed:      master Merge branch 'ryanuber-rpm-file-attr-workaround'
+2013-01-16 15:48:02 #65 passed:      master Revert "Maint: Add ronn dependency for building man pages"
+2013-01-16 13:56:03 #63 failed:      master Merge pull request #1393 from joshcooper/maint/master/generate-manpages
+2013-01-16 12:49:30 #62 failed:      master Merge pull request #1392 from joshcooper/maint/master/deprecate_dynamicfacts
+2013-01-15 13:36:13 #56 passed:      master Merge branch 'adregner-fix/master/service_upstart_class_variable_access'
+2013-01-15 01:17:01 #53 passed:      master Merge branch 'reidmv-fix/master/formats_render_empty_hash'
+2013-01-15 00:56:37 #52 passed:      master Revert "Merge branch 'stschulte-ticket/master/fixup_expiry'"
+2013-01-15 00:28:28 #51 passed:      master Merge pull request #1384 from joshcooper/ticket/master/18440-macosx-service
+2013-01-14 21:25:10 #50 passed:      master Merge branch 'stschulte-ticket/master/fixup_expiry'
+2013-01-14 19:19:21 #49 passed:      master Merge pull request #1390 from joshcooper/maint/master/remove-ca_md-setting
+2013-01-14 12:37:44 #45 passed:      master Revert "Merge branch 'stschulte-ticket/master/11675_implement_expiry_retrieve'"
+2013-01-13 16:29:59 #43 failed:      master Merge branch 'stschulte-ticket/master/11675_implement_expiry_retrieve'
+2013-01-10 17:12:31 #41 passed:      master Merge pull request #1383 from Aethylred/fix/master/string_miscast_settings.rb
+2013-01-09 19:01:48 #38 passed:      master Merge branch 'jjperry69-17716/master/17716_HPUX_user_provider'
+2013-01-09 16:51:25 #34 passed:      master Merge branch 'release/3.1.x/3.1.0-rc1'
+2013-01-08 20:08:40 #33 passed:      master (yardoc) Fix mixup of 'is' vs. 'should' in Type#[](name) yardoc.
+2013-01-08 12:53:04 #30 passed:      master Merge branch 'mruzicka-ticket/master/14872-PMT-respect-environments'
+2013-01-07 19:54:08 #26 passed:      master (Maint) Use --api instead of generic --query in yardopts
+2013-01-07 19:38:28 #25 passed:      master (Maint) Only show YARD docs for methods tagged with @api
+2013-01-07 18:49:23 #24 passed:      master Merge pull request #1375 from MosesMendoza/ticket/18394/fix_redhat_packaging
+2013-01-07 18:46:55 #23 passed:      master Merge branch 'adrienthebo-maint/master/remove_unused_transaction_attributes'
+2013-01-07 18:29:55 #22 passed:      master Merge pull request #1371 from pcarlisle/faces-yard
+2013-01-07 18:18:16 #21 passed:      master Merge pull request #1377 from zaphod42/maint/master/update-readmes
+2013-01-07 12:52:04 #17 passed:      master Merge pull request #1368 from mrzarquon/osx_pkg_groupcheck
+2013-01-06 19:18:55 #12 passed:      master Merge pull request #1372 from jeffmccune/fix/master/gem_dependencies
+2013-01-06 19:07:22 #10 passed:      master Merge branch '3.0.x'
+2013-01-06 04:10:39 #6 passed:       master Merge pull request #1373 from jeffmccune/feature/master/travis_ci

@@ -1,0 +1,773 @@
+2014-09-24 19:19:53 #1730 passed:    master 4.9.5
+2014-09-24 19:17:00 #1729 passed:    master deps: serve-static@~1.6.3
+2014-09-24 19:15:53 #1728 passed:    master deps: etag@~1.4.0
+2014-09-24 19:12:32 #1727 passed:    master Merge tag '3.17.5'
+2014-09-20 01:08:43 #1720 passed:    master 4.9.4
+2014-09-20 01:07:11 #1719 passed:    master deps: qs@2.2.4
+2014-09-18 12:46:17 #1712 passed:    master 4.9.3
+2014-09-18 12:44:44 #1711 passed:    master Merge tag '3.17.3'
+2014-09-17 22:52:39 #1707 passed:    master 4.9.2
+2014-09-17 22:52:26 #1706 passed:    master Fix router.use to accept array of middleware without path
+2014-09-17 22:52:57 #1704 passed:    master 4.9.2
+2014-09-17 22:13:10 #1703 passed:    master Fix router.use to accept array of middleware without path
+2014-09-17 22:11:54 #1702 passed:    master Improve error message for bad app.use arguments
+2014-09-17 22:05:16 #1701 passed:    master Fix regression for empty string path in app.use
+2014-09-17 01:32:43 #1698 passed:    master 4.9.1
+2014-09-17 01:24:59 #1697 passed:    master deps: update example dependencies
+2014-09-17 01:23:43 #1696 passed:    master deps: serve-static@~1.6.2
+2014-09-17 01:22:12 #1695 passed:    master Merge tag '3.17.2'
+2014-09-17 01:03:41 #1694 passed:    master deps: remove un-used buffer-crc32 dependency
+2014-09-16 01:55:59 #1687 passed:    master Remove unused require in router match
+2014-09-15 11:24:22 #1684 passed:    master tests: fix broken tests with node v0.12 branch
+2014-09-15 11:21:35 #1683 passed:    master Remove unused require in router match
+2014-09-14 11:16:02 #1682 passed:    master Remove unused require in router match
+2014-09-12 16:48:58 #1679 passed:    master Fix app.use to accept array of middleware without path
+2014-09-08 23:32:54 #1677 passed:    master 4.9.0
+2014-09-08 23:32:09 #1676 passed:    master Add res.sendStatus
+2014-09-08 23:12:58 #1673 passed:    master deps: accepts@~1.1.0
+2014-09-08 23:11:45 #1672 passed:    master deps: serve-static@~1.6.1
+2014-09-08 23:10:46 #1671 passed:    master deps: type-is@~1.5.1
+2014-09-08 23:09:40 #1670 passed:    master deps: finalhandler@0.2.0
+2014-09-08 23:11:57 #1669 passed:    master deps: update example dependencies
+2014-09-08 23:09:42 #1668 passed:    master deps: qs@2.2.3
+2014-09-08 23:02:57 #1667 passed:    master docs: typo fixes
+2014-09-08 22:52:27 #1664 passed:    master Merge tag '3.17.1'
+2014-09-08 22:51:25 #1663 passed:    master Merge tag '3.17.1' into temp
+2014-09-08 20:00:01 #1642 passed:    master Remove unused variable
+2014-09-08 19:53:33 #1641 passed:    master examples: fix up route-separation code
+2014-09-05 01:26:52 #1634 passed:    master 4.8.8
+2014-09-05 01:24:44 #1633 passed:    master deps: update example dependencies
+2014-09-05 01:21:48 #1632 passed:    master deps: serve-static@~1.5.4
+2014-09-05 01:20:42 #1631 passed:    master Merge tag '3.16.10'
+2014-08-30 00:38:25 #1621 passed:    master 4.8.7
+2014-08-30 00:33:36 #1620 passed:    master deps: update example dependencies
+2014-08-30 00:31:42 #1619 passed:    master deps: qs@2.2.2
+2014-08-30 00:29:46 #1618 passed:    master Merge tag '3.16.9'
+2014-08-27 20:53:02 #1606 passed:    master 4.8.6
+2014-08-27 20:26:55 #1605 passed:    master deps: update example dependencies
+2014-08-27 20:23:57 #1604 passed:    master deps: qs@2.2.0
+2014-08-24 12:29:17 #1593 passed:    master tests: add some res.sendfile directory tests
+2014-08-24 09:05:58 #1592 passed:    master docs: fix logo link
+2014-08-18 22:06:12 #1577 passed:    master 4.8.5
+2014-08-18 22:00:46 #1576 passed:    master deps: update example dependencies
+2014-08-18 21:59:37 #1575 passed:    master deps: serve-static@~1.5.3
+2014-08-18 21:56:30 #1574 passed:    master Merge tag '3.16.7'
+2014-08-18 21:56:02 #1572 passed:    master 4.8.4
+2014-08-18 20:59:26 #1560 passed:    master deps: update example dependencies
+2014-08-18 20:57:51 #1559 passed:    master tests: add router.use validation tests
+2014-08-18 20:57:28 #1558 passed:    master tests: add additional res.sendFile test
+2014-08-18 20:57:05 #1557 passed:    master deps: serve-static@~1.5.2
+2014-08-18 20:56:42 #1556 passed:    master Merge tag '3.16.6'
+2014-08-18 20:55:53 #1555 passed:    master 4.8.3
+2014-08-18 20:55:25 #1554 passed:    master deps: serve-static@~1.5.1
+2014-08-18 20:54:56 #1553 passed:    master deps: qs@1.2.1
+2014-08-18 20:54:21 #1552 passed:    master Merge tag '3.16.4'
+2014-08-18 20:53:54 #1551 passed:    master 4.8.2
+2014-08-18 20:53:44 #1550 passed:    master deps: qs@1.2.0
+2014-08-18 20:52:50 #1549 passed:    master Merge tag '3.16.2'
+2014-08-18 20:51:09 #1548 passed:    master 4.8.1
+2014-08-18 20:52:19 #1547 passed:    master Fix incorrect deprecation warnings on res.download
+2014-08-18 20:49:59 #1546 passed:    master 4.8.0
+2014-08-18 20:50:13 #1545 passed:    master Support mounted app as any argument to app.use()
+2014-08-18 20:48:48 #1544 passed:    master Deprecate res.sendfile
+2014-08-18 20:49:33 #1543 passed:    master Add res.sendFile
+2014-08-18 20:47:51 #1542 passed:    master deps: update example dependencies
+2014-08-18 20:46:37 #1541 passed:    master deps: qs@1.0.2
+2014-08-18 20:46:30 #1540 passed:    master deps: serve-static@~1.5.0
+2014-08-18 20:45:26 #1539 passed:    master 4.7.4
+2014-08-18 20:45:19 #1538 passed:    master 4.7.3
+2014-08-18 20:44:42 #1537 passed:    master 4.7.2
+2014-08-13 22:47:08 #1500 passed:    master tests: add null path test for res.sendFile
+2014-08-07 11:35:18 #1492 passed:    master Use a pinned version for external dep qs
+2014-08-07 11:19:15 #1491 passed:    master Upgrade `qs` to protect against security vunerability
+2014-08-06 17:20:37 #1486 passed:    master 4.8.1
+2014-08-06 15:28:24 #1485 passed:    master Merge tag '4.8.0'
+2014-08-05 02:55:47 #1481 passed:    master Merge pull request #2280 from altsang/rev-pkgjson-qs
+2014-08-04 11:44:31 #1477 passed:    master Douglas Wilson cannot legally maintain this.
+2014-07-30 17:58:46 #1471 passed:    master Merge pull request #2273 from raymondfeng/fix-repo-test
+2014-07-30 11:28:36 #1467 failed:    master Merge pull request #2268 from paulomcnally/master
+2014-07-27 15:02:01 #1462 passed:    master 4.7.2
+2014-07-27 15:01:11 #1461 passed:    master deps: update example dependencies
+2014-07-27 14:59:53 #1460 passed:    master deps: serve-static@~1.4.2
+2014-07-26 17:54:02 #1451 passed:    master 4.7.1
+2014-07-26 17:31:08 #1450 passed:    master deps: serve-static@~1.4.1
+2014-07-26 17:29:34 #1449 errored:   master Revert "Deprecate combined status, response signatures"
+2014-07-26 17:28:40 #1447 passed:    master 4.7.1
+2014-07-26 17:19:51 #1446 passed:    master Revert "Deprecate combined status, response signatures"
+2014-07-26 17:08:40 #1445 passed:    master deps: serve-static@~1.4.1
+2014-07-25 19:26:57 #1431 passed:    master 4.7.0
+2014-07-12 21:20:55 #1378 passed:    master 4.6.1
+2014-07-12 21:08:40 #1377 passed:    master Fix subapp.mountpath regression for app.use(subapp)
+2014-07-11 22:33:22 #1374 passed:    master 4.6.0
+2014-07-11 08:36:57 #1365 passed:    master tests: add test for error handler in route
+2014-07-08 23:51:32 #1339 passed:    master docs: fix nodejs.org link
+2014-07-08 23:50:34 #1338 passed:    master Fix nodejs.org link
+2014-07-08 18:41:25 #1336 passed:    master tests: add missing FQDN router URL tests
+2014-07-08 01:01:55 #1334 passed:    master tests: add mounting to strict routing test
+2014-07-08 00:21:23 #1332 passed:    master add .project to .gitignore file
+2014-07-08 00:16:43 #1331 passed:    master catch errors in multiple req.param(name, fn) handlers
+2014-07-08 00:09:54 #1330 passed:    master Update package.json
+2014-07-07 22:25:44 #1327 passed:    master tests: add mounting to strict routing test
+2014-07-07 22:07:22 #1326 passed:    master tests: add mounting to strict routing test
+2014-07-06 18:48:53 #1322 passed:    master 4.5.1
+2014-07-06 18:46:45 #1321 passed:    master Fix routing regression when altering req.method
+2014-07-06 18:43:56 #1320 passed:    master Fix regression when altering req.method
+2014-07-05 10:33:26 #1315 passed:    master tests: add more app.use tests
+2014-07-04 20:03:39 #1313 passed:    master 4.5.0
+2014-07-04 16:06:34 #1312 passed:    master docs: cleanup readme, update package description
+2014-07-04 16:06:24 #1311 errored:   master docs: cleanup readme, update package description
+2014-07-04 16:05:15 #1310 errored:   master docs: cleanup readme, update package description
+2014-07-04 16:03:37 #1309 passed:    master docs: cleanup readme, update package description
+2014-07-04 13:01:25 #1303 passed:    master Add req.hostname
+2014-07-04 12:47:15 #1302 passed:    master Invoke router.param() only when route matches
+2014-07-04 11:52:46 #1301 passed:    master deps: accepts@~1.0.7
+2014-07-04 00:26:23 #1300 passed:    master deps: update example dependencies
+2014-07-04 00:23:48 #1299 passed:    master deps: istanbul@0.2.14
+2014-07-04 00:15:43 #1298 passed:    master Merge tag '3.13.0'
+2014-07-03 11:54:57 #1289 passed:    master Add headers option to res.sendfile
+2014-07-03 10:13:37 #1288 passed:    master deps: serve-static@~1.3.0
+2014-07-03 09:51:16 #1287 passed:    master deps: update example dependencies
+2014-07-03 00:13:49 #1286 passed:    master Add mergeParams option to Router
+2014-06-26 22:48:12 #1283 passed:    master Merge tag '3.12.1'
+2014-06-24 20:19:47 #1279 passed:    master deps: finalhandler@0.0.2
+2014-06-24 20:18:54 #1278 passed:    master deps: type-is@~1.3.2
+2014-06-24 20:16:21 #1277 passed:    master deps: istanbul@0.2.11
+2014-06-23 20:10:45 #1276 passed:    master tests: add test for OPTIONS in app.all
+2014-06-23 15:30:52 #1275 passed:    master add deprecation message to res.vary()
+2014-06-23 15:30:53 #1274 passed:    master add deprecation message to res.send(body, status)
+2014-06-23 15:22:03 #1273 passed:    master add deprecation message to non-plural req.accepts*
+2014-06-23 12:45:15 #1272 passed:    master examples: tweak cors example
+2014-06-22 11:39:32 #1270 passed:    master Reduce try-catch de-op area in param matching
+2014-06-22 11:38:01 #1269 passed:    master Fix handling when route.all is only route
+2014-06-22 11:34:21 #1268 passed:    master Restore req.params after invoking Router
+2014-06-22 11:32:52 #1267 passed:    master Replace __defineGetter__ with Object.defineProperty
+2014-06-22 11:03:49 #1266 passed:    master fix behavior when handling request without routes
+2014-06-22 10:43:34 #1265 passed:    master Merge tag '3.12.0'
+2014-06-20 15:57:45 #1256 passed:    master 4.4.4
+2014-06-20 15:58:25 #1255 passed:    master Fix res.attachment Unicode filenames in Safari
+2014-06-20 15:45:35 #1254 passed:    master deps: accepts@~1.0.5
+2014-06-20 15:43:43 #1253 passed:    master deps: update example dependencies
+2014-06-19 23:36:30 #1250 passed:    master deps: buffer-crc32@0.2.3
+2014-06-14 11:59:09 #1242 passed:    master fix "trim prefix" debug message in express:router
+2014-06-11 23:42:14 #1238 passed:    master 4.4.3
+2014-06-11 23:39:43 #1237 passed:    master Merge tag '3.10.5'
+2014-06-11 23:18:20 #1231 passed:    master deps: serve-static@1.2.3
+2014-06-11 23:16:34 #1230 passed:    master deps: accepts@1.0.3
+2014-06-11 23:15:13 #1229 passed:    master deps: send@0.4.3
+2014-06-11 17:21:24 #1226 passed:    master Fix persistence of req.params from app.params
+2014-06-11 17:01:46 #1225 passed:    master deps: debug@1.0.2
+2014-06-09 19:46:35 #1224 passed:    master Reduce try-catch de-op area in param matching
+2014-06-09 19:42:21 #1222 passed:    master 4.4.2
+2014-06-09 19:40:37 #1221 passed:    master deps: update example dependencies
+2014-06-09 19:37:32 #1220 passed:    master deps: update example dependencies
+2014-06-09 19:25:17 #1219 passed:    master deps: update testing dependencies
+2014-06-09 19:23:21 #1218 passed:    master deps: send@0.4.2
+2014-06-09 19:22:18 #1217 passed:    master deps: serve-static@1.2.2
+2014-06-09 19:21:13 #1216 passed:    master deps: debug@1.0.1
+2014-06-09 08:45:30 #1210 passed:    master Fix catching errors from top-level handlers
+2014-06-08 16:43:02 #1208 passed:    master Use path.resolve for views dir instead of concat
+2014-06-07 19:15:08 #1205 passed:    master Fix typo in console.log in multipart example
+2014-06-07 19:14:21 #1204 passed:    master Fix typo in cols.log in multipart example
+2014-06-07 01:46:36 #1202 passed:    master Reduce try-catch de-op area in param matching
+2014-06-06 21:17:38 #1201 passed:    master Fix handling when route.all is only route
+2014-06-06 21:17:16 #1200 errored:   master fix handling when route.all is only route
+2014-06-06 10:58:41 #1199 passed:    master Restore req.params after invoking Router
+2014-06-06 10:56:37 #1198 passed:    master Replace __defineGetter__ with Object.defineProperty
+2014-06-06 10:17:40 #1196 passed:    master tests: add more route tests
+2014-06-06 09:47:21 #1194 passed:    master improve before hook in mvc example
+2014-06-06 09:28:00 #1193 passed:    master change confusing 404 handling in download example
+2014-06-05 23:41:44 #1191 passed:    master docs: move badges
+2014-06-05 23:38:44 #1190 passed:    master tests: add more tests
+2014-06-05 23:17:27 #1189 passed:    master fix behavior when handling request without routes
+2014-06-05 22:59:57 #1188 passed:    master use finalhandler for final response handling
+2014-06-05 22:45:58 #1187 passed:    master Merge tag '3.10.3'
+2014-06-05 18:41:23 #1182 passed:    master deps: type-is@1.2.1
+2014-06-03 16:26:31 #1174 passed:    master deps: proxy-addr@1.0.1
+2014-06-02 23:48:59 #1169 passed:    master Merge tag '3.10.0'
+2014-06-02 20:25:25 #1163 passed:    master 4.4.1
+2014-06-02 20:00:23 #1162 passed:    master deps: update example dependencies
+2014-06-02 19:51:50 #1161 passed:    master deps: serve-static@1.2.1
+2014-06-02 19:50:02 #1160 passed:    master deps: send@0.4.1
+2014-06-02 19:49:27 #1159 passed:    master deps: methods@1.0.1
+2014-06-02 09:29:18 #1156 passed:    master remove jsdoc params for polymorphic functions
+2014-05-31 10:46:07 #1155 passed:    master adjust jsdoc for app.use
+2014-05-30 23:01:21 #1153 passed:    master 4.4.0
+2014-05-30 21:53:25 #1152 passed:    master update serve-static to 1.2.0
+2014-05-30 21:50:41 #1151 passed:    master deps: supertest@~0.13.0
+2014-05-30 21:48:56 #1150 passed:    master update accepts to 1.0.2
+2014-05-30 21:18:22 #1149 passed:    master Merge tag '3.9.0'
+2014-05-28 23:17:47 #1135 passed:    master 4.3.2
+2014-05-28 21:27:13 #1133 passed:    master fix handling of errors from param callbacks
+2014-05-27 22:52:11 #1125 passed:    master update example dependencies
+2014-05-27 22:50:32 #1124 passed:    master Merge tag '3.8.1'
+2014-05-23 18:12:09 #1120 passed:    master 4.3.1
+2014-05-23 17:46:31 #1118 passed:    master tests: add route ordering test
+2014-05-23 17:36:38 #1117 passed:    master Revert "fix behavior of multiple app.VERB for the same path"
+2014-05-21 01:14:31 #1111 passed:    master 4.3.0
+2014-05-21 01:12:30 #1110 passed:    master update example dependencies
+2014-05-21 01:10:32 #1109 passed:    master Merge tag '3.8.0'
+2014-05-20 09:59:59 #1089 passed:    master tests: add more app.param tests
+2014-05-19 14:50:31 #1087 passed:    master add req.baseUrl to access stripped path in routes
+2014-05-18 22:08:26 #1085 passed:    master update example dependencies
+2014-05-18 22:03:00 #1083 passed:    master build: prevent failure from coveralls
+2014-05-18 15:33:48 #1082 passed:    master tests: flow control with after
+2014-05-18 15:21:59 #1081 passed:    master invoke router.param() only when necessary
+2014-05-18 14:28:26 #1080 passed:    master fix issue routing requests among sub routers
+2014-05-18 10:22:39 #1079 passed:    master Merge tag '3.7.0'
+2014-05-18 10:19:33 #1078 failed:    master Merge tag '3.7.0'
+2014-05-16 14:11:18 #1059 passed:    master fix behavior of multiple app.VERB for the same path
+2014-05-13 23:26:22 #1055 passed:    master update type-is to 1.2.0
+2014-05-13 23:23:24 #1054 passed:    master build: ignore Contributing
+2014-05-12 14:47:18 #1052 passed:    master add Contributing.md
+2014-05-11 21:01:46 #1050 passed:    master 4.2.0
+2014-05-11 20:30:06 #1049 passed:    master deps: pin debug
+2014-05-11 20:26:20 #1048 passed:    master update example dependencies
+2014-05-09 16:36:17 #1047 passed:    master Merge tag '3.6.0'
+2014-05-09 15:55:31 #1044 passed:    master Fix req.next when inside router instance
+2014-05-08 22:23:10 #1033 passed:    master tests: fixup new json tests
+2014-05-08 21:09:51 #1032 passed:    master update example dependencies
+2014-05-08 13:58:27 #1016 passed:    master update history with dep history
+2014-05-08 13:49:09 #1015 passed:    master update history
+2014-05-08 13:47:26 #1014 passed:    master Merge branch '4.1.x'
+2014-05-02 14:08:16 #991 passed:     master Keep previous Content-Type for res.jsonp
+2014-05-02 08:01:51 #989 passed:     master tests: remove unused image fixture
+2014-04-30 08:34:52 #988 passed:     master Include ETag in HEAD requests
+2014-04-30 07:30:21 #987 failed:     master Include ETag in HEAD requests
+2014-04-27 18:49:47 #982 passed:     master 4.1.1
+2014-04-27 18:47:36 #981 passed:     master fix package.json to reflect supported node version
+2014-04-27 18:46:32 #980 passed:     master fix package.json to reflect support node version
+2014-04-27 18:44:57 #979 passed:     master fix package.json to reflect support node version
+2014-04-24 17:15:30 #976 passed:     master 4.1.0
+2014-04-24 17:11:24 #975 passed:     master 4.1.0
+2014-04-24 17:03:57 #974 passed:     master preserve casing of headers in res.header and res.set
+2014-04-24 16:55:49 #973 passed:     master fix multipart example
+2014-04-24 16:06:55 #972 passed:     master update example dependencies
+2014-04-24 15:54:27 #971 passed:     master update should to 3.3.1
+2014-04-24 15:51:32 #970 passed:     master update serve-static to 1.1.0
+2014-04-24 15:48:26 #969 passed:     master Pass options from res.sendfile to send
+2014-04-24 15:46:30 #968 passed:     master Merge branch '3.x'
+2014-04-24 14:20:53 #958 passed:     master Pass options from res.sendfile to send
+2014-04-24 14:21:02 #957 errored:    master Pass options from res.sendfile to send
+2014-04-24 14:09:35 #956 passed:     master update send to 0.3.0
+2014-04-24 14:05:31 #955 errored:    master update send to 0.3.0
+2014-04-23 09:23:35 #952 passed:     master Merge pull request #2067 from swrh/mvc-example-ejs-to-jade
+2014-04-22 22:10:21 #949 passed:     master Merge pull request #2060 from swrh/master
+2014-04-22 19:24:30 #946 passed:     master Merge pull request #2065 from WebReflection/patch-1
+2014-04-21 21:13:20 #938 passed:     master Merge pull request #2058 from thetalecrafter/content-disposition
+2014-04-18 02:29:23 #934 passed:     master Readme: add Roman as lead maintainer
+2014-04-16 07:51:03 #933 passed:     master make old middleware properties configurable
+2014-04-15 08:35:24 #931 passed:     master Merge pull request #2053 from shawnzhu/fix-xhr-test
+2014-04-14 09:59:28 #929 passed:     master Merge pull request #2047 from Pana/patch-1
+2014-04-12 19:26:02 #926 passed:     master update type-is@1.1.0
+2014-04-10 16:19:41 #925 passed:     master add soft testing on node.js 0.11
+2014-04-10 16:16:25 #924 passed:     master update cookie to 0.1.1
+2014-04-10 16:10:53 #923 passed:     master update history
+2014-04-10 09:05:19 #921 passed:     master update readme to v4 release
+2014-04-09 15:46:27 #919 passed:     master 4.0.0
+2014-04-08 13:55:22 #918 passed:     master handle thrown errors inside Route
+2014-04-05 16:09:40 #917 passed:     master Merge pull request #2025 from seanlinsley/patch-1
+2014-03-31 19:09:56 #914 passed:     master Merge pull request #2018 from Devrama/patch-1
+2014-03-29 00:57:34 #912 passed:     master Merge pull request #2013 from kentcdodds/patch-1
+2014-03-27 17:30:43 #910 passed:     master Merge pull request #2008 from agchou/clean-up-code
+2014-03-25 17:39:03 #906 passed:     master Merge pull request #2004 from agchou/clean-up-code
+2014-03-24 21:54:44 #898 passed:     master 4.0.0-rc4
+2014-03-24 21:53:33 #897 passed:     master support arrays as middleware arguments to .VERB and .all
+2014-03-24 21:53:02 #896 passed:     master remove deprecation message about passing path as array
+2014-03-23 13:44:00 #893 passed:     master don't call done twice for thrown errors inside parameterized routes
+2014-03-18 19:46:00 #890 passed:     master Merge pull request #1984 from blakeembrey/params-update
+2014-03-13 19:21:00 #886 passed:     master remove license text from readme
+2014-03-13 15:33:28 #884 passed:     master update license year, tired of all the fluff issues about this
+2014-03-13 11:37:12 #883 passed:     master Merge pull request #1964 from blakeembrey/modular-routing
+2014-03-12 09:32:28 #881 passed:     master examples: remove reference to app.router in static-files
+2014-03-11 20:39:55 #879 passed:     master 4.0.0-rc3
+2014-03-09 21:50:41 #873 passed:     master change my contributor email to tag with expressjs
+2014-03-09 21:47:51 #872 passed:     master add @jonathanong and @defunctzombie as contributors
+2014-03-09 21:33:01 #871 passed:     master add better error messages for non-functions as middleware
+2014-03-07 20:27:56 #869 passed:     master use parseurl
+2014-03-07 20:04:34 #868 passed:     master lint
+2014-03-07 18:47:25 #867 passed:     master remove res.charset usage
+2014-03-07 18:34:05 #866 passed:     master remove res.charset support
+2014-03-06 17:05:24 #864 passed:     master update History.md with 3.x branch
+2014-03-06 00:46:11 #861 passed:     master Update History.md
+2014-03-06 00:37:06 #860 passed:     master use path-to-regexp
+2014-03-06 00:14:31 #859 passed:     master throw errors when users try to access removed middleware
+2014-03-05 09:36:52 #857 passed:     master fix examples for express 4 (separate middleware)
+2014-03-05 05:37:34 #856 passed:     master npm start to start the server!
+2014-03-05 00:34:08 #854 passed:     master 4.0.0-rc2
+2014-03-04 23:32:49 #853 passed:     master Update Readme.md
+2014-03-04 23:32:37 #852 passed:     master Update Readme.md
+2014-03-03 16:52:42 #851 passed:     master fix Route#all before Route#verb
+2014-03-03 01:33:22 #850 passed:     master Update Readme.md for Express 4
+2014-03-02 10:19:12 #849 passed:     master 4.0.0-rc1
+2014-03-01 09:09:16 #847 passed:     master Merge pull request #1941 from deiga/patch-1
+2014-02-26 19:29:34 #844 passed:     master make express.Router() return a Router function instance
+2014-02-25 11:42:10 #839 passed:     master Merge pull request #1935 from visionmedia/router-params-middleware
+2014-02-23 10:32:47 #835 passed:     master implement app.route()
+2014-02-22 08:27:28 #834 passed:     master bump cookie parser dependency to 1.0.1
+2014-02-19 17:30:25 #832 passed:     master update node-fresh
+2014-02-08 13:41:32 #825 passed:     master update history
+2014-02-08 13:38:20 #824 passed:     master res.location: remove resolving relative urls
+2014-02-03 15:01:05 #823 passed:     master remove app.router and refactor middleware processing
+2014-01-29 19:04:24 #816 passed:     master update merge-descriptors
+2014-01-29 14:23:45 #815 passed:     master update node-fresh
+2014-01-29 09:03:09 #814 passed:     master update range parser to 1.0.0
+2014-01-28 16:25:06 #813 passed:     master Merge pull request #1908 from visionmedia/locals-object
+2014-01-24 18:33:09 #800 passed:     master remove unused require
+2014-01-24 18:22:13 #799 passed:     master use escape-html module to escape html
+2014-01-24 18:17:50 #798 passed:     master use utils-merge module to mixin object properties
+2014-01-19 13:07:35 #793 passed:     master remove deprecated express.createServer() method
+2014-01-19 11:19:03 #792 passed:     master Merge pull request #1904 from popomore/master
+2014-01-14 11:34:57 #790 passed:     master Merge pull request #1889 from vesln/send-null-undefined
+2014-01-13 16:56:45 #787 passed:     master Merge pull request #1868 from dpatti/smarter-router-auto-options
+2014-01-11 17:43:33 #785 passed:     master Merge pull request #1899 from visionmedia/remove-configure
+2014-01-04 21:24:13 #778 passed:     master Merge pull request #1892 from matheusazzi/patch-1
+2014-01-04 20:13:34 #776 passed:     master Merge pull request #1890 from oliversalzburg/patch-1
+2014-01-03 05:01:41 #772 passed:     master history: req.params
+2014-01-03 05:00:45 #771 passed:     master Merge pull request #1835 from visionmedia/change-req-params-to-object
+2014-01-03 04:57:59 #770 passed:     master improve history.md
+2014-01-03 04:51:31 #769 passed:     master refactor req.is and req.accepts*
+2013-12-23 12:35:57 #764 passed:     master Merge pull request #1877 from reqshark/master
+2013-12-23 10:11:08 #762 passed:     master Merge pull request #1876 from yosssi/dev
+2013-12-22 10:57:44 #757 passed:     master use 8 threads for benchmarks
+2013-12-21 13:13:34 #755 passed:     master Merge pull request #1869 from yamatt/master
+2013-12-20 23:15:54 #753 passed:     master bench: remove --harmony-generators flag
+2013-12-20 21:35:37 #752 passed:     master add new benchmarks (to match koa)
+2013-12-18 09:21:34 #750 passed:     master add license field to package.json
+2013-12-11 19:15:39 #749 passed:     master throw 400 in case of malformed paths
+2013-12-11 01:58:36 #744 passed:     master 3.4.7
+2013-12-11 01:54:34 #743 passed:     master bump connect, mocha, and should
+2013-12-04 16:20:52 #741 passed:     master 3.4.6
+2013-12-01 14:21:48 #738 passed:     master 3.4.6
+2013-11-27 17:55:16 #733 passed:     master 3.4.5
+2013-11-27 01:40:07 #731 passed:     master fix weird variable name in example
+2013-11-27 01:39:39 #730 passed:     master fix weird variable name in example
+2013-11-26 13:13:33 #729 passed:     master ocd
+2013-11-26 13:12:50 #728 passed:     master Merge pull request #1829 from michaelficarra/patch-1
+2013-11-21 14:53:30 #725 passed:     master Merge pull request #1822 from yakubori/auth-buffer-call-removal
+2013-11-19 17:53:35 #720 passed:     master add Router.all() method
+2013-11-09 21:32:29 #719 passed:     master pin marked devDep to protect out tests
+2013-11-09 21:27:17 #718 passed:     master pin devDependencies using ~
+2013-11-09 21:09:11 #717 passed:     master fix markdown example test
+2013-11-02 17:10:37 #714 passed:     master Merge pull request #1802 from kapouer/patch-1
+2013-10-30 22:55:52 #709 passed:     master pin deps using semver1
+2013-10-30 22:53:16 #708 passed:     master pin dev deps to semver compatible versions
+2013-10-30 22:37:46 #703 passed:     master be less picky with ENOENT errors in tests
+2013-10-30 22:35:16 #702 passed:     master always send ETag when content-length > 0
+2013-10-30 00:44:39 #701 passed:     master no semver2 so travis stops crying
+2013-10-29 12:41:46 #700 errored:    master 3.4.4
+2013-10-28 18:10:02 #699 errored:    master bump supertest to 0.8.1
+2013-10-28 16:40:06 #695 failed:     master remove .gitmodules
+2013-10-28 14:03:22 #694 failed:     master update methods for SEARCH
+2013-10-25 13:01:59 #693 failed:     master Merge pull request #1796 from malixsys/patch-1
+2013-10-25 05:32:05 #691 failed:     master Merge pull request #1795 from chirag04/master
+2013-10-23 13:22:48 #689 failed:     master 3.4.3
+2013-10-18 21:04:40 #685 failed:     master 3.4.2
+2013-10-18 21:03:30 #684 failed:     master 3.4.2
+2013-10-18 03:19:44 #683 failed:     master lint: remove unused stuff
+2013-10-17 15:08:30 #682 failed:     master replace old contributors info with github's contributors
+2013-10-17 15:00:38 #681 failed:     master downgrade commander. closes #1783
+2013-10-16 21:52:58 #680 failed:     master Merge branch 'master' of github.com:visionmedia/express
+2013-10-16 21:51:51 #679 failed:     master fix res.sendfile() callback
+2013-10-15 20:35:44 #677 failed:     master mocha globals - readable-stream defines globals
+2013-10-15 20:22:57 #676 failed:     master Merge pull request #1779 from visionmedia/jsonp-typeof-callback
+2013-10-14 23:23:07 #673 failed:     master update commander. closes #1693
+2013-10-14 23:18:07 #672 failed:     master use path.join for 'views' setting. closes #1427
+2013-10-14 20:36:24 #671 failed:     master fix tests for should.js
+2013-10-14 20:34:19 #670 failed:     master Merge pull request #1776 from ykumar6/master
+2013-09-19 14:44:17 #665 failed:     master Merge pull request #1759 from muratgu/patch-1
+2013-09-19 14:39:58 #664 failed:     master Merge pull request #1760 from jseip1679/master
+2013-09-17 02:36:24 #661 failed:     master README: add more links to expressjs.com
+2013-09-16 18:53:31 #660 failed:     master fix test label typo
+2013-09-16 18:45:08 #659 failed:     master fix signed cookies test
+2013-09-16 17:57:00 #658 failed:     master Merge pull request #1735 from lxe/malformed-capture-route
+2013-09-09 23:46:10 #647 failed:     master Merge pull request #1688 from menzoic/issue/menzoic-1
+2013-09-08 11:31:37 #643 failed:     master refactor res.format() with a little ocd
+2013-09-08 11:30:59 #642 failed:     master Merge pull request #1747 from sorribas/master
+2013-09-07 23:44:15 #639 failed:     master Merge pull request #1659 from dresende/patch-1
+2013-09-07 23:43:55 #638 failed:     master Merge pull request #1729 from patelatharva/patch-1
+2013-09-07 17:26:46 #637 failed:     master refactor res.links()
+2013-09-07 17:25:27 #636 failed:     master Merge pull request #1746 from sorribas/master
+2013-09-07 14:25:49 #635 failed:     master Release 3.4.0
+2013-09-02 11:12:03 #632 failed:     master add res.vary(). Closes #1682
+2013-09-02 10:57:05 #631 failed:     master Merge pull request #1740 from superic/master
+2013-09-02 10:56:30 #630 failed:     master Merge pull request #1711 from jonjenkins/master
+2013-09-02 10:03:00 #628 failed:     master Release 3.3.8
+2013-08-28 11:41:29 #626 failed:     master Release 3.3.7
+2013-08-27 16:01:37 #625 failed:     master Release 3.3.6
+2013-08-17 03:07:59 #622 failed:     master Merge branch 'master' of github.com:visionmedia/express
+2013-08-16 18:33:37 #621 failed:     master Merge pull request #1723 from gmethvin/accepts
+2013-08-15 10:20:08 #619 failed:     master remove silly out-of-date dep badge
+2013-08-10 16:51:34 #617 failed:     master Release 3.3.5
+2013-08-09 17:04:17 #615 failed:     master Merge pull request #1710 from hacksparrow/master
+2013-08-02 16:47:56 #611 failed:     master Merge pull request #1685 from CharlesHolbrow/master
+2013-08-02 16:47:03 #610 failed:     master refactor
+2013-08-02 16:46:03 #609 failed:     master Merge pull request #1694 from kavu/add_disable_etag
+2013-08-02 16:45:31 #608 failed:     master add [dir] to express(1) --help output. Closes #1699
+2013-08-01 13:11:35 #607 failed:     master remove comma-first from express(1)-generated app
+2013-07-16 13:23:48 #602 failed:     master Revert "remove old OPTIONS default response"
+2013-07-08 16:43:54 #598 failed:     master Release 3.3.4
+2013-07-04 15:40:52 #596 failed:     master fix package.json conflict
+2013-07-01 13:14:45 #588 failed:     master Merge pull request #1664 from paulmillr/topics/update-deps
+2013-06-27 10:39:56 #586 failed:     master remove .version export
+2013-06-27 10:33:15 #585 failed:     master Release 3.3.1
+2013-06-26 12:08:37 #584 failed:     master Release 3.3.0
+2013-06-26 11:55:06 #582 failed:     master Merge pull request #1657 from ralphtheninja/master
+2013-06-11 14:40:37 #576 failed:     master Merge pull request #1650 from printercu/master
+2013-06-11 14:24:59 #575 failed:     master pin jade dev dep so tests do not break
+2013-06-06 15:48:12 #572 failed:     master return actual booleans from req.accept* functions
+2013-06-05 14:06:16 #571 failed:     master add support for multiple X-Forwarded-Proto values. Closes #1646
+2013-06-05 13:52:55 #570 failed:     master remove charset from json responses. Closes #1631
+2013-06-03 16:53:55 #567 failed:     master Merge pull request #1643 from jonjenkins/master
+2013-06-02 19:16:00 #566 failed:     master Release 3.2.6
+2013-06-02 18:05:15 #565 failed:     master Merge pull request #1642 from jade-bot/master
+2013-06-02 17:58:52 #564 failed:     master Merge pull request #1634 from joshlangner/patch-1
+2013-06-02 17:51:17 #563 failed:     master Merge pull request #1630 from EvanHahn/patch-1
+2013-06-02 17:48:19 #562 failed:     master Merge pull request #1622 from saintedlama/master
+2013-05-21 23:01:53 #556 failed:     master Release 3.2.5
+2013-05-15 10:28:35 #553 failed:     master Merge pull request #1625 from ForbesLindesay/patch-1
+2013-05-13 15:24:28 #550 failed:     master Revert "fix infinite loop when res.send(status) is undefined. Closes #1623"
+2013-05-13 15:23:15 #549 failed:     master fix infinite loop when res.send(status) is undefined. Closes #1623
+2013-05-11 17:37:06 #547 failed:     master Merge pull request #1592 from bartsqueezy/eb1bbb9
+2013-05-11 17:35:56 #546 failed:     master Merge pull request #1597 from Cauldrath/cookie_version
+2013-05-11 17:26:54 #545 failed:     master Merge pull request #1618 from pwmckenna/patch-1
+2013-05-10 16:44:42 #544 failed:     master change generation of ETags with res.send() to GET requests only. Closes #1619
+2013-05-09 11:18:21 #541 failed:     master Release 3.2.4
+2013-05-09 11:13:24 #540 failed:     master Merge pull request #1598 from colynb/patch-1
+2013-05-09 11:13:13 #539 failed:     master fix `req.subdomains` when no Host is present
+2013-05-09 11:06:48 #538 failed:     master fix `req.host` when no Host is present, return undefined
+2013-05-07 10:00:16 #536 failed:     master remove qs dep
+2013-05-07 09:55:50 #535 failed:     master Release 3.2.3
+2013-05-03 14:56:27 #532 failed:     master Release 3.2.2
+2013-04-29 21:17:46 #529 failed:     master Release 3.2.1
+2013-04-26 15:13:16 #525 failed:     master update qs and remove all ~ semver crap
+2013-04-25 18:30:24 #524 failed:     master Merge branch 'master' of github.com:visionmedia/express
+2013-04-25 18:30:15 #523 failed:     master Merge pull request #1589 from hacksparrow/master
+2013-04-21 20:18:53 #521 failed:     master Merge pull request #1586 from yields/master
+2013-04-15 17:20:28 #510 failed:     master add app.VERB() paths array deprecation warning
+2013-04-15 14:37:38 #508 failed:     master Release 3.2.0
+2013-04-13 12:14:55 #507 failed:     master fix example port
+2013-04-13 11:54:40 #506 failed:     master add "view" constructor setting to override view behaviour
+2013-04-13 11:36:22 #505 failed:     master Merge pull request #1571 from jlubawy/master
+2013-04-13 11:16:49 #504 failed:     master refactor
+2013-04-13 11:15:31 #503 failed:     master Merge pull request #1566 from daguej/v8-context-fix
+2013-04-13 11:08:32 #502 failed:     master fix long list params test
+2013-04-13 11:06:42 #501 failed:     master Merge pull request #1578 from Notificare/master
+2013-04-12 14:57:37 #499 failed:     master add req.acceptsEncoding(name)
+2013-04-12 14:56:43 #498 failed:     master add req.acceptedEncodings
+2013-04-12 14:14:52 #497 failed:     master Release 3.1.2
+2013-04-11 10:43:32 #496 failed:     master Merge branch 'master' of github.com:visionmedia/express
+2013-04-09 17:48:21 #492 failed:     master Merge pull request #1575 from jsmarkus/patch-1
+2013-04-03 17:15:32 #487 failed:     master docs
+2013-04-03 10:49:53 #486 failed:     master Merge branch 'master' of github.com:visionmedia/express
+2013-04-02 16:46:51 #485 failed:     master Merge pull request #1567 from guybrush/fixTravis
+2013-04-01 16:30:04 #483 failed:     master Merge pull request #1503 from shesek/settings-inheritance
+2013-04-01 13:26:39 #482 failed:     master Release 3.1.1
+2013-04-01 13:23:16 #481 failed:     master refactor
+2013-04-01 13:19:42 #480 failed:     master Merge pull request #1516 from PatternConsulting/master
+2013-04-01 13:14:37 #479 failed:     master Merge pull request #1523 from thomseddon/fix-whitespace
+2013-04-01 13:07:17 #477 failed:     master Merge pull request #1564 from cdauth/master
+2013-03-13 17:46:02 #471 failed:     master Merge pull request #1534 from lennym/patch-1
+2013-03-12 19:25:32 #470 failed:     master Merge pull request #1540 from fern4lvarez/master
+2013-03-11 11:01:39 #468 failed:     master Merge pull request #1502 from qjcg/app-template-noconfigure
+2013-03-06 16:37:14 #466 failed:     master Merge pull request #1533 from shesek/old-viewcallbacks
+2013-02-28 14:17:08 #460 failed:     master Merge pull request #1519 from yawnt/master
+2013-02-22 11:30:21 #452 failed:     master Merge pull request #1513 from killmenot/master
+2013-02-20 11:40:38 #450 failed:     master link to runnable
+2013-02-19 17:51:24 #448 failed:     master update connect
+2013-02-13 14:56:20 #445 failed:     master Merge branch 'master' of github.com:visionmedia/express
+2013-02-13 14:52:33 #444 failed:     master Merge pull request #1505 from gravis/patch-1
+2013-02-08 10:44:11 #442 failed:     master typo
+2013-01-25 22:29:46 #437 failed:     master Release 3.1.0
+2013-01-24 10:43:36 #432 failed:     master Merge pull request #1478 from ericf/settings-view-engine-test
+2013-01-23 22:33:41 #428 failed:     master refactor res.set() array support
+2013-01-23 22:29:55 #427 failed:     master Merge pull request #1477 from gmethvin/set_array
+2013-01-23 22:22:41 #426 failed:     master Merge branch 'integrate'
+2013-01-23 22:18:32 #425 failed:     master Merge pull request #1466 from ericf/settings-view-engine
+2013-01-23 22:17:09 #424 failed:     master add node 0.8.x to travis.yml
+2013-01-23 22:12:27 #423 failed:     master change req.subdomain styling back
+2013-01-23 22:11:10 #422 failed:     master move "subdomain offset" defaulting to config
+2013-01-23 22:10:20 #421 passed:     master Merge pull request #1475 from gmethvin/subdomain_offset
+2013-01-18 16:39:37 #414 failed:     master change prev commit to use app.enabled()
+2013-01-18 16:38:26 #413 passed:     master use app.get() for x-powered-by setting
+2013-01-13 13:33:42 #410 passed:     master refactor vhost example
+2013-01-09 14:47:58 #406 failed:     master Merge pull request #1462 from gmethvin/colon_auth
+2013-01-04 20:56:18 #400 passed:     master Release 3.0.6
+2013-01-03 14:26:01 #399 passed:     master Merge pull request #1458 from gmethvin/cookie_options
+2012-12-29 09:56:45 #393 passed:     master change router callback check error message
+2012-12-28 11:34:09 #392 passed:     master Merge pull request #1454 from shtylman/router-http-methods
+2012-12-28 11:29:06 #391 passed:     master fix jsonp whitespace escape. Closes #1132
+2012-12-19 15:50:04 #386 passed:     master Release 3.0.5
+2012-12-19 15:37:42 #385 passed:     master Merge pull request #1451 from aweeks/fix-304-must-not-contain-body
+2012-12-14 17:06:33 #383 passed:     master add throwing when a non-function is passed to a route
+2012-12-06 17:18:54 #376 passed:     master Revert "add 'etag' option"
+2012-12-05 19:11:25 #375 passed:     master Release 3.0.4
+2012-12-05 18:51:15 #374 passed:     master add 'etag' option
+2012-11-21 10:49:34 #367 passed:     master merge
+2012-11-21 10:48:57 #366 passed:     master Merge pull request #1426 from piscis/master
+2012-11-21 10:46:12 #365 passed:     master Merge pull request #1425 from gmethvin/encode_text_redirect
+2012-11-08 15:54:00 #358 passed:     master Update examples/cors/index.js
+2012-11-08 11:29:48 #357 passed:     master Merge pull request #1406 from DmitryBochkarev/patch-1
+2012-11-08 11:28:08 #356 passed:     master Merge pull request #1408 from Laboratory/master
+2012-11-05 11:10:41 #349 passed:     master Update Readme.md
+2012-11-04 15:23:33 #348 passed:     master add OPTIONS to cors example. Closes #1398
+2012-11-04 14:30:40 #347 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-10-27 15:10:22 #344 passed:     master Merge pull request #1388 from shtylman/unused-variables
+2012-10-26 08:46:11 #342 passed:     master Merge pull request #1387 from valllabh/patch-1
+2012-10-23 17:29:34 #340 passed:     master Release 3.0.0
+2012-10-23 16:09:33 #339 passed:     master change `res.redirect()` to utilize a pathname-relative Location again. Closes #1382
+2012-10-19 13:49:14 #338 passed:     master add `make clean`
+2012-10-19 13:47:37 #337 passed:     master add "Basic" check to req.auth
+2012-10-19 13:45:01 #336 passed:     master add req.auth test coverage
+2012-10-16 13:57:48 #335 passed:     master add cb && cb(payload) to `res.jsonp()`. Closes #1374
+2012-10-15 18:08:16 #332 passed:     master fix view-locals example. Closes #1370
+2012-10-09 21:32:28 #330 passed:     master Merge branch 'examples'
+2012-10-09 21:10:44 #329 passed:     master Merge branch 'error-handling-routes'
+2012-10-09 20:59:57 #328 passed:     master fix express.mime reference, should be connect.mime
+2012-10-09 10:43:48 #327 failed:     master Merge pull request #1364 from isaacs/patch-1
+2012-10-06 17:25:17 #312 failed:     master Merge pull request #1355 from lihanli/view-cache-test
+2012-10-06 12:06:29 #310 failed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-10-05 11:17:32 #309 failed:     master Merge pull request #1354 from sakateka/master
+2012-09-27 14:39:52 #307 failed:     master update connect
+2012-09-26 11:09:56 #306 failed:     master add backwards compat for res.redirect() status. Closes #1336
+2012-09-26 11:04:56 #305 failed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-09-25 15:56:04 #304 failed:     master Update Readme.md
+2012-09-19 13:38:07 #303 failed:     master update send
+2012-09-18 13:48:31 #302 passed:     master Release 3.0.0rc5
+2012-09-18 11:33:24 #301 passed:     master add redis search example
+2012-09-13 11:54:47 #294 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-09-04 14:52:12 #291 passed:     master Merge pull request #1319 from pyrotechnick/patch-1
+2012-09-03 18:19:21 #289 failed:     master add "application/octet-stream" redirect Accept test case. Closes #1317
+2012-09-03 16:52:56 #288 passed:     master update connect dep
+2012-09-03 10:55:13 #287 passed:     master add app.router to static-files example
+not yet #286 failed:     master Release 3.0.0rc4
+not yet #285 failed:     master add res.jsonp(). Closes #1307
+not yet #284 failed:     master fix etag quoting. Closes #1310
+2012-08-29 12:47:55 #283 failed:     master fix acceptance tests
+2012-08-29 12:47:30 #282 failed:     master add "verbose errors" option to error-pages example
+2012-08-29 12:42:47 #281 failed:     master Merge pull request #1309 from nickjj/patch-1
+2012-08-28 20:12:12 #279 failed:     master fix jsonp callback char restrictions
+2012-08-28 18:18:14 #278 failed:     master add another route example to express(1) so people are not so confused
+2012-08-28 12:29:14 #277 failed:     master add some comments to error-pages example
+2012-08-28 11:08:55 #276 failed:     master change jsonp callback default to false. Closes #1304
+2012-08-21 21:09:28 #273 passed:     master update connect dep
+2012-08-16 12:14:24 #270 failed:     master drop to assert() for less crazy error message
+2012-08-16 12:09:35 #269 failed:     master update send
+2012-08-14 06:14:13 #268 passed:     master add redis online user activity tracking example
+2012-08-13 22:24:18 #267 passed:     master Release 3.0.0rc3
+2012-08-13 22:21:44 #266 passed:     master Merge pull request #1286 from tnydwrds/fix-signed-cookie-prefix
+2012-08-11 17:05:04 #264 passed:     master refactor res.render() to prevent clobbering "locals"
+2012-08-09 22:08:20 #262 passed:     master rename multipart app.js to index.js
+2012-08-09 12:15:38 #261 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-08-09 10:46:40 #260 passed:     master Merge pull request #1273 from ritch/patch-1
+2012-08-07 11:14:31 #259 passed:     master update connect dep
+2012-08-03 15:33:00 #258 passed:     master Release 3.0.0rc2
+2012-08-03 15:32:09 #257 passed:     master escape res.redirect() link
+2012-07-31 22:51:54 #256 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-07-26 14:53:38 #255 passed:     master Merge pull request #1250 from silvinci/1249-mvc-boot.js-fix-rc
+2012-07-25 11:30:43 #254 passed:     master update connect dep
+2012-07-24 17:41:51 #253 passed:     master fix vhost example
+2012-07-24 17:40:15 #252 passed:     master deprecate .createServer() & remove old stale examples
+2012-07-24 15:33:22 #251 passed:     master Release 3.0.0rc1
+2012-07-24 15:28:52 #250 passed:     master merge
+2012-07-24 11:57:47 #249 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-07-24 10:54:50 #248 passed:     master Merge pull request #1243 from saintedlama/master
+2012-07-24 10:36:53 #247 passed:     master Merge pull request #1244 from RubenVerborgh/master
+2012-07-23 13:46:18 #246 passed:     master update connect dep
+2012-07-18 12:41:16 #245 passed:     master add more examples to view-locals
+2012-07-18 11:29:17 #244 passed:     master add res.redirect("//foo.com") support
+2012-07-18 11:07:27 #243 passed:     master change res.redirect() to use scheme-relative urls
+2012-07-16 11:28:31 #242 failed:     master Release 3.0.0beta7
+2012-07-16 11:27:40 #241 failed:     master udpate connect dep
+2012-07-13 11:29:34 #240 passed:     master add res.download() content-disposition on error removal test
+2012-07-13 11:21:29 #239 passed:     master Release 3.0.0beta6
+2012-07-13 11:05:30 #238 passed:     master change res.sendfile() to use send() module
+2012-07-12 14:03:35 #237 failed:     master update connect dep
+2012-07-11 10:45:50 #236 failed:     master add err.view property for view errors. Closes #1226
+2012-07-06 10:53:54 #235 failed:     master add "jsonp callback name" setting
+2012-07-06 10:35:16 #234 failed:     master styling
+2012-07-06 10:23:35 #233 failed:     master Merge pull request #1212 from riadhchtara/Issue944
+2012-07-05 20:46:30 #232 failed:     master remove app.locals.use and res.locals.use
+2012-07-05 11:43:34 #231 failed:     master update connect dep
+2012-07-04 10:15:49 #229 passed:     master update response-send dep
+2012-07-03 23:09:29 #228 passed:     master Replace res.send() with res.send = require("response-send")
+2012-07-03 15:58:15 #227 passed:     master whitespace ocd
+2012-07-03 12:20:26 #226 passed:     master Release 3.0.0beta5
+2012-07-03 11:53:38 #225 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-07-02 13:47:18 #224 passed:     master Merge pull request #1202 from strk/make_check
+2012-06-29 11:01:56 #221 passed:     master Added route-map example
+2012-06-27 15:35:43 #220 passed:     master Added `res.json(obj, status)` support back for BC
+2012-06-27 15:21:14 #219 passed:     master update auth example to utilize cores pbkdf2
+2012-06-26 13:42:08 #218 passed:     master Added "methods" dep
+2012-06-25 14:08:56 #217 passed:     master Release 3.0.0beta4
+2012-06-22 18:25:40 #216 passed:     master Added `req.auth`
+2012-06-22 12:48:18 #215 passed:     master update connect dep
+2012-06-22 10:21:05 #214 passed:     master Revert "Added + support to the router"
+2012-06-21 18:37:34 #213 passed:     master Added `res.send(body, status)` support back for backwards compat
+2012-06-18 11:37:59 #212 passed:     master Merge pull request #1182 from langpavel/patch-1
+2012-06-17 23:36:27 #211 passed:     master Merge pull request #1183 from nullfirm/master
+2012-06-17 19:41:41 #210 passed:     master add inline range example
+2012-06-17 19:37:57 #209 passed:     master add note about inclusive ranges
+2012-06-17 19:33:12 #208 passed:     master Added `req.range(size)`
+2012-06-17 18:34:46 #207 passed:     master Added `res.links(obj)`
+2012-06-17 16:13:20 #206 passed:     master docs
+2012-06-17 15:16:01 #205 passed:     master Added `.default()` support to `res.format()`
+2012-06-15 18:55:06 #204 passed:     master Update mkdirp
+2012-06-15 18:45:37 #203 passed:     master GET / HEAD only for req.fresh
+2012-06-15 18:45:12 #202 passed:     master update fresh
+2012-06-15 18:37:48 #201 passed:     master Added 2xx / 304 check to req.fresh
+2012-06-15 18:16:39 #199 passed:     master misc
+2012-06-15 18:14:02 #197 passed:     master Fixed `res.send()` freshness check, respect res.statusCode
+2012-06-15 13:41:10 #196 passed:     master Release 3.0.0beta3
+2012-06-15 13:39:32 #195 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-06-15 11:01:03 #194 passed:     master Merge pull request #1176 from nullfirm/master
+2012-06-13 19:32:50 #193 passed:     master Added another example to content-negotiation
+2012-06-10 14:21:11 #192 passed:     master Added `fresh` dep
+2012-06-08 13:24:15 #191 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-06-07 10:52:15 #190 passed:     master Merge pull request #1164 from danneu/patch-2
+2012-06-06 17:20:23 #189 passed:     master Release 3.0.0beta2
+2012-06-06 17:17:50 #188 failed:     master Added + support to the router
+2012-06-06 15:26:42 #187 passed:     master coerce res.cookie values to strings
+2012-06-06 15:07:29 #186 failed:     master fixing cookies for connect 2.3.1
+2012-06-06 10:56:27 #185 passed:     master Added `req.host`
+2012-06-02 22:04:49 #184 passed:     master docs
+2012-06-01 14:27:00 #183 passed:     master Release 3.0.0beta1
+2012-06-01 14:25:18 #182 passed:     master update deps
+2012-06-01 11:50:06 #181 passed:     master mention res.format() callback
+2012-05-30 18:48:06 #180 passed:     master Release 3.0.0alpha5
+2012-05-30 16:25:39 #179 passed:     master assertion for req.get() => undefined. Closes #1152
+2012-05-29 20:46:23 #178 passed:     master Added `req.ip` tests
+2012-05-29 20:46:01 #177 passed:     master Added `req.ip`
+2012-05-12 08:32:34 #175 passed:     master Merge pull request #1135 from adrianolaru/jade-default-doctype
+2012-05-10 20:00:36 #174 passed:     master Added test for res.sendfile() express.static() options
+2012-05-10 19:11:57 #173 passed:     master Added res.download() tests
+2012-05-10 15:59:31 #172 passed:     master refactored res.get() tests
+2012-05-10 15:13:05 #171 passed:     master Added url rewriting test
+2012-05-09 17:18:15 #170 passed:     master Prepared release 3.0.0alpha4
+2012-05-09 11:39:49 #169 passed:     master Added: allow [] in jsonp callback. Closes #1128
+2012-05-07 19:59:38 #168 passed:     master connect 2.2.2
+2012-05-07 14:53:00 #167 passed:     master Removed blog example
+2012-05-07 13:59:41 #166 failed:     master Merge pull request #1127 from benatkin/template-port-from-env
+2012-05-04 10:59:03 #165 passed:     master Merge pull request #1124 from pyrotechnick/patch-1
+2012-05-03 19:33:08 #164 passed:     master any engine
+2012-05-03 10:42:20 #163 passed:     master Added res.locals.use(). Closes #1120
+2012-05-02 18:20:34 #162 passed:     master Changed: res.send() only set ETag when not previously set
+2012-05-01 18:25:34 #161 passed:     master debug() originalUrl in router
+2012-04-30 16:51:21 #160 passed:     master ocd
+2012-04-28 22:02:47 #159 passed:     master Added res.send() If-None-Match test
+2012-04-27 12:46:57 #158 passed:     master merged
+2012-04-26 20:46:09 #156 passed:     master build status image
+2012-04-26 15:53:03 #155 passed:     master Added: coerce `res.set()` values to strings
+2012-04-26 06:57:40 #151 passed:     master error/index.js
+2012-04-26 06:41:17 #150 passed:     master `make test` now runs unit / acceptance tests
+2012-04-26 05:54:03 #149 passed:     master Added new mvc example
+2012-04-26 05:10:15 #148 passed:     master Release 3.0.0alpha2
+2012-04-25 19:07:28 #147 passed:     master Merge pull request #1106 from benedmunds/master
+2012-04-25 18:12:49 #145 passed:     master Perf: memoize parsed urls
+2012-04-25 18:10:12 #143 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-04-25 12:33:40 #139 passed:     master Fixed redis session example
+2012-04-25 12:30:41 #138 passed:     master Fixed session example. Closes #1105
+2012-04-25 11:38:23 #136 passed:     master Merge pull request #1100 from coolony/master
+2012-04-19 21:03:36 #135 passed:     master alpha install docs
+2012-04-19 18:03:49 #134 passed:     master Added client-side data exposing example
+2012-04-17 22:39:27 #133 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-04-16 16:39:22 #132 failed:     master backported fix from 2.x for app.all() del method
+2012-04-16 00:15:02 #131 passed:     master refactoring
+2012-04-16 00:13:59 #130 passed:     master Fixed generated express dep. Closes #1078
+2012-04-15 23:01:43 #128 passed:     master removed old route reflection methods
+2012-04-15 23:00:23 #127 passed:     master removed old reflection methods
+2012-04-15 21:03:14 #126 passed:     master Added `express.createServer()` for BC
+2012-04-15 15:26:06 #125 passed:     master removed createServer() in readme
+2012-04-15 13:57:46 #124 passed:     master require express in readme...
+2012-04-15 13:40:44 #123 passed:     master populate changelog
+2012-04-15 13:21:56 #122 passed:     master Release 3.0.0alpha1
+2012-04-12 22:11:25 #121 passed:     master Added: `res.format()` sets Vary: Accept
+2012-04-12 21:47:08 #120 passed:     master removed `res.cache()`
+2012-04-11 22:27:34 #119 passed:     master added jsonp test
+2012-04-11 16:35:50 #118 passed:     master connect 2.1.2 dep
+2012-04-11 14:09:18 #115 passed:     master connect 2.1.1 dep
+2012-04-11 12:08:22 #114 passed:     master docs
+2012-04-11 12:02:20 #113 passed:     master removed old benchmark target from Makefile
+2012-04-11 10:32:52 #111 passed:     master Merge pull request #1073 from Zoramite/lessMiddleware
+2012-04-10 14:18:52 #110 passed:     master Merge branch 'master' of github.com:visionmedia/express
+2012-04-05 10:53:16 #108 failed:     master Merge pull request #1069 from Benjen/patch-1
+2012-04-04 10:42:22 #107 failed:     master added another res.redirect() example
+2012-04-03 06:21:48 #106 failed:     master fixed markdown example
+2012-04-03 06:18:24 #105 failed:     master added nicer error messages for failed view lookup. Closes #1065
+2012-04-02 22:00:14 #104 failed:     master ocd
+2012-04-02 17:59:39 #102 failed:     master Merge pull request #1066 from cpedros/patch-1
+2012-04-02 17:59:27 #101 failed:     master updated signed cookie tests
+2012-04-02 17:38:43 #100 failed:     master router: moved params logic to Router#match()
+2012-04-02 17:08:55 #99 failed:      master Merge branch 'master' of github.com:visionmedia/express
+2012-03-30 17:18:17 #98 failed:      master Merge pull request #1064 from ahizzle/master
+2012-03-29 18:38:43 #97 failed:      master reverse req.ips array
+2012-03-29 18:35:46 #96 failed:      master req.ipds doesnt need "trust proxy"
+2012-03-29 18:26:27 #95 failed:      master Merge branch 'master' of github.com:visionmedia/express
+2012-03-29 10:57:58 #94 failed:      master Merge pull request #1062 from shtylman/06d2016ee
+2012-03-27 10:33:34 #93 failed:      master Merge pull request #1057 from Skookum/master
+2012-03-24 13:38:57 #92 passed:      master docs
+2012-03-24 13:36:00 #91 failed:      master Added `req.accepts()` comma-delimited string support
+2012-03-24 13:13:01 #90 failed:      master added res.json() array test to illustrate that it works
+2012-03-23 20:10:21 #89 failed:      master fixed content-negotiation example
+2012-03-23 20:02:26 #88 failed:      master more docs for req.accepts(arr)
+2012-03-23 19:58:53 #87 failed:      master Merge branch 'master' of github.com:visionmedia/express
+2012-03-23 19:57:24 #86 failed:      master Added  array support. Closes #1053
+2012-02-29 18:10:57 #84 failed:      master Added note to express(1) for running the app
+2012-02-27 21:31:03 #83 failed:      master connect 2.0 dep
+2012-02-23 22:49:17 #82 failed:      master Added mocha test coverage support
+2012-02-23 15:22:35 #81 failed:      master optimize res.format()
+2012-02-23 12:57:46 #80 failed:      master Added extname support to `res.format()`. Closes #1024
+2012-02-22 21:59:19 #79 failed:      master renamed `res.respondTo()` to `res.format()`
+2012-02-22 21:28:50 #78 failed:      master changed DEBUG express:routes to express:router
+2012-02-22 18:35:38 #77 failed:      master Added `req.subdomains`
+2012-02-22 11:04:49 #76 failed:      master refactored app.render()
+2012-02-21 13:12:32 #74 failed:      master typo
+2012-02-21 13:01:58 #73 failed:      master added test for respondTo() callback args
+2012-02-18 19:37:35 #72 failed:      master updated content-negotiation example
+2012-02-18 19:23:18 #71 failed:      master Added: `res.respondTo()` defaults the content-type
+2012-02-18 19:13:30 #70 failed:      master Added `res.respondTo(obj)`
+2012-02-18 19:07:47 #69 failed:      master Added
+2012-02-18 17:34:53 #68 failed:      master shorten --force desc
+2012-02-18 17:34:16 #67 failed:      master Merge pull request #1016 from tstrimple/master
+2012-02-18 16:13:54 #66 failed:      master tweak multipart example
+2012-02-18 16:06:56 #65 failed:      master Merge branch 'integration'
+2012-02-18 14:50:03 #64 failed:      master refactored express(1) package.json generation
+2012-02-18 14:42:40 #63 failed:      master Merge branch 'master' of github.com:visionmedia/express
+2012-02-17 10:42:21 #62 failed:      master Merge pull request #1006 from eivindfjeldstad/router
+2012-02-16 10:20:18 #61 failed:      master removed require "qs" as its no longer used. Closes #1014
+2012-02-09 15:45:14 #59 failed:      master moved a debug() down
+2012-02-09 15:32:25 #58 failed:      master Added DEBUG=express:application support
+2012-02-08 14:52:16 #57 failed:      master Removed "qs" dep, only connect has this now
+2012-02-08 14:07:53 #55 failed:      master upgrade deps
+2012-02-07 10:32:07 #53 failed:      master Removed `req.header(field)`
+2012-02-07 10:19:19 #52 failed:      master Added "trust proxy" setting
+2012-02-07 06:55:27 #51 failed:      master update node support docs
+2012-02-07 06:54:57 #50 failed:      master replaced short contrib list with git-summary(1) output
+2012-02-07 06:49:55 #49 failed:      master removed old req.get() for now
+2012-02-07 06:43:43 #48 failed:      master refactored `res.redirect()` with `req.protocol()`
+2012-02-07 05:30:28 #47 failed:      master Added "json replacer" and "json spaces" settings. Closes #996 [credit to jed]
+2012-02-06 12:06:53 #46 failed:      master make express(1) generated deps *
+2012-01-18 19:17:36 #42 failed:      master Merge pull request #968 from peters/patch-1
+2012-01-17 11:54:15 #41 failed:      master keywords
+2012-01-16 22:16:33 #40 failed:      master removed connect-form dep
+2012-01-08 19:08:24 #37 failed:      master Merge pull request #955 from mmalecki/npm-test
+2012-01-06 09:32:40 #34 passed:      master Merge pull request #951 from Raynos/patch-1
+2012-01-02 10:35:54 #32 passed:      master Merge branch 'master' of github.com:visionmedia/express
+2011-12-30 17:11:27 #28 passed:      master Removed `app.is()` support
+2011-12-28 13:36:34 #27 passed:      master Removed app.match()
+2011-12-20 15:36:25 #24 passed:      master Merge branch 'master' of github.com:visionmedia/express
+2011-12-20 10:34:20 #23 passed:      master Update bin/express
+2011-12-20 10:33:38 #22 passed:      master Merge pull request #939 from ksato9700/master
+2011-12-18 09:41:41 #21 passed:      master misc
+2011-12-17 17:12:26 #20 passed:      master Added cookie-sessions example
+2011-12-17 15:54:03 #19 passed:      master added regression test for #847
+2011-12-17 14:45:33 #18 passed:      master web-service acceptance tests
+2011-12-17 14:17:28 #17 passed:      master removed ejs layout.ejs from express(1)
+2011-12-17 14:16:14 #16 passed:      master fixed express(1) jade tmpl inheritance
+2011-12-16 16:48:11 #15 passed:      master Merge branch 'master' of github.com:visionmedia/express
+2011-12-15 11:10:39 #13 passed:      master Merge pull request #934 from siong1987/keywords
+2011-12-15 11:03:36 #12 passed:      master Fixed app.set() with undefined
+2011-12-10 13:05:22 #10 passed:      master spec
+2011-12-08 14:48:44 #9 passed:       master Added X-Forwarded-Proto support to `res.redirect()`. Closes #927
+2011-12-06 18:57:42 #8 passed:       master misc
+2011-12-06 18:47:02 #7 passed:       master Added support for .. in redirects as well
+2011-12-06 18:41:36 #6 passed:       master expose router

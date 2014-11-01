@@ -1,0 +1,373 @@
+2014-09-29 15:06:04 #947 passed:     master Don't include doc themes in sdist
+2014-09-29 14:57:57 #946 passed:     master Merge pull request #1191 from nluchs/patch-2
+2014-09-29 14:47:32 #945 errored:    master Don't include doc themes in tarball
+2014-09-28 00:12:49 #944 passed:     master Merge pull request #1191 from nluchs/patch-2
+2014-09-28 00:10:53 #943 passed:     master Merge pull request #1192 from nluchs/patch-3
+2014-09-26 12:23:30 #940 passed:     master Merge pull request #1186 from llimllib/master
+2014-09-25 10:25:42 #939 passed:     master Merge pull request #1187 from bdarnell/patch-1
+2014-09-21 09:49:07 #936 passed:     master Remove useless unittest imports
+2014-09-20 06:40:36 #935 passed:     master Merge pull request #1183 from k-funk/patch-1
+2014-09-20 02:00:52 #934 passed:     master Merge pull request #1164 from pbu88/run_tests
+2014-09-20 01:58:29 #933 passed:     master Merge pull request #1185 from defuz/patch-2
+2014-09-18 08:38:35 #928 passed:     master Merge pull request #1181 from kelvintaywl/examples/fix_readme
+2014-09-13 04:48:11 #918 passed:     master Merge pull request #1175 from pbu88/update_readme
+2014-09-12 15:00:09 #916 passed:     master Add changelog
+2014-09-12 14:55:53 #915 passed:     master Merge pull request #1165 from untitaker/new_testsuite
+2014-09-10 00:37:54 #913 passed:     master Merge pull request #1172 from cgar/spelling
+2014-09-05 19:23:56 #905 passed:     master Fix typo
+2014-09-03 15:34:41 #901 passed:     master Fixed some cross linking in the docs
+2014-09-03 13:15:40 #896 passed:     master Record blueprint registration order.
+2014-09-03 12:29:27 #892 failed:     master assert_ is assert_true
+2014-09-03 12:19:17 #891 failed:     master Fix Py3 compat bug
+2014-09-03 11:33:42 #890 failed:     master Fixed a relative import
+2014-09-03 11:16:08 #889 failed:     master Added EXPLAIN_TEMPLATE_LOADING to help people debug templates not being loaded.
+2014-09-03 08:28:01 #888 passed:     master Fix syntax error on py3
+2014-09-03 07:59:22 #887 failed:     master Removed leftover from the module system.
+2014-09-02 09:21:32 #885 failed:     master Added support for background loading of the application to speed up initial requests in dev mode.
+2014-08-31 12:06:59 #874 passed:     master Merge pull request #1163 from boreq/docs-update
+2014-08-28 12:46:24 #867 passed:     master Merge pull request #1162 from ajschumacher/patch-1
+2014-08-28 10:04:35 #864 passed:     master Merge pull request #1161 from pbu88/master
+2014-08-28 09:23:50 #862 passed:     master Merge pull request #1160 from untitaker/docs_dev_installation
+2014-08-28 09:11:08 #860 passed:     master Merge pull request #1158 from untitaker/protocol-relative
+2014-08-28 02:36:08 #859 passed:     master AppGroups produce more AppGroups
+2014-08-28 01:57:45 #858 passed:     master Made FlaskGroup an AppGroup
+2014-08-26 18:22:56 #856 passed:     master Updated the logging documentation for recent changes.
+2014-08-26 18:13:29 #855 passed:     master Removed deprecated module functionality
+2014-08-26 18:09:10 #854 passed:     master Always log now, even if debug is off.
+2014-08-26 05:30:34 #853 passed:     master Merge pull request #1156 from brwr/brwr/fix-documentation-typo
+2014-08-26 05:10:00 #852 passed:     master Added support for PYTHONSTARTUP to shell command.
+2014-08-26 03:29:52 #851 passed:     master Removed dead import
+2014-08-26 03:15:00 #850 passed:     master Added a missing self
+2014-08-26 03:10:00 #849 passed:     master Removed ridiculous constructor from AppGroup
+2014-08-26 03:06:38 #848 passed:     master Added some missing documentation information.
+2014-08-25 09:59:52 #846 passed:     master Refactored the scripting interface greatly.
+2014-08-25 08:44:09 #845 passed:     master Converted a leftover old-style click callback.
+2014-08-22 17:21:02 #844 passed:     master Merge pull request #1150 from kylepjohnson/master
+2014-08-12 16:26:15 #800 passed:     master Switch to newer click (2.0)
+2014-08-12 13:52:04 #799 passed:     master Merge pull request #1144 from untitaker/url_for_scheme_docs
+2014-07-31 03:34:40 #795 passed:     master Merge pull request #1138 from LiterallyElvis/master
+2014-07-27 06:32:29 #791 passed:     master Merge pull request #1099 from root-11/patch-1
+2014-07-27 06:25:27 #790 passed:     master Merge pull request #1100 from thewhitetulip/patch-1
+2014-07-27 06:23:39 #789 passed:     master Merge pull request #1112 from methane/patch-3
+2014-07-27 06:21:55 #788 passed:     master Base from_json on from_mapping
+2014-07-27 06:11:49 #787 passed:     master Add Config.from_mapping
+2014-07-26 10:27:07 #785 passed:     master Merge pull request #1117 from lord63/patch-1
+2014-07-26 03:44:56 #781 passed:     master Merge pull request #1122 from milesrichardson/master
+2014-07-26 03:43:22 #780 passed:     master Merge pull request #1132 from nicorevin/update_links
+2014-07-08 13:22:53 #770 passed:     master Merge pull request #1105 from limeburst/master
+2014-07-07 09:39:41 #769 passed:     master Merge pull request #1110 from methane/patch-2
+2014-06-30 18:45:20 #756 passed:     master Merge pull request #1096 from slater/patch-1
+2014-06-30 18:43:06 #755 passed:     master Merge pull request #1097 from slater/patch-2
+2014-06-17 14:46:00 #751 passed:     master Merge pull request #1086 from fengsp/patch-1
+2014-06-17 14:28:57 #750 passed:     master Merge pull request #1088 from lord63/master
+2014-06-17 14:10:49 #749 passed:     master Merge pull request #1090 from wxcafe/master
+2014-06-06 10:19:22 #743 passed:     master Merge pull request #1077 from hdformat/patch-1
+2014-06-06 10:08:00 #742 passed:     master Merge pull request #1079 from smarkets/master
+2014-05-30 12:41:23 #739 passed:     master Merge pull request #1075 from brannerchinese/master
+2014-05-27 11:38:06 #736 passed:     master Merge pull request #1062 from SteelyWing/patch-2
+2014-05-27 11:27:01 #735 passed:     master Merge pull request #1064 from kekumu/patch-adv-foreword
+2014-05-27 11:14:40 #734 passed:     master Merge pull request #1066 from bulatb/patch-1
+2014-05-16 09:21:52 #721 passed:     master Merge pull request #1057 from IanConnolly/doc-fix
+2014-05-16 09:16:52 #720 passed:     master Merge pull request #1058 from shalabhaggarwal/master
+2014-05-12 11:42:26 #716 passed:     master Merge pull request #1054 from lord63/master
+2014-05-12 11:33:27 #715 passed:     master Merge pull request #1052 from miguelgrinberg/master
+2014-05-12 11:25:03 #714 passed:     master Merge pull request #1055 from IanConnolly/doc-fix
+2014-05-11 19:17:07 #712 passed:     master Simplified app finding for cli
+2014-05-09 09:00:29 #707 passed:     master Merge pull request #1050 from julen/doc-fixes
+2014-05-09 08:53:42 #706 passed:     master Merge pull request #1010 from plumdog/master
+2014-05-08 15:35:21 #705 passed:     master Fixed the cli system failing syntax errors.
+2014-05-07 15:30:01 #703 passed:     master Made errors for working outside of contexts clearer.
+2014-05-07 15:20:02 #702 passed:     master Merge branch 'pr/839'
+2014-05-07 15:07:46 #701 passed:     master Updated setup.py a bit.  This fixes #1018
+2014-05-07 14:55:13 #700 passed:     master Merge pull request #1040 from schlamar/patch-1
+2014-05-07 14:48:23 #699 passed:     master Greatly refactored click integration and documented it a bit more.
+2014-05-07 04:37:28 #696 passed:     master Refactored loading logic to super properly.
+2014-05-02 05:50:43 #694 passed:     master Clarified how to test with click
+2014-05-02 05:46:53 #693 passed:     master Fixed flask tests
+2014-05-01 07:45:00 #692 failed:     master Improved support for composable cli
+2014-04-28 18:49:22 #689 failed:     master Updated the examples to be cli based
+2014-04-28 18:45:54 #688 failed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2014-04-28 13:03:40 #687 failed:     master Merge pull request #1039 from erikrose/patch-1
+2014-04-28 08:19:15 #685 failed:     master Updated tutorial to the flask script
+2014-04-28 06:54:59 #684 passed:     master Added a missing docstring
+2014-04-28 06:33:27 #683 passed:     master Added missing documentation page
+2014-04-28 06:30:14 #682 passed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2014-04-25 19:18:50 #679 passed:     master Merge pull request #1030 from zakj/master
+2014-04-25 19:15:59 #678 passed:     master Merge pull request #1032 from cgar/spelling
+2014-04-25 18:46:04 #676 passed:     master Run tests with Python 3.4 with tox
+2014-04-25 18:42:05 #675 passed:     master Switch diveintohtml5.org to diveintohtml5.info
+2014-04-21 10:52:40 #672 passed:     master Added __main__ module
+2014-04-21 09:40:07 #671 passed:     master Added thread flag to flask run
+2014-04-14 18:49:44 #666 passed:     master Merge pull request #1012 from atupal/patch-2
+2014-04-14 18:34:01 #665 passed:     master Merge pull request #1019 from raimu/master
+2014-04-14 18:12:20 #664 passed:     master Merge pull request #1022 from mjfroehlich/patch-1
+2014-04-11 13:06:38 #661 passed:     master Better support for namespace packages.
+2014-04-11 06:33:05 #660 passed:     master Fixed the last changeset.
+2014-04-09 17:35:22 #657 passed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2014-04-06 12:14:24 #656 passed:     master Merge pull request #1014 from untitaker/pr842
+2014-03-21 16:32:11 #651 passed:     master Revert "Revert "Merge pull request #859 from wvh/register_error_handler""
+2014-03-21 16:26:12 #650 passed:     master Revert "Merge pull request #859 from wvh/register_error_handler"
+2014-03-21 16:23:04 #649 passed:     master Merge pull request #859 from wvh/register_error_handler
+2014-03-21 16:16:16 #648 passed:     master Merge pull request #864 from obeattie/master
+2014-03-21 16:13:02 #647 passed:     master Merge pull request #707 from xsleonard/patch-1
+2014-03-21 16:06:44 #646 passed:     master Merge pull request #885 from jmhobbs/master
+2014-03-21 15:58:46 #644 passed:     master Merge pull request #830 from hntw/patch-1
+2014-03-21 15:54:52 #643 passed:     master Merge pull request #838 from enkore/master
+2014-03-21 15:49:46 #642 errored:    master Merge pull request #869 from christophersu/doc-fix-1
+2014-03-21 15:46:07 #641 passed:     master Merge pull request #876 from defuz/templates-auto-reload
+2014-03-21 15:42:42 #640 passed:     master Merge pull request #862 from bikerm16/master
+2014-03-21 15:39:45 #639 passed:     master Merge pull request #889 from mattskone/master
+2014-03-21 15:36:50 #638 passed:     master Merge pull request #977 from Ivoz/patch-1
+2014-03-21 15:24:43 #637 passed:     master Merge pull request #1000 from mikar/master
+2014-03-21 15:21:48 #636 passed:     master Merge pull request #1004 from kylestev/patch-1
+2014-03-19 18:15:44 #635 passed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2014-03-13 15:22:40 #630 passed:     master Merge pull request #872 from dmackinnon/patch-1
+2014-03-13 15:12:18 #629 passed:     master Merge pull request #874 from defuz/patch-1
+2014-03-13 14:57:10 #628 passed:     master Merge pull request #877 from yoloseem/patch-1
+2014-03-13 14:45:06 #627 passed:     master Merge pull request #878 from shamrin/patch-1
+2014-03-13 14:34:11 #626 passed:     master Add Config.get_namespace to CHANGES
+2014-03-13 13:50:33 #625 passed:     master Merge pull request #994 from roskoff/master
+2014-03-13 13:33:17 #624 passed:     master Merge pull request #997 from charlax/ca/fix/response_class_documentation
+2014-03-03 12:21:22 #620 passed:     master Merge pull request #980 from grampajoe/patch-1
+2014-02-20 12:34:47 #617 passed:     master Add assertIsInstance to FlaskTestCase on 2.6
+2014-02-12 16:55:55 #613 passed:     master Add Config.from_json to changelog
+2014-02-09 10:10:46 #610 passed:     master Merge branch '0.10-maintenance'
+2014-02-09 09:15:00 #608 errored:    master Disarmed a sentence a bit
+2014-02-09 07:57:19 #607 errored:    master Merge branch 'master' of github.com:mitsuhiko/flask
+2014-02-09 07:37:24 #605 errored:    master Merge pull request #884 from rsyring/patch-2
+2014-02-09 07:29:34 #604 errored:    master Merge branch '0.10-maintenance'
+2014-02-09 07:23:06 #602 failed:     master Merge pull request #897 from d3spis3d/master
+2014-02-08 16:33:05 #598 failed:     master Merge branch '0.10-maintenance'
+2014-02-08 16:15:00 #596 passed:     master Fixed sqlite3 pattern.  This fixes #924
+2014-02-08 16:10:57 #595 passed:     master Various documentation fixups
+2014-02-08 16:07:57 #594 passed:     master Switch away from /tmp for windows users
+2014-02-08 12:06:15 #593 passed:     master Merge pull request #931 from aphexcx/patch-1
+2014-02-08 12:03:06 #592 passed:     master Merge pull request #936 from zheller/fix-typo
+2014-02-08 11:57:37 #590 passed:     master Merge pull request #935 from markhildreth/doc-fix
+2014-02-08 11:54:55 #589 passed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2014-02-08 11:46:25 #586 passed:     master Merge pull request #942 from bool-dev/patch-1
+2014-02-08 11:43:37 #585 passed:     master Merge pull request #948 from Spittie/patch-1
+2014-02-08 11:41:03 #584 passed:     master Added changelog entry
+2014-02-08 11:38:50 #583 passed:     master Merge branch '0.10-maintenance'
+2014-02-08 11:33:53 #581 failed:     master Merge pull request #938 from ahlen/response-with-headers-without-status
+2014-02-08 11:31:22 #580 failed:     master Merge pull request #946 from allevo/master
+2014-02-08 11:25:09 #579 failed:     master Merge pull request #955 from ifiokjr/patch-1
+2014-02-08 11:21:44 #578 failed:     master Merge branch '0.10-maintenance'
+2014-02-08 11:01:48 #576 passed:     master Added support for custom JSON mimetypes
+2014-02-08 10:32:29 #575 passed:     master Added a warning about key sorting
+2014-02-08 10:29:43 #574 passed:     master Merge pull request #962 from nZac/JSON-Support-doc-update
+2014-02-08 10:27:11 #573 passed:     master Merge pull request #972 from alexpearce/patch-1
+2014-02-08 10:24:58 #572 passed:     master Merge pull request #975 from martinp/update-license
+2014-01-27 11:40:04 #567 passed:     master Merge pull request #961 from GCorbel/patch-1
+2014-01-26 12:08:49 #566 passed:     master Fixed a missing import
+2014-01-26 11:48:04 #565 failed:     master Make Python 3 happy
+2014-01-26 11:35:16 #564 failed:     master Added a workaround for a pypy bug in context managers
+2014-01-23 13:08:56 #559 failed:     master Merge pull request #947 from Ivoz/master
+2014-01-06 11:01:10 #545 failed:     master Merge pull request #943 from skeuomorf/favicon
+2014-01-02 12:26:58 #541 failed:     master Merge branch '0.10-maintenance'
+2013-11-09 07:42:54 #523 passed:     master Rewrapped lines
+2013-11-01 04:19:00 #521 passed:     master Merge pull request #899 from pengfei-xue/master
+2013-10-29 04:36:26 #517 passed:     master Merge pull request #895 from daybarr/patch-1
+2013-10-22 07:02:48 #514 passed:     master Fix typo s/at at/at a/
+2013-10-16 13:24:54 #510 passed:     master Merge branch '0.10-maintenance'
+2013-10-16 12:26:49 #508 passed:     master Merge pull request #891 from ThiefMaster/docs-flaskext
+2013-10-16 12:18:11 #507 passed:     master Merge pull request #890 from seancron/documentation-fix
+2013-10-16 12:09:49 #506 passed:     master Merge pull request #886 from talam/patch-1
+2013-09-08 13:28:00 #485 passed:     master Merge pull request #863 from jet-sun/patch-1
+2013-09-04 09:55:27 #479 passed:     master Merge pull request #858 from svieira/patch-2
+2013-09-03 12:58:49 #476 passed:     master Merge pull request #843 from wbowlin/master
+2013-09-03 12:48:37 #475 passed:     master Fix #856 ommited typo in quickstart
+2013-09-01 17:58:08 #474 passed:     master Some cleanups
+2013-08-31 14:44:06 #473 passed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2013-08-25 06:26:20 #468 passed:     master Merge pull request #844 from adamobeng/patch-1
+2013-08-20 16:36:04 #463 passed:     master Merge pull request #840 from mhils/master
+2013-08-13 09:02:29 #459 passed:     master Merge branch '0.10-maintenance'
+2013-08-11 14:41:32 #457 passed:     master Merge pull request #831 from homeworkprod/json-docs-typo-fix
+2013-08-05 03:09:31 #449 passed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2013-08-04 16:00:00 #447 passed:     master Merge pull request #819 from chason/master
+2013-08-01 03:16:00 #445 passed:     master Merge pull request #817 from llimllib/master
+2013-07-31 09:46:07 #443 passed:     master Merge pull request #816 from untitaker/allowed_methods
+2013-07-30 09:59:01 #438 passed:     master Fixed a test that broke on 3.x
+2013-07-30 09:47:41 #437 failed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2013-07-29 15:30:19 #436 passed:     master Merge pull request #811 from rpicard/remove_options_workaround
+2013-07-26 18:28:45 #432 passed:     master Merge pull request #808 from untitaker/issue782
+2013-07-26 16:49:07 #430 passed:     master Merge pull request #800 from nZac/issue#783
+2013-07-26 16:45:40 #429 passed:     master Fixed a typo
+2013-07-24 14:49:29 #426 passed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2013-07-22 08:44:32 #424 passed:     master Merge pull request #799 from cvrebert/patch-1
+2013-07-05 16:20:38 #419 passed:     master Merge branch '0.10-maintenance'
+2013-07-03 06:01:14 #413 passed:     master Merge branch '0.10-maintenance'
+2013-07-01 08:48:24 #411 passed:     master Merge pull request #786 from mgaitan/patch-1
+2013-07-01 08:44:27 #410 passed:     master Merge pull request #784 from BobStevens/master
+2013-06-27 10:12:54 #407 passed:     master Merge branch '0.10-maintenance'
+2013-06-27 09:56:37 #405 failed:     master Merge branch '0.10-maintenance'
+2013-06-22 19:55:01 #403 passed:     master Merge pull request #776 from seedofjoy/master
+2013-06-19 10:25:53 #400 passed:     master Don't use werkzeug dev version in tox anymore
+2013-06-16 05:41:30 #399 passed:     master Merge pull request #768 from steko/patch-1
+2013-06-14 16:18:09 #398 passed:     master Merge pull request #770 from augustusdsouza/patch-1
+2013-06-14 04:55:03 #395 passed:     master Fixed some embarrassing grammar
+2013-06-14 03:57:16 #393 passed:     master Master is 0.11-dev
+2013-06-14 03:43:47 #391 passed:     master Added changelog entry for the method registering fix
+2013-06-13 18:27:02 #388 passed:     master Merge branch '0.10-maintenance'
+2013-06-13 18:07:55 #386 passed:     master Merge branch '0.10-maintenance'
+2013-06-13 17:49:11 #384 passed:     master Merge branch '0.10-maintenance'
+2013-06-13 15:20:44 #381 passed:     master Add myself to AUTHORS
+2013-06-13 15:17:15 #380 passed:     master Add Python 3.3 classifier
+2013-06-13 03:40:35 #379 passed:     master Fixed invalid reference
+2013-06-13 03:38:12 #378 passed:     master This is 0.11-dev
+2013-06-13 03:36:10 #377 passed:     master Release date is today, codename is Limoncello
+2013-06-13 03:31:38 #376 passed:     master Flask should now work with release requirements on 3.3
+2013-06-13 03:13:44 #375 passed:     master Added release requirements
+2013-06-13 03:06:12 #374 passed:     master Fixed incorrect version definitions in travis
+2013-06-13 03:03:44 #373 failed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2013-06-12 12:57:31 #372 passed:     master Merge pull request #764 from marksteve/docs
+2013-06-12 10:28:21 #371 passed:     master Added request.get_json().
+2013-06-11 14:19:08 #369 passed:     master Fixed a typo
+2013-06-09 11:26:50 #368 passed:     master Added documentation on API error handlers
+2013-06-09 06:47:34 #367 passed:     master Fixed a broken link in the docs
+2013-06-09 06:46:38 #366 passed:     master Added requirements for Python 3
+2013-06-09 06:43:03 #365 passed:     master Added notes on Python 3
+2013-06-09 06:32:53 #364 passed:     master Fixed a broken reference
+2013-06-09 06:31:00 #363 passed:     master Modernized docs in a few places
+2013-06-09 06:23:53 #362 passed:     master Added a missing note to the docs
+2013-06-09 06:08:22 #361 passed:     master Changed interface for `flask.g`
+2013-06-09 05:47:32 #360 passed:     master Removed view_func from route documentaiton.
+2013-06-08 19:40:24 #359 passed:     master Added site name to persona login
+2013-06-08 19:30:49 #358 passed:     master Added Persona example
+2013-06-08 06:57:46 #357 passed:     master Added a testcase for some more routing things between blueprints.
+2013-06-07 09:45:02 #356 passed:     master Switch to teardown_appcontext for docs in sqlalchemy pattern
+2013-06-06 18:57:04 #355 passed:     master Some small cleanup
+2013-06-06 18:47:04 #354 passed:     master The default run method is now accepting the port from the SERVER_NAME.
+2013-06-05 04:36:12 #353 passed:     master Some reindentation cleanup
+2013-06-05 04:03:08 #352 failed:     master Documented changes on the g object some more
+2013-06-05 03:59:08 #351 failed:     master Added example on faking resources and context
+2013-06-05 03:54:03 #350 failed:     master Added appcontext_pushed and appcontext_popped signals
+2013-06-03 06:25:58 #348 passed:     master Imply the |safe on tojson in templates and change escaping logic
+2013-06-02 17:25:02 #347 passed:     master Added a test for non-ascii routing
+2013-06-02 15:48:14 #345 passed:     master Fixed request context preservation and teardown handler interaction.
+2013-06-02 11:25:33 #344 passed:     master Removed an unnecessary as statement
+2013-06-02 11:27:42 #343 passed:     master Removed a bunch of code from _compat
+2013-06-02 05:55:04 #342 passed:     master Make the JSON module work better in the absence of an application context
+2013-06-01 13:24:40 #341 passed:     master Order JSON keys by default to avoid trashing HTTP caches
+2013-05-31 18:20:35 #340 passed:     master Added the JSONIFY_PRETTYPRINT_REGULAR config variable.  This fixes #725
+2013-05-30 19:00:29 #337 passed:     master Let travis notify the #pocoo irc channel
+2013-05-30 18:56:46 #336 passed:     master Make travis install development werkzeug
+2013-05-30 15:42:45 #335 failed:     master Test Flask against werkzeug master
+2013-05-30 15:40:13 #334 failed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2013-05-25 12:36:37 #310 passed:     master Merge pull request #741 from Turbo87/patch-1
+2013-05-23 08:18:25 #306 passed:     master Added install section
+2013-05-23 08:16:09 #305 failed:     master Change travis test command
+2013-05-23 08:09:54 #304 failed:     master Removed 2.5 support in master
+2013-05-23 08:00:34 #301 failed:     master Removed incorrect JSON exception subclasses
+2013-05-20 03:47:41 #279 passed:     master Restore 2.5 support for the time being
+2013-05-20 03:44:53 #278 passed:     master Removed 2.5 from travis
+2013-05-14 08:06:48 #263 failed:     master Added missing newlines to readme
+2013-05-14 08:06:23 #262 failed:     master Revert "update README to markdown"
+2013-05-14 05:52:30 #261 failed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2013-05-14 05:50:35 #260 failed:     master Merge pull request #676 from lambdadi/master
+2013-05-14 05:37:29 #259 failed:     master Merge pull request #708 from xealot/master
+2013-05-14 05:36:25 #258 failed:     master Added support for UUID objects to JSON serializer as well
+2013-05-14 05:34:17 #257 failed:     master Added uuid support for new session serialization and documented it
+2013-05-14 05:27:11 #256 failed:     master Merge pull request #702 from edburnett/master
+2013-05-14 05:26:11 #255 failed:     master Merge pull request #709 from halexus/patch-1
+2013-05-14 05:24:10 #254 failed:     master Added a missing comma
+2013-05-14 05:01:19 #253 failed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2013-05-03 12:13:30 #251 failed:     master Merge pull request #714 from jsnmoon/master
+2013-05-03 12:12:13 #250 failed:     master Merge pull request #719 from cenkalti/master
+2013-05-03 12:11:48 #249 failed:     master Merge pull request #723 from akshar-raaj/fix_docs_design
+2013-03-31 22:06:43 #238 failed:     master Merge pull request #701 from bruston/quickstart-typod
+2013-03-31 22:05:55 #237 failed:     master Merge pull request #700 from SpOOnman/master
+2013-03-21 16:04:54 #230 failed:     master Documented new signal message_flashed
+2013-03-21 16:02:24 #229 failed:     master Merge pull request #687 from poiati/flash-signal
+2013-03-21 16:00:30 #228 failed:     master Merge pull request #692 from mikegagnon/patch-1
+2013-03-21 15:59:30 #227 failed:     master Merge pull request #693 from untitaker/factory_docs
+2013-03-06 11:54:21 #212 failed:     master Merge pull request #681 from dmizelle/docs-quickstart
+2013-03-06 11:53:23 #211 failed:     master Merge pull request #683 from alexcouper/master
+2013-03-06 11:49:55 #210 failed:     master Merge pull request #689 from OrangeTux/patch-2
+2013-01-29 14:35:54 #198 failed:     master Changed session cookie defaults to work better with google chrome
+2013-01-28 09:13:47 #197 failed:     master Added workaround for Chrome cookies
+2013-01-26 18:56:27 #196 failed:     master Added note on teardown in debug mode.  Fixes #661
+2013-01-26 18:46:43 #195 failed:     master Added template_global, fixes #657
+2013-01-26 18:40:10 #194 failed:     master Added celery pattern
+2013-01-24 22:22:10 #192 failed:     master Merge pull request #625 from soulseekah/master
+2013-01-24 22:21:39 #191 failed:     master Merge pull request #617 from tony/jquery-example-iteration1
+2013-01-24 22:13:37 #190 failed:     master Merge pull request #630 from untitaker/doc_fix_appctx
+2013-01-24 21:02:39 #189 failed:     master Merge pull request #665 from trungly/deferred_callbacks_fix
+2013-01-24 21:06:32 #188 failed:     master Merge pull request #660 from baijum/docs
+2013-01-24 21:02:14 #187 failed:     master Merge pull request #667 from maxcountryman/secure-url-for
+2013-01-24 20:55:29 #186 failed:     master Merge pull request #669 from schneems/master
+2013-01-21 12:42:05 #179 failed:     master Fixed last commit and added test
+2013-01-21 12:28:24 #178 failed:     master Always trap proxy exceptions
+2012-12-31 17:04:24 #170 failed:     master 2013
+2012-12-31 16:55:47 #169 failed:     master 2013
+2012-12-27 09:28:36 #168 failed:     master Merge pull request #655 from oliversong/master
+2012-12-27 09:27:56 #167 failed:     master Merge pull request #649 from erikrose/doc-typos
+2012-12-27 09:24:01 #166 failed:     master Merge pull request #653 from methane/patch-1
+2012-12-27 09:26:11 #165 failed:     master Merge pull request #654 from untitaker/print_in_cgi2
+2012-12-21 04:47:40 #163 failed:     master Added proxies to template context
+2012-12-19 08:46:34 #160 passed:     master Removed unnecessary end-tags and fixed some broken html
+2012-12-12 18:23:54 #156 passed:     master Merge pull request #636 from ghost/patch-1
+2012-12-12 18:16:46 #155 passed:     master Merge pull request #647 from untitaker/print_in_cgi
+2012-11-15 20:37:42 #144 passed:     master Merge pull request #609 from MostAwesomeDude/master
+2012-11-15 19:58:47 #143 passed:     master Merge pull request #624 from soulseekah/patch-1
+2012-11-15 19:56:55 #142 passed:     master Merge pull request #634 from maxcountryman/master
+2012-11-05 18:00:07 #127 passed:     master Merge pull request #626 from maxcountryman/patch-1
+2012-10-30 11:10:45 #123 passed:     master Added better error reporting for unicode errors in sessions
+2012-10-17 18:48:44 #119 passed:     master Added support for unicode json dumping.  This fixes #535
+2012-10-17 18:37:37 #118 passed:     master Merge pull request #613 from untitaker/issue611
+2012-10-17 18:37:10 #117 passed:     master Merge pull request #614 from mizhi/master
+2012-10-09 14:48:25 #112 failed:     master Updated examples to new sqlite patterns and added new section to appcontext docs
+2012-10-08 02:14:07 #111 failed:     master Updated a comment that was misleading with recent flask sqlalchemy installations
+2012-10-07 10:13:23 #110 failed:     master Documented new error case
+2012-10-07 10:12:26 #109 failed:     master Raise exceptions if a function is overridden by a new endpoint.  This fixes #570
+2012-10-07 09:18:53 #108 failed:     master Stop the joinspam
+2012-10-07 09:08:22 #107 failed:     master Removed tox file
+2012-10-07 09:07:02 #106 failed:     master Added a workaround for samefile.  This fixes #600
+2012-10-07 09:00:52 #105 failed:     master Removed dev tag from setup.cfg.  Fixes #596
+2012-10-07 08:46:30 #104 failed:     master Added a new example for checksums on input data.  This fixes #601
+2012-10-07 08:35:57 #103 passed:     master tojson no longer escapes script blocks in HTML5 parsers.  Fixed #605
+2012-10-07 08:26:55 #102 failed:     master Merge branch 'master' of github.com:mitsuhiko/flask
+2012-10-07 08:09:14 #101 passed:     master Merge pull request #548 from SimonSapin/patch-6
+2012-10-07 08:06:32 #100 passed:     master Merge pull request #550 from AkaiKitsune/master
+2012-10-07 07:58:37 #99 failed:      master Added total_seconds() helper for pythons before 2.7
+2012-10-07 07:51:38 #98 failed:      master Added a missing exposed import.  This fixes #575
+2012-10-07 07:52:52 #97 failed:      master Fixed a typo in the docs.  This fixes #576 and #575
+2012-10-07 06:25:36 #96 failed:      master Added HTTP override middleware to docs.  This fixes #582
+2012-10-07 06:25:16 #95 failed:      master Merge pull request #590 from pinchsp/master
+2012-10-07 06:22:21 #94 failed:      master Merge pull request #583 from d1ffuz0r/issue_524
+2012-10-07 06:22:14 #93 failed:      master Merge pull request #591 from finbarrocallaghan/master
+2012-10-07 06:21:42 #92 failed:      master Documented latest commit in changelog
+2012-10-07 06:21:07 #91 failed:      master Add @template_test() decorator for creating custom jinja2 tests, like existing @template_filter() for filters.  Fixes #332
+2012-10-07 06:20:21 #90 failed:      master Merge pull request #607 from jfinkels/patch-3
+2012-10-07 06:20:21 #89 failed:      master Merge branch 'master' of github.com:mitsuhiko/flask
+2012-10-01 14:49:18 #86 passed:      master Merge pull request #603 from rmacy/patch-1
+2012-09-22 20:50:21 #82 passed:      master Merge pull request #594 from ralphbean/patch-1
+2012-08-26 12:27:12 #73 passed:      master Merge pull request #577 from brousch/patch-2
+2012-08-26 12:22:13 #72 passed:      master Merge pull request #563 from joepie91/master
+2012-08-26 11:51:07 #71 passed:      master Merge pull request #579 from alex-morega/fix-doc-views
+2012-08-10 20:38:11 #62 passed:      master Merge branch 'master' of github.com:mitsuhiko/flask
+2012-08-01 11:42:41 #59 passed:      master Merge pull request #571 from plaes/doc-improvements
+2012-07-26 14:32:35 #57 passed:      master Merge pull request #567 from PaulMcMillan/docs_fix
+2012-07-21 06:57:43 #54 passed:      master Merge pull request #562 from yaph/master
+2012-07-20 16:32:13 #52 passed:      master Merge pull request #559 from rdegges/master
+2012-07-04 15:03:58 #45 passed:      master Touch up dbinit tutorial doc.
+2012-07-04 14:58:41 #44 passed:      master Merge pull request #540 from svenstaro/master
+2012-07-04 14:57:39 #42 passed:      master Merge pull request #539 from svenstaro/master
+2012-07-01 17:09:29 #38 passed:      master Merge pull request #537 from esaurito/patch-1
+2012-07-01 11:32:40 #36 passed:      master Merge pull request #536 from lvh/patch-1
+2012-07-01 06:13:08 #33 passed:      master Updated CHANGES
+2012-06-27 09:06:45 #29 passed:      master Added flask.stream_with_context
+2012-06-25 13:14:58 #27 passed:      master Merge pull request #413 from dmishe/master
+2012-06-25 13:13:32 #26 passed:      master Merge pull request #509 from alekzvik/master
+2012-06-25 13:13:01 #25 passed:      master Merge pull request #530 from mattupstate/master
+2012-06-25 13:12:29 #24 passed:      master Merge pull request #531 from bev-a-tron/master
+2012-06-17 08:25:13 #21 passed:      master Merge pull request #479 from dmishe/patch-1
+2012-06-17 08:24:39 #20 passed:      master Merge pull request #497 from ekoka/master
+2012-06-17 08:22:58 #19 passed:      master Merge pull request #517 from kuyan/patch-1
+2012-06-17 08:22:22 #18 passed:      master Added #522 in modified version
+2012-06-17 08:18:16 #17 passed:      master Removed padded JSON (JSONP) again.
+2012-06-17 08:14:31 #16 passed:      master Don't build websites with travis
+2012-06-17 08:07:33 #13 passed:      master Merge pull request #529 from yaph/master
+2012-06-17 08:00:33 #12 passed:      master Merge pull request #525 from brousch/patch-1
+2012-06-17 07:56:06 #11 passed:      master Merge pull request #527 from mapio/patch-1
+2012-06-01 16:16:48 #1 passed:       master Merge pull request #515 from msabramo/travis

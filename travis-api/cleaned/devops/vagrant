@@ -1,0 +1,1860 @@
+2014-09-26 09:52:25 #3382 errored:   master docs: fix typo
+2014-09-24 08:32:52 #3378 errored:   master website: remove unneeded colon in docs
+2014-09-16 13:25:25 #3369 passed:    master website/docs: clarify that add_recipe order matters
+2014-09-16 11:04:16 #3368 passed:    master Merge pull request #4509 from aspiers/fix/forwarded-typo
+2014-09-15 12:01:26 #3366 passed:    master website: Fix a minor typo on reseller page
+2014-09-15 10:55:17 #3365 passed:    master website: add info for vmware
+2014-09-04 17:49:18 #3346 passed:    master website/www: up version for deploy
+2014-09-04 16:24:04 #3341 passed:    master v1.6.5
+2014-09-04 16:23:12 #3340 passed:    master providers/virtualbox: cleaner ignore DHCP
+2014-09-04 16:25:06 #3339 failed:    master kernel/v2: always forward SSH [GH-4437]
+2014-09-04 16:16:10 #3338 failed:    master Update CHANGELOG
+2014-09-04 16:18:58 #3336 failed:    master Merge pull request #4434 from simoleone/fix-nfs-with-dhcp-custom-range
+2014-09-04 16:13:46 #3335 passed:    master Update CHANGELOG
+2014-09-04 16:10:04 #3334 passed:    master Merge pull request #4462 from andytson/feature/redhat-flavour-fix
+2014-09-04 15:45:22 #3332 passed:    master Merge pull request #4461 from andytson/feature/redhat-network-file-traversal-fix
+2014-09-03 21:45:30 #3330 passed:    master Merge pull request #4454 from npvisual/master
+2014-09-03 11:58:22 #3328 passed:    master website/www: update vmware copy to note version supported
+2014-09-03 11:16:25 #3327 passed:    master Merge pull request #4445 from igas/patch-1
+2014-09-03 11:15:22 #3326 passed:    master Merge pull request #4446 from andytson/feature/rhel-networks-fix
+2014-09-03 01:11:20 #3323 passed:    master Merge pull request #4443 from keithchambers/master
+2014-09-02 13:48:38 #3315 passed:    master v1.6.4
+2014-09-02 11:58:31 #3314 passed:    master Merge pull request #4431 from purpleidea/bug/remove-upgrade
+2014-09-02 11:18:02 #3312 passed:    master core: more logging
+2014-09-02 11:14:26 #3311 passed:    master core: Be more explicit about requiring version
+2014-09-01 17:30:07 #3310 passed:    master commands/version: remove unused require
+2014-09-01 17:26:35 #3309 passed:    master commands/version: use checkpoint data
+2014-09-01 17:08:30 #3308 passed:    master core: add Checkpoint
+2014-08-31 12:52:37 #3306 passed:    master Update CHANGELOG
+2014-08-31 12:51:39 #3305 passed:    master Merge pull request #4418 from gpoulin2/nfs_gentoo_systemd
+2014-08-31 12:51:35 #3304 passed:    master commands/rsync-auto: fix typo
+2014-08-31 11:59:02 #3303 passed:    master guests/redhat: set hostname on EL7 [GH-4352]
+2014-08-31 11:55:31 #3302 passed:    master command/rsync-auto: add --poll flag [GH-4392]
+2014-08-31 01:16:47 #3299 passed:    master Update CHANGELOG
+2014-08-31 01:16:28 #3298 passed:    master Merge pull request #4143 from amracks/master
+2014-08-31 01:13:11 #3297 passed:    master Lock down Nokogiri dependency
+2014-08-31 00:55:45 #3296 passed:    master Revert "core: guard against SSH to localhost:22 [GH-4070]"
+2014-08-31 00:50:08 #3295 passed:    master guests/redhat: configure networks properly on EL7 [GH-4195]
+2014-08-31 00:47:47 #3294 passed:    master provisioners/docker: fix ruby typo
+2014-08-31 00:45:43 #3293 passed:    master guests/redhat: install Docker on EL7 properly [GH-4402]
+2014-08-31 00:30:28 #3292 passed:    master providers/docker: unique name with docker-run
+2014-08-31 00:24:02 #3291 passed:    master Merge pull request #4417 from rclanan/fix/master/4294-docker-named-conflicts
+2014-08-29 16:41:19 #3289 passed:    master Merge pull request #4415 from sax/smartos_rsync
+2014-08-29 15:20:27 #3287 passed:    master core: better messaging around box add not existing [GH-4414]
+2014-08-29 14:17:57 #3286 passed:    master commands/plugin: error if windows with space in dir [GH-4351]
+2014-08-29 14:07:21 #3285 passed:    master commands/box/update: proper provider is updated [GH-4374]
+2014-08-29 13:42:51 #3284 passed:    master communicators/ssh: nicer errors for SSH exceptions [GH-4367]
+2014-08-29 13:29:25 #3283 passed:    master core: content-type is case insensitive for metadata check [GH-4369]
+2014-08-29 13:27:45 #3282 passed:    master Fix failing test
+2014-08-29 13:20:52 #3281 failed:    master commands/box: update gives nice message if no box
+2014-08-29 13:12:57 #3280 passed:    master providers/docker: SSH extra args go to Docker container [GH-4378]
+2014-08-29 12:30:36 #3277 passed:    master Update CHANGELOG
+2014-08-29 12:30:41 #3276 passed:    master Merge pull request #4377 from sumkincpp/patch-1
+2014-08-29 12:29:17 #3275 passed:    master core: vagrant provision triggers sentinel creation [GH-4393]
+2014-08-29 11:56:57 #3274 passed:    master Update CHANGELOG
+2014-08-29 11:57:12 #3273 passed:    master Merge pull request #4308 from Voxer/fix/master/issue4307
+2014-08-29 11:55:44 #3272 passed:    master Update CHANGELOG
+2014-08-29 11:54:39 #3271 passed:    master Merge pull request #4335 from nmische/GH-4315
+2014-08-29 11:54:01 #3270 passed:    master Merge pull request #4341 from databus23/patch-2
+2014-08-29 11:54:17 #3269 passed:    master Merge pull request #4379 from s7726/master
+2014-08-29 11:52:01 #3268 passed:    master Update CHANGELOG
+2014-08-29 11:54:02 #3267 passed:    master Merge pull request #4383 from mwrock/error
+2014-08-29 11:50:29 #3266 passed:    master Update CHANGELOG
+2014-08-29 11:49:48 #3265 passed:    master Merge pull request #4387 from BackSlasher/allow-sudo
+2014-08-29 11:48:32 #3264 passed:    master guests/linux: backoff a bit on the mount timeout [GH-4403]
+2014-08-29 11:42:39 #3263 passed:    master communicators/ssh: cleanup PTY code for GH-4408]
+2014-08-29 11:34:11 #3262 passed:    master Merge pull request #4408 from lsimons/ssh-scrub-pty-output-for-upstream
+2014-08-29 10:33:04 #3261 passed:    master commands/provision: don't advertise parallel [GH-4398]
+2014-08-29 10:29:24 #3260 passed:    master guests/linux: more verbose output when shared folder mount fails
+2014-08-29 10:21:27 #3259 passed:    master core: better bundler errors
+2014-08-29 09:41:45 #3258 passed:    master Update CHANGELOG
+2014-08-29 09:41:33 #3257 passed:    master Merge pull request #4410 from lsimons/use-rm-with-f
+2014-08-25 14:36:30 #3251 passed:    master Merge pull request #4389 from vlajos/typofixes-20140825
+2014-08-19 09:34:10 #3240 passed:    master Merge pull request #4356 from StefanScherer/fix_winrm_should_upload_file_problem_4054
+2014-08-12 16:11:07 #3237 passed:    master Update chef_client.html.md
+2014-08-11 11:28:46 #3234 passed:    master core: don't allow '/' in VM name [GH-4289]
+2014-08-10 23:06:21 #3231 passed:    master core: disallow brackets in VM names [GH-4319]
+2014-08-10 22:50:40 #3230 passed:    master core: don't load curlrc [GH-4328]
+2014-08-10 22:43:53 #3229 passed:    master Update CHANGELOG
+2014-08-10 22:43:10 #3228 passed:    master Merge pull request #4324 from mwrock/generation
+2014-08-10 22:35:43 #3227 passed:    master Update CHANGELOG
+2014-08-10 22:30:38 #3226 passed:    master Merge pull request #4327 from parisholley/dockerRunRm
+2014-08-08 20:26:20 #3216 passed:    master Update CHANGELOG
+2014-08-08 20:26:07 #3215 passed:    master Merge pull request #4313 from w3ttr3y/master
+2014-08-08 19:41:00 #3214 passed:    master commands/reload: show post-up message [GH-4168]
+2014-08-08 19:33:41 #3213 passed:    master website/docs: fix broken links
+2014-08-08 18:49:53 #3212 passed:    master core: clean up Bundler tempfiles [GH-4103]
+2014-08-08 16:49:29 #3210 passed:    master core: box names with colons work on Windows [GH-4100]
+2014-08-08 16:36:16 #3209 passed:    master Add box collection test for colons
+2014-08-08 14:31:07 #3208 passed:    master Vagrantfile for vagrant dev [GH-4089]
+2014-08-08 14:15:54 #3207 passed:    master providers/hyperv: fix double-dot in drive name [GH-4318]
+2014-08-08 14:02:18 #3205 passed:    master core: guard against SSH to localhost:22 [GH-4070]
+2014-08-08 13:41:10 #3204 passed:    master core: lock machine action on VF name too [GH-4065]
+2014-08-08 13:25:33 #3203 passed:    master core: forgot error for last commit
+2014-08-08 12:50:21 #3202 passed:    master providers/virtualbox: error if can't read VM name [GH-4047]
+2014-08-08 11:13:59 #3201 passed:    master communicators/ssh: clean error on max session [GH-4044]
+2014-08-07 13:57:22 #3200 passed:    master website/docs: clearer about uninstall for mac [GH-4043]
+2014-08-07 13:56:05 #3199 passed:    master communicators/ssh: cleaner error if remote disconnect [GH-4038]
+2014-08-06 18:57:17 #3196 passed:    master commands/rsync-auto: check machine ID prior to sync [GH-4031]
+2014-08-06 18:48:55 #3195 passed:    master core: Machine#reload
+2014-08-06 17:59:49 #3194 passed:    master website/docs: document synced folders and networking [GH-4003]
+2014-08-06 17:36:27 #3193 passed:    master providers/docker: single port works [GH-3991]
+2014-08-06 16:42:10 #3192 passed:    master Clarify error message for VAGRANT_HOME [GH-4256]
+2014-08-06 15:04:45 #3190 passed:    master core: fix crash case with provisioners [GH-4281]
+2014-08-06 13:25:09 #3189 passed:    master core: preserve downloaded file in more cases [GH-4301]
+2014-08-06 13:19:44 #3188 passed:    master guests/nixos: don't detect as Windows [GH-4302]
+2014-08-06 13:12:59 #3187 passed:    master provisioners/puppet: don't repeat output when prov fails [GH-4303]
+2014-08-06 13:10:15 #3186 passed:    master provisioners/salt: use exit code to detect failure [GH-4304]
+2014-08-06 13:08:28 #3185 passed:    master provisioners/salt: whitespace
+2014-08-06 12:52:33 #3184 passed:    master UPdate CHANGELOG
+2014-08-06 12:51:28 #3183 passed:    master Merge pull request #4088 from salimane/pr_nfs_rpcbind_centos
+2014-08-06 12:48:06 #3182 passed:    master Update CHANGELOG
+2014-08-06 12:47:06 #3181 passed:    master Merge pull request #4094 from mitchellh/improved-winrm-command-failure-messaging
+2014-08-06 12:47:02 #3180 passed:    master Merge pull request #4064 from KLVTZ/master
+2014-08-06 12:43:07 #3179 passed:    master Merge pull request #3956 from PerilousApricot/feature/bridge-networking-docs
+2014-08-06 12:34:58 #3178 passed:    master Update CHANGELOG
+2014-08-06 12:35:35 #3177 passed:    master Merge pull request #4087 from zr40/fix/master/prevent-double-output
+2014-08-06 12:33:00 #3176 passed:    master Update CHANGELOG
+2014-08-06 12:32:13 #3175 passed:    master Merge pull request #4090 from mitchellh/improve-checksum-verification-performance
+2014-08-06 12:31:05 #3174 passed:    master Merge pull request #4077 from simono/patch-1
+2014-08-06 12:30:15 #3173 passed:    master update CHANGELOG
+2014-08-06 12:29:20 #3172 passed:    master Merge pull request #3934 from xstevecs/master
+2014-08-06 12:28:42 #3171 passed:    master update CHANGELOG
+2014-08-06 12:28:54 #3170 passed:    master Merge pull request #3932 from marnovdm/feature/salt-modular-version
+2014-08-06 12:26:58 #3169 passed:    master provisioners/chef: put global lock around knife exec
+2014-08-06 12:16:23 #3168 passed:    master Merge pull request #4099 from mitchellh/fix-issue-2476-chef-client-node-cleanup
+2014-08-06 12:09:45 #3167 passed:    master Merge pull request #4112 from deviantintegral/rsync-options
+2014-08-06 12:09:27 #3166 passed:    master Merge pull request #4146 from techtonik/patch-1
+2014-08-06 12:08:48 #3165 passed:    master Merge pull request #4113 from dhoppe/patch-1
+2014-08-06 12:03:18 #3164 passed:    master Update cHANGELOG
+2014-08-06 12:04:47 #3163 passed:    master Merge pull request #4159 from vassilevsky/windows-encodings
+2014-08-06 12:00:19 #3162 passed:    master Udpate CHANGELOG
+2014-08-06 11:58:36 #3161 passed:    master Merge pull request #4169 from schauer/patch-1
+2014-08-06 11:54:03 #3160 passed:    master Merge pull request #4207 from stevemcc/enhancement/virtualbox_36_nic
+2014-08-05 19:52:17 #3158 passed:    master Update CHANGELOG
+2014-08-05 19:52:15 #3157 passed:    master Merge pull request #4208 from mwrock/file-path
+2014-08-05 19:48:06 #3156 passed:    master Update CHANGELOG
+2014-08-05 19:47:05 #3155 passed:    master Merge pull request #4224 from kamazee/fix/master/nfs_archlinux_systemd
+2014-08-05 19:46:23 #3154 passed:    master Update CHANGELOG
+2014-08-05 19:45:05 #3153 passed:    master Merge pull request #4228 from stvleung/fix-master-add-el7-nfs-support
+2014-08-05 19:32:02 #3152 passed:    master Update CHANGELOG
+2014-08-05 19:30:40 #3151 passed:    master Merge pull request #4234 from b-dean/fixnum-array-args-fix
+2014-08-05 19:28:15 #3150 passed:    master Merge pull request #4246 from synth3tk/patch-2
+2014-08-05 19:25:30 #3149 passed:    master Update CHANGELOG
+2014-08-05 19:24:11 #3148 passed:    master Merge pull request #4262 from danielparks/master
+2014-08-05 19:23:27 #3147 passed:    master Update CHANGELOG
+2014-08-05 19:23:29 #3146 passed:    master Merge pull request #4271 from Scythril/winrm_mkdir_rm_filter
+2014-08-05 19:21:44 #3145 passed:    master Update CHANGELOG
+2014-08-05 19:21:36 #3144 passed:    master Merge pull request #4274 from sax/smartos_rsync
+2014-08-05 19:20:20 #3143 passed:    master Update CHANGELOG
+2014-08-05 19:19:38 #3142 passed:    master Merge pull request #4282 from Mayflower/feature/config-box_server_url
+2014-08-05 19:18:43 #3141 passed:    master Update CHANGELOG
+2014-08-05 19:17:17 #3140 passed:    master Merge pull request #4297 from gildub/bug/fedora20+network
+2014-07-31 10:56:54 #3135 passed:    master Merge pull request #4273 from databus23/patch-1
+2014-07-28 13:33:01 #3132 passed:    master Merge pull request #4255 from glensc/patch-1
+2014-07-17 13:02:51 #3116 passed:    master Update ssh_settings.html.md
+2014-07-17 13:02:37 #3115 passed:    master Merge pull request #4211 from emyl/docs-pty-v2
+2014-07-10 15:31:38 #3103 passed:    master Merge pull request #4102 from mitchellh/windows-guest-rename-compat
+2014-07-08 15:28:23 #3101 passed:    master Merge pull request #4162 from mitchellh/fix-issue-4161
+2014-07-07 16:30:07 #3096 passed:    master Merge pull request #4133 from keiths-osc/windows_virtualbox_vmdk_path_fix
+2014-06-29 19:58:51 #3087 passed:    master Merge pull request #4126 from mitchellh/chef-server-grammar-fixes
+2014-06-28 12:01:42 #3083 passed:    master Merge pull request #4120 from jdmulloy/fix_ssh_typo
+2014-06-18 10:05:00 #3060 passed:    master Merge pull request #4059 from brettporter/windows-puppet-wd
+2014-06-12 13:47:20 #3057 passed:    master Update CHANGELOG
+2014-06-12 13:44:55 #3056 passed:    master Merge pull request #4006 from mitchellh/fix-issue-3987
+2014-06-12 13:42:55 #3055 passed:    master guests/freebsd: style
+2014-06-12 13:42:58 #3054 passed:    master Merge pull request #4009 from calvinhp/fix/master/freebsd_rsync_install
+2014-06-12 13:34:59 #3053 passed:    master core: don't delete data dir if no data dir [GH-4017]
+2014-06-06 21:54:07 #3048 passed:    master Update CHANGELOG.md
+2014-06-06 21:53:12 #3047 passed:    master Merge pull request #3983 from dougm/nixos-nfs-client
+2014-06-05 01:20:58 #3045 passed:    master Fix doc link [GH-3978]
+2014-06-03 00:09:17 #3043 passed:    master Update CHANGELOG.md
+2014-06-03 00:08:49 #3042 passed:    master Merge pull request #3962 from StefanScherer/fix_hosts_windows_cap_rdp
+2014-06-03 00:07:57 #3041 passed:    master Update CHANGELOG.md
+2014-06-03 00:05:45 #3040 passed:    master Merge pull request #3959 from benh57/master
+2014-05-31 10:58:16 #3034 passed:    master Merge pull request #3946 from thierrymarianne/typo-fix-in-multiple-machine-doc
+2014-05-29 14:26:47 #3032 passed:    master Up version for dev
+2014-05-29 14:17:42 #3030 passed:    master website/www: up version
+2014-05-29 12:38:40 #3029 passed:    master v1.6.3
+2014-05-29 12:13:26 #3027 passed:    master Merge pull request #3933 from catsby/update_website_vagrantfiles
+2014-05-29 09:46:18 #3024 passed:    master Merge pull request #3926 from rockymadden/master
+2014-05-29 09:45:55 #3023 passed:    master Merge pull request #3927 from rockymadden/master
+2014-05-29 09:43:55 #3022 passed:    master Merge pull request #3930 from catsby/remove_slave
+2014-05-28 15:10:28 #3018 passed:    master Update CHANGELOG.md
+2014-05-28 15:09:50 #3017 passed:    master Merge pull request #3922 from mitchellh/fix-issue-3918
+2014-05-26 10:13:51 #3014 passed:    master Update CHANGELOG.md
+2014-05-26 10:12:42 #3013 passed:    master Merge pull request #3903 from emyl/puppet-elevated
+2014-05-25 18:09:56 #3011 passed:    master Merge pull request #3902 from zigg/fix/osx-xargs-r-flag
+2014-05-25 14:55:31 #3009 passed:    master comamnds/box/add: change help text
+2014-05-25 14:55:05 #3008 passed:    master Merge pull request #3899 from aspiers/help-text
+2014-05-24 13:25:07 #3006 passed:    master commands/box/add: clarify help text
+2014-05-23 12:18:44 #3005 passed:    master providers/docker: support for UDP forwarded ports [GH-3886]
+2014-05-22 12:28:28 #3003 passed:    master website/docs: calrify rsync [GH-3872]
+2014-05-22 12:25:13 #3002 passed:    master Update CHANGELOG
+2014-05-22 12:24:48 #3001 passed:    master Merge pull request #3874 from gpurkins/sol11-networkfix
+2014-05-22 12:23:06 #3000 passed:    master hosts/windows: RDP cap shouldn't remove tempfile [GH-3875]
+2014-05-22 12:18:00 #2999 passed:    master Merge pull request #3885 from kalmanh/symbols_syntax_19
+2014-05-22 12:14:32 #2998 passed:    master Merge pull request #3880 from cielavenir/document_putty
+2014-05-20 22:52:08 #2990 passed:    master Update CHANGELOG
+2014-05-20 22:51:04 #2989 passed:    master Merge pull request #3848 from shtouff/feat-capath
+2014-05-20 22:48:27 #2988 passed:    master hosts/windows: use subprocess to execute mstsc [GH-3837]
+2014-05-20 22:42:30 #2987 passed:    master providers/docker: verify host VM SSH is ready [GH-3838]
+2014-05-20 22:33:34 #2986 passed:    master Update CHANGELOG
+2014-05-20 22:33:15 #2985 passed:    master Merge pull request #3807 from mitchellh/fix-docker-ssh-wo-host-vm
+2014-05-20 22:32:35 #2984 passed:    master kernel/v2? more clever: default port to guest port
+2014-05-20 22:32:08 #2983 passed:    master kernel/v2: default SSH port to 22
+2014-05-20 22:24:26 #2982 passed:    master update CHANGELOG
+2014-05-20 22:23:41 #2981 passed:    master Merge pull request #3825 from marnovdm/feature/salt-windows-guest-provisioning
+2014-05-20 22:22:43 #2980 passed:    master website/docs: clearer provisioner ordering on multi-machine [GH-3833]
+2014-05-20 22:19:00 #2979 passed:    master commands/rdp: avoid rdp_info being nil
+2014-05-20 22:18:07 #2978 passed:    master commands/rdp: rdp_info cap if avail [GH-3832]
+2014-05-20 22:14:27 #2977 passed:    master communicators/winrm: use winrm_info cap if available [GH-3832]
+2014-05-20 21:59:15 #2976 passed:    master hosts/linux: niceer error if rdesktop not found
+2014-05-20 21:56:18 #2975 passed:    master hosts/linux: rdp_client cap [GH-3845]
+2014-05-20 21:51:42 #2974 passed:    master Update RDP error message since Windows only being supported isn't true
+2014-05-20 21:48:07 #2973 passed:    master providers/docker: don't port map SSH if no has_ssh [GH-3857]
+2014-05-20 21:40:12 #2972 passed:    master update CHANGELOG
+2014-05-20 21:39:26 #2971 passed:    master Merge pull request #3847 from mitchellh/command-line-too-long-fix-for-winrm
+2014-05-20 21:38:15 #2970 passed:    master providers/virtualbox: check VBOX_MSI_INSTALL_PATH on Win [GH-3852]
+2014-05-20 21:36:09 #2969 passed:    master core: don't port collision detect UDP [GH-3859]
+2014-05-20 21:32:50 #2968 passed:    master communicators/winrm: don't look up forwarded port if non-local [GH-3861]
+2014-05-20 21:24:54 #2967 passed:    master synced_folders/rsync: dup arg list [GH-3864]
+2014-05-19 23:32:22 #2966 passed:    master Merge pull request #3856 from hippich/fix/master/coreos_interface_name
+2014-05-19 04:17:18 #2954 passed:    master Update CHANGELOG
+2014-05-19 04:17:44 #2953 passed:    master Merge pull request #3818 from RabidGuppy/master
+2014-05-18 04:23:38 #2952 passed:    master Update CHANGELOG
+2014-05-18 04:22:51 #2951 passed:    master Merge pull request #3830 from cstrahan/nixos-guest
+2014-05-17 15:15:01 #2949 passed:    master providers/docker: retry container ssh command [GH-3763]
+2014-05-17 14:25:30 #2948 passed:    master guests/darwin: respect NFS mount options [GH-3791]
+2014-05-17 14:22:04 #2947 passed:    master Update CHANGELOG
+2014-05-17 14:20:22 #2946 passed:    master Merge pull request #3783 from YungSang/topic
+2014-05-17 14:18:06 #2945 passed:    master providers/docker: don't use graceful shutdown [GH-3798]
+2014-05-17 14:08:48 #2944 passed:    master core: cygwin_path only uses cygpath in cygwin [GH-3804]
+2014-05-17 14:02:51 #2943 passed:    master synced_folders/rsync: rsync__chown [GH-3810]
+2014-05-17 13:56:16 #2942 passed:    master core: WaitForCommunicator always asks for state
+2014-05-17 13:43:25 #2941 passed:    master Update CHANGELOG
+2014-05-17 13:42:30 #2940 passed:    master core: only set ID on machine if data dir [GH-3827]
+2014-05-15 11:40:13 #2933 passed:    master Merge pull request #3803 from mitchellh/issue-3729
+2014-05-14 10:34:36 #2929 passed:    master commands/halt: halt in reverse order [GH-3790]
+2014-05-13 20:13:57 #2928 passed:    master Merge pull request #3786 from treyhyde/master
+2014-05-13 11:58:02 #2924 passed:    master Update CHANGELOG
+2014-05-13 11:55:20 #2923 passed:    master Merge pull request #3776 from agilebarbecue/master
+2014-05-12 12:55:52 #2919 passed:    master website/www: up version for deploy
+2014-05-12 10:39:45 #2918 passed:    master v1.6.2
+2014-05-12 10:33:10 #2917 passed:    master Merge pull request #3753 from takekazuomi/fix/master/hypervdestroy
+2014-05-12 10:32:19 #2916 passed:    master Merge pull request #3755 from kura/vagrant-1.6-bash-completion
+2014-05-10 15:57:40 #2913 passed:    master Fix slash in CHANGELOG
+2014-05-10 15:55:46 #2912 passed:    master synced_folders\rsync: remove non-portable '-v' flag from chown [GH-3743]
+2014-05-10 13:47:31 #2911 passed:    master Merge pull request #3746 from Sharpie/travis-speed-bump
+2014-05-10 12:37:37 #2909 passed:    master core: don't double-include package in tar [GH-3637]
+2014-05-09 18:08:51 #2908 passed:    master guests/linux: exclude symlinks from chown search [GH-3744]
+2014-05-09 18:03:04 #2907 passed:    master core: providers can choose to not be defaultable [GH-3742]
+2014-05-09 18:00:06 #2906 passed:    master communicators/ssh: rescue another exception for reset
+2014-05-09 17:40:11 #2905 passed:    master Update CHANGELOG.md
+2014-05-09 17:39:36 #2904 passed:    master Merge pull request #3743 from zigg/fix/master/openbsd-rsync-chmod
+2014-05-09 12:29:53 #2902 passed:    master core: retry acquire of dotlock [GH-3735]
+2014-05-09 11:32:23 #2901 passed:    master synced_folders/rsync: copy symlinks as real files [GH-3734]
+2014-05-09 11:26:22 #2900 passed:    master core: can add box with name of directory [GH-3732]
+2014-05-09 11:23:53 #2899 passed:    master provisioners/puppet: windows module sep [GH-3731]
+2014-05-08 20:47:11 #2898 passed:    master providers/docker: ability to specify build dir synced folder opts [GH-3727]
+2014-05-08 20:39:58 #2897 passed:    master kernel/v2: multiple synced folder lines override each other
+2014-05-08 20:23:43 #2896 passed:    master synced_folders/nfs: allow disabling export [GH-3636]
+2014-05-08 16:56:35 #2895 passed:    master provisioners/shell: Fix shell provisioning when config.binary is set to false [GH-3712]
+2014-05-08 15:39:50 #2894 passed:    master kernel/v2: convert network type to symbol earlier
+2014-05-08 15:26:21 #2893 passed:    master website/docs: document SSL share [GH-3672]
+2014-05-08 15:16:08 #2892 passed:    master website/docs: make mention of docker provider on provisioner page
+2014-05-08 13:53:53 #2891 passed:    master Update CHANGELOG.md
+2014-05-08 13:49:19 #2890 passed:    master Merge pull request #3719 from goshakkk/docker-run-links-fix
+2014-05-08 12:07:22 #2888 passed:    master providers/docker: don't use HGFS on VMware fusion [GH-3687]
+2014-05-08 11:58:47 #2887 passed:    master core: properly yield in locker
+2014-05-08 11:57:25 #2886 passed:    master core: don't lock machines on SSH access
+2014-05-08 11:28:34 #2885 passed:    master Merge pull request #3717 from berendt/change_name_of_downloads
+2014-05-08 11:12:19 #2883 passed:    master kernel/v2: hostnames can be one character [GH-3713]
+2014-05-08 11:10:31 #2882 passed:    master Merge pull request #3714 from szuliq/patch-1
+2014-05-08 01:15:04 #2876 passed:    master website/www: version.txt
+2014-05-07 23:06:07 #2875 passed:    master provisioners/chef: Rename a unit test file
+2014-05-07 20:43:06 #2874 passed:    master website/docs: document docker build_args
+2014-05-07 20:35:27 #2873 passed:    master website/docs: document RDP raw args
+2014-05-07 20:33:23 #2872 passed:    master commands/rdp: support extra args to RDP client [GH-3686]
+2014-05-07 19:29:20 #2871 passed:    master Up version
+2014-05-07 19:23:11 #2870 passed:    master core: add more logging to check box outdated
+2014-05-07 17:36:50 #2869 passed:    master v1.6.1
+2014-05-07 17:13:25 #2868 passed:    master providers/docker: make sure command isn't scoped
+2014-05-07 17:13:05 #2867 passed:    master commands/docker-run: --help works [GH-3698]
+2014-05-07 17:11:04 #2866 passed:    master providers/docker: put sync folders in var lib docker [GH-3680]
+2014-05-07 17:01:57 #2865 passed:    master providers/docker: support custom shell properly [GH-3697]
+2014-05-07 12:21:54 #2863 passed:    master communicators/winrm: fix tests
+2014-05-07 12:01:33 #2862 failed:    master communicators/winrm: good_exit option
+2014-05-07 11:54:57 #2861 passed:    master Update CHANGELOG.md
+2014-05-07 11:54:25 #2860 passed:    master Merge pull request #3670 from p0deje/public_send
+2014-05-07 11:42:46 #2859 passed:    master Merge pull request #3673 from mitchellh/rename-docker-provider-specs
+2014-05-06 23:50:46 #2854 passed:    master providers/docker: can set default provider to docker [GH-3662]
+2014-05-06 21:01:51 #2853 passed:    master guests/windows: nicer error if winrm not in use to configure networks [GH-3651]
+2014-05-06 20:42:27 #2852 passed:    master guests/*: setup rsync_pre properly
+2014-05-06 18:29:01 #2851 passed:    master commands/reload: if --provision is present, force provision [GH-3657]
+2014-05-06 16:53:43 #2850 passed:    master Update CHANGELOG.md
+2014-05-06 16:51:20 #2849 passed:    master Merge pull request #3654 from mithaler/patch-1
+2014-05-06 15:54:52 #2847 passed:    master providers/virtualbox: package --base should use vboxsf
+2014-05-06 15:47:09 #2846 passed:    master synced_folders/rsync: mkdir before rsync
+2014-05-06 15:41:09 #2845 passed:    master core: no active machines if there is no vagrant env
+2014-05-06 15:33:16 #2844 passed:    master Update CHANGELOG
+2014-05-06 15:30:36 #2843 failed:    master Revert "Merge pull request #3643 from cammoraton/rhel7-plugin-fixes"
+2014-05-06 15:15:52 #2842 passed:    master providers/virtualbox: check for provider config nilness
+2014-05-06 14:55:22 #2841 passed:    master Update CHANGELOG
+2014-05-06 14:58:20 #2840 passed:    master Merge pull request #3648 from chrisvire/fix/master/add_mint_guest
+2014-05-06 14:50:57 #2839 passed:    master Up version for dev
+2014-05-06 11:30:41 #2836 passed:    master website/www: 1.6 post
+2014-05-06 11:06:29 #2835 passed:    master v1.6.0
+2014-05-06 10:57:18 #2834 passed:    master Update CHANGELOG
+2014-05-06 11:01:10 #2833 passed:    master Merge pull request #3638 from jtopper/nfs-sudo-improvements
+2014-05-06 10:55:45 #2832 passed:    master website/docs: update docs for NFS sudoers
+2014-05-06 10:53:11 #2831 passed:    master Update CHANGELOG.md
+2014-05-06 10:51:19 #2830 passed:    master Merge pull request #3643 from cammoraton/rhel7-plugin-fixes
+2014-05-06 10:42:31 #2829 passed:    master Merge pull request #3642 from jyggen/patch-2
+2014-05-06 08:09:39 #2826 passed:    master Merge pull request #3640 from felixrabe/patch-1
+2014-05-06 00:07:10 #2821 passed:    master providers/docker: don't reload if not created
+2014-05-06 00:03:16 #2820 passed:    master providers/docker: smarter destroy, does not require host machine
+2014-05-05 23:53:33 #2819 passed:    master providers/*: use special NOT_CREATED_ID if not created
+2014-05-05 23:51:50 #2818 passed:    master core: MachineIndex valid test is better
+2014-05-05 23:45:40 #2817 failed:    master core: if state ID is NOT_CREATED_ID, destroy machine state
+2014-05-05 23:37:47 #2816 failed:    master providers/docker: less hack way to clear ID if not created
+2014-05-05 23:36:03 #2815 failed:    master providers/docker: smarter about setting ID to nil for machine
+2014-05-05 23:31:11 #2814 failed:    master core: MachineIndex#valid? checks state and ID again
+2014-05-05 23:18:41 #2813 passed:    master core: Environment#cwd should expand path to full path
+2014-05-05 23:16:37 #2812 passed:    master website/docs: document global-status upgrade notes
+2014-05-05 23:15:05 #2811 passed:    master providers/virtualbox: higher priority than default
+2014-05-05 23:14:35 #2810 passed:    master providers/hyperv: lower priority for Windows
+2014-05-05 17:45:44 #2808 passed:    master providers/virtualbox: don't do transient by default
+2014-05-05 11:36:37 #2807 passed:    master guests/debian: more tests for hostname
+2014-05-05 11:33:57 #2806 passed:    master guests/debian: fix tests
+2014-05-05 11:24:13 #2805 failed:    master Merge pull request #3632 from gildegoma/ansible-random-errors
+2014-05-04 20:49:30 #2803 failed:    master Update CHANGELOG.md
+2014-05-04 20:33:26 #2802 failed:    master guests/debian: setting hostname works without 127.0.1.1 [GH-3271]
+2014-05-04 19:49:02 #2801 failed:    master guests/linux: LANG=en for ifconfig [GH-3029]
+2014-05-04 19:39:11 #2800 passed:    master website/docs: update init command
+2014-05-04 19:37:33 #2799 passed:    master commands/init: minimal flag [GH-3611]
+2014-05-04 19:34:43 #2798 passed:    master Update CHANGELOG
+2014-05-04 19:33:48 #2797 passed:    master Merge pull request #3625 from sciurus/check_nfs_usability
+2014-05-04 19:32:46 #2796 passed:    master providers/hyperv: vagrant ssh_run action [GH-3615]
+2014-05-04 19:18:04 #2795 passed:    master Update CHANGELOG.md
+2014-05-04 19:17:24 #2794 passed:    master Merge pull request #3628 from gildegoma/ansible-show-cmd
+2014-05-04 16:26:47 #2793 passed:    master Merge pull request #3630 from also/patch-1
+2014-05-04 14:29:40 #2789 passed:    master provisioners/ansible: minor change in unit tests
+2014-05-04 11:07:44 #2788 passed:    master Merge pull request #3626 from glensc/patch-1
+2014-05-03 11:18:45 #2785 passed:    master core: Show message when checksumming box [GH-3623]
+2014-05-02 22:19:18 #2783 passed:    master website/docs: document NAT interface [GH-3619]
+2014-05-02 17:31:20 #2782 passed:    master Merge pull request #3616 from aspiers/virtualbox-networking-doc
+2014-05-02 17:31:13 #2781 passed:    master Merge pull request #3618 from aspiers/box-format-doc-improvements
+2014-05-02 12:08:23 #2777 failed:    master website/docs: virtualbox [GH-3609]
+2014-05-02 12:05:41 #2776 failed:    master website/docs: update box format [GH-3613]
+2014-05-02 11:56:37 #2775 failed:    master Update completion.sh
+2014-05-01 23:35:48 #2773 passed:    master communicators/ssh: detect if config.ssh.shell is non-functional [GH-3040]
+2014-05-01 23:20:05 #2772 passed:    master Update net-ssh dep [GH-3605]
+2014-05-01 23:16:31 #2771 passed:    master website/docs: don't need a static IP for NFS [GH-3608]
+2014-05-01 23:15:41 #2770 passed:    master core: Allow insecure RubyGems for plugins [GH-3610]
+2014-05-01 19:44:22 #2769 passed:    master Merge pull request #3607 from aspiers/maintiner-typo
+2014-05-01 17:51:36 #2766 failed:    master Update CHANGELOG
+2014-05-01 17:47:43 #2765 failed:    master Merge pull request #3604 from lamont-granquist/lcg/fix-prerelease-versions
+2014-05-01 16:54:54 #2762 passed:    master website/docs: Fix link to global-status command
+2014-05-01 16:53:20 #2761 passed:    master website/docs: Add missing `end` to "Run Once or Always" example
+2014-05-01 15:52:21 #2760 passed:    master Update CHANGELOG
+2014-05-01 15:50:24 #2759 failed:    master Merge pull request #3603 from eykd/feature/colorize-salt-output
+2014-05-01 12:23:40 #2757 passed:    master providers/docker: choose proper provider for host VM
+2014-05-01 12:20:45 #2756 passed:    master Update CHANGELOG
+2014-05-01 12:21:33 #2755 passed:    master Merge pull request #3600 from mitchellh/f-default-provider
+2014-05-01 11:16:31 #2746 passed:    master Update CHANGELOG
+2014-05-01 11:10:49 #2745 passed:    master Merge pull request #3599 from mitchellh/deprecate-warnings-for-unused-halt-config-props
+2014-05-01 10:38:22 #2742 passed:    master Merge pull request #3594 from aspiers/provider-config-doc-typo
+2014-05-01 10:34:47 #2741 passed:    master Merge pull request #3595 from berendt/topy
+2014-05-01 10:31:43 #2740 passed:    master Merge pull request #3597 from mitchellh/update-website-docs-halt-timeout-default-value
+2014-05-01 10:30:33 #2739 passed:    master Merge pull request #3598 from mitchellh/remove-halt-timeout-from-windows-guest
+2014-05-01 02:12:25 #2730 passed:    master website/docs: global-status
+2014-05-01 01:47:26 #2729 passed:    master Merge pull request #3593 from mitchellh/elevated-winrm-shell-provisioner
+2014-04-30 20:54:05 #2726 passed:    master website/docs: run once and always provisioners
+2014-04-30 20:51:07 #2725 passed:    master website/docs: force flags on init and box remove
+2014-04-30 20:47:14 #2724 passed:    master website/docs: rdp command
+2014-04-30 19:47:18 #2723 passed:    master Merge pull request #3592 from mitchellh/reboot-capability-should-fix-symlinks
+2014-04-30 19:10:18 #2720 passed:    master providers/virtualbox: set proper mac address on priv net [GH-3588]
+2014-04-30 17:35:38 #2719 failed:    master Update travis, don't need to install custom Bundler
+2014-04-30 17:34:50 #2718 passed:    master Merge pull request #3587 from aspiers/bundler-1.6
+2014-04-30 17:33:10 #2717 errored:   master privisoners/salt: proper bootstrap URL [GH-3583]
+2014-04-30 12:12:13 #2714 errored:   master Update README
+2014-04-30 11:23:51 #2713 errored:   master Merge pull request #3585 from aspiers/backport-3277-old-virtualboxen
+2014-04-30 11:22:44 #2712 errored:   master providers/docker: use the proper class
+2014-04-29 19:04:57 #2710 passed:    master Merge pull request #3581 from aspiers/require-ruby-2.x
+2014-04-29 19:03:10 #2708 passed:    master Fix tests
+2014-04-29 18:54:13 #2707 failed:    master core: Lock in plugin install of a specific version
+2014-04-29 18:51:49 #2706 passed:    master Handle a lot of TODOs
+2014-04-29 18:49:01 #2705 passed:    master Removing some old files
+2014-04-29 18:33:59 #2704 passed:    master Merge pull request #3580 from mitchellh/f-tty-docker-run
+2014-04-29 16:29:47 #2701 passed:    master providers/docker: clearer options on docker-logs
+2014-04-29 16:18:36 #2700 passed:    master providers/docker: raise better error for local executor
+2014-04-29 11:58:32 #2699 passed:    master website/www: feature preview docker provider
+2014-04-29 11:50:30 #2698 passed:    master Update CHANGELOG.md
+2014-04-29 11:48:25 #2697 passed:    master Merge pull request #3575 from shadowfax-chc/salt-provision-private-key-perms
+2014-04-28 22:23:00 #2694 passed:    master commands/init: force flag [GH-3564]
+2014-04-28 16:50:49 #2693 passed:    master synced_folders/rsync: fix oddness on Windows
+2014-04-28 13:13:44 #2692 failed:    master providers/docker: expand path to share relative to docker env
+2014-04-28 11:44:24 #2691 failed:    master providers/docker: be more lenient about deleting built image
+2014-04-27 21:37:01 #2690 passed:    master providers/docker: destroy built image on up
+2014-04-27 21:23:02 #2689 passed:    master providers/docker: can docker-run non-existent containers
+2014-04-27 21:07:26 #2688 passed:    master providers/docker: don't show cmd if one is not specified
+2014-04-27 21:00:28 #2687 passed:    master whitespace
+2014-04-27 20:54:01 #2686 passed:    master Merge pull request #3560 from mitchellh/f-docker-run
+2014-04-27 18:37:48 #2679 passed:    master whitespace
+2014-04-27 18:01:44 #2678 passed:    master CHANGELOG
+2014-04-27 18:01:23 #2677 passed:    master Merge pull request #3544 from benesch/rsync-conservative-chown
+2014-04-27 17:59:31 #2676 passed:    master Update CHANGELOG
+2014-04-27 17:58:31 #2675 failed:    master Merge pull request #3549 from javornikolov/fix-vbox-install-path-detect-on-windows
+2014-04-27 17:57:52 #2674 passed:    master Merge pull request #3551 from benesch/3550
+2014-04-27 17:56:12 #2673 passed:    master Update CHANGELOG
+2014-04-27 17:56:02 #2672 passed:    master Merge pull request #3552 from benesch/rsync-auto-handle-interrupt
+2014-04-27 17:54:38 #2671 passed:    master Update CHANGELOG, fix tests
+2014-04-27 17:53:00 #2670 failed:    master Merge pull request #3553 from bclarkindy/rsync_ssh_proxy
+2014-04-27 17:52:05 #2669 passed:    master Merge pull request #3554 from mitchellh/chef-provisioner-cleanup
+2014-04-27 17:51:20 #2668 passed:    master Update CHANGELOG
+2014-04-27 17:50:24 #2667 passed:    master Merge pull request #3557 from shadowfax-chc/correct-bootstrap-args
+2014-04-26 07:12:35 #2658 passed:    master provisioners/ansible: fix unit tests for [GH-3491]
+2014-04-25 15:15:15 #2654 passed:    master provisioners/ansible: fix an error in a unit test
+2014-04-25 04:03:56 #2652 passed:    master core: Box#in_use? as an API
+2014-04-25 03:37:14 #2651 passed:    master core: clean up the lock cleanup code, tests
+2014-04-25 01:13:58 #2650 passed:    master core: delete environment lock files
+2014-04-25 01:00:21 #2649 passed:    master core: more liberally release port leases
+2014-04-25 00:51:55 #2648 passed:    master Update CHANGELOG
+2014-04-24 22:11:30 #2647 passed:    master Update CHANGELOG
+2014-04-24 22:10:31 #2646 passed:    master Merge pull request #3540 from mitchellh/f-version-command
+2014-04-24 21:36:40 #2641 passed:    master website/www: add latest-version.json to website
+2014-04-24 21:16:55 #2640 passed:    master Update CHANGELOG
+2014-04-24 21:15:17 #2639 passed:    master Merge pull request #3536 from shadowfax-chc/force-overwrite-salt-configs
+2014-04-24 13:58:49 #2638 passed:    master Update CHANGELOG
+2014-04-24 12:47:05 #2637 passed:    master Merge pull request #3538 from mitchellh/f-box-usage
+2014-04-24 12:22:11 #2635 passed:    master Merge pull request #3533 from ronnix/patch-1
+2014-04-24 10:55:15 #2633 passed:    master Merge pull request #3535 from mitchellh/winrm-command-filters-code-review-feedback
+2014-04-24 04:18:59 #2629 passed:    master website/docs: document ssh proxy_command [GH-3521]
+2014-04-24 03:39:37 #2628 passed:    master Merge pull request #3530 from mitchellh/linux-command-filters-for-winrm-communicator
+2014-04-23 23:37:45 #2625 passed:    master Merge pull request #3527 from mitchellh/windows-unit-test-code-review-feedback
+2014-04-23 08:03:08 #2617 passed:    master Merge pull request #3517 from mitchellh/communicator-support-for-wql
+2014-04-23 08:03:16 #2616 passed:    master Merge pull request #3519 from mitchellh/windows-guest-file-manager
+2014-04-23 08:01:33 #2615 passed:    master Merge pull request #3516 from mitchellh/backfill-windows-guest-unit-tests
+2014-04-21 22:40:49 #2606 passed:    master synced_folders/rsync: add UserKnownHostsFile to /dev/null [GH-3511]
+2014-04-21 22:38:55 #2605 passed:    master providers/docker: doesn't support NFS if b2d [GH-3510]
+2014-04-21 22:38:09 #2604 passed:    master synced_folders/nfs: can say functional is false explicitly
+2014-04-21 15:58:23 #2603 passed:    master Up version for dev
+2014-04-21 15:03:46 #2602 passed:    master website/www: version for deploy
+2014-04-21 13:51:12 #2600 passed:    master v1.5.4
+2014-04-21 13:50:37 #2599 passed:    master Update CHANGELOG
+2014-04-21 13:49:32 #2598 passed:    master Merge pull request #3506 from rasschaert/master
+2014-04-21 10:52:46 #2597 passed:    master website/www: feature preview windows guests
+2014-04-18 23:17:51 #2574 passed:    master command/rsync-auto: proper require
+2014-04-18 22:47:23 #2572 passed:    master commands/box/list: doesn't trigger Vagrantfile loading
+2014-04-17 16:53:21 #2543 passed:    master Merge pull request #3497 from jingchan/master
+2014-04-17 16:31:25 #2540 passed:    master Update CHANGELOG
+2014-04-17 16:00:32 #2539 passed:    master providers/hyperv: provision action [GH-3494]
+2014-04-17 11:03:49 #2538 passed:    master core: remove temp file when done with box
+2014-04-16 11:27:52 #2518 passed:    master Update CHANGELOG
+2014-04-16 11:28:01 #2517 passed:    master Merge pull request #3486 from benesch/fix-rsync-owner-group-linux
+2014-04-15 15:10:28 #2491 passed:    master provisioners/docker: debian install should apt-get update
+2014-04-15 14:25:05 #2488 passed:    master provisioners/docker: configure autostart works if OS can't check status
+2014-04-15 14:21:57 #2487 passed:    master provisioners/docker: UPDATE CHANGELOG
+2014-04-15 14:19:44 #2486 passed:    master Merge pull request #3482 from hsume2/hsume2/fix_not_enough_time_for_docker_restart
+2014-04-15 12:47:14 #2484 passed:    master core: allow overriding default SSH port [GH-3474]
+2014-04-15 12:18:44 #2483 passed:    master website/www: 1.6 feature preview: global status and control
+2014-04-14 20:57:02 #2474 passed:    master commands/box/update: show current version [GH-3467]
+2014-04-14 19:08:32 #2473 passed:    master Update CHANGELGO
+2014-04-14 19:08:01 #2472 passed:    master Merge pull request #3470 from berendt/fixes_pull_request_3452
+2014-04-14 19:06:58 #2471 passed:    master guests/coreos: fix test for docker daemon running
+2014-04-14 19:06:36 #2470 passed:    master provisioners/docker: fix linux cap for daemon running
+2014-04-14 12:26:59 #2468 passed:    master synced_folders/rsync: force NIO4R_PURE
+2014-04-14 09:42:33 #2467 passed:    master website/www: up version for deploy
+2014-04-14 00:29:43 #2462 passed:    master Up version for dev
+2014-04-14 00:19:51 #2461 passed:    master v1.5.3
+2014-04-13 16:26:04 #2457 passed:    master core: use process.alive? to avoid exceptions
+2014-04-13 16:11:39 #2456 passed:    master Merge pull request #3465 from mjfroehlich/patch-1
+2014-04-12 20:05:01 #2445 passed:    master Fix tests
+2014-04-12 20:01:23 #2444 failed:    master commands/box/repackage: better error if box not found
+2014-04-12 19:59:18 #2443 failed:    master Update CHANGELOG
+2014-04-12 17:26:54 #2435 passed:    master Update CHANGELOG
+2014-04-12 17:25:58 #2434 passed:    master Merge pull request #3452 from berendt/box_update_sort_versions
+2014-04-12 17:25:14 #2433 passed:    master Merge pull request #3287 from gildegoma/ansible-unit-tests
+2014-04-11 23:16:50 #2413 passed:    master Merge pull request #3436 from gildegoma/ansible-inventory-path
+2014-04-11 20:59:49 #2412 passed:    master website/docs: remove vagrant box info [GH-3110]
+2014-04-11 20:50:54 #2411 passed:    master provisioners/docker: auto-assigned name shouldn't have / [GH-3216]
+2014-04-11 20:34:30 #2410 passed:    master website/docs: clarify command line for multi-machine
+2014-04-11 18:29:26 #2405 passed:    master core: Fix tests, which found broken logic in synced folders
+2014-04-11 18:22:21 #2404 failed:    master core: all symlinks for synced folders are expanded [GH-3444]
+2014-04-11 18:18:20 #2403 passed:    master communicators/ssh: throttle warnings [GH-3442]
+2014-04-11 16:59:25 #2401 passed:    master Last bug fix is actually an improvement
+2014-04-11 16:58:31 #2400 passed:    master Update CHANGELOG
+2014-04-11 16:54:48 #2399 passed:    master Merge pull request #3446 from brenttheisen/rsync_auto_nothing_to_watch_pr
+2014-04-11 16:38:43 #2397 passed:    master communicators/ssh: only show warnings after a few attempts [GH-3442]
+2014-04-11 12:04:51 #2396 passed:    master style
+2014-04-11 11:59:28 #2395 passed:    master Merge pull request #3445 from Mulkave/fix/master/missing-translation-docker-building-images
+2014-04-11 11:41:16 #2393 passed:    master core: No need to map! here
+2014-04-11 11:40:08 #2392 passed:    master Merge pull request #3441 from berendt/sort_versions_and_print_listing
+2014-04-11 11:39:09 #2391 passed:    master Nitpick on messaging
+2014-04-11 11:38:27 #2390 passed:    master Merge pull request #3438 from berendt/show_version_when_removing_a_specific_box
+2014-04-11 11:37:03 #2389 passed:    master Merge pull request #3440 from berendt/fixing_typo_001
+2014-04-10 15:58:03 #2381 passed:    master Remove this, supposed to be in vagrant-next
+2014-04-10 15:57:24 #2380 passed:    master guests/coreos: docker_daemon_running cap [GH-3425]
+2014-04-10 10:59:15 #2367 passed:    master kernel/v2: clear ID field so its not passed to provisioner [GH-3424]
+2014-04-09 16:40:08 #2359 passed:    master website/docs: clarify docker
+2014-04-09 16:28:16 #2358 passed:    master Update CHANGELOG
+2014-04-09 16:27:40 #2357 passed:    master Merge pull request #3423 from bmorg/fix_empty_shell_provisioner_error
+2014-04-09 16:26:26 #2356 passed:    master core: can't add boxes from network shares [GH-3279]
+2014-04-09 13:21:17 #2351 passed:    master guests/linux: rsync chown group if owner now set [GH-3223]
+2014-04-09 13:15:53 #2350 passed:    master Tests passing again
+not yet #2349 canceled:  master commands/package: Nicer error if includes has symlinks [GH-3200]
+2014-04-09 13:06:50 #2348 failed:    master guests/linux: SMB mounts with symbol passwords work [GH-3202]
+2014-04-09 13:03:20 #2347 failed:    master guests/linux: don't show SMB password in plaintext on error [GH-3203]
+2014-04-09 12:17:04 #2346 failed:    master core: give users chance to quit for upgrade [GH-3212]
+2014-04-09 12:06:34 #2345 passed:    master No, we really need listen 2.7.1
+2014-04-09 12:05:19 #2344 passed:    master command/rsync-auto: use newer listen gem [GH-3249]
+2014-04-09 11:47:34 #2343 passed:    master providers/hyperv: verify cmdlet is available [GH-3398]
+2014-04-09 11:27:04 #2342 passed:    master commands/rsync-auto: do an initial sync [GH-3327]
+2014-04-09 11:15:54 #2341 passed:    master synced_folders/rsync: don't crash if comm error during rsync-auto [GH-3419]
+2014-04-09 11:05:28 #2340 passed:    master Clean up the Vagrantfile template
+2014-04-09 11:00:11 #2339 passed:    master Merge pull request #3405 from timcooper/smb-escape-path
+2014-04-07 19:05:37 #2336 passed:    master Merge pull request #3410 from zzamboni/cfengine-in-vagrantfile-template
+2014-04-07 18:15:56 #2334 passed:    master Merge pull request #3409 from zzamboni/cfengine-provisioner-docs
+2014-04-07 11:39:55 #2331 passed:    master Merge pull request #3404 from timcooper/smb-errors
+2014-04-05 11:38:47 #2323 passed:    master Add comment to clarify
+2014-04-05 11:37:40 #2322 passed:    master core: randomize perm test filename
+2014-04-05 11:27:27 #2321 passed:    master website/docs: fix incorrect config option for p uppet
+2014-04-05 11:25:55 #2320 passed:    master core: network issues don't halt Vagrant during box update check [GH-3391]
+2014-04-05 11:12:50 #2319 passed:    master website/docs: note box update checking enabled by default [GH-3391]
+2014-04-05 11:10:39 #2318 passed:    master Update CHANGELOG
+2014-04-05 11:10:04 #2317 passed:    master Merge pull request #3382 from ndemonner/fix-fedora
+2014-04-05 11:09:47 #2316 passed:    master Update CHANGELOG
+2014-04-05 11:08:38 #2315 passed:    master Merge pull request #3207 from khiro/support_fedora_predictable_network_interface_names
+2014-04-05 11:06:29 #2314 passed:    master synced_folders/rsync: style
+2014-04-05 11:01:06 #2313 passed:    master Merge pull request #3394 from Arxisos/master
+2014-04-04 08:35:20 #2307 passed:    master Merge pull request #3384 from joanbarros/patch-1
+2014-04-02 21:51:32 #2304 passed:    master core: BoxCollection#find version constraint can benil
+2014-04-02 21:46:45 #2303 failed:    master core: Allow direct box adding again
+2014-04-02 17:24:25 #2301 passed:    master kernel/v2: check if type is set before validation
+2014-04-02 16:57:38 #2300 passed:    master website/www: up for deploy
+2014-04-02 15:56:11 #2298 passed:    master v1.5.2
+2014-04-02 12:02:19 #2297 passed:    master TemplateRenderer can take a new root [GH-3231]
+2014-04-02 11:54:30 #2296 passed:    master synced_folders/smb: verify PowerShell v3 is running or later [GH-3257]
+2014-04-02 11:42:30 #2295 passed:    master core: don't allow version for old-style box [GH-3260]
+2014-04-02 11:14:54 #2294 passed:    master synced_folders/rsync: set chmod flag by default on Windows [GH-3256]
+2014-04-02 10:53:47 #2293 passed:    master website/docs: update docker provisioner
+2014-04-02 10:45:00 #2292 passed:    master core: outdated check checks local boxes [GH-3321]
+2014-04-02 10:31:25 #2291 passed:    master core: ignore if box doesn't exist on update check [GH-3326]
+2014-04-02 10:16:57 #2290 passed:    master Merge pull request #3374 from follower/patch-1
+2014-04-02 00:49:48 #2288 passed:    master core: better error when adding box with malformed version [GH-3332]
+2014-04-02 00:33:43 #2287 passed:    master Update CHANGELOG
+2014-04-02 00:33:10 #2286 passed:    master Merge pull request #3292 from skinofstars/master
+2014-04-02 00:30:25 #2285 passed:    master Update CHANGELOG
+2014-04-02 00:30:04 #2284 passed:    master Merge pull request #3293 from emyl/machine-readable-plugin-list
+2014-04-02 00:29:53 #2283 passed:    master core: lock prerelease gems
+2014-04-02 00:26:37 #2282 passed:    master Merge pull request #3301 from mitchellh/fix-issue-3285
+2014-04-02 00:19:28 #2281 passed:    master core: Ignore if temporary box file doesn't exist when adding
+2014-04-02 00:05:50 #2280 passed:    master commands/box: show version
+2014-04-02 00:05:09 #2279 passed:    master Merge pull request #3316 from berendt/issue_3313
+2014-04-02 00:04:23 #2278 passed:    master Update CHANGELOG
+2014-04-02 00:03:35 #2277 passed:    master Merge pull request #3318 from ecoleman/patch-1
+2014-04-02 00:02:40 #2276 passed:    master Update CHANGELOG
+2014-04-02 00:01:57 #2275 passed:    master Merge pull request #3323 from mattoxbeckman/fix/master/reload-arch-udev-rules
+2014-04-02 00:00:06 #2274 passed:    master Update CHANGELOG
+2014-04-01 23:59:26 #2273 passed:    master Merge pull request #3337 from MSOpenTech/fix-issue-3336
+2014-04-01 23:58:31 #2272 passed:    master kernel/v2: allow private network type to be a string [GH-3349]
+2014-04-01 23:54:56 #2271 passed:    master Update CHANGELOG
+2014-04-01 23:54:44 #2270 passed:    master Merge pull request #3354 from Coffee-fan/master
+2014-04-01 23:53:45 #2269 passed:    master Update CHANGELOG
+2014-04-01 23:53:24 #2268 passed:    master Merge pull request #3355 from miurahr/fix_ssh_utf8
+2014-04-01 23:53:10 #2267 passed:    master Update cHANGELOG
+2014-04-01 23:51:57 #2266 passed:    master Merge pull request #3356 from pmenglund/docker_deprecated_arguments
+2014-04-01 23:51:28 #2265 passed:    master Merge branch 'fix-suse-shutdown-not-found' of github.com:philippfranke/vagrant into philippfranke-fix-suse-shutdown-not-found
+2014-04-01 23:49:05 #2264 passed:    master core: add test for removing box version [GH-3364]
+2014-04-01 23:43:45 #2263 passed:    master Merge pull request #3364 from berendt/fix_issue_3344
+2014-04-01 23:42:03 #2262 passed:    master Update CHANGELOG
+2014-04-01 23:41:33 #2261 passed:    master Merge pull request #3365 from oscarrenalias/master
+2014-04-01 23:41:33 #2260 passed:    master Update CHANGELOG
+2014-04-01 23:40:04 #2259 passed:    master Merge pull request #3368 from davidkuridza/add-missing-vm-status-translation
+2014-04-01 16:46:48 #2258 passed:    master Merge pull request #3371 from odigity/master
+2014-03-27 11:21:48 #2244 passed:    master Merge pull request #3342 from jaikdean/ansible-docs-grammar
+2014-03-21 19:49:32 #2230 passed:    master communicators/ssh: change wording on retry
+2014-03-20 19:58:20 #2227 passed:    master providers/virtualbox: fix missing interpolation [GH-3277]
+2014-03-20 19:53:27 #2226 passed:    master guests/debian: don't return from block [GH-3283]
+2014-03-20 19:51:21 #2225 passed:    master Merge pull request #3102 from sax/smartos
+2014-03-20 19:43:30 #2224 passed:    master Update CHANGELOG
+2014-03-20 19:43:02 #2223 passed:    master Merge pull request #3272 from pbitty/fix_provision_config
+2014-03-20 19:41:58 #2222 passed:    master Merge pull request #3281 from justincwatt/update-virtualbox-boxes-docs
+2014-03-20 19:41:16 #2221 passed:    master Update CHANGELOG
+2014-03-20 19:40:19 #2220 passed:    master Update CHANGELOG
+2014-03-20 19:36:59 #2219 passed:    master Merge pull request #3282 from mivok/nfs_omnios
+2014-03-19 11:42:18 #2214 passed:    master Merge pull request #3242 from uwej711/patch-1
+2014-03-19 11:40:53 #2213 passed:    master Merge pull request #3251 from andyclarke/fix/master/smbpasswordquotes
+2014-03-14 16:31:30 #2195 passed:    master Merge pull request #3222 from rissem/master
+2014-03-14 16:06:20 #2193 passed:    master core: check for data_dir [GH-3208]
+2014-03-14 15:08:06 #2192 passed:    master commands/status: target for machine readable [GH-3218]
+2014-03-14 15:05:24 #2191 passed:    master synced_folders/smb: hash ID so it is short enough [GH-3219]
+2014-03-14 10:35:39 #2177 passed:    master Merge pull request #3210 from jyggen/patch-1
+2014-03-14 10:32:17 #2176 passed:    master Merge pull request #3215 from fgrehm/transpec-unit
+2014-03-13 16:25:24 #2172 passed:    master Update CHANGELOG
+2014-03-13 13:43:13 #2170 passed:    master Up version for dev
+2014-03-13 13:37:27 #2169 passed:    master website/www: update for deploy
+2014-03-13 11:56:55 #2167 passed:    master v1.5.1
+2014-03-13 11:55:51 #2166 passed:    master guests/linux: one more time
+2014-03-13 11:55:43 #2165 passed:    master guests/linux: check for proper owner [GH-3186]
+2014-03-13 11:54:51 #2164 passed:    master guests/linux: rsync only chown if invalid user/group [GH-3186]
+2014-03-13 11:01:18 #2163 passed:    master core: vagrant help no longer loads Vagrantfile
+2014-03-13 11:01:08 #2162 passed:    master core: Downloads with user/pass use curl -u flag [GH-3183]
+2014-03-13 10:36:54 #2161 passed:    master kernel/v2: validate forwarded ports [GH-3187]
+2014-03-13 10:29:48 #2160 passed:    master Merge pull request #3189 from mitchellh/docs-www-vagrant-cloud
+2014-03-12 22:43:37 #2156 passed:    master Error message if tampering with plugins.json
+2014-03-12 22:33:52 #2155 passed:    master core: error earlier if adding a path that doesn't exist
+2014-03-12 22:05:58 #2153 passed:    master provisioners/salt: style nitpicks
+2014-03-12 22:02:55 #2152 passed:    master providers/virtualbox: import progress works on Windows
+2014-03-12 21:51:05 #2151 passed:    master core: Execute PowerShell scripts even with spaces in dir [GH-3100]
+2014-03-12 21:41:25 #2150 passed:    master synced_folders/rsync: don't watch excluded paths [GH-3159]
+2014-03-12 20:45:06 #2149 passed:    master synced_folders/rsync: execute rsync_post cap if it exists [GH-3163]
+2014-03-12 20:38:11 #2148 passed:    master Update CHANGELOG
+2014-03-12 20:37:34 #2147 passed:    master Merge pull request #3167 from xraj/bugfix/linux-nfs-exports-regex
+2014-03-12 20:36:44 #2146 passed:    master website/docs: note that rsync__args needs to be array [GH-3168]
+2014-03-12 20:34:24 #2145 passed:    master website/docs: doc windows gotcha [GH-3170]
+2014-03-12 20:30:33 #2144 passed:    master website/docs: clean up example
+2014-03-12 20:29:29 #2143 passed:    master Merge pull request #3174 from freshteapot/3173
+2014-03-12 20:28:46 #2142 passed:    master Update CHANGELOG
+2014-03-12 20:26:38 #2141 passed:    master Merge pull request #3178 from cuberri/fix/master/tinycore-rsync_install
+2014-03-12 11:52:46 #2134 passed:    master Clarify error message on missing b ox
+2014-03-12 11:21:25 #2133 passed:    master website/docs: document provider share impl [GH-3144]
+2014-03-12 11:10:31 #2132 passed:    master Merge pull request #3145 from Fuhrmann/master
+2014-03-12 10:55:46 #2131 passed:    master Merge branch 'patch-1' of https://github.com/schlamar/vagrant into schlamar-patch-1
+2014-03-12 10:51:43 #2130 passed:    master Update CHANGELOG
+2014-03-12 10:47:11 #2129 passed:    master Merge pull request #3154 from mway/fix-osx-guest-namespace
+2014-03-11 13:32:40 #2116 passed:    master Update CHANGELOG
+2014-03-11 13:31:39 #2115 passed:    master core: Windows paths work for box add [GH-3132]
+2014-03-11 13:14:03 #2113 passed:    master Fix failing tests on Windows
+2014-03-11 13:11:11 #2112 passed:    master core: output when upgrading home path
+2014-03-11 13:05:22 #2111 passed:    master Missing translation [GH-3130]
+2014-03-11 12:04:24 #2110 passed:    master core: UI#ask with no echo works even if noecho not supported [GH-3119]
+2014-03-11 11:36:16 #2109 passed:    master Merge pull request #3112 from Krazylee/fix-typo
+2014-03-11 11:09:58 #2108 passed:    master Merge pull request #3126 from bbinet/fix-salt-provisioning
+2014-03-11 11:08:30 #2107 passed:    master provisioners/ansible: request SSH info within provisoin [GH-3111]
+2014-03-11 10:52:18 #2106 passed:    master providers/virtualbox: style nitpick
+2014-03-11 10:48:24 #2105 passed:    master core: Assume box isn't metadata if > threshold [GH-3107]
+2014-03-10 17:34:33 #2092 passed:    master Merge pull request #3097 from jjshoe/patch-1
+2014-03-10 17:20:47 #2088 passed:    master website/www; simplify homepage
+2014-03-10 17:14:16 #2084 passed:    master core: Setup the tmp_path before calling setup_home_path [GH-3095]
+2014-03-10 16:36:44 #2083 passed:    master Update CHANGELOG
+2014-03-10 16:34:20 #2082 passed:    master core: EINVAL is not a metadata URL
+2014-03-10 15:47:03 #2081 passed:    master kernel/v1: provisioner upgrade works properly [GH-3092]
+2014-03-10 14:12:01 #2079 passed:    master website/www: 1.5 post: a very pleasant typo fix
+2014-03-10 11:53:25 #2078 passed:    master website/www: update index
+2014-03-10 11:47:18 #2077 passed:    master website/docs: update gemfile.lock
+2014-03-10 11:38:35 #2076 passed:    master website/www: release blog post
+2014-03-10 10:34:04 #2074 passed:    master Merge pull request #3090 from adamlazz/contrib-st3
+2014-03-10 00:54:55 #2072 errored:   master Up version for dev
+2014-03-10 00:51:06 #2071 passed:    master v1.5.0
+2014-03-10 00:48:39 #2070 passed:    master More wording changes on version conflicts
+2014-03-10 00:42:42 #2069 passed:    master Don't splat the bundler groups
+2014-03-10 00:42:17 #2068 passed:    master Clarify versionconflict error
+2014-03-09 23:46:42 #2067 passed:    master Update README
+2014-03-09 23:36:50 #2066 passed:    master providers/virtualbox: add post-comm customize step [GH-3080]
+2014-03-09 21:25:57 #2065 passed:    master core: Private boxes authenticate metadata box URLs too
+2014-03-09 20:30:25 #2064 passed:    master Fix tests
+2014-03-09 20:22:52 #2063 failed:    master synced_folders/rsync: convert to proper unix-style path [GH-3086]
+2014-03-09 19:45:57 #2062 passed:    master Merge pull request #3088 from gildegoma/ansible-ssh-args
+2014-03-08 16:44:35 #2060 passed:    master provisioners/shell: use detail level output for running
+2014-03-08 00:57:41 #2054 passed:    master core: Cygwin path conversion must replace slashes first
+2014-03-07 12:45:14 #2053 passed:    master core: Fix misleading wording in pre-rubygems [GH-3078]
+2014-03-07 11:56:42 #2052 passed:    master website/docs: update docs for share
+2014-03-07 11:19:40 #2051 passed:    master provisioners/salt: don't use exteranl deep_merge [GH-2348]
+2014-03-06 23:37:26 #2049 passed:    master Update CHANGELOG
+2014-03-06 23:36:03 #2048 passed:    master Merge pull request #3073 from gildegoma/ansible-fixes
+2014-03-06 23:35:10 #2047 passed:    master providers/hyperv: ssh_info doesn't need a dedicated action stack
+2014-03-06 13:28:52 #2045 passed:    master synced_folders/rsync: allow custom args [GH-3070]
+2014-03-06 13:02:51 #2044 passed:    master providers/hyperv: fix the class name
+2014-03-06 13:02:13 #2043 passed:    master providers/hyperv: public_address cap
+2014-03-06 11:26:22 #2042 passed:    master core: the provision sentinel should be backwards compatible
+2014-03-06 11:06:03 #2040 passed:    master Fix Hyper-V tests
+2014-03-06 10:59:39 #2039 failed:    master providers/hyperv: update driver stuff
+2014-03-06 10:54:00 #2037 failed:    master Merge pull request #3068 from MSOpenTech/driver-methods
+2014-03-06 10:52:20 #2035 passed:    master synced_folders/smb: ask for creds in prepare
+2014-03-06 10:38:09 #2034 passed:    master core: initialize synced folder class only once [GH-3067]
+2014-03-06 10:33:03 #2033 passed:    master synced_folders/smb: set recursive ACL for folders
+2014-03-06 09:36:54 #2032 passed:    master providers/hyperv: validate IP address returned [GH-3069]
+2014-03-05 20:51:36 #2026 passed:    master providers/hyperv: add test for windows guests
+2014-03-05 18:23:53 #2025 passed:    master guests/redhat: force remove files so it works with pty
+2014-03-05 15:38:20 #2024 passed:    master core: packaging works again
+2014-03-05 15:17:53 #2023 passed:    master core: rescue version conflicts when setting up Bundler
+2014-03-05 12:22:49 #2017 passed:    master core: use default color by default (not white)
+2014-03-05 11:04:07 #2013 passed:    master website/www: Hyper-V blog post
+2014-03-05 10:55:46 #2012 failed:    master website/www: add hyper-v preview image
+2014-03-05 09:22:14 #2011 passed:    master core: set default server URL
+2014-03-04 09:33:29 #2009 passed:    master provisioners/docker: actual auto assign name logic
+2014-03-04 09:32:45 #2008 passed:    master provisioners/docker: setting to not auto assign name
+2014-03-04 09:29:01 #2007 passed:    master Merge pull request #3051 from mattes/patch-1
+2014-03-03 22:40:03 #2006 passed:    master core: safer dup checks for synced folders
+2014-03-03 17:06:53 #2005 passed:    master core: better error if attempting to uninstall system plugin
+2014-03-03 11:56:23 #2004 passed:    master core: add tests fornew systems path for plugin manager
+2014-03-03 11:50:48 #2003 passed:    master core: load system plugins if they are installed
+2014-03-02 00:15:39 #1999 passed:    master Update CHANGELOG
+2014-03-02 00:14:43 #1998 passed:    master Merge pull request #3045 from bmorg/master
+2014-03-01 05:33:56 #1996 passed:    master core: duplicate URL array when authing so we don't mess up original
+2014-03-01 05:09:13 #1995 passed:    master website/docs: update docs for checksums on versioned boxes
+2014-03-01 05:04:14 #1994 passed:    master core: checksums supported when adding box from metadata
+2014-03-01 04:38:54 #1993 passed:    master core: box URLs can be authenticated by hooking
+2014-03-01 03:01:13 #1992 passed:    master website/docs: update getting started guide to use box directory
+2014-02-28 14:38:54 #1991 passed:    master Update CHANGELOG
+2014-02-28 14:38:10 #1990 passed:    master Merge pull request #3043 from mitchellh/f-hyperv
+2014-02-28 11:05:54 #1985 passed:    master Update CHANGELOG
+2014-02-28 11:04:53 #1984 passed:    master Merge pull request #2952 from gildegoma/ansible-ssh-fixes
+2014-02-28 08:11:34 #1983 passed:    master website/www: fix share URL
+2014-02-27 17:56:23 #1980 passed:    master website/www: move plugin blog to 02-27
+2014-02-27 17:49:05 #1979 passed:    master website/docs: document vagrant login
+2014-02-27 13:42:01 #1977 passed:    master Update CHANGELOG
+2014-02-27 13:41:28 #1976 passed:    master Merge pull request #2991 from gildegoma/review-pr2926
+2014-02-27 10:23:34 #1973 passed:    master synced_folders/nfs: unavailable on Windows
+2014-02-26 13:42:34 #1964 passed:    master communicators/ssh: call ready? when waiting
+2014-02-26 12:19:35 #1963 passed:    master website/www: keep the mdash on the blog post
+2014-02-26 12:19:18 #1962 passed:    master Update 2014-02-24-feature-preview-vagrant-1-5-share.html.markdown
+2014-02-26 12:12:53 #1961 passed:    master website/www: share post html encoding of the emdash
+2014-02-26 11:22:57 #1960 passed:    master website/www: add a note about fullscreen
+2014-02-26 11:17:57 #1959 passed:    master website/www: remove gnu/linux to stop wrapping
+2014-02-26 11:14:06 #1958 passed:    master website/www: reorder videos
+2014-02-26 11:07:41 #1957 passed:    master website/www: add blog post for share
+2014-02-26 10:18:48 #1956 passed:    master Fix english typo
+2014-02-26 10:10:19 #1955 passed:    master hosts/bsd: make directories unique when exporting
+2014-02-26 10:05:20 #1954 passed:    master core: re-ask if confirmation bad input [GH-3027]
+2014-02-26 00:33:44 #1953 passed:    master core: default URL will be https
+2014-02-25 10:44:13 #1952 passed:    master Merge pull request #3022 from odigity/master
+2014-02-25 09:30:27 #1951 passed:    master core: add a test for last PR
+2014-02-25 09:28:47 #1950 passed:    master Merge pull request #3020 from lheinlen-os/nil_machine_id
+2014-02-24 10:10:15 #1947 passed:    master provisioners/puppet: append module path  (default) [GH-2677]
+2014-02-24 09:58:57 #1946 passed:    master provisioners/salt: error if minion_config missing [GH-2893]
+2014-02-24 09:52:49 #1945 passed:    master hosts/linux: escape regular expression for prune NFS exports [GH-2934]
+2014-02-24 00:43:31 #1944 passed:    master core: error-exit machine readable output type for errors [GH-2999]
+2014-02-24 00:33:41 #1943 passed:    master Fix failing tests
+2014-02-24 00:32:29 #1942 failed:    master communicators/ssh: rescue/show correct error messages
+2014-02-24 00:26:54 #1941 failed:    master core: if can't communicate, force halt right away
+2014-02-24 00:23:04 #1940 passed:    master Avoid locking in trap context
+2014-02-24 00:10:09 #1939 passed:    master providers/virtualbox: don't log in trap context
+2014-02-24 00:02:37 #1938 passed:    master website/docs: update docs for auto_config [GH-3015]
+2014-02-23 23:51:36 #1937 passed:    master provisioners/shell: error if invalid encoding [GH-3000]
+2014-02-23 23:27:26 #1936 passed:    master Update CHANGELOG
+2014-02-23 23:26:30 #1935 passed:    master Merge pull request #3005 from ajw0100/fix-salt-options-error
+2014-02-23 23:24:29 #1934 passed:    master core: provisioner sentinel should check machine ID
+2014-02-21 20:53:47 #1932 passed:    master Update CHANGELOG
+2014-02-21 20:29:50 #1931 passed:    master provisioners/chef: DRY up `environment` and `node_name` configuration
+2014-02-21 20:11:25 #1930 passed:    master Update CHANGELOG
+2014-02-21 19:58:45 #1929 passed:    master Merge pull request #2975 from shanegibbs/chef-solo-role-path
+2014-02-20 12:23:20 #1928 passed:    master provisioners/chef: Fix loading of the custom configure file [GH-876]
+2014-02-19 15:20:55 #1924 passed:    master Merge pull request #3003 from pearkes/blog-letter-spacing
+2014-02-19 15:15:25 #1923 passed:    master website/www: modify the blog post slightly for better formatting
+2014-02-19 11:01:27 #1921 passed:    master website/www: feature preview boxes 2.0
+2014-02-18 20:55:32 #1920 passed:    master Merge pull request #2845 from tmatilai/chef_data_bag_secret
+2014-02-18 20:02:36 #1919 passed:    master website/docs: fix typo [GH-2998]
+2014-02-18 13:17:05 #1917 passed:    master Depend on ChildProcess 0.5.0, fix bugs
+2014-02-18 12:44:08 #1916 passed:    master kernel/v2: fix error where options could be not hash
+2014-02-18 12:21:17 #1915 passed:    master Merge pull request #2996 from pearkes/website-rss-absolute
+2014-02-15 18:38:06 #1908 passed:    master core: disable parallelization if only one action
+2014-02-15 17:56:11 #1907 passed:    master core: copy all sub-directories in a box properly
+2014-02-15 12:13:49 #1906 passed:    master Merge pull request #2985 from eugeneware/latest_coreos_support
+2014-02-14 14:45:07 #1901 passed:    master provisioners/shell: clean up fixnum handling
+2014-02-14 14:41:08 #1900 passed:    master Merge pull request #2982 from ryanuber/shell_fixnum_args
+2014-02-13 23:10:12 #1896 passed:    master core: ui can hide details
+2014-02-13 23:05:55 #1895 passed:    master providers/virtualbox: only clear forwarded ports if there are any
+2014-02-13 23:00:16 #1894 passed:    master communicators/ssh: more verbose output about waiting for SSH
+2014-02-13 22:41:41 #1893 passed:    master communicators/ssh: cache ssh_info
+2014-02-13 18:46:39 #1892 passed:    master core: keep process group for SSH childprocess
+2014-02-13 18:35:54 #1891 passed:    master providers/virtualbox: cap to read forwarded ports
+2014-02-13 10:24:15 #1890 passed:    master core: use Process#wait since childprocess bug is fixed
+2014-02-13 00:12:31 #1889 passed:    master guests/linux: public key insertion is more robust
+2014-02-12 23:36:55 #1888 passed:    master core: make sure any Subprocess exits no matter what
+2014-02-12 23:32:05 #1887 passed:    master core: poll for process exit on SSH#exec with subprocess
+2014-02-12 17:02:39 #1886 passed:    master core: chomp the version so we can echo into it
+2014-02-12 16:29:18 #1885 passed:    master core: Modify Bundler settings to work with restricted permissions
+2014-02-12 13:55:47 #1884 passed:    master website/www: fix downloads
+2014-02-12 13:53:01 #1883 passed:    master website/www: force up the version
+2014-02-12 11:34:20 #1882 passed:    master website/www: ignore the standalone archive page
+2014-02-11 18:06:45 #1881 passed:    master core: HandleBox keeps the same machine instance
+2014-02-11 18:04:19 #1880 failed:    master core: keep the same UI when handling a box URL
+2014-02-11 16:59:28 #1879 passed:    master core: Machine can set box
+2014-02-11 13:57:02 #1878 passed:    master kernel/v2: capture error if provider config is bad [GH-2959]
+2014-02-10 11:04:17 #1875 passed:    master Merge pull request #2948 from gnawhleinad/master
+2014-02-10 11:00:50 #1874 passed:    master Update CHANGELOG
+2014-02-10 10:59:50 #1873 passed:    master Merge pull request #2950 from elyast/master
+2014-02-10 10:59:43 #1872 passed:    master Remove website/ dir from gem [GH-2951]
+2014-02-08 20:36:00 #1869 passed:    master providers/virtualbox: config to skip guest additions check
+2014-02-08 17:15:41 #1868 passed:    master core: Ui::Prefixed values instance-level opts
+2014-02-08 17:12:45 #1867 passed:    master core: Ui#dup works properly
+2014-02-08 16:55:35 #1866 passed:    master core: fix Environment tests
+2014-02-08 16:52:15 #1865 failed:    master core: Environment#lock tests
+2014-02-08 16:28:14 #1864 passed:    master core: Prefixed UI only requests bolding if not specified at instance-level
+2014-02-08 16:04:53 #1863 passed:    master core: Machine#with_ui
+2014-02-07 18:05:21 #1861 passed:    master guests/linux: proper logic on ro
+2014-02-07 18:04:29 #1860 passed:    master Merge pull request #2946 from mhahn/fix/master/2945
+2014-02-07 13:52:00 #1859 passed:    master core: HandleBox reloads machine from proper Vagrantfile
+2014-02-07 12:52:50 #1858 passed:    master core: when loading box metadata, specify JSON header
+2014-02-07 12:34:57 #1857 passed:    master core: request JSON type when getting the metadata URL
+2014-02-07 12:32:01 #1856 passed:    master core: download metadata with JSON accept header
+2014-02-07 11:28:07 #1855 passed:    master Merge pull request #2947 from mitchellh/f-environment-refactor
+2014-02-06 22:10:39 #1844 passed:    master Merge pull request #2943 from mitchellh/f-boxes-2
+2014-02-05 23:17:46 #1837 passed:    master Fix tests for new _finalize! changes
+2014-02-05 23:07:59 #1834 failed:    master core: config raises NoMethodError on bad calls once finalized
+2014-02-04 09:03:00 #1830 passed:    master guests/linux: don't chown VB shared folders if readonly [GH-2442]
+2014-02-04 04:01:59 #1824 passed:    master website/docs: use string instead of symbol
+2014-02-04 04:01:08 #1823 passed:    master Merge pull request #2931 from rmccue/patch-1
+2014-02-03 22:13:03 #1822 passed:    master guests/{free,net}bsd: add `insert_public_key` capability
+2014-02-03 21:53:18 #1821 passed:    master kernel/v2: fix provisioner config with blocks
+2014-02-03 20:28:08 #1819 passed:    master Merge pull request #2892 from tmatilai/openbsd
+2014-02-03 20:26:04 #1818 passed:    master guests/openbsd: Ensure that `PKG_PATH` is set when installing rsync
+2014-02-03 15:37:00 #1817 passed:    master Merge pull request #2930 from danielbachhuber/fix-typo
+2014-02-03 15:38:06 #1816 passed:    master Update CHANGLEOG
+2014-02-03 15:34:53 #1815 passed:    master Merge pull request #2929 from mitchellh/f-provisioner-id
+2014-02-03 09:29:12 #1809 passed:    master provisioners/docker: always pull images [GH-2901]
+2014-02-03 09:17:35 #1808 passed:    master provisioners/docker: config to disablize -d flag
+2014-02-03 05:20:06 #1805 passed:    master hosts/opensuse: start NFS server properly [GH-2923]
+2014-02-03 05:16:16 #1804 passed:    master website/docs: note that rsync will be automatically installed
+2014-02-03 05:13:40 #1803 errored:   master Merge branch 'rsync_install' of https://github.com/tmatilai/vagrant into tmatilai-rsync_install
+2014-02-03 05:10:11 #1802 passed:    master communicators/ssh: better error message
+2014-02-03 05:08:14 #1801 passed:    master Merge pull request #2907 from justincampbell/scp-error-path
+2014-02-03 05:07:27 #1800 passed:    master update CHANGELOG
+2014-02-03 05:06:13 #1799 passed:    master Merge pull request #2906 from frosario/cable_connected
+2014-02-03 05:03:50 #1798 passed:    master kernel/v2: allow IPs to end in ".1" [GH-2914]
+2014-02-03 04:53:41 #1797 passed:    master Merge pull request #2922 from tmatilai/file_provisioner_expand_path
+2014-02-03 04:51:32 #1796 passed:    master Merge pull request #2925 from fgrehm/ensure-synced-folder-types-are-symbols
+2014-02-02 13:33:41 #1790 passed:    master core: Force bundler usage if in Installer
+2014-02-02 09:53:58 #1789 passed:    master Make version 1.5.0.dev for semver
+2014-02-02 08:34:24 #1788 passed:    master Add new version.txt used to generate installers
+2014-02-01 09:29:51 #1785 passed:    master core: execute the specified Vagrant executable in pre-rubygems.rb
+2014-01-31 09:50:11 #1782 passed:    master core: Only load default and plugin Bundler groups to avoid dev deps
+2014-01-27 11:40:21 #1771 passed:    master website/docs: fix typo [GH-2876]
+2014-01-27 11:27:46 #1770 passed:    master Merge pull request #2888 from obfusk/fix-mktmpdir
+2014-01-26 16:37:54 #1768 passed:    master Merge pull request #2896 from mitchellh/f-provider-caps
+2014-01-26 15:34:56 #1763 passed:    master core: clear line with \033[K
+2014-01-23 15:16:56 #1725 passed:    master core: color success Ui green
+2014-01-21 22:53:42 #1716 passed:    master provisioners/docker: configure auto start properly for new Docker
+2014-01-21 22:14:14 #1715 passed:    master core: merge default synced folders ,don't override [GH-2873]
+2014-01-21 14:15:04 #1713 passed:    master core: add tests for MachineReadable and frozen strings
+2014-01-21 14:06:06 #1712 passed:    master core: remove BasicScope class, not used anymore
+2014-01-21 11:54:28 #1711 passed:    master hosts/redhat: recognize Korora [GH-2869]
+2014-01-20 19:19:30 #1708 passed:    master core: use cleaner UI abstractions
+2014-01-20 18:38:33 #1707 passed:    master core: only bold when output is part of a machine
+2014-01-20 18:23:27 #1706 passed:    master Merge pull request #2857 from mitchellh/f-ui-revamp
+2014-01-20 14:44:08 #1705 passed:    master website/www: blog posts on Vagrant stability
+2014-01-20 01:37:45 #1704 passed:    master Update CHANGELOG
+2014-01-20 01:37:11 #1703 passed:    master website/docs: clarify upgrade breakage is a bug
+2014-01-19 11:05:08 #1702 passed:    master Merge pull request #2861 from morrizon/machine_readable_issue
+2014-01-18 13:06:32 #1700 passed:    master guests/coreos: restart etcd after configuring networks [GH-2852]
+2014-01-18 13:04:40 #1699 passed:    master hosts/gentoo: more robust check for systemctl path on Gentoo
+2014-01-18 13:01:37 #1698 passed:    master Merge pull request #2858 from timgus/gentoo_systemctl
+2014-01-17 22:38:12 #1693 passed:    master Update dep of ChildProcess to 0.4.0
+2014-01-17 12:42:25 #1689 passed:    master core: cleaner output when running outside installer
+2014-01-17 12:03:21 #1688 passed:    master Merge pull request #2851 from BlackIkeEagle/reload-nfs-exports
+2014-01-17 11:59:17 #1687 passed:    master providers/virtualbox: network config uses proper format, tests [GH-2854]
+2014-01-17 11:45:40 #1686 passed:    master core: For dev, temporarily use branch of Childprocess, fix Win issue
+2014-01-17 00:54:26 #1683 passed:    master core: cleaner method of mirroring stdin for Windows
+2014-01-17 00:47:34 #1682 passed:    master core: Seperate out IO util helper
+2014-01-17 00:34:19 #1681 passed:    master core: forgot to gate one change from last commit to Windows
+2014-01-17 00:32:45 #1680 passed:    master core: copy STDIN for SSHRun with Subprocess on Windows
+2014-01-16 19:22:31 #1678 passed:    master guests/tinycore: TinyCore Linux support
+2014-01-16 12:40:11 #1677 passed:    master Update CHANGELOG
+2014-01-16 12:39:19 #1676 passed:    master Merge pull request #2819 from stoned/guest-netbsd
+2014-01-16 12:36:01 #1675 passed:    master provisoiners/docker: only add user to group if not in it [GH-2838]
+2014-01-16 11:48:15 #1674 passed:    master commands/init: update template to use strings, not symbols
+2014-01-16 11:45:19 #1673 passed:    master providers/virtualbox: validate missing keys [GH-2831]
+2014-01-16 11:37:34 #1672 passed:    master Install Bundler 1.5.2 for tests
+2014-01-16 11:32:03 #1671 errored:   master synced_folders/rsync: output directory under watch for rsync-auto
+2014-01-15 23:36:32 #1670 errored:   master website/docs: clarify rsync i nstallation for Windows
+2014-01-15 23:34:50 #1669 errored:   master Update dep to Bundler 1.5.2
+2014-01-15 23:31:32 #1668 passed:    master core: get tests passing on Windows, more tweaks
+2014-01-15 23:16:01 #1667 passed:    master core: dont' load rc or profile when getting a cygpath with bash
+2014-01-15 23:14:37 #1666 passed:    master synced_folders/rsync: convert path to cygpath on Windows
+2014-01-15 22:29:23 #1665 passed:    master synced_folders/nfs: don't nfs_prune on hosts that don't support it
+2014-01-15 22:26:24 #1664 passed:    master core: update translation to help Windows more
+2014-01-15 22:13:10 #1663 passed:    master Update CHANGELOG
+2014-01-15 22:11:54 #1662 passed:    master Merge pull request #2824 from masteinhauser/patch-1
+2014-01-15 21:56:17 #1661 passed:    master providers/virtualbox: retry list hostonlyifs [GH-2831]
+2014-01-15 20:42:27 #1660 passed:    master synced_folders/nfs: Register `nfs_client_install` caps to correct distros
+2014-01-15 20:33:35 #1659 passed:    master core: tests for more shared_helpers
+2014-01-15 20:08:30 #1658 passed:    master core: tests for shared_helpers.rb
+2014-01-15 19:53:42 #1657 passed:    master Merge pull request #2837 from tmatilai/vagrant_home
+2014-01-15 19:35:04 #1656 passed:    master provisioners/docker: fix wrong variable usage
+2014-01-15 13:48:22 #1654 passed:    master core: environment tests passing on Windows
+2014-01-15 13:38:22 #1653 passed:    master synced_folders/rsync: run hostpath through fs_real_path
+2014-01-15 13:31:50 #1652 passed:    master core: be sure to close tempfile handle so Windows can delete it
+2014-01-15 13:26:46 #1651 passed:    master core: test file writes for home dir perms
+2014-01-15 13:21:44 #1650 passed:    master core: don't test fork(1) on Windows
+2014-01-15 13:05:06 #1649 failed:    master test: allow skipping certain tests on Windows
+2014-01-15 12:59:35 #1648 failed:    master core: don't use Tempdir for tests, use Dir.mktmpdir
+2014-01-15 07:07:02 #1647 passed:    master Merge pull request #2830 from gustavobgama/fix/master/nfs_typo
+2014-01-14 11:52:47 #1645 passed:    master website/docs: update docs for new rsync commands
+2014-01-14 11:40:10 #1644 passed:    master Update CHANGELOG
+2014-01-14 10:45:14 #1643 passed:    master provisioners/docker: unit tests for config
+2014-01-14 10:35:15 #1642 passed:    master Merge branch 'add_building_local_dockerfiles' of https://github.com/jpfuentes2/vagrant into jpfuentes2-add_building_local_dockerfiles
+2014-01-14 09:47:17 #1641 passed:    master Merge pull request #2820 from mitchellh/f-rsync-listen
+2014-01-13 23:43:25 #1632 passed:    master core: interrupt in Cli exits with 1
+2014-01-13 14:06:06 #1631 passed:    master Merge pull request #2816 from mitchellh/f-rsync-command
+2014-01-13 00:38:58 #1627 passed:    master hosts/bsd: use Util::Which instead of system("which")
+2014-01-13 00:35:45 #1626 passed:    master hosts/bsd: don't execute shell for sudo commands [GH-2808]
+2014-01-11 12:07:44 #1625 passed:    master Merge pull request #2807 from mitchellh/f-non-primary-commands
+2014-01-11 10:04:42 #1618 passed:    master provisioners/chef: don't follow symlink when chown
+2014-01-10 22:38:01 #1617 passed:    master synced_folders/rsync: warn if password auth
+2014-01-10 20:25:49 #1616 passed:    master Update CHANGELOG
+2014-01-10 20:23:27 #1615 passed:    master Merge pull request #2803 from mitchellh/f-rsync
+2014-01-10 18:21:57 #1611 passed:    master core: update Registry tests to make sure #keys doesn't load
+2014-01-10 18:21:06 #1610 passed:    master Merge pull request #2637 from johnbellone/patch-1
+2014-01-10 17:50:02 #1609 passed:    master core: use dummy provider in tests so VirtualBox isn't required
+2014-01-10 17:45:35 #1608 failed:    master Update CHANGELOG
+2014-01-10 17:45:33 #1607 failed:    master Merge pull request #2766 from graingert/patch-1
+2014-01-10 17:44:11 #1606 failed:    master synced_folders/nfs: always prune [GH-2738]
+2014-01-10 16:51:54 #1605 passed:    master Update CHANGELOG
+2014-01-10 16:49:46 #1604 passed:    master Merge pull request #2800 from miketheman/cpu_vbox_convenince
+2014-01-10 12:02:34 #1603 passed:    master website/www: fix download link styling
+2014-01-09 19:06:28 #1601 passed:    master synced_folders/nfs: automatically install NFS client if possible
+2014-01-09 18:13:53 #1600 passed:    master core: only check for box existence if not force [GH-2757]
+2014-01-09 12:48:42 #1599 passed:    master core: more user-friendly errors for caps on guests
+2014-01-09 12:33:29 #1598 passed:    master core: raise user-friendly errors if capabilities exception in Guest
+2014-01-09 12:18:51 #1597 passed:    master Fix up translations
+2014-01-09 12:19:10 #1596 passed:    master core: Remove unused error classes
+2014-01-09 11:53:17 #1595 passed:    master Remove unused translations and errors thanks to @glebm
+2014-01-09 11:24:17 #1594 passed:    master core: tests for Guest#name
+2014-01-09 11:23:30 #1593 passed:    master Merge pull request #2794 from tmatilai/cabability_host_name
+2014-01-08 23:44:33 #1590 passed:    master core: test that forking is allowed in a BatchAction
+2014-01-08 23:37:18 #1589 passed:    master core: BatchAction should handle forks [GH-2756]
+2014-01-08 23:01:33 #1587 passed:    master Update CHANGELOG
+2014-01-08 22:59:27 #1586 passed:    master Merge pull request #2792 from smoyer/redhat_hostname_patch
+2014-01-08 22:06:18 #1583 passed:    master core: log plugins and their versions
+2014-01-08 21:54:42 #1582 passed:    master core: refactor error initialization logic
+2014-01-08 19:08:48 #1581 passed:    master provisioners/docker: Add missing I18n key [GH-2774]
+2014-01-08 17:18:36 #1580 passed:    master guests/linux: properly quote and insert public key
+2014-01-08 16:52:23 #1578 passed:    master core: Catch plugin load errors and show them to the user ina  friendly way
+2014-01-08 13:24:23 #1577 passed:    master core: has_plugin? uses the new plugin manager class to check for gems
+2014-01-08 13:05:08 #1576 passed:    master website/docs: tips & tricks for vfile [GH-2788]
+2014-01-08 11:19:15 #1573 passed:    master Update CHANGELOG
+2014-01-08 11:03:01 #1572 passed:    master Merge pull request #2784 from mitchellh/f-host-capabilities
+2014-01-08 10:41:16 #1571 passed:    master provisioners/chef-solo: Fix copy&paste "Puppet" from a deprecation message
+2014-01-07 18:37:04 #1566 passed:    master Merge pull request #2781 from mitchellh/f-abstract-capability
+2014-01-07 16:31:06 #1563 passed:    master website/docs: note sendfile
+2014-01-07 16:29:15 #1562 passed:    master Update README
+2014-01-07 16:27:26 #1561 passed:    master Merge pull request #2767 from joestump/master
+2014-01-07 16:23:13 #1560 passed:    master commands/plugin: vagrant plugin install can accept multiple
+2014-01-07 16:25:13 #1559 passed:    master Update CHANGELOG and website
+2014-01-07 16:14:22 #1558 passed:    master Allow `vagrant (un)install plugin1 plugin2 plugin3`
+2014-01-07 16:13:00 #1557 passed:    master Merge pull request #2658 from gildegoma/ansible_doc_small_improvements
+2014-01-07 16:10:01 #1556 passed:    master core: depend on Vagrant by path, rather than by version
+2014-01-07 16:06:40 #1555 passed:    master Update changelog
+2014-01-07 16:01:43 #1554 passed:    master core: installing a plugin from a gem doesn't constrain it
+2014-01-07 12:55:09 #1552 passed:    master Merge pull request #2769 from mitchellh/f-bundlerize
+2014-01-05 18:08:05 #1517 passed:    master Lock to log4r < 1.1.11 because we got fucked
+2014-01-03 13:38:40 #1504 passed:    master update CHANGELOG
+2014-01-03 13:35:45 #1503 passed:    master Merge pull request #2754 from mitchellh/f-insert-private-key
+2014-01-03 10:34:06 #1497 passed:    master Merge pull request #2752 from sferik/patch-1
+2014-01-03 10:34:06 #1495 passed:    master update changelog
+2014-01-02 23:04:53 #1494 passed:    master Merge pull request #2746 from DarkHorseComics/spelling
+2014-01-02 16:52:10 #1492 passed:    master website/docs: document puppet options
+2014-01-02 16:46:42 #1491 passed:    master website/docs: document synced_folder_type for chef
+2014-01-02 16:42:15 #1490 passed:    master provisioners/puppet: synced_folder_type [GH-2709]
+2014-01-02 12:18:38 #1489 passed:    master Merge branch '1.4.3'
+2014-01-02 11:15:33 #1485 passed:    master Merge pull request #2742 from ryansb/FedoraDetection
+2014-01-01 22:50:13 #1481 passed:    master Update changelog
+2014-01-01 22:49:30 #1480 passed:    master Merge pull request #2734 from seginoviax/funtoo
+2014-01-01 20:49:07 #1479 passed:    master :fireworks: New year! :fireworks:
+2013-12-31 16:20:28 #1477 passed:    master up version for dev
+2013-12-31 16:16:38 #1475 passed:    master website/www: 1.4.2
+2013-12-31 15:31:27 #1474 passed:    master v1.4.2
+2013-12-31 13:02:12 #1473 passed:    master Update CHANGELOG
+2013-12-31 13:01:08 #1472 passed:    master Merge pull request #2674 from phinze/static-nfs-guest-ips
+2013-12-31 12:44:52 #1471 passed:    master provisioners/chef-solo: delete data bag secret [GH-2712]
+2013-12-31 10:46:53 #1470 passed:    master providers/virtualbox: export after checking if package exists [GH-2380]
+2013-12-31 10:41:17 #1469 passed:    master core: undo last for now
+2013-12-31 10:36:01 #1468 passed:    master core: box add fails early if box already exists [GH-2621]
+2013-12-30 16:46:41 #1467 passed:    master synced_folders/nfs: lock around sudo input [GH-2680]
+2013-12-30 14:43:06 #1466 passed:    master core: ctrl-c no longer raises trap-context exception
+2013-12-30 10:13:46 #1465 passed:    master guests/ubuntu: remove mount_nfs cap
+2013-12-28 15:14:11 #1463 passed:    master Update CHANGELOG
+2013-12-28 15:13:46 #1462 passed:    master Merge pull request #2694 from tmatilai/plugin-json-errors
+2013-12-28 15:11:40 #1461 passed:    master commands/plugin: use default version requirement
+2013-12-28 15:00:00 #1460 passed:    master Merge pull request #2693 from oalders/master
+2013-12-28 14:59:29 #1459 passed:    master Merge pull request #2697 from Ninjamoose/dockerCmdCorrection
+2013-12-28 14:52:04 #1458 passed:    master Update CHANGELOG
+2013-12-28 14:51:30 #1457 passed:    master Merge pull request #2705 from tmatilai/upstart-emit-nfs
+2013-12-28 14:50:26 #1456 passed:    master style
+2013-12-28 14:49:40 #1455 passed:    master Merge pull request #2713 from tmatilai/log_plugin_versions
+2013-12-28 14:48:57 #1454 passed:    master hosts/bsd: check exports only if exports file exists [GH-2714]
+2013-12-28 14:46:27 #1453 passed:    master core: handle EOFError when checking checksum [GH-2716]
+2013-12-28 14:31:37 #1452 passed:    master website/docs: document "create" option for synced folders [GH-2730]
+2013-12-27 21:56:13 #1451 passed:    master Merge pull request #2725 from MarcMeszaros/salt-i18n
+2013-12-23 10:18:02 #1446 passed:    master Merge pull request #2711 from marcellodesales/patch-1
+2013-12-22 12:15:07 #1443 passed:    master Merge pull request #2707 from tobiasbaehr/patch-1
+2013-12-22 09:46:25 #1441 passed:    master Merge pull request #2706 from Ninir/patch-1
+2013-12-21 21:17:23 #1438 passed:    master website/docs: Fix some typos in plugin docs
+2013-12-20 15:25:45 #1436 passed:    master Update CHANGELOG
+2013-12-20 15:22:35 #1435 passed:    master Merge pull request #2617 from tmatilai/has_plugin_by_gem_name
+2013-12-19 10:13:12 #1429 passed:    master core: configure version can be an int [GH-2689]
+2013-12-19 07:22:24 #1428 passed:    master Merge pull request #2688 from Grunny/docs-ssh-typo-fix
+2013-12-19 01:58:05 #1426 passed:    master website/www: move READMORE
+2013-12-18 12:26:06 #1425 passed:    master Up version for dev
+2013-12-18 11:13:24 #1423 passed:    master v1.4.1
+2013-12-18 10:48:21 #1422 passed:    master guests/linux: up the amount of retries for NFS mounts
+2013-12-18 10:41:40 #1421 passed:    master Update CHANGELOG
+2013-12-18 10:42:16 #1420 passed:    master Merge pull request #2677 from purpleidea/fix_puppet_apply
+2013-12-17 21:09:29 #1419 passed:    master core: list VAGRANT_* env vars in debug log
+2013-12-17 18:31:42 #1418 passed:    master Update CHANGELOG
+2013-12-17 18:29:56 #1417 passed:    master Merge pull request #2670 from ampedandwired/chef_force_rm
+2013-12-16 15:20:35 #1410 passed:    master Update CHANGELOG
+2013-12-16 15:19:38 #1409 passed:    master Merge pull request #2667 from gildegoma/bugfix_ansible_raw_args
+2013-12-16 12:21:34 #1407 passed:    master Merge pull request #2663 from acharlieh/el-refactor-change-host-name
+2013-12-15 13:30:00 #1402 passed:    master commands/init: error if can't write Vagrantfile [GH-2660]
+2013-12-15 11:04:23 #1401 passed:    master Merge pull request #2661 from adrianlzt/feature/readme_ruby2_needed
+2013-12-14 09:07:11 #1398 passed:    master Update CHANGELOG [GH-2606]
+2013-12-14 09:04:23 #1397 passed:    master Merge pull request #2606 from maspwr/ansible-groups
+2013-12-14 01:45:20 #1396 passed:    master Merge pull request #2655 from drpebcak/master
+2013-12-14 00:32:49 #1394 passed:    master commands/ssh: use proper variable
+2013-12-14 00:15:01 #1393 passed:    master hosts/bsd: check for exports file issues prior to exporting NFS
+2013-12-14 00:04:12 #1392 passed:    master providers/virtualbox: don't clear /etc/exports on BSDs for NFS [GH-2645]
+2013-12-13 23:19:02 #1391 passed:    master core: SSHRun uses new ShellQuote util
+2013-12-13 23:08:54 #1390 passed:    master core: -t/-T work for vagrant ssh -c [GH-2618]
+2013-12-13 23:03:08 #1389 passed:    master core: execute SSH commands in context of login shell [GH-2636]
+2013-12-13 22:49:53 #1388 passed:    master guests/debian: fix dhcp assigned default to work
+2013-12-13 19:07:15 #1387 passed:    master Update CHANGELOG
+2013-12-13 19:06:51 #1386 passed:    master Merge pull request #2649 from tnaoto/plugin-provisioner-docker-redhat
+2013-12-12 21:53:09 #1381 passed:    master provisioners/chef: fix node/client deletion when node_name is not set [GH-2345]
+2013-12-12 19:38:35 #1380 passed:    master Update CHANGELOG
+2013-12-12 19:37:58 #1379 passed:    master Merge pull request #2641 from arthurnn/docker_rename
+2013-12-12 18:18:45 #1378 passed:    master core: box removal of a V1 box works
+2013-12-12 17:43:41 #1377 passed:    master website/docs: phrasal verbs [GH-2644]
+2013-12-11 06:47:36 #1365 passed:    master Merge pull request #2635 from bbonamin/master
+2013-12-11 06:06:56 #1363 passed:    master Merge pull request #2631 from miketheman/fix_acceptance_path
+2013-12-10 20:03:51 #1361 passed:    master Merge pull request #2627 from scalp42/chef_delete
+2013-12-10 20:02:51 #1360 passed:    master Merge pull request #2628 from makern/ifdown-fix
+2013-12-10 20:01:47 #1359 passed:    master Merge pull request #2629 from lndbrg/patch-1
+2013-12-10 11:10:40 #1354 passed:    master guests/redhat: don't ifdown non-existent interfaces [GH-2614]
+2013-12-10 10:55:51 #1353 passed:    master Update CHANGELOG
+2013-12-10 10:54:37 #1352 passed:    master Merge pull request #2620 from ShonM/master
+2013-12-10 10:53:23 #1351 passed:    master Update CHANGELOG
+2013-12-10 08:56:01 #1348 passed:    master website/docs: Fix example of v1 config option invalid in v2
+2013-12-09 21:16:19 #1347 passed:    master Update CHANGELOG
+2013-12-09 21:11:50 #1346 passed:    master Merge pull request #2613 from phinze/2610-debian-hostname-trailing-dot
+2013-12-09 17:05:33 #1341 passed:    master Merge pull request #2616 from mwarkentin/patch-1
+2013-12-09 13:45:39 #1337 passed:    master website/www: downloads link in footer
+2013-12-09 13:22:55 #1336 passed:    master website/www: home page link to downloads work
+2013-12-09 03:06:25 #1334 passed:    master website/www: link to downloads
+2013-12-09 03:04:40 #1333 passed:    master website/www: 1.4 release announcement for tomorrow
+2013-12-09 02:24:01 #1332 passed:    master website/www: its time the homepage used precise32
+2013-12-09 02:20:14 #1331 passed:    master website/www: link to book on support page
+2013-12-09 00:52:35 #1328 passed:    master up version for dev
+2013-12-09 00:52:08 #1327 passed:    master v1.4.0
+2013-12-08 23:09:50 #1326 passed:    master Merge pull request #2605 from teaforthecat/patch-1
+2013-12-08 13:15:22 #1324 passed:    master core: improve guest type detection
+2013-12-07 23:00:26 #1323 passed:    master core: style nitpicks
+2013-12-07 22:58:52 #1322 passed:    master Merge pull request #2600 from tmatilai/info-if-provisioned
+2013-12-07 18:58:42 #1321 passed:    master Merge pull request #2601 from mattalexx/fix-issue-2599
+2013-12-06 19:48:54 #1316 passed:    master website/docs: affil links to book
+2013-12-06 18:43:17 #1315 passed:    master synced_folders/nfs: allow plugins to provide valid NFS ids
+2013-12-06 18:41:21 #1314 failed:    master core: Allow options to be passed down into SF cleanup
+2013-12-06 17:38:14 #1313 passed:    master scripts: bintray upload
+2013-12-06 17:12:16 #1312 passed:    master synced_folders/nfs: style
+2013-12-06 17:12:53 #1311 errored:   master Merge pull request #2591 from instilled/arch-netctl-fix
+2013-12-06 17:09:04 #1310 passed:    master Merge pull request #2585 from mitchellh/2585-fix-docker-image-assignment
+2013-12-06 16:05:32 #1309 passed:    master Remove extraneous character
+2013-12-06 15:25:10 #1308 passed:    master Merge pull request #2596 from tmatilai/fix-initctl-test
+2013-12-06 15:22:59 #1306 passed:    master providers/virtualbox: resume should wait for boot
+2013-12-06 14:40:48 #1305 passed:    master provisioners/puppet: use unique directory for each definition
+2013-12-06 14:28:10 #1304 passed:    master provisioners/chef: support proper counter for multiple chefs
+2013-12-06 13:29:38 #1303 passed:    master provisioners/shell: array args properly work
+2013-12-05 23:45:12 #1302 passed:    master test/acceptance: don't have the context show up as a component
+2013-12-05 16:38:40 #1299 passed:    master Merge branch 'f-acceptance'
+2013-12-05 14:38:16 #1297 passed:    master Merge branch 'master' of github.com:mitchellh/vagrant
+2013-12-05 14:38:57 #1296 passed:    master Merge pull request #2594 from johnbellone/patch-1
+2013-12-05 12:06:46 #1293 passed:    master Merge pull request #2593 from bennlich/patch-1
+2013-12-04 21:42:08 #1288 passed:    master Merge pull request #2586 from tmatilai/2577-synced-folder
+2013-12-04 20:47:37 #1286 passed:    master Merge pull request #2579 from mitchellh/2579-fix-docker-container-running-check
+2013-12-04 16:25:22 #1283 passed:    master Merge pull request #2583 from tmatilai/plugin-regressions
+2013-12-04 13:53:50 #1281 passed:    master provisioners/chef: create/chown backup folders [GH-2281]
+2013-12-04 13:50:23 #1280 passed:    master core: request users upgrade plugins if they're old
+2013-12-04 13:19:09 #1279 passed:    master commands/plugin: state file keeps track of the Vagrant version
+2013-12-04 09:49:21 #1278 passed:    master Merge pull request #2581 from phinze/ssh-config-support-multiple-keys
+2013-12-04 09:46:02 #1277 passed:    master Merge pull request #2577 from emyl/vbox-sync-folder-cleanup
+2013-12-04 01:48:53 #1274 passed:    master commands/plugin: ignore default gems when pruning
+2013-12-04 01:45:06 #1273 passed:    master core: note Ruby and RubyGems version in logs
+2013-12-03 20:54:13 #1271 passed:    master core: fix exception when checksum type is nil
+2013-12-03 20:47:14 #1270 passed:    master kernel/v2: fix validation on checksum types
+2013-12-03 20:45:29 #1269 passed:    master providers/virtualbox: clean up synced folders on destroy
+2013-12-03 20:44:26 #1268 passed:    master core: only set I18n setting on newer versions
+2013-12-03 20:43:27 #1267 passed:    master core: update rspec, fix deprecations
+2013-12-03 20:09:22 #1265 passed:    master Merge pull request #2561 from emyl/synced-folder-cleanup-v2
+2013-12-03 19:54:51 #1264 passed:    master Merge pull request #2575 from fgrehm/remove-18n-deprecation-warning
+2013-12-03 19:52:38 #1263 passed:    master Update CHANGELOG
+2013-12-03 19:48:36 #1262 passed:    master Merge pull request #2549 from mitchellh/f-docker-provisioner
+2013-12-03 16:00:58 #1248 passed:    master provisioners/chef: fix validate return so that it is properly formatted
+2013-12-03 14:17:53 #1247 passed:    master Update CHANGELOG
+2013-12-03 14:15:28 #1246 passed:    master guests/linux: --no-wait on emit [GH-2564]
+2013-12-03 14:08:08 #1245 passed:    master communicators/ssh: add -E to sudo to preserve env
+2013-12-03 13:51:35 #1244 passed:    master Update CHANGELOG
+2013-12-03 13:50:46 #1243 passed:    master Merge pull request #2560 from phinze/vbox-nfs-dhcp-support
+2013-12-03 13:45:21 #1242 passed:    master Merge pull request #2569 from mitchellh/fix-hook-with-methods
+2013-12-03 13:36:15 #1239 passed:    master Update CHANGELOG
+2013-12-03 13:34:29 #1238 passed:    master Merge pull request #2565 from mitchellh/f-box-checksum
+2013-12-03 10:06:40 #1237 passed:    master Loosen net-ssh dependency [GH-2573]
+2013-12-02 00:55:00 #1221 passed:    master Test against Ruby 2.0
+2013-12-01 09:22:58 #1218 passed:    master website/docs: fix 404 link on getting started
+2013-12-01 08:50:16 #1216 passed:    master guests/debian: remove empty test file added by mistake
+2013-11-30 18:22:02 #1210 passed:    master core: get tests passing cleanly on Ruby 2.0.0
+2013-11-30 10:37:25 #1209 passed:    master Update CHANGELOG
+2013-11-30 10:36:40 #1208 passed:    master Merge pull request #2558 from ticosax/append-salt-bootstrap-options
+2013-11-29 02:03:43 #1203 passed:    master provisioners/shell: s/unless/if !/
+2013-11-29 02:01:54 #1202 passed:    master Merge pull request #2556 from phinze/fix-shell-array-args-validation
+2013-11-29 01:59:45 #1201 passed:    master Merge pull request #2557 from fgrehm/fix-vagrant-ssh
+2013-11-28 12:42:28 #1197 passed:    master Merge pull request #2555 from nikhilv/master
+2013-11-27 22:06:08 #1195 passed:    master Update CHANGELOG
+2013-11-27 22:05:29 #1194 passed:    master Merge pull request #2543 from glensc/pld-hostname
+2013-11-27 18:58:19 #1193 passed:    master core: fix small comment typo
+2013-11-26 23:11:13 #1189 passed:    master core: validate box_download_ca_cert_file, expand
+2013-11-26 21:36:01 #1188 passed:    master core: can specify config.vm.box_download_ca_cert
+2013-11-26 21:34:08 #1187 passed:    master commands/box/add: custom CA cert [GH-2337]
+2013-11-26 21:14:04 #1186 passed:    master core: fix tests
+2013-11-26 21:08:01 #1185 failed:    master core: output available commands in machine-readable
+2013-11-26 20:58:41 #1184 passed:    master provisioners/chef: validate environments path [GH-2381]
+2013-11-26 20:54:40 #1183 passed:    master website/docs: document synced folder options [GH-2274]
+2013-11-26 20:46:58 #1182 passed:    master website/docs: clarify when provisioners are run [GH-2541]
+2013-11-26 15:05:38 #1180 passed:    master website/docs: better document creating base boxes
+2013-11-26 14:06:34 #1179 passed:    master website/docs: fix 404 box link
+2013-11-26 13:46:59 #1178 passed:    master website/docs: better Chef docs [GH-2436]
+2013-11-26 13:29:55 #1177 passed:    master guests/redhat: DHCP_HOSTNAME set to hostname [GH-2441]
+2013-11-26 13:24:24 #1176 passed:    master website/docs: fix letter spacing on high zoom [GH-2486]
+2013-11-26 13:17:33 #1175 passed:    master Merge pull request #2539 from bearstech/debian_ifdown_ifup
+2013-11-26 12:09:45 #1174 passed:    master provisioners/ansible: use the first private key
+2013-11-26 00:54:06 #1172 passed:    master website/docs: document forwarded port options [GH-2510]
+2013-11-26 00:47:04 #1171 passed:    master provisioners/puppet: fix some bonehead mistakes
+2013-11-26 00:40:21 #1170 passed:    master provisioners/puppet: manifests path can be in the VM [GH-1805]
+2013-11-25 23:58:21 #1169 passed:    master core: config.vm.box_url can be array of urls [GH-1958]
+2013-11-25 18:55:25 #1168 passed:    master website/docs: document client cert
+2013-11-25 18:52:47 #1167 passed:    master Update CHANGELOG
+2013-11-25 17:55:52 #1166 passed:    master provisioners/chef: upload encrypted data bag secret to prov path
+2013-11-25 17:47:05 #1165 passed:    master core: allow multiple private keys [GH-907]
+2013-11-25 17:31:18 #1164 passed:    master provisioners/puppet: use better flags for one-time run
+2013-11-25 17:20:47 #1163 passed:    master provisioners/puppet: make the output a bit clearer
+2013-11-25 17:19:51 #1162 passed:    master provisioners/puppet: can specify a client key/cert
+2013-11-25 17:12:22 #1161 passed:    master provisioners/puppet: can specify a client key/cert
+2013-11-25 16:01:01 #1160 passed:    master website/docs: Document `--box-info` parameter for `vagrant box list`
+2013-11-25 15:51:59 #1159 passed:    master provisioners/shell: allow array args [GH-1949]
+2013-11-25 15:47:11 #1158 passed:    master Merge pull request #1949 from mpapis/feature/shell_provisoner_array_args
+2013-11-25 15:42:29 #1157 passed:    master commands/box/list: clean up
+2013-11-25 14:13:17 #1156 passed:    master core: create sentinel just before provisioning [GH-2488]
+2013-11-25 14:02:56 #1155 passed:    master core: only look for global flags before "--" [GH-2491]
+2013-11-25 13:49:49 #1154 passed:    master guests/linux: emit upstart event for vagrant mounted if avail [GH-2502]
+2013-11-25 13:43:32 #1153 passed:    master providers/virtualbox: some validation around internal networks
+2013-11-25 13:30:23 #1152 passed:    master providers/virtualbox: internal networks [GH-2020]
+2013-11-25 10:31:11 #1151 passed:    master Update version to 1.4.0.dev
+2013-11-25 10:13:39 #1150 passed:    master Fix typo
+2013-11-24 23:29:49 #1149 passed:    master update changelog
+2013-11-24 23:22:22 #1148 passed:    master Merge pull request #2366 from gildegoma/ansible-extra-vars
+2013-11-24 23:16:22 #1147 passed:    master core: allow hooking around provisioner runs
+2013-11-24 23:08:36 #1146 passed:    master Merge pull request #2405 from fgrehm/2044-provisioner-hooking
+2013-11-24 23:08:09 #1145 passed:    master core: allow custom callables in hooks
+2013-11-24 18:49:39 #1144 passed:    master communicators/ssh: pty can be enabled
+2013-11-24 18:39:32 #1143 passed:    master core: fix exception case regression from yesterday
+2013-11-24 18:27:58 #1142 passed:    master website/docs: document environmental variables
+2013-11-24 13:58:49 #1141 passed:    master Update CHANGELOG
+2013-11-24 13:57:51 #1140 passed:    master Merge pull request #2261 from mrkafk/master
+2013-11-24 13:54:00 #1139 passed:    master commands/init: add --output flag [GH-1364]
+2013-11-24 13:47:02 #1138 passed:    master Update CHANGELOG
+2013-11-24 12:49:17 #1137 passed:    master Merge pull request #2534 from phinze/2333-debian-ubuntu-change-host-name-refactor
+2013-11-24 00:06:35 #1135 errored:   master core: get rid of dependencies on @env from mixin
+2013-11-23 19:23:30 #1134 passed:    master core: use OpenSSH for ssh exec
+2013-11-23 18:51:15 #1133 passed:    master core: enable SSH compression for `vagrant ssh`
+2013-11-23 18:47:43 #1132 passed:    master Merge pull request #2424 from tmatilai/store_provision_enabled
+2013-11-23 18:46:24 #1131 passed:    master commands/plugin: style nitpick
+2013-11-23 18:44:44 #1130 passed:    master Merge pull request #2420 from tmacedo/rubygems_2_compatibility
+2013-11-23 18:44:17 #1129 passed:    master core: get tests passing again
+2013-11-23 18:42:14 #1128 failed:    master Update CHANGELOG
+2013-11-23 18:39:41 #1127 failed:    master Merge pull request #2437 from fgrehm/plugins-loaded-hook
+2013-11-23 18:37:59 #1126 passed:    master core: allow provisioner cleanup to happen after call
+2013-11-23 18:31:01 #1125 passed:    master providers/virtualbox: get rid of some 4.3 global state
+2013-11-23 18:23:55 #1124 passed:    master Merge pull request #2484 from andyfowler/virtualbox-parallel-import
+2013-11-23 18:18:13 #1123 passed:    master Update CHANGELOG
+2013-11-23 18:13:02 #1122 passed:    master Merge pull request #2483 from andyfowler/retryable-customize
+2013-11-23 18:06:32 #1121 passed:    master update changelog
+2013-11-23 18:03:47 #1120 passed:    master Merge pull request #2505 from jaugustin/shell-keep-color
+2013-11-23 18:01:29 #1119 passed:    master website/docs: document new box stuff
+2013-11-23 17:56:41 #1118 passed:    master commands/box/add: add --clean flag to ignore continuation
+2013-11-23 17:41:26 #1117 passed:    master Merge branch 'issue_2333' of https://github.com/elliotsegler/vagrant into elliotsegler-issue_2333
+2013-11-23 16:15:07 #1116 passed:    master website/docs: document how long compatibility will be aroung
+2013-11-23 16:08:34 #1115 passed:    master website/docs: document need for private network for NFS
+2013-11-23 16:01:33 #1114 passed:    master core: output synopsis with command [GH-2249]
+2013-11-23 15:48:16 #1113 passed:    master website/docs: add GA
+2013-11-23 15:44:48 #1112 passed:    master synced_folders/nfs: specify nfs_udp false to disable udp [GH-2304]
+2013-11-23 15:26:26 #1111 passed:    master core: don't load vagrantfile on plugin command
+2013-11-23 14:24:34 #1110 passed:    master core: vagrant version requirements in vagrantfile [GH-2322]
+2013-11-23 13:55:31 #1109 passed:    master core: human friendly error for corrupt box metadata
+2013-11-23 13:48:10 #1108 passed:    master Update CHANGELOG
+2013-11-23 13:47:45 #1107 passed:    master Merge pull request #2390 from borgstrom/master
+2013-11-23 13:46:33 #1106 passed:    master Merge pull request #2444 from tmatilai/debian_hostname_fix
+2013-11-23 13:45:56 #1105 passed:    master Update CHANGELOG
+2013-11-23 13:45:27 #1104 passed:    master Merge pull request #2426 from tmatilai/virtualbox_memory
+2013-11-23 13:43:04 #1103 passed:    master Merge pull request #2417 from BlackIkeEagle/vagrant-vim-settings
+2013-11-23 13:42:53 #1102 passed:    master Update CHANGELOG
+2013-11-23 13:41:51 #1101 passed:    master Merge pull request #2445 from tmatilai/debug_cli_option
+2013-11-23 13:41:40 #1100 passed:    master Update CHANGELOG
+2013-11-23 13:40:44 #1099 passed:    master Merge pull request #2450 from onejli/master
+2013-11-23 13:39:12 #1098 passed:    master Update CHANGELOG
+2013-11-23 13:35:06 #1097 passed:    master Merge pull request #2448 from rimckenn/patch-1
+2013-11-23 13:27:36 #1096 passed:    master Merge pull request #2460 from jeremyfelt/patch-1
+2013-11-23 13:27:14 #1095 passed:    master Update CHANGELOG
+2013-11-23 13:26:24 #1094 passed:    master Merge pull request #2487 from hatsuseno/master
+2013-11-23 13:21:08 #1093 passed:    master providers/virtualbox: retry suspended check [GH-2479]
+2013-11-23 13:07:09 #1092 passed:    master Merge pull request #2521 from isaoshimizu/fix_nic_name_on_fedora
+2013-11-23 13:05:02 #1090 passed:    master Merge pull request #2529 from markpeek/markpeek-freebsd-nobashshell
+2013-11-23 12:54:42 #1089 errored:   master Update CHANGELOG
+2013-11-21 17:05:20 #1080 passed:    master Update CHANGELOG
+2013-11-21 17:03:59 #1079 passed:    master Merge pull request #2482 from andyfowler/safer-vbox-names
+2013-11-21 17:02:35 #1078 passed:    master Update CHANGELOG
+2013-11-21 17:02:19 #1077 passed:    master Merge pull request #2514 from AJCStriker/patch-1
+2013-11-21 17:00:42 #1076 passed:    master Update CHANGELOG
+2013-11-21 17:01:52 #1075 passed:    master Merge pull request #2525 from millerdev/master
+2013-11-20 11:23:32 #1067 passed:    master Merge pull request #2517 from phinze/2454-fix-dhcp-error-constant-typo
+2013-11-18 21:09:30 #1064 passed:    master Merge pull request #2512 from phs/phs/doco-typo
+2013-10-28 18:58:31 #1043 passed:    master Update CHANGELOG.md
+2013-10-28 18:58:01 #1042 passed:    master Merge pull request #2434 from emyl/machine-id-string
+2013-10-24 01:21:20 #1036 passed:    master core: improved commenting in bin/vagrant
+2013-10-24 01:16:41 #1035 passed:    master Update CHANGELOG
+2013-10-24 01:16:18 #1034 passed:    master Merge pull request #2400 from hikch/master
+2013-10-24 01:14:20 #1033 passed:    master Update CHANGELOG
+2013-10-24 01:13:45 #1032 passed:    master Merge pull request #2404 from canausa/patch-1
+2013-10-24 01:11:08 #1031 passed:    master website/docs: update to support 4.3.x
+2013-10-24 01:10:16 #1030 passed:    master website/docs: clearer
+2013-10-24 01:09:27 #1029 passed:    master Merge pull request #2412 from maxlinc/config_validation
+2013-10-24 01:08:54 #1028 passed:    master Update CHANGELOG
+2013-10-24 01:08:32 #1027 passed:    master Merge pull request #2414 from Schpidi/symlinks_vb41
+2013-10-21 12:46:18 #1021 passed:    master Update cHANGELOG
+2013-10-21 12:44:50 #1020 passed:    master Merge pull request #2401 from txchen/master
+2013-10-17 13:33:14 #1013 passed:    master hosts/gentoo: use subprocess machinery
+2013-10-17 13:30:04 #1012 passed:    master Merge pull request #2382 from timgus/gentoo_systemd
+2013-10-17 13:29:12 #1011 passed:    master Update CHANGELOG
+2013-10-17 13:28:40 #1010 passed:    master Merge pull request #2384 from nmische/ubuntu_hostname_fix
+2013-10-15 18:13:01 #1007 passed:    master up version for dev
+2013-10-15 17:21:58 #1005 passed:    master v1.3.5
+2013-10-15 17:06:24 #1004 passed:    master Update CHANGELOG
+2013-10-15 17:02:37 #1003 errored:   master Update CHANGELOG
+2013-10-15 16:59:53 #1002 errored:   master providers/virtualbox: Support VirtualBox 4.3 [GH-2374]
+2013-10-15 14:50:43 #1001 passed:    master Merge pull request #2376 from tmatilai/debianoid-hostname
+2013-10-14 22:23:42 #999 passed:     master Update CHANGELOG
+2013-10-14 22:22:46 #998 passed:     master Merge pull request #2334 from elliotsegler/issue_2333
+2013-10-14 22:13:48 #997 passed:     master provisioners/chef: fix exception during node cleanup [GH-2345]
+2013-10-14 22:10:52 #996 passed:     master Update CHANGELOG
+2013-10-14 22:10:05 #995 passed:     master Merge pull request #2347 from dougm/esxi-guest
+2013-10-14 22:08:29 #994 passed:     master Merge pull request #2359 from viq/patch-1
+2013-10-14 22:04:04 #993 passed:     master Merge pull request #2353 from 3flex/set-charset
+2013-10-14 22:02:23 #992 passed:     master Merge pull request #2357 from 3flex/hiera-docs
+2013-10-14 22:01:10 #991 passed:     master Update CHANGELOG
+2013-10-14 22:00:05 #990 passed:     master Merge pull request #2358 from sgronblo/disallow_dots_and_hyphens_at_start_of_hostname
+2013-10-14 21:56:26 #988 passed:     master Merge pull request #2343 from gwaldo/master
+2013-10-14 21:56:10 #987 passed:     master Merge pull request #2365 from Tomdarkness/fix-virtualbox-driver-retryable
+2013-10-14 21:52:01 #986 passed:     master Merge pull request #2370 from catharsis/doc-fix-packaging-intro
+2013-10-14 21:50:48 #985 passed:     master Merge pull request #2372 from tchaudhri/tchaudhri_fix_doc_typo
+2013-10-11 10:36:26 #979 passed:     master Merge pull request #2364 from catharsis/fix-broken-link
+2013-10-08 10:11:43 #970 passed:     master Merge pull request #2341 from tuminoid/patch-1
+2013-10-05 13:47:13 #964 passed:     master Update CHANGELOG.md
+2013-10-05 13:46:52 #963 passed:     master Merge pull request #2313 from jeffasinger/salt-overstate
+2013-10-05 13:45:05 #962 passed:     master Update CHANGELOG.md
+2013-10-05 13:44:34 #961 passed:     master Merge pull request #2329 from mpioli/redhat
+2013-10-05 11:29:48 #959 passed:     master Merge pull request #2316 from jeffasinger/salt-docs
+2013-10-05 11:28:23 #958 passed:     master Update CHANGELOG
+2013-10-05 11:28:03 #957 passed:     master Merge pull request #2320 from copperlight/ansible-provisioner
+2013-10-05 11:22:49 #956 passed:     master core: Show error message if _key dynamically passed into error [GH-2328]
+2013-10-02 13:20:30 #947 passed:     master Up version for dev
+2013-10-02 10:51:06 #946 passed:     master v1.3.4
+2013-10-02 10:19:15 #945 passed:     master Merge pull request #2303 from eggsby/ansible
+2013-10-01 23:57:39 #944 passed:     master core: defined action hook names can be strings, convert to symbols
+2013-10-01 23:46:02 #943 passed:     master core: errors can use error_message to specify string error message
+2013-10-01 16:29:44 #941 passed:     master Update CHANGELOG
+2013-10-01 16:28:48 #940 passed:     master Merge pull request #2275 from jabclab/ansible-buffering
+2013-10-01 16:24:21 #939 passed:     master Merge pull request #2301 from fgrehm/document-remote-shell-provisioner
+2013-10-01 16:21:17 #937 passed:     master provisioners/chef: use real variable in delete from chef sever [GH-2300]
+2013-10-01 14:04:17 #936 passed:     master Update CHANGELOG
+2013-10-01 14:02:39 #935 passed:     master Merge pull request #2273 from czi/fix/master/my_contribution
+2013-10-01 13:52:59 #934 passed:     master core: Translation to remove 'solo' from shared chef error [GH-2276]
+2013-10-01 13:54:17 #933 passed:     master Merge pull request #2290 from ianheggie/fix_provision_permissions_error_on_bootstrap
+2013-10-01 13:53:16 #933 passed:     master Update CHANGELOG
+2013-09-27 12:20:24 #931 passed:     master Merge pull request #2284 from jeremyquinton/link_fix
+2013-09-25 12:53:47 #925 passed:     master website/docs: mention installing virtualbox
+2013-09-25 12:38:36 #924 passed:     master Update CHANGELOG
+2013-09-25 12:37:53 #923 passed:     master Merge pull request #2254 from Caustic/fix-hostname-debian
+2013-09-25 03:50:31 #922 passed:     master Update CHANGELOG
+2013-09-25 03:49:33 #921 passed:     master Merge pull request #2267 from fcharlier/fcharlier/dhcp_hostname_redhat
+2013-09-22 14:16:56 #918 passed:     master provisioners/chef: disable color if Vagrant has no color [GH-2246]
+2013-09-22 14:14:07 #917 passed:     master Merge pull request #2253 from PeteMichaud/backtick
+2013-09-20 23:17:46 #914 passed:     master provisioners/ansible: convert extra vars to strings [GH-2244]
+2013-09-20 23:13:40 #913 passed:     master Update CHANGELOG
+2013-09-20 23:12:55 #912 passed:     master Merge pull request #2242 from bt5e/move-up-chmod-in-puppet
+2013-09-20 19:58:59 #911 passed:     master providers/virtualbox: don't touch DYLD_* anymore.
+2013-09-20 19:53:28 #910 passed:     master guests/linux: fail after a number of attempts
+2013-09-20 19:51:21 #909 passed:     master guests/linux: only successful mount if exit status 0
+2013-09-20 19:44:17 #908 passed:     master core: Unset DYLD_LIBRARY_PATH if setuid/setgid [GH-2243]
+2013-09-20 19:40:05 #907 passed:     master core: modify DYLD_LIBRARY_PATH only if executing in installer [GH-2231]
+2013-09-20 19:32:43 #906 passed:     master website/docs: document the binary flag on provisioning
+2013-09-20 19:24:41 #905 passed:     master Merge pull request #2235 from aleno/shell
+2013-09-20 19:21:37 #904 passed:     master core: don't output \e[0K on Windows [GH-2246]
+2013-09-19 13:47:34 #903 passed:     master website/www: add blog feed to sidebar
+2013-09-19 13:36:04 #902 passed:     master website/www: add the RSS feed
+2013-09-19 13:12:11 #900 passed:     master Update CHANGELOG
+2013-09-19 13:11:04 #899 passed:     master Merge pull request #2233 from viq/patch-1
+2013-09-18 19:54:17 #894 passed:     master website/www: add the blog to the nav bar
+2013-09-18 16:10:55 #893 passed:     master Up version for dev
+2013-09-18 15:47:02 #892 passed:     master v1.3.3
+2013-09-18 11:45:14 #891 passed:     master core: set the DYLD_LIBRARY_PATH before other env vars
+2013-09-18 11:34:35 #890 passed:     master communicators/ssh: timeout waiting for connection + header [GH-2226]
+2013-09-18 11:24:14 #889 passed:     master Revert "core: don't delete state data if id=nil [GH-2201]"
+2013-09-18 11:19:37 #888 passed:     master Merge pull request #2221 from mark-rushakoff/fix-typo
+2013-09-18 11:09:12 #887 passed:     master core: Fix bad translation [GH-2225]
+2013-09-17 20:54:33 #884 passed:     master core: Remove DYLD_LIBRARY_PATH if command not in installer [GH-2219]
+2013-09-17 18:16:50 #883 passed:     master Up version for dev
+2013-09-17 17:37:43 #882 passed:     master v1.3.2
+2013-09-17 14:43:52 #881 passed:     master core: Vagrantfile must be file [GH-2216]
+2013-09-16 23:28:17 #879 passed:     master hosts/arch: remove duplication with HostsLinux
+2013-09-16 23:03:53 #878 passed:     master provisioners/ansible: default output level is verbose [GH-2194]
+2013-09-16 22:57:13 #877 passed:     master Revert "core: better cleanup of ".vagrant"" [GH-2201]
+2013-09-16 22:51:57 #876 passed:     master guests/linux: try `id -g` to determine group as well [GH-2197]
+2013-09-16 18:25:03 #875 passed:     master website/www: work on a blog
+2013-09-16 16:23:26 #874 passed:     master Merge pull request #2212 from fgrehm/remove-dead-code-take-2
+2013-09-15 21:50:59 #872 passed:     master core: Create directory before real_path [GH-2196]
+2013-09-15 19:39:06 #871 passed:     master Update CHANGELOG
+2013-09-15 19:38:39 #870 passed:     master communicators/ssh: increase conect timeout [GH-2163]
+2013-09-15 19:33:58 #869 passed:     master core: sleep between state checks for communicator [GH-2163]
+2013-09-15 19:30:59 #868 passed:     master core: Convert FP ports to ints [GH-2173]
+2013-09-15 19:19:38 #867 passed:     master core: log when OUT actions are called in middleware
+2013-09-15 19:05:58 #866 passed:     master UPdate CHANGELOG
+2013-09-15 18:52:47 #865 passed:     master core: improve bad boot state error [GH-2187]
+2013-09-15 18:51:37 #864 passed:     master Update CHANGELOG
+2013-09-15 18:50:14 #863 passed:     master website/docs: fix 404
+2013-09-15 18:48:30 #862 passed:     master Update CHANGELOG
+2013-09-15 18:47:34 #861 passed:     master Merge pull request #2191 from Raman148/fix/master/exportssecurity
+2013-09-15 18:44:28 #860 passed:     master Merge pull request #2195 from tpltnt/locales-fix
+2013-09-15 18:41:03 #859 passed:     master Update CHANGELOG
+2013-09-15 18:38:16 #858 passed:     master Merge pull request #2200 from mikerowehl/virtualbox_destroy_unused_interfaces_fix
+2013-09-15 18:36:18 #857 passed:     master Merge pull request #2203 from copperlight/ansible-host-key-checking
+2013-09-14 12:40:43 #855 passed:     master Merge pull request #2205 from jcockhren/fix_2204
+2013-09-14 12:36:42 #854 passed:     master core: Report the proper invalid state when waiting for the guest machine to be ready
+2013-09-11 17:59:36 #849 passed:     master core: Allow strings to be used when checking for Guest capabilities
+2013-09-11 17:41:06 #848 passed:     master Update issue reference on CHANGELOG
+2013-09-11 17:40:41 #847 passed:     master Merge pull request #2189 from phinze/1736-fix-has-plugin-no-method-error
+2013-09-10 11:34:24 #842 passed:     master Merge pull request #2176 from deltaroe/master
+2013-09-09 12:28:13 #840 passed:     master Merge pull request #2167 from schlamar/patch-1
+2013-09-07 19:50:32 #838 passed:     master hosts/arch: correct variable for NFS exports [GH-2161]
+2013-09-07 19:49:31 #837 passed:     master Update CHANGELOG
+2013-09-07 19:46:56 #836 passed:     master Merge pull request #2153 from gildegoma/ansible-docs-cleanup-and-vv
+2013-09-07 19:45:11 #835 passed:     master Merge pull request #2156 from gustavobgama/fix/master/linux_nfs_error
+2013-09-07 19:44:49 #834 passed:     master Merge pull request #2158 from atomic-penguin/GH-1977
+2013-09-06 18:29:34 #828 passed:     master Update version for dev
+2013-09-06 18:09:27 #827 passed:     master v1.3.1
+2013-09-06 13:42:45 #826 passed:     master guests/coreos: proper guest IP detection [GH-2146]
+2013-09-06 13:38:35 #825 passed:     master Merge pull request #2147 from grepory/version_number_fix
+2013-09-06 11:52:37 #823 passed:     master website/docs: page titles on everything, cover more info
+2013-09-06 10:56:12 #822 passed:     master hosts/linux: fix undefined variable in NFS export [GH-2137]
+2013-09-06 10:54:34 #821 passed:     master Merge pull request #2138 from BreiteSeite/master
+2013-09-06 10:52:32 #820 passed:     master core: fix interpolation error on v1=>v2 upgrade warinings [GH-2142]
+2013-09-06 02:27:28 #818 passed:     master core: handle EACCES when cleaning up .vagrant dir
+2013-09-06 02:14:10 #817 passed:     master fix failing test
+2013-09-06 02:11:16 #816 failed:     master core: don't use active_machines too much, deletes data
+2013-09-06 02:00:01 #815 passed:     master provisioners/chef: fix syntax error
+2013-09-05 18:35:13 #814 passed:     master provisioners/chef: env config less restrictive
+2013-09-05 18:25:32 #813 passed:     master provisioners/puppet: sudo test for folders for umask
+2013-09-05 18:13:59 #812 passed:     master provisioners/chef: work with restrictive umask [GH-2121]
+2013-09-05 16:47:17 #811 passed:     master core: VAGRANT_VAGRANTFILE affects only project vagrantfile [GH-2130]
+2013-09-05 16:36:25 #810 passed:     master website/docs: update vmx wordings
+2013-09-05 16:34:31 #809 passed:     master Merge pull request #2127 from herdani/patch-1
+2013-09-05 16:27:47 #808 passed:     master core: dup option hashes everywhere
+2013-09-05 16:26:37 #807 passed:     master core: dup the synced folder options [GH-2134]
+2013-09-04 22:51:38 #804 passed:     master Up version for development
+2013-09-04 22:51:07 #803 passed:     master v1.3.0
+2013-09-04 22:44:14 #802 passed:     master provisioners/chef: chown/create folder before access [GH-2121]
+2013-09-04 19:25:15 #801 passed:     master core: exec with the proxy command if specified
+2013-09-04 19:20:28 #800 passed:     master Update CHANGELOG
+2013-09-04 19:20:16 #799 passed:     master Merge pull request #1537 from wormzer/master
+2013-09-04 18:58:16 #798 passed:     master provisioners/all: report proper invalid keys [GH-2117]
+2013-09-04 18:04:16 #797 passed:     master Merge pull request #2120 from beporter/comment-typo-fixes
+2013-09-04 17:56:20 #796 passed:     master Merge pull request #2122 from psi/docs-fixes
+2013-09-03 23:07:20 #792 passed:     master website/docs: clarify roles
+2013-09-03 23:05:11 #791 passed:     master Merge pull request #2115 from erichelgeson/patch-1
+2013-09-03 16:11:05 #789 passed:     master Update CHANGELOG
+2013-09-03 16:10:06 #788 passed:     master Merge pull request #2112 from markpeek/markpeek-file
+2013-09-03 15:51:05 #787 passed:     master scripts: website_push_www
+2013-09-03 14:01:12 #786 passed:     master website/docs: bring in changes from docs.vagrantup.com
+2013-09-03 13:50:23 #785 passed:     master Only ignore the root Gemfile.lock
+2013-09-03 13:49:23 #784 passed:     master website/docs: add .buildpacks file
+2013-09-03 13:39:20 #783 passed:     master scripts: add website_push_docs
+2013-09-03 13:11:53 #782 passed:     master guests/fedora: use PEERDNS=no in static [GH-2111]
+2013-09-03 13:09:45 #781 passed:     master website: add docs back to the main Vagrant repo
+2013-09-03 12:45:02 #779 passed:     master provisioners/shell: prefer "." over "::"
+2013-09-03 12:41:17 #778 passed:     master Merge branch 'shell-provisioner-remote-script' of https://github.com/fgrehm/vagrant into fgrehm-shell-provisioner-remote-script
+2013-09-02 17:54:53 #777 passed:     master core: Show what machine error messages are for [GH-1668]
+2013-09-02 17:45:08 #776 passed:     master core: vagrant -v no longer loads Vagrantfile
+2013-09-02 17:32:48 #775 passed:     master Update CHANGELOG
+2013-09-02 17:23:37 #774 passed:     master core: Vagrant.has_plugin? to check if plugin installed [GH-1736]
+2013-09-02 17:12:56 #773 passed:     master Update CHANGELOG
+2013-09-02 17:14:03 #772 passed:     master Merge pull request #1745 from jheise/master
+2013-09-02 17:07:55 #771 passed:     master commands/up: validate provision-with args [GH-1957]
+2013-09-02 16:54:02 #770 passed:     master Merge pull request #2077 from miurahr/exportfs
+2013-09-02 11:33:16 #769 passed:     master commands/plugin: Add "update" subcommand
+2013-09-02 11:14:51 #768 passed:     master commands/reload: dont' provision by default
+2013-09-01 15:48:06 #767 passed:     master Merge pull request #2107 from fgrehm/remove-dead-code
+2013-09-01 15:47:45 #766 passed:     master Update CHANGELOG
+2013-09-01 15:44:40 #764 passed:     master Merge pull request #1717 from toretore/master
+2013-09-01 15:40:46 #763 passed:     master Bump version
+2013-09-01 15:33:49 #762 passed:     master Merge branch 'fix/master/puppet-provisioner-nfs-support' of https://github.com/mfournier/vagrant into mfournier-fix/master/puppet-provisioner-nfs-support
+2013-09-01 15:09:13 #761 passed:     master core: Arbitrary NFS options with nfs_options [GH-1029]
+2013-09-01 14:28:30 #760 passed:     master core: note backwards incompat in code
+2013-09-01 14:26:24 #759 passed:     master core: support "mount_options" for arbitrary mount options [GH-1029]
+2013-09-01 14:01:34 #758 passed:     master hosts/linux: fix NFS prune regex
+2013-09-01 13:59:54 #757 passed:     master hosts/bsd: proper NFS prune sed syntax
+2013-09-01 13:45:38 #756 passed:     master Update CHANGELOG
+2013-09-01 13:45:52 #755 passed:     master Merge branch 'nfs-per-user' of https://github.com/davedevelopment/vagrant into davedevelopment-nfs-per-user
+2013-09-01 12:26:22 #754 passed:     master hosts/bsd: nice error if can't read exports file [GH-2038]
+2013-09-01 01:03:19 #753 passed:     master core: clean up machine directory when id = nil
+2013-09-01 00:44:56 #752 passed:     master providers/virtualbox: only set default name on first up [GH-1817]
+2013-09-01 00:25:38 #751 passed:     master provisioners/puppet: run from correct working directory [GH-1967]
+2013-08-31 23:49:40 #750 passed:     master provisioners/ansible: use proper config name [GH-2104]
+2013-08-30 11:46:45 #749 passed:     master commmands/box/remove: fix exception when no provider specified [GH-2100]
+2013-08-29 19:42:06 #748 passed:     master provisioners/salt: default bootstrap script gets latest
+2013-08-29 19:27:47 #747 passed:     master provisioners/salt: remove unused code
+2013-08-29 19:09:36 #746 passed:     master provisioners/salt: remove vagrant check, we core now
+2013-08-29 19:07:08 #745 passed:     master Merge pull request #1626 from raadad/salty-vagrant-provisioner
+2013-08-29 18:51:34 #744 passed:     master providers/virtualbox: 4.2 max network adapters to 36 [GH-1886]
+2013-08-29 18:45:31 #742 passed:     master providers/virtualbox: Run post-boot after boot but before wait for SSH
+2013-08-29 18:44:00 #741 passed:     master fix broken test
+2013-08-29 18:39:02 #740 failed:     master core: config.vm.graceful_halt_timeout to specify graceful halt timeout
+2013-08-29 14:26:46 #739 passed:     master core: set `disabled: true` for disabling forwarded port [GH-1922]
+2013-08-29 14:14:17 #738 passed:     master commands/up: flag --no-destroy-on-error [GH-2011]
+2013-08-29 13:56:55 #737 passed:     master provisioners/ansible: execute ansible with cwd of root_path [GH-2051]
+2013-08-29 13:47:26 #736 passed:     master Update CHANGELOG
+2013-08-29 13:37:54 #735 passed:     master provisioners/chef: error if knife not found and auto-deleting
+2013-08-29 13:28:44 #734 passed:     master provisioners/chef: don't delete node/client by default
+2013-08-29 13:20:11 #733 passed:     master core: Inherit CommandUnavailableWindows from CommandUnavailable
+2013-08-29 13:15:43 #732 passed:     master core: ProvisionerCleanup task to run cleanup on provisioners
+2013-08-29 12:37:28 #731 passed:     master communicators/ssh: handle closed connection without exception
+2013-08-29 00:45:34 #730 passed:     master Update CHANGELOG
+2013-08-29 00:44:53 #729 passed:     master Merge pull request #1713 from akalyaev/respect-nec-type-option-for-private-networks-1704
+2013-08-29 00:31:02 #728 passed:     master Update CHANGELOG
+2013-08-28 19:18:01 #727 passed:     master kernel: config.vm.host_name works again
+2013-08-28 19:04:27 #726 passed:     master Update CHANGELOG
+2013-08-28 19:03:24 #725 passed:     master Merge pull request #1801 from davegudge/patch-1
+2013-08-28 18:55:27 #724 passed:     master plugins/provisioners: put generated inventory file in vagrantfile dir
+2013-08-28 18:50:32 #723 passed:     master Update CHANGELOG
+2013-08-28 18:50:00 #722 passed:     master Merge branch 'chef_solo_environment_support' of https://github.com/marcparadise/vagrant into marcparadise-chef_solo_environment_support
+2013-08-28 18:46:57 #721 passed:     master provisioners/ansible: allow verbose :extra to be string
+2013-08-28 18:45:38 #720 passed:     master Merge pull request #1979 from bmabey/patch-1
+2013-08-28 18:40:03 #719 passed:     master Update CHANGELOG
+2013-08-28 18:39:24 #718 passed:     master Merge pull request #2052 from janth/solaris11-guest
+2013-08-28 18:38:46 #717 passed:     master Update CHANGELOG
+2013-08-28 18:38:32 #716 passed:     master Merge pull request #2058 from miketheman/chef_formatter_part_deux
+2013-08-28 18:34:24 #715 passed:     master Update CHANGELOG
+2013-08-28 18:28:35 #714 passed:     master Merge pull request #2059 from mlex/forward-tcp-and-udp-with-on-same-port-number
+2013-08-28 18:27:50 #713 passed:     master Update CHANGELOG
+2013-08-28 18:27:08 #712 passed:     master Merge pull request #2086 from tsahara-iij/openbsd-caps
+2013-08-28 18:26:14 #711 passed:     master Update CHANGELOG
+2013-08-28 18:25:35 #710 passed:     master Merge pull request #2090 from miguno/GH-2087
+2013-08-27 14:29:39 #706 passed:     master Merge pull request #2084 from glensc/fix-2a9d0c9
+2013-08-09 19:48:40 #693 passed:     master Update CHANGELOG
+2013-08-09 19:47:37 #692 passed:     master Merge pull request #2041 from Boohbah/arch-change-host-name
+2013-08-09 14:06:21 #690 passed:     master Merge pull request #2040 from timsutton/darwin-verify-vmware-hgfs
+2013-08-09 13:54:53 #688 passed:     master Update CHANGELOG
+2013-08-09 13:54:04 #687 passed:     master Merge pull request #2015 from flozano/master
+2013-08-09 13:53:07 #686 passed:     master provisioners/ansible: properly quote vars with spaces [GH-1984]
+2013-08-09 13:43:32 #685 passed:     master core: strip newlines off of IDs [GH-2024]
+2013-08-09 13:41:33 #684 passed:     master Add --color to force color output [GH-2027]
+2013-08-09 13:28:22 #683 passed:     master commands/plugin/install: nitpick on style
+2013-08-09 13:26:29 #682 passed:     master Update CHANGELOG
+2013-08-09 13:25:21 #681 passed:     master Merge pull request #1986 from ipwnstuff/feature/plugin-post-install-message
+2013-08-09 13:24:02 #680 passed:     master Update CHANGELOG
+2013-08-09 13:22:34 #679 passed:     master Merge pull request #1689 from philippfranke/master
+2013-08-09 13:19:46 #678 passed:     master Update CHANGELOG
+2013-08-09 13:19:20 #677 passed:     master Merge pull request #2007 from ches/ansible-exit-status
+2013-08-09 13:18:17 #676 passed:     master Update CHANGELOG
+2013-08-09 13:18:10 #675 passed:     master Merge pull request #2008 from gwenci/master
+2013-08-09 13:16:01 #674 passed:     master Update CHANGELOG
+2013-08-09 13:15:40 #673 passed:     master Merge pull request #2016 from mcourtois/fix/master/status_cosmetic
+2013-08-09 13:14:38 #672 passed:     master provisioners/ansible: update some locale stuff
+2013-08-09 13:15:33 #671 passed:     master Update CHANGELOG
+2013-08-09 13:13:36 #670 passed:     master Merge pull request #2026 from ppp0/patch-set-hostname-debian
+2013-08-09 13:08:01 #669 passed:     master Update CHANGELOG
+2013-08-09 13:05:09 #668 passed:     master Merge pull request #2035 from ches/ansible-inventory-directories
+2013-08-09 12:58:39 #667 passed:     master Update CHANGELOG
+2013-08-09 12:55:25 #666 passed:     master Merge pull request #1914 from b2jrock/darwin-guest
+2013-08-04 00:29:34 #656 passed:     master Merge pull request #2023 from sevos/core_os_ext1
+2013-08-03 17:27:11 #654 passed:     master Update CHANGELOG
+2013-08-03 17:26:33 #653 passed:     master Merge pull request #2022 from sevos/core_os
+2013-07-30 23:49:10 #646 passed:     master Up version for dev
+2013-07-29 00:43:57 #641 passed:     master Update version for dev
+2013-07-28 23:44:43 #640 passed:     master v1.2.7
+2013-07-28 23:39:31 #639 passed:     master Show the correct installed plugin [GH-1834]
+2013-07-28 22:52:54 #638 passed:     master Update CHANGELOG
+2013-07-28 22:51:06 #637 passed:     master Merge pull request #2003 from fgrehm/curl-user-agent
+2013-07-28 18:21:31 #635 passed:     master Merge pull request #2002 from michaelglass/patch-2
+2013-07-28 17:52:27 #632 passed:     master Fix small typo on comment
+2013-07-28 14:21:36 #631 passed:     master Convert config.vm.hostname to string [GH-1999]
+2013-07-28 14:20:54 #630 passed:     master Use --color=false for Puppet no color [GH-2000]
+2013-07-28 00:22:12 #629 passed:     master unnecessary '!'
+2013-07-28 00:21:39 #628 passed:     master Convert hostpath to string on windows so gsub works
+2013-07-26 23:05:09 #627 passed:     master up version for dev
+2013-07-26 22:21:56 #626 passed:     master v1.2.6
+2013-07-26 22:18:53 #625 passed:     master v1.2.6
+2013-07-26 18:00:48 #624 passed:     master Update CHANGELOG
+2013-07-26 18:00:20 #623 passed:     master Merge pull request #1990 from michaelglass/patch-2
+2013-07-26 13:27:29 #621 passed:     master Up version for dev
+2013-07-26 12:28:49 #619 passed:     master v1.2.5
+2013-07-26 10:23:36 #618 passed:     master Merge pull request #1987 from StephenKing/master
+2013-07-25 16:57:47 #615 passed:     master Update CHANGELOG
+2013-07-25 15:26:53 #614 passed:     master Merge pull request #1982 from michaelglass/patch-1
+2013-07-24 08:51:19 #610 passed:     master Merge pull request #1973 from tsugliani/patch-1
+2013-07-23 21:41:55 #608 passed:     master Update CHANGELOG
+2013-07-23 21:41:12 #607 passed:     master Merge pull request #1738 from drogerschariot/master
+2013-07-23 17:37:25 #606 passed:     master Unused config objects are finalized properly [GH-1877]
+2013-07-21 15:40:15 #603 passed:     master Add missing comma on puppet provisioner file
+2013-07-20 00:49:13 #602 passed:     master Simplify understanding of magic "2" in Vagrantfile [GH-1835]
+2013-07-18 23:50:46 #601 passed:     master box_url works with all box formats a provider supports [GH-1752]
+2013-07-18 21:38:10 #600 passed:     master Update CHANGELOG
+2013-07-18 13:16:08 #598 passed:     master Comment
+2013-07-18 13:01:13 #597 passed:     master Error if VBox 4.2.14 is running.
+2013-07-18 11:17:30 #596 failed:     master vagrant help <foo> works [GH-1578]
+2013-07-18 11:03:51 #595 passed:     master VAGRANT_DOTFILE_PATH [GH-1524]
+2013-07-18 10:55:31 #594 passed:     master Change solaris shut down command to properly shut down [Gh-1506]
+2013-07-18 10:30:08 #593 passed:     master Register fedora host as CentOS too [GH-1394]
+2013-07-18 09:54:18 #592 passed:     master Remove reference to PPK in keys readme
+2013-07-18 09:44:01 #591 passed:     master Fix missing translation for non existent CWD [GH-1947]
+2013-07-18 07:02:20 #590 passed:     master Merge pull request #1945 from znz/fix/master/forwarded_port-guest_ip
+2013-07-17 23:55:38 #589 passed:     master update Changelog
+2013-07-17 23:54:58 #588 passed:     master Merge pull request #1944 from miketheman/chef_cfg_formatter
+2013-07-17 23:21:00 #586 passed:     master add verbose_logging config option to chef based provisioners
+2013-07-17 23:13:50 #585 passed:     master Merge pull request #1943 from miketheman/ignore_ruby_managers
+2013-07-17 23:06:11 #583 passed:     master Default VM name for VirtualBox contains Vagrantfile VM name [GH-1281]
+2013-07-17 23:03:30 #582 passed:     master NFS allows access from all networks on VM [GH-1204]
+2013-07-17 22:40:26 #581 passed:     master Remote commands show output when fails [GH-1203]
+2013-07-17 22:35:33 #580 passed:     master Use 32-bit integer for NFS fsuid for older kernels [GH-1127]
+2013-07-17 22:20:05 #579 passed:     master Shared folder inheritence doesn't overwrite multi-vm [GH-1935]
+2013-07-17 13:41:03 #578 passed:     master Get the deb/ubuntu change host name correct
+2013-07-17 13:38:49 #577 passed:     master NFS exports with wrong casing on case-insensitive work [GH-1202]
+2013-07-17 07:59:48 #576 passed:     master Allow hotplug on deb/ubuntu change host name [GH-1929]
+2013-07-16 20:24:23 #574 passed:     master Update CHANGELOG
+2013-07-16 20:21:44 #573 passed:     master Merge pull request #1734 from frankshearar/arch-configure-network-needs-template
+2013-07-16 20:03:21 #572 passed:     master Up version for dev
+2013-07-16 19:06:46 #571 passed:     master v1.2.4
+2013-07-16 18:51:02 #570 passed:     master Moves to using new chef cache/backup dir defaults.
+2013-07-16 18:46:42 #569 passed:     master Add DSAAuthentication=yes flag to SSH [GH-1900]
+2013-07-16 18:43:36 #568 passed:     master Merge pull request #1905 from bdon/master
+2013-07-16 18:37:39 #567 passed:     master CHANGELOG
+2013-07-16 18:37:03 #566 passed:     master Merge pull request #1920 from nickanderson/feature/custom_cf_package_name
+2013-07-16 18:36:05 #565 passed:     master CHANGELOG
+2013-07-16 18:34:46 #564 passed:     master Merge pull request #1928 from korya/master
+2013-07-16 18:27:25 #563 passed:     master Update CHANGELOG
+2013-07-16 18:26:28 #562 passed:     master Merge pull request #1929 from fpletz/fix/master/fix_dhcp_on_debian_ubuntu_guests
+2013-07-16 18:24:24 #561 passed:     master NFS exports with single quotes now work properly [GH-1166]
+2013-07-12 19:24:12 #558 passed:     master Update CHANGELOG
+2013-07-12 19:23:21 #557 passed:     master Merge pull request #1925 from ROBLOX/master
+2013-07-12 03:14:09 #553 passed:     master Properly detect missing VirtualBox [GH-1918]
+2013-07-12 02:06:37 #552 passed:     master style nitpick
+2013-07-11 17:06:23 #551 passed:     master Close SSH channel after exit status received [GH-603]
+2013-07-11 15:39:30 #550 passed:     master Merge pull request #1916 from saturnflyer/master
+2013-07-11 05:22:14 #547 passed:     master Forward ports can specify host/guest IP to bind to [GH-1121]
+2013-07-09 21:11:46 #544 passed:     master Up version for development
+2013-07-09 19:02:52 #543 passed:     master v1.2.3
+2013-07-09 18:46:45 #542 passed:     master Update CHANGELOG
+2013-07-09 18:46:31 #541 passed:     master Merge pull request #1911 from emyl/no_route_fix
+2013-07-09 18:44:42 #540 passed:     master Merge pull request #1913 from mightybs/master
+2013-07-09 11:20:15 #538 passed:     master Merge pull request #1720 from tawan/patch-1
+2013-07-09 11:17:55 #537 passed:     master Merge pull request #1861 from trlinkin/rdoc_builder
+2013-07-09 11:08:08 #536 passed:     master Merge pull request #1912 from emyl/locales_cleanup
+2013-06-24 14:55:35 #519 passed:     master Merge pull request #1859 from sethvargo/remove_json
+2013-06-13 22:15:39 #512 passed:     master Update CHANGELOG
+2013-06-13 22:13:43 #511 passed:     master Merge pull request #1698 from Govinda-Fichtner/gentoo_fix
+2013-06-10 22:15:34 #509 passed:     master Merge pull request #1818 from fgrehm/kick-off-contributing-guidelines
+2013-06-09 17:56:03 #506 passed:     master Merge pull request #1714 from aszeszo/master
+2013-06-09 17:55:06 #505 passed:     master Update CHANGELOG
+2013-06-09 17:52:45 #504 passed:     master Merge pull request #1760 from tunix/netctl
+2013-06-09 17:49:38 #503 passed:     master Merge pull request #1763 from ekalinin/patch-1
+2013-06-09 17:16:50 #502 passed:     master Bind default SSH to 127.0.0.1 [GH-1785]
+2013-06-09 15:53:06 #501 passed:     master tweaks for style
+2013-06-09 15:48:55 #500 passed:     master Merge pull request #1783 from Aigeruth/issue-654
+2013-06-09 15:47:47 #499 passed:     master Validate an IP is given for a private network [GH-1788]
+2013-06-09 15:38:07 #498 passed:     master virtualbox: only configure networks if there are some [GH-1796]
+2013-06-09 15:31:14 #497 passed:     master Merge pull request #1798 from hecko/master
+2013-06-09 15:27:59 #496 passed:     master read_ip_address linux cap only reads ip of first device [GH-1799]
+2013-06-09 15:18:19 #495 passed:     master config.vm.guest now forces guest setting again [GH-1800]
+2013-06-09 14:54:21 #494 passed:     master Merge pull request #1808 from glensc/ssh-agent
+2013-06-09 14:46:50 #493 passed:     master Merge pull request #1815 from jprosevear/master
+2013-06-01 19:44:49 #481 passed:     master Update CHANGELOG
+2013-06-01 19:44:13 #480 passed:     master Merge pull request #1781 from dsesh/patch-1
+2013-05-04 11:52:19 #444 passed:     master Properly convert provider name to symbol when searching for boxes
+2013-05-01 23:30:52 #441 passed:     master Allow network names to be strings in V1 config
+2013-05-01 21:02:46 #440 passed:     master SmartOS should be OmniOS
+2013-05-01 20:59:11 #439 passed:     master Properly configure Chef solo when no roles path [GH-1665]
+2013-05-01 20:52:10 #438 passed:     master Ignore "guest not ready" error when graceful halting [GH-1679]
+2013-05-01 20:45:56 #437 passed:     master Update CHANGELOG
+2013-05-01 20:29:24 #436 passed:     master Merge pull request #1685 from fgrehm/more-reliable-ubuntu-and-debian-guest-detection
+2013-04-30 20:32:19 #432 passed:     master Use the proper path on Puppet apply to the manifest
+2013-04-30 20:28:54 #431 passed:     master Support working_directory option for Puppet [GH-1670]
+2013-04-30 17:08:48 #430 passed:     master SmartOS support for setting hostnames [GH-1672]
+2013-04-30 11:52:30 #429 passed:     master Detect missing Linux kexts via vboxnetctl error message [GH-1671]
+2013-04-29 12:12:53 #427 passed:     master More robust VBoxManage error checking. [GH-1669]
+2013-04-25 15:43:49 #425 passed:     master Merge pull request #1661 from fgrehm/add-note-about-deprecated-vagrant-home-to-changelog
+2013-04-24 16:33:19 #423 passed:     master Up version for development
+2013-04-23 15:06:57 #422 passed:     master v1.2.2
+2013-04-23 13:59:33 #421 passed:     master Better message when using VirtualBox config
+2013-04-23 01:32:55 #420 passed:     master Convert DOS line endings to Unix in shell provisioner [GH-1495]
+2013-04-22 22:42:29 #419 passed:     master Box add URL with windows drive letter works properly
+2013-04-22 22:39:48 #418 passed:     master Attempt to read guest additions version from showvminfo [GH-1575]
+2013-04-22 22:29:50 #417 passed:     master Update CHANGELOG for GH-1639
+2013-04-22 22:33:17 #416 passed:     master Merge pull request #1640 from aszeszo/master
+2013-04-22 10:44:37 #414 passed:     master Fix default encrypted data bag secret
+2013-04-20 15:35:13 #413 passed:     master CHANGELOG
+2013-04-20 15:32:30 #412 passed:     master Better locking within handle_box_url
+2013-04-20 00:52:51 #411 passed:     master In a multi-machine environment, don't download box multiple [GH-1467]
+2013-04-20 00:17:15 #410 passed:     master Compile the provider overrides early so config caching works
+2013-04-20 00:11:03 #409 passed:     master Error if a box override changes the box setting...
+2013-04-19 15:19:24 #408 passed:     master Built-in DestroyConfirm middleware
+2013-04-19 11:15:41 #407 passed:     master Improved SSH logging for connections
+2013-04-19 11:12:58 #406 passed:     master Warn if run list on Chef is empty, not error [GH-1620]
+2013-04-19 11:07:40 #405 passed:     master Merge pull request #1633 from NeilW/add_ssh_username_to_log_message
+2013-04-17 10:23:40 #400 passed:     master Fix vagrant package --base [GH-1615]
+2013-04-16 23:29:56 #399 passed:     master v1.2.1
+2013-04-16 19:32:45 #398 passed:     master Use Mozilla CA cert bundle for SSL validation
+2013-04-16 19:09:51 #397 passed:     master Mount VBox shared folders with proper owner/group [GH-1611]
+2013-04-16 17:32:44 #396 passed:     master `--[no-]parallel` for vagrant up
+2013-04-16 17:44:18 #395 passed:     master Chef client config defaults are correct [GH-1609]
+2013-04-16 15:59:03 #392 passed:     master Get rid of arbitrary 4 second sleep for SSH
+2013-04-16 15:34:48 #391 passed:     master Fix the tests
+2013-04-16 15:25:52 #390 failed:     master Follow redirects when downloading boxes [GH-1607]
+2013-04-16 15:28:33 #389 passed:     master Properly set the chef-solo run list [GH-1608]
+2013-04-16 12:11:21 #387 passed:     master v1.2.0
+2013-04-15 19:04:35 #385 passed:     master Fix regression that @geetarista fixed.
+2013-04-15 19:04:17 #384 passed:     master Default node name
+2013-04-15 18:42:43 #383 passed:     master Merge pull request #1599 from geetarista/provisioning-typo
+2013-04-15 14:13:03 #381 passed:     master Switch chef configuration to new-style
+2013-04-14 11:47:37 #379 passed:     master Merge pull request #1596 from tobli/patch-1
+2013-04-11 10:13:45 #375 passed:     master Update CHANGELOG
+2013-04-11 10:13:27 #374 passed:     master Merge pull request #1576 from smdahlen/fix-ssh-username
+2013-04-10 17:38:53 #372 passed:     master Automatically override forwarded ports if host ports match
+2013-04-10 16:16:16 #371 passed:     master FreeBSD and OpenBSD guest detection
+2013-04-10 15:40:37 #370 passed:     master Linux guest detection
+2013-04-10 15:18:20 #369 passed:     master Merge pull request #1573 from benjixx/bugfix-ssh-forward-settings
+2013-04-10 13:29:13 #367 passed:     master Output shell script that is running [GH-1568]
+2013-04-10 13:22:23 #366 passed:     master Not an error if cookbooks path is missing
+2013-04-10 12:50:34 #365 passed:     master Get rid of unused autoload
+2013-04-10 12:48:56 #364 passed:     master Get rid of ID on the default configuration since they're gone
+2013-04-10 12:46:44 #363 passed:     master Shared folders with the same guest path overwrite each other
+2013-04-10 11:35:51 #362 passed:     master More robust hostname checking for RedHat [GH-1566]
+2013-04-09 21:06:36 #361 passed:     master Don't duplicate names when defining new machines in VFile
+2013-04-09 10:49:21 #359 passed:     master ssh-config doesn't raise exception when VB machine not created [GH-1562]
+2013-04-08 23:04:45 #358 passed:     master Don't allow the forward_* SSH option sto be default, no sense
+2013-04-08 22:51:14 #357 passed:     master config.ssh properly overrides provder-detected [GH-1479]
+2013-04-08 17:31:44 #356 passed:     master Auto-detect policy server IP for CFEngine
+2013-04-08 16:52:14 #355 failed:     master Running provisioner output shows provisioner shortcut, not class
+2013-04-08 16:30:40 #354 passed:     master Update CHANGELOG
+2013-04-08 13:09:27 #353 passed:     master Fix configure_networks for Fedora as well
+2013-04-08 13:03:19 #352 passed:     master Networks come back up properly after reboot on RedHat [GH-921]
+2013-04-08 12:48:24 #351 passed:     master extend should be include for TemplateRenderer in caps
+2013-04-08 12:40:40 #350 passed:     master Convert network type to symbol so that strings can be used
+2013-04-08 11:10:45 #349 passed:     master Message on `up` that VM is already running [GH-1558]
+2013-04-08 00:11:38 #348 passed:     master Get rid of ruby warning from shadowing in SSH command
+2013-04-08 00:08:42 #347 passed:     master Fix parsing SSH extra args in multi-machine envs [GH-1545]
+2013-04-07 23:53:20 #346 passed:     master Send SSH keep-alive packets [GH-516]
+2013-04-07 17:07:16 #345 passed:     master rtcuseutc as sane default for VBox [GH-912]
+2013-04-07 16:49:55 #344 passed:     master Use vagrant tmp directory for boxes [GH-1442]
+2013-04-07 16:18:40 #343 passed:     master Builders are merged when using hooks. [GH-1555]
+2013-04-07 15:49:15 #342 passed:     master Proper clear line text for Cygwin
+2013-04-07 15:47:38 #341 passed:     master Expand file paths when adding boxes in Cygwin
+2013-04-07 15:12:17 #340 passed:     master Merge pull request #1554 from schisamo/redhat-network-fixes
+2013-04-07 00:09:38 #338 passed:     master Expand Cygwin path to Windows for VirtualBox shared folders
+2013-04-06 20:25:30 #337 passed:     master Providers can support multiple box formats if they choose to.
+2013-04-06 20:21:14 #336 passed:     master Providers can support multiple box formats if they choose to
+2013-04-06 18:52:01 #335 passed:     master Detect PuTTY Link on Windows and show error [GH-1518]
+2013-04-06 18:08:16 #334 passed:     master Assume Cygwin has a TTY for input [GH-1430]
+2013-04-06 18:04:16 #333 passed:     master Always colorize Cygwin output
+2013-04-06 17:54:42 #332 passed:     master On Windows, prefer USERPROFILE for home directory path
+2013-04-06 16:16:02 #331 passed:     master Don't repair forwarded port to used forwarded port
+2013-04-05 23:27:46 #330 passed:     master Expand the file URL when adding a box
+2013-04-05 11:44:54 #329 passed:     master s/not/!/ in ansible provisioner config
+2013-04-05 11:44:16 #328 passed:     master Merge pull request #1551 from commandtab/validate_ansible_extra_vars
+2013-04-05 11:28:16 #326 passed:     master Merge pull request #1550 from commandtab/ansible_extra_vars_hash
+2013-04-04 16:03:19 #323 passed:     master Nicer error if ansible-playbook is not installed on the host
+2013-04-04 15:53:18 #322 passed:     master Merge pull request #1543 from jefflab/master
+2013-04-04 15:50:38 #320 passed:     master Ansible provisioner support CHANGELOG
+2013-04-04 15:34:33 #319 passed:     master Don't preserve modified time when untarring files [GH-1539]
+2013-04-04 15:05:27 #318 passed:     master Merge branch 'guest-capabilities-system'
+2013-04-03 18:21:19 #298 passed:     master Invalid configuration keys are caught and shown in user friendly way
+2013-04-03 17:42:38 #297 passed:     master Respect :mac option for networks [GH-1536]
+2013-04-03 17:10:04 #296 passed:     master Provider-specific configuration overrides via 2nd block param
+2013-04-03 15:57:16 #295 passed:     master Get rid of debug exception
+2013-04-03 14:06:26 #294 passed:     master Fix downloader tests
+2013-04-03 14:02:49 #293 failed:     master Add max redirects for download
+2013-04-03 10:47:05 #292 passed:     master Tests for GH-1478
+2013-04-02 18:35:59 #291 passed:     master Tests for GH-1478
+2013-04-02 17:53:03 #290 passed:     master Tests for GH-1478
+2013-04-02 17:14:34 #289 passed:     master v1.1.5
+2013-04-02 17:06:19 #288 passed:     master Go next if local path doesn't exist for Chef
+2013-04-02 17:08:04 #287 passed:     master Don't share default chef folder if doesn't exist on host
+2013-04-02 17:01:29 #286 passed:     master Show an error if an invalid network type is used
+2013-03-31 22:46:58 #284 passed:     master VBoxManage errors show stderr
+2013-03-31 22:27:59 #283 passed:     master Retry SSH on Errno::EACCES
+2013-03-30 16:58:44 #281 passed:     master Update cHANGELOG
+2013-03-30 16:40:26 #280 passed:     master Properly detect in valid provisioners
+2013-03-29 15:16:02 #278 passed:     master better comments on the last change
+2013-03-29 15:15:28 #277 passed:     master Human friendly error on exit code 126 from VBoxManage
+2013-03-29 14:55:40 #276 passed:     master Don't error too early when config.vm.box is not properly set
+2013-03-29 14:46:46 #275 passed:     master More comprehensive synced folder validation [GH-1499]
+2013-03-28 19:11:33 #274 passed:     master Better plugin dev experience through warnings
+2013-03-28 19:03:58 #273 passed:     master Don't load plugins.json plugins in Bundler env
+2013-03-28 18:55:58 #272 passed:     master Error message if private key not owned by right user [GH-1503]
+2013-03-28 17:53:54 #271 passed:     master Don't error if machine shuts down really quickly on graceful [GH-1505]
+2013-03-28 17:49:29 #270 passed:     master Better detect SSh connections closing
+2013-03-28 17:39:52 #269 passed:     master Proper error message if invalid provisioner is used [GH-1515]
+2013-03-25 16:33:55 #264 passed:     master v1.1.4
+2013-03-25 13:49:18 #263 passed:     master v1.1.3
+2013-03-25 12:43:36 #262 passed:     master Merge pull request #1490 from glensc/pld-distro
+2013-03-22 12:52:15 #256 passed:     master Improve network interface detection to avoid crash [GH-1480]
+2013-03-21 19:32:25 #247 passed:     master Fix obscure error with world writable temp dir
+2013-03-21 18:35:28 #246 passed:     master Update CHANGELOG
+2013-03-21 18:34:22 #245 passed:     master Properly handle forward port collision detection with auto-correct
+2013-03-21 16:02:36 #243 passed:     master Move guest addition check to later, after boot [GH-1179]
+2013-03-21 00:34:39 #241 passed:     master Logging on gem sources
+2013-03-21 00:32:18 #240 passed:     master Update CHANGELOG for GH-1461
+2013-03-21 00:30:48 #239 passed:     master Merge pull request #1461 from hmalphettes/master
+2013-03-21 00:22:18 #238 passed:     master Chef-solo recipe_url works properly again [GH-1467]
+2013-03-21 00:12:21 #237 passed:     master Re-added DHCP support for host-only networks
+2013-03-21 00:08:09 #236 passed:     master Merge pull request #1466 from searchmetrics/enable_dhcp_for_private_networks
+2013-03-20 18:18:55 #234 passed:     master Get rid of Vagrant::SSH, unused
+2013-03-20 13:12:56 #232 passed:     master Merge pull request #1463 from fgrehm/remove-test-helpers
+2013-03-20 12:38:18 #230 passed:     master Merge pull request #1464 from fgrehm/communicator-ssh-typo
+2013-03-19 17:24:39 #224 passed:     master Puppet retains default module path even when custom is set [GH-1207]
+2013-03-18 23:36:17 #223 passed:     master Update CHANGELOG
+2013-03-18 23:35:32 #222 passed:     master Allow anything that can #to-s for Vagrant.plugin
+2013-03-18 20:11:42 #221 passed:     master Attempt to re-establish SSH connection on Net::SSH::Disconnect
+2013-03-18 16:37:43 #220 passed:     master Up version for development
+2013-03-18 15:52:21 #219 passed:     master v1.1.2
+2013-03-18 15:24:20 #218 passed:     master Only prepare NFS settings for VirtualBox if NFS is enabled
+2013-03-18 13:26:52 #216 passed:     master Update CHANGELOG
+2013-03-18 13:25:29 #215 passed:     master Fix overzealous errors with chef solo provisioner defaults
+2013-03-18 09:34:17 #213 passed:     master Merge pull request #1447 from uggedal/fix-shell-provision-args-config-validation
+2013-03-18 09:33:27 #212 passed:     master Merge pull request #1448 from uggedal/fix-unqualified-reference-to-nfs-no-hostonly-network-error
+2013-03-18 01:06:00 #209 passed:     master v1.1.1
+2013-03-18 00:33:47 #208 passed:     master Raise error if no hostonly network on VBox with NFS [GH-1437]
+2013-03-18 00:27:34 #207 passed:     master Puppet server host_name should be hostname [GH-1444]
+2013-03-17 18:19:41 #206 passed:     master Fix default values for shell provisioner config
+2013-03-17 02:14:29 #194 passed:     master Up the version of net-ssh and net-scp
+2013-03-16 12:15:43 #192 passed:     master Logger statements for copying each box file during add
+2013-03-16 12:12:53 #191 passed:     master Merge pull request #1432 from martoe/GH-1424
+2013-03-16 00:15:01 #189 passed:     master Turn network, provider, and provisioner names into symbols if not
+2013-03-15 17:16:54 #188 passed:     master Don't "return" if FP less than port 1024 [GH-1421]
+2013-03-15 17:01:18 #187 passed:     master Don't use full path to manifest with Puppet, exposes bug in VMware
+2013-03-15 13:13:59 #186 passed:     master Human friendly error when metadata.json is missing from a box
+2013-03-14 22:42:57 #185 passed:     master Fix `vagrant package` to avoid nil errors [GH-1423]
+2013-03-14 14:59:16 #184 passed:     master Don't load any plugins for `vagrant plugin` [GH-1418]
+2013-03-14 14:52:15 #183 passed:     master When there is no route to host for SSH, re-establish a new connection
+2013-03-14 14:43:52 #182 passed:     master Properly quote regular expression inputs to StringBlockEditor
+2013-03-14 14:04:23 #181 errored:    master Up version for development. Moving forward.
+2013-03-14 01:37:16 #180 passed:     master v1.1.0
+2013-03-13 23:51:49 #177 passed:     master Properly resolve cygwin paths in Cygwin environments [GH-1366]
+2013-03-13 23:42:19 #176 passed:     master Merge pull request #1366 from johnb0011/master
+2013-03-13 23:39:55 #175 passed:     master Improve VBox kernel module detection for Gentoo [GH-710]
+2013-03-13 23:24:58 #174 passed:     master Give a success message after adding a box
+2013-03-13 23:21:16 #173 passed:     master vagrant box add --force works again [GH-1413]
+2013-03-11 19:26:15 #172 passed:     master Merge pull request #1411 from chorankates-sfdc/master
+2013-03-11 17:52:29 #170 passed:     master FIx vagrant package --base to work again, wrong Machine args [GH-1410]
+2013-03-09 16:10:01 #169 passed:     master Merge pull request #1408 from fgrehm/auto-fix-guest-shared-folder
+2013-03-09 16:08:35 #168 passed:     master Merge pull request #1407 from fgrehm/launch-error-message
+2013-03-09 12:09:21 #163 passed:     master Validate the hostname setting
+2013-03-08 23:30:31 #162 passed:     master Better handling of merging sub-vms
+2013-03-07 13:35:33 #159 passed:     master Whitespace
+2013-03-06 16:49:19 #158 passed:     master Merge pull request #1402 from fgrehm/logger-typo
+2013-03-06 16:47:55 #156 passed:     master Namespace VBoxManage errors properly
+2013-03-06 16:28:10 #155 passed:     master Raise an exception if the provider is reporting SSH is not ready
+2013-03-05 22:12:50 #154 passed:     master Improve the port collision error message
+2013-03-05 13:57:01 #152 passed:     master Properly prepare the path configs for Chef
+2013-03-05 12:22:22 #151 passed:     master Fix a regression where cookbooks path must be an array
+2013-03-05 03:06:39 #149 passed:     master Greatly improve http_proxy/https_proxy detection for box downloads
+2013-03-03 02:10:04 #147 passed:     master Always unload the environment
+2013-03-02 17:48:20 #146 passed:     master config.ssh.password is not used
+2013-03-01 19:37:13 #144 passed:     master Update the vagrant init Vagrantfile to have new network syntax
+2013-03-01 19:20:56 #143 passed:     master Validate forwarded ports
+2013-03-01 19:12:46 #142 passed:     master Default the proper hostname for config
+2013-03-01 16:05:35 #141 passed:     master Private key fix
+2013-03-01 15:54:34 #140 passed:     master Human-friendly error if error copying private key [GH-580]
+2013-03-01 14:28:07 #139 passed:     master Fix a typo in a warning message
+2013-03-01 14:26:56 #138 passed:     master vagrant plugin list works properly with isolated gem env
+2013-03-01 00:32:41 #137 passed:     master Don't load plugins when using the `vagrant plugin` interface
+2013-02-28 02:18:50 #136 passed:     master V2 missing key returns a DummyConfig as well
+2013-02-28 02:11:31 #135 passed:     master Tests passing for V1 config changes
+2013-02-28 02:07:16 #134 failed:     master Capture missing key calls in V1 configs and record them as warnings
+2013-02-27 23:30:26 #133 passed:     master Remove VirtualBox Hostname middleware
+2013-02-27 23:29:37 #132 passed:     master Rename config.vm.host_name to config.vm.hostname for V2
+2013-02-27 23:28:37 #131 passed:     master Built-in hostname middleware for setting hostname
+2013-02-27 21:13:03 #130 passed:     master Line up equal signs because I'm anal about it
+2013-02-27 21:11:17 #129 passed:     master Only error if minor or major version of guest additions is different
+2013-02-27 15:49:12 #128 passed:     master Fix the forward port collision handling
+2013-02-27 13:24:37 #127 passed:     master Loosen JSON dependency
+2013-02-26 15:44:28 #124 passed:     master Output the UI when repairing port collisions
+2013-02-26 13:40:07 #123 passed:     master Use Dir.mktmpdir for tests more
+2013-02-26 13:39:46 #122 passed:     master Get rid of a pending test
+2013-02-24 20:00:50 #118 passed:     master Test to make sure hooks return the action runner result
+2013-02-23 14:09:08 #117 passed:     master VAGRANT_VAGRANTFILE env var to specify alternate filename for Vfile
+2013-02-23 13:53:35 #115 passed:     master Retry setting default name for VirtualBox VM [GH-1368]
+2013-02-22 18:24:15 #114 passed:     master For hooks, put the environment in the action env
+2013-02-22 17:48:25 #113 passed:     master The hook callable has to be an Action builder so the hooks are called
+2013-02-22 17:27:13 #112 passed:     master Always log the exception raised when error loading a plugin
+2013-02-22 15:57:57 #111 passed:     master environment_unload hook
+2013-02-22 14:15:48 #110 passed:     master Specify action_name for all machine actions for action hooks
+2013-02-22 14:02:36 #109 passed:     master Hooks allow parameters and blocks to middlewares
+2013-02-21 13:17:51 #106 passed:     master `vagrant package` works again
+2013-02-20 22:41:38 #105 passed:     master Get rid of unused variable
+2013-02-18 19:14:38 #104 passed:     master Merging networks works again
+2013-02-13 10:42:24 #102 passed:     master Merge pull request #1374 from jblaine/patch-1
+2013-02-09 00:31:34 #94 passed:      master Which_test
+2013-02-09 00:22:41 #93 passed:      master Update CHANGELOG
+2013-02-08 18:55:37 #92 passed:      master Additional unit test to verify missing config key behavior
+2013-02-08 18:40:27 #91 passed:      master Warning and automatically handle "v-root"
+2013-02-08 18:26:31 #90 passed:      master Check for NFS errors only if we actually have NFS folders
+2013-02-08 18:19:57 #89 passed:      master When cleaning NFS, properly escape certain characters
+2013-02-07 20:22:18 #88 passed:      master Better logging in the BoxAdd action
+2013-02-07 18:47:56 #87 passed:      master Update wording on requiring a Vagrantfile [GH-1362]
+2013-02-07 18:43:10 #86 passed:      master Use custom Gem.configuration to avoid loading gemrc files
+2013-02-07 17:35:08 #84 passed:      master Close the tempfile for shell provisioner [GH-1040]
+2013-02-07 17:23:23 #83 passed:      master Warn that config.vm.customize is provider-specific for V1
+2013-02-07 14:03:58 #82 passed:      master More gracefully handled plugins which cannot be found
+2013-02-07 10:25:56 #79 passed:      master Merge pull request #1358 from phunehehe/fix-collision-message
+2013-02-07 01:00:12 #77 passed:      master Remove unused test
+2013-02-06 20:36:31 #76 failed:      master Call properly modifies original environment
+2013-02-06 20:09:36 #75 passed:      master Raise a proper SSH error on ECONNRESET
+2013-02-06 19:19:38 #74 passed:      master `vagrant plugin i nstall` shows version it installed
+2013-02-06 18:58:48 #73 passed:      master Use the proper provider upgrade mechanism in V1 VM
+2013-02-06 18:28:17 #71 passed:      master Put the machine action in the middleware env
+2013-02-06 18:22:01 #70 passed:      master Spread out methods in provision so subclass can override
+2013-02-06 17:52:26 #69 passed:      master Merge branch 'new-hook-system'
+2013-02-06 13:58:58 #68 passed:      master Enable symlinks on vboxsf for VirtualBox 4.2 [GH-713]
+2013-02-06 00:27:13 #67 passed:      master Allow SSH upload to upload directories
+2013-02-06 00:23:01 #66 passed:      master Modernize chef solo configuration
+2013-02-06 00:22:44 #65 passed:      master Be more sane about cookbook_paths default in Chef
+2013-02-05 23:33:31 #64 passed:      master Properly default provider configs if not specified
+2013-02-05 23:27:49 #63 passed:      master Fix machine ssh_info tests
+2013-02-05 23:22:31 #62 failed:      master Only override the SSH host/user/etc if not specified by provider
+2013-02-05 14:35:53 #61 passed:      master Do proper provider configuration merging
+2013-02-04 23:17:36 #59 passed:      master Pass a proper Pathname for SSHExec to check key perms
+2013-02-04 23:19:12 #58 passed:      master Properly expand config.ssh.private_key_path
+2013-02-04 23:06:51 #57 passed:      master SSH communicator: check_key_perms should be a Pathname
+2013-02-04 15:55:08 #56 passed:      master Missing requires for SSH
+2013-02-04 15:52:27 #55 passed:      master Net-SSH logs come out with Vagrant debug logs
+2013-02-04 13:58:26 #54 passed:      master Update the Vagrantfile template
+2013-02-04 13:47:38 #53 passed:      master Increase the default SSH timeout
+2013-02-04 13:21:00 #52 passed:      master Use the HashiCorp gem source for plugin installs
+2013-02-04 12:47:15 #51 passed:      master Missing interpolated variable for output message on plugin command
+2013-02-04 12:07:44 #50 passed:      master Merge pull request #1352 from erictip/master
+2013-02-03 20:05:11 #48 passed:      master Get rid of error "status codes" and just exit with 1
+2013-02-03 19:39:39 #47 passed:      master Set more force flags when uninstalling gems to remove monkeypatch
+2013-02-03 16:37:35 #46 passed:      master Handle the case a plugin install is a plugin not found
+2013-02-03 16:27:32 #45 passed:      master If the ID file doesn't exist, then don't delete it
+2013-02-03 16:13:58 #44 passed:      master Make plugin loading more robust to errors
+2013-02-03 15:27:48 #43 passed:      master Remove the `gem` command.
+2013-02-03 15:21:30 #42 passed:      master Merge branch 'plugin-command'
+2013-02-02 18:43:50 #34 passed:      master Add message about removing box so something is clearly happening
+2013-02-02 18:38:30 #33 passed:      master Avoid cross-device moves when adding boxes [GH-1350]
+2013-02-01 16:09:43 #31 passed:      master `vagrant up` says what provider it will use
+2013-02-01 15:55:27 #30 passed:      master Put the provider name in the status output
+2013-02-01 13:31:28 #29 passed:      master New HandleBoxUrl built-in middleware to handlet the "box_url" config
+2013-02-01 12:59:35 #28 passed:      master Fix a little logging typo
+2013-01-31 22:49:51 #27 passed:      master Retry SSH on connection reset
+2013-01-31 20:53:04 #26 passed:      master Be a bit more fine grained about errors that are reported for Vfiles
+2013-01-31 20:55:45 #25 passed:      master Create rgloader/loader.rb files for encoded files
+2013-01-31 13:27:16 #24 passed:      master Fix issue where set name doesn't work if saved

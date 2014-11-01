@@ -1,0 +1,670 @@
+2014-10-04 10:09:29 #3885 failed:    master Merge pull request #2154 from opscode/btm/group_functional_tests
+2014-10-03 10:55:30 #3882 failed:    master Merge pull request #2148 from mal/issue/1563
+2014-10-02 21:18:44 #3880 passed:    master Merge pull request #2156 from opscode/lcg/50x-errors-changelog
+2014-10-02 12:17:02 #3873 passed:    master Merge pull request #1912 from jessehu/CHEF-ISSUE-1904
+2014-10-02 12:00:06 #3872 passed:    master Merge pull request #2141 from opscode/mcquin/Issue-2090
+2014-10-01 17:39:31 #3866 passed:    master Merge pull request #2101 from opscode/mcquin/Issue-1910
+2014-10-01 14:09:19 #3862 failed:    master Update CHANGELOG for guard updates
+2014-09-30 17:12:05 #3848 passed:    master Merge pull request #2136 from opscode/jdmundrawala/provider-specs
+2014-09-30 16:49:49 #3847 passed:    master Merge pull request #2135 from opscode/jdmundrawala/knife-bootstrap-specs
+2014-09-30 16:26:48 #3846 passed:    master Merge pull request #2134 from opscode/jdmundrawala/databag-spec-fix
+2014-09-30 16:04:11 #3845 passed:    master Merge pull request #2133 from opscode/jdmundrawala/remote-directory-fix
+2014-09-30 15:46:45 #3844 passed:    master Merge pull request #2131 from opscode/jdmundrawala/git-windows
+2014-09-30 15:32:22 #3843 passed:    master Merge pull request #2130 from opscode/jdmundrawala/cookbook-loading
+2014-09-30 12:45:56 #3835 passed:    master Merge pull request #2024 from opscode/jdmundrawala/windows_env_path
+2014-09-29 19:58:26 #3815 passed:    master Merge pull request #2128 from opscode/lcg/ruby-2.1.3-changelog
+2014-09-29 18:26:58 #3811 passed:    master Add the pending() guard to the 'when there's no reboot keys present' spec.
+2014-09-29 14:49:53 #3801 passed:    master DSCL resource says it doesn't support OS X below 10.7, so don't run it on 10.6.
+2014-09-29 14:07:40 #3799 passed:    master Merge pull request #2116 from opscode/jdmundrawala/git-centos
+2014-09-29 12:24:07 #3795 passed:    master Merge pull request #2118 from opscode/tball/encrypted-data-bag-ux
+2014-09-27 11:54:58 #3788 passed:    master Merge pull request #2123 from andytson/feature/fix-rhel-pre-7-service
+2014-09-26 18:33:51 #3786 passed:    master Merge pull request #2046 from opscode/lcg/remove-shellout-syntax-checks
+2014-09-26 18:03:58 #3784 passed:    master Merge pull request #2122 from opscode/btm/windows-locale
+2014-09-25 14:36:35 #3762 passed:    master update HTML man pages
+2014-09-25 14:15:55 #3761 passed:    master update knife xargs man page examples
+2014-09-25 14:06:29 #3760 failed:    master update CTLs for 11.16
+2014-09-24 17:28:43 #3755 passed:    master Merge pull request #2092 from opscode/mcquin/escape_glob
+2014-09-23 16:04:48 #3746 failed:    master Merge pull request #2036 from opscode/mcquin/Issue-1944
+2014-09-22 09:58:02 #3719 passed:    master Merge branch 'tball/restoring-homebrew-owner'
+2014-09-19 16:45:22 #3710 passed:    master Merge pull request #2091 from opscode/platform/dsc-phase-1-rebase
+2014-09-19 00:29:16 #3704 passed:    master Merge pull request #2088 from opscode/cdoherty-fix-jenkins-12.04-error
+2014-09-17 19:24:18 #3699 passed:    master Merge pull request #2080 from opscode/fix-debian-spec
+2014-09-17 10:59:23 #3692 passed:    master Merge pull request #2067 from opscode/cdoherty-reboot-resource-docs
+2014-09-16 15:41:18 #3685 passed:    master Merge pull request #2064 from opscode/cdoherty-fix-cert-units
+2014-09-16 12:24:42 #3683 passed:    master Merge pull request #2059 from opscode/fix-integrations
+2014-09-15 18:30:46 #3678 passed:    master Merge pull request #2012 from opscode/mcquin/verify_peer_default
+2014-09-15 18:15:44 #3677 passed:    master Bump version to 12.0.0.alpha.2
+2014-09-15 16:57:32 #3672 passed:    master Merge pull request #2003 from opscode/mcquin/transfer_trusted_certs
+2014-09-12 19:24:54 #3656 passed:    master Merge pull request #1979 from opscode/cdoherty-reboot-core
+2014-09-12 15:08:47 #3652 passed:    master Merge pull request #1901 from opscode/dont-prepend-to-relative-paths
+2014-09-11 11:44:33 #3638 passed:    master Merge pull request #2022 from jaymzh/12-whyrun
+2014-09-10 20:28:04 #3629 passed:    master Merge pull request #2033 from opscode/lcg/1898
+2014-09-10 19:58:29 #3628 passed:    master Merge pull request #2032 from opscode/lcg/1785
+2014-09-10 18:39:18 #3624 passed:    master Merge pull request #2035 from opscode/fix-configload-specs-windows
+2014-09-10 17:12:32 #3618 failed:    master Merge pull request #2031 from opscode/lcg/1577
+2014-09-10 02:23:03 #3607 passed:    master Merge pull request #2025 from opscode/lcg/fix-e2e
+2014-09-09 20:31:52 #3598 failed:    master Merge pull request #2020 from opscode/lcg/fix-lc-all-travis
+2014-09-09 19:06:14 #3597 failed:    master Add ChefFS rdoc, format existing ChefFS rdoc correctly
+2014-09-09 17:29:17 #3588 failed:    master fix broken pedant tests
+2014-09-09 14:57:01 #3587 errored:   master Merge pull request #1977 from opscode/lcg/unicode
+2014-09-09 12:24:59 #3585 passed:    master Add Jesse Hu as 11.16.0 MVP
+2014-09-07 12:47:14 #3568 passed:    master Print out request and response body on non-2xx response
+2014-09-05 21:15:01 #3561 passed:    master Make Chef::Config.versioned_cookbooks configurable by consumers
+2014-09-05 14:10:07 #3547 passed:    master Fix crash when repo root does not exist
+2014-09-05 13:08:37 #3546 passed:    master Merge pull request #1555 from opscode/shain/search_filter
+2014-09-05 12:08:01 #3543 passed:    master Merge pull request #1982 from opscode/sersut/user-dscl-fix
+2014-09-05 11:59:34 #3542 errored:   master Merge pull request #1921 from jtimberman/jtimberman/homebrew-provider
+2014-09-04 16:03:41 #3519 passed:    master Merge pull request #1982 from opscode/sersut/user-dscl-fix
+2014-09-03 16:11:11 #3495 passed:    master Update license to appropriate SPDX ID
+2014-09-03 15:03:37 #3494 passed:    master Merge branch 'just-config-rb'
+2014-09-03 14:07:45 #3490 passed:    master Merge pull request #1973 from opscode/sersut/group-spec-fix
+2014-09-02 12:17:04 #3477 passed:    master Merge pull request #1583 from juliandunn/fix-hardcoded-binaries
+2014-08-30 19:57:11 #3471 passed:    master Merge pull request #1954 from opscode/adamedx/windows_paths_leading
+2014-08-30 00:02:28 #3468 passed:    master Merge branch 'jk/rspec_zero_3'
+2014-08-29 08:59:40 #3458 passed:    master Update CHANGELOG for #1627 / #1283 / CHEF-5075
+2014-08-29 06:59:49 #3455 passed:    master Update CHANGELOG for #1833
+2014-08-29 00:45:08 #3454 passed:    master Merge pull request #1947 from opscode/adamedx/fix-travis-mysql-client
+2014-08-28 21:55:53 #3451 failed:    master Widen chef-zero dependency correctly
+2014-08-28 15:56:44 #3448 failed:    master Merge pull request #1895 from opscode/mcquin/CHEF-5282
+2014-08-27 19:11:58 #3444 failed:    master Remove deprecated @node ivars
+2014-08-26 19:32:05 #3432 failed:    master Merge pull request #1896 from opscode/lcg/1869
+2014-08-26 18:36:56 #3429 failed:    master Merge pull request #1885 from opscode/sersut/bootstrap-12
+2014-08-25 14:41:16 #3416 passed:    master Merge branch 'jm/warn_on_everything' PR #1913
+2014-08-23 23:43:06 #3410 passed:    master Revert "add retries in additional cases"
+2014-08-23 23:36:51 #3409 passed:    master add retries in additional cases
+2014-08-23 12:32:12 #3404 passed:    master Merge pull request #1851 from opscode/lcg/chef-4101
+2014-08-23 12:24:22 #3402 passed:    master Merge pull request #1854 from opscode/lcg/config_dir
+2014-08-22 18:09:16 #3396 passed:    master Changelog update for #1705
+2014-08-22 17:26:11 #3395 passed:    master Update to chef-zero 3
+2014-08-22 14:25:31 #3388 passed:    master Merge pull request #1853 from opscode/mcquin/Issues-1849
+2014-08-22 13:48:46 #3385 passed:    master Merge pull request #1890 from opscode/lcg/changelog-cleanup
+2014-08-22 13:22:50 #3384 passed:    master Merge pull request #1889 from opscode/lcg/1781
+2014-08-21 18:11:54 #3378 passed:    master Merge pull request #1888 from opscode/lcg/1738
+2014-08-21 18:07:23 #3377 passed:    master Merge pull request #1884 from opscode/lcg/1726
+2014-08-21 16:04:04 #3373 passed:    master Bump version to 12.0.0 alpha 1
+2014-08-21 14:59:29 #3370 passed:    master Merge pull request #1883 from opscode/lcg/1561
+2014-08-21 12:14:45 #3364 passed:    master Merge pull request #1873 from opscode/lcg/insert_at
+2014-08-20 19:04:38 #3355 passed:    master Merge pull request #1872 from opscode/lcg/digester
+2014-08-20 17:34:31 #3352 passed:    master Merge pull request #1871 from opscode/lcg/supermarket-urls
+2014-08-20 16:08:09 #3350 failed:    master Merge pull request #1870 from opscode/lcg/digester-singleton
+2014-08-18 11:38:36 #3327 passed:    master Merge pull request #1847 from ClogenyTechnologies/kd/fixuserspec
+2014-08-18 10:22:52 #3325 passed:    master Changelog updates for contributions
+2014-08-18 10:10:34 #3324 passed:    master Update wording based on feedback.
+2014-08-15 18:56:45 #3318 passed:    master Merge pull request #1844 from opscode/sersut/tune-down-travis-notifications
+2014-08-15 18:21:56 #3312 passed:    master Update for CookbookSiteStreamingUploader change to use config option ssl_verify_mode
+2014-08-15 14:55:02 #3306 passed:    master Merge pull request #1841 from opscode/lcg/disable-rhel-e2e
+2014-08-15 13:25:16 #3304 failed:    master Merge pull request #1831 from jbsmith86/master
+2014-08-15 12:41:11 #3303 failed:    master Merge branch 'mcquin/Issues-1518'
+2014-08-14 18:46:11 #3294 failed:    master Merge pull request #1835 from opscode/mcquin/travis_secure_env_vars_again
+2014-08-14 18:25:36 #3291 passed:    master Merge branch 'mcquin/Issues-1711'
+2014-08-14 16:48:14 #3290 passed:    master Merge pull request #1820 from opscode/mcquin/Issues-1446
+2014-08-14 15:43:43 #3287 passed:    master Merge pull request #1832 from opscode/lcg/proxy-var-fixes
+2014-08-14 14:49:50 #3285 passed:    master Merge pull request #1829 from opscode/mcquin/travis_secure_env_vars
+2014-08-13 18:11:00 #3261 failed:    master Merge pull request #1812 from opscode/sersut/chef-1773
+2014-08-13 14:09:01 #3250 failed:    master Merge pull request #1810 from opscode/lcg/json-comment-tests
+2014-08-13 12:44:26 #3246 failed:    master Merge pull request #1764 from opscode/mcquin/ubuntu-tests
+2014-08-13 12:34:50 #3244 canceled:  master Merge pull request #1811 from opscode/lcg/rhel-7-e2e
+2014-08-13 11:33:43 #3241 passed:    master Merge pull request #1800 from opscode/sersut/chef#1634
+2014-08-12 19:44:39 #3235 passed:    master Merge pull request #1814 from opscode/sersut/travis-fix
+2014-08-12 17:47:16 #3226 failed:    master Merge pull request #1771 from opscode/btm/CHEF-5022
+2014-08-12 17:21:42 #3223 passed:    master Revert "Reset DOC_CHANGES for 12.0"
+2014-08-12 17:11:29 #3222 passed:    master Merge pull request #1806 from opscode/lcg/removing-json-class1
+2014-08-12 16:06:05 #3219 passed:    master Merge pull request #1772 from opscode/chef-1765
+2014-08-12 15:55:51 #3218 passed:    master Update release notes and doc changes files for metadata name change
+2014-08-12 14:46:26 #3214 failed:    master Merge branch 'respect-metadata-name'
+2014-08-12 14:12:52 #3211 passed:    master Fix error class typo, bump ffi-yajl requirement to pull in bugfixes
+2014-08-12 13:20:16 #3209 passed:    master Clean up DOC_CHANGES.md and update RELEASE_NOTES.md version
+2014-08-12 11:31:35 #3205 errored:   master Fix Tensibai Zhaoying's name in the CHANGELOG
+2014-08-12 10:56:42 #3203 passed:    master Merge pull request #1688 from opscode/mcquin/kitchen_with_travis
+2014-08-11 22:46:48 #3196 passed:    master Merge pull request #1782 from juliandunn/aix-bff-functional-requires-root
+2014-08-11 22:43:59 #3195 passed:    master Update CHANGELOG for Chef Issues 1754
+2014-08-11 20:57:24 #3194 passed:    master Merge pull request #1787 from opscode/lcg/remove-json-monkeypatching
+2014-08-11 17:16:16 #3187 errored:   master Merge pull request #1774 from opscode/adamedx/issue-1754-windows-env
+2014-08-11 16:22:40 #3185 passed:    master Merge pull request #1802 from opscode/lcg/fix-travis
+2014-08-11 14:27:16 #3178 failed:    master Merge pull request #1734 from opscode/jhs/chef_fs
+2014-08-11 12:36:33 #3173 failed:    master Merge pull request #1786 from opscode/lcg/json-pretty-print
+2014-08-10 12:01:14 #3169 passed:    master Merge branch 'integration-test-refactor'
+2014-08-09 17:49:05 #3161 passed:    master Merge pull request #1715 from opscode/lcg/file-provider-fixes
+2014-08-09 14:23:12 #3160 passed:    master Merge pull request #1725 from opscode/lcg/log-whyrun
+2014-08-09 12:08:01 #3156 passed:    master Revert "remove #to_json Monkeytpatching"
+2014-08-09 12:06:00 #3155 failed:    master remove #to_json Monkeypatching
+2014-08-08 11:38:37 #3143 passed:    master Update for merges
+2014-08-08 11:24:55 #3142 passed:    master Merge pull request #1743 from juliandunn/suse-package-removal-failure
+2014-08-08 11:13:43 #3141 errored:   master Merge pull request #1719 from evertrue/evertrue/eherot/add_mount_point_word_boundaries
+2014-08-08 10:56:13 #3140 passed:    master Merge pull request #1694 from jordane/jordane/git_branch_B
+2014-08-08 10:51:46 #3139 passed:    master Merge pull request #1681 from victorhahncastell/master
+2014-08-07 22:04:05 #3135 passed:    master Update for merges
+2014-08-07 21:52:49 #3134 passed:    master Merge pull request #1676 from higanworks/use_shared_path_for_deploy_resource
+2014-08-07 21:42:21 #3133 passed:    master Merge pull request #1680 from BundesIT/master
+2014-08-07 21:32:00 #3132 passed:    master Merge pull request #1669 from Kasen/pcs_support
+2014-08-07 21:18:59 #3131 passed:    master Merge pull request #1667 from parabuzzle/fix_force_flag
+2014-08-07 20:40:06 #3130 passed:    master Merge pull request #1658 from kgraham/master
+2014-08-07 20:36:14 #3129 passed:    master Merge pull request #1638 from bcobb/version-constraint-string-reflects-behavior
+2014-08-07 20:21:18 #3128 passed:    master Merge pull request #1616 from chr4/userdel-force
+2014-08-07 19:55:55 #3127 errored:   master Merge pull request #1597 from criteo/modify_env
+2014-08-07 19:46:57 #3126 passed:    master Merge pull request #1591 from onddo/CHEF-5356-gcm-2
+2014-08-07 19:35:58 #3125 passed:    master Merge pull request #1552 from jordane/fedora-use-systemd
+2014-08-07 19:21:54 #3124 passed:    master Merge pull request #1527 from opscode/ryancragun/OC-11667
+2014-08-07 19:16:27 #3123 passed:    master Merge pull request #1177 from xeron/CHEF-3399
+not yet #3116 canceled:  master Merge branch 'master' of github.com:opscode/chef
+not yet #3114 canceled:  master Merge pull request #1742 from CloCkWeRX/fix_duplicate_regex
+not yet #3113 canceled:  master Merge pull request #1551 from hltbra/fix-resource-reporter-post-resporting-data
+2014-08-07 13:16:15 #3109 passed:    master Merge branch 'OBrienCommaJosh/chef'
+2014-08-06 14:50:29 #3100 passed:    master Merge pull request #1752 from opscode/cwebberOps/supermarket-ccla
+2014-08-05 15:11:26 #3093 passed:    master Merge pull request #1747 from jaymzh/macosx_groups_11
+2014-08-04 14:55:41 #3085 passed:    master Merge pull request #1741 from juliandunn/fix-mvps
+2014-08-04 14:38:00 #3084 failed:    master Merge pull request #1731 from dkinzer/patch-1
+2014-08-04 12:59:00 #3081 passed:    master Merge pull request #1180 from ClogenyTechnologies/kd-aix-groups
+2014-08-03 09:59:18 #3076 passed:    master Merge pull request #1736 from opscode/lcg/missing-shellout-include
+2014-07-31 20:09:17 #3051 passed:    master Revert "CHEF-4028 - Log resource no longer counts as an updated resource unless a write actually happens"
+2014-07-31 19:44:53 #3050 passed:    master add note on why commented line is commented
+2014-07-31 17:59:54 #3047 passed:    master Merge pull request #1730 from opscode/lcg/http_resource-query-string
+2014-07-31 16:35:54 #3044 passed:    master Revert "remove http_request hard coded query string"
+2014-07-31 16:33:49 #3043 passed:    master remove http_request hard coded query string
+2014-07-31 12:00:58 #3037 passed:    master Revert "log resource should support why-runt"
+2014-07-31 11:45:41 #3036 passed:    master log resource should support why-runt
+2014-07-30 17:27:51 #3024 passed:    master Merge branch 'policyfile-fixes'
+2014-07-29 15:36:25 #3010 passed:    master Merge pull request #1707 from opscode/lcg/shellout-to-base-provider2
+2014-07-29 02:57:21 #3003 passed:    master Merge pull request #1702 from opscode/lcg/add-shellout-to-dsl
+2014-07-26 19:02:37 #2988 passed:    master Merge pull request #1663 from opscode/lcg/yay-chef-12
+2014-07-24 13:28:55 #2959 passed:    master CHEF-4760, CHEF-4586 changelog updates
+2014-07-23 20:15:50 #2957 passed:    master Merge pull request #1682 from opscode/lcg/merge-from-11-stable
+2014-07-23 15:50:32 #2946 passed:    master Merge pull request #1646 from jtimberman/jtimberman/deprecate-rake-tasks
+2014-07-18 15:12:45 #2913 passed:    master Merge pull request #1661 from opscode/lcg/chef-12-version-bump
+2014-07-17 17:43:07 #2902 passed:    master Merge pull request #1409 from opscode/lcg/remove-rest-client
+2014-07-17 14:28:46 #2897 errored:   master Fix log message that shows useless port range
+2014-07-17 13:02:52 #2896 errored:   master Merge pull request #1636 from opscode/lcg/ffi-yajl-constraint
+2014-07-17 12:52:14 #2895 errored:   master Merge pull request #1659 from opscode/lcg/window-service-timeouts
+2014-07-16 18:16:44 #2885 errored:   master Merge pull request #1649 from juliandunn/update-gemspec-url
+2014-07-16 07:52:23 #2875 errored:   master Merge pull request #1644 from opscode/schisamo/lock-down-rest-client
+2014-07-15 14:17:32 #2870 passed:    master Merge pull request #1637 from samdunne/patch-1
+2014-07-15 13:47:21 #2869 errored:   master Merge pull request #1639 from opscode/sersut/chef-cvt-fix
+2014-07-15 09:39:17 #2868 passed:    master Merge branch 'CHEF-3960' PR #1546
+2014-07-11 15:17:00 #2856 passed:    master Merge pull request #1629 from opscode/mcquin/shell_out_spec_fix
+2014-07-11 14:04:05 #2853 failed:    master Use defined? to check for instance variables
+2014-07-11 13:51:57 #2851 passed:    master Use Ruby 1.8 style hashes for BC
+2014-07-09 15:33:08 #2838 passed:    master Merge pull request #1581 from opscode/vtolstov-systemd
+2014-07-09 13:44:02 #2836 passed:    master Merge pull request #1624 from opscode/mcquin/basic_client_proxy
+2014-07-07 13:16:49 #2821 passed:    master Support port ranges for chef-zero in local mode
+2014-07-03 13:24:11 #2808 passed:    master Merge pull request #1606 from opscode/btm/developer-office-hours
+2014-07-02 15:08:21 #2800 passed:    master Merge pull request #1598 from opscode/sersut/chef-1580
+2014-07-02 14:25:35 #2799 passed:    master update knife man pages; add knife serve
+2014-07-02 13:00:18 #2794 errored:   master Merge pull request #1589 from opscode/lcg/lolinheritance
+2014-07-01 14:29:24 #2771 errored:   master Merge pull request #1588 from opscode/sersut/cookbook-sync-fix
+2014-06-30 19:04:24 #2758 passed:    master Merge pull request #1573 from opscode/btm/officehours
+2014-06-30 18:06:42 #2756 passed:    master Add CHEF-4994 to CHANGELOG
+2014-06-30 17:52:01 #2755 passed:    master Merge pull request #1565 from jmink/CHEF-4994
+2014-06-30 16:30:45 #2752 passed:    master Merge pull request #1582 from opscode/sersut/disable-upstart
+2014-06-30 11:50:26 #2745 passed:    master Allow users to set the +resource_name+ in an LWRP programatically
+2014-06-30 10:34:54 #2742 passed:    master Merge pull request #1548 from opscode/mcquin/shell_out
+2014-06-27 17:10:39 #2730 passed:    master Add missing requires to HTTP and HTTP::Simple
+2014-06-27 14:58:03 #2725 passed:    master Merge pull request #1572 from opscode/sersut/ffi-comp-ohai
+2014-06-27 13:11:42 #2720 passed:    master Version bump after branching 11.14.0 -> 11-stable.
+2014-06-26 18:00:47 #2706 failed:    master Merge pull request #1560 from opscode/sersut/chef-1549
+2014-06-26 14:57:30 #2698 failed:    master Contribution info for https://github.com/opscode/chef/pull/1414.
+2014-06-26 14:26:51 #2697 passed:    master Merge pull request #1414 from vtolstov/upstream
+2014-06-26 14:05:06 #2696 passed:    master Merge pull request #1564 from opscode/mcquin/yum-dump-parser-params
+2014-06-25 11:28:45 #2674 passed:    master Merge pull request #1520 from curiositycasualty/knife-ssh-identity-file
+2014-06-25 11:10:33 #2673 passed:    master Merge pull request #1547 from juliandunn/confusing-json-comment
+2014-06-25 00:32:17 #2671 passed:    master Merge pull request #1525 from opscode/mcquin/chefdk-69
+2014-06-24 13:07:15 #2667 passed:    master Merge pull request #1540 from opscode/lcg/ffi-yajl-gem
+2014-06-22 12:28:49 #2654 passed:    master Merge pull request #1530 from opscode/btm/CHEF-5158
+2014-06-21 00:39:04 #2652 passed:    master Merge pull request #1531 from opscode/adamed/chef-5287-rebase
+2014-06-20 14:07:44 #2647 failed:    master Merge pull request #1526 from opscode/mcquin/windows_service
+2014-06-20 12:06:53 #2645 passed:    master Merge pull request #1519 from opscode/ssd/purge-ignore-missing-on-purge
+2014-06-18 20:50:52 #2637 passed:    master contribution info for https://github.com/opscode/chef/pull/1165
+2014-06-18 20:05:40 #2636 passed:    master Merge pull request #1483 from opscode/CHEF-4600
+2014-06-18 18:57:50 #2634 passed:    master contribution info for https://github.com/opscode/chef/pull/506
+2014-06-18 18:34:35 #2633 passed:    master Merge pull request #506 from ctennis/CHEF-3637
+2014-06-18 18:19:54 #2631 passed:    master contribution info for https://github.com/opscode/chef/pull/1494
+2014-06-18 17:16:46 #2630 passed:    master Merge pull request #1494 from brettcave/CHEF-5365_master
+2014-06-18 16:01:43 #2629 passed:    master Contribution info for https://github.com/opscode/chef/pull/1166
+2014-06-18 10:17:35 #2627 passed:    master Merge pull request #1502 from opscode/shain/changelog
+2014-06-17 23:38:14 #2620 passed:    master update for merges
+2014-06-17 19:51:38 #2619 passed:    master Merge pull request #1487 from aespinosa/CHEF-5366-properly-bootstrap-gem-on-archlinux
+2014-06-17 19:12:30 #2617 errored:   master Merge pull request #1501 from opscode/shain/rpm_version_regex
+2014-06-17 18:22:08 #2616 failed:    master Merge pull request #1500 from opscode/shain/spaces_in_selinux_path
+2014-06-17 17:13:07 #2614 failed:    master Merge pull request #1477 from MarkGibbons/CHEF-5347
+2014-06-17 16:50:26 #2613 passed:    master Merge pull request #1471 from kjwierenga/CHEF-5355
+2014-06-16 19:18:28 #2608 passed:    master update for merges
+2014-06-16 18:54:11 #2607 passed:    master Merge pull request #1418 from tarrall/CHEF-5265
+2014-06-16 16:15:35 #2605 errored:   master Merge pull request #1498 from opscode/sersut/cert-update
+2014-06-16 15:56:02 #2604 failed:    master Merge pull request #759 from bensomers/glob_roles
+2014-06-16 13:53:23 #2602 failed:    master Finalize CONTRIBUTING.md document.
+2014-06-16 13:35:01 #2601 failed:    master Merge pull request #1497 from atomic-penguin/privileges-typo
+2014-06-16 11:42:01 #2580 failed:    master Merge pull request #1493 from opscode/mcquin/merges-06-12-2014
+2014-06-12 15:59:03 #2573 passed:    master Merge pull request #1423 from opscode/btm/CHEF-5247
+2014-06-12 15:10:22 #2572 failed:    master Skip all unsupported platforms in remount test
+2014-06-11 19:42:18 #2567 passed:    master Avoid accidentally configuring logger for debug during tests
+2014-06-11 19:19:57 #2566 passed:    master Return rack-compliant 404 messages
+2014-06-11 18:59:22 #2565 passed:    master Merge pull request #1486 from opscode/mcquin/merges-06-11-2014
+2014-06-11 18:06:24 #2562 passed:    master Merge pull request #1443 from opscode/ryancragun/CHEF-5314_11-master
+2014-06-11 17:44:32 #2558 passed:    master Merge pull request #1482 from ekrupnik/gitignore
+2014-06-11 10:50:52 #2556 passed:    master Fix apt_spec test to expect custom timeout for apt-cache command
+2014-06-10 19:39:47 #2553 failed:    master Merge pull request #1480 from opscode/mcquin/merges-06-10-2014
+2014-06-10 19:08:24 #2551 failed:    master Merge pull request #1425 from akretion/master
+2014-06-10 18:53:34 #2550 failed:    master Merge pull request #1456 from onddo/CHEF-5328
+2014-06-10 18:18:09 #2549 failed:    master Merge pull request #1462 from pdf/CHEF-5168
+2014-06-10 18:15:02 #2548 errored:   master Merge pull request #1436 from kramvan1/CHEF-3193
+2014-06-10 16:28:46 #2547 passed:    master Remove super random failing test cruft from previous commit
+2014-06-10 15:15:51 #2546 failed:    master Merge pull request #1470 from opscode/CHEF-5323
+2014-06-10 11:48:00 #2545 failed:    master CHEF-5113: Fix apt package unit test regression on non-debian platforms
+2014-06-10 12:56:56 #2544 passed:    master Contribution release notes
+2014-06-09 21:07:41 #2543 passed:    master Merge pull request #1478 from opscode/mcquin/community-merges
+2014-06-09 20:43:55 #2541 passed:    master Merge pull request #1412 from jtimberman/jtimberman/CHEF-5276
+2014-06-09 20:21:14 #2540 passed:    master Merge pull request #1407 from robbydyer/master
+2014-06-09 19:48:29 #2539 passed:    master Merge pull request #1404 from juliandunn/CHEF-4224
+2014-06-09 19:19:01 #2538 passed:    master Merge pull request #1396 from svanharmelen/CHEF-5261
+2014-06-09 19:04:54 #2537 passed:    master Merge pull request #1364 from opscode/bootstrap-winrm-warning
+2014-06-09 18:31:43 #2536 passed:    master Merge pull request #1263 from srenatus/patch-1
+2014-06-09 18:23:00 #2535 failed:    master Merge pull request #1164 from ClogenyTechnologies/kd-OC-9954-aix-rspec
+2014-06-09 18:06:02 #2534 passed:    master Merge pull request #1130 from philsturgeon/master
+2014-06-09 17:47:25 #2533 passed:    master Merge pull request #1039 from mrb/patch-1
+2014-06-09 17:35:53 #2532 passed:    master Merge pull request #1000 from ljagiello/CHEF-4562
+2014-06-09 17:17:51 #2531 passed:    master Merge pull request #848 from onddo/CHEF-4298
+2014-06-09 16:44:50 #2529 passed:    master Merge pull request #1439 from srenatus/CHEF-5309
+2014-06-09 16:30:47 #2528 passed:    master Merge pull request #1455 from anandsuresh/pw-user-provider-fix
+2014-06-09 11:56:07 #2525 passed:    master Version bump after alpha release.
+2014-06-06 14:46:43 #2520 passed:    master CHEF-5348: Update release notes
+2014-06-06 08:46:25 #2516 failed:    master Merge pull request #1475 from opscode/jk/dup_host
+2014-06-05 16:12:21 #2509 failed:    master Release notes for CHEF-5113, CHEF-5152, CHEF-5174, CHEF-5228
+2014-06-05 13:27:57 #2503 passed:    master Merge pull request #1449 from opscode/btm/windows-paths2
+2014-06-05 13:17:02 #2502 passed:    master pin rspec_junit_formatter at 0.1.x for ruby 1.8.7
+2014-06-05 12:38:44 #2500 passed:    master Merge pull request #1463 from opscode/sersut/contribution-info
+2014-06-05 12:28:31 #2499 passed:    master use :not_supported_on_solaris instead
+2014-06-05 12:11:10 #2498 failed:    master remove stray copypasta from other test
+2014-06-05 12:01:03 #2497 failed:    master solaris does not support uuid types
+2014-06-04 16:40:30 #2493 passed:    master Merge pull request #1451 from opscode/lcg/CHEF-2824
+2014-06-04 14:53:50 #2491 passed:    master Merge pull request #1466 from rjbs/omnios-groups
+2014-06-03 17:56:08 #2483 passed:    master Merge pull request #1469 from opscode/lcg/rspec-2.99-fix
+2014-06-03 15:24:47 #2480 passed:    master Merge pull request #1464 from opscode/CHEF-Issues-1461
+2014-06-03 14:45:02 #2479 passed:    master Don't sit around doing things when exit() or SIGINT happens
+2014-06-03 12:16:12 #2476 passed:    master Merge pull request #1459 from opscode/CHEF-4712
+2014-05-30 17:00:47 #2458 passed:    master Bump the version number post alpha release.
+2014-05-30 16:36:35 #2457 passed:    master Bump version number for alpha release.
+2014-05-30 16:30:20 #2456 errored:   master Merge pull request #1435 from opscode/adamed/wmi-lite
+2014-05-29 18:50:57 #2450 passed:    master Merge pull request #1442 from opscode/CHEF-5259
+2014-05-28 19:31:52 #2439 passed:    master Merge pull request #1454 from opscode/lcg/mount_stuff
+2014-05-28 14:54:23 #2433 passed:    master Depend on chef-zero 2.1.4
+2014-05-27 21:49:07 #2429 passed:    master Make pedant green again
+2014-05-27 21:10:13 #2427 errored:   master Remove chef-zero debugging statement
+2014-05-27 18:21:29 #2426 errored:   master Merge "knife serve" and chef-zero 2.1.3 improvements
+2014-05-23 14:15:13 #2387 passed:    master Merge pull request #1450 from opscode/sersut/changelog
+2014-05-20 18:21:24 #2353 passed:    master Merge pull request #1032 from ClogenyTechnologies/kd/aix-bootstrap
+2014-05-20 15:37:20 #2352 passed:    master Merge pull request #1287 from opscode/enable-travis-notifications
+2014-05-20 14:24:52 #2351 failed:    master Merge parallelizer robustification and enhancements
+2014-05-19 19:49:07 #2346 passed:    master Remove unneeded requires when using CookbookVersionLoader
+2014-05-15 17:15:24 #2324 passed:    master Merge pull request #1431 from opscode/CHEF-3811
+2014-05-15 16:02:12 #2319 passed:    master Merge pull request #1434 from opscode/CHEF-4423
+2014-05-13 14:30:33 #2306 passed:    master Merge pull request #1432 from opscode/sersut/CHEF-4911-2
+2014-05-12 15:40:14 #2291 passed:    master Merge pull request #1420 from opscode/sersut/CHEF-4911
+2014-05-12 14:46:34 #2288 passed:    master Merge pull request #1403 from alex-ethier/CHEF-5269
+2014-05-09 17:59:09 #2264 passed:    master Revert "Allow for multiple package files to be passed to yum"
+2014-05-09 17:36:41 #2262 passed:    master Allow for multiple package files to be passed to yum
+2014-05-09 13:05:42 #2260 passed:    master Merge pull request #1419 from opscode/CHEF-4697
+2014-05-09 11:10:28 #2259 passed:    master Merge pull request #1422 from juliandunn/CHEF-5289
+2014-05-08 17:26:48 #2256 failed:    master Merge pull request #1421 from opscode/sersut/CHEF-4637
+2014-05-08 10:53:15 #2252 passed:    master Merge pull request #1300 from opscode/lcg/CHEF-5092
+2014-05-07 18:29:51 #2244 passed:    master Merge pull request #1417 from opscode/sersut/CC-101-contrib
+2014-05-07 18:23:16 #2243 passed:    master fix spelling of lightweight resource
+2014-05-07 17:16:17 #2238 passed:    master Merge pull request #1333 from ceraslabs/master
+2014-05-07 17:06:10 #2237 passed:    master Merge pull request #1383 from opscode/lcg/CHEF-5015
+2014-05-07 16:47:15 #2236 passed:    master Merge pull request #1356 from opscode/ssd/CHEF-5163
+2014-05-07 12:28:29 #2229 passed:    master Bump to new alpha version for prerelease-release
+2014-05-06 18:30:42 #2227 passed:    master document config option for runlock timeout
+2014-05-06 18:24:01 #2226 passed:    master Merge branch 'CHEF-5074'
+2014-05-05 19:01:56 #2223 passed:    master Fix issue with tests and Windows line endings
+2014-05-05 13:11:55 #2217 passed:    master Merge pull request #1406 from alex-ethier/CHEF-4636
+2014-05-02 14:39:07 #2194 failed:    master CHEF-5162: changelog update
+2014-05-02 14:22:18 #2193 passed:    master CHEF-1910: UPPER_DOCS updates
+2014-05-02 13:10:35 #2192 passed:    master Allow command output to be indented in doc formatter
+2014-05-01 17:34:46 #2182 passed:    master Bump win32-api to a ruby 2.0 compatible version
+2014-05-01 16:42:57 #2180 passed:    master Merge pull request #1400 from opscode/ruby-211-travis
+2014-04-30 17:55:32 #2170 errored:   master Merge pull request #1398 from opscode/config-env
+2014-04-29 18:00:17 #2163 passed:    master Note about nested LWRP printing
+2014-04-29 15:09:03 #2159 passed:    master Merge pull request #1394 from opscode/sersut/CC-113
+2014-04-29 14:30:06 #2158 passed:    master Remove unnecessary JSON class. Add unit test.
+2014-04-29 14:03:23 #2156 passed:    master Merge pull request #1349 from viyh/master
+2014-04-29 13:45:17 #2155 passed:    master Merge pull request #1357 from juliandunn/CHEF-5180
+2014-04-24 12:25:23 #2152 passed:    master Supress stdout/err output from knife tests
+2014-04-24 11:21:57 #2150 passed:    master Make it possible to include Chef::Provider / Chef::Resource
+2014-04-23 17:00:44 #2145 passed:    master Make local mode stable enough to pass chef-pedant
+2014-04-23 16:56:05 #2144 errored:   master Merge: Get local mode passing against chef-pedant
+2014-04-23 13:05:57 #2137 passed:    master Merge pull request #1389 from opscode/lcg/fix-configure-hostname
+2014-04-22 18:27:12 #2129 passed:    master Merge pull request #1387 from opscode/adamed/CHEF-5211
+2014-04-22 17:03:42 #2127 passed:    master CHEF-5116: update md files
+2014-04-22 17:02:00 #2126 passed:    master Merge pull request #1358 from johntdyer/master
+2014-04-22 15:43:09 #2125 passed:    master Merge pull request #1385 from opscode/lcg/CHEF-5100
+2014-04-21 17:51:49 #2118 failed:    master Merge pull request #1377 from opscode/lcg/CHEF-5198-3-moar-func-tests
+2014-04-17 12:51:19 #2111 passed:    master Merge branch 'CHEF-5223'
+2014-04-11 13:51:02 #2102 passed:    master Merge pull request #1376 from opscode/deptools-update
+2014-04-10 12:40:56 #2098 passed:    master Merge pull request #1370 from opscode/lcg/CHEF-5198-remote-file-functests
+2014-04-10 11:31:51 #2096 passed:    master CHEF-4472: release notes
+2014-04-10 07:12:54 #2092 passed:    master CHEF-5150: update UPPER_CASE.md files
+2014-04-10 06:59:07 #2091 passed:    master CHEF-4940: Add note to changelog
+2014-04-09 16:49:24 #2087 passed:    master Merge pull request #1369 from opscode/lcg/CHEF-5198-2
+2014-04-09 12:59:47 #2079 passed:    master Merge pull request #1368 from opscode/lcg/CHEF-5198
+2014-04-09 11:50:18 #2076 passed:    master Merge branch 'CHEF-5199'
+2014-04-07 16:20:51 #2058 passed:    master Merge pull request #1362 from opscode/jhs/CHEF-5189
+2014-04-07 13:45:44 #2055 passed:    master bump to 11.14.0.alpha.1 to add annotated tag
+2014-04-04 12:08:56 #2047 passed:    master update man pages for 11-12
+2014-04-01 16:41:40 #2040 errored:   master Merge pull request #1315 from jaymzh/fixsignals-11
+2014-04-01 07:09:30 #2033 passed:    master Empty UPPER_CASE files for next release
+2014-03-31 14:49:24 #2025 passed:    master Merge pull request #1354 from opscode/chef-5169
+2014-03-31 14:12:30 #2023 passed:    master Merge pull request #1353 from opscode/ci-spec-updates
+2014-03-31 12:01:20 #2019 passed:    master Merge pull request #1352 from opscode/adamed/mount_spec
+2014-03-30 15:59:51 #2011 passed:    master Bump the version number of master to 11.14.0.alpha.0.
+2014-03-30 15:39:42 #2009 passed:    master Bump the version number for RC release and update shellout and ohai dep versions.
+2014-03-30 02:29:57 #2008 passed:    master Merge pull request #1316 from opscode/adamed/guard-interpreter
+2014-03-28 19:44:57 #1997 passed:    master Merge pull request #1348 from opscode/win-ci-fixes
+2014-03-28 19:31:41 #1996 passed:    master CHEF-5132: documentation updates
+2014-03-28 19:06:41 #1994 passed:    master CHEF-4203: Add documentation updates
+2014-03-28 18:16:03 #1990 passed:    master CHEF-3610: Doc file updates
+2014-03-28 17:59:08 #1989 passed:    master CHEF-4957: Release doc updates
+2014-03-28 12:46:51 #1985 passed:    master Merge pull request #1328 from btm/CHEF-5087
+2014-03-27 18:15:04 #1971 passed:    master Merge pull request #1329 from opscode/lcg/CHEF-5041-content-length
+2014-03-27 17:42:45 #1969 passed:    master Contribution info for CHEF-4443.
+2014-03-27 17:40:03 #1968 passed:    master Merge pull request #948 from thommay/chef-4443
+2014-03-27 15:54:31 #1965 passed:    master Merge branch 'restore-shadowing-warning'
+2014-03-27 09:53:53 #1957 errored:   master Merge pull request #1339 from nishigori/fix-few-typo
+2014-03-27 00:06:07 #1951 passed:    master Fix unit tests to not access /etc/chef/encrypted_data_bag_secret
+2014-03-26 18:50:46 #1948 passed:    master Merge branch 'CHEF-4373'
+2014-03-25 10:46:33 #1938 passed:    master Restrict rake to 10.1.x because ruby 1.8 support was dropped
+2014-03-24 19:31:50 #1936 errored:   master Add DeepMerge TypeError fixes to changelog
+2014-03-24 15:22:14 #1931 passed:    master Merge pull request #1334 from opscode/btm/CHEF-4888
+2014-03-24 15:02:31 #1930 passed:    master Merge branch 'CHEF-5134'
+2014-03-20 15:38:11 #1915 passed:    master Documentation updates for contributions
+2014-03-20 14:59:35 #1913 passed:    master DOC_CHANGES update for OHAI-339.
+2014-03-20 14:07:44 #1912 passed:    master Merge pull request #1325 from opscode/OHAI-339
+2014-03-20 00:33:58 #1907 passed:    master Merge branch 'ssl-check-tools'
+2014-03-19 23:07:35 #1905 passed:    master Merge pull request #1324 from opscode/CHEF-5057
+2014-03-19 21:16:21 #1902 passed:    master [CHEF-4918] Don't destructively merge subhashes in hash_only_merge!
+2014-03-19 20:31:56 #1898 passed:    master Merge pull request #1322 from opscode/CC-53
+2014-03-19 20:17:12 #1895 passed:    master Merge pull request #1191 from andreasrs/arch-service-systemd
+2014-03-19 20:03:36 #1894 passed:    master Merge pull request #1280 from josephholsten/CHEF-5064
+2014-03-19 19:49:06 #1893 passed:    master Merge pull request #1321 from opscode/btm/CHEF-3714
+2014-03-19 19:45:16 #1892 passed:    master Merge pull request #1268 from ccope/solaris11-ips-fix
+2014-03-19 19:23:49 #1889 passed:    master Add release notes for a contributions merge
+2014-03-19 18:50:58 #1887 passed:    master Merge pull request #1320 from opscode/CC-52
+2014-03-19 18:27:31 #1885 passed:    master Merge pull request #1235 from higanworks/CHEF-4990
+2014-03-19 18:17:06 #1884 passed:    master Merge pull request #1260 from ryotarai/refactor-shell_out
+2014-03-19 17:54:06 #1883 passed:    master Merge pull request #1059 from opscode/jhs/CHEF-4643
+2014-03-19 17:32:38 #1882 passed:    master Merge pull request #1213 from MSOpenTech/CHEF-4962
+2014-03-19 17:05:49 #1881 passed:    master Merge pull request #1245 from slantview/CHEF-4075
+2014-03-19 15:22:57 #1876 passed:    master CHEF-5135: Add contribution documentation
+2014-03-19 15:16:32 #1875 failed:    master CHEF-3698: Do not set log_level by default
+2014-03-18 19:44:48 #1868 passed:    master Merge pull request #1308 from opscode/CHEF-4396
+2014-03-18 17:42:55 #1863 passed:    master Merge pull request #1306 from opscode/CHEF-5123
+2014-03-14 16:24:12 #1844 passed:    master Merge branch 'CHEF-4367'
+2014-03-13 23:45:22 #1840 failed:    master Add documentation for Chef::EncryptedDataBag.load
+2014-03-13 00:12:33 #1836 passed:    master Merge branch 'CHEF-4901'
+2014-03-12 18:09:19 #1834 passed:    master Merge pull request #1299 from opscode/contributions-cc-51
+2014-03-12 17:16:08 #1832 passed:    master Info for PR 1121.
+2014-03-12 14:43:14 #1830 passed:    master Merge pull request #1295 from opscode/CHEF-5102
+2014-03-07 15:43:06 #1817 passed:    master Merge pull request #1294 from opscode/master-ohai-7
+2014-03-06 16:41:14 #1812 passed:    master CHEF-5086: Add CHANGELOG and RELEASE_NOTES for reboot_pending?
+2014-03-06 15:58:12 #1811 passed:    master Merge pull request #1292 from jaymzh/macosxfixes-11
+2014-03-06 14:24:39 #1806 passed:    master release notes for CHEF-4773
+2014-03-06 14:20:58 #1805 passed:    master Merge pull request #1126 from opscode/lcg/ruby-shadow-2.3.1
+2014-03-06 13:31:30 #1802 passed:    master Merge pull request #1290 from opscode/lcg/md-files
+2014-03-06 12:48:56 #1799 passed:    master Merge pull request #1289 from opscode/lcg/CHEF-5030
+2014-03-05 18:07:15 #1796 passed:    master Merge pull request #1254 from opscode/lcg/CHEF-5001
+2014-03-05 18:01:06 #1795 passed:    master Merge pull request #1216 from opscode/lcg/add-machinename
+2014-02-27 18:12:42 #1786 passed:    master Merge pull request #1285 from opscode/new-policy-files
+2014-02-27 10:28:28 #1780 passed:    master CHEF-5086/COOK-3890: Add reboot_pending? to core DSL
+2014-02-21 13:50:27 #1758 passed:    master Merge pull request #1269 from opscode/jc/CHEF-5047/client-show
+2014-02-21 13:35:17 #1757 passed:    master Merge pull request #1270 from opscode/jc/OC-130/knife-create-validator
+2014-02-21 13:34:42 #1756 passed:    master Merge pull request #1272 from opscode/jc/OC-130/knife-delete-validator
+2014-02-20 14:42:28 #1751 passed:    master Merge branch 'CHEF-5032'
+2014-02-20 12:02:10 #1744 passed:    master Merge pull request #1274 from opscode/btm/bootstrap_deprecation_note
+2014-02-19 18:24:59 #1739 passed:    master Correctly order setup of reporting state in registry specs
+2014-02-19 17:47:58 #1736 passed:    master Merge branch 'CHEF-5048'
+2014-02-19 15:58:31 #1733 passed:    master Merge branch 'CHEF-5052-plus-tests'
+2014-02-11 20:08:56 #1705 passed:    master Merge pull request #1262 from opscode/lcg/CHEF-5018
+2014-02-07 17:52:29 #1693 passed:    master Merge pull request #1236 from opscode/praj/OC-10990/runid_in_CC_and_knife_integration
+2014-02-07 13:27:51 #1691 passed:    master Merge branch 'nomethod-gobbling'
+2014-02-06 15:23:30 #1685 passed:    master Merge branch 'inline-syntax-check'
+2014-02-05 07:44:03 #1678 passed:    master Merge pull request #1251 from opscode/adamed/oc-11191-spec-workaround
+2014-02-04 17:33:03 #1674 passed:    master Remove `rake gem` dep on deleted tasks
+2014-02-04 15:25:25 #1671 passed:    master Bump version number for 11.10.0.rc.2 release
+2014-02-04 14:42:54 #1669 passed:    master Remove obsolete doc generator deps
+2014-02-04 14:03:56 #1668 passed:    master add updated html files for knife and chef- man pages
+2014-02-04 13:42:28 #1667 passed:    master remove old crufty man pages
+2014-02-04 13:31:03 #1666 passed:    master Merge pull request #1240 from opscode/praj/resource_name_and_id_to_str
+2014-02-04 13:17:05 #1665 passed:    master add HTML file for manpage output testing
+2014-02-04 11:29:52 #1662 passed:    master add knife compare to man page
+2014-02-03 20:05:18 #1659 passed:    master Better specify what happens for NoMethodErrors in the DSL
+2014-02-03 19:15:24 #1657 passed:    master Merge branch 'CHEF-3506'
+2014-02-03 19:00:36 #1655 passed:    master Update file providers to close before unlinking.
+2014-02-03 17:41:30 #1648 passed:    master update with note re: version
+2014-02-03 17:25:23 #1647 passed:    master Delegate sync_cookbooks to policy_builder, subclasses rely on it
+2014-02-03 16:27:15 #1642 passed:    master Merge pull request #1246 from opscode/CHEF-4747-fix
+2014-02-03 14:14:10 #1637 passed:    master Use custom tempfile to avoid ruby 1.8-related test failures
+2014-01-31 14:31:59 #1630 passed:    master update man pages w/11-10 version
+2014-01-31 13:47:30 #1629 failed:    master update man pages
+2014-01-30 18:19:24 #1628 passed:    master Merge pull request #1238 from opscode/lcg/rspec-2.14-deprecation-warnings
+2014-01-30 16:39:00 #1626 passed:    master Remove crufty require of pry
+2014-01-27 19:08:04 #1607 passed:    master Merge pull request #1234 from opscode/adamed/oc-10899
+2014-01-27 18:39:17 #1606 passed:    master Merge pull request #1227 from opscode/lcg/CHEF-4502
+2014-01-23 20:40:13 #1599 passed:    master Merge branch 'nowiki'
+2014-01-23 19:31:15 #1595 passed:    master Merge branch 'CHEF-4983'
+2014-01-23 15:56:46 #1590 passed:    master Merge branch 'policyfile-support'
+2014-01-20 18:56:59 #1575 passed:    master Merge branch 'CHEF-4725'
+2014-01-20 19:14:08 #1573 passed:    master Merge pull request #1222 from opscode/OC-2192
+2014-01-20 12:27:13 #1565 passed:    master Merge pull request #1221 from opscode/CHEF-4963
+2014-01-17 22:28:31 #1558 passed:    master Merge pull request #1220 from opscode/CHEF-4639-updated
+2014-01-17 18:37:49 #1557 passed:    master Merge pull request #1218 from opscode/lcg/save-CHEF-2418
+2014-01-17 15:19:42 #1554 passed:    master Merge pull request #1183 from onddo/CHEF-4762
+2014-01-16 17:56:25 #1543 passed:    master Merge pull request #1128 from opscode/lcg/CHEF-4777
+2014-01-15 19:57:50 #1540 passed:    master Merge pull request #1215 from opscode/lcg/fedora-spec-fix
+2014-01-14 19:56:47 #1536 passed:    master Merge branch 'policy-setup'
+2014-01-14 18:38:07 #1534 passed:    master make descriptions same as chef-docs
+2014-01-13 19:18:57 #1529 passed:    master Merge pull request #1207 from opscode/adamed-chef-3012
+2014-01-11 16:15:28 #1516 passed:    master Merge pull request #1211 from opscode/schisamo/lock-down-sdoc
+2014-01-09 13:51:02 #1501 passed:    master Merge pull request #1115 from opscode/lcg/CHEF-4734
+2014-01-08 12:58:58 #1496 passed:    master Merge pull request #1161 from deployable/CHEF-4850
+2014-01-06 16:35:16 #1490 passed:    master update man pages to include common options within single list of options
+2014-01-06 13:09:25 #1489 passed:    master Add Ruby 2.1.0 to travis matrix
+2014-01-02 19:21:03 #1487 passed:    master Add message expectations for file permission enforcement
+2014-01-02 19:18:54 #1486 passed:    master Merge pull request #1199 from opscode/adamed/chef-4913
+2013-12-30 17:19:09 #1480 passed:    master Merge branch 'CHEF-4914'
+2013-12-30 15:10:46 #1474 passed:    master Merge branch 'rubygems-bundler-ruby18-travis-temp-fix'
+2013-12-30 12:19:01 #1471 errored:   master Remove redundant mime-types version constraint.
+2013-12-27 16:26:29 #1469 passed:    master invoke chef-client as `ruby chef-client` because windows
+2013-12-27 13:37:08 #1468 passed:    master Fix subcommand loader specs for really old rubygems
+2013-12-27 12:04:27 #1467 passed:    master Merge branch 'plugin-manifest'
+2013-12-20 12:08:48 #1460 passed:    master Merge branch 'contributions'
+2013-12-13 14:51:54 #1446 passed:    master remove debugging puts
+2013-12-12 18:30:06 #1444 passed:    master Merge pull request #1179 from opscode/lcg/CHEF-4632
+2013-12-09 13:53:53 #1435 passed:    master Bump version to 11.10.0.alpha.1
+2013-12-06 15:57:06 #1430 passed:    master Add ability to run recipes directly from chef-client command line
+2013-12-05 17:19:45 #1426 passed:    master Merge pull request #1162 from ranjib/CHEF-4852
+2013-12-03 17:21:32 #1400 passed:    master Merge branch 'jk/CHEF-4441'
+2013-12-03 13:36:17 #1394 passed:    master Merge pull request #1156 from soundcloud/fix-user-resource-comparison
+2013-11-26 16:10:03 #1370 failed:    master Merge pull request #1099 from opscode/lcg/knife-subcommand-prerelease
+2013-11-26 15:37:44 #1369 passed:    master Always set a correct Host header to avoid net/http bug
+2013-11-26 14:02:30 #1367 passed:    master Skip IPv6 tests on Solaris
+2013-11-26 12:56:39 #1364 passed:    master Merge branch 'contributions'
+2013-11-26 09:31:06 #1363 passed:    master Add missing require for thread to Chef::CookbookUploader
+2013-11-22 12:06:41 #1345 passed:    master Merge pull request #1111 from opscode/lcg/OC-10380
+2013-11-21 17:12:04 #1337 passed:    master Merge pull request #743 from jaymzh/CHEF-4110
+2013-11-20 18:16:12 #1301 passed:    master CHEF-4715 and CHEF-4714
+2013-11-20 17:52:09 #1300 passed:    master Merge branch 'jc/OC-10471/raw_http_request'
+2013-11-20 12:48:58 #1294 passed:    master Merge pull request #1134 from opscode/CHEF-3297
+2013-11-20 12:03:37 #1292 passed:    master Merge branch 'CHEF-4616'
+2013-11-06 18:29:12 #1260 passed:    master this option should not be used by customers
+2013-11-06 11:33:30 #1245 errored:   master Merge pull request #1109 from opscode/ci-script-fix
+2013-11-06 11:23:53 #1244 passed:    master Merge pull request #1102 from ryotarai/remove-unused-variable-in-client_spec
+2013-11-06 11:19:47 #1243 passed:    master CHEF-4379: initialize @end_time to @start_time
+2013-10-31 17:14:51 #1211 passed:    master Merge pull request #1105 from opscode/11-stable-merge
+2013-10-28 18:00:13 #1187 passed:    master Pin mime-types to a ruby 1.8 compatible version
+2013-10-28 16:18:36 #1184 errored:   master Debug request headers
+2013-10-25 19:16:19 #1176 passed:    master Change content type warning to debug
+2013-10-24 18:27:12 #1165 passed:    master Add ssl-serve script for future manual test needs
+2013-10-24 16:17:47 #1162 passed:    master Merge pull request #1075 from benlangfeld/knife_log_verbosity
+2013-10-24 15:45:03 #1159 passed:    master Application::Solo must set @chef_client_json
+2013-10-23 18:42:21 #1151 passed:    master REST#raw_http_request needs to be public for legacy use
+2013-10-23 18:23:20 #1148 passed:    master Merge pull request #1067 from opscode/lcg/fix-solaris-check
+2013-10-23 13:52:59 #1143 passed:    master add -f option to chef-client man page
+2013-10-23 13:01:03 #1141 passed:    master Merge branch 'CHEF-4671'
+2013-10-18 18:29:02 #1116 passed:    master Merge branch 'auto-configure-windows-cacert'
+2013-10-18 16:00:40 #1110 passed:    master Update the help topics based on changed man pages.
+2013-10-18 15:45:19 #1109 passed:    master Update the man pages for chef & knife.
+2013-10-18 15:34:59 #1108 passed:    master update man pages; remove copyright info
+2013-10-18 15:16:51 #1106 passed:    master add man pages
+2013-10-18 15:11:57 #1105 passed:    master purge (will replace!)
+2013-10-18 15:00:54 #1104 passed:    master update knife man pages
+2013-10-18 15:00:27 #1103 passed:    master purge (will replace!)
+2013-10-18 14:07:49 #1100 passed:    master Merge branch 'popen4-test-volatile'
+2013-10-18 13:52:43 #1098 errored:   master Merge branch 'duplicate-cert-fix'
+2013-10-18 13:11:33 #1094 failed:    master Merge branch 'pry-it-up'
+2013-10-17 17:38:17 #1090 passed:    master Bump the version number to 11.10.0.alpha.0.
+2013-10-17 16:55:15 #1088 passed:    master Merge pull request #1060 from opscode/CHEF-4509
+2013-10-17 16:47:19 #1087 passed:    master Merge pull request #1062 from opscode/adamed-chef-4625
+2013-10-17 16:32:20 #1086 passed:    master Document webrick duck punch
+2013-10-17 16:09:11 #1084 passed:    master Merge branch 'ssl-cert-dir'
+2013-10-17 12:48:26 #1079 passed:    master Merge pull request #1063 from opscode/adamed-chef-4422
+2013-10-17 12:47:11 #1078 passed:    master Merge pull request #1061 from opscode/CHEF-4197
+2013-10-17 09:56:28 #1072 passed:    master Format manpages readme so you can read it in a terminal
+2013-10-16 19:54:31 #1067 passed:    master Merge branch 'customize-ssl-config'
+2013-10-16 17:36:49 #1066 passed:    master update notes for
+2013-10-16 17:21:20 #1064 passed:    master add note re: open source only
+2013-10-16 17:18:40 #1063 passed:    master update descriptions for search
+2013-10-16 16:32:33 #1062 passed:    master Merge pull request #1056 from opscode/remove-service-func-test
+2013-10-16 16:18:13 #1060 passed:    master Merge branch 'api-code-path'
+2013-10-16 16:07:15 #1059 passed:    master Sign requests to download cookbook files in knife download
+2013-10-16 15:54:39 #1058 passed:    master Prettify JSON output from PUT/POST in local mode
+2013-10-16 13:40:10 #1055 failed:    master add updated man pages for knife
+2013-10-16 12:25:52 #1052 errored:   master Merge pull request #1054 from opscode/windows-cvt-fix
+2013-10-16 12:09:48 #1050 failed:    master Merge pull request #1046 from opscode/CHEF-4470
+2013-10-15 22:56:25 #1046 passed:    master Merge branch 'jk/local_multi_cache_path'
+2013-10-15 21:10:00 #1042 passed:    master Fix knife download EEXISTS error on parallel download
+2013-10-15 21:01:14 #1041 passed:    master Add help category to knife path-based commands
+2013-10-15 18:49:43 #1036 failed:    master Merge branch 'jc/CHEF-4614/state-is-hash'
+2013-10-15 18:29:48 #1034 passed:    master test -- adding knife-diff.1 man page
+2013-10-14 15:13:56 #1020 passed:    master remove redundant words
+2013-10-14 13:09:46 #1019 passed:    master Remove old :local option from knife-essentials commands
+2013-10-11 22:01:36 #1016 passed:    master Fix typo: "List you cookbook" should be "List your cookbook"
+2013-10-11 18:12:25 #1014 passed:    master Fix delete and cookbook update for -z parameter
+2013-10-11 17:18:59 #1013 passed:    master Make --chef-repo-path argument work again
+2013-10-11 15:58:17 #1011 passed:    master Use Chef::HTTP for knife-essentials raw requests, fix CHEF-4515 in the balance
+2013-10-11 13:44:23 #1006 passed:    master Merge pull request #1035 from opscode/CHEF-4556
+2013-10-10 18:44:46 #1003 failed:    master Add --local-mode / -z parameter to chef-client and knife
+2013-10-10 16:14:55 #998 failed:     master Merge pull request #1038 from opscode/adamed-oc-8694
+2013-10-10 13:42:51 #995 passed:     master CHEF-4271: Add unit test for quoting sudo password fix
+2013-10-09 18:07:45 #991 passed:     master Merge pull request #578 from sjoerdmulder/patch-1
+2013-10-09 17:27:14 #989 passed:     master Fix typos suggested by PR #477 - H/T Karan Misra
+2013-10-08 17:35:34 #979 passed:     master Merge branch 'CHEF-4603'
+2013-10-05 11:15:20 #961 failed:     master Fix download/upload/diff of /acls
+2013-10-04 15:12:58 #950 passed:     master Merge pull request #1027 from opscode/adamed-oc-9024
+2013-10-04 11:53:18 #946 passed:     master CHEF-3159: Fail with exit 1 if the init script is missing
+2013-10-04 11:24:24 #945 passed:     master Merge pull request #1023 from opscode/OC-9475
+2013-10-03 16:21:37 #938 passed:     master Add chef-client -z and knife -z options to start chef-zero when client starts
+2013-10-03 15:56:07 #937 passed:     master Merge pull request #1020 from opscode/OC-9479
+2013-10-01 15:52:17 #919 passed:     master Merge pull request #1018 from opscode/OC-10077
+2013-09-30 17:06:04 #895 passed:     master Merge pull request #1001 from opscode/lcg/mingw-gemspec
+2013-09-30 16:43:20 #893 passed:     master Merge pull request #987 from opscode/lcg/CHEF-3982
+2013-09-27 02:07:30 #875 passed:     master Merge pull request #1015 from opscode/lcg/win32-process-0.7.3
+2013-09-26 19:43:47 #872 passed:     master Merge branch 'muktaa-oc-9475-windows-cookbook-upload'
+2013-09-26 17:14:12 #868 passed:     master revert another checksum to pre-whitespace state
+2013-09-26 17:05:56 #867 failed:     master revert checksum to pre-whitespace fix state
+2013-09-26 16:19:38 #866 failed:     master revert whitespace for all spec/data fixtures
+2013-09-26 16:01:59 #865 failed:     master undo whitespace change
+2013-09-26 15:54:12 #864 passed:     master for now, pin win32-process to match mixlib-shellout
+2013-09-26 13:33:55 #859 passed:     master CHEF-4568: Make apt showpkg regex more friendly to differing whitespace
+2013-09-25 17:07:44 #854 passed:     master Merge pull request #1011 from opscode/lcg/runlock-spec-fix
+2013-09-25 14:54:59 #848 passed:     master [CHEF-4507] Smartos package provider to match resource package_name
+2013-09-25 13:24:19 #847 failed:     master Merge pull request #1007 from opscode/lcg/regkey-spec-fix.rb
+2013-09-25 12:04:51 #846 passed:     master Constrain all dependencies to major version
+2013-09-24 18:19:47 #831 passed:     master Merge pull request #1006 from opscode/lcg/tty-unix-test-fix
+2013-09-24 16:33:39 #818 passed:     master [CHEF-4200] Replace Array#keep_if with #select
+2013-09-23 11:24:07 #807 passed:     master Merge branch 'CHEF-4554'
+2013-09-20 19:52:56 #800 passed:     master Merge pull request #870 from opscode/sethvargo/fix_travis
+2013-09-17 14:10:36 #779 passed:     master Merge branch 'CHEF-4248'
+2013-09-17 13:58:11 #778 passed:     master Support platform "suse" and "opensuse" on OpenSuSE
+2013-09-17 13:35:42 #777 passed:     master Fix activesupport daemonize issue by pulling latest mixlib-config
+2013-09-16 23:30:37 #772 passed:     master Make formatters clear with Chef::Config.reset
+2013-09-16 20:01:04 #766 failed:     master Merge branch 'jk/more-defaults'
+2013-09-16 19:47:13 #764 failed:     master Reset Chef::Config between every test
+2013-09-16 12:22:20 #755 passed:     master Make Chef::Config resettable with mixlib-config 2.0 API
+2013-09-13 17:36:38 #749 passed:     master Invalidate "children" caches when children are added
+2013-09-11 17:07:19 #739 passed:     master CHEF-4487: support chef_repo_path in all knife commands
+2013-09-04 09:25:43 #714 passed:     master Merge pull request #974 from opscode/adamed-OC-9226-user-resource-test-pending
+2013-09-04 02:21:44 #711 passed:     master Merge pull request #973 from opscode/adamed-oc-8526-group-provider-windows
+2013-08-28 16:58:20 #692 passed:     master avoid appearing very, very wrong
+2013-08-20 07:58:48 #669 passed:     master Merge pull request #957 from opscode/adamed-OC-8713
+2013-08-20 00:56:21 #665 passed:     master Merge pull request #956 from opscode/adamed-aix-test
+2013-08-19 17:36:19 #660 passed:     master Add general information about how/when to use shell_out/shell_out!
+2013-08-06 00:40:29 #622 passed:     master Merge pull request #941 from opscode/adamed-OC-8622-aix-cron
+2013-08-02 16:36:13 #608 passed:     master Merge branch 'apt-provider-shellout'
+2013-08-02 11:38:08 #589 passed:     master Merge branch 'CHEF-4406'
+2013-08-01 14:33:15 #572 passed:     master Merge pull request #936 from opscode/ci-test-fix
+2013-07-26 12:02:24 #524 passed:     master CHEF-4344: Clean up instances of 'the the' typo.
+2013-07-23 14:19:19 #506 passed:     master Merge pull request #915 from opscode/adamed-OC-8707-ifconfig
+2013-07-23 11:35:39 #504 failed:     master Merge pull request #912 from opscode/adamed-OC-8621-mount-for-aix
+2013-07-17 15:39:37 #420 passed:     master Merge pull request #898 from opscode/OC-8693
+2013-07-17 15:02:16 #414 passed:     master Merge pull request #899 from juliandunn/CHEF-4380
+2013-07-16 11:20:42 #387 passed:     master Bump dev version to 11.8.0.alpha.0
+2013-07-12 13:07:06 #376 errored:    master Merge pull request #892 from opscode/lcg/unbundle-tests
+2013-07-12 05:47:52 #374 passed:     master Merge branch '11-stable'
+2013-07-11 16:15:13 #368 passed:     master Merge branch 'CHEF-4335'
+2013-07-11 15:17:29 #365 passed:     master Merge branch 'rspec-213'
+2013-07-11 14:27:55 #362 passed:     master Merge pull request #885 from opscode/solo-environment-support
+2013-07-11 11:49:13 #358 passed:     master Merge pull request #889 from opscode/adamed-OC-8527-chef-shell-backspace-issue
+2013-07-10 23:19:51 #342 failed:     master Regenerate docs for 11.6.0.rc.2.
+2013-07-10 18:38:42 #333 passed:     master Merge branch 'jc/reporting-no-cb-version'
+2013-07-10 16:30:52 #327 passed:     master Merge branch 'CHEF-4350'
+2013-07-10 16:13:08 #326 passed:     master Merge branch 'CHEF-4365'
+2013-07-08 14:56:26 #283 passed:     master Merge pull request #882 from opscode/default-yum-timeout
+2013-07-05 18:15:10 #266 passed:     master Merge branch 'CHEF-4357'
+2013-07-03 16:49:16 #251 passed:     master Regenerate docs for 11.6.0.rc.1
+2013-07-03 16:33:08 #250 passed:     master Merge pull request #874 from opscode/diff-solaris-rspec-fix
+2013-07-03 12:52:37 #245 passed:     master Fix test expectations for windows file separators
+2013-07-03 12:38:04 #244 passed:     master Merge branch 'CHEF-3307-revert'
+2013-07-02 21:14:32 #234 passed:     master Merge branch 'CHEF-4341'
+2013-07-02 12:50:44 #225 passed:     master Merge pull request #863 from opscode/lcg/diff-encoding
+2013-06-28 14:56:26 #204 passed:     master Merge pull request #862 from opscode/OC-8697
+2013-06-26 21:43:33 #187 passed:     master Regenerate docs for 11.6.0.rc.0
+2013-06-26 15:25:36 #186 passed:     master Bump the chef version number for 11.6.0 RC.
+2013-06-26 15:13:46 #185 failed:     master Merge branch 'CHEF-4312'
+2013-06-25 12:21:08 #169 passed:     master CHEF-4314: Pin active_support < 4.0.0 due to atomic + CAS issues
+2013-06-25 11:35:24 #168 errored:    master Merge pull request #855 from opscode/adamed-8391-password-policy
+2013-06-25 10:29:49 #163 errored:    master Merge pull request #851 from opscode/adamed-OC-8337-windows-script-tests
+2013-06-24 17:08:39 #147 passed:     master Merge pull request #847 from opscode/el-usermod-test-fixes
+2013-06-21 17:08:02 #135 passed:     master Merge pull request #839 from opscode/lcg/yard
+2013-06-21 17:02:08 #134 passed:     master Merge pull request #843 from opscode/lcg/warn-run-lock
+2013-06-21 16:51:35 #132 passed:     master Merge pull request #846 from opscode/fix-old-userdel-whining
+2013-06-21 16:44:23 #131 passed:     master Be more specific: check file? || symlink? instead of just directory?
+2013-06-21 16:25:43 #128 passed:     master CHEF-4307: Verify that chefignore is a file before reading it.
+2013-06-21 00:51:26 #121 passed:     master Merge pull request #840 from opscode/lcg/cloexec_lockfile
+2013-06-20 19:16:24 #111 passed:     master Merge pull request #835 from opscode/net-ssh-multi-patch
+2013-06-20 18:59:43 #110 passed:     master Merge branch 'CHEF-4204'
+2013-06-20 14:45:55 #98 passed:      master Stub that /etc/network/interfaces really is there [on windows]
+2013-06-19 18:00:48 #90 passed:      master Merge pull request #833 from opscode/handle-new-depsolver-errors
+2013-06-19 16:48:43 #85 passed:      master aix's error message for EPERM is like solaris's
+2013-06-19 16:42:17 #84 passed:      master CHEF-3521: Wrap the call to yum-dump.rb in a configurable timeout.
+2013-06-19 16:34:45 #83 passed:      master [CHEF-972] fixed test unit/runner_spec.rb:379: only_if_called_times.should == 2
+2013-06-19 16:17:22 #79 passed:      master [CHEF-3029] Added some lines that have disappeared in the rebase
+2013-06-19 13:10:43 #78 passed:      master [CHEF-4204] add functional tests for updating user
+2013-06-19 12:52:00 #77 passed:      master Merge branch 'CHEF-4204-functional-tests'
+2013-06-19 11:19:06 #75 passed:      master Merge branch 'CHEF-3731-chef-11'
+2013-06-18 17:13:31 #69 passed:      master Merge branch 'windows-for-workgroups-acl-test-fix'
+2013-06-18 16:09:55 #64 passed:      master CHEF-3045: Re-provide lost support for no_lazy_load
+2013-06-18 15:45:35 #63 passed:      master Fix gem finder test (broken on Linux)
+2013-06-18 15:20:29 #62 passed:      master Merge branch 'CHEF-3255'
+2013-06-18 14:39:32 #61 passed:      master [CHEF-3366] Add --non-interactive option to zypper info to prevent it from blocking.
+2013-06-18 14:30:18 #60 passed:      master CHEF-3544: Stop trying to count instances of the warning
+2013-06-18 13:49:17 #58 passed:      master [CHEF-955] Refactored remote url update conditions
+2013-06-18 13:23:50 #56 passed:      master CHEF-4022: Update test for new error message
+2013-06-18 13:20:12 #55 passed:      master [CHEF-3817] Fix dedupe in cookbook_order by returning dependencies as symbols.
+2013-06-18 12:57:23 #54 passed:      master [CHEF-4076] Moved node loader to post-args validation, per @btm & @stevendanna
+2013-06-18 12:23:16 #52 passed:      master added tests for CHEF-4115
+2013-06-18 11:43:40 #51 passed:      master Merge branch 'CHEF-4146'
+2013-06-18 11:35:02 #50 passed:      master Merge branch 'CHEF-4199'
+2013-06-17 16:21:12 #29 passed:      master Merge branch 'CHEF-4208'
+2013-06-17 16:14:10 #28 passed:      master CHEF-4259: Fix unpacking recipes with non-gnu tar
+2013-06-17 16:07:52 #27 passed:      master Merge branch 'CHEF-4272'
+2013-06-14 19:27:27 #22 passed:      master don't depend on line separator in partial tests
+2013-06-14 18:58:30 #17 passed:      master Fix windows tests in CI due to fork change.
+2013-06-14 17:05:50 #15 passed:      master Merge pull request #827 from opscode/ss/OC-8297
+2013-06-13 17:19:49 #1 passed:       master start testing with travis

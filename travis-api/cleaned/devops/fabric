@@ -1,0 +1,311 @@
+2014-09-22 13:40:19 #958 passed:     master A herp and a derp
+2014-09-22 12:52:43 #957 errored:    master Add test which fails on Paramiko 1.15.0 re: agent forwarding
+2014-09-18 22:16:40 #953 passed:     master Merge branch '1.10'
+2014-09-10 15:49:03 #948 passed:     master Merge branch '1.10'
+2014-09-07 11:54:14 #945 passed:     master Update roadmap
+2014-09-04 19:06:38 #943 passed:     master Merge branch '1.9' into 1.10
+2014-09-04 16:47:24 #942 passed:     master Merge branch '1.9' into 1.10
+2014-09-04 11:50:13 #938 passed:     master Cut 1.10.0
+2014-09-03 20:00:38 #937 passed:     master Didn't update mocked tests for earlier change.
+2014-09-03 19:56:11 #936 failed:     master Add changelog re #1188, fixes #1188
+2014-09-03 19:44:51 #935 failed:     master Add -p flag to preserve ownership correctly in temp file
+2014-09-03 17:20:05 #934 passed:     master Changelog tweaks
+2014-09-03 16:06:00 #933 passed:     master Merge branch 'master' into 1090-int
+2014-09-03 16:02:14 #932 passed:     master Add note that #975 only seems to work on 2.7
+2014-08-06 21:15:50 #905 passed:     master Merge branch '1.9'
+2014-08-06 20:35:28 #904 passed:     master Merge branch '1.9'
+2014-08-06 18:49:40 #903 passed:     master Merge branch '1.9'
+2014-08-06 17:56:29 #901 passed:     master Merge branch '1.9'
+2014-08-06 17:30:58 #900 passed:     master Merge branch '1.9'
+2014-08-06 15:25:28 #894 errored:    master Merge branch '1.9'
+2014-08-05 18:41:33 #893 passed:     master Merge pull request #1136 from alex/patch-2
+2014-08-05 15:23:00 #889 passed:     master Merge branch '1.9'
+2014-08-04 18:57:30 #886 errored:    master Merge branch '1.9'
+2014-08-04 18:57:03 #885 errored:    master Merge pull request #1153 from dorianpula/env_doc_fix
+2014-08-04 18:23:32 #884 errored:    master Merge pull request #1150 from renstrom/patch-2
+2014-08-04 18:22:50 #883 errored:    master Merge pull request #1125 from alex/patch-1
+2014-08-04 18:22:08 #882 errored:    master Merge pull request #1137 from lndbrg/patch-1
+2014-08-04 18:17:18 #881 errored:    master Merge pull request #1148 from dnaeon/docs-fixes
+2014-08-04 16:23:41 #880 errored:    master Merge branch '1.9'
+2014-08-01 17:49:00 #879 passed:     master EVEN MOAR fixes to that FAQ
+2014-08-01 17:46:20 #878 passed:     master Tweak FAQ language, it's not Mac specific
+2014-08-01 17:41:30 #877 passed:     master Add FAQ about Mavericks setuptools woes
+2014-06-08 23:21:35 #856 passed:     master Gah part 3
+2014-06-08 22:59:31 #847 passed:     master Cut 1.9
+2014-04-16 10:55:29 #833 passed:     master Merge branch '1.8'
+2014-04-15 12:19:48 #829 passed:     master Merge branch 'master' of github.com:fabric/fabric
+2014-04-15 09:41:22 #828 passed:     master Merge pull request #1114 from pbetkier/docs-env-all_hosts-default-value
+2014-04-15 09:40:21 #827 passed:     master Merge branch 'master' into 1112-int
+2014-04-14 17:36:01 #824 passed:     master Cleanup of #1101. Added changelog entry
+2014-04-14 17:15:32 #823 passed:     master Clean up references to contribution-guide.org & add explicit note about changelog location
+2014-04-14 16:57:26 #822 passed:     master Merge pull request #1109 from humanfromearth/master
+2014-04-14 16:50:17 #821 passed:     master Merge pull request #1110 from konradhalas/master
+2014-04-14 16:30:31 #819 passed:     master Changelog, closes #1106
+2014-04-14 16:19:38 #817 passed:     master Rephrase nohup part of FAQ
+2014-04-10 18:35:11 #813 passed:     master Merge branch '1.8'
+2014-04-10 09:28:41 #810 errored:    master Merge branch '1.8'
+2014-04-08 02:32:14 #806 failed:     master Merge branch '1.8'
+2014-04-08 02:05:03 #803 failed:     master Merge branch '1.8'
+2014-04-08 01:52:44 #800 failed:     master Merge branch '1.8'
+2014-03-31 17:49:26 #790 passed:     master Merge branch '1.8'
+2014-03-21 14:53:47 #783 passed:     master Merge branch '1.8'
+2014-03-21 14:45:10 #780 passed:     master Merge branch '1.8'
+2014-03-14 00:19:50 #770 failed:     master Merge branch '1.8'
+2014-03-04 19:58:27 #761 passed:     master Merge branch '1.8'
+2014-03-04 19:54:09 #760 passed:     master We do not support Python 3 yet
+2014-02-28 20:35:51 #759 passed:     master Add integration test re #1082
+2014-02-28 20:20:15 #758 passed:     master Add pty= kwarg to upload_template, fixes #1082
+2014-02-14 12:42:14 #749 passed:     master Merge branch '1.8'
+2014-02-14 12:03:39 #746 passed:     master Merge branch '1.8'
+2014-02-14 11:31:47 #742 failed:     master Merge branch '1.8'
+2014-02-13 20:01:11 #740 failed:     master Merge branch '1.8'
+2014-01-22 13:34:59 #731 passed:     master Merge branch '1.8'
+2013-12-31 21:09:00 #726 passed:     master New year
+2013-12-24 16:42:33 #715 passed:     master Merge branch '1.8'
+2013-12-24 14:26:39 #711 passed:     master Merge branch '1.8'
+2013-12-23 10:30:54 #707 passed:     master Merge branch '1.8'
+2013-12-18 18:33:12 #704 errored:    master Merge branch '1.8'
+2013-12-18 12:55:00 #700 errored:    master Merge branch '1.8'
+2013-12-18 12:40:47 #698 errored:    master Merge branch '1.8'
+2013-12-17 16:18:17 #695 errored:    master Minor stylistic update re: dict iteration
+2013-12-14 21:43:43 #690 errored:    master Merge branch '1.8'
+2013-12-14 21:15:34 #689 errored:    master Apply @akidata's fix re #965 + changelog
+2013-10-31 18:32:45 #672 passed:     master Overhaul roadmap page
+2013-10-13 01:04:55 #659 passed:     master Merge branch '1.8'
+2013-09-27 22:09:39 #650 passed:     master Add note about `ecdsa` lib for Paramiko 1.12
+2013-09-20 19:32:22 #648 passed:     master Cut 1.8 final
+2013-09-20 19:19:06 #647 passed:     master Changelog re #931
+2013-09-16 02:01:09 #643 passed:     master Merge branch '1.7'
+2013-09-16 00:38:56 #641 passed:     master Merge branch '1.7'
+2013-09-15 19:46:49 #640 passed:     master Merge branch '1.7'
+2013-09-14 23:29:49 #639 passed:     master Merge branch '1.7'
+2013-09-14 22:39:52 #637 passed:     master Merge branch '1.7'
+2013-09-14 22:12:39 #636 passed:     master Nose imports changelog.py looking for doctests & docutils doesn't preload .nodes
+2013-09-14 21:33:24 #635 failed:     master Fix number typo + mark as major, #864
+2013-09-04 19:58:21 #619 passed:     master Aw man I herped AND derped!
+2013-09-04 19:51:43 #618 failed:     master Derp about Travis & host key checks via rsync
+2013-09-04 19:25:03 #617 errored:    master Integration tests re: #910.
+2013-09-04 16:11:22 #615 passed:     master Nuke dupe bug entry
+2013-08-20 13:08:29 #609 passed:     master Merge branch '1.7'
+2013-08-14 16:18:59 #604 passed:     master Merge branch '1.7'
+2013-07-26 17:40:00 #590 passed:     master Merge branch '1.7'
+2013-07-26 17:19:12 #589 passed:     master Merge branch '1.7'
+2013-07-26 16:50:51 #588 passed:     master Bump dev version
+2013-07-26 16:48:15 #587 passed:     master Release script still needs work apparently
+2013-07-26 16:42:42 #585 passed:     master Cut 1.7 final
+2013-07-22 19:14:57 #576 passed:     master Merge branch '1.6'
+2013-07-22 17:32:26 #573 passed:     master Merge branch '1.6'
+2013-07-17 13:20:28 #564 passed:     master Merge branch '1.6'
+2013-07-07 16:06:29 #553 passed:     master Changelog re: #925
+2013-07-07 16:01:46 #552 passed:     master Docstring re: #925
+2013-07-07 15:38:43 #551 passed:     master Fix build status link to match the damn file extension, sheesh
+2013-07-07 15:31:37 #550 passed:     master Docstring re #922
+2013-07-07 00:08:22 #547 passed:     master Merge branch 'master' of github.com:fabric/fabric
+2013-07-07 00:03:49 #545 passed:     master Merge pull request #921 from voronoipotato/master
+2013-07-06 23:47:29 #544 passed:     master Merge branch '1.6'
+2013-07-06 20:39:05 #542 passed:     master Merge branch '924-int'
+2013-07-06 18:59:01 #536 passed:     master Merge branch '1.6'
+2013-07-06 18:38:18 #533 failed:     master Merge branch '1.6'
+2013-07-06 18:31:17 #530 failed:     master Merge branch '1.6'
+2013-06-23 18:56:49 #523 passed:     master Refactor key loading + add password support to in-mem keys
+2013-05-29 19:14:55 #510 passed:     master Merge branch '1.6'
+2013-05-27 17:25:19 #503 passed:     master Merge branch '1.6'
+2013-05-27 17:23:49 #502 passed:     master Merge branch '1.6'
+2013-05-27 16:58:12 #500 passed:     master Merge branch '1.6'
+2013-05-27 13:58:21 #498 passed:     master Fix up tests re: recent change
+2013-05-27 12:43:36 #497 failed:     master Missing close-paren, derp
+2013-05-27 12:39:23 #496 failed:     master Merge branch '826-int'
+2013-05-27 12:38:31 #495 failed:     master Update versionchanged re #826
+2013-05-27 12:36:55 #494 failed:     master Update versionchanged
+2013-05-26 20:33:13 #493 passed:     master Changelog re #694; fixes #694
+2013-05-26 16:28:47 #486 passed:     master Merge branch '1.6'
+2013-05-23 18:14:58 #484 passed:     master Merge branch '1.6'
+2013-05-23 18:07:54 #481 passed:     master Merge branch '1.6'
+2013-05-13 16:27:26 #479 passed:     master Merge branch '1.6'
+2013-05-13 16:27:32 #478 passed:     master Merge pull request #899 from akitada/fix-remote-command-timeout-doc
+2013-05-05 20:17:09 #475 passed:     master Merge branch '1.6'
+2013-05-05 16:52:24 #472 passed:     master Merge branch '1.6'
+2013-04-30 12:52:14 #466 passed:     master Merge branch '1.6'
+2013-04-28 23:39:41 #464 passed:     master Merge branch '1.6'
+2013-04-28 22:46:32 #463 passed:     master Merge branch 'master' of github.com:fabric/fabric
+2013-04-28 21:01:21 #461 passed:     master Merge pull request #886 from darsadow/bugfix/nose-link
+2013-04-01 20:33:21 #452 passed:     master Merge branch '869-int'
+2013-03-21 23:24:46 #441 passed:     master Merge branch '1.6'
+2013-03-19 19:20:45 #431 passed:     master Hide moar during tests n00b
+2013-03-19 16:12:23 #429 passed:     master Merge branch '863-int' into 1.6
+2013-03-19 15:23:26 #427 passed:     master Merge branch '861-int' into 1.6
+2013-03-14 18:06:31 #406 passed:     master Fix horrible typo
+2013-03-14 18:01:20 #405 passed:     master Contribution re #846,#845
+2013-03-01 18:55:39 #400 passed:     master Merge branch '1.5' into 1.6
+2013-03-01 17:26:52 #398 passed:     master Merge branch '1.5' into 1.6
+2013-03-01 15:55:51 #396 errored:    master 1.6.0 in changelog
+2013-03-01 15:26:07 #392 failed:     master Merge branch '1.5' into 1.6
+2013-03-01 13:04:52 #389 failed:     master Fix #844
+2013-02-27 16:19:08 #387 errored:    master Merge branch '1.5'
+2013-02-27 14:26:09 #386 failed:     master Merge branch '1.5'
+2013-02-27 14:18:42 #384 errored:    master Language changes + addition to guidelines
+2013-02-27 14:12:58 #383 errored:    master Derp
+2013-02-27 14:11:28 #382 errored:    master Use Sphinx include for CONTRIBUTING
+2013-02-27 14:06:45 #381 failed:     master Maybe this?
+2013-02-27 13:57:52 #378 errored:    master Merge branch '1.5'
+2013-02-27 13:36:47 #377 failed:     master Merge branch '1.5'
+2013-02-14 19:07:20 #376 failed:     master Changelog + docstring updates re #821
+2013-02-14 14:12:44 #374 failed:     master Merge branch '1.5'
+2013-02-09 21:20:53 #368 passed:     master Env vars initialized by optparse default values need to have explicit defaults
+2013-02-07 13:05:31 #366 passed:     master Merge branch '1.5'
+2013-02-07 12:36:43 #365 passed:     master Merge pull request #836 from gtaylor/run_once_doc
+2013-01-29 02:09:39 #360 passed:     master Docs + changelog re #823, fixes #823
+2013-01-28 21:23:04 #359 passed:     master Merge branch '1.5'
+2013-01-26 21:52:36 #355 passed:     master Merge branch '1.5'
+2013-01-26 20:32:56 #354 passed:     master Changelog re #805
+2013-01-26 20:31:14 #353 passed:     master Merge pull request #805 from fgmacedo/patch-1
+2013-01-26 20:15:55 #352 passed:     master Merge pull request #801 from tmuellerleile/master
+2013-01-26 20:12:37 #351 passed:     master Merge branch '1.5'
+2013-01-26 20:13:39 #349 passed:     master Merge pull request #797 from nachouve/patch-1
+2013-01-26 19:52:15 #348 passed:     master Merge branch '1.5'
+2013-01-26 11:20:18 #346 passed:     master Changelog re #402, fixes #402
+2013-01-26 11:02:58 #345 passed:     master Merge branch '1.5'
+2013-01-25 01:26:24 #343 passed:     master Attribution re #703
+2013-01-22 23:36:42 #341 passed:     master Merge branch '1.5'
+2013-01-22 22:38:40 #340 failed:     master Formatting
+2013-01-22 21:31:03 #338 passed:     master Merge branch '1.5'
+2013-01-15 20:45:02 #330 passed:     master Merge branch '1.5'
+2013-01-11 16:47:06 #328 passed:     master Add env.eagerly_disconnect, fixes #818
+2013-01-08 23:02:41 #322 passed:     master ReST fix
+2013-01-08 22:40:30 #321 passed:     master Merge branch '1.5'
+2013-01-02 19:56:55 #315 passed:     master Merge branch '1.5'
+2012-12-28 17:20:04 #312 passed:     master Changelog format tweak
+2012-12-28 16:32:20 #311 passed:     master Merge branch '1.5'
+2012-12-18 20:52:08 #305 passed:     master Merge branch '1.5'
+2012-12-15 23:46:43 #303 passed:     master Merge branch '1.5'
+2012-12-15 22:50:36 #302 passed:     master Merge branch '1.5'
+2012-12-15 22:40:35 #299 passed:     master Merge branch '1.5'
+2012-12-15 19:38:47 #298 passed:     master Positive test re #735
+2012-12-13 13:49:01 #297 passed:     master Merge branch '1.5'
+2012-11-29 21:06:10 #290 passed:     master Bump public Paramiko requirement for file-like object transfer feature
+2012-11-29 20:39:20 #289 failed:     master Merge branch '1.5'
+2012-11-29 19:57:49 #288 failed:     master Changelog re #787
+2012-11-28 23:52:59 #287 passed:     master Attribute paulm in changelog
+2012-11-15 15:07:24 #281 passed:     master Merge branch '1.5'
+2012-11-15 13:21:02 #279 passed:     master Merge branch '1.5'
+2012-11-09 20:33:35 #276 passed:     master Merge branch '1.5'
+2012-11-07 13:58:26 #274 passed:     master Fix up docs.unwrap_tasks to handle renamed task functions better
+2012-11-07 12:07:52 #273 passed:     master Update roadmap
+2012-11-06 20:46:55 #271 passed:     master Update changelog generation link to use release branch, not tag
+2012-11-06 18:17:14 #268 passed:     master Merge branch '1.5'
+2012-11-06 18:08:38 #266 passed:     master Update MANIFEST.in for README rename
+2012-11-06 17:09:41 #261 passed:     master Ensure Fab 1.5 requires Paramiko 1.9
+2012-11-06 14:36:47 #260 failed:     master Sigh
+2012-11-06 14:34:08 #259 failed:     master Merge branch '1.4'
+2012-11-06 01:14:38 #258 failed:     master Implement ProxyCommand support for really reals
+2012-11-01 18:06:22 #256 passed:     master Fix up hide_nontasks a bit
+2012-11-01 17:46:58 #255 passed:     master Add hide_nontasks option to unwrap_tasks
+2012-11-01 17:01:19 #254 passed:     master Add docs helper for  + Sphinx autodoc.
+2012-11-01 17:00:45 #253 passed:     master Add docs helper for  + Sphinx autodoc.
+2012-10-28 19:50:18 #249 passed:     master Merge branch '1.4'
+2012-10-28 19:44:59 #248 passed:     master Support, not bug. Meh.
+2012-10-28 19:21:38 #246 passed:     master Merge branch '1.4'
+2012-10-28 15:57:52 #244 passed:     master Changelog re #736
+2012-10-26 14:05:14 #241 passed:     master Changelog re #763
+2012-10-26 14:00:42 #240 passed:     master Add note re: priority of -I's password input
+2012-10-23 22:13:13 #237 passed:     master Docs & changelog re #629, re #665
+2012-10-23 22:07:53 #236 passed:     master Merge pull request #665 from rodriguealcazar/master
+2012-10-22 19:45:20 #234 passed:     master Merge branch '1.4'
+2012-10-19 17:45:48 #233 passed:     master Clean up tasks tests to be less boilerplatey
+2012-10-19 14:58:23 #232 failed:     master Changelog re #761
+2012-10-19 14:57:41 #231 passed:     master Parameterize main.main() for explicit fabfile locations.
+2012-10-14 17:06:45 #230 passed:     master On second thought, don't email bitprophet when forks fail...
+2012-10-14 17:06:25 #229 passed:     master Email bitprophet when builds fail
+2012-10-09 19:08:03 #224 passed:     master Merge branch '1.4'
+2012-10-09 16:48:37 #223 failed:     master Merge branch '1.4'
+2012-10-04 17:26:33 #220 passed:     master Merge pull request #745 from fabric/745-doubled-up-line-prefixes
+2012-10-03 23:25:46 #218 passed:     master Fix godawful 'hides some errors within IO threads' behavior
+2012-10-02 19:02:15 #216 failed:     master Flip import, setup.py, version command back to Paramiko
+2012-09-30 23:47:49 #215 passed:     master Remove unneeded privatization of variables, re #733
+2012-09-13 19:44:48 #192 passed:     master Merge branch '1.4'
+2012-09-13 19:28:03 #191 passed:     master Merge remote-tracking branch 'akaihola/master'
+2012-09-12 03:25:45 #190 passed:     master Tried making local(shell) docstring clearer/more explicit
+2012-09-12 02:37:11 #189 passed:     master Merge pull request #725 from mkhattab/master
+2012-09-12 03:03:26 #188 passed:     master Merge branch '1.4'
+2012-09-12 02:35:26 #186 failed:     master Merge branch '1.4'
+2012-09-09 00:42:40 #182 passed:     master Fix up actually-failing tests re #704
+2012-09-09 00:37:12 #179 failed:     master Merge branch '1.4'
+2012-09-09 00:35:02 #178 failed:     master Fix test runner to exit correctly.
+2012-09-09 00:21:45 #177 passed:     master Attribution re #704
+2012-09-08 18:08:41 #176 passed:     master Attribution re #491
+2012-09-08 17:51:31 #175 passed:     master Merge branch '1.4'
+2012-08-29 13:11:12 #171 passed:     master Merge pull request #712 from jawnb/master
+2012-08-16 19:13:34 #155 passed:     master Changelog re #702
+2012-08-16 19:09:47 #154 passed:     master Merge pull request #702 from richid/intelligent_require
+2012-07-27 13:18:33 #149 passed:     master Merge branch '1.4'
+2012-07-26 19:33:38 #147 passed:     master Merge branch '1.4'
+2012-07-20 14:02:03 #144 passed:     master Merge branch '1.4'
+2012-07-16 12:15:44 #141 passed:     master Merge branch '1.4'
+2012-07-15 21:35:51 #138 passed:     master Merge branch '1.4'
+2012-07-15 01:58:57 #136 passed:     master Add warn_only to fabric.api
+2012-07-15 01:53:48 #135 passed:     master Fix typo in index RST readme include
+2012-07-14 23:15:25 #134 passed:     master Add missing kwarg-oriented tests re #627
+2012-07-14 00:01:06 #133 passed:     master Merge branch '1.4'
+2012-07-06 18:00:39 #131 passed:     master Merge branch '1.4'
+2012-07-06 17:48:48 #128 passed:     master Merge branch '1.4'
+2012-07-06 17:42:39 #125 passed:     master Changelog entry re #263. Fixes #263.
+2012-07-06 17:39:28 #124 passed:     master No idea why the 'quiet' tests were laid out like this
+2012-07-06 16:58:36 #123 passed:     master Merge pull request #675 from kisielk/master
+2012-07-05 12:39:40 #122 passed:     master Update changelog, AUTHORS re #669
+2012-07-05 12:32:33 #121 passed:     master Merge remote-tracking branch 'diyan/master' into 669-win32-tweaks
+2012-06-23 16:29:29 #118 passed:     master Merge branch '1.4'
+2012-06-23 16:27:08 #117 passed:     master Merge branch '1.4'
+2012-06-13 14:57:07 #114 passed:     master Merge branch '1.4'
+2012-06-13 14:45:10 #111 passed:     master Remove out of date MANIFEST.in line.
+2012-06-05 11:05:10 #110 passed:     master Merge pull request #663 from JensRantil/sed_doc_no_backup
+2012-06-02 00:57:32 #109 passed:     master Merge pull request #662 from msabramo/README.rst
+2012-06-01 23:57:05 #108 passed:     master Merge pull request #661 from msabramo/tox
+2012-06-01 23:56:35 #107 passed:     master Merge pull request #660 from msabramo/gitignore
+2012-06-01 13:11:56 #106 passed:     master Merge branch '1.4'
+2012-05-31 12:46:04 #103 passed:     master Merge pull request #656 from JensRantil/mention_runs_once
+2012-05-24 19:55:54 #102 passed:     master Merge branch '1.4'
+2012-05-23 11:16:49 #99 passed:      master Merge branch '1.4'
+2012-05-22 19:40:22 #96 passed:      master Merge branch '1.4'
+2012-05-21 15:03:10 #94 passed:      master Reformat changeloggy bits of run/sudo docstrings.
+2012-05-17 19:38:29 #93 passed:      master Add link to run/sudo in changelog re #646
+2012-05-17 19:32:56 #92 passed:      master Allow override of streams used to print remote stdout/stderr.
+2012-05-17 12:47:42 #91 passed:      master Merge branch '1.4'
+2012-05-16 17:32:37 #88 passed:      master Merge branch '1.4'
+2012-05-13 23:55:07 #85 passed:      master Merge branch '1.4'
+2012-05-13 18:37:59 #82 passed:      master Roadmap update
+2012-05-13 18:25:13 #81 passed:      master Add quiet contextmanager and run/sudo kwarg.
+2012-05-08 20:05:24 #80 passed:      master Typo fix
+2012-05-08 20:00:49 #79 passed:      master Changelog re #633
+2012-05-08 19:57:44 #78 passed:      master Test and implementation
+2012-05-08 01:13:46 #77 passed:      master Merge branch '1.4'
+2012-05-08 00:03:51 #74 passed:      master Merge branch '1.4'
+2012-04-26 12:57:39 #72 passed:      master Merge branch '1.4'
+2012-04-26 12:51:48 #69 passed:      master Merge branch '1.4'
+2012-04-26 12:47:55 #66 passed:      master Merge branch '1.4'
+2012-04-25 20:00:10 #63 passed:      master Merge branch '1.4'
+2012-04-24 16:33:36 #60 passed:      master Merge branch '1.4'
+2012-04-24 16:15:01 #57 passed:      master Merge pull request #624 from pacemkr/b0f41ec86fbaa9e1da179c7061f956ec1394d551
+2012-04-13 14:06:56 #56 passed:      master Merge branch '1.4'
+2012-04-13 14:02:34 #54 passed:      master Merge branch '1.4'
+2012-04-11 20:17:05 #52 passed:      master Merge branch '1.4'
+2012-04-11 20:12:43 #50 passed:      master Merge branch '1.4'
+2012-04-06 12:17:48 #48 passed:      master Merge branch '1.4'
+2012-04-05 18:18:34 #45 passed:      master Merge branch '1.4'
+2012-04-04 23:02:13 #43 passed:      master Merge branch '1.4'
+2012-04-04 19:14:58 #40 passed:      master Merge branch '1.4'
+2012-04-03 06:24:17 #38 passed:      master Merge branch '1.4'
+2012-03-20 18:10:31 #36 passed:      master Merge branch '1.4'
+2012-03-12 18:41:06 #34 passed:      master Merge branch '1.4'
+2012-03-12 16:38:51 #31 passed:      master Merge branch '1.4'
+2012-03-02 16:10:02 #28 passed:      master Merge pull request #560 from dcolish/pep8
+2012-02-29 13:34:03 #27 passed:      master Merge branch '1.4'
+2012-02-29 13:30:58 #24 passed:      master Merge pull request #543 from mbrochh/master
+2012-02-28 23:42:55 #23 passed:      master Merge branch '1.4'
+2012-02-28 22:23:31 #20 passed:      master Merge branch '1.4'
+2012-02-28 18:50:35 #17 passed:      master Changelog re #551
+2012-02-28 18:33:41 #16 passed:      master Merge pull request #551 from hgdeoro/use_with_of_column_for_normal_list
+2012-02-28 18:06:33 #15 passed:      master Merge branch '1.4'
+2012-02-28 17:44:12 #12 passed:      master Revert "Implement Fabric-level host aliasing."
+2012-02-28 01:07:40 #11 passed:      master Merge branch '1.4'
+2012-02-28 01:03:20 #9 passed:       master Merge branch '1.4'
+2012-02-27 21:39:30 #7 passed:       master You're a sysadmin, you should know better!

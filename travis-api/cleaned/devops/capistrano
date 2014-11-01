@@ -1,0 +1,317 @@
+2014-09-30 03:33:13 #1165 failed:    master Merge pull request #1140 from townsen/on_filters
+2014-09-22 04:16:07 #1160 passed:    master Merge pull request #1013 from theunraveler/svnversion
+2014-09-10 17:25:44 #1157 passed:    master Merge pull request #1116 from betesh/master
+2014-09-10 10:22:37 #1154 passed:    master Merge pull request #1070 from shirosaki/svn_fetch_revision
+2014-09-10 10:08:05 #1153 passed:    master Merge pull request #1026 from caligo-mentis/openbsd_compatibility_fix
+2014-09-10 09:41:22 #1152 passed:    master Merge pull request #1127 from mtwentyman/master
+2014-09-10 03:19:05 #1151 passed:    master Improve handling of defaults for :set variables
+2014-09-10 02:44:23 #1150 passed:    master Merge pull request #1130 from townsen/server_props
+2014-09-02 09:47:21 #1144 passed:    master Update .travis.yml
+2014-08-25 06:44:37 #1139 passed:    master Merge pull request #1121 from mattbrictson/patch-2
+2014-08-21 06:52:10 #1137 passed:    master Merge pull request #1119 from kaikuchn/master
+2014-08-21 04:24:34 #1135 passed:    master Update .travis.yml
+2014-08-21 04:23:11 #1134 failed:    master Merge pull request #1117 from stamm/master
+2014-08-06 03:14:05 #1127 failed:    master Merge pull request #1112 from kaikuchn/master
+2014-07-18 06:56:45 #1109 errored:   master Merge pull request #1057 from loganhasson/master
+2014-07-17 08:38:20 #1107 passed:    master Merge pull request #1031 from sauliusgrigaitis/master
+2014-06-23 10:14:01 #1103 passed:    master Minor fix for `deploy.rb.erb`
+2014-06-08 03:50:10 #1098 passed:    master Merge pull request #1075 from mbrictson/pin-rspec-2.14.x
+2014-06-07 13:30:46 #1095 errored:   master Merge pull request #1074 from mbrictson/patch-1
+2014-06-07 03:20:27 #1093 errored:   master Merge pull request #1073 from mbrictson/patch-1
+2014-04-27 01:36:02 #1072 passed:    master Merge pull request #1034 from deitrick/patch-1
+2014-04-26 03:17:02 #1070 passed:    master Merge pull request #1032 from mbrictson/fix-changelog
+2014-04-23 10:52:47 #1066 passed:    master Merge pull request #1027 from tpett/new-vagrant
+2014-04-23 07:20:08 #1063 passed:    master Merge pull request #1023 from mbrictson/improve-help
+2014-04-23 07:17:14 #1062 passed:    master Improve compatibility by making options optional for the question initializer
+2014-04-23 07:13:27 #1061 passed:    master Merge pull request #1020 from robbertkl/freebsd-tar-fix
+2014-04-23 05:00:25 #1058 passed:    master Merge pull request #1028 from mbrictson/highline-ask
+2014-04-23 04:51:44 #1057 passed:    master Merge pull request #1024 from miry/before
+2014-04-22 02:02:47 #1045 passed:    master Update CHANGELOG.md
+2014-04-22 01:36:19 #1044 errored:   master Preparing Release v3.2.1
+2014-04-22 01:15:41 #1043 passed:    master Merge pull request #1019 from bruno-/tweak_revision_log
+2014-04-18 04:30:38 #1036 passed:    master Merge pull request #1016 from blaugueux/patch-1
+2014-04-16 05:14:19 #1025 passed:    master Merge pull request #1007 from sponomarev/changed-i18n
+2014-04-16 03:14:56 #1023 passed:    master Merge pull request #1009 from cyrusstoller/readme-version
+2014-04-16 01:23:06 #1015 passed:    master Merge pull request #1006 from sponomarev/fix-readme-typos
+2014-04-15 07:45:56 #1010 passed:    master Merge pull request #1003 from juanibiapina/config_keys
+2014-04-15 07:41:32 #1008 passed:    master Merge pull request #1002 from rosenfeld/master
+2014-04-15 07:12:57 #1005 passed:    master Merge pull request #1001 from scottsuch/minor_changelog_fix
+2014-04-15 06:17:43 #1002 passed:    master Preparing Release v3.2.0
+2014-04-15 06:15:35 #1001 passed:    master Add comparison links to CHANGELOG
+2014-04-15 05:33:41 #1000 failed:    master Merge branch 'patch-1' of https://github.com/dmarkow/capistrano into dmarkow-patch-1
+2014-04-15 05:30:59 #999 failed:     master Merge pull request #743 from rubyisbeautiful/fix_last_release_path_bug
+2014-04-15 05:27:49 #998 failed:     master Merge pull request #892 from miry/load-deploy-and-stage-tasks
+2014-04-15 05:24:40 #997 failed:     master Merge pull request #930 from mpapis/bugfix/gh_issue_915
+2014-04-15 05:22:33 #996 failed:     master Merge pull request #928 from miry/before_with_args
+2014-04-15 05:19:06 #995 failed:     master Merge pull request #946 from ain/fix-invoke-docu
+2014-04-15 05:15:53 #994 failed:     master Merge pull request #950 from STRML/patch-1
+2014-04-15 05:13:53 #993 failed:     master Merge pull request #967 from rosenfeld/patch-1
+2014-04-15 05:12:24 #992 passed:     master Merge pull request #984 from whatbird/git-check
+2014-04-15 04:54:40 #991 passed:     master Merge pull request #937 from betesh/add_REVISION_file_and_support_current_revision_for_all_scms
+2014-04-14 10:20:12 #990 passed:     master Merge pull request #1000 from dballona/master
+2014-04-03 01:55:45 #987 passed:     master Merge pull request #994 from x3ro/arity-check-for-configuration-lambdas
+2014-04-02 01:53:56 #984 passed:     master Merge pull request #992 from svanderbleek/remove-method
+2014-03-20 08:46:17 #972 passed:     master Merge pull request #978 from jjoos/master
+2014-03-20 02:26:51 #970 passed:     master Merge pull request #976 from jwworth/task/fix_typos
+2014-03-20 02:23:13 #969 passed:     master Merge pull request #977 from carlosbuenosvinos/patch-1
+2014-03-19 08:16:35 #966 passed:     master Merge pull request #975 from nemesis/patch-1
+2014-03-18 02:15:02 #964 passed:     master Merge pull request #969 from townsen/master
+2014-03-11 09:09:33 #961 passed:     master Merge pull request #965 from rosenfeld/patch-1
+2014-03-09 06:17:28 #959 passed:     master Merge pull request #960 from seanhandley/master
+2014-03-04 03:20:09 #953 passed:     master Merge pull request #951 from caseyhelbling/spelling-error
+2014-03-03 02:39:17 #951 passed:     master Merge pull request #947 from ain/gitignore
+2014-02-25 12:00:42 #944 passed:     master Merge pull request #942 from justanshulsharma/master
+2014-02-21 13:03:58 #942 passed:     master Merge pull request #938 from richardkmichael/master
+2014-02-13 08:57:26 #937 passed:     master Merge pull request #933 from pex/master
+2014-02-13 08:00:56 #935 passed:     master Update README.md
+2014-02-13 07:59:11 #934 passed:     master Update README.md
+2014-02-05 01:06:54 #929 passed:     master Merge pull request #916 from ShPakvel/bugfix_users_for_the_same_host
+2014-02-04 16:13:16 #928 passed:     master Merge pull request #840 from wlmcewen/git_env_on_update
+2014-02-04 16:07:07 #927 errored:    master Merge pull request #919 from betesh/master
+2014-01-29 02:16:14 #923 passed:     master Merge pull request #913 from arkadyan/expose_release_timestamp
+2014-01-27 09:38:21 #919 passed:     master Merge pull request #838 from chendrix/master
+2014-01-27 09:35:55 #918 passed:     master Merge pull request #872 from Kriechi/fix_fetch_procs
+2014-01-27 09:28:26 #917 passed:     master Merge pull request #873 from signedbyte/patch-1
+2014-01-27 09:20:32 #916 passed:     master Delete capistrano-public_cert.pem
+2014-01-27 09:18:43 #915 passed:     master Merge pull request #893 from Orchestrator81/master
+2014-01-27 09:13:23 #914 passed:     master Merge pull request #900 from kirs/rake-instead-of-cap
+2014-01-18 05:28:18 #905 passed:     master Revert ":panda_face: 857: Load tasks from the deploy.rb"
+2014-01-14 15:56:05 #900 passed:     master Merge pull request #880 from alepore/patch-1
+2014-01-14 14:48:14 #895 passed:     master Merge pull request #879 from CodersClan/master
+2014-01-09 01:42:22 #886 passed:     master Merge pull request #866 from miry/fix-tests
+2014-01-09 01:40:17 #885 failed:     master Merge pull request #867 from miry/857-deploy-config-load
+2014-01-07 13:27:45 #877 errored:    master Merge pull request #864 from jrmyward/fix-development-dependency
+2014-01-03 04:53:11 #874 errored:    master Merge pull request #856 from Kriechi/bump_sshkit
+2014-01-03 04:11:43 #872 passed:     master Merge pull request #855 from kirs/structured-changelog
+2014-01-03 04:00:29 #871 passed:     master Merge pull request #854 from kirs/post-install-notice
+2014-01-03 03:29:16 #867 passed:     master Merge pull request #837 from kirs/lock-config
+2014-01-01 16:32:22 #865 passed:     master Merge pull request #852 from jackdesert/documented_deploy_dot_rb
+2013-12-30 04:53:27 #863 passed:     master Merge pull request #849 from Kriechi/fix_stage_template
+2013-12-26 02:18:01 #860 failed:     master Merge pull request #842 from salimane/pr_ruby_2_1_0
+2013-12-25 06:03:16 #858 failed:     master Merge pull request #841 from bricker/whitespace
+2013-12-20 08:36:48 #852 failed:     master Prepare for 3.1 release
+2013-12-20 07:59:03 #851 failed:     master Merge pull request #810 from forward3d/host_filter
+2013-12-20 07:58:42 #850 failed:     master Merge pull request #828 from coffeeaddict/decapsulated-scm
+2013-12-19 03:48:55 #849 passed:     master Merge pull request #832 from mbrictson/fix-i18n-deprecation
+2013-11-22 10:23:16 #830 passed:     master Update CHANGELOG.md
+2013-11-22 10:19:48 #829 passed:     master Merge pull request #791 from jage/improve-console
+2013-11-22 10:16:32 #828 passed:     master Merge pull request #803 from capistrano/feature/roles-array
+2013-11-22 07:15:59 #823 passed:     master Update CHANGELOG.md
+2013-11-22 07:08:09 #822 passed:     master Merge pull request #779 from nathanstitt/master
+2013-11-22 07:06:05 #821 passed:     master Merge pull request #781 from mikespokefire/feature/fix-symlink-roles
+2013-11-22 07:02:43 #820 passed:     master Merge pull request #786 from rubyzg/master
+2013-11-22 07:00:14 #819 passed:     master Merge pull request #796 from forward3d/command_line_role_filter
+2013-11-22 06:59:28 #818 passed:     master Merge pull request #801 from NHSChoices/feature/same-host-different-port
+2013-11-20 06:39:53 #809 passed:     master Rename contributing guidelines to CONTRIBUTING.md
+2013-11-20 06:38:53 #808 passed:     master Add CONTRIBUTING guidelines
+2013-11-19 02:58:05 #804 passed:     master Merge pull request #788 from radicaled/docfix
+2013-11-13 03:17:46 #795 passed:     master Changelog notes for #717 related to 6e9863cdc
+2013-11-13 03:12:01 #794 passed:     master Fix #717. Refactor more roles() to release_roles()
+2013-11-12 14:30:32 #793 passed:     master Merge pull request #780 from waynn/patch-1
+2013-11-07 09:38:06 #789 passed:     master Merge pull request #771 from andyl/master
+2013-11-05 12:40:06 #787 passed:     master Merge pull request #769 from danoc/fix-ask-example
+2013-11-04 09:54:18 #784 passed:     master Merge pull request #764 from boosty/fix_cpaistrano_rails_links
+2013-11-03 13:14:13 #782 passed:     master Keep fresh version of Capistrano in README
+2013-11-02 06:15:32 #781 passed:     master Update CHANGELOG.md
+2013-11-02 06:13:58 #780 passed:     master Merge pull request #757 from blackxored/with-revision-sha
+2013-11-02 06:12:24 #779 errored:    master Prepare for v3.1.0
+2013-11-02 05:38:59 #778 passed:     master Update CHANGELOG.md
+2013-11-01 17:16:07 #776 passed:     master Prepare for v3.0.1
+2013-11-01 17:01:53 #775 passed:     master Underscore example application name
+2013-11-01 16:58:44 #774 passed:     master Update CHANGELOG.md
+2013-11-01 16:51:04 #773 passed:     master Merge pull request #736 from mpapis/bugfix/allow_multiuser_deploy
+2013-11-01 16:23:59 #772 passed:     master Merge pull request #759 from bsnape/master
+2013-10-29 15:06:21 #754 passed:     master Merge pull request #718 from mattdbridges/import-flow
+2013-10-27 12:11:06 #746 passed:     master Update README.md
+2013-10-27 12:05:24 #744 passed:     master Merge pull request #726 from mpapis/bugfix/remove-binstubs
+2013-10-25 14:41:02 #741 passed:     master Merge pull request #735 from ain/patch-2
+2013-10-22 15:47:50 #737 errored:    master Merge pull request #728 from bry4n/patch-1
+2013-10-21 02:12:30 #733 passed:     master Merge pull request #721 from parkr/patch-2
+2013-10-18 06:18:22 #726 passed:     master Merge pull request #703 from capistrano/fix/cc-license
+2013-10-18 06:13:27 #725 passed:     master Merge pull request #700 from capistrano/fix/capify-executable
+2013-10-17 10:41:39 #718 passed:     master Merge pull request #709 from kirs/patch-5
+2013-10-17 10:39:09 #717 passed:     master Merge pull request #713 from kirs/patch-7
+2013-10-17 06:31:13 #714 passed:     master Merge pull request #712 from kirs/patch-6
+2013-10-17 05:42:40 #712 passed:     master Merge pull request #711 from kirs/role-all-warning
+2013-10-17 01:57:36 #710 passed:     master Merge pull request #710 from nigelramsay/patch-1
+2013-10-16 06:23:55 #704 passed:     master Merge pull request #700 from capistrano/fix/capify-executable
+2013-10-15 14:58:16 #700 errored:    master Merge pull request #698 from capistrano/fix/default-pty
+2013-10-14 06:44:11 #693 passed:     master Merge pull request #688 from ryanponce/patch-1
+2013-10-14 06:43:45 #692 passed:     master Merge pull request #691 from kirs/patch-3
+2013-10-14 02:06:07 #689 passed:     master Update CHANGELOG.md
+2013-10-08 03:38:11 #683 passed:     master Fix readme for new installation instructions
+2013-09-27 02:07:16 #673 passed:     master Merge pull request #663 from dukejones/master
+2013-08-14 12:39:14 #626 passed:     master Merge pull request #573 from johnbellone/patch-2
+2013-08-14 12:35:36 #625 passed:     master Merge pull request #572 from johnbellone/patch-1
+2013-08-13 11:19:24 #624 passed:     master Merge pull request #609 from planetio/master
+2013-08-12 13:19:49 #619 passed:     master Merge pull request #603 from MartialGeek/master
+2013-07-30 09:48:28 #571 passed:     master Merge pull request #583 from coding46/patch-1
+2013-07-30 09:46:24 #570 passed:     master Merge pull request #584 from coding46/patch-2
+2013-07-19 00:41:12 #555 passed:     master Merge pull request #568 from alexgb/feat_requireless_strategies
+2013-07-04 02:25:06 #519 passed:     master Merge pull request #538 from jmazzi/bugfix/multistage_env_detection
+2013-07-03 10:39:11 #514 passed:     master Merge pull request #534 from bpaquet/master
+2013-05-22 11:49:04 #434 passed:     master Merge pull request #480 from carloslopes/issue
+2013-05-22 02:58:32 #432 passed:     master Merge pull request #477 from curtislinden/patch-1
+2013-05-20 05:44:14 #429 passed:     master Merge pull request #475 from skisulli/load-paths
+2013-04-29 02:39:21 #420 passed:     master Preparing Release v2.15.4
+2013-04-28 11:27:57 #417 passed:     master Merge pull request #461 from jimryan/handle-assets-manifest-during-rails-upgrade
+2013-04-25 03:37:54 #414 passed:     master Merge pull request #457 from gnufied/master
+2013-04-25 01:39:12 #412 passed:     master Preparing Release v2.15.3
+2013-04-25 01:28:11 #411 passed:     master Merge pull request #455 from gnufied/master
+2013-04-25 01:27:19 #410 passed:     master Merge pull request #456 from chulkilee/fix-maintenance
+2013-04-25 01:26:24 #409 passed:     master Merge pull request #454 from joshstaiger/sudo_cleanup
+2013-04-24 03:36:40 #405 passed:     master Preparing Release v2.15.2
+2013-04-24 03:22:36 #404 passed:     master Merge pull request #453 from joeycarmello/fix_runtime_error_with_true_normalize_asset_timestamps
+2013-04-24 01:31:31 #403 passed:     master Merge pull request #452 from lidaobing/patch-1
+2013-04-23 13:39:23 #399 passed:     master Merge pull request #412 from jimryan/support-json-manifest
+2013-04-23 02:36:10 #396 passed:     master More changelog, close to shippign 2.15.0
+2013-04-22 02:38:40 #395 passed:     master Merge pull request #442 from willbryant/master
+2013-04-19 13:15:09 #392 passed:     master Merge pull request #403 from spectator/master
+2013-04-05 01:03:51 #388 passed:     master Fix #430 (Ruby 1.8.7 incompatible syntax)
+2013-04-04 01:20:30 #386 passed:     master Merge pull request #428 from jbox-web/sudo_enhance
+2013-04-03 13:29:56 #384 passed:     master Merge pull request #427 from nlenepveu/assets_tasks_with_no_servers_matched
+2013-04-03 03:40:51 #382 passed:     master Revert "Merge pull request #426 from zxiest/patch-1"
+2013-04-02 13:47:32 #381 passed:     master Merge pull request #306 from rds13/sudo_enhance
+2013-04-02 13:44:24 #380 passed:     master Merge pull request #265 from nutznboltz/issue-251
+2013-04-02 13:42:15 #379 passed:     master Merge pull request #115 from rudionrails/master
+2013-04-02 13:40:29 #378 passed:     master Merge pull request #316 from bison/copy_strategy_escape_globs
+2013-04-02 13:02:52 #377 passed:     master Merge pull request #334 from jpfuentes2/allow_setting_vars_in_shell
+2013-04-02 12:56:58 #376 passed:     master Merge pull request #326 from cannikin/master
+2013-04-02 12:55:31 #375 passed:     master Merge pull request #337 from ymainier/master
+2013-04-02 12:53:21 #374 passed:     master Merge pull request #329 from timoschilling/patch-1
+2013-04-02 12:51:12 #373 passed:     master Merge pull request #324 from kellyredding/kr-default-formatters
+2013-04-02 12:49:01 #372 passed:     master Merge pull request #383 from mpapis/feature/improved_command_logging_for_parallel
+2013-04-02 12:47:54 #371 passed:     master Merge pull request #339 from mcary/master
+2013-04-02 12:46:39 #370 passed:     master add two variables that we need for maintenance tasks
+2013-04-02 12:43:50 #369 failed:     master Merge pull request #368 from wildoats/master
+2013-04-02 12:42:58 #368 failed:     master Merge pull request #397 from mv/finalize_update_typos
+2013-04-02 12:41:41 #367 failed:     master Merge pull request #390 from mattheath/empty-gateway
+2013-04-02 12:40:37 #366 failed:     master Merge pull request #422 from bosko/master
+2013-04-02 12:22:17 #365 failed:     master Merge pull request #363 from tanob/report-exit-signal
+2013-04-02 12:21:15 #364 failed:     master Merge pull request #398 from mv/cli_options_typos
+2013-04-02 12:17:14 #363 failed:     master Merge pull request #399 from mhutchin/replace-dead-link
+2013-04-02 12:16:04 #362 failed:     master Merge pull request #400 from thisiskun/master
+2013-04-02 12:13:51 #361 failed:     master Merge pull request #405 from petems/add_multistage_note
+2013-04-02 12:12:27 #360 failed:     master Merge pull request #407 from jarrettmeyer/4aad25f6b57e79bc654d36ace2b27675aaede5de
+2013-04-02 12:11:18 #359 failed:     master Merge pull request #402 from yule/patch-1
+2013-04-02 12:10:30 #358 failed:     master Merge pull request #408 from libis/master
+2013-04-02 12:09:07 #357 failed:     master Merge pull request #410 from pjungwir/upload_files_using_scp_not_sftp
+2013-04-02 12:07:28 #356 failed:     master Merge pull request #416 from yyuu/check-nil-on-teardown-connections
+2013-04-02 12:05:30 #355 failed:     master Merge pull request #423 from howaboutwe/cleanup-fix
+2013-04-02 12:03:23 #354 failed:     master Merge pull request #425 from nlenepveu/eval_assets_role_at_runtime
+2013-04-02 12:01:59 #353 failed:     master Merge pull request #426 from zxiest/patch-1
+2013-03-21 03:07:51 #332 failed:     master Revert "Remove the deploy:web:{disable, enable} tasks"
+2013-02-07 16:31:49 #283 passed:     master Don't shellescape latest_release. It can be nil during --dry-run
+2013-02-07 16:33:36 #282 passed:     master Don't use return in task blocks
+2013-02-07 04:42:36 #281 passed:     master Bump version to 2.14.2
+2013-02-07 04:39:27 #280 passed:     master Merge pull request #367 from ndbroadbent/remove_flat_map
+2013-01-21 19:23:46 #275 passed:     master Oops: Change the gemspec to reference README.md instead of README.mdown
+2013-01-20 21:17:45 #274 passed:     master Merge pull request #331 from timoschilling/readme
+2013-01-20 21:15:46 #273 passed:     master Merge pull request #332 from jpfuentes2/fix_overzealous_shell_loop
+2013-01-20 19:47:38 #272 failed:     master Remove a conditional that caused 100% CPU usage by cap shell
+2013-01-20 19:24:40 #271 failed:     master Let the Gemfile rake dependency be the latest version
+2013-01-10 22:02:01 #267 passed:     master Merge pull request #349 from bricker/coerce_rails_env_to_s
+2013-01-10 00:13:44 #265 passed:     master Bump Capistrano::Version to 2.14.1
+2013-01-10 00:10:41 #264 passed:     master Bump Capistrano::Version to 2.14.1
+2013-01-10 00:09:19 #263 passed:     master Add the Set class as an explicit deploy recipe dependency
+2013-01-09 23:37:30 #262 passed:     master Don't shell escape the :asset_env variable in the precompile task
+2013-01-09 18:25:57 #261 passed:     master Bump Capistrano::Version to 2.14.0
+2012-12-10 04:22:54 #241 passed:     master Fix issue #307
+2012-12-10 00:15:46 #240 passed:     master Merge pull request #296 from aussielunix/Issues292-allow-more-than-80-chars
+2012-11-09 01:48:31 #222 passed:     master Merge pull request #303 from ndbroadbent/fix_update_asset_mtimes
+2012-11-08 17:40:10 #206 passed:     master Fix issue #300
+2012-11-08 17:39:42 #205 passed:     master Fixes issue #300
+2012-11-08 17:38:49 #204 passed:     master Fix issue #300
+2012-11-08 00:05:29 #201 passed:     master Merge pull request #281 from ndbroadbent/assets_rollback_and_expiry
+2012-10-26 17:04:59 #169 passed:     master Bump Capistrano::Version to 2.13.5
+2012-10-26 16:15:46 #168 passed:     master Bump Capistrano::Version to 2.13.4
+2012-10-23 19:23:29 #164 passed:     master Expunge the last vestiges of the deploy:web:{disable, enable} tasks
+2012-10-23 19:15:36 #163 passed:     master Merge pull request #283 from ndbroadbent/capistrano_colors_merge
+2012-10-23 02:13:55 #159 passed:     master Remove a potentially redundant git invocation and close pull request #261
+2012-10-09 11:26:22 #146 passed:     master Revert "defaulting rails environment to match stage name"
+2012-10-01 19:16:14 #142 passed:     master Fix a problem introduced by pull request #233
+2012-10-01 19:08:03 #141 failed:     master Merge pull request #233 from czarneckid/intelligent-scm-setting
+2012-10-01 19:06:04 #140 passed:     master Remove the deploy:web:{disable, enable} tasks
+2012-10-01 18:52:36 #139 passed:     master Merge pull request #282 from ndbroadbent/group_finalize_update_commands
+2012-09-18 00:48:56 #106 passed:     master Bump Capistrano::Version to 2.13.4
+2012-09-18 00:42:31 #105 passed:     master Merge pull request #272 from dylanahsmith/no-eof-sudo-capture
+2012-09-06 12:01:19 #103 passed:     master Merge pull request #267 from monsoonrains/stage_environment
+2012-08-21 01:36:18 #95 passed:      master Fix a small regression and bump Capistrano::Version to 2.13.3
+2012-08-21 01:23:17 #94 passed:      master Bump Capistrano::Version to 2.13.2
+2012-08-21 01:22:22 #93 passed:      master Bump Capistrano::Version to 2.13.2
+2012-08-21 01:18:43 #92 passed:      master Fix a typo
+2012-08-21 00:54:35 #91 passed:      master Bump Capistrano::Version to 2.13.1 and update the CHANGELOG
+2012-08-21 00:34:47 #90 passed:      master Fix renaming of the deprecated "deploy:symlink" task to "deploy:create_symlink"
+2012-08-20 04:04:02 #89 passed:      master Merge pull request #254 from dylanahsmith/no-eof-on-sudo
+2012-08-17 16:09:26 #86 passed:      master Bump Capistrano::Version to 2.13.0
+2012-08-17 15:32:02 #85 passed:      master Update the README
+2012-08-17 15:30:26 #84 passed:      master Change the capify executable so that it no longer emits code that loads Rails vendor plugins
+2012-08-13 17:46:39 #82 passed:      master Update the README
+2012-08-13 17:45:22 #81 passed:      master Update the README
+2012-08-09 02:39:00 #80 passed:      master Reconcile changes from pull request #242
+2012-08-07 16:06:44 #79 passed:      master Fix a regression introduced by pull request #237
+2012-08-07 10:09:21 #78 passed:      master Change the README to point to the new Capistrano wiki location
+2012-08-01 01:27:01 #77 passed:      master Merge pull request #246 from dylanahsmith/eof
+2012-07-31 01:13:59 #76 passed:      master Merge pull request #216 from nutrun/master
+2012-07-30 18:52:31 #75 passed:      master Merge pull request #237 from mhorbul/master
+2012-07-26 11:56:31 #74 passed:      master Merge pull request #222 from MasterLambaster/master
+2012-07-26 01:23:04 #73 passed:      master Merge pull request #223 from MasterLambaster/pull-3
+2012-07-25 01:22:38 #72 passed:      master Merge pull request #236 from carsomyr/remove_redundant
+2012-06-01 07:03:13 #71 passed:      master Merge pull request #217 from jacobat/spellfix
+2012-05-10 10:18:30 #70 passed:      master Merge pull request #202 from kplawver/create-log-on-scm-none
+2012-04-24 02:58:36 #69 passed:      master Merge pull request #194 from knightlabs/feature/capistrano-capistrano-193
+2012-04-24 02:56:40 #68 passed:      master Merge pull request #197 from kenmazaika/specify-mocha-version
+2012-04-19 16:43:41 #67 failed:      master Merge pull request #196 from kenmazaika/add-deprecation-warning
+2012-04-18 02:18:38 #66 passed:      master Merge pull request #192 from ayrton/patch-1
+2012-04-13 04:12:39 #65 passed:      master Release v2.12.0
+2012-04-12 13:25:59 #64 passed:      master Merge pull request #144 from EqualMedia/unshared-remote-cache
+2012-04-12 13:22:53 #63 passed:      master Merge pull request #141 from mattjmorrison/windows_mercurial
+2012-04-12 13:16:05 #62 passed:      master Merge pull request #167 from shtirlic/dry_run_transfer_fix
+2012-04-12 13:13:08 #61 passed:      master Merge pull request #145 from fcheung/configurable_asset_roles
+2012-04-12 13:05:29 #60 passed:      master Merge pull request #155 from rgo/ticket-193-alias-task
+2012-04-12 13:04:25 #59 passed:      master Merge pull request #185 from despo/copy_stratery_refactoring
+2012-04-12 13:00:11 #58 passed:      master Merge pull request #166 from lmarlow/safe_enable_web
+2012-04-12 12:59:29 #57 passed:      master Merge pull request #176 from hooktstudios/master
+2012-04-12 12:58:08 #56 passed:      master Merge pull request #172 from nickhoffman/master
+2012-04-12 12:56:39 #55 passed:      master Merge pull request #184 from despo/remove_symlink_deprecation_warning
+2012-03-10 12:54:00 #54 passed:      master Merge pull request #179 from kenn/optionalize_verbose_command_log
+2012-03-08 01:46:25 #53 passed:      master Merge pull request #175 from siannopollo/master
+2012-02-21 02:10:25 #51 passed:      master Merge pull request #161 from michaelklishin/patch-1
+2012-02-21 02:10:06 #50 passed:      master Merge pull request #162 from shtirlic/capify_fix
+2012-02-20 14:55:09 #49 passed:      master Merge pull request #160 from shtirlic/travis_update
+2012-02-20 14:54:50 #48 passed:      master Release v2.11.0
+2012-02-20 14:43:00 #47 passed:      master Fix GH #153, do not depend on ruby-debugger
+2012-02-20 14:31:55 #46 passed:      master Revert "Add a large warning for people still using `deploy:symlink`."
+2012-02-20 14:09:16 #45 passed:      master Fix a problem with SHA: 808e7f00
+2012-02-19 14:00:48 #44 passed:      master Merge pull request #142 from RogerE/maintenance-nginx-config
+2012-02-19 11:30:10 #43 passed:      master Release v2.10.0
+2012-02-19 10:35:45 #42 passed:      master Merge pull request #139 from terceiro/master
+2011-12-12 15:45:21 #40 passed:      master Revert "Merge pull request #130 from exceedhl/master"
+2011-12-11 07:20:54 #39 failed:      master Remove rvmrc and sample files.
+2011-12-11 06:44:40 #38 failed:      master Merge pull request #99 from pguelpa/configurable_transfer_method
+2011-12-11 06:42:14 #37 failed:      master Merge pull request #111 from GSA-OCSIT/remove_maintenance_message
+2011-12-11 06:41:52 #36 failed:      master Merge pull request #130 from exceedhl/master
+2011-12-11 06:41:36 #35 passed:      master Merge pull request #108 from nebulab/configurable-maintenance-page
+2011-12-11 06:39:39 #34 passed:      master Merge pull request #109 from dbackeus/master
+2011-12-11 06:37:54 #33 passed:      master Merge pull request #50 from rgo/ticket-193-alias-task
+2011-12-11 06:36:58 #32 passed:      master Merge pull request #118 from heathd/master
+2011-12-11 06:23:37 #31 passed:      master Merge pull request #129 from prevailhs/master
+2011-12-11 06:22:13 #30 passed:      master Merge pull request #112 from philrosenstein/master
+2011-12-11 06:21:45 #29 passed:      master Merge pull request #121 from weppos/assets_normalize_asset_timestamps
+2011-11-15 05:06:37 #28 passed:      master Merge pull request #126 from HectorMalot/master
+2011-10-18 08:56:23 #27 passed:      master Merge pull request #114 from et/patch-1
+2011-09-24 12:55:16 #26 passed:      master Merge pull request #107 from philrosenstein/master
+2011-09-24 11:55:11 #25 passed:      master Merge pull request #82 from brugidou/copy-strategy-with-build-script
+2011-09-24 11:54:25 #24 passed:      master Fix GH #76. Newline breaks bzr checkout.
+2011-09-24 11:53:58 #23 passed:      master Adding support for $CAPISTRANO:HOSTROLES$ as a valid placeholder
+2011-09-24 11:53:05 #22 passed:      master Add Travis-CI build badge.
+2011-09-24 11:53:03 #22 passed:      master Release v2.9.0
+2011-09-24 11:46:57 #21 passed:      master Fix GH #40. Use `svn switch` rather than `svn update`
+2011-09-24 04:24:49 #20 passed:      master Merge pull request #95 from ak47/master
+2011-09-24 04:23:47 #19 passed:      master Fix GH #86 (Undefined method compact for <#String>
+2011-09-24 04:15:07 #18 passed:      master Merge pull request #103 from nilbus/false-variables
+2011-09-24 04:14:31 #17 passed:      master Merge pull request #105 from nilbus/git-submodule-recursive
+2011-09-20 03:04:54 #16 passed:      master Merge pull request #80 from alextk/master
+2011-09-20 03:04:35 #15 passed:      master Merge pull request #98 from dubek/fix-git-verbose
+2011-09-20 03:03:40 #14 passed:      master Merge pull request #74 from ndbroadbent/parse_local_revisions
+2011-09-20 03:03:16 #13 passed:      master Merge pull request #92 from forward/mocha

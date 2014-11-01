@@ -1,0 +1,76 @@
+2014-10-04 15:09:58 #137 passed:     master 1.3.0
+2014-10-03 00:53:07 #136 passed:     master highlighters: add yield as keyword
+2014-09-29 23:52:28 #135 passed:     master fix yield precedence
+2014-09-27 16:42:25 #134 passed:     master build latest
+2014-09-27 16:39:06 #133 passed:     master Merge branch 'master' of github.com:gkz/LiveScript
+2014-09-27 16:22:16 #131 passed:     master Merge pull request #559 from rhendric/issue550
+2014-09-27 16:02:12 #130 passed:     master build with latest
+2014-09-26 09:06:37 #129 passed:     master Merge pull request #558 from rhendric/issue553
+2014-09-26 09:05:45 #128 passed:     master Merge pull request #561 from rhendric/issue294
+2014-09-07 17:24:17 #126 passed:     master Merge pull request #541 from piotrklibert/master
+2014-09-04 00:50:17 #123 passed:     master Merge pull request #557 from rhendric/issue520
+2014-09-01 13:57:04 #120 passed:     master Merge pull request #552 from rhendric/master
+2014-08-31 20:36:47 #118 errored:    master Merge pull request #551 from rhendric/master
+2014-06-07 18:44:07 #114 failed:     master Merge pull request #514 from Nami-Doc/issue508-anaphorize-default
+2014-04-21 21:24:04 #111 passed:     master optionator is dependency, not dev dependency
+2014-04-11 17:29:34 #110 passed:     master fix debugger compilation, closes #480
+2014-04-10 16:59:40 #109 passed:     master fix words line count
+2014-04-02 17:39:47 #108 passed:     master remove slake reference in comment
+2014-04-02 17:36:18 #107 passed:     master delete Slakefile, src/slake, src/optparse
+2014-04-01 20:17:56 #106 passed:     master add build-parser build script
+2014-03-25 18:27:33 #104 passed:     master copyright year is not required
+2014-03-18 18:08:28 #101 passed:     master removed "livescript" from bin, use "lsc"
+2014-03-14 02:00:41 #100 passed:     master Merge pull request #472 from Nami-Doc/issue471
+2014-03-14 01:59:35 #99 passed:      master use optionator for option parsing
+2014-03-11 20:33:36 #97 passed:      master use path.basename rather than hack
+2014-03-11 20:24:36 #96 passed:      master add Makefile (but keep Slakefile), use browserify
+2014-02-12 01:10:46 #95 passed:      master destructuring in require!
+2013-12-31 22:37:21 #91 passed:      master fix testing
+2013-12-31 22:25:11 #90 failed:      master Happy New Year
+2013-12-06 18:00:07 #87 failed:      master Merge pull request #418 from Nami-Doc/issue354
+2013-12-06 17:33:38 #85 failed:      master Merge pull request #434 from Nami-Doc/remove-autoinfusing-iifes
+2013-11-30 19:02:12 #82 passed:      master fix precedence for assign/backpipe, closes #266
+2013-11-28 14:37:12 #81 passed:      master minor typo
+2013-11-06 03:51:31 #79 passed:      master Merge pull request #392 from appedemic/master
+2013-09-24 19:02:13 #75 passed:      master use partail access syntax for replacement
+2013-09-23 03:37:36 #74 passed:      master Merge remote-tracking branch 'racklin/master'
+2013-08-23 11:22:08 #72 passed:      master add a test for increment
+2013-08-14 07:53:47 #65 passed:      master Merge pull request #355 from Haspaker/master
+2013-08-13 11:59:22 #63 passed:      master Merge pull request #353 from Haspaker/master
+2013-08-02 13:24:23 #61 passed:      master 1.2.0
+2013-08-01 13:59:51 #60 passed:      master cleanup of removed features
+2013-08-01 13:08:05 #59 passed:      master for let with when fix
+2013-07-30 16:31:13 #58 passed:      master slight word change
+2013-07-30 12:59:01 #57 passed:      master in op - remove check to support sparse arrays
+2013-07-26 18:54:37 #55 passed:      master Merge pull request #346 from Nami-Doc/master
+2013-07-26 18:44:00 #53 passed:      master remove interactive option, make call to lsc with no arguements start repl without displaying help, closes #343
+2013-07-26 17:50:12 #52 passed:      master grammar cleanup
+2013-07-21 18:14:04 #51 passed:      master additional tests from upstream
+2013-07-21 17:52:38 #50 passed:      master Merge pull request #341 from Nami-Doc/forlet
+2013-07-19 19:48:50 #48 passed:      master Merge pull request #340 from Nami-Doc/stdinend-windows
+2013-07-19 19:48:47 #47 passed:      master Merge pull request #339 from Nami-Doc/fix318
+2013-07-19 15:04:37 #43 passed:      master Merge pull request #338 from Nami-Doc/pnf
+2013-07-19 13:22:11 #41 passed:      master update changelog file to point to new site
+2013-07-13 19:52:55 #40 failed:      master fix from upstream
+2013-07-12 21:41:09 #39 passed:      master correct, and much better compilation of compose, no longer calling helper function
+2013-07-12 17:53:58 #38 passed:      master regex equals refactor - @Nami-Doc
+2013-07-12 14:28:12 #37 passed:      master fix regex != in boolean switch, fixes #276
+2013-07-12 13:35:26 #36 passed:      master repl print newline on ctrl-c or ctrl-d, closes #258
+2013-07-12 13:25:24 #35 passed:      master auto compile .json.ls to .json, closes #231
+2013-07-12 12:55:00 #34 passed:      master improve function hush syntax to what I always think it is
+2013-07-12 12:32:50 #33 passed:      master update to dev version
+2013-07-06 02:55:44 #32 passed:      master Merge pull request #334 from racklin/enhancement/header
+2013-06-18 11:20:09 #30 passed:      master Merge pull request #327 from dtinth/master
+2013-06-10 15:31:29 #28 passed:      master Merge pull request #325 from Nami-Doc/issue293
+2013-05-31 15:03:07 #26 passed:      master Merge pull request #320 from viclib/master
+2013-03-20 11:39:57 #23 passed:      master Merge pull request #289 from clkao/master
+2013-02-25 00:59:08 #21 passed:      master fix '2' in [1 2 3] - closes #267
+2013-02-24 23:55:14 #20 passed:      master Merge remote-tracking branch 'killdream/issue263'
+2013-02-24 23:50:38 #19 passed:      master Update LICENSE
+2013-01-12 18:06:33 #13 passed:      master Merge pull request #255 from Nami-Doc/issue238
+2013-01-05 17:51:22 #11 passed:      master optimize calls on partialized functions, closes #243
+2013-01-03 20:13:48 #7 passed:       master fix further quick map error, thanks @Nami-Doc
+2012-12-31 13:47:30 #5 passed:       master 1.1.1
+2012-12-30 19:08:37 #4 passed:       master add buld status
+2012-12-30 19:05:53 #3 passed:       master exit with error code if test failures
+2012-12-30 18:51:29 #2 passed:       master exp to see if travis support will work

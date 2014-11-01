@@ -1,0 +1,297 @@
+2014-09-18 10:28:59 #760 passed:     master Merge pull request #449 from matthewshafer/add_servers_to_debian_package
+2014-09-18 10:28:59 #760 passed:     master Merge pull request #449 from matthewshafer/add_servers_to_debian_package
+2014-09-16 16:29:09 #758 passed:     master Merge pull request #448 from benburry/tcp_server
+2014-09-16 16:29:02 #758 passed:     master Merge pull request #448 from benburry/tcp_server
+2014-09-11 17:42:26 #755 passed:     master fix typo in Gauges section
+2014-09-11 17:42:20 #755 passed:     master fix typo in Gauges section
+2014-09-11 17:30:36 #754 passed:     master Merge pull request #437 from anton-rudeshko/fix-global-leaking
+2014-09-11 17:30:31 #754 passed:     master Merge pull request #437 from anton-rudeshko/fix-global-leaking
+2014-09-11 14:40:05 #753 passed:     master bumping for v0.7.2 patch release
+2014-09-11 17:31:05 #753 passed:     master bumping for v0.7.2 patch release
+2014-08-01 12:08:01 #744 passed:     master Merge pull request #429 from temoto/patch-1
+2014-05-21 07:53:11 #731 passed:     master Merge pull request #428 from steve-dave/upstart-fix
+2014-05-21 07:53:14 #731 passed:     master Merge pull request #428 from steve-dave/upstart-fix
+2014-05-15 14:57:54 #729 passed:     master Merge pull request #418 from genuss/hist_dots
+2014-05-15 14:57:36 #729 passed:     master Merge pull request #418 from genuss/hist_dots
+2014-05-15 14:56:32 #728 passed:     master Merge pull request #423 from enriclluelles/patch-2
+2014-05-15 14:55:34 #727 passed:     master Merge pull request #423 from enriclluelles/patch-2
+2014-05-15 14:53:23 #726 passed:     master Merge pull request #427 from hidekiy/fix-example
+2014-05-15 14:53:29 #725 passed:     master Merge pull request #427 from hidekiy/fix-example
+2014-05-02 19:17:34 #723 passed:     master Merge pull request #425 from mheffner/patch-1
+2014-05-02 19:17:37 #723 passed:     master Merge pull request #425 from mheffner/patch-1
+2014-04-22 16:21:26 #717 passed:     master Merge pull request #421 from iloahz/master
+2014-04-22 16:21:18 #717 passed:     master Merge pull request #421 from iloahz/master
+2014-04-19 14:10:12 #715 passed:     master Merge pull request #420 from ifdattic/patch-1
+2014-04-19 14:10:16 #714 passed:     master Merge pull request #420 from ifdattic/patch-1
+2014-04-18 09:52:31 #712 passed:     master Merge pull request #419 from simonweil/master
+2014-04-15 11:01:06 #704 passed:     master Merge pull request #376 from mheffner/feature/more_counter_stats
+2014-04-15 11:00:20 #704 passed:     master Merge pull request #376 from mheffner/feature/more_counter_stats
+2014-04-14 15:41:13 #703 passed:     master Merge pull request #336 from zerkms/patch-1
+2014-04-14 15:35:58 #703 passed:     master Merge pull request #336 from zerkms/patch-1
+2014-04-14 15:27:02 #702 passed:     master Merge pull request #316 from ralph-tice/patch-1
+2014-04-14 15:25:57 #701 passed:     master Merge pull request #316 from ralph-tice/patch-1
+2014-04-14 15:10:27 #700 passed:     master Merge pull request #377 from straub/timer_counts
+2014-04-14 15:10:35 #699 passed:     master Merge pull request #377 from straub/timer_counts
+2014-04-14 14:56:39 #698 passed:     master Merge pull request #389 from shindere/graphite-documenation-url-fixup
+2014-04-14 14:56:14 #698 passed:     master Merge pull request #389 from shindere/graphite-documenation-url-fixup
+2014-04-14 14:18:12 #697 passed:     master Merge pull request #399 from markkimsal/master
+2014-04-14 14:06:06 #696 passed:     master Merge pull request #399 from markkimsal/master
+2014-04-14 14:05:39 #695 passed:     master Merge pull request #403 from derpston/proctitle
+2014-04-14 13:54:39 #694 passed:     master Merge pull request #403 from derpston/proctitle
+2014-04-14 13:54:31 #693 passed:     master Merge pull request #404 from derpston/autoconfreload
+2014-04-14 12:14:19 #692 passed:     master Merge pull request #406 from HerrBerg/logdirmissing
+2014-04-14 12:13:17 #692 passed:     master Merge pull request #406 from HerrBerg/logdirmissing
+2014-04-14 12:04:42 #691 passed:     master Merge pull request #408 from Furchin/master
+2014-04-14 12:04:54 #691 passed:     master Merge pull request #408 from Furchin/master
+2014-04-14 11:55:18 #690 passed:     master Merge pull request #409 from rwholmes/patch-1
+2014-04-14 11:53:51 #690 passed:     master Merge pull request #409 from rwholmes/patch-1
+2014-04-14 11:51:10 #689 passed:     master actually show build status for master branch in README
+2014-04-14 11:45:29 #688 passed:     master actually show build status for master branch in README
+2014-04-14 11:44:33 #687 passed:     master Merge pull request #412 from MaxGabriel/patch-1
+2014-04-14 11:36:28 #686 passed:     master Merge pull request #412 from MaxGabriel/patch-1
+2014-04-14 11:35:43 #685 passed:     master Merge pull request #415 from CameronNemo/patch-1
+2014-04-14 11:36:48 #685 passed:     master Merge pull request #415 from CameronNemo/patch-1
+2014-04-10 12:39:30 #681 passed:     master Merge pull request #414 from baumandm/master
+2014-04-10 12:38:55 #681 passed:     master Merge pull request #414 from baumandm/master
+2014-03-29 16:06:56 #678 passed:     master Add a README section about usage
+2014-03-29 16:06:50 #678 passed:     master Add a README section about usage
+2014-03-16 12:10:46 #667 passed:     master Merge pull request #379 from pbehrisch/patch-1
+2014-03-16 12:10:47 #667 passed:     master Merge pull request #379 from pbehrisch/patch-1
+2014-03-12 11:37:07 #663 passed:     master Merge pull request #400 from pburkholder/pdb_clarify_backends
+2014-03-12 11:37:09 #662 passed:     master Merge pull request #400 from pburkholder/pdb_clarify_backends
+2014-03-09 09:11:28 #660 passed:     master Merge pull request #397 from SaveTheRbtz/helpers
+2014-03-09 09:11:22 #660 passed:     master Merge pull request #397 from SaveTheRbtz/helpers
+2014-02-27 11:04:00 #658 passed:     master Merge pull request #398 from bass3m/master
+2014-02-27 11:03:59 #657 passed:     master Merge pull request #398 from bass3m/master
+2014-02-11 09:00:51 #649 passed:     master Merge pull request #382 from SaveTheRbtz/helpers
+2014-02-11 09:01:45 #649 passed:     master Merge pull request #382 from SaveTheRbtz/helpers
+2014-02-06 04:57:48 #643 passed:     master bump to v0.7.1
+2014-02-06 04:38:08 #643 passed:     master bump to v0.7.1
+2014-01-29 07:07:50 #642 passed:     master move contributing information into CONTRIBUTING.md
+2014-01-29 07:08:10 #642 passed:     master move contributing information into CONTRIBUTING.md
+2014-01-25 12:34:30 #639 passed:     master Merge pull request #388 from ciaranj/update_winser
+2014-01-25 12:32:50 #639 passed:     master Merge pull request #388 from ciaranj/update_winser
+2014-01-15 14:49:00 #636 passed:     master Merge pull request #386 from aleasoluciones/master
+2014-01-15 14:49:06 #635 passed:     master Merge pull request #386 from aleasoluciones/master
+2013-12-31 08:59:29 #630 passed:     master Merge pull request #383 from themasch/patch-1
+2013-12-31 08:59:16 #630 passed:     master Merge pull request #383 from themasch/patch-1
+2013-12-31 04:49:57 #628 passed:     master Merge pull request #381 from SaveTheRbtz/python
+2013-12-31 04:49:51 #628 passed:     master Merge pull request #381 from SaveTheRbtz/python
+2013-12-07 12:40:21 #616 passed:     master Merge pull request #369 from easybiblabs/topics/inject-logger-into-backends
+2013-12-07 12:39:43 #616 passed:     master Merge pull request #369 from easybiblabs/topics/inject-logger-into-backends
+2013-12-07 12:38:56 #615 passed:     master Merge pull request #366 from bheilman/fix_debian_init_io_redirection
+2013-12-07 12:39:08 #614 passed:     master Merge pull request #366 from bheilman/fix_debian_init_io_redirection
+2013-12-06 10:07:31 #607 passed:     master bump to v0.7.0
+2013-12-06 10:13:10 #606 passed:     master bump to v0.7.0
+2013-12-06 09:47:05 #605 passed:     master Merge pull request #373 from etsy/proxy_performance_tweaks
+2013-12-06 09:51:09 #605 passed:     master Merge pull request #373 from etsy/proxy_performance_tweaks
+2013-12-05 15:43:15 #599 passed:     master use travis ci to deploy npm packages from tags
+2013-12-05 15:43:14 #598 passed:     master use travis ci to deploy npm packages from tags
+2013-12-03 16:30:26 #597 passed:     master fixing tests
+2013-12-03 16:30:48 #597 passed:     master fixing tests
+2013-11-28 20:22:55 #596 failed:     master Merge pull request #367 from matschaffer/patch-1
+2013-11-28 20:22:39 #596 failed:     master Merge pull request #367 from matschaffer/patch-1
+2013-11-28 20:15:43 #595 failed:     master Merge pull request #368 from ifdattic/fix-typo-in-readme
+2013-11-28 20:15:43 #595 failed:     master Merge pull request #368 from ifdattic/fix-typo-in-readme
+2013-11-02 12:41:27 #575 failed:     master measure and graph timestamp generation lag
+2013-11-02 12:41:32 #575 failed:     master measure and graph timestamp generation lag
+2013-10-21 09:14:29 #572 passed:     master Merge pull request #355 from apankrat/patch-1
+2013-10-21 09:14:33 #572 passed:     master Merge pull request #355 from apankrat/patch-1
+2013-10-08 07:45:29 #566 passed:     master Merge pull request #349 from JensRantil/patch-1
+2013-10-08 07:45:24 #566 passed:     master Merge pull request #349 from JensRantil/patch-1
+2013-10-03 09:40:58 #564 passed:     master Add Note about requiring deleteIdleStats: true
+2013-10-03 09:41:14 #564 passed:     master Add Note about requiring deleteIdleStats: true
+2013-10-03 08:09:34 #562 passed:     master Clean up cluster proxy doc a little
+2013-10-03 08:09:33 #562 passed:     master Clean up cluster proxy doc a little
+2013-10-03 08:01:08 #561 passed:     master Merge pull request #284 from etsy/cluster_proxy
+2013-10-03 08:00:57 #561 passed:     master Merge pull request #284 from etsy/cluster_proxy
+2013-10-02 17:11:32 #560 passed:     master Merge pull request #347 from mynameismud/master
+2013-10-02 17:12:48 #560 passed:     master Merge pull request #347 from mynameismud/master
+2013-10-01 11:18:03 #558 passed:     master Merge branch 'master' of https://github.com/codepainters/statsd
+2013-10-01 11:13:56 #558 passed:     master Merge branch 'master' of https://github.com/codepainters/statsd
+2013-10-01 11:04:31 #557 passed:     master Merge pull request #346 from loqutus/master
+2013-10-01 11:04:10 #557 passed:     master Merge pull request #346 from loqutus/master
+2013-09-25 12:04:38 #553 passed:     master Merge pull request #344 from marpaia/master
+2013-09-25 12:04:42 #553 passed:     master Merge pull request #344 from marpaia/master
+2013-09-22 19:35:21 #549 passed:     master add clojure client to examples
+2013-09-22 19:35:28 #549 passed:     master add clojure client to examples
+2013-09-08 16:52:08 #545 passed:     master Merge pull request #340 from marpaia/master
+2013-09-08 16:52:09 #545 passed:     master Merge pull request #340 from marpaia/master
+2013-09-07 14:48:06 #543 passed:     master Merge pull request #338 from atdt/master
+2013-09-07 14:48:36 #543 passed:     master Merge pull request #338 from atdt/master
+2013-09-01 16:35:21 #538 passed:     master Merge pull request #332 from jib/graphite-suffix
+2013-09-01 16:35:38 #538 passed:     master Merge pull request #332 from jib/graphite-suffix
+2013-09-01 16:27:01 #537 passed:     master Merge pull request #334 from dmacdougall/fix-upstart-path
+2013-09-01 16:27:00 #537 passed:     master Merge pull request #334 from dmacdougall/fix-upstart-path
+2013-08-21 07:26:05 #532 passed:     master Merge pull request #331 from fjaeckel/debian-packaging-cleanup
+2013-08-21 07:26:20 #532 passed:     master Merge pull request #331 from fjaeckel/debian-packaging-cleanup
+2013-08-14 06:43:11 #522 passed:     master Merge pull request #329 from robert-zaremba/patch-1
+2013-08-14 06:42:54 #522 passed:     master Merge pull request #329 from robert-zaremba/patch-1
+2013-08-09 15:15:51 #520 passed:     master Merge pull request #328 from etsy/refactor-packet-parsing
+2013-08-09 15:16:02 #520 passed:     master Merge pull request #328 from etsy/refactor-packet-parsing
+2013-08-09 08:36:47 #513 passed:     master Merge pull request #327 from tgandrews/master
+2013-08-09 08:36:56 #512 passed:     master Merge pull request #327 from tgandrews/master
+2013-08-07 14:45:38 #509 passed:     master Merge pull request #325 from katzj/patch-1
+2013-08-07 14:46:15 #509 passed:     master Merge pull request #325 from katzj/patch-1
+2013-08-02 13:40:01 #505 passed:     master Merge pull request #311 from etsy/process_mgmt
+2013-08-02 13:40:00 #504 passed:     master Merge pull request #311 from etsy/process_mgmt
+2013-08-02 13:36:13 #503 passed:     master Merge pull request #148 from ktheory/optional_counts
+2013-08-02 13:36:05 #502 failed:     master Merge pull request #148 from ktheory/optional_counts
+2013-07-03 15:47:05 #477 passed:     master Merge pull request #307 from etsy/fix_tests
+2013-07-03 15:42:56 #476 passed:     master Remove v0.6 from node versions we test against
+2013-07-03 15:40:14 #475 failed:     master Drop v0.6 support
+2013-07-01 07:42:06 #468 failed:     master Merge pull request #304 from kiall/update-debian-pkg
+2013-07-01 07:41:24 #467 failed:     master Merge pull request #305 from nesQuick/patch-1
+2013-05-20 09:15:27 #460 passed:     master fix histogram indent in exampleConfig.js
+2013-05-20 09:10:23 #459 passed:     master Merge pull request #297 from alexwhitman/process-title
+2013-05-15 16:50:46 #457 passed:     master Merge pull request #296 from etsy/pet_syntaxchecker
+2013-05-14 14:44:54 #454 passed:     master Merge pull request #295 from mfournier/deb-packaging-fixes
+2013-04-30 09:58:39 #452 failed:     master Merge pull request #292 from etsy/mgmt_console_patch
+2013-04-16 12:59:33 #449 failed:     master Merge pull request #291 from bmhatfield/http-backend-link
+2013-04-11 16:57:25 #446 passed:     master Update docs to include del* commands
+2013-04-11 16:48:14 #445 passed:     master Merge pull request #246 from carver/delete-group
+2013-04-11 10:57:52 #444 passed:     master Merge pull request #289 from bmhatfield/fix-console
+2013-04-08 11:27:50 #439 passed:     master Merge pull request #280 from etsy/health_status
+2013-04-08 11:24:54 #438 passed:     master Don't need to test on .9 now that .10 is out.
+2013-04-04 15:15:25 #435 passed:     master Merge pull request #288 from Dieterbe/doc_last_flush_last_exception
+2013-04-04 10:10:43 #433 passed:     master Merge pull request #287 from zr40/patch-1
+2013-03-31 14:31:52 #431 errored:    master Merge pull request #285 from pshen/master
+2013-03-30 19:29:17 #429 passed:     master use strict comparison for message length
+2013-03-30 17:48:42 #428 passed:     master don't show Bad Line warning for empty strings
+2013-03-30 17:06:13 #427 passed:     master Fix link breakage from initial doc split
+2013-03-23 16:56:58 #412 passed:     master Merge pull request #200 from zwily/upper_percentiles
+2013-03-23 16:51:18 #411 errored:    master Merge pull request #277 from dynmeth/master
+2013-03-19 10:44:20 #408 passed:     master Merge pull request #276 from etsy/update_node-syslog
+2013-03-18 14:27:58 #399 passed:     master Merge pull request #274 from etsy/logo
+2013-03-15 11:56:54 #391 passed:     master Update package.json to 0.6.0
+2013-03-15 11:47:55 #390 passed:     master Update to fully qualified links
+2013-03-15 11:36:20 #389 passed:     master Merge pull request #273 from sreuter/patch-1
+2013-03-15 09:02:55 #387 failed:     master Merge pull request #272 from sreuter/master
+2013-03-14 11:49:17 #384 passed:     master Merge pull request #269 from etsy/keen99-p/deleteidlestats
+2013-03-14 10:07:13 #383 passed:     master Merge pull request #270 from joshgarnett/master
+2013-03-12 18:36:57 #379 passed:     master Merge pull request #268 from etsy/10
+2013-03-11 19:58:55 #376 failed:     master Merge pull request #267 from pmark/patch-1
+2013-03-11 17:25:37 #374 passed:     master Merge pull request #262 from etsy/doc_re-org
+2013-03-10 12:42:42 #370 passed:     master Merge pull request #266 from aw/ipv6_compat
+2013-03-08 14:50:29 #368 passed:     master Merge pull request #259 from etsy/dont_split_all_packets
+2013-03-07 12:52:39 #366 passed:     master Merge pull request #263 from etsy/remove_counter_debug
+2013-03-07 12:51:22 #365 passed:     master Merge pull request #264 from etsy/te
+2013-03-06 08:05:35 #357 passed:     master Merge pull request #261 from etsy/pet_jslint
+2013-03-01 22:20:55 #352 passed:     master Merge pull request #258 from etsy/optimizations
+2013-03-01 21:36:22 #349 passed:     master Merge pull request #257 from etsy/optimize-graphiteBackend-more
+2013-03-01 12:17:14 #344 passed:     master Merge pull request #256 from jsocol/gauge-readme
+2013-03-01 10:40:38 #342 passed:     master Merge pull request #72 from jsocol/modify-gauge
+2013-02-28 15:04:56 #340 passed:     master Merge pull request #255 from etsy/optimize-graphiteBackend
+2013-02-19 22:26:36 #332 passed:     master Merge branch 'master' of github.com:etsy/statsd
+2013-02-19 18:06:13 #331 passed:     master Merge pull request #251 from Dieterbe/master
+2013-02-19 17:46:02 #329 passed:     master Merge pull request #162 from Dieterbe/histogram
+2013-02-19 17:44:49 #328 passed:     master Merge pull request #211 from Dieterbe/statsd-timer-metric-counts
+2013-02-19 15:51:49 #325 passed:     master Merge pull request #233 from keen99/p/debugupdates
+2013-02-11 20:55:28 #323 passed:     master Merge pull request #248 from draco2003/master
+2013-02-11 16:23:12 #320 passed:     master Merge pull request #244 from yarekt/master
+2013-02-09 15:42:55 #318 passed:     master Merge pull request #242 from carver/master
+2013-02-08 14:50:41 #315 passed:     master Adding support for sampling timers.
+2013-01-23 09:08:58 #310 passed:     master Merge pull request #240 from jehiah/legacy_prefix_typo_240
+2013-01-17 07:33:27 #306 passed:     master Merge branch 'use-logger-in-graphite-backend'
+2013-01-16 04:45:12 #305 passed:     master Merge pull request #237 from mintbridge/patch-1
+2013-01-14 07:11:51 #302 passed:     master Merge branch 'p/statsprefix' of https://github.com/keen99/statsd into fix-statsd-prefix
+2013-01-14 06:42:23 #301 passed:     master fix README.md with new travis CI build status img
+2013-01-14 06:33:52 #300 passed:     master Merge pull request #212 from NachoSoto/patch-1
+2013-01-14 06:25:17 #299 passed:     master Merge pull request #228 from keen99/p/config
+2013-01-14 06:12:37 #290 passed:     master Merge pull request #227 from f3ew/master
+2013-01-02 05:01:42 #288 passed:     master Merge pull request #226 from rgs/rgs/doc
+2012-12-25 07:11:40 #286 passed:     master Merge pull request #218 from draco2003/patch-2
+2012-12-25 07:06:55 #285 passed:     master Merge pull request #223 from drewfradette/master
+2012-12-25 07:04:10 #284 passed:     master Merge pull request #222 from SaveTheRbtz/master
+2012-12-25 06:59:24 #283 passed:     master Merge pull request #224 from charlesdaniel/master
+2012-12-25 06:57:16 #282 passed:     master Merge pull request #225 from omniti-labs/multi-metric-README
+2012-12-15 15:33:35 #269 passed:     master Merge pull request #207 from draco2003/use_counter_rates
+2012-12-15 15:35:27 #268 passed:     master Merge pull request #208 from draco2003/remove_valuesPerSecond
+2012-12-15 15:23:52 #267 passed:     master Merge pull request #205 from SaveTheRbtz/master
+2012-12-11 15:15:57 #260 passed:     master Merge pull request #206 from timbunce/graphite_ts_suffix
+2012-12-08 22:54:26 #255 passed:     master Merge pull request #201 from goir/patch-1
+2012-12-08 22:34:08 #254 passed:     master Merge pull request #199 from Dieterbe/null_counter
+2012-11-29 11:37:40 #248 passed:     master Merge pull request #198 from Dieterbe/null_counter
+2012-11-28 21:49:01 #246 passed:     master Merge branch 'null_counters' of https://github.com/ReturnPath/statsd into nullcounters
+2012-11-25 14:11:15 #242 passed:     master spell legacyNamespace correctly
+2012-11-24 10:06:02 #231 passed:     master Merge pull request #195 from suvash/add-sets-example
+2012-11-12 10:59:41 #228 passed:     master Merge pull request #193 from nextmat/readme_backend_tweaks
+2012-11-12 10:58:38 #227 passed:     master Merge pull request #194 from wallrazer/master
+2012-11-11 16:54:19 #222 passed:     master add test for statsd_metrics
+2012-11-09 22:40:29 #221 passed:     master Merge pull request #184 from ciaranj/fix_config_js_watcher
+2012-11-06 09:42:59 #218 passed:     master Merge pull request #192 from draco2003/patch-2
+2012-11-03 23:20:22 #216 passed:     master Merge pull request #191 from themgt/master
+2012-11-03 18:31:46 #213 passed:     master Merge pull request #190 from sax/master
+2012-11-03 16:31:58 #211 passed:     master Merge pull request #186 from ciaranj/add_windows_service_support
+2012-11-03 15:52:32 #209 passed:     master making the repeater backend ipv4 only again
+2012-11-01 22:34:21 #207 passed:     master Merge pull request #189 from draco2003/patch-1
+2012-11-01 00:50:05 #203 passed:     master Merge pull request #185 from mabrek/debian-fixes
+2012-10-26 22:52:11 #198 passed:     master Merge pull request #177 from draco2003/simplify-thresholds
+2012-10-26 22:48:52 #197 passed:     master Merge pull request #180 from draco2003/logging_tweak
+2012-10-20 15:43:08 #193 passed:     master Merge pull request #179 from lonelly/master
+2012-10-19 22:30:05 #191 passed:     master Merge pull request #138 from timblair/clearer_sampling_info
+2012-10-19 22:25:49 #190 passed:     master Merge branch 'master' of https://github.com/diegovar/statsd
+2012-10-19 22:17:19 #189 passed:     master Merge pull request #150 from smreed/log-bad-sample-rate
+2012-10-19 22:11:22 #188 passed:     master Merge pull request #165 from juliusv/fix_stdout_key_logging
+2012-10-19 21:59:59 #187 passed:     master Merge branch 'master' of https://github.com/drscream/statsd
+2012-10-19 21:47:17 #186 passed:     master Merge branch 'php-gauges-and-sets' of https://github.com/stevenscg/statsd
+2012-10-19 21:12:26 #185 passed:     master Merge pull request #173 from Timosha/master
+2012-10-19 20:43:53 #184 passed:     master Merge pull request #176 from draco2003/move-config
+2012-10-18 01:03:15 #179 passed:     master Merge pull request #171 from draco2003/new-test
+2012-10-13 00:05:28 #170 passed:     master Merge pull request #166 from draco2003/5516c1e7748ba228aac6e5c685702a01b1987578
+2012-10-09 22:54:14 #167 passed:     master put all graphite keys under stats* into the same schema
+2012-10-04 16:47:50 #162 passed:     master Merge pull request #160 from tcg/master
+2012-09-29 00:09:37 #160 passed:     master Merge branch 'master' of github.com:etsy/statsd
+2012-09-26 09:01:20 #159 passed:     master Merge pull request #156 from mfoo/master
+2012-09-11 00:29:30 #154 passed:     master add README information about the repeater backend
+2012-09-11 00:11:20 #153 passed:     master use printf in shell example client
+2012-09-10 22:38:12 #152 passed:     master implement repeater support into statsd
+2012-09-06 17:14:06 #150 passed:     master don't print trailing newline character
+2012-09-01 14:01:28 #148 passed:     master Merge pull request #151 from alfredodeza/master
+2012-08-17 23:24:44 #143 passed:     master make bad lines logging more clear
+2012-08-16 11:58:34 #142 passed:     master Merge pull request #144 from scarytom/link-to-client-libraries
+2012-08-09 12:46:51 #140 passed:     master Merge pull request #142 from justinlilly/golang-typo
+2012-08-06 16:52:43 #133 passed:     master Merge pull request #135 from mattspitz/master
+2012-07-31 15:06:33 #127 failed:     master Merge pull request #133 from otac0n/patch-1
+2012-07-31 11:39:49 #125 passed:     master Merge pull request #132 from dqminh/master
+2012-07-27 09:31:27 #123 passed:     master test on node 0.8.0
+2012-07-27 07:44:37 #122 passed:     master Merge pull request #131 from iFixit/add-std-dev
+2012-07-27 07:42:32 #121 passed:     master Merge pull request #130 from gjesse/master
+2012-07-27 07:42:08 #120 passed:     master Merge pull request #128 from iriscouch/fix_unit_tests
+2012-07-27 07:29:07 #119 failed:     master Merge pull request #127 from iFixit/make-tests-fail
+2012-07-20 11:08:17 #111 passed:     master bump to v0.5.0
+2012-07-18 09:54:52 #109 passed:     master Merge pull request #123 from fredj/debian-pull
+2012-07-18 09:45:09 #108 passed:     master Merge pull request #121 from jroper/patch-1
+2012-07-16 08:07:30 #104 passed:     master Merge pull request #117 from fredj/debian-pull
+2012-07-11 22:32:49 #102 passed:     master Merge pull request #119 from mattspitz/master
+2012-07-10 13:30:28 #97 passed:      master add simple millisecond timing to the graphite backend
+2012-07-09 16:29:16 #94 passed:      master Merge branch 'master' of github.com:etsy/statsd
+2012-07-09 15:28:36 #87 passed:      master Merge pull request #111 from nleskiw/master
+2012-07-09 15:26:10 #86 passed:      master Merge pull request #116 from fredj/lsb-init-script
+2012-07-09 15:13:13 #85 passed:      master Merge pull request #115 from fredj/build-depends
+2012-06-29 09:37:09 #76 passed:      master bump to v0.4.0
+2012-06-28 17:40:48 #75 passed:      master add bin/statsd to package.json
+2012-06-26 08:04:11 #70 passed:      master Merge pull request #109 from shaftoe/master
+2012-06-25 22:42:57 #67 passed:      master Merge pull request #97 from sanbeg/master
+2012-06-25 22:03:07 #66 passed:      master Merge pull request #107 from leonmax/patch-3
+2012-06-25 18:11:48 #65 passed:      master Merge branch 'master' of https://github.com/omniti-labs/statsd
+2012-06-25 17:00:38 #64 passed:      master Merge branch 'master' of https://github.com/smarden1/statsd
+2012-06-18 17:23:29 #63 passed:      master update README
+2012-06-08 00:04:49 #53 passed:      master update README mentioning to preferably use ints as values
+2012-06-07 23:00:56 #52 passed:      master Merge branch 'mixu/console_backend' of https://github.com/mixu/statsd
+2012-06-06 22:59:39 #50 passed:      master Merge pull request #94 from booo/master
+2012-05-30 15:23:38 #46 passed:      master reformat keyFlush log into key value pairs
+2012-05-15 23:46:03 #45 passed:      master bump to v0.3.0
+2012-05-15 23:21:16 #44 passed:      master use fs.writeSync() instead of fs.write() so that unit tests doesn't fail randomly
+2012-05-15 20:10:05 #42 passed:      master merge master changes into backends npm branch
+2012-05-14 17:57:05 #37 passed:      master bump to v0.2.1
+2012-05-10 22:08:19 #32 passed:      master Merge pull request #86 from krobertson/master
+2012-05-04 10:55:22 #23 passed:      master bump to v0.2.0
+2012-05-03 16:30:48 #22 passed:      master Merge remote-tracking branch 'librato-statsd/feature/backend_mods'
+2012-05-02 09:56:12 #18 passed:      master fix typo in ruby example
+2012-04-28 14:36:16 #13 passed:      master Merge pull request #77 from kashif/patch-1
+2012-04-27 17:01:43 #11 passed:      master Merge pull request #76 from KyleAMathews/patch-1
+2012-04-26 23:29:37 #8 passed:       master Merge pull request #75 from heph/master
+2012-04-14 16:45:54 #4 passed:       master add gauges description to README
+2012-04-14 14:22:52 #3 passed:       master disable email notifications
+2012-04-14 14:17:43 #2 passed:       master remove 0.4 testing for now since it hangs and add IRC notifications

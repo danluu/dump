@@ -1,0 +1,27 @@
+2014-10-01 16:43:43 #289 passed:     master update version and changes for release
+2014-09-23 12:27:48 #281 passed:     master up version for pending release
+2014-09-23 12:11:32 #280 passed:     master do not decode values that are undefined
+2014-09-23 12:02:33 #279 passed:     master merged conflicts
+2014-09-23 11:49:59 #278 passed:     master test case for param regression
+2014-09-15 11:33:00 #272 passed:     master better warnings when code is stupid and calls ->params(undef)
+2014-08-10 08:08:23 #268 passed:     master prep for release - 5.90071
+2014-08-10 06:57:41 #267 passed:     master undo 310c2a3 ('change default log level to info') - fixes S::S
+2014-08-10 05:39:06 #266 failed:     master Travis: preliminary reverse dependency testing
+2014-08-09 10:49:58 #265 passed:     master Tests passing again (temp/fix - "leak_count")
+2014-08-09 10:21:18 #264 failed:     master Revert changes made to Engine.pm in 1ef7eeb (5.90070)
+2014-08-09 03:03:15 #263 passed:     master Added italian translation of default error.
+2014-08-07 16:47:39 #261 passed:     master prep for release
+2014-08-07 16:41:15 #260 passed:     master up version for release
+2014-06-04 18:48:55 #220 passed:     master version 5.90065
+2014-05-12 16:36:35 #214 passed:     master Use a fixed body in response header tests
+2014-05-05 16:04:46 #207 passed:     master Fix test failures when running under CATALYST_DEBUG. RT#95358
+2014-05-05 15:14:46 #206 passed:     master Remove redundant ->setup call in t/head_middleware.t RT#95361
+2014-05-05 15:01:55 #205 passed:     master Add Changes entry for POD fixes
+2014-05-05 13:48:08 #204 passed:     master Fix spelling, grammar and structural errors in POD
+2014-05-05 09:31:07 #202 passed:     master up version and uodate changelog for release
+2014-05-02 23:54:02 #201 passed:     master fix loading inline packages in tests
+2014-05-01 18:49:59 #200 passed:     master docs and correct middleware order
+2014-05-01 18:18:11 #199 passed:     master test case to prove that HEAD chops off the body but not until the auto content length middleware does its thing
+2014-05-01 17:25:45 #198 passed:     master updated changelog
+2014-04-14 13:57:59 #196 passed:     master fix for problem when a http style exception overloads stringification
+2014-03-10 09:28:43 #194 passed:     master prep for release

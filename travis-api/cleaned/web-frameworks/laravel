@@ -1,0 +1,44 @@
+2013-01-10 17:26:13 #551 passed:     master Merge branch 'develop' of github.com:laravel/laravel into develop
+2013-01-10 16:45:18 #546 passed:     master Merge pull request #1582 from AndreasHeiberg/patch-1
+2013-01-06 14:00:50 #534 passed:     master Merge pull request #1573 from neoascetic/patch-1
+2013-01-06 09:58:40 #532 passed:     master Merge pull request #1473 from s4wny/patch-1
+2013-01-06 09:55:45 #531 passed:     master Merge pull request #1546 from darkimmortal/master
+2013-01-05 15:28:20 #512 passed:     master Merge pull request #1234 from ROMOPAT/patch-1
+2013-01-05 15:27:24 #511 passed:     master Merge pull request #1235 from ROMOPAT/patch-2
+2013-01-05 14:36:32 #498 passed:     master Merge pull request #1415 from j20/patch-1
+2013-01-05 14:18:20 #495 passed:     master Merge pull request #1501 from JesseObrien/master
+2013-01-05 14:08:37 #486 passed:     master Merge pull request #1465 from ethaizone/patch-1
+2013-01-05 13:46:58 #476 passed:     master Merge pull request #1520 from JorgeMurta/master
+2013-01-05 13:47:40 #474 passed:     master Merge pull request #1530 from tempestim/master
+2013-01-05 13:38:37 #470 passed:     master Merge pull request #1539 from williamn/patch-1
+2013-01-05 13:31:33 #466 passed:     master Merge pull request #1545 from bryanwood/master
+2013-01-05 13:16:27 #461 passed:     master Merge pull request #1558 from deerawan/update-id-translation
+2013-01-05 13:08:16 #459 passed:     master Merge pull request #1560 from DServy/master
+2013-01-05 13:04:49 #456 passed:     master Merge pull request #1563 from JesseObrien/docs/profiler
+2012-12-03 13:29:06 #393 passed:     master Merge pull request #1492 from adamjacobbecker/patch-1
+2012-11-27 10:08:03 #384 passed:     master Merge pull request #1481 from maxdmyers/patch-1
+2012-11-14 10:51:18 #348 passed:     master Work on section handling.
+2012-11-03 23:43:58 #315 passed:     master Use the public facing URL for fetching bundles stored on GitHub.
+2012-10-31 08:55:18 #300 passed:     master remove artisan change.
+2012-10-26 20:48:50 #290 passed:     master Merge pull request #1392 from mynameiszanders/patch-1
+2012-10-25 08:23:44 #284 passed:     master Merge pull request #1357 from aebersold/master
+2012-10-20 09:32:01 #260 passed:     master Merge pull request #1348 from matz3/master
+2012-10-20 09:30:33 #259 passed:     master Merge pull request #1351 from everclear/patch-1
+2012-10-03 05:24:08 #191 passed:     master Update laravel/documentation/database/eloquent.md
+2012-10-03 05:19:44 #190 passed:     master clarified table naming conventions
+2012-09-27 16:55:28 #168 passed:     master Fix version in path file.
+2012-09-27 16:50:11 #166 passed:     master fix bug in eloquent model and update version.
+2012-09-27 16:48:29 #165 passed:     master fix bug in eloquent model.
+2012-09-27 08:12:24 #161 passed:     master Merge branch 'staging'
+2012-09-25 20:33:56 #138 passed:     master Merge pull request #1236 from kuroi/patch-1
+2012-09-25 20:35:20 #137 passed:     master Merge pull request #1247 from dcelasun/patch-1
+2012-09-25 19:25:33 #134 passed:     master Merge branch 'develop' into staging
+2012-09-23 10:33:51 #125 passed:     master You can only pass the ID of a user, not an object.
+2012-09-19 10:17:15 #120 passed:     master Update laravel/documentation/routing.md
+2012-09-14 05:30:15 #99 passed:      master Merge pull request #1222 from dcelasun/patch-1
+2012-09-10 05:19:57 #73 passed:      master Merge pull request #1196 from freezestart/master
+2012-09-01 22:18:03 #19 passed:      master Remove notification from travis file.
+2012-09-01 21:50:55 #14 passed:      master Merge branch 'staging'
+2012-09-01 20:01:31 #7 passed:       master Merge pull request #1142 from HendrikJan/master
+2012-09-01 19:56:40 #6 passed:       master Merge pull request #1132 from cmenke/master
+2012-09-01 19:54:51 #5 passed:       master Merge pull request #1123 from daris/patch-1

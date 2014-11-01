@@ -1,0 +1,14 @@
+2014-04-21 18:25:01 #35 passed:      master updated install for nustyle
+2014-04-21 18:23:47 #34 errored:     master renamed the nu code formatter to "nustyle"
+2014-04-11 14:57:57 #33 passed:      master fix a framework-loading problem on Linux, add some extra braces out of paranoia
+2014-03-24 05:32:42 #32 passed:      master added support for colons in operator-generated markup tags
+2014-03-24 05:28:17 #31 passed:      master Merge branch 'gnustep-libobjc2' of github.com:timburks/nu
+2014-03-24 05:28:16 #30 passed:      master disabled broken class modification test
+2014-03-24 06:11:42 #29 passed:      master Remove compiling with objc gc
+2014-02-15 17:26:35 #27 passed:      master Merge pull request #73 from tjklemz/master
+2014-02-15 16:47:09 #25 passed:      master Merge pull request #72 from tjklemz/master
+2013-07-07 12:51:35 #20 passed:      master Merge pull request #63 from ZDroid/patch-1
+2013-07-05 23:54:27 #19 passed:      master The parser now merges consecutive labels.
+2013-06-25 01:11:46 #15 passed:      master added sortUsingBlock: to NSMutableArray
+2013-05-31 00:42:33 #11 passed:      master restored "def" as a synonym for "function".
+2013-04-23 17:42:18 #1 passed:       master .travis.yml to support continuous integration on Travis CI

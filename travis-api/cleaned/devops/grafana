@@ -1,0 +1,461 @@
+2014-10-03 00:32:12 #827 passed:     master Css fix for metrics tab, help boxes did extend page height so could not scroll if they extended below screen, #891
+2014-10-02 14:49:11 #826 passed:     master Fixed issue casued by recent angular upgrade and stateful filter, casued template vars in graph titles no update properly, angular was not updated in 1.8.1 so this does affect any released version, Closes #892
+2014-10-02 05:18:48 #825 passed:     master Merge branch 'v1.8.x'
+2014-10-02 05:16:45 #823 failed:     master Merge fix from 'v1.8.x' branch
+2014-10-02 04:54:51 #821 passed:     master Fix to new checkboxes in features toggles tab
+2014-10-02 03:55:53 #820 passed:     master Small tweak to shared tooltip edit option in Display styles tab
+2014-10-02 03:25:50 #819 passed:     master Added grafana logo to repo instead of fetching it from grafana.org, Fixes #881
+2014-10-02 03:14:14 #818 passed:     master Updated gitter badge
+2014-10-02 03:10:22 #817 passed:     master Updated gitter badge
+2014-10-02 03:06:08 #816 passed:     master Merge pull request #889 from gitter-badger/gitter-badge
+2014-10-01 06:58:03 #814 passed:     master Dashboard: show error when importing dashboard json file with broken/incorrect json syntax, Closes #878
+2014-10-01 06:50:51 #813 passed:     master update to test helper
+2014-10-01 06:45:36 #812 passed:     master Updated AngularJS from 1.3-beta-17 to 1.3-RC3
+2014-10-01 02:44:12 #811 passed:     master More fixes related to shared crosshair #880
+2014-10-01 00:59:11 #810 passed:     master Fix for SharePanelCtrl-specs and travis-ci timezone issue
+2014-09-30 10:59:19 #805 failed:     master updated package.json
+2014-09-30 09:42:15 #803 failed:     master Small update to share panel
+2014-09-30 07:43:41 #802 failed:     master SharePanelModal: working on share feature, #864
+2014-09-30 03:50:44 #801 passed:     master Updated changelog with the new panel menu, Closes #770
+2014-09-30 03:48:31 #800 passed:     master Panel-menu: small tweeks to css for cursor types
+2014-09-29 10:04:11 #796 passed:     master Merge branch 'master' of github.com:grafana/grafana
+2014-09-29 05:44:23 #793 passed:     master Merge pull request #867 from tobym/patch-1
+2014-09-29 05:39:34 #792 passed:     master Merged yaxis_precision branch, #877, updated changelog
+2014-09-24 07:01:36 #784 passed:     master Small fix to fullscreen mode where scrolling would scroll the background dashboard & page header
+2014-09-24 05:22:04 #781 passed:     master Dashboard: When deleting dashboard show dashboard title in confirmation popup, Closes #860
+2014-09-24 05:15:36 #780 passed:     master White theme: Fixes for hidden series legend text and disabled annotations color, Closes #852
+2014-09-24 04:36:49 #779 passed:     master InfluxDB: Fix for bug when saving dashboard where title is the same as slugified url id, Fixes #859
+2014-09-24 04:20:12 #778 passed:     master small fix for graphite-web import
+2014-09-24 03:53:08 #777 passed:     master Import: Fixes to import from json file and import from graphite. Issues was lingering state from previous dashboard. Closes #840, Closes #853
+2014-09-24 02:05:33 #776 passed:     master Annotations: Fix for annotations not reloaded when switching between 2 dashboards with annotations, Fixes #851
+2014-09-23 01:33:09 #773 passed:     master Row: fix for row editor and scroll pos, Fixes #846
+2014-09-23 01:19:54 #772 passed:     master Graph: Fix for series draw order not being the same after hiding/unhiding series, Fixes #847
+2014-09-22 06:08:22 #770 passed:     master updated latest.json
+2014-09-22 06:00:39 #769 passed:     master Updated changelog and package.json to new version 1.8.0
+2014-09-22 05:58:57 #768 passed:     master Dashboard: fixed init of editable setting, #837
+2014-09-21 01:23:14 #766 passed:     master Merge branch 'master' of github.com:grafana/grafana
+2014-09-20 09:56:00 #765 passed:     master changed placement of color selector popup
+2014-09-20 01:34:26 #764 passed:     master Fixed spelling in config.sample.js
+2014-09-20 01:32:04 #763 passed:     master Annotations: Elasticsearch annotation and field mapping fixes, small changes for PR #830
+2014-09-19 05:17:45 #761 passed:     master Graph: fix for downscaling y-axis format, never downscale when value is zero, Fixes #826
+2014-09-19 03:38:56 #760 passed:     master Elasticsearch: fix for issue when saving dashboard with title equal to slugified url, would cause the backward compatible fix to delete it, Closes #828
+2014-09-18 08:55:54 #759 passed:     master Merge pull request #823 from beevee/elasticsearch_basic_auth
+2014-09-18 08:09:10 #758 passed:     master Small improvements to dashboard alerts, less intrusive, do not push down page anymore, Closes #822
+2014-09-18 02:37:40 #756 passed:     master Merge pull request #808 from lento/multiple-stacks
+2014-09-18 02:36:07 #755 passed:     master Merge pull request #820 from jozog/master
+2014-09-18 02:35:47 #754 errored:    master Merge pull request #821 from linkslice/master
+2014-09-17 08:41:19 #751 passed:     master Graph: added percent y-axis format, Closes #818
+2014-09-17 06:01:32 #750 passed:     master Search: remove dashboard from search result after dashboard deletion, Closes #753
+2014-09-17 02:30:41 #749 passed:     master Chrome: Fix for display issue in chrome beta & chrome canary when entering edit mode, Closes #795
+2014-09-16 06:39:03 #748 passed:     master Merge pull request #810 from marcusoftnet/“AddingFavIcon”
+2014-09-16 06:33:19 #747 passed:     master Small fix to schemaUpgrade, Closes #807
+2014-09-16 06:21:24 #746 passed:     master Merge branch 'favicon'
+2014-09-16 04:13:17 #743 passed:     master Merge pull request #809 from alxrem/master
+2014-09-15 12:17:48 #740 passed:     master Merge pull request #806 from starshayayord/master
+2014-09-13 09:38:32 #737 passed:     master fixed changelog
+2014-09-13 09:24:48 #736 passed:     master Annotations: fixed InfluxDB annotation query, added unit test for annotation query, Fixes #802
+2014-09-11 10:29:45 #733 passed:     master Fix for graphite query letter assignment
+2014-09-11 10:23:34 #732 passed:     master Fixed small bug in graphite target controller when having variable for single parameter function
+2014-09-11 09:02:02 #731 passed:     master Small fix to elasticsearch save error handling
+2014-09-11 07:26:20 #730 passed:     master Do not render graph when width is zero, avoids plot errors
+2014-09-11 07:08:21 #729 passed:     master Small change to datasourceSrv, if datasource is not found, return default datasource
+2014-09-11 06:56:02 #728 passed:     master Fixed issue with using template variables in panel titles, and text panel, when selecting All option in variable
+2014-09-11 04:36:05 #727 passed:     master small update to text panel editor
+2014-09-11 02:28:32 #725 passed:     master Added informatio & help blocks to graphite metric editor
+2014-09-11 01:04:02 #724 passed:     master Graphite: added divideSeries function, #177
+2014-09-10 06:36:28 #723 passed:     master removed console.log from templateValuesSrv
+2014-09-10 04:55:12 #722 passed:     master Fixed default welcome to grafana dashboard, rows were not marked as editable
+2014-09-10 03:46:36 #721 passed:     master Dashboard: time range can now be read from URL parameters, will override dashboard saved time range, Closes #787, Closes #761
+2014-09-10 02:11:17 #720 passed:     master InfluxDB: support for basic authorization (PR #782)
+2014-09-10 02:07:51 #719 passed:     master Added PR #785 to changelog
+2014-09-09 06:43:33 #715 passed:     master Dashboard: elasticsearch dashboard storage now slugifies urls, #781
+2014-09-09 04:41:30 #714 passed:     master Made unsaved changes service ignore template variable options and selection changes
+2014-09-09 04:36:14 #713 passed:     master Fixed issue with editing text panel, removed a function from dashboard controller that I though was not used, turned out it was
+2014-09-09 04:30:54 #712 passed:     master Fix when changing templated vars, should update child template vars All value
+2014-09-09 03:30:41 #711 passed:     master Fixes for opentsdb, (broken during 1.8 development)
+2014-09-09 02:16:36 #710 passed:     master Fixed text color in json text area for white theme, #735
+2014-09-09 02:01:48 #709 passed:     master Fix for elasticsearch annotations when timestamp is a field and not in source, Fixes #777
+2014-09-09 01:24:36 #708 passed:     master Fixes to requirejs build task to include all modules, Fixes #779
+2014-09-08 11:07:05 #707 passed:     master Fixed ids for panels in default.json welcome to grafana dashboard
+2014-09-08 04:04:49 #706 passed:     master Worked on variable initilization and sync to from url, #772
+2014-09-07 04:56:38 #705 passed:     master small cleanup of unused code
+2014-09-06 03:13:18 #702 passed:     master Changed template variable typeahead/autocomplete list limit from 10 to 1000, Fixes #767, Fixes #768
+2014-09-06 03:06:50 #701 passed:     master Fix for selecting template variable value from typeahead using enter key, Closes #765
+2014-09-05 10:48:49 #700 passed:     master Small fix to graphite target controller to still revert to text box for expressions with multiple series that do not use a series reference
+2014-09-05 08:47:50 #699 passed:     master Templating: Full support for InfluxDB, filter by part of series names, extract series substrings, nested queries, multipe where clauses! Closes #613
+2014-09-05 08:18:08 #698 passed:     master Templating: Can now use template variables in panel titles, Closes #312
+2014-09-05 07:04:13 #697 passed:     master Templating: Ability to use template variables for function parameters via custom variable type, can be used as parameter for movingAverage or scaleToSeconds for example, Closes #262
+2014-09-05 06:32:13 #696 passed:     master Templating: Interval variable type for time intervals summarize/group by parameter, included auto option, and auto step counts option.
+2014-09-05 02:12:34 #695 passed:     master Work on getting template variables to work well with functions that take integers, #262
+2014-09-05 00:03:31 #694 passed:     master Fixed so white theme looks good with new search and editor panes, Closes #735, and other small fixes and polish
+2014-09-04 08:27:49 #692 passed:     master Fixed scroll issue with firefox, Fixes #754
+2014-09-04 08:09:51 #691 passed:     master fixed spelling in changelog concerning InfluxDB breaking changes
+2014-09-04 07:58:24 #690 passed:     master updated change log with info about InfluxDB breaking changes, and fixes for stacked series and missing values, Fixes #534, Closes #743, Fixes #673,Fixes #674, Closes #756
+2014-09-04 07:17:53 #689 passed:     master fixes to target segment markup
+2014-09-04 07:09:22 #688 passed:     master Work on fixing stacking issues with InfluxdB, added fill(0) and fill(null) option to InfluxDB query editor, also a panel wide group by time option that supports setting a low limit, Fixes issues #673, #674, #534, #743
+2014-09-04 02:58:51 #687 passed:     master Fixed dashboard import view, did not hide search results
+2014-09-04 02:45:28 #686 passed:     master Fixed issue where a metric request error would set panel error flag, which would cause unsaved changes service to detect change, and prompt the unsaved changes warning. The panel error state is now moved to the panelMeta object that is not part of the dashboard / panel model, Closes #745
+2014-09-04 01:57:26 #681 passed:     master Fixes delete link in search result, broken after recent changes to search results, Closes #749
+2014-09-03 09:51:06 #680 passed:     master Small fix to graphiteDatasource and sending cacheTimeout undefined, reintroduced this bug yesterday, added unit test so it should not appear again
+2014-09-03 04:16:38 #679 passed:     master Dashboard: View dashboard json, edit/update any panel using json editor, makes it possible to quickly copy a graph from one dashboard to another.
+2014-09-03 02:53:10 #678 passed:     master Removed collapse row button, added to row menu, made small change to text pannel to allow smaller height, Closes #727
+2014-09-03 02:21:15 #676 passed:     master Small fix to influxdb query builder, should update raw query after building query
+2014-09-03 02:13:30 #675 passed:     master Fixed small issue where dashboard search did not work after loading dashboard and it does not exist, now shows a valid dashboard
+2014-09-03 01:53:59 #674 passed:     master Fixes and polish for the graphite query editor, #117
+2014-09-03 00:42:36 #673 failed:     master Added better match when using graphite function autocomplete, hit tab key and the first match will be used, you no longer need to use the down arrow to select the typeahead match you want, just hit tab key
+2014-09-02 14:01:06 #672 passed:     master Graphite: Graphite query builder can now handle functions that multiple series as arguments! #117
+2014-09-02 05:56:34 #671 passed:     master Graphite: Metric node/segment selection is now a textbox with autocomplete dropdown, allow for custom glob expression for single node segment without enter text editor mode, Closes #281
+2014-09-02 00:59:11 #670 passed:     master Graphite: Fix for nonNegativeDerivative function, now possible to not include optional first parameter maxValue, Closes #702
+2014-09-02 00:22:10 #669 passed:     master Fixed failing influxdb query builder unit test
+2014-09-02 00:06:24 #668 failed:     master More progress on influxdb query editor, templating, refactoring, unit tests, #740, #507, #586
+2014-09-01 06:41:06 #666 passed:     master small UI changes to InfluxDB query editor, made each query two lines to give more space to series name
+2014-09-01 04:13:59 #665 passed:     master Progress on influxdb and templated queries/variables, #613
+2014-08-29 05:55:18 #662 passed:     master Graph: Fix for tooltip current value decimal precision when 'none' axis format was selected, Closes #733
+2014-08-29 05:35:08 #661 passed:     master new template system is starting to work 100%, not all features are in, like regex selection, influxdb support, and other stuff
+2014-08-26 07:44:22 #650 passed:     master Dashboard: Fix for zoom out causing right hand to range to be set in the future. Closes #724
+2014-08-26 04:20:09 #648 passed:     master Merge branch 'master' of github.com:grafana/grafana
+2014-08-24 07:47:42 #639 passed:     master Merge branch 'famousgarkin-master'
+2014-08-23 13:24:19 #638 passed:     master Fix for plot dimension error when resizing window
+2014-08-23 03:45:53 #637 passed:     master Dashboard: fix for adding rows from dashboard settings modal, Closes #699
+2014-08-22 02:41:35 #636 passed:     master Merged dashboard tag colors feature branch, updated changelog #634
+2014-08-22 02:35:11 #635 passed:     master Css fix for panel-error position
+2014-08-21 15:03:52 #632 passed:     master Merge branch 'master' of github.com:grafana/grafana
+2014-08-21 03:37:38 #631 passed:     master Fix for reloadOnSearch missing on all dashboard routes, caused dashboard to be reloaded when entering/exiting edit mode (settings were lost), related to recent fullscreen/edit state present in url, #672, #425
+2014-08-21 02:31:09 #630 passed:     master Reverted change, default edit tab should be metrics tab
+2014-08-21 02:29:54 #629 passed:     master Fix for search result list and double link to dashboard that caused navigation start recursion when unsaved changed dialog was displayed
+2014-08-21 02:02:56 #628 passed:     master Small fix for dashboard settings dialog controls tab was empty
+2014-08-21 01:43:46 #627 passed:     master Small js warning fix for firefox
+2014-08-20 15:37:47 #626 passed:     master Small fixes for firefox
+2014-08-20 12:58:38 #625 passed:     master Added missing max-height to search results container
+2014-08-20 08:04:08 #624 passed:     master added unit tests for grid thresholds
+2014-08-20 05:12:25 #623 passed:     master Updated changelog with new display styles per series option feature, Closes #425, Closes #700
+2014-08-19 04:14:04 #618 passed:     master Fix for utc in timepicker, Closes #713
+2014-08-18 09:41:32 #613 passed:     master UI improvements to search result list (larger click are for dashboard title link, plus UI look polish), Closes #709
+2014-08-18 06:44:12 #612 passed:     master Fix for timepicker dates and tooltip when UTC timzone is selected,
+2014-08-18 05:20:03 #611 passed:     master Fix for graphite queries with glob syntax ([1-9] and ?) that made
+2014-08-18 02:04:27 #610 passed:     master Small fix to 'none' axis formats and zero value when axis tickDecimals is high, Closes #707
+2014-08-17 04:54:38 #609 passed:     master small css fix for alignment of legend values when shown in table style
+2014-08-16 06:14:28 #604 passed:     master refactored use of localStorage
+2014-08-15 14:34:12 #602 passed:     master fixed small issue with the recent change to the 'none' axis format,
+2014-08-15 12:18:27 #600 passed:     master some initial work on making it easy to add a custom datasource without modifing the original source, #701, #553
+2014-08-15 10:24:55 #599 passed:     master Another angular binding/watcher optimization
+2014-08-15 06:36:03 #598 passed:     master Drag drop binding expression watcher was expensive, removed watcher after first eval, seems to still work
+2014-08-15 04:17:26 #597 passed:     master moved an expensive binding expression into a directive and a groupWatch
+2014-08-14 15:34:54 #596 passed:     master Merge branch 'master' of github.com:grafana/grafana
+2014-08-14 05:42:11 #595 passed:     master Merge pull request #698 from Topface/http-update
+2014-08-14 05:07:16 #593 passed:     master Graph: Fix for axis format none broken for numbers in exponential notation, Closes #696
+2014-08-13 12:54:28 #591 passed:     master Tech: upgraded jquery from 1.8.0 to 2.1.1, Closes #694
+2014-08-13 12:16:24 #590 passed:     master Dashboard: tooltip fixes for flickering tooltips that sometimes do now want to show on hover, and for tooltips that get stuck after exiting modal, Closes #691
+2014-08-13 10:29:06 #589 passed:     master Updated changelog with #672
+2014-08-12 13:05:18 #586 passed:     master small css tweak to legend and padding between edit tabs
+2014-08-12 02:26:05 #584 passed:     master updated readme.md again
+2014-08-12 02:24:41 #583 passed:     master updated readme.md with a run from master section
+2014-08-11 11:59:44 #581 passed:     master removed generated css that came back after merge
+2014-08-11 09:06:56 #580 passed:     master updated readme with correct coveralls badge
+2014-08-11 09:00:14 #579 passed:     master Added some unit tests for RowCtrl
+2014-08-11 08:34:10 #578 passed:     master removed sublime project
+2014-08-11 08:26:37 #577 passed:     master Dashboard: Row option to display row title even when the row is visible, Closes #578
+2014-08-11 06:49:22 #576 passed:     master changed placement of panel error tooltip to the right of icon, works better in when in edit mode
+2014-08-11 06:45:22 #575 passed:     master Merge branch 'master' of github.com:grafana/grafana
+2014-08-11 04:18:57 #567 passed:     master Merge pull request #682 from PeterDaveHello/patch-1
+2014-08-11 04:19:07 #566 errored:    master Merge pull request #683 from PeterDaveHello/patch-2
+2014-08-10 14:26:03 #560 passed:     master More work on integrated console, with request details
+2014-08-10 07:36:56 #559 passed:     master began work on inspection console to visualize metric requests, and other useful troubleshooting info and inspection
+2014-08-10 02:55:16 #557 passed:     master Moved css files, removed generated css files from source control, consolidated (concat) css more, now only two css files, dark and light
+2014-08-08 08:25:59 #546 passed:     master updated changelog for PR #666, Closes #660
+2014-08-08 00:19:37 #541 passed:     master Annotation: filter field is not interpreting in elasticsearch query, Fixes #661
+2014-08-07 08:08:02 #538 passed:     master added coveralls badge
+2014-08-07 07:19:42 #535 passed:     master General: Fix for refresh icon in IE browsers, Fixes #657
+2014-08-07 02:01:42 #531 passed:     master Chart: Possible fix for stuck tooltip (annotation or time series point hover tooltip would not disappear), Fixes #450
+2014-08-07 00:59:04 #530 passed:     master Timepicker: Fix for setting custom To date with low refresh interval, Fixes #652
+2014-08-07 00:21:51 #529 passed:     master Fix for auto refresh not being started after loading dashboard, Fixes #655
+2014-08-05 06:34:41 #523 passed:     master Small fixes for 1.7 release
+2014-08-05 03:16:25 #519 passed:     master Dashboard schema simplifications, moved schema updates to dashboard model creation, removes irritating 'unsaved changes' dialogs that show for dashboard schema changes, Closes #532
+2014-08-04 09:17:48 #517 passed:     master Fixed issue in dashboard settings modal and timepicker options
+2014-08-04 05:28:24 #515 passed:     master Fixed issue span set to zero. Removed zero option from row editor. Closes #645
+2014-08-04 00:19:07 #514 passed:     master Small annotation fix when leaving edit mode and having series hidden
+2014-08-03 05:21:12 #513 passed:     master Fix for InfluxDB temp dashboards, seperate series name prefix so they do not show up in dashboard search, #633
+2014-08-03 05:13:29 #512 passed:     master updated changelog with #641 change
+2014-08-01 04:35:38 #508 passed:     master Update changelog and config sample
+2014-08-01 02:29:37 #507 passed:     master Graphite: Fix for graphite expressions parser failure when metric expressions starts with curly brace segment, Fixes #528
+2014-08-01 01:55:27 #506 passed:     master Filtering: Fix for nested filters, changing a child filter could result in infinite recursion in some cases, Fixes #628
+2014-07-31 07:22:10 #502 passed:     master cleanup of 'loader' settings, removed loader.save_elasticsearch, loader.load_elasticsearch. Save/Load is default enabled and will use any datasource marked with grafanaDB: true property
+2014-07-31 05:41:05 #500 passed:     master Added support for deleting dashboards to influxdb datasource, #633
+2014-07-31 05:30:29 #499 passed:     master Merge PR #618
+2014-07-31 04:23:47 #498 passed:     master Updated changelog with PR #626
+2014-07-31 04:12:57 #497 passed:     master Updated changelog and config.sample.js with info about #633
+2014-07-31 02:18:36 #495 failed:     master Search: max_results config.js option & scroll in search results (To show more or all dashboards), Closes #631
+2014-07-30 06:10:14 #493 passed:     master Added filtering support for graphite events/metrics, Closes #402
+2014-07-30 04:38:10 #492 passed:     master Merge branch 'elastic_annotations'
+2014-07-29 11:08:53 #491 failed:     master Ctrl+H (hide controls) issue introduced in recent commit, Closes #625
+2014-07-29 02:45:45 #488 passed:     master New global option in config.js to specify admin password (useful to hinder some users from accidentally making changes), Closes #606
+2014-07-29 01:14:43 #487 passed:     master Fixed ngmin build issue introduced in route refactoring, Fixes #622
+2014-07-28 11:18:21 #486 passed:     master Changed all kibana words to grafana
+2014-07-28 11:01:22 #485 passed:     master Added global datasource config option cacheTimeout for graphite datasource, #266
+2014-07-28 10:06:41 #484 passed:     master Fix for cacheTimeout undefined value, #266
+2014-07-28 08:01:53 #483 passed:     master Graphite: new option available in metrics view to set cacheTimeout, will override default memcache timeout, Closes #266
+2014-07-28 05:49:03 #482 passed:     master Merge branch 'develop'
+2014-07-28 04:09:19 #481 passed:     master Fix for build issues on windows, Fixes #574
+2014-07-25 05:37:05 #477 passed:     master updated changelog with PR #604
+2014-07-25 05:30:48 #476 passed:     master Merge pull request #604 from floored1585/add_bps
+2014-07-25 05:15:57 #475 passed:     master InfluxDB: support for InfluxDB v0.8 'list series' response schema, Fixes #610
+2014-07-23 06:37:02 #473 passed:     master Merge pull request #615 from lathan/english_syntax
+2014-07-23 06:36:15 #472 passed:     master Merge pull request #616 from guequierre/master
+2014-07-19 11:41:58 #463 passed:     master better formating of changelog
+2014-07-16 06:19:50 #454 passed:     master changed css concat order
+2014-07-16 00:48:01 #453 passed:     master Merge pull request #593 from Kixeye/master-fixfilterqueries
+2014-07-15 10:03:53 #450 passed:     master fixed small css bug with the 'no datapoints' warning introduced by legends makeover
+2014-07-15 09:52:56 #449 passed:     master InfluxDB: Support for alias & alias patterns when using raw query mode, #584
+2014-07-15 04:36:42 #448 passed:     master updated readme.md
+2014-07-14 10:28:53 #444 passed:     master updated changelog with PR #581
+2014-07-13 05:50:36 #439 passed:     master removed commented out html in graph module
+2014-07-04 04:50:53 #424 passed:     master Fix for Max legend value when max value is zero (Issue #460)
+2014-07-03 09:30:21 #423 passed:     master extra fix for percent sign in aliases and plothover, #506
+2014-07-03 05:39:13 #422 passed:     master New legend display option 'Right side', will show legend to the right of the graph (Closes #556)
+2014-07-03 02:31:19 #421 passed:     master fixed failing unit test
+2014-07-03 02:27:59 #420 failed:     master small changes to influxdb aliasing, and help text, #525
+2014-07-02 08:51:57 #419 passed:     master Some changes to influxdb alias pattern expansions, removed  as it was to confusion, added help text to influxdb metric editor view, need to polish a litle more, #525
+2014-07-02 08:22:05 #418 passed:     master Enhanced InfluxDB series aliasing (legend names) with pattern replacements (Issue #525)
+2014-07-02 06:01:34 #417 passed:     master added y2 text after right y axis series, when legend is in table display mode #136
+2014-07-02 05:14:58 #416 passed:     master New legend display option 'Align as table' (Issue #136)
+2014-07-01 13:06:15 #413 passed:     master added missing file from last commit
+2014-07-01 08:57:07 #412 passed:     master Refactoring influxdb datasource, split out response handling
+2014-06-30 13:47:01 #410 passed:     master Merge pull request #550 from Fuitad/master
+2014-06-30 02:11:26 #407 passed:     master Refactoring PR #511, Allow filter notation [[..]] in text panels
+2014-06-30 00:57:31 #406 passed:     master updated change log with PR #545
+2014-06-30 00:32:48 #405 passed:     master Merge pull request #545 from Akeru/fix-format
+2014-06-30 00:30:24 #404 passed:     master Merge pull request #544 from Akeru/diffseries
+2014-06-27 07:04:29 #401 passed:     master Merge pull request #543 from Akeru/html-fix
+2014-06-26 00:00:00 #395 passed:     master Merge pull request #539 from looztra/opentsdb-fix-tag-display
+2014-06-25 09:10:23 #393 passed:     master Use unix epoch for Graphite from/to for absolute time ranges, #536
+2014-06-24 08:08:38 #391 passed:     master updated version to 1.6.1
+2014-06-24 06:58:33 #390 passed:     master updated default dashboard info text
+2014-06-22 11:52:19 #389 passed:     master Auto-refresh caused 2 refreshes (and hence mulitple queries) each time (at least in firefox) (Fixes #342)
+2014-06-22 11:03:35 #388 passed:     master Default property that marks which datasource is default in config.js is now optional (Fixes #526)
+2014-06-22 05:02:24 #387 passed:     master ixed influxdb issue with raw query that caused wrong value column detection (Fixes #504)
+2014-06-22 04:54:43 #386 passed:     master restored influxdb series naming default to series.value_func
+2014-06-22 04:28:13 #385 passed:     master Series names and column name typeahead cache fix (Fixes #522)
+2014-06-21 15:07:35 #384 passed:     master Merge pull request #524 from acedrew/master
+2014-06-21 10:29:03 #382 passed:     master Bug in when using % sign in legends (aliases), fixed by removing url decoding of metric names (Fixes #506)
+2014-06-21 10:19:49 #381 passed:     master Ability to set y min/max for right y-axis (RR #519, Closes #360)
+2014-06-17 11:21:20 #372 passed:     master fix jshint and updated changelog with PR #500
+2014-06-16 05:41:33 #368 passed:     master updated karma dependencies in package.json
+2014-06-16 05:24:57 #367 errored:    master changed version to 1.6.0
+2014-06-16 01:15:33 #366 errored:    master Graphite query lexer change, can now handle regex parameters for aliasSub function (Fixes #126)
+2014-06-14 07:41:43 #365 passed:     master Refactoring and rewrite parts of influxdb group by feature from PR #441
+2014-06-14 04:54:05 #364 passed:     master removed commented out sections of the opentsdb datasource
+2014-06-14 04:41:47 #363 passed:     master Merge branch 'master' of github.com:grafana/grafana
+2014-06-11 01:08:07 #362 passed:     master fixed default dashboard json editable flag, accidentally set to to false
+2014-06-09 10:01:46 #361 passed:     master fix for build step that replaces @grafanaVersion@ with correct version string
+2014-06-09 06:34:23 #360 passed:     master small fix to config.sample.js
+2014-06-08 08:30:26 #357 passed:     master removed unused code
+2014-06-07 02:50:56 #353 passed:     master small fix for click on row menu submenus
+2014-06-07 00:10:42 #352 passed:     master Merge pull request #476 from lyrixx/axis-s-week
+2014-06-07 00:06:42 #351 passed:     master Adding JSCS (javascript style checker)
+2014-06-06 16:34:58 #349 passed:     master Cleanup of config.sample.js, removed graphiteUrl setting, it will still work for next release
+2014-06-06 11:33:34 #346 passed:     master Row editing and adding new panel is now a lot quicker and easier with the new row menu (Issue #475)
+2014-06-06 09:06:36 #345 passed:     master renamed graphite panel to graph
+2014-06-06 08:52:40 #344 passed:     master cleanup, removal of unused code
+2014-06-06 04:24:38 #343 passed:     master Fix for exclusive series toggling (hold down CTRL, SHIFT or META key) and left click a series for exclusive toggling
+2014-06-06 03:57:51 #341 passed:     master Improvement to InfluxDB query editor and function/value column selection, more space efficient, Closes #473
+2014-06-06 01:59:17 #340 passed:     master Merge branch 'master' of github.com:grafana/grafana
+2014-06-05 13:52:28 #339 passed:     master small changes to PR #327, Partial support for url encoded metric names when using graphite datasource
+2014-06-03 12:16:39 #336 passed:     master Fix for graphite function selection menu that some times draws outside screen. It now displays upward (Fixes #293)
+2014-06-02 23:29:28 #335 passed:     master Fix to series toggling bug that caused annotations to be hidden when toggling (hiding) series. Fixes #328
+2014-06-02 23:11:02 #334 passed:     master updated changelog - merge
+2014-06-02 23:06:11 #333 passed:     master Merge pull request #461 from tmonk42/isNonNull
+2014-06-02 13:31:01 #331 passed:     master improved asset (css/js) build pipeline, added revision to css and js. Will remove issues related to the browser cache when upgrading grafana and improve load performance (Fixes #418)
+2014-06-02 12:33:43 #330 passed:     master Legend Current value did not display when value was zero, Fixes #460
+2014-06-02 12:21:49 #329 passed:     master Added parameter to keepLastValue graphite function definition (default 100), Closes #459
+2014-06-01 09:58:53 #328 passed:     master worked on css and js asset reving, and angular partial precaching, still need to fix panel module.html, issue #418
+2014-05-31 08:32:52 #325 passed:     master working on angular partials pre caching, reving
+2014-05-31 03:33:33 #324 passed:     master Merge pull request #455 from casa87/patch-1
+2014-05-30 15:47:44 #320 passed:     master added css concat task
+2014-05-29 15:21:57 #317 passed:     master fixed issue with influxdb datasource introduced in recent filterSrv refactoring
+2014-05-29 14:11:26 #316 passed:     master Added config setting for default playlist timespan
+2014-05-27 13:17:23 #315 passed:     master fixed failing unit test
+2014-05-27 12:25:37 #314 failed:     master Fixes for filter option loading and nested filters. Fixes #447, Fixes #412
+2014-05-27 11:34:19 #313 passed:     master fixed issue with filtersrv refactoring and removing filter parameter
+2014-05-27 11:23:59 #312 passed:     master cleanup of unused code, small style changes
+2014-05-25 10:05:54 #308 passed:     master updated changelog with PR #390, special characters in series names (influxdb)
+2014-05-20 05:05:10 #303 passed:     master updated changelog with PR #427
+2014-05-20 05:01:49 #302 passed:     master Merge pull request #427 from jippi/add-second-axis
+2014-05-13 13:23:20 #292 passed:     master updated changelog
+2014-05-13 12:12:41 #290 passed:     master Updated version to 1.5.4
+2014-05-09 18:57:42 #282 passed:     master Merge branch 'gridmin' of github.com:kamaradclimber/grafana into kamaradclimber-gridmin
+2014-05-09 18:47:25 #281 passed:     master Merge branch 'influxdb' of github.com:pmenglund/grafana into pmenglund-influxdb
+2014-05-09 18:41:15 #279 passed:     master Merge branch 'master' of github.com:torkelo/grafana
+2014-05-06 11:57:03 #275 passed:     master Merge pull request #382 from ktoso/nanos-formatting
+2014-05-01 08:01:32 #268 passed:     master updated readme.md with new grafana organization urls
+2014-05-01 04:19:24 #267 passed:     master Improvement to series toggling, CTRL+MouseClick on series name will now hide all others (Closes #350)
+2014-04-30 03:38:28 #264 passed:     master updated changelog with PR #369
+2014-04-30 03:34:48 #263 passed:     master Merge pull request #369 from jbripley/influxdb-columnname-escape
+2014-04-28 13:12:54 #261 passed:     master removed unused function 'endsWithWildcard', fixes jshint error
+2014-04-28 13:02:16 #260 failed:     master Fixes to filters and the 'All' option. It now never uses '*' as value, but all options in a {node1, node2, node3} expression (Closes #228, Closes #359)
+2014-04-28 05:10:20 #259 passed:     master Merge pull request #356 from Tetha/master
+2014-04-27 05:30:20 #257 passed:     master Merge branch 'unsaved_changes_warning' (Closes #324)
+2014-04-24 11:08:32 #252 passed:     master New config setting for graphite datasource to control if json render request is POST or GET (Closes #345)
+2014-04-23 02:06:17 #249 passed:     master Closes #333, New version availability check will now checks http://grafanarel.s3.amazonaws.com/latest.json if there is a new version. And the link now points to http://grafana.org/download
+2014-04-22 06:09:13 #248 passed:     master Review and small refactoring of PR #331
+2014-04-22 05:03:16 #247 passed:     master Increased resolution for graphite datapoints (maxDataPoints), now equal to panel pixel width. (Closes #5)
+2014-04-20 07:18:22 #245 passed:     master influxdb editor: rawquery text input, changed from fixed pixel width to span10 class
+2014-04-18 09:08:06 #242 passed:     master Added rounding for graphites from and to time range filters
+2014-04-17 15:37:56 #240 passed:     master updated changelog
+2014-04-17 15:28:50 #239 passed:     master version bump to 1.5.3
+2014-04-17 07:34:07 #238 passed:     master updated readme
+2014-04-17 02:54:49 #237 passed:     master Merge pull request #323 from magicrobotmonkey/slideshow_leak
+2014-04-16 07:58:22 #234 passed:     master Support for async scripted dashboards, and accesss to jquery, window & document, Closes #274)
+2014-04-15 13:05:02 #233 passed:     master Revert "Merge pull request #310 from roidelapluie/master"
+2014-04-15 13:01:19 #232 passed:     master Merge pull request #310 from roidelapluie/master
+2014-04-14 01:18:28 #229 passed:     master added smartSummarize graphite function definition
+2014-04-13 08:01:57 #228 passed:     master clarified timezoneOffset setting
+2014-04-11 09:42:39 #227 passed:     master Merge pull request #307 from awilliams/patch-1
+2014-04-11 04:28:21 #225 passed:     master Merge pull request #306 from cruatta/master
+2014-04-10 05:45:26 #223 passed:     master fixed failing unit test, added 2 more for setTime & auto refresh behavior
+2014-04-10 05:29:39 #222 failed:     master Closes #282, Disable auto refresh zooming in (every time you change to an absolute time range), refresh will be restored when you change time range back to relative
+2014-04-10 05:13:31 #221 passed:     master Closes #294, Browser page title is now Grafana - {{dashboard title}}
+2014-04-10 01:59:30 #220 passed:     master Merge pull request #303 from jaimegago/master
+2014-04-09 05:37:25 #217 passed:     master Fixes #302, year dates in changelog was 2013, now corrected to 2014, thx LordFPL for spotting this
+2014-04-08 13:56:34 #216 passed:     master Fixes #297, filter remove fix
+2014-04-07 13:29:37 #212 passed:     master Merge pull request #295 from jaimegago/master
+2014-04-07 01:34:28 #210 passed:     master Fixes #291, row height correction bug fixed
+2014-04-06 05:44:47 #209 passed:     master Fixes #289, PanelBaseCtrl needs to specify inject dependency annotations as it doesnt follow regular angular controller syntax, ngmin grunt task misses it
+2014-04-06 04:07:56 #208 passed:     master fixed failing unit test
+2014-04-06 03:47:53 #207 failed:     master Added jshint file for unit tests, and grunt task to verify test syntax.
+2014-04-06 02:53:57 #206 errored:    master Fixes #106.  Css fix for Firefox and using top menu dropdowns in panel fullscren / edit mode
+2014-04-06 02:18:25 #205 passed:     master Fixes #189, correction to ms axis formater, now formats days correctly
+2014-04-05 14:38:09 #204 passed:     master small fix: (lowercase) file name tp panelBaseCtrl
+2014-04-05 12:30:03 #203 passed:     master css fix for legend color selector popover
+2014-04-05 12:23:16 #202 passed:     master Closes ##278, improvements in row height matching, refactorings of base kibana panel features into PanelBaseCtrl
+2014-04-05 09:16:13 #201 passed:     master Merge pull request #283 from ragzilla/master
+2014-04-05 09:06:47 #200 passed:     master Closes #265, Graphite errors are now easier to troubleshoot with the new inspector!
+2014-04-03 05:52:06 #196 passed:     master Merge branch 'master' of github.com:nikicat/grafana into nikicat-master
+2014-04-03 05:43:37 #195 passed:     master #Closes #269, changed byte and bit formats to conform with IEC standard symbols, like Kib, Mib for bits, and KiB, MiB, GiB for bytes
+2014-04-03 01:48:43 #194 passed:     master Merge pull request #280 from syepes/add_functions_v2
+2014-04-01 14:53:26 #187 passed:     master Fixes #271, renamed Export schema to Export dashboard
+2014-04-01 08:24:37 #186 passed:     master Merge pull request #268 from ImmobilienScout24/feature/linebreak_in_annotations_tooltip
+2014-04-01 05:40:04 #184 passed:     master Fixes 267,  Functions without params (like integral) now causes graph to update correctly
+2014-03-31 11:45:50 #183 passed:     master Merge pull request #255 from bobrik/patch-1
+2014-03-31 11:39:27 #182 passed:     master Merge pull request #256 from bobrik/undefined-length-fix
+2014-03-30 09:45:56 #179 passed:     master Merge branch 'html_unsafe' of github.com:bruce-lyft/grafana into bruce-lyft-html_unsafe
+2014-03-30 08:00:43 #178 passed:     master Fixes #251, text panel change is now updating panel correctly. Changed button text from Cancel to Close
+2014-03-29 04:01:12 #177 passed:     master Merge pull request #245 from magicrobotmonkey/add_functions
+2014-03-29 04:00:14 #176 passed:     master Merge pull request #248 from syepes/add_functions
+2014-03-27 09:22:55 #173 passed:     master Merge pull request #237 from maage/some-graphite-func-definitions
+2014-03-27 09:21:08 #172 passed:     master Merge pull request #238 from maage/bits-y-axis-format
+2014-03-24 07:18:30 #168 passed:     master Fixes #225, grid min not sent to graphite png renderer when set to 0
+2014-03-24 06:52:46 #166 passed:     master Closes #209, sub folder with project name and version suffix in release zip files
+2014-03-24 06:22:55 #165 passed:     master Fixes #223, float arguments to functions like scale should now work as expected
+2014-03-24 03:57:58 #164 passed:     master aliasByNode support for second node param, Closes #167
+2014-03-23 15:09:12 #163 passed:     master Merge pull request #218 from mavimo/feature/influx-query-functions
+2014-03-23 10:06:19 #160 passed:     master fixed build issues with last commit (spec file syntax error)
+2014-03-23 01:05:04 #159 passed:     master more work on filterSrv unit tests
+2014-03-19 00:06:46 #158 passed:     master Merge pull request #213 from jaimegago/master
+2014-03-18 15:09:45 #156 passed:     master Adds support to have filters inside filters, (nested templated segments), Closes #128
+2014-03-18 15:09:19 #155 passed:     master Merge pull request #212 from andrewmichaelsmith/log_func
+2014-03-18 14:08:53 #152 passed:     master added phantomjs karma test to run in travis
+2014-03-17 11:34:45 #148 passed:     master Merge branch 'master' of github.com:torkelo/grafana
+2014-03-17 05:31:46 #147 passed:     master Merge pull request #208 from fstern/master
+2014-03-12 03:58:26 #141 passed:     master Merge pull request #194 from danharvey/add-hitcount-function
+2014-03-11 07:01:03 #139 passed:     master Fixes #191, update graph after adding new function and not changing default value
+2014-03-10 08:17:56 #137 passed:     master Merge pull request #185 from nikicat/master
+2014-03-10 05:12:00 #135 passed:     master Merge pull request #183 from merc1031/master
+2014-03-09 13:12:42 #133 passed:     master updated readme and changelog
+2014-03-09 12:02:46 #131 passed:     master updated readme and version bump
+2014-03-08 09:28:45 #130 passed:     master Merge branch 'playlist' Closes #36
+2014-03-07 08:07:54 #128 passed:     master Merge branch 'new_func_editor'
+2014-03-07 06:59:26 #127 passed:     master Support graphite identifiers with embedded colons. i.e. host:twiggy.servlet:home.method:GET.user:loggedin.50th
+2014-03-05 11:42:08 #121 passed:     master Fixes to maxDataPoints / resolution and time axis formats
+2014-03-05 06:03:35 #120 passed:     master added changelog and contributing docs
+2014-03-05 05:45:20 #118 passed:     master added typeahead to column for influxdb, #103
+2014-03-04 15:01:51 #117 passed:     master small refactoring and jshint fix for datasourceFactory func
+2014-03-04 14:50:10 #116 failed:     master fix for influxdb as default datasource, #103
+2014-03-04 11:55:38 #115 passed:     master Closes #164, typeahead / autocomplete for adding graphite functions to a target expression
+2014-03-04 02:58:17 #114 passed:     master Merge pull request #162 from nixfloyd/master
+2014-03-03 01:39:47 #112 passed:     master restored influxdb listSeries function
+2014-03-02 23:53:56 #111 passed:     master fixed path to influxdb editor, #103
+2014-03-02 11:24:50 #110 passed:     master added typeahead / autocomplete to influxdb series name, #103
+2014-03-02 06:29:38 #109 passed:     master Merge branch 'influxdb' Issue #103, influxdb support ready for testing and feedback
+2014-02-28 13:31:03 #104 passed:     master Merge pull request #154 from jmhobbs/master
+2014-02-27 11:39:01 #99 passed:      master Merge pull request #150 from jippi/better-ms-formatting
+2014-02-26 12:52:53 #96 passed:      master Refactoring time formats, Closes #142
+2014-02-26 10:00:38 #95 passed:      master Merge pull request #145 from nixfloyd/master
+2014-02-26 01:51:51 #93 passed:      master Refactoring pull request for basic auth improvement
+2014-02-26 01:32:07 #92 passed:      master added small text to show when no datapoints are returned and when datapoints returned from graphite are outside timerange (can happen when timezone mismatch) #143
+2014-02-25 14:38:29 #90 passed:      master finished refactoring of GraphiteDatasource to angular service and fixed jshint errors
+2014-02-25 10:56:09 #89 failed:      master Time is now sent in utc when time correction is set to utc  #143
+2014-02-25 06:10:04 #86 passed:      master Merge pull request #140 from nixfloyd/master
+2014-02-25 00:34:08 #84 passed:      master Fixes #135, show seconds in x-axis when zooming in for short time ranges
+2014-02-24 09:50:51 #83 passed:      master Fixes #138, Ignore graphite metric annotations with zero values
+2014-02-24 02:05:35 #82 passed:      master Merge pull request #137 from razitz/master
+2014-02-23 12:46:17 #80 passed:      master fixed jshint error
+2014-02-23 12:35:13 #79 failed:      master Closes #123, you can now specify template (ie filter) values in url. ?fillterName=filterValue
+2014-02-21 13:09:07 #78 passed:      master Merge pull request #131 from nikicat/master
+2014-02-21 07:28:55 #75 passed:      master version bump to 1.4.0 and link to annotations wiki article
+2014-02-21 06:57:16 #74 passed:      master Closes #44, Closes #8. Fist release of annotations feature is ready
+2014-02-21 04:59:06 #73 failed:      master Annotations refactoring
+2014-02-20 16:01:21 #72 passed:      master A lot more work on annotations (#44, #8). Graphite events is working, editing, icon size, color and vertical line toggle/options working. To sleepy now...
+2014-02-20 12:45:15 #71 passed:      master more modal loading optimizations
+2014-02-20 12:31:18 #70 passed:      master moved menu share icon to advanced save dropdown, optimized loding of share modal
+2014-02-19 14:52:35 #69 passed:      master major improvement to how modals are loaded, much more reuse in html dom elements, hopefully solves #109.
+2014-02-19 05:56:45 #68 passed:      master updated readme with links to wiki pages
+2014-02-19 05:47:31 #67 passed:      master Fixes #110, css fix for fullscreen and edit mode, when fullscreen and edit panel overflows the fullscreen height the panel is now scrollable. Also css fix for segment dropdowns for a graph with many many target rows.
+2014-02-18 13:46:57 #66 passed:      master More work on annotations (#44,  #8) It is working for annotations from graphite metrics, basic annotation editor and everything is working. Needs some final touches and support for more datasources
+2014-02-18 07:31:08 #65 passed:      master fixed unclosed selected html tag (caused issue with optimized build version so no options where shown in graph edit tabs)
+2014-02-18 05:19:29 #64 passed:      master Fixes #104, improvements to graphite target editor and use of wildcard, the "select metric" should now behave/appear correctly
+2014-02-17 12:43:51 #63 passed:      master updated readme with link to intro video
+2014-02-15 15:07:57 #62 passed:      master Fixes null checks for legend value formaters (fix for #97)
+2014-02-15 10:19:32 #61 passed:      master fixed jshint errors
+2014-02-15 06:47:47 #60 failed:      master Merge branch 'master' of github.com:torkelo/grafana
+2014-02-15 03:55:35 #59 passed:      master Changed default value for stack from true to false (#98)
+2014-02-15 03:23:25 #58 passed:      master small css fix to light theme
+2014-02-15 03:15:37 #57 passed:      master Closes #97, legend values now use selected y axis formater for precision and formating
+2014-02-14 01:11:54 #56 errored:     master Final tweaks to light theme (Closes #77)
+2014-02-14 00:46:02 #55 errored:     master Merge remote-tracking branch 'origin/master'
+2014-02-13 15:20:57 #54 passed:      master more work on light theme (#77)
+2014-02-13 05:42:17 #53 passed:      master Closes #94, there is now a "Back to dashboard" link in header when in fullscreen / edit mode
+2014-02-13 02:14:22 #52 passed:      master Small tag search fix
+2014-02-13 01:34:26 #51 passed:      master bumped version
+2014-02-13 00:49:28 #49 passed:      master Closes #86, dashboard tags and tag search feature is now done! turned out pretty good!
+2014-02-12 13:51:17 #48 passed:      master moved less file that caused travis build error
+2014-02-12 13:18:10 #47 failed:      master more work on dashboard tags / search (#86)
+2014-02-12 08:55:43 #46 failed:      master jshint fix
+2014-02-12 08:53:39 #45 failed:      master Fixes #91, custom datetime picker is one day off
+2014-02-12 07:38:20 #44 failed:      master search fix (introduced yesterday)
+2014-02-11 15:11:04 #43 passed:      master #86 Added tags to dashboard general settings panel, search and search display needs more work (grouping, facets etc)
+2014-02-11 14:00:01 #42 passed:      master Closes #54, template/filter can now use "All", when all is not a wildcard but the specific metric segments specified in the filter query.
+2014-02-11 13:40:47 #41 passed:      master Closes #82, dashboard search/load now sorts in alfabetical order
+2014-02-11 10:19:32 #40 passed:      master Merge pull request #85 from ohTHATaaronbrown/master
+2014-02-11 02:15:56 #38 passed:      master Fixes #83, stack percent with no line fill (workaround fix for bug in flot.stackpercent)
+2014-02-11 02:04:03 #37 passed:      master added grafana version info to dashboard settings, and link to releases.
+2014-02-10 11:07:00 #35 passed:      master build/grunt script fixes
+2014-02-10 10:55:50 #34 passed:      master Fixes #80, stacked percentage and min/max bug,  Fixes #81 (grid y min/max not working)
+2014-02-09 15:01:11 #33 passed:      master removed annotation test
+2014-02-09 06:41:41 #32 passed:      master Merge pull request #76 from axe-felix/patch-1
+2014-02-08 13:48:02 #30 passed:      master updated readme
+2014-02-08 13:46:04 #29 passed:      master added link to wiki article on scripted dashboards
+2014-02-08 13:31:27 #28 passed:      master fix for requirejs optimizer and config.js fallback
+2014-02-08 13:14:42 #27 passed:      master fixed jshint error
+2014-02-08 13:11:56 #26 failed:      master updated readme and bumped version to v1.1.1
+2014-02-08 09:39:03 #25 passed:      master trying to get angular mocks / testing to work
+2014-02-08 07:22:26 #24 passed:      master Closes #70, Fixes #50, Grid thresholds feature
+2014-02-07 08:40:09 #23 passed:      master Moved parser/target editor warning icon to the right, now the hide/show eye is still usefull even when only working with the text editor
+2014-02-07 07:08:42 #22 passed:      master Fixes #67, decimal inputs for function parameters (like scale)
+2014-02-07 06:28:49 #21 passed:      master added single decimal to short y formater
+2014-02-07 06:11:37 #20 passed:      master Fixed issue where series color or axis change would note take immediate effect (needed a full refresh).
+2014-02-07 02:30:22 #19 passed:      master Fixes #42 : Auto Y scale is working as it should (even when using line fill)
+2014-02-06 10:13:54 #18 passed:      master Changed name off config.js to config.sample.js to make it easier to upgrade with having to worry about config being overwwritten, if there is no config.js file config.sample.js will be read instead (requirejs fallback). Closes #65
+2014-02-06 06:31:01 #16 passed:      master Implementation of legend values (min, max, current, total, avg), Closes #60, Fixes #14
+2014-02-06 00:56:16 #15 passed:      master removed metrics tab in dash editor modal (only created confusion, the feature is not ready)
+2014-02-05 13:59:56 #14 passed:      master Closes #62, there is now a New button in the open / search dashboard view.
+2014-02-05 12:19:11 #13 passed:      master Merge pull request #63 from jippi/feature/unique-local-storage-name
+2014-02-05 09:16:09 #11 passed:      master added highestCurrent function (Fixes #57)
+2014-02-05 06:36:38 #10 passed:      master fixed jshint errors, dam fever is coming back, time to sleep...
+2014-02-05 06:31:02 #9 failed:       master Merge pull request #58 from andreparodi/master
+2014-02-05 06:24:21 #8 failed:       master added sortByName function (thx @jippi)
+2014-02-05 06:15:48 #7 failed:       master simplified a lot of the time series data manipulation prior to handing it to flot, kibana used a lot of code to sort and make sure all time points needed had values, this is not needed for graphite time series data. Fixes som strange issues with "null point mode" and inconsistent rendering between graphite and grafana flot,
+2014-02-05 04:38:26 #6 passed:       master added unit (y axis format) mapping support for png renderer (#22)
+2014-02-01 07:09:47 #4 passed:       master Fixes #45,  zero values treated as null values
+2014-02-01 06:16:39 #3 passed:       master small change to readme.md
+2014-02-01 06:00:20 #2 passed:       master added build status to readme.md
+2014-02-01 04:28:55 #1 passed:       master Adding travis-ci build

@@ -1,0 +1,23 @@
+2014-10-01 05:09:17 #114 errored:    master Merge pull request #83 from Lupino/master
+2014-09-28 03:47:51 #111 passed:     master Merge pull request #85 from okjake/master
+2014-09-25 01:33:00 #108 passed:     master Merge pull request #82 from Sentimentron/edf-remove
+2014-08-25 06:53:17 #104 passed:     master Merge pull request #78 from amitkgupta/master
+2014-08-22 05:38:22 #101 passed:     master Merge pull request #76 from amitkgupta/master
+2014-08-21 10:38:59 #99 passed:      master Merge pull request #75 from Sentimentron/anonmap
+2014-08-21 10:37:52 #98 passed:      master Merge pull request #74 from amitkgupta/master
+2014-08-11 10:18:42 #89 passed:      master Merge pull request #67 from Sentimentron/mmap-fix
+2014-08-10 17:09:07 #87 errored:     master Update README.md
+2014-08-10 17:01:14 #86 passed:      master Update README.md
+2014-08-10 16:43:50 #85 passed:      master Merge pull request #66 from sjwhitworth/mmap_change
+2014-08-10 03:13:32 #82 passed:      master Merge pull request #63 from Sentimentron/neural
+2014-08-10 03:42:33 #81 passed:      master Merge pull request #62 from Sentimentron/instances-v2
+2014-07-26 19:21:17 #68 passed:      master Merge pull request #51 from Sentimentron/liblinear-1.94
+2014-07-26 19:19:19 #67 passed:      master Merge pull request #56 from albrow/master
+2014-07-26 19:18:52 #66 passed:      master Merge pull request #54 from njern/knn_refactor
+2014-07-26 10:24:22 #65 passed:      master Merge pull request #59 from tncardoso/feature/naive
+2014-07-22 21:09:02 #63 passed:      master Merge pull request #58 from yurrriq/patch-1
+2014-07-20 10:59:34 #56 passed:      master Update README.md
+2014-07-20 10:32:57 #55 passed:      master Merge pull request #53 from njern/linear_regression
+2014-07-19 11:31:23 #52 passed:      master Merge pull request #52 from njern/linear_regression
+2014-07-18 08:22:24 #47 passed:      master Merge pull request #49 from njern/golint
+2014-07-07 02:14:09 #44 passed:      master Merge pull request #46 from Sentimentron/build-fix

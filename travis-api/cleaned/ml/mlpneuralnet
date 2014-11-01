@@ -1,0 +1,44 @@
+2014-07-14 15:51:42 #48 passed:      master Merge pull request #2 from remzr7/master
+2014-06-21 16:28:20 #46 passed:      master Merge pull request #1 from zavg/master
+2013-10-11 04:55:39 #44 failed:      master Published with http://benweet.github.io/stackedit/
+2013-10-10 15:16:28 #43 failed:      master Update README.md
+2013-10-10 11:05:42 #41 failed:      master Podspec updated to version 1.0.0
+2013-10-10 11:03:53 #40 failed:      master Deployment target iOS7.0
+2013-10-10 10:56:39 #39 failed:      master Published with http://benweet.github.io/stackedit/
+2013-10-10 09:43:30 #38 failed:      master Published with http://benweet.github.io/stackedit/
+2013-10-10 07:57:06 #37 failed:      master Published with http://benweet.github.io/stackedit/
+2013-10-10 05:37:00 #36 failed:      master Published with http://benweet.github.io/stackedit/
+2013-10-09 18:02:54 #35 failed:      master Deployment target iOS 6.1
+2013-10-09 17:50:23 #34 failed:      master Merge branch 'master' of github.com:nikolaypavlov/MLPNeuralNet
+2013-10-09 12:58:08 #33 failed:      master Update README.md
+2013-10-09 12:35:06 #32 failed:      master Podfile updated to tag 0.0.4
+2013-10-09 12:33:25 #31 failed:      master Merge branch 'master' of github.com:nikolaypavlov/MLPNeuralNet
+2013-10-09 12:20:35 #30 failed:      master Podspec for v 0.0.3
+2013-10-09 09:34:38 #28 failed:      master Missing Test directory bug fixed
+2013-10-09 09:26:42 #27 errored:     master Use Rakefile and xctool instead of default script
+2013-10-09 09:29:13 #26 passed:      master Podspec introduced
+2013-10-09 07:46:11 #25 passed:      master Proper name for test schemes
+2013-10-08 09:58:57 #24 passed:      master Update README.md
+2013-10-08 09:55:15 #23 passed:      master Comments provided for -predictByFeatureVector:vector intoPredictionVector:prediction;
+2013-10-02 08:27:54 #22 passed:      master Merge branch 'master' of github.com:nikolaypavlov/MLPNeuralNet
+2013-10-01 18:08:18 #21 passed:      master Update README.md
+2013-10-01 18:06:18 #20 passed:      master Update README.md
+2013-10-01 17:57:24 #19 passed:      master Update README.md
+2013-10-01 17:41:59 #18 passed:      master Merge branch 'master' of github.com:nikolaypavlov/neural-net-for-iOS
+2013-10-01 17:24:03 #17 passed:      master Update README.md
+2013-10-01 17:21:28 #16 passed:      master Update README.md
+2013-10-01 15:19:54 #15 passed:      master Update README.md
+2013-10-01 13:43:30 #14 passed:      master Explicit type casting
+2013-09-30 06:37:04 #13 passed:      master pragma mark added
+2013-09-30 06:34:57 #12 passed:      master Specify featureVectorSize and predictionVectorSize in bytes
+2013-09-30 04:14:56 #11 passed:      master _layersConfig removed
+2013-09-29 17:07:38 #10 passed:      master Array of env vars added
+2013-09-29 16:55:08 #9 failed:       master yml markup fixed
+2013-09-29 16:50:29 #8 failed:       master -sdk iphonesimulator flag
+2013-09-29 16:44:50 #7 passed:       master Target var fixed
+2013-09-29 16:37:53 #6 passed:       master Default targets added
+2013-09-29 16:39:00 #5 failed:       master Merge branch 'master' of github.com:nikolaypavlov/neural-net-for-iOS
+2013-09-29 15:16:57 #4 passed:       master Update README.md
+2013-09-29 15:16:42 #3 passed:       master Update README.md
+2013-09-29 15:09:23 #2 passed:       master Add travis configuration
+2013-09-29 15:03:48 #1 passed:       master Add travis configuration

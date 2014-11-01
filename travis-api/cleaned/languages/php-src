@@ -1,0 +1,1574 @@
+2014-10-05 06:22:15 #8245 passed:    master properly export tsrm_strtok_r()
+2014-10-05 04:07:31 #8244 passed:    master Fixed list() behavior inconsistency (string handling is disabled for all cases, ArrayAccess objects handling is enabled for all cases, ZEND_FETCH_DIM_TMP_VAR opcode is renamed into ZEND_FETCH_LIST, ZEND_FETCH_ADD_LOCK flag is removed).
+2014-10-04 13:14:25 #8243 passed:    master Merge branch 'PHP-5.6'
+2014-10-04 13:02:30 #8238 errored:   master Merge branch 'PHP-5.6'
+2014-10-04 10:35:17 #8237 passed:    master DateTimeZone::getOffset() now accepts a DateTimeInterface
+2014-10-04 10:01:36 #8234 passed:    master Merge branch 'PHP-5.6'
+2014-10-04 05:58:59 #8233 passed:    master Moved checks and error reporting related to static methods from DO_FCALL inti INTI_FCALL* opcodes that may really deal with static methods. (In some rare cases it may lead to different order of warning messages).
+2014-10-03 17:39:34 #8232 passed:    master Fix test gc_029_zts.phpt
+2014-10-03 16:57:15 #8231 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-10-03 16:17:31 #8228 failed:    master fix asinh delivering -0 when the arg is 0
+2014-10-03 16:13:57 #8227 failed:    master Mark test for full GC root buffer as XFAIL
+2014-10-03 15:43:32 #8226 failed:    master reveal some newer libcurl features in MINFO
+2014-10-03 15:05:49 #8224 failed:    master Merge branch 'PHP-5.6'
+2014-10-03 15:00:40 #8223 failed:    master Merge branch 'PHP-5.6'
+2014-10-03 14:10:47 #8222 failed:    master Fix bug #68133 and bug #68135
+2014-10-03 12:50:13 #8221 failed:    master remove the remains of dsp files handling
+2014-10-03 12:30:43 #8220 failed:    master fix EX usage
+2014-10-03 10:36:12 #8219 failed:    master Replaced EG(This) and EX(object) with EX(This).
+2014-10-03 06:08:17 #8218 failed:    master And this one...
+2014-10-03 05:37:09 #8217 failed:    master It should be in extern c
+2014-10-03 04:44:19 #8216 failed:    master Merge branch 'PHP-5.6'
+2014-10-03 03:21:17 #8213 failed:    master Micro optimization for the most frequency case
+2014-10-02 20:58:09 #8212 failed:    master Merge branch 'PHP-5.6'
+2014-10-02 19:13:24 #8211 failed:    master Remove extensions which are long gone
+2014-10-02 15:40:38 #8210 failed:    master Merge branch 'PHP-5.6'
+2014-10-02 15:00:01 #8207 failed:    master Fix ZTS build
+2014-10-02 05:32:13 #8206 errored:   master improved file size computation in stat()
+2014-10-02 04:39:43 #8205 errored:   master Fixed incorrect compilation
+2014-10-01 07:39:33 #8198 errored:   master Expose zend_throw_exception_internal()
+2014-10-01 04:17:32 #8195 failed:    master Merge branch 'PHP-5.6'
+2014-10-01 03:17:38 #8193 failed:    master only no_NO.ISO-8859-1 have to be ignored (merged)
+2014-10-01 02:28:59 #8191 failed:    master Merge branch 'PHP-5.6'
+2014-10-01 01:48:34 #8190 failed:    master Removed zend_execute_data->prev_nested_call. Reuse prev_execute_data instead.
+2014-09-30 06:21:32 #8185 failed:    master Micro optimization
+2014-09-29 16:05:13 #8178 failed:    master Drop unused INIT_STRING opcode
+2014-09-29 15:55:42 #8177 failed:    master Drop unused RAISE_ABSTRACT_ERROR opcode
+2014-09-29 15:46:41 #8176 failed:    master CT substitute unqualified true/false/null in namespaces
+2014-09-29 14:05:08 #8173 failed:    master Merge branch 'PHP-5.6'
+2014-09-29 13:24:06 #8171 failed:    master Merge branch 'PHP-5.6'
+2014-09-29 11:25:05 #8170 errored:   master Merge branch 'PHP-5.6'
+2014-09-29 11:18:29 #8169 errored:   master Use more readable inline functions
+2014-09-29 10:34:53 #8166 failed:    master Merge branch 'PHP-5.6'
+2014-09-29 09:34:36 #8164 failed:    master Merge branch 'PHP-5.6'
+2014-09-28 23:07:58 #8160 failed:    master Fixed segfault
+2014-09-28 14:37:35 #8154 failed:    master Merge branch 'PHP-5.6'
+2014-09-28 14:01:51 #8152 failed:    master Fix segmentation fault in debug_backtrace()
+2014-09-28 13:48:29 #8151 failed:    master Drop support for GMP 4.1
+2014-09-28 13:20:04 #8150 failed:    master Make gmp_setbit and gmp_clrbit return values consistent
+2014-09-28 12:17:17 #8149 failed:    master removed *.dsw and *.dsp files
+2014-09-28 05:33:56 #8147 failed:    master Opcache compatibility for coalesce operator
+2014-09-27 18:35:45 #8146 failed:    master Merge branch 'coalesce_operator'
+2014-09-26 19:20:39 #8133 failed:    master Merge branch 'PHP-5.6'
+2014-09-26 10:50:31 #8127 failed:    master Merge branch 'PHP-5.6'
+2014-09-26 03:06:21 #8107 failed:    master Merge branch 'PHP-5.6'
+2014-09-26 02:30:11 #8105 failed:    master Fixed bug #68103 Dupplicate entry in Reflection (merged)
+2014-09-25 16:40:41 #8103 failed:    master Fixed optimizer bug
+2014-09-25 13:31:22 #8100 errored:   master fix C89 compat
+2014-09-25 10:39:39 #8095 failed:    master fix indentation
+2014-09-25 10:19:24 #8094 errored:   master fix zts build
+2014-09-25 08:03:02 #8093 errored:   master Use macro
+2014-09-25 04:47:07 #8092 errored:   master Optimized (PRE|POST)_(INC|DEC) handlers. Moved proxy object handling into helper function.
+2014-09-24 11:38:46 #8081 failed:    master Fixed C++ incompatibility
+2014-09-24 06:43:45 #8080 failed:    master Merge branch 'PHP-5.6'
+2014-09-24 06:41:41 #8078 failed:    master Fixed immutable arrays support
+2014-09-24 05:53:28 #8077 failed:    master Fix counting of "R:" references in serialize()
+2014-09-24 04:48:36 #8073 failed:    master Merge branch 'PHP-5.6'
+2014-09-24 04:15:22 #8071 failed:    master Merge branch 'PHP-5.6'
+2014-09-24 03:28:58 #8068 failed:    master Avoid double checks
+2014-09-24 02:43:46 #8064 failed:    master Merge branch 'PHP-5.6'
+2014-09-24 02:12:22 #8063 failed:    master Merge branch 'PHP-5.6'
+2014-09-23 17:00:52 #8057 failed:    master Make QM_ASSIGN, JMP_SET and CAST return IS_TMP_VAR.
+2014-09-23 14:31:49 #8055 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-09-23 14:10:46 #8054 errored:   master Drop unused result argument
+2014-09-23 08:25:04 #8050 failed:    master Use zval_ptr_dtor_nogc() to free IS_TMP_VAR operands.
+2014-09-23 05:15:08 #8046 failed:    master Merge branch 'PHP-5.6'
+2014-09-23 03:38:58 #8045 failed:    master Allocate copies of internal functions inherited in user classes at CG(arena), instead of permanent heap (malloc).
+2014-09-23 00:51:34 #8044 failed:    master It is not likely a string
+2014-09-22 23:59:26 #8041 failed:    master Simply make_printable_zval
+2014-09-22 18:02:03 #8039 failed:    master Test a few more error conditions in the compiler
+2014-09-22 17:27:32 #8037 failed:    master Fix tests/serialize/bug64146.phpt
+2014-09-22 16:58:36 #8036 failed:    master Remove zend_dynamic_array
+2014-09-22 16:07:30 #8032 failed:    master Fixed typo
+2014-09-22 11:39:08 #8028 errored:   master Fix list() destructuring to special variables
+2014-09-22 08:55:54 #8027 failed:    master Avoid useless reference counting
+2014-09-22 07:19:16 #8026 failed:    master Specialization (only IS_VAR ad IS_CV operands may be references)
+2014-09-22 05:43:04 #8025 failed:    master Optimized unset()
+2014-09-22 04:20:10 #8024 failed:    master Make error paths to be UNEXPECTED
+2014-09-22 03:50:06 #8023 failed:    master Replace IS_OP?_TMP_FREE() with more clear (OP?_TYPE == IS_TMP_VAR)
+2014-09-22 03:26:44 #8021 failed:    master added a comment
+2014-09-21 17:08:31 #8020 failed:    master Fix two memory errors by interning earlier
+2014-09-21 14:00:17 #8019 failed:    master Add smart_str_append for appending zend_strings
+2014-09-20 19:12:30 #8016 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-09-20 18:44:27 #8013 failed:    master Merge branch 'PHP-5.6'
+2014-09-20 15:00:31 #8004 failed:    master Merge branch 'PHP-5.6'
+2014-09-20 14:33:48 #8003 failed:    master fixed copying of the struct as it's not being modified
+2014-09-20 13:01:51 #8001 failed:    master Merge branch 'pull-request/805'
+2014-09-20 09:09:31 #7998 failed:    master refixed printf fmt, used portable macros
+2014-09-20 05:59:12 #7997 failed:    master Simplify foreach flags
+2014-09-20 02:36:25 #7995 failed:    master Avoid strlen usage
+2014-09-20 02:17:17 #7994 failed:    master folder marks
+2014-09-20 02:14:18 #7993 failed:    master Added missed mod str
+2014-09-20 02:04:54 #7992 failed:    master Fixed built on OSX
+2014-09-19 20:30:39 #7991 failed:    master s,PHP 5,PHP 7,
+2014-09-19 20:08:35 #7990 failed:    master Update README.PARAMETER_PARSING_API
+2014-09-19 19:17:25 #7989 failed:    master make the return value more logic
+2014-09-19 18:47:51 #7988 errored:   master make use of intrinsics available with VS for bitset lookups
+2014-09-19 16:56:40 #7986 failed:    master Make header C++ compatible
+2014-09-19 16:40:45 #7985 errored:   master Make number printing functions less generic
+2014-09-19 13:23:42 #7982 failed:    master Merge branch 'PHP-5.6'
+2014-09-19 13:17:19 #7981 failed:    master Split inheritance into separate file
+2014-09-19 12:47:03 #7980 failed:    master updated the comment to charset_hint
+2014-09-19 11:37:46 #7977 failed:    master s/PHP 5/PHP 7/
+2014-09-19 09:33:01 #7976 failed:    master reverted too much
+2014-09-19 08:34:50 #7975 failed:    master Avoid double IS_INTERNED() check
+2014-09-19 08:06:59 #7974 failed:    master Reverted incorrect chunk
+2014-09-19 06:42:55 #7973 failed:    master Fixed useless or duplicated IS_INTERNED() checks
+2014-09-19 06:15:52 #7972 failed:    master forgot to replace the strlen call
+2014-09-19 05:41:35 #7971 failed:    master avoid multiple strlen calls for the same buffer
+2014-09-18 17:07:56 #7970 failed:    master remove useless condition 0 > unsigned
+2014-09-18 16:05:29 #7969 failed:    master Fix GMP serialization
+2014-09-18 15:41:29 #7968 failed:    master Fix for Clang
+2014-09-18 13:46:58 #7964 failed:    master Update sapi_apache2.c
+2014-09-18 13:21:43 #7963 failed:    master Split is_numeric_string_ex() into inline and non-inline parts
+2014-09-18 10:16:53 #7961 failed:    master that's not char * but zend_string *
+2014-09-18 09:52:52 #7960 failed:    master Split big _zend_handle_numeric_str() into small always inlined function that makes initial check and regular big function
+2014-09-18 04:33:12 #7959 failed:    master Expose zend_safe_address() and use it in zend_arena_calloc()
+2014-09-18 02:52:44 #7958 failed:    master Clang attributes support
+2014-09-17 20:00:39 #7957 failed:    master Changed "inline" into "zend_always_inline"
+2014-09-17 15:01:50 #7951 failed:    master fix macro usage
+2014-09-17 14:29:54 #7949 failed:    master fix atol usage
+2014-09-17 07:19:41 #7947 failed:    master Optimized enterance into functions
+2014-09-17 02:19:45 #7946 failed:    master reduce struct size by 8 byte on 64 bit
+2014-09-16 15:55:02 #7942 failed:    master Use runtime-cache to avoid hash lookups in BIND_GLOBAL instruction
+2014-09-16 15:29:12 #7941 failed:    master fix signed/unsigned mismatch
+2014-09-16 11:33:36 #7937 failed:    master Drop BC alias HASH_NON_EXISTANT
+2014-09-16 09:43:33 #7936 failed:    master Merge branch 'pull-request/808'
+2014-09-16 06:30:13 #7932 failed:    master Improve opcache.fast_shutdown
+2014-09-16 05:29:12 #7931 failed:    master better error messages in ZMM on Windows
+2014-09-16 04:54:45 #7930 failed:    master emalloc() must not return NULL
+2014-09-16 03:25:09 #7928 failed:    master Merge branch 'PHP-5.6'
+2014-09-16 02:58:31 #7927 failed:    master ws
+2014-09-16 02:37:59 #7926 failed:    master cast the other way round, the sign check is already done before
+2014-09-16 01:17:27 #7924 failed:    master it's good for gc debuging
+2014-09-16 00:18:34 #7923 failed:    master We don't have to check for undefined CV if we fetch it for isset() operation
+2014-09-15 17:33:16 #7921 failed:    master Switch (un)mangle property name to size_t and zend_string
+2014-09-15 16:36:45 #7920 failed:    master Optimized FE_RESET and FE_FETCH
+2014-09-15 16:09:07 #7919 failed:    master Remove always-true comparisons
+2014-09-15 12:49:13 #7915 errored:   master fix signed/unsigned mismatch warnings
+2014-09-15 06:33:43 #7905 failed:    master Merge branch 'PHP-5.6'
+2014-09-15 06:00:51 #7904 failed:    master correct fix to the natcmp_ex
+2014-09-15 05:39:32 #7903 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-09-15 04:36:56 #7902 failed:    master fix initializer struct
+2014-09-15 04:12:23 #7901 failed:    master Merge branch 'master' of https://git.php.net/repository/php-src
+2014-09-15 04:09:57 #7900 failed:    master fix type
+2014-09-15 03:31:09 #7898 failed:    master Merge branch 'PHP-5.6'
+2014-09-15 02:00:50 #7897 failed:    master Merge branch 'master' of https://git.php.net/repository/php-src
+2014-09-15 01:30:34 #7896 failed:    master Merge branch 'PHP-5.6'
+2014-09-14 17:43:42 #7890 failed:    master avoid strlen usage in the loop
+2014-09-14 09:19:08 #7889 failed:    master Fix use of stack variable outside its block
+2014-09-14 08:12:39 #7888 failed:    master use nice way to achieve the property name length
+2014-09-14 07:23:21 #7887 failed:    master avoid repeated strlen() usage
+2014-09-13 17:45:23 #7885 failed:    master use the generator to produce the header
+2014-09-13 16:25:03 #7883 failed:    master avoid usage of strlen() in the loop
+2014-09-13 15:37:53 #7879 failed:    master Drop superfluous opline for non-cv variables
+2014-09-13 06:54:01 #7877 failed:    master switch to using mbrlen with VS
+2014-09-12 14:44:06 #7875 errored:   master fix ZTS build
+2014-09-12 13:02:53 #7874 errored:   master Forget to commit this part...
+2014-09-12 12:58:35 #7873 errored:   master Finally!!! Fixed segfault in GC
+2014-09-12 08:19:51 #7871 failed:    master make this test a bit more tolerant when checking sleep time
+2014-09-12 07:40:03 #7870 failed:    master Merge branch 'PHP-5.6'
+2014-09-11 10:16:24 #7865 errored:   master Fixed refcounting for references
+2014-09-11 09:29:54 #7864 errored:   master Don't show TEST line if SHOW_ONLY_GROUPS is used
+2014-09-11 08:02:06 #7863 failed:    master Simplify ASSIGN code
+2014-09-11 07:54:12 #7862 failed:    master Fix yy_limit computation after encoding switch
+2014-09-11 03:31:57 #7859 failed:    master Removed ZEND_QM_ASSIGN_VAR and ZEND_JMP_SET_VAR opcodes (in PHPNG they did exacly the same as ZEND_QM_ASSIGN and ZEND_JMP_SET)
+2014-09-11 02:09:29 #7858 failed:    master Revert "Removing ext/ereg and dependencies"
+2014-09-10 21:24:44 #7857 failed:    master Updated UPGRADING for ext/ereg removal
+2014-09-10 12:36:09 #7855 failed:    master Merge branch 'PHP-5.6'
+2014-09-10 06:33:01 #7849 errored:   master Merge branch 'PHP-5.6'
+2014-09-10 06:23:43 #7848 failed:    master replace zend_hash_find with zend_hash_str_find which fixes leaking the key
+2014-09-10 05:42:56 #7846 failed:    master second big shot on porting ext/oci8
+2014-09-10 04:03:41 #7844 failed:    master Don't miss warning messages
+2014-09-10 00:45:35 #7841 failed:    master Merge branch 'PHP-5.6'
+2014-09-09 18:26:03 #7836 failed:    master Merge branch 'PHP-5.6'
+2014-09-09 06:34:24 #7832 errored:   master Merge branch 'PHP-5.6'
+2014-09-08 23:58:14 #7829 failed:    master Merge branch 'PHP-5.6'
+2014-09-08 23:28:17 #7828 failed:    master Fine tuned the order of adding request variables.
+2014-09-08 22:53:37 #7825 failed:    master Remove unnecessary branch/temp variable
+2014-09-08 15:53:58 #7823 failed:    master Don't anload zend extensions if ZEND_DONT_UNLOAD_MODULES environment variable is set
+2014-09-08 15:44:07 #7822 errored:   master We don't need to check for xlat entry twice
+2014-09-08 15:17:27 #7821 failed:    master Fixed GC problem (arrays may be recorded as possible root of garbage cycle. we have to clear this info before deleting array)
+2014-09-08 14:34:46 #7818 failed:    master Merge branch 'PHP-5.6'
+2014-09-08 13:48:40 #7817 failed:    master made Visual Studio to understand that zend_error_noreturn() will not return
+2014-09-08 07:28:16 #7816 errored:   master Added ability to make a number of "warmup" requests before an actual benchmark.
+2014-09-08 06:58:17 #7815 failed:    master Fix parser stack destruction with dummy ENCAPSED_AND_WHITESPACE
+2014-09-08 06:48:29 #7814 failed:    master Removed IS_STR_OFFSET type and corresponding macros. Optimized string offset handling in ASSIGN_DIM opcode.
+2014-09-08 02:10:01 #7812 failed:    master Fixed comments and removed useless code.
+2014-09-07 13:27:48 #7811 failed:    master fix null pointer deref
+2014-09-07 13:15:07 #7810 failed:    master fixed the tests, related to the basename behaviour, bug #66395
+2014-09-07 06:37:35 #7809 failed:    master fixed string index handling with references
+2014-09-06 17:56:53 #7808 failed:    master fix 64 bit string index usage
+2014-09-06 15:14:46 #7807 failed:    master Revert "Move safe_address into zend_multiply.h"
+2014-09-06 07:04:44 #7805 failed:    master Move safe_address into zend_multiply.h
+2014-09-06 06:18:05 #7803 failed:    master According to LSB 3.2, finite() has been deprecated with C99.
+2014-09-06 05:57:54 #7802 failed:    master Added test case to complement commit 29397f8
+2014-09-06 05:54:06 #7801 failed:    master Release memory for PDO Stmt ctor args
+2014-09-06 05:28:23 #7800 failed:    master Fix $x .= $x
+2014-09-05 07:14:25 #7789 failed:    master Fixed overflow check
+2014-09-05 05:46:51 #7787 failed:    master Fix string increment
+2014-09-05 05:20:09 #7786 failed:    master Fixed support for C++
+2014-09-05 05:05:24 #7785 failed:    master Fix overflow check for string concatenation
+2014-09-04 21:54:06 #7784 failed:    master Fixed discards qualifiers from pointer target type
+2014-09-04 20:26:20 #7783 failed:    master Merge branch 'master' of https://git.php.net/repository/php-src
+2014-09-04 15:32:39 #7781 failed:    master Fix invalid zend_string free in soap
+2014-09-04 14:29:22 #7780 failed:    master Merge branch 'PHP-5.6'
+2014-09-04 13:50:32 #7778 failed:    master Merge branch 'pr/804'
+2014-09-04 13:35:32 #7776 errored:   master Updated NEWS for #67959
+2014-09-04 13:07:15 #7775 failed:    master Merge branch 'pr/803'
+2014-09-04 05:07:35 #7770 failed:    master Fixed compilation warnings
+2014-09-03 23:01:07 #7769 failed:    master Revert previous commit by mistake
+2014-09-03 22:57:21 #7768 failed:    master Use PHP_GINIT to suppress incompatible pointer type
+2014-09-03 14:40:30 #7766 errored:   master Fix DOM warnings
+2014-09-03 09:54:57 #7763 failed:    master Fix ftp_login()
+2014-09-03 09:23:00 #7762 failed:    master Preallocate hash tables of required size
+2014-09-03 09:00:56 #7761 failed:    master Fix a number of format issues
+2014-09-03 08:21:48 #7760 failed:    master Use zval_ptr_dtor_nogc to destroy literals
+2014-09-03 07:32:45 #7758 failed:    master Disabled usage of built-in functions in write context (e.g. strlen($s)[] = ...)
+2014-09-03 06:18:59 #7757 failed:    master Simplify BEGIN_SILENCE/END_SILENCE to not modify ini entry value back and force
+2014-09-03 02:47:11 #7750 failed:    master Merge branch 'PHP-5.6'
+2014-09-02 17:49:05 #7749 failed:    master Revert "Fixed memory leaks"
+2014-09-02 16:20:48 #7743 failed:    master Merge branch 'PHP-5.6'
+2014-09-02 14:34:48 #7740 failed:    master Merge branch 'PHP-5.6'
+2014-09-02 13:15:26 #7739 failed:    master Avoid memory allocation/deallocation in BEGIN_SILENCE/END_SILENCE opcode handlers.
+2014-09-02 12:18:49 #7738 failed:    master Merge branch 'PHP-5.6'
+2014-09-02 12:08:44 #7737 failed:    master Skip 64bit test on 32bit
+2014-09-02 11:30:00 #7736 failed:    master fix datatypes for gmp to be compatible with GMP/MPIR on different platforms
+2014-09-02 09:42:54 #7734 failed:    master one semicolon too much
+2014-09-02 09:00:27 #7733 failed:    master use portable strtol
+2014-09-02 07:41:15 #7732 failed:    master mpz functions don't work on zend_ulongs...
+2014-09-02 07:30:19 #7731 failed:    master Merge branch 'PHP-5.6'
+2014-09-02 05:12:44 #7729 failed:    master Fixed memory leaks
+2014-09-02 02:26:07 #7727 failed:    master fixed reference counting
+2014-09-02 00:53:36 #7726 failed:    master Avoid string duplication
+2014-09-02 00:48:14 #7725 failed:    master Fixed destruction on error
+2014-09-01 19:00:12 #7722 failed:    master Revert "Updated UPGRADING"
+2014-09-01 17:56:51 #7721 failed:    master Updated UPGRADING
+2014-09-01 17:44:32 #7720 failed:    master Reintroduce fix from pull #770 in a PHP 7 way
+2014-09-01 17:41:56 #7719 failed:    master Fix ZTS build
+2014-09-01 16:51:40 #7718 errored:   master fix apache handler build
+2014-09-01 14:25:26 #7715 errored:   master Merge branch 'PHP-5.6'
+2014-09-01 13:36:44 #7714 errored:   master restore the length var and fix the com_dotnet ini
+2014-09-01 11:59:28 #7712 errored:   master Refactored INI subsystem to use zend_string* instead of char*
+2014-09-01 10:42:37 #7710 failed:    master Merge branch 'PHP-5.6'
+2014-09-01 09:50:13 #7709 failed:    master Fixed 'long' -> 'zend_long' for call to 'is_numeric_string_ex()'
+2014-09-01 09:45:02 #7708 failed:    master Updated UPGRADING for #38409
+2014-09-01 08:47:58 #7707 failed:    master switch to built-in atanh() on vs2013 and up
+2014-09-01 08:38:55 #7706 failed:    master fix acosh for vs2012 and earlier
+2014-09-01 07:23:27 #7705 failed:    master fix acosh and asinh on win64 with vs2013+
+2014-08-31 14:59:37 #7701 failed:    master fix C89 compat
+2014-08-31 10:46:06 #7696 failed:    master remove a few gcc format attributes from some printf-like functions
+2014-08-31 09:20:18 #7694 failed:    master add a few more patterns to .gitignore
+2014-08-31 07:10:45 #7689 failed:    master fix expected warning in test
+2014-08-30 13:47:50 #7682 failed:    master Merge branch 'PHP-5.6'
+2014-08-29 21:08:00 #7679 failed:    master Merge branch 'PHP-5.6'
+2014-08-29 17:05:02 #7678 failed:    master Use global symbol table for completion after $ in readline.
+2014-08-29 15:15:56 #7677 failed:    master Don't depend on exact parse error messages in assert tests
+2014-08-29 14:09:33 #7676 failed:    master Don't distinguish between ast/list in parser
+2014-08-29 11:20:54 #7675 failed:    master Merge branch 'PHP-5.6'
+2014-08-29 10:30:45 #7674 failed:    master restore the old behavior for the assignment to string offset
+2014-08-29 10:23:16 #7673 failed:    master revert the lstat part
+2014-08-29 06:45:09 #7672 failed:    master fix stat vs zend_stat
+2014-08-29 03:57:21 #7671 failed:    master exclude log2 usage which requires C99 support
+2014-08-29 03:47:00 #7670 failed:    master Merge branch 'PHP-5.6'
+2014-08-29 01:56:35 #7668 failed:    master fixed path in test
+2014-08-29 01:15:12 #7666 failed:    master Merge branch 'PHP-5.6'
+2014-08-29 00:27:33 #7665 failed:    master use zend_string_equals_ci
+2014-08-29 00:07:11 #7664 failed:    master Keep folder mark style in this file
+2014-08-28 22:29:37 #7663 failed:    master resource type is int
+2014-08-28 18:39:10 #7661 failed:    master Fix comparison in case of constant NULL as default value
+2014-08-28 17:22:00 #7660 failed:    master Fix bug #67922
+2014-08-28 17:14:29 #7659 failed:    master Special-case aliases, add warning comments to implementations
+2014-08-28 15:59:29 #7658 failed:    master skip this if we can't check the uid
+2014-08-28 15:44:44 #7657 failed:    master fixed trim() and strtok() to work with big strings
+2014-08-28 11:56:20 #7652 failed:    master Duplicate array only if neccessary
+2014-08-28 10:45:42 #7651 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-28 10:44:39 #7650 errored:   master rename misleading define
+2014-08-28 10:06:14 #7649 failed:    master fix incompatible pointer
+2014-08-28 09:18:12 #7647 errored:   master solve conflicting type size_t vs int
+2014-08-28 08:48:56 #7645 failed:    master Use better hash functions
+2014-08-28 08:25:59 #7644 errored:   master Refactored optimizer (compile different opimizer passes separately, instead of including *.c file)
+2014-08-28 06:09:53 #7643 failed:    master use stddef.h definitions for uintptr_t and intptr_t
+2014-08-28 05:20:19 #7642 failed:    master better alignment, won 8 byte on 64 bit with default alignment
+2014-08-28 04:57:38 #7641 failed:    master fix dir separator
+2014-08-28 04:40:06 #7640 failed:    master remove the expression parts, which are always true
+2014-08-28 04:38:18 #7639 failed:    master Merge branch 'master' of https://git.php.net/repository/php-src
+2014-08-28 04:15:12 #7638 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-08-28 03:47:21 #7637 failed:    master fix pg_last_notice()
+2014-08-28 03:41:07 #7636 failed:    master Changed 'unsigned size_t' to 'size_t'
+2014-08-28 02:44:37 #7635 failed:    master Fixed segfaults after change size_t of "s"
+2014-08-28 02:15:45 #7634 failed:    master Fixed zend extensions multipy-times loadable
+2014-08-28 01:58:16 #7633 failed:    master Merge branch 'master' of https://git.php.net/repository/php-src
+2014-08-28 01:56:30 #7632 failed:    master fix hash_pbkdf2()
+2014-08-28 01:33:45 #7631 failed:    master Fixed type
+2014-08-28 00:22:16 #7630 failed:    master closesocket is defined in php_network.h
+2014-08-28 00:12:37 #7629 failed:    master Fixed iconv MINFO
+2014-08-27 22:38:25 #7628 failed:    master Fixed incompatible pointer type
+2014-08-27 19:38:17 #7627 failed:    master Merged PR 785 - Fixed ZEND_INT_(MIN/MAX) constants in signed multiplication
+2014-08-27 18:42:52 #7625 failed:    master Use 'const' qualifier for pointrs to code used at run-time (the code must not be changed)
+2014-08-27 18:31:01 #7624 failed:    master fix remaining 's' args for pgsql
+2014-08-27 18:12:34 #7623 failed:    master Fix compilation on systems without ecdh_curve
+2014-08-27 18:08:38 #7622 failed:    master fix remaining 's' args for  openssl
+2014-08-27 17:41:02 #7621 failed:    master fixed remaining 's' args for ftp
+2014-08-27 17:31:38 #7620 failed:    master Merge branch 'PHP-5.6'
+2014-08-27 16:46:55 #7617 failed:    master fix linkinfo()
+2014-08-27 16:17:08 #7615 failed:    master restore the old part of ezmlm_hash()
+2014-08-27 16:05:29 #7614 failed:    master fixed UConverter::convert()
+2014-08-27 15:52:39 #7613 failed:    master fix typo
+2014-08-27 15:47:18 #7612 errored:   master fixed php_wddx_packet_start signature
+2014-08-27 15:30:52 #7611 errored:   master Merge branch 'PHP-5.6'
+2014-08-27 15:18:19 #7610 errored:   master fix signature
+2014-08-27 15:14:07 #7608 errored:   master fix signature
+2014-08-27 15:06:23 #7607 errored:   master fix signature
+2014-08-27 15:03:35 #7606 errored:   master fix signature
+2014-08-27 14:58:23 #7605 errored:   master 's' and size_t - fix some invalid pointers and the remaining ext/mcrypt parts
+2014-08-27 13:47:58 #7602 failed:    master Reorder fields for better nenory consumtion and data locality on 64-bit systems
+2014-08-27 11:54:54 #7601 failed:    master Use efree_size() instead of efree() where posible
+2014-08-27 11:05:14 #7600 failed:    master Merge branch 'PHP-5.6'
+2014-08-27 10:15:24 #7597 failed:    master Cleanup IS_VAR handling
+2014-08-27 10:09:45 #7596 failed:    master Fixed corruption of execute_data when ZEND_STRLEN has to cast an object to string.
+2014-08-27 05:13:48 #7588 failed:    master Merge branch 'PHP-5.6'
+2014-08-27 04:39:45 #7587 errored:   master Improved performance of json_encode()
+2014-08-27 02:27:30 #7582 failed:    master add note about 'l' and zend_long
+2014-08-26 23:38:20 #7580 failed:    master It should be int
+2014-08-26 23:13:02 #7578 failed:    master Merge branch 'PHP-5.6'
+2014-08-26 22:46:07 #7576 failed:    master Merge PHP RFC: Closure::call
+2014-08-26 22:29:25 #7575 failed:    master Merge branch 'PHP-5.6'
+2014-08-26 22:10:05 #7573 failed:    master Merge branch 'PHP-5.6'
+2014-08-26 21:26:30 #7570 failed:    master Merge branch 'PHP-5.6'
+2014-08-26 20:55:24 #7568 failed:    master Merge branch 'PHP-5.6'
+2014-08-26 18:35:31 #7566 failed:    master Fix zend_highlight functionality I broke
+2014-08-26 18:20:53 #7565 failed:    master Merge branch 'PHP-5.6'
+2014-08-26 17:34:56 #7562 failed:    master Fix test with opcache/zts dependent output
+2014-08-26 17:27:44 #7561 failed:    master Fix session handlers in zts
+2014-08-26 16:43:41 #7560 errored:   master Fixed incorrect ZEND_INIT_FCALL_BY_NAME -> ZEND_INIT_FCALL conversion
+2014-08-26 16:42:13 #7559 errored:   master Move =&new deprecation message into compiler
+2014-08-26 15:56:23 #7558 errored:   master Split and optimize loop
+2014-08-26 15:39:40 #7557 errored:   master Add backup_doc_comment production
+2014-08-26 13:49:10 #7556 errored:   master fixed bitset computing on win64 build
+2014-08-26 12:38:52 #7555 errored:   master Fixed zero-size allocation in debug build
+2014-08-26 09:30:06 #7554 errored:   master temporary fix for win64
+2014-08-26 07:23:05 #7553 errored:   master Replaced Zend Memory Manager
+2014-08-26 06:59:14 #7552 errored:   master Fixed uint32_t overflow
+2014-08-26 06:21:28 #7551 errored:   master several signature and data type fixes
+2014-08-26 05:30:48 #7550 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-26 04:47:04 #7549 errored:   master fixed several long vs zend_long casts
+2014-08-26 04:07:45 #7548 errored:   master Fixed compile-time constants substitution
+2014-08-26 03:44:37 #7547 errored:   master regenerated date parsers
+2014-08-26 03:07:25 #7546 errored:   master fix typo
+2014-08-26 03:07:17 #7545 errored:   master implement #67886
+2014-08-26 02:57:50 #7544 errored:   master renamed macro
+2014-08-25 23:20:34 #7543 errored:   master Fixed incompatible pointer
+2014-08-25 22:56:05 #7542 errored:   master Unused variable
+2014-08-25 18:29:17 #7541 errored:   master better heading for UPGRADING.INTERNALS
+2014-08-25 18:00:33 #7539 errored:   master fix strtol call
+2014-08-25 17:24:39 #7538 errored:   master updated UPGRADING.INTERNALS
+2014-08-25 17:19:12 #7537 errored:   master fix func argument type
+2014-08-25 17:03:17 #7536 errored:   master Remove ZEND_ACC_INTERACTIVE and CG(interactive)
+2014-08-25 16:31:55 #7535 errored:   master Fix compiler warnings
+2014-08-25 16:28:08 #7534 errored:   master Fix zend_longo_str
+2014-08-25 15:49:39 #7533 errored:   master Add zend_string_equals and zend_string_equals_literal
+2014-08-25 15:38:31 #7532 errored:   master Merge branch 'ast'
+2014-08-25 14:56:39 #7529 errored:   master master renames phase 7
+2014-08-25 14:42:59 #7528 errored:   master master renames phase 6
+2014-08-25 14:33:44 #7527 errored:   master master renamings phase 5
+2014-08-25 14:02:22 #7526 errored:   master master renames phase 4
+2014-08-25 13:48:32 #7525 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-25 13:02:40 #7524 errored:   master Merge branch 'PHP-5.6'
+2014-08-24 16:33:29 #7522 errored:   master Merge branch 'PHP-5.6'
+2014-08-24 05:10:54 #7519 errored:   master bring back the logic to parse 64 bit props also in 32 bit build
+2014-08-23 19:58:04 #7517 errored:   master fix a phrase
+2014-08-23 19:56:09 #7516 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-23 17:20:07 #7515 errored:   master Merge branch 'PHP-5.6'
+2014-08-22 20:23:44 #7512 errored:   master Merge branch 'PHP-5.6'
+2014-08-22 19:10:10 #7511 errored:   master Use %d instead of object id
+2014-08-22 19:08:23 #7510 errored:   master Fixed test case based on var_dump() changes made in c1965f58d4dd3970912dcd6a63ccd5860bae1a97
+2014-08-22 12:32:21 #7509 errored:   master fix wrong type causing build error
+2014-08-22 06:57:21 #7508 errored:   master adedd note on portable numeric macros
+2014-08-22 03:33:35 #7507 errored:   master note on zpp specs
+2014-08-22 03:27:17 #7506 errored:   master updated UPGRADING.INTERNALS with new data types
+2014-08-22 02:09:07 #7504 errored:   master Merge remote-tracking branch 'weltling/master'
+2014-08-21 21:22:13 #7502 errored:   master Fixed complier error
+2014-08-21 15:51:42 #7500 errored:   master Merge branch 'PHP-5.6'
+2014-08-21 08:32:11 #7499 errored:   master Fixed incorrect string length
+2014-08-21 07:26:46 #7498 errored:   master Fixed test. It's not a problem to perform/continue replacing if the source "$search" string was modified by callback, because the source string is duplicate in this case.
+2014-08-21 06:06:35 #7495 errored:   master Separate values before conversion
+2014-08-21 05:32:08 #7493 errored:   master remove bogus locale use from test
+2014-08-21 04:36:34 #7490 errored:   master fix the version requirements for these tests
+2014-08-21 04:26:04 #7487 errored:   master use a suitable number of patterns to show the bug is resolved, not a stupid number that could cause memory limit to be exceeded or other side effects
+2014-08-21 03:54:20 #7486 errored:   master Merge branch 'master' of https://github.com/php/php-src
+2014-08-21 03:43:06 #7485 errored:   master Avoid reallocation and copying
+2014-08-21 03:35:06 #7484 errored:   master Fixed incorrect string length comparison
+2014-08-21 02:42:07 #7481 errored:   master Fix bug #67878 program_prefix not honoured in man pages
+2014-08-21 02:12:14 #7480 errored:   master Merge branch 'PHP-5.6'
+2014-08-21 00:51:38 #7479 errored:   master Fixed get_resources() prototype comments
+2014-08-20 17:34:02 #7477 errored:   master Merge branch 'PHP-5.6'
+2014-08-20 16:45:58 #7474 errored:   master Merge branch 'PHP-5.6'
+2014-08-20 14:36:13 #7472 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-20 14:31:27 #7471 errored:   master fix directory separator in test
+2014-08-20 13:09:17 #7470 errored:   master Fixed bug #67874 (Crash in array_map())
+2014-08-20 09:37:19 #7469 errored:   master Introduced get_resources() function.
+2014-08-20 09:03:29 #7467 errored:   master Merge branch 'PHP-5.6'
+2014-08-20 08:12:51 #7465 errored:   master Merge branch 'PHP-5.6'
+2014-08-20 06:08:05 #7464 errored:   master Removed a hack that allowed passing of function return value by reference depending on value of reference-counter (Fixed Zend/tests/bug35393.phpt test failure)
+2014-08-20 17:23:19 #7463 errored:   master phpdbg doesn't build due to the phpng merge, distable its build & test runs
+2014-08-20 04:18:00 #7462 errored:   master phpdbg doesn't build due to the phpng merge, distable it
+2014-08-20 01:45:12 #7461 errored:   master fixed memory leak
+2014-08-19 23:16:50 #7460 errored:   master Fixed off-by-one memory allocation that could lead to invalid memory reads on strlen()
+2014-08-19 18:40:24 #7458 errored:   master NEWS and UPGRADING
+2014-08-19 17:39:13 #7455 errored:   master Merge branch 'PHP-5.6'
+2014-08-19 15:42:28 #7452 errored:   master Merge branch 'PHP-5.6'
+2014-08-19 15:07:12 #7451 errored:   master Fixed referenced value separation
+2014-08-19 07:23:10 #7447 errored:   master fix incompatible types
+2014-08-19 05:54:39 #7446 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-19 03:35:49 #7443 errored:   master Merge branch 'PHP-5.6'
+2014-08-19 02:40:25 #7441 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-19 02:27:34 #7440 errored:   master fix merge issue in previous (again)
+2014-08-19 02:19:41 #7439 errored:   master fix merge issue in previous
+2014-08-19 01:58:04 #7438 errored:   master fix merge for #67717
+2014-08-19 01:18:14 #7435 errored:   master C89 compat
+2014-08-19 01:07:42 #7434 errored:   master c89 compat
+2014-08-19 01:02:40 #7433 errored:   master added missing define
+2014-08-19 00:46:54 #7432 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-19 00:29:35 #7431 errored:   master Fixed encoding support
+2014-08-18 16:29:28 #7430 errored:   master Bump version to 7.0.0
+2014-08-18 15:40:18 #7429 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-18 14:34:38 #7426 errored:   master Merge branch 'PHP-5.6'
+2014-08-18 12:51:40 #7425 errored:   master Improved error message
+2014-08-18 12:14:20 #7424 errored:   master Fixed bug #67856 (Leak when using array_reduce with by-ref function)
+2014-08-18 11:53:19 #7423 errored:   master Merge branch 'PHP-5.6'
+2014-08-18 11:20:41 #7421 errored:   master Fix bug #67858: Leak when $php_errormsg already set
+2014-08-18 10:09:19 #7420 errored:   master Merge branch 'PHP-5.6'
+2014-08-18 01:10:45 #7413 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-18 00:09:20 #7412 errored:   master Change to ext/reflection should be in its own category
+2014-08-17 17:56:00 #7410 errored:   master Updated NEWS for d790ec
+2014-08-17 13:41:32 #7405 errored:   master Merge branch 'PHP-5.6'
+2014-08-17 08:23:11 #7404 errored:   master typofixes
+2014-08-17 02:26:29 #7402 errored:   master Fixes missing Reflector interface constraints being enforced by the engine
+2014-08-16 03:45:21 #7398 errored:   master Fixed version id
+2014-08-15 18:51:19 #7396 errored:   master Merge branch 'PHP-5.6'
+2014-08-15 05:30:17 #7393 errored:   master Fixed version checking
+2014-08-15 04:24:18 #7391 errored:   master Fixed PHP6 unicode related tests
+2014-08-15 04:10:25 #7390 errored:   master Fixed PHP6 unicode related tests
+2014-08-15 04:01:08 #7389 errored:   master Merge branch 'master' of https://git.php.net/repository/php-src
+2014-08-15 02:47:54 #7388 errored:   master Parameters with duplicate names are not allowed anymore in PHP7.
+2014-08-15 02:42:53 #7387 errored:   master Behavoir of func_get_arg() and func_get_args() was changed in PHP7.
+2014-08-15 02:15:11 #7386 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-08-15 02:07:28 #7385 errored:   master Update Version Number :)
+2014-08-15 01:33:32 #7384 errored:   master Fixed initializing
+2014-08-15 00:05:04 #7383 errored:   master Merge branch 'master' into phpng
+2014-08-14 20:24:25 #7381 passed:    master Merge branch 'PHP-5.6'
+2014-08-14 19:44:22 #7378 passed:    master Merge branch 'PHP-5.6'
+2014-08-14 15:36:46 #7376 errored:   master Add NEWS entry for log() improvements
+2014-08-14 12:35:27 #7375 passed:    master Merge branch 'pull-request/658'
+2014-08-14 10:36:51 #7372 passed:    master Merge branch 'PHP-5.6'
+2014-08-13 19:19:40 #7367 passed:    master Merge branch 'PHP-5.6'
+2014-08-13 07:29:33 #7360 passed:    master Merge branch 'PHP-5.6'
+2014-08-12 10:24:03 #7356 passed:    master Merge branch 'PHP-5.6'
+2014-08-12 04:54:56 #7353 passed:    master Merge branch 'PHP-5.6'
+2014-08-12 03:45:17 #7352 passed:    master Merge branch 'PHP-5.6'
+2014-08-11 04:52:31 #7345 failed:    master Merge branch 'PHP-5.6'
+2014-08-08 14:04:31 #7342 failed:    master Merge branch 'PHP-5.6'
+2014-08-07 13:21:13 #7341 failed:    master Merge branch 'PHP-5.6'
+2014-08-07 12:28:53 #7338 errored:   master Merge branch 'PHP-5.6'
+2014-08-07 11:43:07 #7335 errored:   master Merge branch 'PHP-5.6'
+2014-08-07 11:37:50 #7334 errored:   master Merge branch 'PHP-5.6'
+2014-08-07 08:26:23 #7329 errored:   master Merge branch 'PHP-5.6'
+2014-08-07 04:26:55 #7326 failed:    master Merge branch 'PHP-5.6'
+2014-08-06 14:14:06 #7324 passed:    master Merge branch 'PHP-5.6'
+2014-08-06 13:57:53 #7323 errored:   master NEWS and UPGRADING for intdiv()
+2014-08-06 10:07:46 #7318 passed:    master Merge branch 'master' of git.php.net:php-src
+2014-08-06 09:08:07 #7315 passed:    master Merge branch 'PHP-5.6'
+2014-08-06 08:15:56 #7314 passed:    master Merge branch 'intdiv'
+2014-08-05 23:38:28 #7308 passed:    master Merge branch 'PHP-5.6'
+2014-08-05 22:17:53 #7306 passed:    master Merge branch 'PHP-5.6'
+2014-08-05 08:51:14 #7303 passed:    master Merge branch 'PHP-5.6'
+2014-08-04 04:35:54 #7296 passed:    master Merge branch 'PHP-5.6'
+2014-08-04 03:52:51 #7293 passed:    master Merge branch 'PHP-5.6'
+2014-08-04 03:00:39 #7288 passed:    master Merge branch 'PHP-5.6'
+2014-08-04 02:52:23 #7287 passed:    master Merge branch 'pull-request/756'
+2014-08-04 02:17:47 #7284 passed:    master Merge branch 'PHP-5.6'
+2014-08-01 11:02:58 #7281 passed:    master PHP_INT_MIN and _MAX tests
+2014-08-01 10:30:49 #7280 passed:    master Merge branch 'PHP_INT_MIN'
+2014-07-31 13:32:30 #7278 passed:    master Merge branch 'PHP-5.6'
+2014-07-31 08:37:57 #7274 failed:    master Merge branch 'PHP-5.6'
+2014-07-30 23:19:51 #7271 passed:    master Merge branch 'PHP-5.6'
+2014-07-30 15:01:50 #7268 failed:    master Merge branch 'PHP-5.6'
+2014-07-30 14:09:47 #7266 passed:    master Merge branch 'PHP-5.6'
+2014-07-30 11:35:50 #7259 passed:    master Merge commit '8b9719d'
+2014-07-30 11:13:36 #7258 passed:    master Merge branch 'PHP-5.6'
+2014-07-30 06:51:21 #7253 errored:   master Merge branch 'PHP-5.6'
+2014-07-30 05:37:39 #7249 passed:    master Merge branch 'PHP-5.6'
+2014-07-30 05:03:56 #7247 passed:    master Merge branch 'PHP-5.6'
+2014-07-30 04:24:02 #7244 passed:    master Merge branch 'PHP-5.6'
+2014-07-30 03:50:38 #7242 passed:    master Merge branch 'PHP-5.6'
+2014-07-30 01:41:50 #7237 passed:    master Merge branch 'PHP-5.6'
+2014-07-29 21:54:56 #7236 failed:    master Merge branch 'PHP-5.6'
+2014-07-29 06:16:54 #7233 failed:    master Merge branch 'PHP-5.6'
+2014-07-28 18:18:41 #7230 failed:    master Merge branch 'PHP-5.6'
+2014-07-28 13:43:33 #7227 passed:    master Merge branch 'PHP-5.6'
+2014-07-28 02:40:51 #7224 passed:    master Merge branch 'PHP-5.6'
+2014-07-26 21:38:39 #7221 passed:    master Merge branch 'PHP-5.6'
+2014-07-26 18:59:01 #7219 passed:    master Merge branch 'PHP-5.6'
+2014-07-25 06:17:23 #7214 passed:    master Merge branch 'PHP-5.6'
+2014-07-25 01:00:25 #7210 passed:    master Merge branch 'PHP-5.6'
+2014-07-24 22:41:08 #7207 passed:    master Merge branch 'PHP-5.6'
+2014-07-24 11:06:04 #7202 errored:   master Merge branch 'PHP-5.6'
+2014-07-24 10:05:04 #7200 passed:    master Merge branch 'PHP-5.6'
+2014-07-24 01:42:31 #7198 passed:    master Merge branch 'PHP-5.6'
+2014-07-23 16:19:34 #7194 passed:    master Merge branch 'PHP-5.6'
+2014-07-23 16:03:16 #7193 failed:    master Merge branch 'PHP-5.6'
+2014-07-23 13:54:53 #7191 errored:   master Merge branch 'PHP-5.6'
+2014-07-21 07:49:47 #7175 passed:    master Merge branch 'PHP-5.6'
+2014-07-21 03:03:04 #7171 passed:    master Merge branch 'PHP-5.6'
+2014-07-20 17:59:41 #7170 passed:    master Merge branch 'PHP-5.6'
+2014-07-20 04:17:01 #7158 passed:    master Merge branch 'PHP-5.6'
+2014-07-19 11:48:29 #7154 passed:    master Merge branch 'PHP-5.6'
+2014-07-19 04:20:52 #7152 passed:    master Merge branch 'PHP-5.6'
+2014-07-19 00:14:02 #7150 passed:    master Merge branch 'PHP-5.6'
+2014-07-18 20:06:17 #7147 passed:    master Merge branch 'PHP-5.6'
+2014-07-18 11:47:53 #7142 passed:    master Merge branch 'PHP-5.6'
+2014-07-18 04:45:45 #7140 passed:    master Merge branch 'PHP-5.6'
+2014-07-18 02:52:25 #7137 passed:    master Merge branch 'PHP-5.6'
+2014-07-17 16:18:27 #7136 errored:   master Merge branch 'PHP-5.6'
+2014-07-17 14:56:19 #7132 errored:   master Merge branch 'PHP-5.6'
+2014-07-17 02:38:19 #7124 errored:   master Merge branch 'PHP-5.6'
+2014-07-16 14:47:21 #7120 passed:    master Merge branch 'PHP-5.6'
+2014-07-16 12:01:05 #7116 errored:   master Merge branch 'PHP-5.6'
+2014-07-16 11:41:49 #7114 errored:   master Merge branch 'PHP-5.6'
+2014-07-15 23:16:24 #7110 passed:    master Merge branch 'PHP-5.6'
+2014-07-14 13:32:14 #7100 passed:    master Merge branch 'PHP-5.6'
+2014-07-14 10:33:57 #7099 failed:    master This test depends on expose_php being on
+2014-07-14 02:54:57 #7092 passed:    master Merge branch 'PHP-5.6'
+2014-07-12 10:17:51 #7084 passed:    master Merge branch 'PHP-5.6'
+2014-07-11 22:21:09 #7077 passed:    master Merge branch 'PHP-5.6'
+2014-07-11 14:54:17 #7076 errored:   master fixed broken merged code
+2014-07-11 13:00:03 #7070 passed:    master Test output relies on expose_php being on
+2014-07-11 12:31:19 #7068 passed:    master 1.2 is a problematic float to print out
+2014-07-11 11:16:38 #7067 passed:    master The test output is dependent on expose_php ini
+2014-07-11 08:09:31 #7066 passed:    master Merge branch 'PHP-5.6'
+2014-07-11 02:40:58 #7065 passed:    master Merge branch 'PHP-5.6'
+2014-07-10 16:21:56 #7064 passed:    master Merge branch 'PHP-5.6'
+2014-07-10 16:03:23 #7063 errored:   master Merge branch 'PHP-5.6'
+2014-07-10 14:20:56 #7057 passed:    master cleanup file headers.
+2014-07-10 13:21:13 #7056 passed:    master update year & copyright
+2014-07-10 12:39:01 #7053 passed:    master Merge branch 'PHP-5.6'
+2014-07-10 08:22:57 #7049 passed:    master Merge branch 'PHP-5.6'
+2014-07-08 23:43:31 #7046 passed:    master Merge branch 'PHP-5.6'
+2014-07-08 17:41:28 #7040 passed:    master Merge branch 'PHP-5.6'
+2014-07-08 17:04:43 #7037 passed:    master Merge branch 'PHP-5.6'
+2014-07-08 14:57:49 #7035 passed:    master Merge branch 'pull-request/712'
+2014-07-08 04:02:00 #7032 errored:   master Merge branch 'PHP-5.6'
+2014-07-08 02:59:17 #7028 failed:    master Merge branch 'PHP-5.6'
+2014-07-08 02:50:58 #7027 failed:    master Merge branch 'pull-request/691'
+2014-07-08 01:35:20 #7024 passed:    master Merge branch 'PHP-5.6'
+2014-07-07 17:30:42 #7023 failed:    master Fix still broken session test.  Only return true/false.
+2014-07-07 15:51:08 #7021 errored:   master Merge branch 'PHP-5.6'
+2014-07-07 15:05:50 #7020 failed:    master Followup fix to custom session save handlers
+2014-07-07 13:48:44 #7017 failed:    master Merge branch 'PHP-5.6'
+2014-07-07 11:36:58 #7013 failed:    master Merge branch 'PHP-5.6'
+2014-07-07 03:48:22 #7007 failed:    master Merge branch 'PHP-5.6'
+2014-07-07 03:20:07 #7005 failed:    master Merge branch 'PHP-5.6'
+2014-07-07 02:40:00 #7002 failed:    master Merge branch 'PHP-5.6'
+2014-07-07 00:17:30 #7001 failed:    master Merge branch 'PHP-5.6'
+2014-07-06 11:47:34 #6997 failed:    master Fix handling of session user module custom handlers.
+2014-07-06 00:36:34 #6992 passed:    master Merge branch 'PHP-5.6'
+2014-07-05 18:22:09 #6991 passed:    master Merge branch 'PHP-5.6'
+2014-07-03 13:45:04 #6986 passed:    master Merge branch 'PHP-5.6'
+2014-07-03 02:00:27 #6983 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 21:52:49 #6980 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 18:32:05 #6979 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 18:04:29 #6977 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 17:03:51 #6974 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 16:44:49 #6972 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 15:39:10 #6969 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 14:32:08 #6968 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 11:07:41 #6965 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 10:31:11 #6964 failed:    master Merge branch 'PHP-5.6'
+2014-07-02 06:43:18 #6960 failed:    master Merge branch 'PHP-5.6'
+2014-07-02 06:33:32 #6959 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 05:28:55 #6955 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 04:49:53 #6953 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 04:14:20 #6950 passed:    master Merge branch 'PHP-5.6'
+2014-07-02 02:58:02 #6947 passed:    master Merge branch 'PHP-5.6'
+2014-07-01 19:20:19 #6944 passed:    master Merge branch 'PHP-5.6'
+2014-07-01 18:41:11 #6942 passed:    master Merge branch 'PHP-5.6'
+2014-07-01 15:28:26 #6939 passed:    master Merge branch 'PHP-5.6'
+2014-07-01 04:34:54 #6938 passed:    master Merge branch 'PHP-5.6'
+2014-07-01 03:30:54 #6935 passed:    master Merge branch 'PHP-5.6'
+2014-06-30 15:20:28 #6933 passed:    master Merge branch 'PHP-5.6'
+2014-06-30 11:41:16 #6932 passed:    master Merge branch 'PHP-5.6'
+2014-06-30 05:32:20 #6929 passed:    master Merge branch 'PHP-5.6'
+2014-06-29 19:33:32 #6926 passed:    master Merge branch 'PHP-5.6'
+2014-06-29 18:37:04 #6923 passed:    master Merge branch 'PHP-5.6'
+2014-06-29 18:04:16 #6920 passed:    master Merge branch 'PHP-5.6'
+2014-06-29 06:02:26 #6918 passed:    master Merge branch 'PHP-5.6'
+2014-06-29 05:07:38 #6916 passed:    master Merge remote branch 'origin/PHP-5.6'
+2014-06-27 09:41:26 #6912 failed:    master Merge branch 'PHP-5.6'
+2014-06-27 02:52:59 #6907 failed:    master Merge branch 'PHP-5.6'
+2014-06-26 23:20:30 #6904 passed:    master Merge branch 'PHP-5.6'
+2014-06-25 06:58:25 #6899 passed:    master Merge branch 'PHP-5.6'
+2014-06-24 13:31:12 #6893 passed:    master Merge branch 'PHP-5.6'
+2014-06-24 12:42:20 #6891 errored:   master Merge branch 'PHp-5.6'
+2014-06-24 00:54:43 #6889 passed:    master Merge branch 'PHP-5.6'
+2014-06-24 00:16:37 #6887 passed:    master Merge branch 'PHP-5.6'
+2014-06-23 03:53:55 #6886 failed:    master Merge branch 'PHP-5.6'
+2014-06-23 03:20:03 #6884 passed:    master Merge branch 'PHP-5.6'
+2014-06-23 03:16:08 #6883 passed:    master Merge branch 'PHP-5.6'
+2014-06-20 05:03:30 #6879 failed:    master Merge branch 'PHP-5.6'
+2014-06-19 23:46:42 #6878 passed:    master Merge branch 'PHP-5.6'
+2014-06-18 19:56:24 #6874 passed:    master Merge branch 'PHP-5.6'
+2014-06-18 19:21:36 #6872 passed:    master Merge branch 'PHP-5.6'
+2014-06-18 18:36:20 #6870 passed:    master Merge branch 'PHP-5.6'
+2014-06-18 16:59:44 #6867 passed:    master Merge branch 'PHP-5.6'
+2014-06-18 10:45:01 #6865 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-06-18 17:19:45 #6863 passed:    master Merge branch 'PHP-5.6'
+2014-06-18 08:58:46 #6860 passed:    master Merge branch 'PHP-5.6'
+2014-06-18 06:26:37 #6859 passed:    master Update copyright year to 2014
+2014-06-18 17:31:47 #6855 passed:    master Merge branch 'PHP-5.6'
+2014-06-16 15:39:41 #6854 passed:    master Merge branch 'PHP-5.6'
+2014-06-16 04:31:38 #6851 passed:    master Merge branch 'PHP-5.6'
+2014-06-16 03:53:50 #6847 passed:    master Merge branch 'PHP-5.6'
+2014-06-16 02:45:50 #6846 passed:    master Merge branch 'PHP-5.6'
+2014-06-15 17:45:15 #6845 passed:    master Merge branch 'PHP-5.6'
+2014-06-15 17:08:41 #6842 passed:    master Merge branch 'PHP-5.6'
+2014-06-15 16:17:21 #6838 passed:    master Merge branch 'PHP-5.6'
+2014-06-15 08:52:01 #6834 passed:    master Merge branch 'PHP-5.6'
+2014-06-15 03:09:32 #6832 passed:    master Merge branch 'PHP-5.6'
+2014-06-14 01:58:14 #6830 passed:    master Merge branch 'PHP-5.6'
+2014-06-13 06:18:27 #6829 passed:    master Merge branch 'PHP-5.6'
+2014-06-12 20:57:32 #6827 passed:    master Merge branch 'PHP-5.6'
+2014-06-12 20:41:46 #6825 passed:    master Merge branch 'PHP-5.6'
+2014-06-12 19:44:00 #6821 passed:    master Merge branch 'PHP-5.6'
+2014-06-12 04:04:04 #6819 passed:    master Merge branch 'httponly-cookies' of https://github.com/mj/php-src
+2014-06-11 17:26:45 #6816 passed:    master Merge branch 'PHP-5.6'
+2014-06-11 16:02:37 #6813 passed:    master Merge branch 'PHP-5.6'
+2014-06-11 08:01:18 #6811 passed:    master Merge branch 'PHP-5.6'
+2014-06-11 01:59:48 #6804 passed:    master Merge branch 'PHP-5.6'
+2014-06-11 01:22:43 #6801 passed:    master Merge branch 'PHP-5.6'
+2014-06-10 19:34:35 #6799 passed:    master Add NEWS. This doesn't need UPGRADING (or an RFC), IMO.
+2014-06-10 16:28:40 #6798 errored:   master fix test
+2014-06-10 09:57:34 #6796 failed:    master Merge branch 'PHP-5.6'
+2014-06-10 09:37:01 #6795 failed:    master Merge branch 'PHP-5.6'
+2014-06-10 08:18:12 #6791 failed:    master Merge branch 'PHP-5.6'
+2014-06-10 08:10:38 #6790 failed:    master Merge branch 'PHP-5.6'
+2014-06-10 07:07:09 #6787 failed:    master Merge branch 'PHP-5.6'
+2014-06-10 04:02:45 #6785 failed:    master Merge branch 'PHP-5.6'
+2014-06-09 08:31:39 #6780 failed:    master Merge branch 'PHP-5.6'
+2014-06-09 03:08:39 #6778 failed:    master Merge branch 'PHP-5.6'
+2014-06-09 01:12:31 #6776 failed:    master Merge branch 'PHP-5.6'
+2014-06-09 00:11:27 #6775 failed:    master Merge branch 'PHP-5.6'
+2014-06-08 22:28:56 #6772 failed:    master Merge branch 'PHP-5.6'
+2014-06-08 21:58:37 #6769 failed:    master Merge remote-tracking branch 'github/pr/669'
+2014-06-08 21:34:44 #6768 failed:    master Merge remote-tracking branch 'github/pr/462'
+2014-06-08 21:07:07 #6766 passed:    master Merge branch 'PHP-5.6'
+2014-06-08 17:55:50 #6759 passed:    master Merge branch 'PHP-5.6'
+2014-06-08 16:29:41 #6756 failed:    master Merge branch 'pull-request/676'
+2014-06-08 16:22:52 #6755 passed:    master Merge remote-tracking branch 'github/pr/677'
+2014-06-08 15:55:13 #6752 passed:    master Merge branch 'pull-request/687'
+2014-06-07 17:19:20 #6750 passed:    master Merge branch 'PHP-5.6'
+2014-06-07 08:30:26 #6748 passed:    master Merge branch 'PHP-5.6'
+2014-06-06 10:25:43 #6746 passed:    master Merge branch 'PHP-5.6'
+2014-06-06 10:20:17 #6745 passed:    master Merge branch 'PHP-5.6'
+2014-06-06 07:20:20 #6742 passed:    master Merge branch 'PHP-5.6'
+2014-06-05 11:18:27 #6738 passed:    master Merge branch 'PHP-5.6'
+2014-06-05 10:39:05 #6735 errored:   master fix test for 5.4/5.5
+2014-06-05 08:06:31 #6734 passed:    master restore correct behavior of DateTime
+2014-06-05 07:19:27 #6731 failed:    master fix test use invalid code
+2014-06-05 06:48:36 #6730 passed:    master Merge branch 'PHP-5.6'
+2014-06-04 03:13:10 #6726 passed:    master Merge branch 'PHP-5.6'
+2014-06-03 19:22:04 #6723 passed:    master Merge branch 'PHP-5.6'
+2014-06-03 17:11:42 #6721 passed:    master Fixed startup segfault in non-debug builds
+2014-06-03 16:22:34 #6718 errored:   master fix gcov data with some locales (again)
+2014-06-03 14:02:01 #6716 passed:    master Merge branch 'PHP-5.6'
+2014-06-03 05:48:59 #6715 passed:    master Merge branch 'PHP-5.6'
+2014-06-03 10:26:38 #6712 passed:    master Merge branch 'PHP-5.6'
+2014-06-03 04:11:35 #6710 passed:    master Merge branch 'PHP-5.6'
+2014-06-03 03:29:16 #6709 passed:    master Merge branch 'PHP-5.6'
+2014-06-01 06:43:45 #6706 passed:    master Merge branch 'PHP-5.6'
+2014-05-29 12:59:41 #6702 passed:    master Merge branch 'PHP-5.6'
+2014-05-27 15:45:49 #6695 failed:    master Merge branch 'PHP-5.6'
+2014-05-27 14:16:43 #6691 passed:    master Merge branch 'PHP-5.6'
+2014-05-27 05:06:15 #6684 passed:    master Merge branch 'PHP-5.6'
+2014-05-27 04:10:19 #6683 failed:    master Merge branch 'PHP-5.6'
+2014-05-27 00:20:41 #6680 passed:    master Merge branch 'PHP-5.6'
+2014-05-26 20:16:23 #6678 passed:    master Merge branch 'PHP-5.6'
+2014-05-26 14:09:14 #6676 passed:    master fix my last commit with some locales
+2014-05-26 02:42:38 #6671 passed:    master Merge branch 'PHP-5.6'
+2014-05-26 01:14:08 #6667 passed:    master Merge branch 'PHP-5.6'
+2014-05-24 17:12:17 #6665 passed:    master Merge branch 'PHP-5.6'
+2014-05-24 08:12:26 #6663 passed:    master Merge branch 'PHP-5.6'
+2014-05-24 02:45:36 #6662 passed:    master Merge branch 'new-tests' of https://github.com/SammyK/php-src
+2014-05-23 10:33:59 #6659 passed:    master Merge branch 'PHP-5.6'
+2014-05-22 17:46:27 #6653 failed:    master Merge branch 'PHP-5.6'
+2014-05-21 15:12:47 #6649 failed:    master Merge branch 'PHP-5.6'
+2014-05-21 12:11:53 #6646 passed:    master Merge branch 'PHP-5.6'
+2014-05-19 02:12:29 #6644 passed:    master Merge branch 'PHP-5.6'
+2014-05-18 11:57:14 #6641 passed:    master Merge branch 'PHP-5.6'
+2014-05-18 11:52:29 #6640 passed:    master Merge branch 'PHP-5.6'
+2014-05-18 10:22:43 #6637 passed:    master gcov: tentative fix for broken coverage data after fix for opcache coverage
+2014-05-14 02:15:46 #6622 passed:    master Merge branch 'PHP-5.6'
+2014-05-14 00:23:33 #6620 passed:    master Merge branch 'PHP-5.6'
+2014-05-13 19:16:19 #6617 passed:    master Merge branch 'PHP-5.6'
+2014-05-13 10:42:01 #6612 passed:    master Merge branch 'PHP-5.6'
+2014-05-12 13:02:43 #6603 passed:    master Merge branch 'PHP-5.6'
+2014-05-12 03:41:47 #6595 passed:    master fix test
+2014-05-12 01:57:12 #6592 failed:    master Merge branch 'PHP-5.6'
+2014-05-12 01:32:10 #6590 failed:    master fix test
+2014-05-12 01:05:17 #6589 failed:    master improve CURL tests to allow testing without separate server
+2014-05-11 23:45:58 #6587 failed:    master Merge branch 'PHP-5.6'
+2014-05-11 20:58:45 #6585 passed:    master Merge branch 'PHP-5.6'
+2014-05-11 07:47:15 #6583 passed:    master Merge branch 'PHP-5.6'
+2014-05-10 10:44:22 #6581 passed:    master Merge branch 'PHP-5.6'
+2014-05-10 10:05:24 #6578 passed:    master Merge branch 'PHP-5.6'
+2014-05-10 09:38:49 #6576 passed:    master Merge branch 'PHP-5.6'
+2014-05-09 15:19:52 #6572 passed:    master Merge branch 'PHP-5.6'
+2014-05-08 04:37:15 #6560 passed:    master Merge branch 'PHP-5.6'
+2014-05-08 04:04:40 #6558 passed:    master Merge branch 'PHP-5.6'
+2014-05-08 03:02:35 #6555 passed:    master Merge branch 'PHP-5.6'
+2014-05-07 09:16:44 #6547 failed:    master Merge branch 'PHP-5.6'
+2014-05-06 18:45:57 #6530 failed:    master Merge branch 'PHP-5.6'
+2014-05-06 17:41:25 #6527 failed:    master Merge branch 'PHP-5.6'
+2014-05-06 15:15:58 #6523 errored:   master Fix typo
+2014-05-06 14:39:29 #6519 failed:    master This test requires the hash extension.
+2014-05-06 06:15:01 #6510 failed:    master Merge branch 'PHP-5.6'
+2014-05-06 05:44:34 #6507 failed:    master Merge branch 'PHP-5.6'
+2014-05-06 05:15:33 #6502 failed:    master Merge branch 'PHP-5.6'
+2014-05-05 09:39:05 #6492 failed:    master Merge branch 'PHP-5.6'
+2014-05-04 17:52:41 #6484 failed:    master Merge branch 'PHP-5.6'
+2014-05-04 14:35:47 #6482 failed:    master Merge branch 'PHP-5.6'
+2014-05-04 14:29:17 #6480 failed:    master Merge branch 'PHP-5.6'
+2014-05-03 04:42:29 #6469 failed:    master Merge branch 'PHP-5.6'
+2014-05-02 19:52:31 #6467 failed:    master Merge branch 'PHP-5.5'
+2014-05-02 16:37:23 #6463 failed:    master Merge branch 'PHP-5.6'
+2014-05-02 13:41:57 #6462 failed:    master Merge branch 'PHP-5.6'
+2014-05-02 05:54:13 #6458 failed:    master Merge branch 'PHP-5.6'
+2014-05-02 03:36:21 #6457 failed:    master Merge branch 'PHP-5.6'
+2014-05-02 02:49:40 #6454 failed:    master Merge branch 'PHP-5.6'
+2014-05-01 13:26:51 #6450 failed:    master Merge branch 'PHP-5.6'
+2014-05-01 11:21:17 #6446 failed:    master Merge branch 'PHP-5.6'
+2014-05-01 10:21:18 #6444 failed:    master Merge branch 'PHP-5.6'
+2014-05-01 09:28:50 #6442 failed:    master Merge branch 'PHP-5.6'
+2014-05-01 08:31:17 #6440 failed:    master Merge branch 'PHP-5.6'
+2014-05-01 07:14:52 #6437 failed:    master Merge sapi/phpdbg
+2014-05-01 06:45:07 #6436 failed:    master Merge branch 'PHP-5.6'
+2014-05-01 05:36:33 #6433 failed:    master Merge branch 'PHP-5.6'
+2014-05-01 04:46:54 #6431 failed:    master Merge branch 'PHP-5.6'
+2014-05-01 03:44:52 #6429 failed:    master Merge branch 'PHP-5.6'
+2014-04-30 02:31:22 #6418 failed:    master Merge branch 'PHP-5.6'
+2014-04-29 17:18:47 #6416 failed:    master Merge remote-tracking branch 'origin/PHP-5.6'
+2014-04-29 11:20:34 #6408 failed:    master Merge branch 'PHP-5.6'
+2014-04-29 06:49:40 #6401 passed:    master Merge branch 'PHP-5.6'
+2014-04-28 04:15:49 #6394 passed:    master Merge branch 'master' of https://git.php.net/push/php-src
+2014-04-28 04:08:43 #6393 passed:    master Merge branch 'PHP-5.6'
+2014-04-27 11:03:05 #6386 passed:    master Merge branch 'PHP-5.6'
+2014-04-25 17:18:15 #6382 passed:    master Merge branch 'PHP-5.6'
+2014-04-25 10:45:37 #6379 passed:    master Merge branch 'PHP-5.6'
+2014-04-25 10:32:30 #6376 failed:    master Merge branch 'PHP-5.6'
+2014-04-25 02:09:46 #6372 passed:    master Merge branch 'PHP-5.6'
+2014-04-24 13:26:31 #6369 passed:    master Merge branch 'PHP-5.6'
+2014-04-24 12:59:18 #6367 passed:    master Merge branch 'PHP-5.6'
+2014-04-24 12:43:34 #6364 passed:    master Merge branch 'PHP-5.6'
+2014-04-24 04:10:04 #6361 passed:    master Merge branch 'PHP-5.6'
+2014-04-24 03:54:49 #6360 passed:    master Merge branch 'PHP-5.6'
+2014-04-22 19:00:36 #6351 failed:    master Merge branch 'PHP-5.6'
+2014-04-22 08:48:21 #6348 passed:    master Merge branch 'PHP-5.6'
+2014-04-21 17:22:57 #6346 passed:    master Merge branch 'PHP-5.6'
+2014-04-21 16:34:20 #6344 passed:    master Merge branch 'PHP-5.6'
+2014-04-20 18:54:00 #6336 passed:    master Merge branch 'pull-request/603'
+2014-04-20 18:39:17 #6333 passed:    master Merge branch 'pull-request/605'
+2014-04-20 18:26:34 #6331 passed:    master Merge branch 'pull-request/627'
+2014-04-20 17:29:11 #6328 passed:    master Merge branch 'PHP-5.6'
+2014-04-18 09:29:21 #6318 passed:    master Merge branch 'PHP-5.6'
+2014-04-18 09:06:30 #6316 passed:    master Merge branch 'PHP-5.6'
+2014-04-18 08:57:11 #6313 passed:    master Merge branch 'PHP-5.6'
+2014-04-18 08:19:26 #6310 passed:    master Merge branch 'PHP-5.6'
+2014-04-17 19:38:22 #6307 passed:    master Merge branch 'pull-request/646'
+2014-04-17 11:28:54 #6303 failed:    master Merge branch 'PHP-5.6'
+2014-04-17 10:19:33 #6300 failed:    master These links to ~helly don't work anymore.
+2014-04-17 04:11:20 #6296 failed:    master Merge branch 'PHP-5.6'
+2014-04-16 13:55:48 #6294 passed:    master Merge branch 'PHP-5.6'
+2014-04-16 08:09:53 #6293 passed:    master Merge branch 'PHP-5.6'
+2014-04-16 07:19:06 #6290 passed:    master Merge branch 'PHP-5.6'
+2014-04-16 02:52:45 #6289 passed:    master Merge branch 'PHP-5.6'
+2014-04-15 19:20:05 #6288 failed:    master Merge branch 'PHP-5.6'
+2014-04-15 12:34:25 #6285 failed:    master Merge branch 'PHP-5.6'
+2014-04-14 17:59:29 #6275 passed:    master Merge branch 'PHP-5.6'
+2014-04-14 16:51:27 #6274 failed:    master Merge branch 'PHP-5.6'
+2014-04-14 15:54:24 #6273 failed:    master Merge branch 'PHP-5.6'
+2014-04-14 15:26:35 #6270 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-04-14 13:02:40 #6267 failed:    master Merge branch 'PHP-5.6'
+2014-04-14 10:53:07 #6265 failed:    master Merge branch 'PHP-5.6'
+2014-04-14 09:54:25 #6263 failed:    master Merge branch 'PHP-5.6'
+2014-04-14 08:38:32 #6262 failed:    master Merge branch 'PHP-5.6'
+2014-04-14 02:36:07 #6256 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 22:18:51 #6252 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 21:13:45 #6251 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 20:43:16 #6246 failed:    master Merge branch 'pull-request/533'
+2014-04-13 20:17:19 #6245 failed:    master Merge branch 'pull-request/578'
+2014-04-13 20:15:12 #6243 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 19:34:05 #6239 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 19:05:46 #6236 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 18:10:18 #6235 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 17:42:40 #6231 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 17:11:33 #6227 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 16:22:27 #6225 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 12:54:23 #6221 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 12:29:34 #6218 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 04:43:29 #6215 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 03:50:42 #6213 failed:    master Merge branch 'PHP-5.6'
+2014-04-13 03:46:55 #6211 failed:    master Merge branch 'PHP-5.6'
+2014-04-12 19:48:21 #6208 failed:    master Merge branch 'PHP-5.6'
+2014-04-12 18:56:08 #6206 failed:    master Merge branch 'PHP-5.6'
+2014-04-12 16:56:47 #6203 failed:    master Merge branch 'PHP-5.6'
+2014-04-11 13:20:15 #6199 failed:    master Merge branch 'PHP-5.6'
+2014-04-11 12:41:55 #6197 failed:    master Merge branch 'PHP-5.6'
+2014-04-11 11:33:17 #6194 failed:    master Merge branch 'PHP-5.6'
+2014-04-11 09:29:46 #6192 failed:    master Merge branch 'PHP-5.6'
+2014-04-11 06:30:24 #6189 errored:   master Merge branch 'PHP-5.6'
+2014-04-11 04:05:29 #6188 errored:   master Merge branch 'PHP-5.6'
+2014-04-11 03:13:42 #6187 errored:   master Merge branch 'PHP-5.6'
+2014-04-10 12:25:59 #6184 failed:    master Merge branch 'PHP-5.6'
+2014-04-10 09:54:01 #6181 passed:    master Merge branch 'PHP-5.6'
+2014-04-10 00:07:05 #6176 passed:    master Merge branch 'PHP-5.6'
+2014-04-09 23:22:06 #6172 passed:    master Merge branch 'PHP-5.6'
+2014-04-09 12:20:59 #6170 passed:    master Merge branch 'PHP-5.6'
+2014-04-09 07:15:27 #6165 passed:    master Merge branch 'PHP-5.6'
+2014-04-09 05:35:27 #6164 failed:    master Merge branch 'PHP-5.6'
+2014-04-09 04:55:37 #6161 failed:    master Merge branch 'PHP-5.6'
+2014-04-08 18:43:27 #6156 failed:    master Merge branch 'PHP-5.6'
+2014-04-08 11:43:42 #6155 passed:    master Merge branch 'PHP-5.6'
+2014-04-08 09:38:38 #6152 passed:    master cleanup old unsupported versions of Firebird 1.0.x
+2014-04-08 07:31:22 #6151 passed:    master cleanup
+2014-04-08 06:13:49 #6150 passed:    master Fixes bug #66071: isc_interprete is unsafe and deprecated , it is replaced with fb_iterpret
+2014-04-08 04:47:06 #6149 passed:    master Merge branch 'PHP-5.6'
+2014-04-07 10:48:50 #6147 passed:    master Merge branch 'PHP-5.6'
+2014-04-07 10:23:31 #6145 passed:    master Merge branch 'PHP-5.6'
+2014-04-07 10:01:27 #6143 passed:    master Merge branch 'PHP-5.6'
+2014-04-05 20:36:17 #6139 failed:    master Merge branch 'PHP-5.6'
+2014-04-05 02:51:41 #6134 failed:    master Merge branch 'PHP-5.6'
+2014-04-04 23:46:19 #6133 failed:    master Merge branch 'master' of https://git.php.net/push/php-src
+2014-04-03 17:59:25 #6129 failed:    master Merge branch 'PHP-5.6'
+2014-04-03 03:43:16 #6126 failed:    master Merge branch 'PHP-5.6'
+2014-04-03 02:11:07 #6122 failed:    master Merge branch 'PHP-5.6'
+2014-04-02 08:42:05 #6120 failed:    master Merge branch 'PHP-5.6'
+2014-04-02 04:17:10 #6119 failed:    master Merge branch 'PHP-5.6'
+2014-04-01 03:17:40 #6113 failed:    master Merge branch 'PHP-5.6'
+2014-03-31 10:28:40 #6110 failed:    master Merge branch 'PHP-5.6'
+2014-03-31 10:01:37 #6106 failed:    master Merge branch 'PHP-5.6'
+2014-03-27 12:33:41 #6095 failed:    master Merge branch 'PHP-5.6'
+2014-03-27 03:33:37 #6090 failed:    master Merge branch 'PHP-5.6'
+2014-03-26 10:51:56 #6086 failed:    master Merge branch 'PHP-5.6'
+2014-03-25 07:18:56 #6081 failed:    master Merge branch 'PHP-5.6'
+2014-03-25 06:08:29 #6079 failed:    master fix merge issue
+2014-03-25 06:07:06 #6078 errored:   master Added TSRMLS_CC to zend_is_true() calls
+2014-03-25 05:28:06 #6077 errored:   master Merge branch 'PHP-5.6'
+2014-03-25 05:07:27 #6075 errored:   master Merge branch 'PHP-5.6'
+2014-03-25 00:48:11 #6068 failed:    master Merge branch 'PHP-5.6'
+2014-03-24 13:32:44 #6063 failed:    master Merge branch 'PHP-5.6'
+2014-03-24 12:05:40 #6062 failed:    master Merge branch 'PHP-5.6'
+2014-03-24 04:33:30 #6060 failed:    master Merge branch 'PHP-5.6'
+2014-03-22 04:46:24 #6054 failed:    master Merge branch 'PHP-5.6'
+2014-03-21 07:35:26 #6051 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-03-20 19:36:04 #6049 failed:    master Merge branch 'PHP-5.6'
+2014-03-20 18:19:56 #6048 failed:    master Merge branch 'PHP-5.6'
+2014-03-20 09:20:06 #6047 failed:    master Merge branch 'PHP-5.6'
+2014-03-19 21:07:10 #6044 failed:    master Merge branch 'PHP-5.6'
+2014-03-19 17:32:56 #6038 failed:    master Merge branch 'PHP-5.6'
+2014-03-19 16:26:13 #6037 failed:    master Merge branch 'PHP-5.6'
+2014-03-19 12:51:19 #6033 failed:    master Merge branch 'PHP-5.6'
+2014-03-19 08:26:37 #6032 errored:   master Merge branch 'PHP-5.6'
+2014-03-19 04:21:34 #6028 failed:    master Merge branch 'PHP-5.6'
+2014-03-19 01:26:45 #6020 failed:    master Merge branch 'PHP-5.6'
+2014-03-19 00:40:58 #6019 failed:    master Merge branch 'PHP-5.6'
+2014-03-18 11:46:07 #6018 errored:   master Merge branch 'PHP-5.6'
+2014-03-18 10:24:55 #6017 failed:    master Merge branch 'PHP-5.6'
+2014-03-18 09:47:15 #6012 failed:    master Merge branch 'PHP-5.6'
+2014-03-18 04:53:32 #6007 failed:    master Merge branch 'PHP-5.6'
+2014-03-18 04:39:43 #6006 failed:    master Merge branch 'PHP-5.6'
+2014-03-17 17:30:37 #6005 failed:    master Merge branch 'PHP-5.6'
+2014-03-17 16:37:10 #6003 failed:    master Merge branch 'PHP-5.6'
+2014-03-17 09:11:47 #6001 failed:    master Merge branch 'PHP-5.6'
+2014-03-17 03:21:44 #5993 failed:    master Merge branch 'PHP-5.6'
+2014-03-15 12:02:59 #5990 failed:    master Merge branch 'PHP-5.6'
+2014-03-14 03:54:32 #5980 failed:    master Merge branch 'PHP-5.6'
+2014-03-13 05:44:20 #5976 failed:    master Merge branch 'PHP-5.6'
+2014-03-13 04:33:03 #5970 failed:    master Merge branch 'PHP-5.6'
+2014-03-12 17:02:56 #5964 failed:    master Merge branch 'PHP-5.6'
+2014-03-12 16:40:10 #5962 failed:    master Merge branch 'PHP-5.6'
+2014-03-12 13:42:20 #5959 failed:    master Merge branch 'PHP-5.6'
+2014-03-12 11:26:31 #5958 failed:    master Merge branch 'PHP-5.6'
+2014-03-12 09:41:42 #5955 failed:    master Merge branch 'PHP-5.6'
+2014-03-12 08:32:12 #5952 failed:    master Merge branch 'PHP-5.6'
+2014-03-12 08:10:02 #5949 failed:    master Merge branch 'PHP-5.6'
+2014-03-12 07:49:55 #5946 failed:    master Merge branch 'PHP-5.6'
+2014-03-12 06:34:32 #5944 failed:    master Merge branch 'PHP-5.6'
+2014-03-11 17:37:53 #5941 failed:    master Merge branch 'PHP-5.6'
+2014-03-11 13:16:18 #5938 failed:    master Merge branch 'PHP-5.6'
+2014-03-11 10:34:26 #5934 failed:    master Merge branch 'PHP-5.6'
+2014-03-11 08:08:52 #5932 failed:    master Merge branch 'PHP-5.6'
+2014-03-11 06:19:00 #5929 failed:    master Merge branch 'PHP-5.6'
+2014-03-11 05:56:43 #5928 failed:    master Merge branch 'PHP-5.6'
+2014-03-10 18:48:19 #5921 failed:    master Merge branch 'master' of https://git.php.net/repository/php-src
+2014-03-10 12:43:11 #5920 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-03-10 12:05:26 #5919 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-03-10 11:50:58 #5916 failed:    master Merge branch 'PHP-5.6'
+2014-03-10 11:19:25 #5913 failed:    master Merge branch 'PHP-5.6'
+2014-03-10 10:40:14 #5910 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-03-10 10:33:44 #5907 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-03-10 08:19:19 #5901 errored:   master Merge branch 'PHP-5.6'
+2014-03-10 06:26:35 #5896 failed:    master fix ZTS
+2014-03-10 06:21:36 #5895 failed:    master Merge branch 'PHP-5.6'
+2014-03-10 06:00:29 #5892 failed:    master Merge branch 'PHP-5.6'
+2014-03-10 03:00:17 #5890 failed:    master Merge branch 'PHP-5.6'
+2014-03-09 16:09:08 #5889 failed:    master Merge branch 'PHP-5.6'
+2014-03-09 15:21:30 #5887 failed:    master Merge branch 'PHP-5.6'
+2014-03-09 07:09:34 #5884 failed:    master Merge branch 'PHP-5.6'
+2014-03-08 02:19:26 #5878 failed:    master Updated test case with expected output
+2014-03-07 07:15:46 #5876 failed:    master Merge branch 'PHP-5.6'
+2014-03-07 06:28:25 #5875 failed:    master Merge branch 'PHP-5.6'
+2014-03-07 05:38:49 #5873 failed:    master Merge branch 'PHP-5.6'
+2014-03-07 05:07:56 #5868 failed:    master Merge branch 'PHP-5.6'
+2014-03-07 00:42:14 #5867 failed:    master Merge branch 'PHP-5.6'
+2014-03-06 16:41:46 #5863 failed:    master Merge branch 'PHP-5.6'
+2014-03-06 16:18:07 #5860 failed:    master Merge branch 'PHP-5.6'
+2014-03-06 15:41:59 #5858 failed:    master Merge branch 'PHP-5.6'
+2014-03-06 04:03:34 #5855 failed:    master Merge branch 'PHP-5.6'
+2014-03-06 03:18:34 #5849 failed:    master Merge branch 'PHP-5.6'
+2014-03-05 11:29:42 #5847 failed:    master Merge branch 'PHP-5.6'
+2014-03-05 09:31:23 #5845 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-03-05 08:40:32 #5844 failed:    master Merge branch 'PHP-5.6'
+2014-03-05 03:47:03 #5840 failed:    master Merge branch 'PHP-5.6'
+2014-03-04 13:40:53 #5835 failed:    master Merge branch 'PHP-5.6'
+2014-03-04 06:47:57 #5831 failed:    master Merge branch 'PHP-5.6'
+2014-03-03 08:34:56 #5825 failed:    master Merge branch 'PHP-5.6'
+2014-03-02 16:04:48 #5823 failed:    master Merge branch 'PHP-5.6'
+2014-03-02 13:20:16 #5822 failed:    master Merge branch 'PHP-5.6'
+2014-03-02 11:48:11 #5820 failed:    master Merge branch 'PHP-5.6'
+2014-03-02 05:50:50 #5815 failed:    master Merge branch 'PHP-5.6'
+2014-03-01 13:20:25 #5813 failed:    master Merge branch 'PHP-5.6'
+2014-03-01 06:29:28 #5811 failed:    master Merge branch 'PHP-5.6'
+2014-03-01 06:14:11 #5809 failed:    master Merge branch 'PHP-5.6'
+2014-02-28 12:42:12 #5804 failed:    master Merge branch 'PHP-5.6'
+2014-02-28 09:56:47 #5802 failed:    master Merge branch 'PHP-5.6'
+2014-02-28 08:37:07 #5798 failed:    master Merge branch 'PHP-5.6'
+2014-02-28 05:52:43 #5797 failed:    master Merge branch '5.6'
+2014-02-28 02:46:53 #5793 failed:    master Merge branch 'PHP-5.6'
+2014-02-28 01:13:53 #5791 failed:    master Merge branch 'PHP-5.6'
+2014-02-27 08:58:20 #5785 failed:    master Merge branch 'PHP-5.6'
+2014-02-27 05:55:53 #5782 failed:    master Merge branch 'PHP-5.6'
+2014-02-27 05:44:47 #5780 failed:    master Merge branch 'PHP-5.6'
+2014-02-27 04:32:06 #5778 failed:    master Merge branch 'PHP-5.6'
+2014-02-27 02:28:27 #5774 failed:    master Merge branch 'PHP-5.6'
+2014-02-27 01:51:43 #5772 failed:    master Merge branch 'PHP-5.6'
+2014-02-26 19:34:05 #5769 failed:    master Merge branch 'PHP-5.6'
+2014-02-26 18:30:38 #5765 failed:    master Merge branch 'PHP-5.6'
+2014-02-26 14:45:39 #5761 failed:    master Merge branch 'PHP-5.6'
+2014-02-26 09:49:57 #5753 failed:    master Merge branch 'PHP-5.6'
+2014-02-26 08:50:08 #5752 failed:    master Merge branch 'PHP-5.6'
+2014-02-26 08:17:18 #5750 failed:    master Merge branch 'PHP-5.6'
+2014-02-26 06:39:22 #5745 failed:    master Merge branch 'PHP-5.6'
+2014-02-26 05:42:54 #5744 errored:   master Merge branch 'PHP-5.6'
+2014-02-26 04:29:16 #5742 failed:    master Merge branch 'PHP-5.6'
+2014-02-25 20:16:03 #5741 failed:    master Merge branch 'PHP-5.6'
+2014-02-25 14:50:30 #5739 failed:    master Merge branch 'PHP-5.6'
+2014-02-25 10:33:22 #5733 failed:    master Merge branch 'PHP-5.6'
+2014-02-24 03:15:57 #5720 failed:    master Merge branch 'PHP-5.6'
+2014-02-24 01:55:31 #5717 failed:    master Merge branch 'pull-request/598'
+2014-02-23 08:01:52 #5709 failed:    master Merge branch 'PHP-5.6'
+2014-02-21 16:17:16 #5702 failed:    master Merge branch 'PHP-5.6'
+2014-02-21 14:02:47 #5701 failed:    master Fix build against older OpenSSL libs
+2014-02-21 10:25:52 #5696 failed:    master Merge branch 'PHP-5.6'
+2014-02-21 04:26:24 #5692 failed:    master Merge branch 'PHP-5.6'
+2014-02-21 02:46:27 #5689 failed:    master Merge branch 'PHP-5.6'
+2014-02-21 02:08:15 #5686 failed:    master Merge branch 'PHP-5.6'
+2014-02-21 02:02:01 #5683 failed:    master Merge branch 'PHP-5.6'
+2014-02-20 18:49:16 #5681 failed:    master Merge branch 'PHP-5.6'
+2014-02-20 17:24:59 #5674 failed:    master Merge branch 'PHP-5.6'
+2014-02-20 14:13:04 #5671 failed:    master Merge branch 'PHP-5.6'
+2014-02-20 12:43:12 #5669 failed:    master Merge branch 'PHP-5.6'
+2014-02-20 12:08:41 #5666 failed:    master Merge branch 'PHP-5.6'
+2014-02-20 12:00:41 #5664 failed:    master Merge branch 'PHP-5.6'
+2014-02-20 10:52:36 #5663 failed:    master Merge branch 'PHP-5.6'
+2014-02-19 21:27:07 #5655 failed:    master Merge branch 'PHP-5.6'
+2014-02-19 19:09:18 #5650 failed:    master Merge branch 'PHP-5.6'
+2014-02-19 05:22:06 #5644 errored:   master Merge branch 'PHP-5.6'
+2014-02-19 05:06:22 #5642 failed:    master Merge branch 'PHP-5.6'
+2014-02-19 04:35:33 #5638 failed:    master Merge branch 'PHP-5.6'
+2014-02-19 04:23:37 #5637 failed:    master Merge branch 'PHP-5.6'
+2014-02-19 04:03:08 #5635 failed:    master Merge branch 'PHP-5.6'
+2014-02-19 03:50:17 #5632 failed:    master Merge branch 'PHP-5.6'
+2014-02-19 03:06:15 #5630 failed:    master Merge branch 'PHP-5.6'
+2014-02-19 01:55:28 #5629 failed:    master Merge branch 'PHP-5.6'
+2014-02-18 18:12:33 #5623 failed:    master Merge branch 'PHP-5.6'
+2014-02-18 12:15:04 #5622 failed:    master Merge branch 'PHP-5.6'
+2014-02-18 10:51:01 #5617 failed:    master Merge branch 'PHP-5.6'
+2014-02-18 06:59:54 #5609 failed:    master Merge branch 'PHP-5.6'
+2014-02-17 23:24:10 #5604 failed:    master Merge branch 'PHP-5.6'
+2014-02-17 21:40:19 #5603 failed:    master Merge branch 'PHP-5.6'
+2014-02-17 18:47:29 #5601 failed:    master Merge branch 'PHP-5.6'
+2014-02-17 11:05:06 #5599 failed:    master Merge branch 'PHP-5.6'
+2014-02-17 10:50:11 #5597 failed:    master Merge branch 'PHP-5.6'
+2014-02-17 04:22:11 #5595 failed:    master Merge branch 'PHP-5.6'
+2014-02-17 03:41:26 #5592 failed:    master Export JsonSerializable Interface (bug #65753)
+2014-02-17 03:24:48 #5589 failed:    master Merge branch 'PHP-5.6'
+2014-02-17 00:53:49 #5587 failed:    master Merge branch 'PHP-5.6'
+2014-02-16 15:40:11 #5582 failed:    master Merge branch 'PHP-5.6'
+2014-02-16 15:36:45 #5580 failed:    master Merge branch 'PHP-5.6'
+2014-02-16 15:27:13 #5578 failed:    master Implement FR #41146 - Add "description" with exteneded flag pg_meta_data().
+2014-02-16 10:16:49 #5575 failed:    master Merge branch 'PHP-5.6'
+2014-02-16 03:11:01 #5573 failed:    master Merge branch 'PHP-5.6'
+2014-02-16 01:43:26 #5571 failed:    master Merge branch 'PHP-5.6'
+2014-02-15 23:15:28 #5568 failed:    master Merge branch 'PHP-5.6'
+2014-02-15 19:54:02 #5566 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-02-15 17:10:37 #5563 failed:    master Merge branch 'PHP-5.6'
+2014-02-15 16:56:55 #5560 failed:    master Merge branch 'PHP-5.6'
+2014-02-15 15:26:49 #5555 failed:    master Merge branch 'PHP-5.6'
+2014-02-15 13:07:56 #5553 failed:    master Merge branch 'PHP-5.6'
+2014-02-15 07:04:34 #5551 failed:    master Merge branch 'PHP-5.6'
+2014-02-15 03:39:25 #5545 failed:    master Merge branch 'PHP-5.6'
+2014-02-14 19:26:47 #5539 failed:    master Merge branch 'PHP-5.6'
+2014-02-14 18:30:31 #5538 failed:    master Add missing TSRMLS_CC
+2014-02-14 16:45:08 #5537 failed:    master Merge branch 'PHP-5.6'
+2014-02-14 14:41:16 #5534 failed:    master Merge branch 'PHP-5.6'
+2014-02-14 11:56:01 #5532 failed:    master Merge branch 'PHP-5.6'
+2014-02-14 11:42:45 #5531 failed:    master Fix segfault accessing context when no context assigned
+2014-02-14 09:22:33 #5527 failed:    master Merge branch 'PHP-5.6'
+2014-02-12 20:58:24 #5516 failed:    master Merge branch 'PHP-5.6'
+2014-02-11 23:42:10 #5508 failed:    master Merge branch 'PHP-5.6'
+2014-02-11 05:32:43 #5502 failed:    master Merge branch 'PHP-5.6'
+2014-02-10 19:11:11 #5501 failed:    master Merge branch 'PHP-5.6'
+2014-02-10 19:06:35 #5497 failed:    master Merge branch 'PHP-5.6'
+2014-02-10 17:10:46 #5495 failed:    master Merge branch 'PHP-5.6'
+2014-02-09 14:59:42 #5492 failed:    master Merge branch 'PHP-5.6'
+2014-02-08 06:08:01 #5487 passed:    master fix regex to detect valgrind version
+2014-02-06 14:44:13 #5481 passed:    master Merge branch 'PHP-5.6'
+2014-02-06 07:50:36 #5476 errored:   master Merge branch 'PHP-5.6'
+2014-02-06 05:08:04 #5473 passed:    master Merge branch 'PHP-5.6'
+2014-02-06 02:47:40 #5470 failed:    master Merge branch 'PHP-5.6'
+2014-02-06 02:20:42 #5468 passed:    master Merge branch 'PHP-5.6'
+2014-02-05 13:18:04 #5461 passed:    master Merge branch 'PHP-5.6'
+2014-02-05 12:28:24 #5460 passed:    master fix tests for ICU >= 52.1
+2014-02-05 12:19:56 #5458 passed:    master Merge branch 'PHP-5.6'
+2014-02-05 08:20:06 #5454 passed:    master Merge branch 'PHP-5.6'
+2014-02-05 03:53:48 #5448 passed:    master Merge branch 'PHP-5.6'
+2014-02-04 20:15:08 #5445 passed:    master Merge branch 'PHP-5.6'
+2014-02-04 04:15:26 #5440 passed:    master Merge branch 'PHP-5.6'
+2014-02-02 21:23:07 #5434 passed:    master Merge branch 'PHP-5.6'
+2014-02-02 09:33:27 #5430 passed:    master Merge branch 'PHP-5.6'
+2014-02-02 09:20:51 #5428 passed:    master Merge branch 'PHP-5.6'
+2014-02-02 09:12:54 #5426 errored:   master Merge branch 'PHP-5.6'
+2014-02-02 08:51:55 #5424 passed:    master Merge branch 'PHP-5.6'
+2014-02-02 08:44:16 #5422 passed:    master Merge branch 'PHP-5.6'
+2014-02-02 08:07:14 #5420 passed:    master Merge branch 'PHP-5.6'
+2014-02-02 07:53:18 #5418 passed:    master Merge branch 'PHP-5.6'
+2014-02-01 09:26:03 #5416 passed:    master Merge branch 'PHP-5.6'
+2014-02-01 09:17:44 #5415 passed:    master Remove #if PHP_VERSION_ID version checks
+2014-01-31 15:29:23 #5413 failed:    master Merge branch 'PHP-5.6'
+2014-01-30 05:09:20 #5404 failed:    master fix ZTS build
+2014-01-30 01:50:06 #5401 failed:    master Merge branch 'PHP-5.6'
+2014-01-29 23:19:18 #5398 failed:    master Merge branch 'PHP-5.6'
+2014-01-29 19:02:58 #5397 failed:    master Merge branch 'PHP-5.6'
+2014-01-29 15:58:36 #5394 failed:    master fix merge error after b4b4d9697fa43a526466165a3ca89d058296cb04
+2014-01-29 07:35:33 #5393 errored:   master Merge branch 'master' of git.php.net:php-src
+2014-01-29 07:02:29 #5391 failed:    master Merge branch 'PHP-5.6'
+2014-01-29 02:58:40 #5383 failed:    master Merge branch 'PHP-5.6'
+2014-01-29 00:58:27 #5381 failed:    master Merge branch 'PHP-5.6'
+2014-01-28 11:41:53 #5379 passed:    master Merge branch 'PHP-5.6'
+2014-01-28 07:59:58 #5377 passed:    master Merge branch 'master' of git.php.net:php-src
+2014-01-28 06:36:34 #5373 failed:    master Merge branch 'PHP-5.6'
+2014-01-28 06:11:57 #5369 passed:    master Merge branch 'PHP-5.6'
+2014-01-27 16:28:48 #5358 passed:    master Merge branch '5.6'
+2014-01-27 14:50:06 #5355 passed:    master Fix fixbug subject
+2014-01-27 04:00:03 #5351 passed:    master Merge branch 'PHP-5.6'
+2014-01-26 19:22:47 #5345 passed:    master Merge branch 'PHP-5.6'
+2014-01-26 17:52:36 #5342 passed:    master Merge branch 'PHP-5.6'
+2014-01-26 17:51:54 #5339 passed:    master Merge branch 'PHP-5.6'
+2014-01-26 16:32:42 #5336 failed:    master Merge branch 'PHP-5.6'
+2014-01-26 16:27:33 #5335 failed:    master Merge branch 'PHP-5.6'
+2014-01-26 14:19:09 #5333 failed:    master Merge branch 'PHP-5.6'
+2014-01-26 07:05:19 #5330 failed:    master Merge branch 'PHP-5.6'
+2014-01-26 02:07:47 #5326 failed:    master Merge branch 'PHP-5.6'
+2014-01-26 00:06:39 #5325 failed:    master Merge branch 'PHP-5.6'
+2014-01-25 09:17:45 #5321 failed:    master Merge branch 'PHP-5.6'
+2014-01-24 09:15:17 #5317 failed:    master Merge branch 'PHP-5.6'
+2014-01-24 04:32:19 #5313 failed:    master Merge branch 'PHP-5.6'
+2014-01-24 04:16:04 #5311 failed:    master Merge branch 'PHP-5.6'
+2014-01-23 20:56:41 #5308 failed:    master Merge branch 'PHP-5.6'
+2014-01-23 20:39:26 #5306 failed:    master Merge branch 'PHP-5.6'
+2014-01-23 10:22:07 #5303 failed:    master FIx failing tests because of operator precedence
+2014-01-22 16:38:25 #5295 failed:    master Merge branch 'PHP-5.6'
+2014-01-22 08:43:45 #5284 failed:    master Merge branch 'PHP-5.6'
+2014-01-22 05:07:54 #5279 failed:    master Merge branch 'PHP-5.6'
+2014-01-22 04:57:00 #5277 failed:    master Merge branch 'PHP-5.6'
+2014-01-22 04:27:31 #5275 failed:    master Merge branch 'PHP-5.6'
+2014-01-21 22:52:14 #5271 failed:    master Merge branch 'PHP-5.6'
+2014-01-21 15:51:07 #5268 failed:    master Merge branch 'PHP-5.6'
+2014-01-21 10:19:13 #5266 failed:    master Merge branch 'PHP-5.6'
+2014-01-21 09:45:41 #5263 failed:    master Merge branch 'PHP-5.6'
+2014-01-21 09:28:54 #5261 failed:    master Merge branch 'PHP-5.6'
+2014-01-21 04:22:30 #5260 failed:    master Merge branch 'PHP-5.6'
+2014-01-21 03:56:05 #5257 failed:    master Merge branch 'PHP-5.6'
+2014-01-20 07:46:17 #5247 failed:    master Merge branch 'PHP-5.6'
+2014-01-20 07:27:28 #5245 failed:    master Merge branch 'PHP-5.6'
+2014-01-20 03:16:41 #5244 failed:    master Merge branch 'PHP-5.6'
+2014-01-20 03:08:55 #5241 failed:    master Merge branch 'PHP-5.6'
+2014-01-20 02:40:33 #5239 failed:    master Merge branch 'PHP-5.6'
+2014-01-20 01:42:06 #5236 failed:    master Merge branch 'PHP-5.6'
+2014-01-18 22:38:29 #5231 failed:    master Merge branch 'PHP-5.6'
+2014-01-18 19:06:43 #5228 failed:    master Merge branch 'PHP-5.6'
+2014-01-18 18:50:12 #5226 failed:    master Merge branch 'PHP-5.6'
+2014-01-18 10:58:32 #5224 failed:    master Merge branch 'PHP-5.6'
+2014-01-18 07:47:05 #5220 failed:    master Merge branch 'PHP-5.6'
+2014-01-18 06:54:56 #5219 failed:    master Merge branch 'PHP-5.6'
+2014-01-17 16:02:05 #5214 failed:    master Merge branch 'master' of ../phpdbg into PHP-5.6
+2014-01-17 06:31:24 #5211 failed:    master Merge branch 'PHP-5.6'
+2014-01-17 05:20:57 #5209 failed:    master Merge branch 'PHP-5.6'
+2014-01-17 04:10:40 #5205 failed:    master Merge branch 'PHP-5.6'
+2014-01-17 02:23:52 #5200 failed:    master Merge branch 'master' of https://git.php.net/repository/php-src
+2014-01-16 20:35:17 #5196 failed:    master Merge branch 'PHP-5.6'
+2014-01-16 00:43:16 #5189 failed:    master Merge branch 'PHP-5.6'
+2014-01-15 20:38:08 #5184 failed:    master Merge branch 'PHP-5.6'
+2014-01-15 02:16:42 #5177 failed:    master Merge branch 'PHP-5.6'
+2014-01-15 01:12:03 #5174 failed:    master Merge branch 'PHP-5.6'
+2014-01-14 23:42:56 #5173 failed:    master Merge branch 'PHP-5.6'
+2014-01-14 23:30:06 #5171 failed:    master Merge branch 'PHP-5.6'
+2014-01-14 22:34:00 #5169 failed:    master Merge branch 'PHP-5.6'
+2014-01-14 20:13:26 #5167 failed:    master Merge branch 'PHP-5.6'
+2014-01-14 08:42:15 #5151 failed:    master Merge branch 'PHP-5.6'
+2014-01-14 02:49:10 #5147 failed:    master fix uninitialized value
+2014-01-13 19:19:04 #5144 failed:    master Merge branch 'PHP-5.6'
+2014-01-13 18:37:30 #5142 failed:    master Dont ignore errors from FT_Get_Glyph
+2014-01-13 17:50:48 #5141 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-01-13 13:24:54 #5138 failed:    master Merge branch 'PHP-5.6'
+2014-01-13 10:23:39 #5132 failed:    master Merge branch 'PHP-5.6'
+2014-01-13 08:08:50 #5131 failed:    master Merge branch 'PHP-5.6'
+2014-01-13 06:18:02 #5126 failed:    master Merge branch 'PHP-5.6'
+2014-01-13 05:37:55 #5125 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-01-13 04:42:21 #5122 failed:    master Merge branch 'master' of git.php.net:php-src
+2014-01-13 02:09:24 #5121 failed:    master Merge branch 'PHP-5.6'
+2014-01-11 19:01:30 #5118 failed:    master Merge branch 'PHP-5.6'
+2014-01-11 06:10:29 #5115 failed:    master Merge branch 'PHP-5.6'
+2014-01-10 09:07:16 #5112 failed:    master Merge branch 'PHP-5.6'
+2014-01-09 08:32:07 #5104 failed:    master Merge branch 'PHP-5.6'
+2014-01-09 03:51:23 #5101 failed:    master Merge branch 'PHP-5.6'
+2014-01-06 11:15:36 #5091 failed:    master Merge branch 'PHP-5.6'
+2014-01-05 12:24:44 #5087 failed:    master Merge branch 'PHP-5.6'
+2014-01-03 19:05:36 #5085 failed:    master Fixed bug #66009 Failed compilation of PHP extension with C++ std library using VS 2012
+2014-01-03 18:33:13 #5082 failed:    master Merge branch 'PHP-5.6'
+2014-01-03 15:49:16 #5078 errored:   master Merge branch 'PHP-5.6'
+2014-01-02 21:38:26 #5076 failed:    master Merge branch 'PHP-5.6'
+2014-01-02 21:37:29 #5074 failed:    master Bump year
+2014-01-02 06:53:51 #5070 failed:    master Merge branch 'PHP-5.6'
+2014-01-02 06:49:02 #5067 failed:    master Merge branch 'PHP-5.6'
+2014-01-01 07:02:50 #5062 failed:    master Merge branch 'PHP-5.6'
+2014-01-01 05:56:02 #5058 failed:    master Merge branch 'PHP-5.6'
+2013-12-30 07:43:21 #5056 failed:    master Merge branch 'PHP-5.6'
+2013-12-30 07:35:00 #5055 failed:    master This should be an empty merge.
+2013-12-30 07:02:08 #5053 failed:    master Merge branch 'PHP-5.6'
+2013-12-30 03:01:26 #5048 failed:    master Merge branch 'PHP-5.6'
+2013-12-30 01:48:24 #5046 errored:   master Merge branch 'PHP-5.6'
+2013-12-30 00:46:00 #5044 errored:   master Merge branch 'PHP-5.6'
+2013-12-30 00:39:34 #5043 errored:   master Merge branch 'PHP-5.6'
+2013-12-29 21:24:34 #5039 failed:    master Merge branch 'PHP-5.6'
+2013-12-29 20:59:49 #5035 failed:    master Merge branch 'PHP-5.6'
+2013-12-29 20:54:39 #5033 failed:    master Merge branch 'PHP-5.6'
+2013-12-28 07:30:28 #5026 failed:    master Merge branch 'PHP-5.6'
+2013-12-28 07:27:21 #5024 failed:    master Merge branch 'PHP-5.6'
+2013-12-27 12:07:04 #5021 failed:    master Merge branch 'PHP-5.6'
+2013-12-27 06:47:14 #5018 failed:    master Merge branch 'PHP-5.6'
+2013-12-27 00:12:50 #5015 failed:    master Merge branch 'PHP-5.6'
+2013-12-27 00:08:36 #5013 failed:    master Merge branch 'PHP-5.6'
+2013-12-26 05:11:57 #5009 failed:    master Merge branch 'PHP-5.6'
+2013-12-26 03:46:54 #5008 failed:    master Fixed warning "No new line at end of file"
+2013-12-26 01:54:06 #5005 failed:    master Merge branch 'PHP-5.6'
+2013-12-25 16:47:05 #5001 failed:    master Merge branch 'PHP-5.6'
+2013-12-25 01:37:42 #4998 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-12-25 00:25:07 #4995 failed:    master Merge branch 'PHP-5.6'
+2013-12-24 14:15:50 #4992 failed:    master Merge branch 'PHP-5.6'
+2013-12-24 06:21:11 #4989 failed:    master Merge branch 'PHP-5.6'
+2013-12-24 03:03:27 #4985 failed:    master update credits
+2013-12-23 17:38:18 #4983 failed:    master Merge branch 'PHP-5.6'
+2013-12-23 17:26:32 #4981 failed:    master fix NEWS file for master
+2013-12-23 16:37:15 #4978 failed:    master Merge branch 'PHP-5.6'
+2013-12-23 16:12:01 #4976 failed:    master Merge branch 'PHP-5.6'
+2013-12-23 06:56:00 #4973 failed:    master Merge branch 'PHP-5.6'
+2013-12-23 06:08:06 #4971 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-12-23 05:04:59 #4966 failed:    master Merge branch 'PHP-5.6'
+2013-12-23 03:24:21 #4965 failed:    master Merge branch 'PHP-5.6'
+2013-12-23 02:53:39 #4961 failed:    master Merge branch 'PHP-5.6'
+2013-12-22 19:57:16 #4959 failed:    master Bump ZEND_MODULE_API_NO due to the TSRMLS change to zend_is_true()
+2013-12-22 08:35:16 #4958 failed:    master fix news
+2013-12-22 07:45:33 #4956 failed:    master fix news file
+2013-12-22 07:20:31 #4953 failed:    master missing, apparently
+2013-12-22 07:18:38 #4952 errored:   master Merge branch 'PHP-5.6'
+2013-12-22 05:43:07 #4947 failed:    master Merge branch 'PHP-5.6'
+2013-12-21 18:09:36 #4944 failed:    master Merge branch 'PHP-5.6'
+2013-12-21 17:58:26 #4942 failed:    master Merge branch 'PHP-5.6'
+2013-12-21 14:34:07 #4935 failed:    master Merge branch 'PHP-5.6'
+2013-12-21 12:33:47 #4931 errored:   master Merge branch 'PHP-5.6'
+2013-12-20 12:09:04 #4925 failed:    master Merge branch 'PHP-5.6'
+2013-12-20 07:38:26 #4921 failed:    master Merge branch 'master' of https://git.php.net/push/php-src
+2013-12-19 14:57:54 #4913 failed:    master Merge branch '5.6'
+2013-12-19 13:10:34 #4909 failed:    master Merge branch 'PHP-5.6'
+2013-12-19 03:57:33 #4903 failed:    master Merge branch 'PHP-5.6'
+2013-12-19 03:11:24 #4899 failed:    master Merge branch 'PHP-5.6'
+2013-12-18 09:52:32 #4886 failed:    master Fixed ZTS build. Needed to bump API version number.
+2013-12-18 09:27:27 #4884 failed:    master Merge branch 'PHP-5.6'
+2013-12-18 04:31:17 #4882 failed:    master - Fixed build
+2013-12-18 02:37:22 #4880 failed:    master Eliminate the TSRMLS_FETCH() calls in the ticks functions and hook
+2013-12-18 02:34:29 #4879 failed:    master Kill a TSRMLS_FETCH() in php_stream_context_set() by passing TSRMLS_CC to it
+2013-12-18 02:26:50 #4878 failed:    master Kill a TSRMLS_FETCH() call in sapi/caudium
+2013-12-18 02:11:44 #4877 failed:    master We might as well re-use the TSRMLS parameters here as they are available in PHP_FUNCTION anyway to save a TSRMLS_FETCH() call
+2013-12-18 02:07:49 #4876 failed:    master Pass the TSRMLS parameters to the sapi flush hook, this shaves off a few TSRMLS_FETCH() calls in our various SAPIs
+2013-12-18 02:06:07 #4875 failed:    master Kill another TSRMLS_FECH() in sapi/roxen
+2013-12-18 02:03:37 #4874 failed:    master Fix these SAPI hooks so that the TSRMLS parameters are correctly passed as required by the sapi struct
+2013-12-18 01:56:29 #4873 failed:    master Bump year
+2013-12-18 01:18:46 #4872 failed:    master Kill yet another TSRMLS_FETCH() inside the CLI HTTP server
+2013-12-18 01:00:50 #4871 failed:    master Kill another TSRMLS_FETCH() in the zend extension loading code
+2013-12-18 00:29:12 #4870 failed:    master Merge branch 'master' of https://git.php.net/push/php-src
+2013-12-17 01:47:41 #4864 failed:    master Merge branch 'PHP-5.6'
+2013-12-17 01:38:22 #4863 failed:    master Merge branch 'PHP-5.6'
+2013-12-17 01:11:59 #4861 failed:    master Merge branch 'PHP-5.6'
+2013-12-17 01:07:42 #4858 failed:    master Merge branch 'PHP-5.6'
+2013-12-16 13:45:06 #4857 failed:    master Merge branch 'PHP-5.6'
+2013-12-16 12:29:36 #4852 failed:    master Merge branch 'PHP-5.6'
+2013-12-16 04:21:47 #4847 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-12-16 03:34:53 #4845 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-12-16 03:33:15 #4841 failed:    master test commit
+2013-12-15 02:53:51 #4837 failed:    master Merge branch 'PHP-5.6'
+2013-12-15 02:50:34 #4836 failed:    master Merge branch 'issue-phpt-resourceid-wincache' of https://github.com/EricSten/php-src
+2013-12-14 13:51:16 #4832 failed:    master Merge branch 'PHP-5.6'
+2013-12-13 06:35:58 #4819 failed:    master Merge branch 'PHP-5.6'
+2013-12-12 23:54:10 #4809 failed:    master Merge branch 'PHP-5.6'
+2013-12-12 17:25:42 #4806 failed:    master Merge branch 'PHP-5.6'
+2013-12-12 15:11:06 #4805 failed:    master Kill another TSRMLS_FETCH() in zend_indent()
+2013-12-12 13:32:59 #4804 failed:    master Eliminate another straight forward TSRMLS_FETCH() in zend_startup_module()
+2013-12-12 13:28:18 #4803 failed:    master Fix build
+2013-12-12 11:56:36 #4802 failed:    master Merge remote-tracking branch 'origin/PHP-5.6'
+2013-12-12 11:03:07 #4799 failed:    master Merge branch 'PHP-5.6'
+2013-12-12 10:56:53 #4797 failed:    master Merge branch 'PHP-5.6'
+2013-12-12 05:11:39 #4793 failed:    master Merge branch 'PHP-5.5'
+2013-12-12 04:35:36 #4792 failed:    master remove always_populate_raw_post_data INI entries from master, UPGRADING.INTERNALS coming shortly
+2013-12-12 03:49:43 #4789 failed:    master Merge branch 'PHP-5.6'
+2013-12-11 16:09:58 #4785 failed:    master Merge branch 'PHP-5.6'
+2013-12-11 12:21:17 #4779 failed:    master Merge branch 'PHP-5.6'
+2013-12-11 07:17:52 #4775 failed:    master Merge branch 'PHP-5.6'
+2013-12-11 06:35:48 #4773 failed:    master Merge branch 'PHP-5.6'
+2013-12-11 01:54:18 #4767 failed:    master Merge branch 'PHP-5.6'
+2013-12-10 13:41:38 #4763 failed:    master Merge branch 'PHP-5.6'
+2013-12-10 09:11:51 #4756 failed:    master Merge branch 'PHP-5.6'
+2013-12-10 08:02:03 #4752 failed:    master Merge branch 'PHP-5.6'
+2013-12-10 07:10:35 #4748 failed:    master Merge branch 'PHP-5.6'
+2013-12-10 06:10:20 #4745 failed:    master Merge branch 'PHP-5.6'
+2013-12-10 06:09:07 #4744 failed:    master Merge branch 'PHP-5.6'
+2013-12-10 05:18:19 #4742 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-12-10 05:13:47 #4739 failed:    master Merge branch 'PHP-5.6'
+2013-12-10 04:24:44 #4736 failed:    master Merge branch 'PHP-5.6'
+2013-12-10 03:04:32 #4733 failed:    master Merge branch 'PHP-5.6'
+2013-12-09 10:08:27 #4728 errored:   master Merge branch 'PHP-5.6'
+2013-12-08 18:27:43 #4723 failed:    master Merge branch 'PHP-5.6'
+2013-12-06 04:13:06 #4712 failed:    master Merge branch 'PHP-5.6'
+2013-12-06 03:40:13 #4708 failed:    master Merge branch 'PHP-5.6'
+2013-12-06 03:35:31 #4707 failed:    master Merge branch 'PHP-5.6'
+2013-12-05 14:37:56 #4701 failed:    master Use 'user@example.com' rather than 'user@company.com' in tests
+2013-12-05 04:31:38 #4699 failed:    master BFN
+2013-12-05 04:29:39 #4698 failed:    master Merge branch 'dba'
+2013-12-04 16:30:58 #4695 errored:   master Renumber the comments in php_request_shutdown() to be in order.
+2013-12-04 10:39:07 #4693 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-12-03 20:23:14 #4684 failed:    master Merge branch 'PHP-5.6'
+2013-12-03 16:55:32 #4681 failed:    master Merge branch 'PHP-5.6'
+2013-12-03 00:43:35 #4670 failed:    master Leftover: Bump version to 5.7.0
+2013-12-02 13:13:21 #4664 failed:    master Merge branch 'PHP-5.6'
+2013-12-02 10:05:12 #4660 failed:    master Merge branch 'PHP-5.6'
+2013-12-02 08:02:49 #4657 failed:    master Fix Bug #64776 	The XSLT extension is not thread safe.
+2013-12-02 05:22:36 #4654 failed:    master Merge branch 'PHP-5.6'
+2013-12-02 02:06:50 #4651 failed:    master Merge branch 'PHP-5.6'
+2013-12-02 01:05:00 #4649 failed:    master Merge branch 'PHP-5.6'
+2013-12-01 06:49:09 #4643 failed:    master Merge branch 'PHP-5.6'
+2013-11-30 07:40:40 #4634 failed:    master Merge branch 'master' of git.php.net:/php-src
+2013-11-30 06:44:32 #4633 failed:    master Merge branch 'PHP-5.6'
+2013-11-29 17:00:16 #4629 failed:    master Merge branch 'PHP-5.6'
+2013-11-29 16:34:15 #4627 failed:    master Merge branch 'PHP-5.6'
+2013-11-29 02:56:34 #4611 failed:    master Merge branch 'PHP-5.6'
+2013-11-28 17:13:20 #4607 failed:    master Merge branch 'PHP-5.6'
+2013-11-28 15:01:36 #4602 errored:   master Merge branch 'master' of git.php.net:php-src
+2013-11-28 10:36:26 #4594 failed:    master Merge branch 'PHP-5.6'
+2013-11-28 08:48:19 #4590 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-11-28 08:44:09 #4588 failed:    master Merge branch 'PHP-5.6'
+2013-11-28 07:07:50 #4584 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-11-28 06:56:11 #4583 failed:    master Merge branch 'PHP-5.6'
+2013-11-28 01:48:52 #4577 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-11-27 16:02:49 #4572 failed:    master Merge branch 'PHP-5.6'
+2013-11-27 11:09:22 #4571 passed:    master Merge branch 'PHP-5.6'
+2013-11-27 10:33:24 #4568 failed:    master Merge branch 'PHP-5.6'
+2013-11-27 05:00:04 #4561 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-11-27 04:17:15 #4559 passed:    master Merge branch 'PHP-5.6'
+2013-11-27 03:37:46 #4557 passed:    master Merge branch 'PHP-5.6'
+2013-11-27 02:21:26 #4551 passed:    master Merge branch 'PHP-5.6'
+2013-11-26 17:54:27 #4548 passed:    master update to LSAPI 6.6
+2013-11-26 12:24:32 #4542 passed:    master Merge branch 'master' of git.php.net:php-src
+2013-11-26 12:23:52 #4541 passed:    master Merge branch 'PHP-5.6'
+2013-11-26 11:46:52 #4536 passed:    master Merge branch 'master' of git.php.net:php-src
+2013-11-26 10:52:29 #4533 passed:    master Merge branch 'PHP-5.6'
+2013-11-26 07:51:03 #4531 passed:    master Merge branch 'PHP-5.6'
+2013-11-26 02:15:36 #4526 passed:    master Merge branch 'PHP-5.6'
+2013-11-26 01:37:57 #4521 passed:    master Merge branch 'PHP-5.6'
+2013-11-25 13:52:36 #4518 passed:    master Merge branch 'PHP-5.5'
+2013-11-25 04:14:13 #4515 passed:    master Merge branch 'PHP-5.6'
+2013-11-21 14:43:07 #4506 passed:    master Merge branch 'PHP-5.6'
+2013-11-21 13:44:53 #4503 passed:    master Merge branch 'PHP-5.5'
+2013-11-20 03:14:07 #4491 passed:    master Merge branch 'PHP-5.6'
+2013-11-19 16:29:37 #4486 passed:    master Merge branch 'PHP-5.6'
+2013-11-19 15:21:51 #4482 passed:    master Fixed tests that fail with non-default `serialize_precision` configurations.
+2013-11-19 05:43:43 #4475 failed:    master Merge branch 'PHP-5.6'
+2013-11-18 16:04:05 #4474 passed:    master Merge branch 'PHP-5.6'
+2013-11-18 07:05:36 #4467 passed:    master Merge branch 'PHP-5.6'
+2013-11-17 07:19:06 #4459 passed:    master Merge branch 'PHP-5.6'
+2013-11-15 02:54:50 #4456 passed:    master Merge branch 'PHP-5.6'
+2013-11-14 12:55:11 #4454 passed:    master Merge branch 'PHP-5.6'
+2013-11-13 06:23:15 #4449 passed:    master Merge branch 'PHP-5.6'
+2013-11-12 15:06:45 #4445 failed:    master Merge branch 'PHP-5.6'
+2013-11-10 00:12:21 #4417 passed:    master Merge branch 'PHP-5.6'
+2013-11-09 11:51:16 #4415 passed:    master Merge branch 'PHP-5.6'
+2013-11-09 11:18:20 #4414 errored:   master Make all code paths in json_determine_array_type() return constants.
+2013-11-08 07:27:45 #4404 failed:    master Merge branch 'PHP-5.5'
+2013-11-08 04:19:00 #4401 failed:    master Merge branch 'PHP-5.6'
+2013-11-08 01:38:18 #4400 failed:    master Merge branch 'PHP-5.5'
+2013-11-08 01:10:13 #4399 failed:    master Merge branch 'PHP-5.5'
+2013-11-07 20:13:28 #4396 passed:    master Merge branch 'master' of git.php.net:php-src
+2013-11-07 20:13:12 #4396 failed:    master Merge branch 'PHP-5.6'
+2013-11-07 10:10:32 #4395 passed:    master OCI8 build change: Fix source variable definition for C89 compatibility
+2013-11-06 06:41:15 #4393 passed:    master configure output alignment
+2013-11-06 03:07:33 #4391 failed:    master Merge branch 'PHP-5.5'
+2013-11-05 15:23:21 #4388 failed:    master Update LiteSpeed SAPI code to V6.4
+2013-11-05 15:22:41 #4387 passed:    master Fixed typo in Makefile.frag
+2013-11-05 13:08:45 #4385 passed:    master updated NEWS
+2013-11-05 12:40:17 #4384 passed:    master Merge branch 'pull-request/500'
+2013-11-05 05:31:59 #4380 passed:    master Merge branch 'PHP-5.5'
+2013-11-04 21:12:34 #4373 passed:    master Merge branch 'PHP-5.5'
+2013-11-04 15:44:47 #4372 passed:    master Merge branch 'master' of git.php.net:php-src
+2013-11-04 06:33:56 #4370 passed:    master NEWS + UPGRADING
+2013-11-04 06:28:22 #4369 passed:    master Sync ext/zip with pecl/zip version 1.3.2
+2013-11-04 00:49:22 #4365 passed:    master Merge branch 'master' of git.php.net:php-src
+2013-11-02 12:47:53 #4363 failed:    master Fix English here
+2013-10-31 05:20:16 #4333 passed:    master Merge branch 'PHP-5.5'
+2013-10-31 02:35:13 #4330 passed:    master Removed unnecessary GC checks
+2013-10-30 17:31:35 #4328 passed:    master Add crypt() change in UPGRADING
+2013-10-29 15:06:08 #4324 passed:    master Fix bug #65997 by switching to Serializable for GMP
+2013-10-29 14:07:47 #4323 passed:    master Fix ZTS build
+2013-10-29 07:37:31 #4316 passed:    master Merge branch 'PHP-5.5'
+2013-10-29 04:56:11 #4315 passed:    master Implemented Change crypt() behavior w/o salt RFC
+2013-10-29 03:40:22 #4314 passed:    master Merge branch 'PHP-5.5'
+2013-10-29 03:04:18 #4313 passed:    master Merge branch 'PHP-5.5'
+2013-10-28 14:10:44 #4308 passed:    master Avoid copy in func_get_arg()
+2013-10-28 09:16:01 #4307 passed:    master Merge branch 'PHP-5.5'
+2013-10-28 09:11:02 #4306 passed:    master Merge branch 'master' of git.php.net:/php-src
+2013-10-28 06:25:50 #4305 passed:    master Merge branch 'PHP-5.5'
+2013-10-28 05:31:02 #4304 passed:    master Merge branch 'PHP-5.5'
+2013-10-28 05:05:52 #4301 passed:    master Merge branch 'master' of git.php.net:php-src
+2013-10-28 05:00:52 #4300 failed:    master Merge branch 'master' of https://git.php.net/repository/php-src
+2013-10-28 04:38:17 #4298 failed:    master Merge branch 'master' of git.php.net:php-src
+2013-10-28 04:31:20 #4295 passed:    master Merge branch 'PHP-5.5'
+2013-10-28 01:39:19 #4291 passed:    master fix limitation of upload size == (U)INT_MAX in CGI
+2013-10-24 03:38:15 #4285 passed:    master ldap_escape() notes
+2013-10-23 14:42:38 #4282 passed:    master Merge branch 'PHP-5.5'
+2013-10-23 06:29:40 #4280 passed:    master Merge branch 'PHP-5.5'
+2013-10-22 13:06:23 #4277 passed:    master Added a LICENSE file to make it easier for PECL binary distributions to conform with the license.
+2013-10-21 23:22:09 #4275 passed:    master Merge branch 'PHP-5.5'
+2013-10-21 16:31:23 #4273 passed:    master Merge branch 'PHP-5.5'
+2013-10-21 15:57:29 #4272 passed:    master Merge branch 'PHP-5.5'
+2013-10-21 15:25:42 #4270 passed:    master Merge branch 'PHP-5.5'
+2013-10-21 06:11:43 #4269 passed:    master Merge branch 'PHP-5.5'
+2013-10-21 05:24:20 #4267 passed:    master Merge remote-tracking branch 'refs/remotes/origin/master'
+2013-10-21 05:19:48 #4266 passed:    master Merge branch 'PHP-5.5'
+2013-10-21 05:07:25 #4265 failed:    master Merge branch 'master' of https://github.com/guggemand/php-src
+2013-10-21 04:42:35 #4264 passed:    master Merge branch 'PHP-5.5'
+2013-10-21 02:04:16 #4263 failed:    master Merge branch 'PHP-5.5'
+2013-10-21 01:06:14 #4262 passed:    master Merge branch 'PHP-5.5'
+2013-10-21 00:22:13 #4261 passed:    master Merge branch 'PHP-5.5'
+2013-10-20 19:57:52 #4260 passed:    master Merge branch 'PHP-5.5'
+2013-10-20 16:06:36 #4259 passed:    master Merge branch 'PHP-5.5'
+2013-10-20 11:38:50 #4257 passed:    master Merge branch 'PHP-5.5'
+2013-10-20 10:57:56 #4256 passed:    master Merge branch 'PHP-5.5'
+2013-10-20 06:49:30 #4255 passed:    master Merge branch 'PHP-5.5'
+2013-10-20 06:03:47 #4254 passed:    master Merge branch 'PHP-5.5'
+2013-10-20 05:51:12 #4253 passed:    master Merge branch 'PHP-5.5'
+2013-10-19 22:58:38 #4252 passed:    master Merge branch 'PHP-5.5'
+2013-10-19 22:15:50 #4251 failed:    master Merge branch 'PHP-5.5'
+2013-10-19 22:04:30 #4250 passed:    master Merge branch 'PHP-5.5'
+2013-10-19 21:35:38 #4248 passed:    master Merge branch 'PHP-5.5'
+2013-10-19 21:30:19 #4247 passed:    master Merge branch 'PHP-5.5'
+2013-10-19 21:26:54 #4246 passed:    master Merge branch 'PHP-5.5'
+2013-10-19 19:43:59 #4244 passed:    master Merge branch 'PHP-5.5'
+2013-10-19 17:27:13 #4243 passed:    master Remove extraneous NULL check of Z_ARRVAL_P()
+2013-10-19 16:27:13 #4242 passed:    master Fix assignment in dummy_encoding_list_parser
+2013-10-19 09:20:09 #4239 passed:    master Merge branch 'PHP-5.5'
+2013-10-19 09:18:22 #4238 failed:    master Merge branch 'PHP-5.5'
+2013-10-19 02:45:28 #4237 passed:    master Merge branch 'pull-request/499'
+2013-10-19 00:30:44 #4236 passed:    master Merge branch 'PHP-5.5'
+2013-10-18 05:08:45 #4233 passed:    master Merge branch 'openssl_compile_warning_fix' of https://github.com/bukka/php-src
+2013-10-18 04:36:18 #4232 passed:    master fix compiler warnings and type usage
+2013-10-17 21:41:47 #4230 passed:    master Merge branch 'zend-documentation-fix' of https://github.com/AskDrCatcher/php-src-1
+2013-10-17 21:38:40 #4229 passed:    master Merge branch 'PHP-5.5'
+2013-10-17 15:55:46 #4226 passed:    master Add missing test to package.xml
+2013-10-17 14:18:42 #4222 passed:    master Prepare for OCI8 2.0.5 release
+2013-10-17 08:54:54 #4220 passed:    master TLS news
+2013-10-17 08:50:39 #4219 failed:    master previous revert killed that file
+2013-10-17 08:31:54 #4218 failed:    master Merge branch 'updated_tls_support' of https://github.com/rdlowrey/php-src
+2013-10-17 08:14:37 #4216 failed:    master Merge branch 'PHP-5.5'
+2013-10-17 08:12:33 #4215 passed:    master fix ws
+2013-10-17 05:14:17 #4214 passed:    master Merge branch 'PHP-5.5'
+2013-10-17 00:35:13 #4213 passed:    master OCI8: More test updates
+2013-10-17 00:09:39 #4212 failed:    master OCI8: Mostly SKIPIF version updates to simplify version checks at the expense of not testing some edge cases with older Oracle patch set versions.
+2013-10-16 23:26:18 #4211 passed:    master Merge branch 'PHP-5.5'
+2013-10-16 11:47:32 #4207 passed:    master Merge branch 'PHP-5.5'
+2013-10-15 02:00:00 #4196 passed:    master fix typo in copy_variation16 test
+2013-10-14 10:18:21 #4194 passed:    master Merge branch 'PHP-5.5'
+2013-10-14 09:15:19 #4193 passed:    master Merge branch 'PHP-5.5'
+2013-10-14 07:41:26 #4191 passed:    master fixed skeleton to produce the normalized ext version macros
+2013-10-12 16:11:27 #4188 passed:    master Merge branch 'master' of git.php.net:/php-src
+2013-10-12 15:31:39 #4186 passed:    master Fixes broken zts build (recent openssl changes)
+2013-10-12 15:24:54 #4185 failed:    master Merge branch 'PHP-5.5'
+2013-10-11 15:19:31 #4183 passed:    master Fixed assumption that the temporary directory is located in /tmp
+2013-10-11 15:19:26 #4182 failed:    master Standardized usage of zpp_none and the order of the comparison zpp(...) == FAILURE
+2013-10-10 15:44:17 #4178 passed:    master OCI8: sync README and package.xml descriptions
+2013-10-10 06:34:48 #4174 passed:    master Merge branch 'PHP-5.5'
+2013-10-09 14:26:06 #4167 failed:    master Re-enable OCI8 DLL builds with Oracle 10g & 11g client libraries on
+2013-10-09 10:18:59 #4166 passed:    master C89
+2013-10-09 10:14:27 #4165 passed:    master Merge branch 'san_peer_matching' of https://github.com/rdlowrey/php-src
+2013-10-09 05:32:20 #4163 passed:    master Merge branch 'PHP-5.5'
+2013-10-09 03:10:44 #4162 passed:    master Merge branch 'issue-55736' of https://github.com/tistre/php-src
+2013-10-09 02:20:47 #4161 passed:    master Merge branch 'PHP-5.5'
+2013-10-09 01:24:12 #4160 passed:    master Thanks Daniel, I didn't think long enough
+2013-10-09 01:18:12 #4159 passed:    master Merge branch 'PHP-5.5'
+2013-10-08 09:21:13 #4154 failed:    master openssl NEWS,UPGRADING
+2013-10-08 09:11:35 #4153 passed:    master Merge branch 'ssl-streams-crypto-method' of https://github.com/mj/php-src
+2013-10-08 09:00:14 #4152 passed:    master Merge branch 'bug65729' of https://github.com/datibbaw/php-src
+2013-10-08 09:00:06 #4151 passed:    master Merge branch 'openssl-x509-digest' of https://github.com/datibbaw/php-src
+2013-10-08 04:18:23 #4149 passed:    master fix bad cast
+2013-10-08 01:39:16 #4148 failed:    master Merge branch 'PHP-5.5'
+2013-10-07 19:40:41 #4146 passed:    master Add new tests to package.xml
+2013-10-07 19:28:23 #4145 passed:    master Add new tests
+2013-10-07 06:52:33 #4141 passed:    master Merge branch 'PHP-5.5'
+2013-10-05 20:28:32 #4137 passed:    master Fix bug #64338 pdo_dblib can't connect to Azure SQL
+2013-10-04 18:08:56 #4134 passed:    master Merge branch 'PHP-5.5'
+2013-10-04 10:31:03 #4132 passed:    master Merge branch 'PHP-5.5'
+2013-10-04 09:19:11 #4130 passed:    master Merge branch 'PHP-5.5'
+2013-10-04 09:15:01 #4129 errored:   master Merge branch 'PHP-5.5'
+2013-10-04 06:18:35 #4126 failed:    master Merge branch 'PHP-5.5'
+2013-10-04 04:24:17 #4124 passed:    master Merge branch 'PHP-5.5'
+2013-10-03 09:28:27 #4123 failed:    master add NEWS and UPGRADING about gost-crypto
+2013-10-03 08:24:46 #4122 passed:    master fix bug #55285 XMLReader::getAttribute/No/Ns methods inconsistency
+2013-10-03 06:37:09 #4121 failed:    master Merge branch 'PHP-5.5'
+2013-10-03 01:46:57 #4118 passed:    master Merge branch 'PHP-5.5'
+2013-10-02 08:58:45 #4116 failed:    master Merge branch 'PHP-5.5'
+2013-10-01 23:54:13 #4114 passed:    master Merge branch 'PHP-5.5'
+2013-10-01 10:04:52 #4113 passed:    master Merge branch 'PHP-5.5'
+2013-10-01 04:14:02 #4109 passed:    master Merge branch 'PHP-5.5'
+2013-10-01 02:35:31 #4108 passed:    master Merge branch 'PHP-5.5'
+2013-09-30 18:59:24 #4107 passed:    master OCI8 2.0: Added a new oci_set_db_operation() user space function for the "DB Operation" tracing feature of Oracle DB 12c.
+2013-09-30 17:52:46 #4106 passed:    master Merge branch 'PHP-5.5'
+2013-09-30 07:07:23 #4104 passed:    master Merge branch 'PHP-5.5'
+2013-09-29 13:22:12 #4094 passed:    master Merge branch 'PHP-5.5'
+2013-09-29 11:05:20 #4093 passed:    master Merge branch 'PHP-5.5'
+2013-09-28 20:09:19 #4088 passed:    master Merge branch 'PHP-5.5'
+2013-09-27 19:16:58 #4083 passed:    master Prepare for next release
+2013-09-27 19:03:16 #4081 passed:    master OCI8: Fix alloc function and DLL generation
+2013-09-27 05:03:32 #4069 passed:    master Merge branch 'PHP-5.5'
+2013-09-27 04:46:04 #4068 passed:    master Merge branch 'PHP-5.5'
+2013-09-27 04:17:20 #4067 passed:    master Merge branch 'PHP-5.5'
+2013-09-26 23:17:54 #4065 passed:    master More OCI8 DTrace probe updates.
+2013-09-26 15:38:39 #4062 passed:    master Merge branch 'pull-request/473'
+2013-09-26 13:06:21 #4058 passed:    master Don't track parameter number in separate znode
+2013-09-26 12:27:33 #4057 passed:    master Implement variadic function syntax
+2013-09-25 03:16:30 #4038 failed:    master Merge branch 'PHP-5.5'
+2013-09-25 02:05:27 #4037 failed:    master Merge branch 'PHP-5.5'
+2013-09-23 15:41:56 #4036 passed:    master Fix typo: HTTP_ROW_POST_DATA → HTTP_RAW_POST_DATA.
+2013-09-23 06:24:09 #4033 passed:    master Merge branch 'PHP-5.5'
+2013-09-22 18:55:46 #4032 passed:    master Merge branch 'PHP-5.5'
+2013-09-20 16:24:29 #4018 passed:    master Merge branch 'PHP-5.5'
+2013-09-20 09:04:21 #4014 passed:    master Merge branch 'PHP-5.5'
+2013-09-19 22:40:12 #4010 passed:    master Merge branch 'PHP-5.5'
+2013-09-19 08:42:45 #4005 passed:    master add note about request_body and php://input
+2013-09-18 08:17:10 #3997 passed:    master better way to fix PRIu64 availability on windows
+2013-09-18 08:08:55 #3995 passed:    master Merge branch 'PHP-5.5'
+2013-09-18 07:30:16 #3993 passed:    master Merge branch 'PHP-5.5'
+2013-09-18 04:15:40 #3990 passed:    master Merge branch 'PHP-5.5'
+2013-09-18 04:03:45 #3989 passed:    master fix test concurrency
+2013-09-18 03:56:29 #3988 failed:    master fix test concurrency
+2013-09-17 09:04:30 #3983 passed:    master fix build - PRIu64 vs %I64u
+2013-09-17 07:01:04 #3981 passed:    master final bits
+2013-09-17 06:07:30 #3980 failed:    master let the libsqlite3 symbols be exported in dll
+2013-09-17 04:36:58 #3979 failed:    master Merge remote-tracking branch 'refs/remotes/origin/master'
+2013-09-17 03:55:33 #3978 passed:    master Exclude bison 3.0 by Mike
+2013-09-17 02:57:14 #3977 passed:    master Merge branch 'PHP-5.5'
+2013-09-17 01:05:17 #3974 passed:    master upload2G note
+2013-09-16 17:04:23 #3972 passed:    master Merge branch 'PHP-5.5'
+2013-09-16 03:51:25 #3971 passed:    master use 65k of data to get a more explicit result
+2013-09-16 02:36:30 #3970 failed:    master Merge branch 'PHP-5.5'
+2013-09-16 02:31:05 #3969 passed:    master this test is fragile on travis, let's see why
+2013-09-16 02:04:18 #3967 passed:    master Merge branch 'PHP-5.5'
+2013-09-16 01:44:28 #3965 failed:    master Merge branch 'PHP-5.5'
+2013-09-14 16:06:27 #3960 passed:    master Save a TSRMLS_FETCH() for zval_ptr_dtor in executor
+2013-09-13 18:39:41 #3956 passed:    master Fix intl build
+2013-09-13 14:51:05 #3953 errored:   master Remove some more unnecessary macros from phar
+2013-09-13 13:03:05 #3950 errored:   master Fix two warnings
+2013-09-13 12:47:15 #3949 errored:   master Provide more macros for handling of interned strings
+2013-09-13 08:10:57 #3948 failed:    master Make use of Z_*VAL and ZVAL_* in language scanner
+2013-09-13 06:00:50 #3947 passed:    master Merge branch 'PHP-5.5'
+2013-09-13 05:59:21 #3945 passed:    master fix broken sha2 configure tests
+2013-09-13 05:23:05 #3944 passed:    master Small cleanup in class name resolution of compiler
+2013-09-12 16:32:01 #3939 failed:    master Merge branch 'PHP-5.5'
+2013-09-12 11:30:06 #3934 failed:    master Merge branch 'PHP-5.5'
+2013-09-12 10:51:36 #3932 failed:    master Merge branch 'PHP-5.5'
+2013-09-12 09:58:07 #3930 failed:    master Prepare pdo_firebird for a pecl release also
+2013-09-12 08:25:33 #3928 passed:    master Merge branch 'PHP-5.5'
+2013-09-12 08:17:02 #3927 passed:    master Merge branch 'PHP-5.5'
+2013-09-11 16:39:02 #3912 passed:    master Sort the NEWS file alphabetically.
+2013-09-11 16:17:23 #3911 failed:    master Request non-keep-alive connections by default in HTTP 1.1 requests.
+2013-09-10 13:45:32 #3904 passed:    master Allow CURLOPT_FOLLOWLOCATION to be used with open_basedir.
+2013-09-09 19:15:17 #3902 failed:    master Merge branch 'PHP-5.5'
+2013-09-09 18:47:42 #3899 passed:    master Merge branch 'PHP-5.5'
+2013-09-09 18:42:43 #3898 passed:    master Merge branch 'PHP-5.5'
+2013-09-09 04:58:21 #3895 passed:    master Merge branch 'PHP-5.5'
+2013-09-09 01:12:58 #3893 failed:    master Merge branch 'PHP-5.5'
+2013-09-06 12:24:57 #3891 passed:    master Remove obsolete flag
+2013-09-03 17:19:48 #3874 passed:    master Cast time_t since some "dtrace -G" invocations fail on time_t arguments
+2013-09-02 16:22:43 #3872 passed:    master Update NEWS/UPGRADING with info about incompat ctx
+2013-09-02 03:17:29 #3871 failed:    master Merge branch 'PHP-5.5'
+2013-09-02 03:04:26 #3869 failed:    master Merge branch 'PHP-5.5'
+2013-09-01 18:58:13 #3867 passed:    master Implement phase 1 of rfc/incompat_ctx
+2013-08-31 06:25:31 #3865 passed:    master Make use of direct returns in some places
+2013-08-30 19:49:40 #3864 passed:    master Allow OCI8 to be DTrace-enabled independently of core PHP's DTrace
+2013-08-30 13:30:30 #3863 failed:    master OCI8: remove unused ext/oci8/config.m4 macro
+2013-08-30 03:48:08 #3860 passed:    master Merge branch 'PHP-5.5'
+2013-08-29 22:24:28 #3858 failed:    master Merge branch 'PHP-5.5'
+2013-08-29 21:47:28 #3857 passed:    master Remove ini dependency in test
+2013-08-29 02:58:39 #3851 passed:    master Merge branch 'PHP-5.5'
+2013-08-29 02:22:16 #3849 passed:    master Merge branch 'PHP-5.5'
+2013-08-29 01:46:03 #3847 passed:    master Merge branch 'PHP-5.5'
+2013-08-29 01:34:09 #3845 passed:    master Merge branch 'master' of git.php.net:php-src
+2013-08-29 01:24:58 #3844 passed:    master Merge branch 'PHP-5.5'
+2013-08-28 08:14:54 #3843 passed:    master Merge branch 'PHP-5.5'
+2013-08-28 07:46:29 #3841 failed:    master Merge branch 'PHP-5.5'
+2013-08-27 18:43:03 #3837 passed:    master OCI8 2.0: add oci8-check-connection probe and do some renaming
+2013-08-27 02:46:38 #3832 failed:    master Merge branch 'PHP-5.5'
+2013-08-26 17:46:31 #3831 passed:    master Use "__" consistently in OCI8 DTrace probe definitions. It maps to "-" in the probe name.
+2013-08-26 16:42:53 #3830 passed:    master Merge branch 'master' of https://git.php.net/repository/php-src
+2013-08-26 12:59:51 #3829 passed:    master Evaluate ZVAL_ZVAL arguments only once
+2013-08-26 00:51:03 #3826 failed:    master Merge branch 'PHP-5.5'
+2013-08-25 17:16:45 #3825 passed:    master Merge branch 'PHP-5.5'
+2013-08-25 02:31:10 #3820 passed:    master Merge branch 'PHP-5.5'
+2013-08-25 01:40:11 #3818 passed:    master Merge branch 'PHP-5.5'
+2013-08-24 23:46:16 #3815 failed:    master Merge branch 'PHP-5.5'
+2013-08-24 23:42:06 #3813 passed:    master Merge branch 'PHP-5.5'
+2013-08-24 22:47:26 #3811 passed:    master Merge branch 'PHP-5.5'
+2013-08-24 21:51:28 #3810 failed:    master Merge branch 'PHP-5.5'
+2013-08-23 10:52:09 #3806 passed:    master Merge branch 'PHP-5.5'
+2013-08-23 09:46:09 #3804 passed:    master Merge branch 'PHP-5.5'
+2013-08-23 06:33:04 #3801 passed:    master Merge branch 'PHP-5.5'
+2013-08-22 11:28:06 #3799 passed:    master Merge branch 'PHP-5.5'
+2013-08-22 08:36:32 #3796 passed:    master Merge branch 'PHP-5.5'
+2013-08-22 07:09:45 #3794 passed:    master Merge branch 'PHP-5.5'
+2013-08-22 06:11:03 #3791 passed:    master Remove trailing whitespace in test

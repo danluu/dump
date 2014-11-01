@@ -1,0 +1,69 @@
+2014-09-03 14:48:11 #141 passed:     master Initial number from bench-dmm. Pretty slow right now.
+2014-08-05 14:33:26 #140 passed:     master Removing commented out code.
+2014-08-05 14:01:40 #139 failed:     master Added verbosity levels. Use -vv to get the old behavior.
+2014-07-14 13:38:27 #138 passed:     master Dump out a few of the bodies and forces to see if the numbers are reasonable.
+2014-07-14 13:03:43 #137 passed:     master Attempting to bump up the region sized used for benchmarks.
+2014-06-11 03:06:50 #135 passed:     master Commenting out the rest of the raytrace benchmark in scripts.
+2014-06-11 02:53:16 #134 failed:     master Don't include bench-raytrace.kfc in build-benchmarks.
+2014-06-11 02:04:11 #133 failed:     master Added more READMEs.
+2014-06-10 23:23:06 #132 passed:     master Run and graph raytrace benchmark.
+2014-06-10 16:09:34 #131 failed:     master Added NBody benchmark.
+2014-06-10 12:40:58 #130 passed:     master Added a README for the frontend.
+2014-06-10 12:07:03 #129 passed:     master Expanding the readme file.
+2014-06-09 14:26:55 #128 passed:     master More teletype font!
+2014-06-09 14:25:23 #127 passed:     master Moving the build status icon.
+2014-06-09 14:25:02 #126 passed:     master Adding Travis Build Status Icon.
+2014-06-09 14:05:02 #125 passed:     master Cleaning out some cruft and improving the README.
+2014-06-02 10:52:24 #124 passed:     master More informative names on kernels.
+2014-05-16 14:01:06 #123 passed:     master Lowering the stride length in reduce, since Apple's OpenCL for CPUs struggles witht his.
+2014-05-07 13:09:18 #122 passed:     master Use lazy string concatenation for better time and memory behavior.
+2014-05-05 16:06:00 #121 failed:     master Further memory reduction.
+2014-05-05 15:47:57 #120 failed:     master Splitting up languages.scm, which leads to significantly less memory usage.
+2014-04-23 12:36:27 #116 failed:     master Add flush-stdout.
+2014-04-22 17:03:35 #115 failed:     master Skip 0-length reads, since these are technically illegal according to OpenCL.
+2014-04-22 16:37:35 #114 failed:     master Adding a #define so that SVNu64 gets defined by inttypes.h
+2014-04-22 15:38:37 #113 failed:     master Switching HSBencher to HTTPs for Travis.
+2014-04-21 16:58:13 #110 errored:    master Added reading of uint64_t integers.
+2014-04-17 10:37:34 #108 errored:    master First attempt at updating for hsbencher 1.8
+2014-03-31 13:20:40 #107 errored:    master Add a missing u64 case.
+2014-03-27 17:53:18 #106 errored:    master Adding enough file I/O support to read integers.
+2014-03-21 16:20:29 #86 passed:      master Enable compilation when using full Chez Scheme.
+2014-02-25 16:40:51 #78 passed:      master Enough of this nonsense. xfailing css-selectors.
+2014-02-25 16:04:21 #77 failed:      master ...and another paren matching mistake.
+2014-02-25 15:56:09 #76 failed:      master Fixing paren-matching mistake.
+2014-02-25 15:48:39 #75 failed:      master Fixing a type error in css-selectors.kfc
+2014-02-25 15:34:21 #74 failed:      master Fixing installation scripts.
+2014-02-25 15:33:48 #73 errored:     master Add a few more harlani commands.
+2014-02-25 15:29:05 #72 errored:     master Adjust Travis scripts to install only one scheme, and use parallel builds for vicare.
+2014-02-25 15:13:42 #71 failed:      master Add file and line number to OpenCL failures.
+2014-02-25 14:51:16 #70 failed:      master Follow the OpenCL spec better.
+2014-02-25 14:12:28 #69 failed:      master Display failure logs by default when running make check.
+2014-02-25 12:04:26 #68 failed:      master Starting on a CSS Selector Matching example.
+2014-02-25 09:51:44 #66 failed:      master Be more robust in the face of multiple OpenCL platforms.
+2014-02-24 16:13:01 #63 failed:      master rewrote remove-danger in nanopass.
+2014-02-19 15:13:00 #60 failed:      master Added a color-based and a distance-based bfs.
+2014-02-18 23:34:54 #58 failed:      master Report more accurate timings on BFS.
+2014-02-18 15:20:36 #55 passed:      master Add support for another OpenCL error code.
+2014-02-18 11:54:00 #54 passed:      master Only report the minimum region size once when controlled by an environment variable.
+2014-02-18 11:45:21 #53 passed:      master Let BFS accept command line arguments for the graph size.
+2014-02-18 11:33:18 #52 passed:      master Updating elegant weapons to support unsigned integer literals.
+2014-01-23 13:39:33 #51 passed:      master Use .dylib for shared libraries on Mac. Fixes #104.
+2014-01-23 11:04:08 #50 passed:      master harlani now uses rlwrap if available. Fixes #123.
+2014-01-22 17:19:46 #49 passed:      master Make harlani path-independent. Fixes #117.
+2014-01-22 16:40:14 #48 passed:      master Use #ifndef instead of '#pramga once'. Fixes #120.
+2014-01-16 15:44:12 #47 passed:      master Seriously turn down the let lifting so we get correct results on mandelbrot.kfc again.
+2014-01-16 10:36:51 #46 passed:      master HARLAN_DEVICE is now case-insensitive, and it reports an error for invalid values. Fixes #115.
+2013-12-31 16:47:14 #45 passed:      master Add get-environment-variable. Fixes #100.
+2013-12-23 19:47:07 #44 passed:      master Update README.md
+2013-12-19 18:22:36 #43 passed:      master Added a string to number parser written purely in Harlan, but it's commented out because it crashes OpenCL.
+2013-12-19 16:49:15 #42 passed:      master Move int->float and float->int into the library.
+2013-12-19 12:46:44 #41 passed:      master Added command-line builtin. Fixes #101.
+2013-12-19 12:14:49 #40 passed:      master main is now in the runtime library and Harlan programs instead implement harlan_main.
+2013-12-17 17:41:59 #39 passed:      master Use new random library in bench-bfs.
+2013-12-17 14:18:02 #38 passed:      master Report more precise floating point values.
+2013-12-17 13:43:44 #37 passed:      master Better reseeding of the random number generator.
+2013-12-17 11:55:23 #36 passed:      master Add bitwise shifting operators.
+2013-12-13 13:01:49 #35 passed:      master Modernizing BFS.
+2013-12-10 15:44:05 #34 passed:      master Report OpenCL version as well.
+2013-12-09 23:22:51 #33 passed:      master Report OpenCL platform information too.
+2013-12-09 17:32:32 #32 passed:      master More language pruning.

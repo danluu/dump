@@ -1,0 +1,689 @@
+2014-10-02 17:45:12 #1731 passed:    master Use mergeDefaults for req.options.values
+2014-10-02 17:30:45 #1730 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-10-02 15:55:46 #1729 passed:    master Merge pull request #2277 from Chuwiey/redis_down_fix
+2014-10-02 15:46:55 #1728 passed:    master Update CONTRIBUTING.md
+2014-09-26 15:43:45 #1717 passed:    master Merge pull request #2107 from leedm777/fix-sessionless-websockets
+2014-09-26 15:42:05 #1716 failed:    master Merge branch 'RWOverdijk-hotfix/just-stuff-I-find'
+2014-09-26 15:09:24 #1715 passed:    master Merge pull request #2260 from Winangel/cache-debug
+2014-09-22 22:18:46 #1711 passed:    master Merge pull request #2252 from sgress454/master
+2014-09-22 22:10:52 #1709 passed:    master Merge branches 'master' and 'master' of github.com:balderdashy/sails
+2014-09-22 12:22:49 #1707 passed:    master Merge pull request #2246 from stangah/connectTypo
+2014-09-17 17:56:09 #1705 passed:    master Merge pull request #2227 from ky0615/fix-engine-ect
+2014-09-17 17:52:35 #1704 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-09-16 08:01:27 #1703 passed:    master Update MODULES.md
+2014-09-15 19:43:35 #1702 passed:    master Update MODULES.md
+2014-09-12 17:01:26 #1699 passed:    master Add known community adapters
+2014-09-12 13:36:10 #1698 passed:    master Merge pull request #1919 from mdunisch/master
+2014-09-12 10:49:53 #1696 passed:    master Merge pull request #2192 from leedm777/fix-grunt-launching
+2014-09-12 10:46:37 #1695 passed:    master Merge pull request #2217 from Globegitter/changelog
+2014-09-10 02:00:18 #1689 passed:    master Merge pull request #2197 from Karnith/master
+2014-09-07 21:27:19 #1687 passed:    master Updated "skipAssets" regex to ignore query string
+2014-09-04 16:32:43 #1685 passed:    master Merge pull request #2180 from cshenoy/patch-1
+2014-09-01 00:03:36 #1682 passed:    master Update MODULES.md
+2014-08-29 17:32:30 #1679 errored:   master 0.10.5
+2014-08-29 17:41:28 #1678 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-08-26 13:03:55 #1676 failed:    master bump waterline dependency
+2014-08-25 12:07:59 #1674 failed:    master Pull out the API generator from Sails core
+2014-08-19 18:05:53 #1665 passed:    master Update CONTRIBUTING.md
+2014-08-18 18:08:29 #1662 passed:    master Merge pull request #2080 from tarlepp/patch-1
+2014-08-18 18:05:17 #1661 passed:    master Merge pull request #2121 from mhxz/master
+2014-08-16 08:02:55 #1658 passed:    master Update ROADMAP.md
+2014-08-16 08:00:50 #1657 passed:    master Update ROADMAP.md
+2014-08-15 15:30:00 #1655 passed:    master express3-handlebars is now express-handlebars
+2014-08-15 12:27:25 #1654 passed:    master Merge pull request #2101 from stangah/fix-blueprint-add-async
+2014-08-15 12:24:28 #1653 passed:    master Merge pull request #2088 from mdunisch/patch-2
+2014-08-15 12:22:56 #1652 passed:    master Merge pull request #2111 from Globegitter/patch-3
+2014-08-13 20:47:48 #1649 passed:    master Refactoring and cleanup
+2014-08-12 18:25:31 #1644 passed:    master 0.10.4
+2014-08-12 13:45:19 #1643 passed:    master Warning message for pubsub / socket methods when called without a valid socket (e.g. via HTTP).
+2014-08-12 00:18:54 #1641 passed:    master Added "all" method to hook "before" routes.
+2014-08-10 15:09:47 #1639 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-08-10 09:32:50 #1637 passed:    master Update EVENTS.md
+2014-08-09 19:44:23 #1636 passed:    master Expanded roadmap.
+2014-08-09 19:32:14 #1635 passed:    master Update ROADMAP.md
+2014-08-09 19:27:28 #1634 passed:    master Update ROADMAP.md
+2014-08-09 15:18:50 #1633 passed:    master Update ROADMAP.md
+2014-08-09 06:55:12 #1631 passed:    master Merge pull request #1975 from athieriot/sails-www-prod
+2014-08-09 06:49:09 #1630 passed:    master Merge pull request #2048 from RWOverdijk/patch-2
+2014-08-08 22:51:57 #1629 passed:    master Merge branches 'master' and 'master' of github.com:balderdashy/sails
+2014-08-08 19:26:21 #1628 passed:    master Added information about new Feature Request procedure.
+2014-08-08 16:40:59 #1627 passed:    master Better explanation of setting sails.config.models.migrate.
+2014-08-06 21:27:00 #1625 failed:    master 0.10.3
+2014-08-06 21:25:41 #1624 passed:    master 0.10.2
+2014-08-06 17:28:52 #1623 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-08-06 15:19:31 #1622 passed:    master Added tests for router changes in https://github.com/balderdashy/sails/commit/42a0aaf623fbd00614167cff2507eadbd49e3468
+2014-08-06 14:14:21 #1621 passed:    master Changed "prompt" dependency to use ~
+2014-08-06 14:03:18 #1620 passed:    master Fixed typo
+2014-08-06 10:52:10 #1619 passed:    master Add "migrate:alter" to test fixture so that it doesn't prompt.
+2014-08-06 10:27:06 #1618 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-08-05 20:08:36 #1617 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-08-05 19:22:03 #1616 passed:    master Update CORS hook to bind routes to all methods.
+2014-08-05 19:05:36 #1615 failed:    master Only bind to CRUDdy methods by default
+2014-08-05 18:26:33 #1614 passed:    master Fixed normalize-model in ORM hook so that it properly merges sails.config.models into each model again (after the refactor).
+2014-08-04 19:06:06 #1613 passed:    master Update skipper dep
+2014-08-04 15:03:47 #1612 passed:    master Stop silencing Express multipart warning, since we don't use Express multipart anymore.
+2014-08-04 14:58:40 #1611 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-08-04 13:23:30 #1610 passed:    master Update README.md
+2014-08-04 13:20:06 #1609 passed:    master Update README.md
+2014-08-04 13:15:14 #1608 passed:    master Update README.md
+2014-08-02 19:09:16 #1601 passed:    master Allow default middleware order to be used when custom middleware is specified.
+2014-08-01 19:39:55 #1600 passed:    master 0.10.1
+2014-07-30 17:57:22 #1598 passed:    master Updated sails debug with better log messages
+2014-07-30 17:27:05 #1597 passed:    master Merge pull request #2011 from xpepermint/master
+2014-07-30 17:17:53 #1596 passed:    master Merge branch 'master' into clarkorz-populate-with-custom-route
+2014-07-30 17:12:39 #1595 passed:    master Fix expose Lodash global by default.
+2014-07-30 16:36:09 #1594 passed:    master Handle undefined sails.config.globals by using defaults.
+2014-07-30 15:48:37 #1592 passed:    master Match the defaults present in boilerplate config/i18n.js file
+2014-07-30 13:08:43 #1591 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-07-29 21:06:43 #1590 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-07-29 17:32:31 #1589 passed:    master Set CORS headers on CSRF denial responses, for easier debugging
+2014-07-29 17:11:40 #1588 failed:    master Added metadata to more CORS route bindings
+2014-07-29 14:39:18 #1587 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-07-29 13:39:36 #1586 passed:    master Rogue require
+2014-07-29 13:35:40 #1585 failed:    master Some quick cleanup in orm hook and merge in new models/adapters instead of overriding/wiping
+2014-07-28 02:17:07 #1584 passed:    master Merge branch 'irl_experiment'
+2014-07-28 02:08:10 #1583 passed:    master Test inline policy in routes config.
+2014-07-28 01:56:00 #1582 passed:    master Don't allow explicit routing to controller/action unless it's a custom action
+2014-07-27 20:01:22 #1581 passed:    master Reverse course on CORS in favor of a more traditional implementation
+2014-07-26 17:45:44 #1580 passed:    master Use updated isSameOrigin to simplify code
+2014-07-26 16:58:34 #1579 passed:    master Test CORS with routes with no/non-http origin headers
+2014-07-26 16:38:14 #1578 passed:    master Only block requests from non-whitelisted origins if they start with HTTP
+2014-07-25 18:23:16 #1577 passed:    master 0.10.0-rc10
+2014-07-25 18:22:50 #1576 passed:    master Don't smash lodash defaults
+2014-07-25 17:43:50 #1575 passed:    master Updated CORS/CSRF tests
+2014-07-25 15:36:25 #1574 passed:    master Only set headers if they'll have values
+2014-07-25 15:34:21 #1573 passed:    master Added "Access-Control-Allow-Credentials" to x-domain /csrfToken response
+2014-07-24 22:29:34 #1572 passed:    master Fixed clearHeaders definition
+2014-07-23 17:56:32 #1570 passed:    master Remove reference to req.csrfToken in CORS hook
+2014-07-23 17:21:26 #1569 passed:    master Fixed CORS+CSRF tests
+2014-07-23 14:47:35 #1568 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-07-22 14:35:46 #1565 passed:    master Important parentheses
+2014-07-20 21:30:48 #1561 passed:    master back to Merge defaults 0.1.0 for now
+2014-07-20 19:10:39 #1560 failed:    master Use localDiskDb unless otherwise configured
+2014-07-17 18:00:32 #1554 failed:    master v0.10.0-rc9
+2014-07-17 17:44:38 #1553 failed:    master Force at least 0.11.2 of sails-generate in order to pick up sails-generate-controller update.
+2014-07-17 10:55:40 #1552 passed:    master Clean up dependencies in moduleloader and use path.resolve(...) instead of string math
+2014-07-17 07:52:04 #1551 failed:    master Added some intelligence to how sails.config.paths.public is absorbed
+2014-07-17 07:39:46 #1550 passed:    master Merge branch 'master' into bundleresponses
+2014-07-15 23:31:25 #1547 passed:    master Merge pull request #1956 from RWOverdijk/hotfix/improve-error
+2014-07-10 10:46:57 #1544 passed:    master Ensure >= 0.11.1 for sails-generate so that package.json deps fix is picked up
+2014-07-10 08:18:29 #1542 errored:   master Minor version bump for sails-generate dependency to ~v0.11.0 (also removed a sneaky little ^ that worked its way into the package.json, breaking legacy npm version compatibility.)
+2014-07-10 08:05:20 #1540 failed:    master Update tests to match new default behavior of res.serverError.
+2014-07-09 21:11:00 #1537 passed:    master Fix blueprints by enabling both kinds of checks in res.guessView()
+2014-07-09 14:33:03 #1536 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-07-09 13:11:06 #1535 passed:    master Merge pull request #1938 from RWOverdijk/patch-2
+2014-07-09 03:30:24 #1531 passed:    master Improved view errors, enhances  res.serverError, etc.
+2014-07-09 01:49:38 #1530 passed:    master virtual requests from a socket always 'wantsJSON' (at least for now)
+2014-07-08 23:52:31 #1529 passed:    master Update .travis.yml
+2014-07-08 23:50:43 #1528 passed:    master Adds some more view tests, explores adding impl of 'res' for use w/ app.request.  Should probably wait for express4 on that
+2014-07-08 22:36:31 #1527 passed:    master Makes sails.load() chainable w/ other prototypal methods, adds tests for that.
+2014-07-08 22:22:55 #1526 passed:    master Dont try to use sails.config.session if the session store doesnt exist.  Also ensures support for either http.middleware.cookkieParser or legacy express.cookieParser config.
+2014-07-08 22:09:34 #1525 passed:    master Better error on missing http dep in views hook
+2014-07-08 16:12:42 #1524 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-07-08 01:18:59 #1522 passed:    master Merge pull request #1930 from twg/psobot/grunt-fix
+2014-07-07 08:28:16 #1517 passed:    master Explain/comment handleBodyParserError
+2014-07-03 15:45:11 #1515 passed:    master Merge branches 'master' and 'master' of github.com:balderdashy/sails
+2014-07-03 11:07:47 #1514 passed:    master Merge pull request #1887 from twg/psobot/fix-subscription-logic
+2014-07-03 11:05:13 #1513 passed:    master Updated blueprint binding so that "controller" and "action" properties are always set properly for blueprint routes.
+2014-07-02 20:20:23 #1510 passed:    master Bump waterline dependency
+2014-07-02 18:15:43 #1509 failed:    master Added code to include custom i18n debug levels based on the configured sails log level
+2014-07-02 16:12:07 #1508 failed:    master Merge branch 'jmealo-twig-support'
+2014-07-02 16:08:09 #1507 failed:    master Merge branch 'vincesp-update-post'
+2014-07-02 20:18:54 #1506 canceled:  master Merge branch 'devcontrol-master'
+2014-07-01 16:42:51 #1502 passed:    master Merge pull request #1759 from clarkorz/criteria-on-id
+2014-07-01 15:44:57 #1499 passed:    master Merge pull request #1873 from mdunisch/patch-2
+2014-07-01 11:54:42 #1498 passed:    master Merge pull request #1892 from adjoinant/master
+2014-07-01 11:54:51 #1497 passed:    master Merge pull request #1895 from LukaszKrawczyk/master
+2014-07-01 11:54:35 #1496 passed:    master Made app constructor accessible as `sails.Sails` and added an error message about trying to load (or consequently- lift) an "expired" (already-lowered) app.
+2014-06-30 13:00:23 #1495 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-06-27 13:38:37 #1490 passed:    master Merge pull request #1871 from clarkorz/mssing-var
+2014-06-27 12:36:12 #1489 passed:    master Merge pull request #1896 from clarkorz/fix-missing-parentId
+2014-06-26 18:07:10 #1485 passed:    master Merge pull request #1881 from davesag/i18n-fix
+2014-06-19 22:28:54 #1479 passed:    master Hard-code 0.11.1 dep for grunt-contrib-less
+2014-06-11 18:52:46 #1474 passed:    master Update CONTRIBUTING.md
+2014-06-11 18:38:36 #1473 passed:    master v0.10.0-rc8
+2014-06-11 18:35:56 #1472 passed:    master Actually, hard-code waterline at 0.10.0-rc14 because 'squiggly line' doesn't accept rc versions > 9
+2014-06-11 18:00:22 #1471 passed:    master Loosen up waterline dep
+2014-06-11 17:59:31 #1470 passed:    master Lock down mock-req and mock-res dependencies
+2014-06-11 18:03:03 #1469 passed:    master MRerge branch 'master' of github.com:balderdashy/sails
+2014-06-11 17:24:00 #1468 passed:    master Marked some blueprint options tests as pending, so that they don't affect Travis running on PRs.  These tests should be fixed by the upcoming Waterline upgrade.
+2014-06-11 17:05:06 #1467 failed:    master Merge pull request #1749 from netantho/tests-i18n
+2014-06-11 16:30:45 #1466 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-06-10 18:02:19 #1465 failed:    master Update README.md
+2014-06-05 18:27:22 #1462 failed:    master Tweak blueprint 'add' action (now that .add() collection method in WL no longer throws- instead it accumulates errors and passes them to .save().  Also add a check for ReferencedModel in pubsub
+2014-06-04 14:21:47 #1461 failed:    master Bump to WL v0.10.0-rc13
+2014-06-02 12:37:39 #1458 failed:    master Merge branch 't3chnoboy-master'
+2014-06-02 12:34:59 #1457 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-06-01 19:36:38 #1456 failed:    master added community adapters: Azure Tables, Amazon RDS, DynamoDB, etc
+2014-06-01 19:13:02 #1455 failed:    master Update README.md
+2014-06-01 19:06:17 #1454 failed:    master added links to repos (after fiddling w/ github search qualifiers for way too long)
+2014-05-28 16:22:15 #1452 failed:    master Updated pubsub code that finds reverse associations to be more strict.
+2014-05-22 13:48:45 #1447 passed:    master Replaced missing require
+2014-05-21 12:13:22 #1445 passed:    master Fixed typo in tests.
+2014-05-21 00:36:30 #1444 passed:    master Merge branch 'master' of https://github.com/jasonsims/sails into jasonsims-master
+2014-05-21 00:22:30 #1443 passed:    master Added tests for CORS + CSRF.
+2014-05-19 23:00:27 #1437 passed:    master Merge pull request #1706 from knownasilya/patch-1
+2014-05-19 16:04:36 #1436 passed:    master Give moduleLoaderOverride method access to the original module loader.
+2014-05-15 12:45:15 #1423 passed:    master Merge pull request #1704 from adamhooper/get-baseUrl-from-http-host
+2014-05-15 12:34:21 #1422 passed:    master Merge branch 'custom-stores'
+2014-05-15 12:30:56 #1421 passed:    master Prevent throwing when getOrigin() is called.
+2014-05-15 12:19:19 #1420 passed:    master Merge branch 'interpreter'
+2014-05-13 07:23:40 #1415 passed:    master Merge pull request #1686 from netantho/netantho-duplicate-path-require
+2014-05-13 07:23:31 #1414 passed:    master Merge pull request #1685 from netantho/netantho-typo-contributing
+2014-05-12 16:34:29 #1412 passed:    master Makes unit tests (errors) pass.
+2014-05-12 14:05:25 #1411 passed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-05-08 17:21:30 #1406 passed:    master More helpful errors for bad bodyparser config
+2014-05-08 14:46:29 #1403 passed:    master v0.10.0-rc7
+2014-05-08 14:46:50 #1402 passed:    master Depend on waterine v0.10.0-rc12
+2014-05-08 13:19:57 #1401 passed:    master ACTUALLY closes https://github.com/balderdashy/sails/issues/1676
+2014-05-08 13:19:15 #1400 passed:    master ACTUALLY closes https://github.com/balderdashy/sails/issues/1676
+2014-05-08 12:55:51 #1399 passed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-05-08 00:47:48 #1398 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-05-07 19:16:34 #1397 passed:    master Kill the process when sails-lift fails.
+2014-05-07 17:18:18 #1396 passed:    master fixes up res.view callback
+2014-05-07 15:19:24 #1395 passed:    master Make sure usable log exists if lift fails due to bootstrap error
+2014-05-07 12:03:15 #1394 passed:    master Fixed issue where the default environment would get set to "undefined"
+2014-05-06 18:23:06 #1393 failed:    master Bunch of commented out benchmarking stuff
+2014-05-06 18:05:22 #1392 passed:    master Fix typo in previous commit, and pull out whilst interval (in lib/app/load) into a constant
+2014-05-06 18:01:27 #1391 failed:    master Dont trim ~ or ^ characters from version string during check.
+2014-05-06 17:57:31 #1390 passed:    master Use semver for version comparison in 'incompatible sails dependency' warning
+2014-05-06 17:42:30 #1388 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-05-06 16:22:41 #1386 passed:    master Turned off silly logging in test!
+2014-05-06 10:36:25 #1385 passed:    master Fixes bad copy/paste
+2014-05-05 21:04:17 #1384 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-05-05 20:02:24 #1383 failed:    master Update README.md
+2014-05-05 16:46:00 #1382 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-05-05 13:39:14 #1381 failed:    master Changed mdodelDef to modelDef
+2014-05-05 13:19:43 #1380 failed:    master At some point I forgot to take out the res.header() deprecation message for sockets (it is definitely implemented)
+2014-05-05 13:09:06 #1379 failed:    master Fixes bug in publishCreate
+2014-05-05 12:56:59 #1378 failed:    master Before subscribing or watching, ensure that the request originated from a socket.
+2014-05-05 07:30:30 #1377 passed:    master Normalize output from sails generate api foo (bin/_generate-api)
+2014-05-04 18:38:33 #1376 failed:    master Added backwards compatibility (client-side) to pubsub methods.  For folks using the legacy version of the sails.io.js SDK (primarily for pre-existing v0.9 projects)
+2014-05-04 16:47:02 #1375 passed:    master Backwards compatibility for global 'sails lift' and 'sails console' usage in upgraded v0.9.x projects (w/ the old gruntfile)
+2014-05-04 16:13:52 #1374 passed:    master Backwards compatibility and deprecation warnings for beforeValidation() lifecycle callback (is now beforeValidate()) (same thing for afterValidation)
+2014-05-02 18:31:57 #1372 passed:    master Update README.md
+2014-05-01 17:22:50 #1371 passed:    master Merge
+2014-05-01 17:02:11 #1370 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-05-01 09:58:49 #1369 failed:    master Humanize sails-generate output
+2014-05-01 08:45:16 #1368 passed:    master Include original message/object in low-level default error responses
+2014-05-01 07:36:55 #1367 passed:    master Fix tests (exit error domain in hook loading unit tests)
+2014-05-01 07:23:27 #1366 failed:    master Merge
+2014-05-01 06:21:06 #1365 failed:    master Merge
+2014-04-30 19:29:11 #1364 failed:    master Fixed default behavior for notFound, added default JSON output for other statuses.
+2014-04-30 18:50:56 #1363 errored:   master Update captains-log dependency's min version
+2014-04-30 18:32:47 #1362 passed:    master More tests- and now bootstrap function call is wrapped in a try/catch that passes the error to the callback.
+2014-04-30 17:59:56 #1361 passed:    master Passes errors straight through.  Also makes res.ok() send data as JSON/JSONP if it cannot find the specified view.
+2014-04-30 11:33:54 #1360 passed:    master Fixed bootstrap code.
+2014-04-30 02:03:26 #1357 passed:    master allParams() is a function.
+2014-04-29 18:52:25 #1356 passed:    master Send `locals` as second argument to `res.render`
+2014-04-29 16:50:53 #1355 passed:    master Allow a request to be passed as the argument to sails.sockets.id.
+2014-04-29 15:16:28 #1354 passed:    master Monkey-patched our monkey-patched Consolidate to give a more helpful Jade error message.
+2014-04-29 15:03:54 #1353 passed:    master Reverse commit 2e83ed6, since we realized we can just set sails.config.views.locals to do the same thing.
+2014-04-29 14:38:56 #1352 passed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-04-29 13:14:31 #1351 passed:    master Merge pull request #1640 from clarkorz/findOne2findone
+2014-04-28 15:51:29 #1348 failed:    master Added note in comments about hook order being important
+2014-04-28 04:15:16 #1347 passed:    master Fixed backwards 'if' predicate in Sails.prototype.request()
+2014-04-28 01:18:30 #1346 passed:    master Allows lifting with no hooks.
+2014-04-28 01:11:01 #1345 passed:    master Express-esque synonyms for low-level router usage (and tests).
+2014-04-28 00:52:47 #1344 passed:    master Load _privateRouter immediately when Router is instantiated to allow for zero-hook usage
+2014-04-28 00:09:01 #1343 failed:    master Pull out hook tests
+2014-04-27 23:52:11 #1342 failed:    master Extrapolated defaultHooks to a module which exports a constant (array of string names)
+2014-04-27 23:46:50 #1341 passed:    master Replaced 'Configuration' with 'self' in configuration submodule
+2014-04-27 23:34:34 #1340 passed:    master All tests pass (if you pull waterline)
+2014-04-27 23:19:58 #1339 failed:    master Policies tests pass again
+2014-04-27 19:17:38 #1338 failed:    master Refactored some tests - skipped others
+2014-04-27 04:03:02 #1337 failed:    master Formatting- plus improved req.param() and req.params.all() so that params dont squash each other.
+2014-04-27 03:31:33 #1336 failed:    master Formatting
+2014-04-27 03:30:34 #1335 failed:    master Add 'DELETE' to list of methods where the stream need not be ended manually. Added todo and explanation about next steps.
+2014-04-27 03:26:33 #1334 failed:    master Better error formatting in bindDefaultHandlers, as well as finishing touched on a good-enough implementation of sails.request() for now (for use in unit/integration tests)
+2014-04-27 02:39:35 #1333 failed:    master Added some presentation logic and sails.isLifted flag
+2014-04-27 01:42:36 #1332 failed:    master Added some notes about factory/constructor/singleton situation when requiring Sails
+2014-04-27 01:38:39 #1331 failed:    master Dont rely on sails context in isLocalSailsValid- since it might be invoked w/ legacy constructor usage
+2014-04-27 01:30:22 #1330 failed:    master Delete middleware submodule, since it is reducable to about 5 lines of code now.
+2014-04-27 01:07:49 #1329 failed:    master Fixes previous commit (loadHooks - replacing a usage of sails.util.isDictionary() also involves not only checking !array, but also !function)
+2014-04-27 00:59:57 #1328 failed:    master More cleanup- moved Sails constructor to its own module
+2014-04-27 00:52:30 #1327 failed:    master Refactoring, breaking pieces apart to reduce closure depth in lift process and provide cleaner access to methods on the Sails app instance.
+2014-04-26 19:09:09 #1326 failed:    master Enhanced the mock req/res - will improve quality of socket interpreter, help w/ internal framework testing, but in particular, allow for built-in helper to make unit/integration testing easier.
+2014-04-26 17:35:58 #1325 failed:    master Removed default _cb shim in res (in router) since it was never being called anyway.  New testing stuff will provide a better solution for unit tests (where a TCP port doesnt need to be occupied)
+2014-04-25 17:39:42 #1324 failed:    master Added implicit default for extremely short TTL for static files served via connect/express static middleware when environment==='development'.
+2014-04-23 04:20:46 #1321 failed:    master Formatting
+2014-04-23 03:52:39 #1320 failed:    master Bind context in router instead of relying on closure access to global sails (performance)
+2014-04-23 03:23:13 #1319 errored:   master Use anchor@beta
+2014-04-23 03:22:00 #1318 errored:   master Depends on new anchor features.
+2014-04-23 00:57:27 #1317 failed:    master Use 'else's in router.bind to take advantage of V8 lookahead optimizations.  Understand special 'target' syntax in router.bind
+2014-04-23 00:25:31 #1316 failed:    master An error thrown in res.negotiate shouldn't prevent the server from responding.
+2014-04-22 23:37:44 #1315 failed:    master Added better coverage of req.options.usage.
+2014-04-22 23:25:25 #1314 failed:    master Formatting
+2014-04-22 23:14:32 #1313 failed:    master More using cleaner testing syntax
+2014-04-22 23:13:21 #1312 failed:    master Use cleaner testing syntax
+2014-04-22 22:38:35 #1311 failed:    master Tests are now pretty dern decent for req.validate()
+2014-04-22 17:11:03 #1310 failed:    master Added a check to make sure bootstrap cb is not called more than once.
+2014-04-21 15:00:20 #1309 failed:    master Fixes .node-history error on initial 'sails console' usage in a new project
+2014-04-21 01:24:57 #1307 failed:    master Grunt 'fatal' errors don't necessarily need to terminate the main Sails process
+2014-04-16 20:50:16 #1305 failed:    master Merge branch 'master' into new-bodyparser
+2014-04-21 01:34:56 #1305 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-04-16 15:54:36 #1304 failed:    master Merge pull request #1587 from devadattas/patch-1
+2014-04-16 13:30:46 #1303 passed:    master Tests for blueprint route options.
+2014-04-15 17:22:24 #1302 passed:    master Merge branch 'master' of https://github.com/natdash/sails into natdash-master
+2014-04-15 17:12:34 #1301 passed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-04-11 21:49:41 #1297 passed:    master Update index.js
+2014-04-11 21:48:48 #1296 passed:    master Update index.js
+2014-04-09 18:30:57 #1294 passed:    master Fixes default res.negotiate.
+2014-04-08 18:56:13 #1293 passed:    master Merge pull request #1579 from t3chnoboy/master
+2014-04-07 13:36:45 #1289 passed:    master Fixed weird typo that made it into tests.
+2014-04-07 13:22:27 #1288 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-04-04 18:35:13 #1284 failed:    master MCerge branch 'master' of github.com:balderdashy/sails
+2014-04-04 16:34:51 #1283 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-04-04 16:33:29 #1282 failed:    master Load .json config files.
+2014-04-04 15:30:17 #1281 failed:    master Moved "grant3rdPartyCookie" config into `sails.config.sockets`.
+2014-04-04 15:10:06 #1280 failed:    master Allow csrf and socket '3rd party cookie' shadow routes to be disabled in sails.config.
+2014-04-04 09:13:35 #1279 failed:    master Comments
+2014-04-04 00:28:57 #1278 failed:    master Updated console history to save history file in local app path instead of Sails path, so that each app gets its own history.
+2014-04-04 00:05:04 #1277 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-04-03 20:16:57 #1276 failed:    master Default to authorization:false
+2014-04-03 19:37:31 #1275 failed:    master Changed 'setHeader' to 'set' wherever it appears
+2014-04-03 19:04:05 #1274 failed:    master MCerge branch 'master' of github.com:balderdashy/sails
+2014-04-03 19:02:16 #1273 failed:    master Allow CORS origin access control to work with socket requests.
+2014-04-03 17:31:20 #1272 failed:    master Added `/__getcookie` route to sockets hook, which will just return a JS file with a comment.  This should allow a JSONP request from a 3rd party to get a cookie from Sails, so that cross-domain sockets can work.
+2014-04-03 09:03:01 #1271 failed:    master Add stub file to make any legacy requires in userland (and the current requires in sails core) continue to work w/ the sockets hook.
+2014-04-03 08:31:35 #1270 failed:    master Added stub for interpreter tests (ie tool we can use to automatically build the support matrices)
+2014-04-03 08:21:16 #1269 failed:    master Normalize integration test naming scheme
+2014-03-31 19:45:41 #1266 failed:    master 0.10.0-rc5
+2014-03-31 18:50:36 #1265 failed:    master Added test for config.views.locals.
+2014-03-31 18:15:23 #1264 passed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-03-31 17:58:39 #1263 passed:    master Finished up blueprint actions for now.
+2014-03-31 15:48:21 #1262 passed:    master Allow for non-id child pk values in add blueprint action.
+2014-03-31 15:41:48 #1261 passed:    master All tests pass again.
+2014-03-31 14:57:55 #1260 failed:    master Changed instances of `Throw new Error` to `return sails.log.error` in pubsub methods.  Insane diff due to .editorconfig.
+2014-03-31 14:49:44 #1259 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-03-31 14:46:35 #1258 failed:    master Mid-sentence-- not stable at the moment.
+2014-03-31 09:32:19 #1252 passed:    master Fix bug in ok custom response.
+2014-03-31 09:26:45 #1251 passed:    master Refactored, added some comments to 'populate' blueprint action.
+2014-03-31 09:20:30 #1250 passed:    master All tests pass again-- improves fragile bit in APIScaffold.test.js, as well as ensuring that find/findOne are being routed appropriately.
+2014-03-28 19:13:28 #1248 passed:    master Add clarification about getHost
+2014-03-28 15:13:25 #1246 passed:    master Updated test script command
+2014-03-27 20:03:34 #1243 passed:    master res.negotiate, res.ok
+2014-03-27 17:18:26 #1242 passed:    master Improve res.negotiate.
+2014-03-27 13:16:54 #1240 passed:    master More tolerant res.negotiate()-- use res.negotiate as default error handler.
+2014-03-26 22:07:12 #1238 passed:    master Improve grunt fatal error msgs.
+2014-03-26 21:50:28 #1237 passed:    master Use res.notFound for unmatched routes by default again (fix)
+2014-03-26 20:33:30 #1236 passed:    master Less verbose
+2014-03-26 17:50:00 #1234 passed:    master Change "id" to "pet_id" in add / remove tests.  Crazy diff is due to .editorconfig
+2014-03-26 13:11:25 #1233 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-03-25 18:20:52 #1232 failed:    master Improve default serverError handler in builtin router.  Also, I'll probably regret this later, but added an editorconfig file.
+2014-03-22 22:42:22 #1229 failed:    master Made skipAssetsRegex much broader--pretty much anything with a dot in it will trigger it now.  If you want something less permissive, you can always use skipRegex.
+2014-03-22 22:22:39 #1228 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-03-22 21:03:28 #1227 failed:    master Update README.md
+2014-03-22 06:12:13 #1226 failed:    master Allow weirder status codes.
+2014-03-22 05:41:24 #1225 failed:    master Link up res.negotiate default response (todo: bring in the rest of the custom response boilerplates by default as well- figure out how to share the code between this and sails-generate-backend-- pull out another module if necessary.)
+2014-03-22 05:39:35 #1224 failed:    master In update blueprint action, trim :id path param from data sent to WL update unless it's actually explicitly specified in either req.body or req.query.
+2014-03-22 03:07:41 #1223 failed:    master Fix up comment in default ok response.
+2014-03-20 13:22:31 #1221 failed:    master Update CONTRIBUTING.md
+2014-03-19 19:54:40 #1220 failed:    master Cleanup on add and create blueprints.
+2014-03-19 18:44:48 #1219 passed:    master Fix for populateAll ussage (now populateEach)
+2014-03-19 18:39:05 #1218 failed:    master Update populate action blueprint.
+2014-03-19 18:17:35 #1217 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-03-19 13:50:15 #1216 passed:    master Merge pull request #1527 from TheSharpieOne/balderdashy/sails#1517
+2014-03-19 10:29:16 #1215 passed:    master Fix tests (were dependent on a specific custom response impl.
+2014-03-19 10:22:48 #1214 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-03-18 17:56:32 #1212 passed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-03-18 17:54:30 #1211 passed:    master Update CONTRIBUTING.md
+2014-03-18 17:23:22 #1210 passed:    master solves part of https://github.com/balderdashy/sails/issues/1517
+2014-03-18 16:58:37 #1209 passed:    master Merge pull request #1525 from RWOverdijk/hotfix/watch-deep
+2014-03-18 16:48:53 #1208 failed:    master Update EVENTS.md
+2014-03-18 16:48:10 #1207 passed:    master Update EVENTS.md
+2014-03-18 09:13:35 #1205 passed:    master Merge pull request #1514 from robgraeber/copyright-fix
+2014-03-17 23:43:38 #1204 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-03-17 22:55:30 #1203 passed:    master Update MODULES.md
+2014-03-17 22:41:45 #1202 passed:    master Update MODULES.md
+2014-03-17 22:41:18 #1201 passed:    master Update MODULES.md
+2014-03-17 22:40:34 #1200 passed:    master Update MODULES.md
+2014-03-17 22:36:59 #1199 passed:    master Update MODULES.md
+2014-03-17 20:15:12 #1198 passed:    master Fix for missing statusCode in 0.10 JWRs
+2014-03-15 17:41:01 #1196 passed:    master Add example to todo
+2014-03-14 20:48:43 #1195 passed:    master Corrected comment in interpreter about res.format.
+2014-03-14 20:45:25 #1194 passed:    master Added the most major of the 0.10 improvements-- body/headers/statusCode are split, two new req.options let you control whether response headers and status code should be sent down with socket responses (for optimization purposes).  Both are 'disable' flags, so by default, you get headers and status code now.  Also, added 0.9 compat. (for sails socket clients who connect WITHOUT an SDK version)
+2014-03-14 17:43:19 #1193 passed:    master Handle sails client SDK versioning, less abrasive error msgs.  Understand client SDK platform and programming language.
+2014-03-13 18:37:36 #1190 passed:    master Prepare for sailsio client versioning
+2014-03-13 16:50:34 #1189 passed:    master Fail more gracefully on missing custom response.
+2014-03-13 16:27:58 #1188 passed:    master Fix syntax issue.
+2014-03-13 16:25:24 #1187 failed:    master CoffeeScript fix (~1.7.0) Solves https://github.com/balderdashy/sails/issues/1505
+2014-03-13 15:10:26 #1186 passed:    master Use github version of waterline for edge release. (to allow WLError code to be used)
+2014-03-12 17:19:14 #1185 passed:    master Removed unused options to grunt child process.
+2014-03-12 07:02:36 #1181 passed:    master improve error messages for missing or invalid configured session adapter
+2014-03-12 06:38:58 #1180 passed:    master Update CONTRIBUTING.md
+2014-03-12 06:35:00 #1179 passed:    master Update CONTRIBUTING.md
+2014-03-12 06:04:27 #1176 passed:    master Respect res.locals.layout in res.view().
+2014-03-11 17:44:30 #1175 passed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-03-11 17:09:12 #1174 passed:    master Hoist variable.
+2014-03-10 17:51:26 #1172 passed:    master Fix for tests.
+2014-03-10 17:31:04 #1171 failed:    master Merge pull request #1498 from campbellanderson/master
+2014-03-10 17:22:42 #1170 failed:    master Use migrate safe for join tables too, and better log message when forcing migration strategy in production.
+2014-03-10 17:22:42 #1169 failed:    master Improve comment.
+2014-03-10 17:15:26 #1168 failed:    master pass in defaults to Waterline instead of merging with a model def
+2014-03-08 16:25:25 #1166 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-03-08 15:50:36 #1165 passed:    master Update CONTRIBUTING.md
+2014-03-08 15:50:16 #1164 passed:    master Update CONTRIBUTING.md
+2014-03-07 14:52:17 #1163 passed:    master Merge pull request #1478 from danielfeelfine/master
+2014-03-07 14:36:20 #1162 passed:    master Fix 'sails debug'
+2014-03-07 13:58:30 #1161 passed:    master Updated loadAdapters to work in subdirectories
+2014-03-06 14:52:50 #1160 failed:    master Better help message for failed cookie parsing.
+2014-03-06 14:47:35 #1159 passed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-03-06 08:54:52 #1157 passed:    master Update MODULES.md
+2014-03-06 01:58:59 #1155 passed:    master Added a few travis integrations
+2014-03-06 01:10:00 #1154 passed:    master Merge pull request #1483 from superbull/master
+2014-03-06 00:25:50 #1152 passed:    master added a few other community adapters
+2014-03-06 00:19:15 #1151 passed:    master formatting
+2014-03-06 00:14:45 #1150 passed:    master add beta install instructions
+2014-03-06 00:08:05 #1149 passed:    master Update README.md
+2014-03-05 23:40:27 #1148 passed:    master Rebase https://github.com/balderdashy/sails/commit/90ec9183461ac1a6d17e907054ab7be0fe82104e
+2014-03-05 21:34:31 #1145 passed:    master Run travis ci tests on stable and beta branches as well.
+2014-03-05 21:29:14 #1144 canceled:  master Update MODULES.md
+2014-03-05 21:26:02 #1143 passed:    master Update CONTRIBUTING.md
+2014-03-05 21:16:44 #1142 passed:    master Update CONTRIBUTING.md
+2014-03-05 20:54:58 #1141 passed:    master Update MODULES.md
+2014-03-05 20:52:33 #1140 passed:    master Links to node, connect, express, socket.io
+2014-03-05 20:50:14 #1139 passed:    master Links to supported databases
+2014-03-05 20:40:59 #1138 passed:    master Cleanup- add link to modules.md, version badge
+2014-03-05 19:54:26 #1137 passed:    master Made all tests pass w/ explicit port set (using 1342 instead of 1337 to make running tests less annoying when you accidentally leave another sails project running)
+2014-03-05 19:35:43 #1136 passed:    master Clean up compatibility warning
+2014-03-05 19:08:44 #1135 passed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-03-05 18:47:09 #1134 passed:    master Exception for missing Gruntfile, which is not really a fatal error.
+2014-03-05 18:38:09 #1133 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-03-05 18:36:36 #1132 passed:    master I mean seriously.
+2014-03-05 18:31:09 #1131 failed:    master Case-sensitive OS's are actually a huge pain in the @$$.
+2014-03-05 18:25:54 #1130 failed:    master Removed call to coveralls b/c it was breaking Travis tests.
+2014-03-05 18:16:40 #1129 failed:    master More test adjustments.
+2014-03-05 18:11:57 #1128 failed:    master Adjustments to tests.
+2014-03-05 17:48:08 #1127 failed:    master Replaced blank logs with log.blank
+2014-03-05 17:55:49 #1126 failed:    master Replaced blank logs with log.blank
+2014-03-05 14:31:13 #1125 failed:    master Added 'lower' event to docs
+2014-03-05 13:50:07 #1124 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-03-04 22:35:39 #1122 failed:    master Update MODULES.md
+2014-03-03 19:36:12 #1121 failed:    master 0.10.0-rc4
+2014-03-03 19:31:15 #1120 failed:    master Force -rc3 in waterline
+2014-03-03 19:27:56 #1119 failed:    master Force 0.10.2 patch on sails-generate
+2014-03-03 19:21:24 #1118 failed:    master Fix npm version issue
+2014-03-03 19:14:22 #1117 failed:    master Fix the tests
+2014-03-03 19:00:36 #1116 failed:    master Fix bug miek introduced/
+2014-03-03 17:48:08 #1115 failed:    master Increase timeout for tests (make travis happy)
+2014-03-03 17:36:25 #1114 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-03-03 14:57:18 #1113 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-03-02 22:03:58 #1111 failed:    master Closes https://github.com/balderdashy/sails/issues/1206
+2014-03-02 16:00:37 #1110 failed:    master Update MODULES.md
+2014-03-02 15:57:58 #1109 failed:    master Update MODULES.md
+2014-03-02 15:53:35 #1108 failed:    master Update MODULES.md
+2014-03-02 15:33:00 #1107 failed:    master Update README.md
+2014-03-02 15:29:22 #1106 failed:    master Merge pull request #1317 from kasperisager/coveralls-support
+2014-03-02 15:17:31 #1105 failed:    master Update MODULES.md
+2014-03-02 15:15:28 #1104 failed:    master Create MODULES.md
+2014-03-02 15:11:31 #1103 failed:    master Update CONTRIBUTING.md
+2014-03-02 15:11:08 #1102 failed:    master Update CONTRIBUTING.md
+2014-03-02 15:09:18 #1101 failed:    master Update CONTRIBUTING.md
+2014-03-02 15:08:07 #1100 failed:    master Update CONTRIBUTING.md
+2014-03-02 15:07:51 #1099 failed:    master Update CONTRIBUTING.md
+2014-03-02 14:38:38 #1098 failed:    master added waterline and sails build status badges
+2014-03-02 14:37:22 #1097 failed:    master Comment out deprecated test. Added todo to make it better.
+2014-03-02 14:16:48 #1096 failed:    master Merge pull request #1460 from PaulAvery/master
+2014-03-02 13:17:13 #1095 failed:    master Merge pull request #1459 from glenselle/patch-1
+2014-03-01 18:30:18 #1090 failed:    master Comments/strings.
+2014-03-01 18:01:35 #1089 failed:    master Use path.join() instead of string math for cross-platform safety.
+2014-03-01 17:54:18 #1088 failed:    master Fix bad path.join() in lib/configuration/load.js
+2014-03-01 17:50:54 #1087 failed:    master Remove optimist dep from errors modules.
+2014-03-01 17:46:09 #1086 failed:    master Remove optimist dep, clean lib/configuration/load, added comments to bin/sails-lift.
+2014-03-01 17:39:15 #1085 failed:    master Made waterline easier to find in package.json, removed unused require('reportback') from bin/sails-lift
+2014-03-01 17:29:56 #1084 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-03-01 13:06:19 #1083 failed:    master Merge pull request #1454 from moranje/master
+2014-02-28 20:59:28 #1081 failed:    master Normalize error messages, and wait until after lift to display them, for unknkown/invalid route syntax (or something that doesn't match up.)
+2014-02-28 20:33:17 #1080 failed:    master Fix issue w/ the way compress was patched in 2c293f1de9e2253649e2ac5aed4985bdfdfd5ce9
+2014-02-28 20:27:05 #1079 failed:    master Fix path to multipart parser.
+2014-02-28 20:23:55 #1078 failed:    master Fix path to bodyParser, change default config in http hook to use 'undefined'
+2014-02-28 20:12:29 #1077 failed:    master Merge pull request #1431 from tUrG0n/patch-1
+2014-02-28 19:02:51 #1076 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-02-28 18:57:10 #1075 failed:    master move deps badge into the compatibility section next to the other badge
+2014-02-28 18:54:12 #1074 failed:    master Merge pull request #1353 from danielfeelfine/master
+2014-02-28 18:53:26 #1073 failed:    master Comment refinements.
+2014-02-28 18:44:29 #1072 failed:    master Merge pull request #1434 from ndhoule/fix/load-test-error
+2014-02-28 18:18:18 #1071 errored:   master Merge branch 'override-controller-model'
+2014-02-28 18:08:00 #1070 errored:   master Remove includeAll dep now that we have sails-build-dictionary
+2014-02-27 11:36:22 #1069 failed:    master Merge pull request #1439 from ndhoule/fix/association-pubsub-bug
+2014-02-27 11:32:32 #1068 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-02-27 08:56:37 #1065 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-02-27 00:05:36 #1064 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-02-25 00:10:06 #1061 failed:    master Add comments to sockets hook, refactor troubleshooting message a bit.
+2014-02-24 22:25:57 #1060 failed:    master Removed prepended slash so that path.resolve works as expected.  This makes `sails lift` use the locally installed Sails if available.
+2014-02-23 23:14:16 #1058 failed:    master Improve socket connection  message when session cannot be persisted.
+2014-02-22 17:55:54 #1053 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-02-22 16:27:56 #1052 failed:    master Merge pull request #1433 from ndhoule/refactor/simplify-test-deps
+2014-02-22 16:30:01 #1051 failed:    master Merge pull request #1432 from ndhoule/fix/travis
+2014-02-21 21:50:32 #1046 failed:    master Added try/catch in sockets/authorization.js and improved the warning message.
+2014-02-21 17:18:36 #1045 failed:    master Fixed issue where deleting a model instance with a to-one association where the associated key is undefined caused an error.
+2014-02-21 16:23:11 #1044 failed:    master Updated middleware loading to give custom loadMiddleware functions access to the default Sails middleware, as well as the global Sails object.
+2014-02-20 19:39:02 #1043 failed:    master Updated moduleloader hook to take advantage of the new "flattenDirectories" and "keepDirectoryPath" options
+2014-02-20 16:11:15 #1042 failed:    master 0.10.0-rc3
+2014-02-20 16:06:56 #1041 failed:    master Reverted back to old way of working with custom middleware, for (easier) backwards compatibility
+2014-02-20 15:52:26 #1040 failed:    master Added commented out stuff that would **ACTUALLY** fix the previously mentioned issue.  However, to preserve simplicity, we're better off just modifying 'req.options'.  Should document this thoroughly.
+2014-02-19 18:43:26 #1039 failed:    master 0.10.0-rc2
+2014-02-19 18:42:52 #1038 failed:    master Bump waterline to -rc2.
+2014-02-18 21:32:04 #1037 failed:    master Update README.md
+2014-02-18 19:08:23 #1036 failed:    master fix issue with proto methods being wiped off objects when cloning
+2014-02-18 16:39:02 #1035 failed:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-02-18 16:25:59 #1034 failed:    master Always check that reverseAssociation exists before trying to reference its type.
+2014-02-17 22:15:11 #1033 failed:    master Update gdsrc in grunt hook to expect grunt deps to live in your project.  Now that sails new creates symbolic links, this works out of the box- plus it makes it easier for others cloning sails apps to get the relevant deps, even across different versions of the framework.
+2014-02-17 16:30:17 #1032 failed:    master 0.10.0-rc1
+2014-02-15 19:38:41 #1031 failed:    master Merge pull request #1407 from jonlong/swig-cache-fix
+2014-02-14 13:32:26 #1028 failed:    master Throw fatal error when invalid adapter is encountered.
+2014-02-14 13:27:31 #1027 failed:    master Added warning when an outdated adapter is detected.
+2014-02-13 16:52:38 #1026 failed:    master update sails generate tests
+2014-02-13 16:36:36 #1025 failed:    master Updated sails-generate version
+2014-02-13 16:17:22 #1024 failed:    master Fix sails-generate usage and help message.
+2014-02-13 16:05:21 #1023 failed:    master REverted change to bin/sails.js
+2014-02-13 12:14:54 #1022 failed:    master Usage tweaks.
+2014-02-13 12:04:27 #1021 failed:    master Remove 'dry' from usage.
+2014-02-13 11:56:47 #1020 failed:    master Show usage when 'sails generate' called w/o arguments.
+2014-02-13 11:18:47 #1019 failed:    master Update CONTRIBUTING.md
+2014-02-12 15:39:24 #1018 failed:    master Updated shortcut update route to make :id required.
+2014-02-12 15:35:00 #1017 failed:    master Make :id parameter in blueprint PUT shadow routes required.
+2014-02-12 15:16:09 #1016 failed:    master Updated pubsub tests to test models with custom primary key attributes
+2014-02-12 13:51:40 #1015 failed:    master Added ability to bind routes directly to responses, in case you want to deactivate specific blueprint routes (for example)
+2014-02-12 13:10:42 #1014 failed:    master Add "introduce" call back to default publishCreate method.
+2014-02-12 12:49:39 #1013 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-02-12 09:02:02 #1012 failed:    master update website to not point to a porn site
+2014-02-11 18:38:44 #1011 failed:    master Fixed / reactivated generator integration tests
+2014-02-11 17:24:49 #1010 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-02-10 13:56:02 #1009 failed:    master Fix issues to make the new config actually work.
+2014-02-10 11:52:02 #1008 failed:    master Updated warning about subscribing to firehose in production with info on how not to subscribe.
+2014-02-10 11:43:30 #1007 failed:    master Merge branch 'master' of https://github.com/balderdashy/sails
+2014-02-10 01:39:11 #1006 failed:    master Allow unknown options for all the things (in 'bin').
+2014-02-10 01:32:37 #1005 failed:    master Resolved potentially ambiguous variable defs (solves JSHint errors).
+2014-02-10 01:12:00 #1004 failed:    master Always use migrate:safe in production.
+2014-02-09 22:27:25 #1003 failed:    master Added tests for pubsub contexts.
+2014-02-09 19:52:43 #1002 failed:    master Updated low-level socket join/leave methods to accept arrays of sockets/socket ids.
+2014-02-08 16:06:44 #1001 failed:    master Changed payload argument for pubsub `message` method to `data`.
+2014-02-07 18:17:15 #1000 failed:    master Fixed custom pubsub message test
+2014-02-07 09:37:01 #999 failed:     master Merge branch 'master' of github.com:balderdashy/sails
+2014-02-06 18:37:24 #998 failed:     master Updated verb coming out of pubsub .message() to be past-tense like all the other default pubsub methods.
+2014-02-06 18:15:23 #997 failed:     master Added public Model.message() method for sending custom messages to model instance subscribers.
+2014-02-06 17:44:52 #996 failed:     master Added contexts to pubsub methods, so that you can subscribe separately to update, destroy, message, etc.
+2014-02-06 14:03:24 #995 failed:     master Added autosubscribe configuration property for model classes.  If `false`, the blueprint find action won't subscribe the requesting socket to the found instance(s).
+2014-02-06 13:29:42 #994 failed:     master Added "previous" attribute to socket message sent out by publishDestroy
+2014-02-06 13:07:30 #993 failed:     master Updated publishDestroy and publishUpdate signatures, wrapping "previous" and "noReverse" into the "options" parameter
+2014-02-05 20:36:02 #992 failed:     master Merge branch 'v0.10'
+2014-02-05 20:34:19 #991 failed:     master Added watch and unwatch methods to pubsub
+2014-02-05 18:25:41 #990 failed:     master Merge branch 'v0.10' of github.com:balderdashy/sails into v0.10
+2014-02-05 01:07:51 #989 failed:     master Merge branch 'master' into v0.10
+2014-02-05 01:07:30 #988 failed:     master Always use NODE_ENV, also some more convenience accessors in view locals
+2014-02-04 22:01:00 #987 failed:     master Sails debug works, tweaks to grunt
+2014-02-04 18:31:09 #986 errored:    master Merge branch 'master' of github.com:balderdashy/sails
+2014-02-03 11:40:39 #985 failed:     master Merge pull request #1369 from mikedevita/patch-1
+2014-02-02 16:42:03 #983 failed:     master Made sails www work again.
+2014-01-31 06:30:06 #982 failed:     master fix for https://github.com/balderdashy/sails/commit/58bfc02363f57d148edf0ebc0c401b8d17dcf812#commitcomment-5237606
+2014-01-31 06:00:40 #981 failed:     master Merge pull request #1351 from leedm777/pubsub-lodash
+2014-01-31 06:00:06 #980 failed:     master Merge pull request #1362 from jaulz/patch-1
+2014-01-19 19:08:55 #975 failed:     master Merge pull request #1316 from kokujin/master
+2014-01-19 19:05:39 #974 failed:     master Merge pull request #1319 from batuhanicoz/patch-1
+2014-01-14 10:35:32 #967 failed:     master Update README.md
+2014-01-14 08:38:08 #966 failed:     master Update README.md
+2014-01-14 08:37:44 #965 failed:     master add link to new-to-node on website
+2014-01-14 08:29:36 #964 failed:     master fix broken links
+2014-01-14 08:26:42 #963 failed:     master is good, spell GOOD!
+2014-01-14 08:26:11 #962 failed:     master cleanup (dont worry squid is still at the bottom)
+2014-01-09 03:15:18 #961 failed:     master Update CONTRIBUTING.md
+2014-01-08 19:56:58 #960 failed:     master Merge pull request #1286 from RWOverdijk/patch-1
+2014-01-06 22:30:03 #958 failed:     master Update CONTRIBUTING.md
+2014-01-05 19:40:44 #956 failed:     master Update README.md
+2014-01-05 19:39:16 #955 failed:     master Update README.md
+2014-01-05 19:30:19 #954 failed:     master Update CONTRIBUTING.md
+2014-01-05 19:29:07 #953 failed:     master Removed changelog, use https://github.com/balderdashy/sails-docs/blob/0.9/changelog.md instead.
+2014-01-05 16:54:25 #952 failed:     master Update CHANGELOG.md
+2014-01-05 16:52:32 #951 failed:     master Update CONTRIBUTING.md
+2014-01-05 16:50:41 #950 failed:     master Update CONTRIBUTING.md
+2014-01-05 16:49:53 #949 failed:     master Update CONTRIBUTING.md
+2014-01-04 19:19:25 #948 errored:    master Update README.md
+2014-01-04 19:17:56 #947 errored:    master Update README.md
+2014-01-04 19:17:16 #946 errored:    master Update README.md
+2014-01-04 19:12:47 #945 errored:    master Update README.md
+2014-01-04 19:11:15 #944 failed:     master Update README.md
+2014-01-04 19:07:11 #943 failed:     master Update README.md
+2014-01-02 19:16:12 #939 failed:     master Update README.md
+2014-01-02 19:13:34 #938 failed:     master Update README.md
+2014-01-02 19:12:55 #937 failed:     master Update README.md
+2014-01-02 19:11:16 #936 failed:     master Update README.md
+2014-01-02 19:06:11 #935 errored:    master Update README.md
+2014-01-02 18:38:48 #934 failed:     master Update LICENSE.md
+2014-01-01 20:28:49 #933 failed:     master Update README.md
+2014-01-01 20:27:48 #932 errored:    master Update README.md
+2014-01-01 20:24:19 #931 errored:    master Update README.md
+2014-01-01 20:22:23 #930 failed:     master Update README.md
+2014-01-01 20:14:09 #929 failed:     master Update README.md
+2014-01-01 20:12:15 #928 failed:     master Update README.md
+2014-01-01 20:11:18 #927 errored:    master Update README.md
+2014-01-01 20:08:14 #926 failed:     master Update README.md
+2014-01-01 20:00:54 #925 failed:     master Update README.md
+2014-01-01 19:58:13 #924 failed:     master Update README.md
+2014-01-01 17:40:04 #923 errored:    master Update CONTRIBUTING.md
+2014-01-01 16:38:16 #922 errored:    master Update README.md
+2013-12-23 17:24:36 #919 failed:     master Update CONTRIBUTING.md
+2013-12-23 17:17:43 #918 failed:     master Update CONTRIBUTING.md
+2013-12-23 16:37:05 #917 errored:    master Update CONTRIBUTING.md
+2013-12-22 17:35:30 #915 failed:     master Update CONTRIBUTING.md
+2013-12-16 17:29:37 #913 failed:     master Update CONTRIBUTING.md
+2013-12-16 11:58:58 #912 failed:     master Update CHANGELOG.md
+2013-12-16 10:21:48 #911 failed:     master 0.9.8
+2013-12-16 10:19:02 #910 errored:    master Rebased from https://github.com/balderdashy/sails/pull/1012 as hotfix for windows view issue.
+2013-12-16 10:12:40 #909 passed:     master Hot fix to protect connect cookie parsing.
+2013-12-12 17:09:11 #903 errored:    master Merge pull request #1195 from devel-pa/master
+2013-11-28 00:42:04 #892 errored:    master Update CHANGELOG.md
+2013-11-26 19:11:17 #891 errored:    master Use npm version of linker
+2013-11-10 13:29:10 #867 passed:     master Merge pull request #1046 from bicherele/patch-1
+2013-11-10 13:25:55 #866 passed:     master Merge pull request #1056 from andyzhau/master
+2013-10-15 08:22:57 #840 passed:     master Update README.md
+2013-10-15 08:22:13 #839 passed:     master Update README.md
+2013-10-15 08:11:58 #838 passed:     master Update README.md
+2013-10-15 08:07:26 #837 passed:     master Update README.md
+2013-10-15 08:07:19 #836 passed:     master Update README.md
+2013-10-15 07:43:26 #835 passed:     master Update README.md
+2013-10-15 07:42:59 #834 errored:    master Update README.md
+2013-10-15 06:54:16 #833 passed:     master Update README.md
+2013-10-15 06:52:40 #832 passed:     master Update README.md
+2013-10-14 13:50:07 #831 passed:     master Hotfix for CORS issue when no Origin header is present.
+2013-10-10 15:11:41 #828 passed:     master Update README.md
+2013-10-10 14:48:12 #827 passed:     master 0.9.7
+2013-10-06 20:03:57 #809 passed:     master Merge pull request #933 from drosen0/patch-2
+2013-09-21 16:53:54 #747 passed:     master Merge pull request #903 from saghaulor/patch-1
+2013-09-21 14:45:12 #746 passed:     master Fixed issue where specifying a socket to omit in Model.publish calls would cause the Model classroom to be used, instead of the specified room.
+2013-09-16 11:06:17 #714 passed:     master Merge pull request #851 from sazze/master
+2013-09-16 05:14:09 #708 passed:     master Merge pull request #845 from wolneykien/master
+2013-09-16 04:46:52 #705 passed:     master Merge pull request #869 from yoshuawuyts/master
+2013-09-11 13:28:16 #696 passed:     master Merge pull request #852 from hellojwilde/patch-1
+2013-09-08 16:45:02 #681 passed:     master Merge pull request #753 from stormslowly/master
+2013-09-08 16:39:20 #680 passed:     master yeoman generator is out of date as of sails 0.9, so removing it from readme
+2013-09-08 16:09:47 #675 passed:     master stub for customizable socket connection logic
+2013-09-05 17:37:35 #654 passed:     master 0.9.4
+2013-09-05 14:14:24 #649 passed:     master Removed "Currently viewing with this engine" line from default index page.
+2013-08-20 12:44:34 #629 passed:     master Hotfix to CORS hook.
+2013-08-11 14:25:50 #616 passed:     master Merge branch 'development'
+2013-08-11 09:28:44 #608 passed:     master Merge pull request #731 from knice/master
+2013-08-05 22:43:59 #591 passed:     master Merge pull request #718 from Phantazm/patch-1
+2013-07-25 10:36:11 #563 passed:     master Merge pull request #669 from madbook/master
+2013-07-22 00:12:23 #540 passed:     master Update CONTRIBUTORS
+2013-07-19 18:49:00 #531 passed:     master Merge pull request #628 from xdissent/maybe-fix-create
+2013-07-19 17:33:45 #528 passed:     master 0.9.3
+2013-07-19 17:32:47 #527 passed:     master Merge branch 'development'
+2013-07-19 15:20:41 #523 passed:     master Update README.md
+2013-07-10 00:45:07 #351 passed:     master Merge pull request #524 from sevastos/patch-1
+2013-07-06 01:01:53 #310 failed:     master Added process.env.PORT to port: definition in config/application.js boilerplate.
+2013-06-30 20:41:17 #290 failed:     master Merge pull request #499 from OscarGodson/patch-1
+2013-06-30 05:47:10 #288 failed:     master 0.8.94
+2013-06-30 04:35:50 #287 failed:     master Tweaks to homepage boilerplate.
+2013-06-30 04:17:55 #286 failed:     master Removed sails-mongo dependency re #501
+2013-06-27 05:00:47 #283 failed:     master Rebased socket.io session adjustments from 0.9.
+2013-06-26 00:03:25 #271 passed:     master Merge pull request #493 from jciolek/master
+2013-06-24 19:52:49 #268 failed:     master Update .travis.yml
+2013-06-24 19:44:16 #267 failed:     master Update .travis.yml
+2013-06-22 17:05:16 #245 failed:     master Updated latest stable release.
+2013-06-22 16:40:04 #240 passed:     master 0.8.93
+2013-06-21 19:34:09 #237 passed:     master 0.8.92
+2013-06-21 19:03:14 #236 passed:     master Security patch for socket.io interpreter.  Prevents possible DoS attack.
+2013-05-24 01:30:25 #204 passed:     master Updated Travis Info
+2013-05-24 00:08:38 #202 passed:     master Removed data message in warning.
+2013-05-23 23:52:57 #201 failed:     master Modified tests, added session stuff.
+2013-05-23 22:59:03 #200 failed:     master Generate session secret when new app is created. (Can't believe that worked on the first try.)
+2013-05-23 20:48:07 #199 failed:     master Disabled default secret-- this will need to be replaced by a nice warning and an automatic generation when new project boilerplate is created.
+2013-05-16 07:15:02 #153 passed:     master 0.8.91.
+2013-05-16 07:11:02 #152 passed:     master 0.8.9 proper release.
+2013-05-15 17:45:59 #151 passed:     master Merge pull request #389 from balderdashy/development
+2013-05-15 13:40:33 #150 failed:     master Fixed issue when running app.js (shows up in production).
+2013-05-13 22:32:23 #137 failed:     master sails.config.io.transports support
+2013-05-13 11:02:57 #130 failed:     master Merge pull request #379 from curtislacy/https-message
+2013-05-13 01:03:37 #126 failed:     master Extrapolated publishCreate, publishUpdate, and publishDestroy into special, overridable and trigerable methods.
+2013-05-12 23:10:09 #125 passed:     master More tolerant and flexible blueprint.  Also, don't override pubsub methods which already exist in adapters/models with the defaults.
+2013-05-13 22:51:31 #124 passed:     master Fixed bug in create blueprint.
+2013-05-11 19:11:17 #121 errored:    master Set the version numbers for dependancies to static in Package.JSON
+2013-05-09 00:02:21 #111 passed:     master Merge pull request #376 from greeze/master
+2013-05-08 22:11:17 #106 passed:     master Removed my frankenstein monster.
+2013-05-08 20:56:17 #105 passed:     master Merge pull request #372 from colinwren/master
+2013-05-08 02:08:45 #98 passed:      master Example works w/ redis.
+2013-05-08 00:43:44 #97 passed:      master Session experiment.  Help welcome
+2013-05-08 00:35:41 #96 passed:      master Added handlebars dep to package.json.  This needs to change soon-- we can't keep adding these.
+2013-05-07 15:08:46 #93 passed:      master Merge pull request #370 from colinwren/master
+2013-05-06 23:01:11 #91 passed:      master rolled back version number in package.json
+2013-05-06 22:59:12 #90 passed:      master Merge pull request #369 from thelastshadow/master
+2013-05-04 19:06:17 #88 passed:      master Merge pull request #367 from colinwren/master
+2013-05-04 19:03:41 #87 passed:      master Merge pull request #368 from digitalcraft/master
+2013-05-03 10:32:35 #83 passed:      master Added Coffee-Script as a dependancy in package.json
+2013-05-03 01:10:09 #82 passed:      master Merge pull request #364 from colinwren/master
+2013-05-02 23:13:00 #81 passed:      master Updating READEME.md
+2013-05-02 23:11:17 #80 passed:      master Update README.md
+2013-05-02 23:10:29 #79 passed:      master Update README.md
+2013-05-02 23:06:33 #78 passed:      master Update README.md
+2013-04-30 20:14:12 #76 passed:      master 0.8.91
+2013-04-30 08:23:30 #75 passed:      master Allowing Coffeescript to be used on the backend for adapters, models, controllers, policies, services, and configs
+2013-04-27 19:15:37 #74 passed:      master Merge pull request #359 from poeticninja/master
+2013-04-27 13:04:00 #72 passed:      master reverting readme.md
+2013-04-27 13:03:10 #71 passed:      master centering video on readme.md
+2013-04-27 13:01:18 #70 passed:      master centering video on readme.md
+2013-04-27 12:08:20 #69 passed:      master Merge pull request #358 from particlebanana/defaultsTo
+2013-04-27 01:30:38 #67 passed:      master Merge pull request #356 from colinwren/master
+2013-04-27 01:01:55 #65 failed:      master Merge pull request #355 from colinwren/master
+2013-04-27 00:41:19 #63 passed:      master removing 0.8 from travis build tests.
+2013-04-26 23:46:42 #62 failed:      master Merge pull request #354 from poojan/master
+2013-04-26 16:20:43 #60 failed:      master Merge pull request #329 from particlebanana/policy
+2013-04-25 13:49:35 #57 failed:      master Merge pull request #351 from colinwren/master
+2013-04-25 13:08:52 #56 failed:      master Merge pull request #353 from obrienmd/master
+2013-04-23 18:11:08 #53 failed:      master Merge pull request #347 from colinwren/master
+2013-04-23 15:43:12 #51 failed:      master updates travis config
+2013-04-23 15:34:16 #50 failed:      master updates travis config
+2013-04-23 15:17:49 #49 failed:      master updated database information for Travis
+2013-04-23 13:23:39 #48 failed:      master Added Adapters to travis config
+2013-04-23 12:02:01 #47 failed:      master Merge pull request #346 from obrienmd/master
+2013-04-22 17:52:42 #45 failed:      master Merge pull request #335 from obrienmd/master
+2013-04-21 19:45:20 #44 failed:      master Merge pull request #345 from colinwren/master
+2013-04-20 22:08:42 #42 passed:      master Merge pull request #324 from particlebanana/findOrCreate
+2013-04-19 21:20:32 #41 passed:      master Merge pull request #344 from jaredtking/css_fix
+2013-04-19 18:50:49 #39 passed:      master Merge pull request #323 from connermcd/dev
+2013-04-19 18:11:56 #37 passed:      master Merge pull request #338 from dylanized/master
+2013-04-19 18:03:50 #36 passed:      master Merge pull request #339 from colinwren/master
+2013-04-18 15:12:18 #35 passed:      master Docs.
+2013-04-18 14:38:56 #34 passed:      master Added TODO for moving session/socket integration
+2013-04-18 13:20:48 #33 passed:      master Merge pull request #334 from ryanseys/master

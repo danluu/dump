@@ -1,0 +1,18 @@
+2014-10-04 07:43:19 #30 passed:      master Once more to not overwrite argLine for jacoco
+2014-10-04 07:19:26 #29 passed:      master Oops, enable jacoco in build
+2014-10-04 07:04:38 #28 passed:      master Try codecov
+2014-09-30 10:27:23 #27 passed:      master Fix Preconditions message
+2014-09-26 05:48:35 #26 passed:      master Allow long(er) request URLs
+2014-09-26 05:48:24 #25 errored:     master Minor plugin updates
+2014-09-21 07:16:08 #24 passed:      master Merge pull request #89 from cloudera/Issue88
+2014-09-16 16:19:38 #17 passed:      master Also make Weighted, WeightedRealVector serializable (HT Justin Hayes)
+2014-09-16 06:26:11 #16 passed:      master Centers should be Serializable, since its contents are and is used in other Serializable classes
+2014-09-15 11:42:12 #15 passed:      master Hadoop 2.5.1
+2014-09-10 08:40:14 #14 passed:      master Clarify values of kmeans-model.normalize
+2014-09-08 15:25:52 #13 passed:      master Add clirr to check for API changes, and revert inadvertent public API change from 1.0.0->1.0.1
+2014-09-01 04:37:45 #12 passed:      master Merge pull request #87 from cloudera/NoServingLayerUpdates
+2014-08-29 10:21:13 #10 passed:      master Merge pull request #86 from cloudera/DecayFactor
+2014-08-28 08:47:35 #5 passed:       master Update RAT to 0.11
+2014-08-27 05:28:21 #4 passed:       master Fix some more Java 8 javadoc warnings
+2014-08-18 09:12:31 #3 passed:       master Add formal note about contributing
+2014-08-17 17:19:07 #2 passed:       master Travis only supports OpenJDK for Java 6

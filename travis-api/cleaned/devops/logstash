@@ -1,0 +1,84 @@
+2013-10-24 17:33:25 #258 errored:    master - dev bump
+2013-10-22 13:26:22 #251 passed:     master update changelog for release
+2013-10-22 13:24:48 #250 passed:     master Update for release
+2013-10-22 13:22:29 #249 passed:     master prep for release
+2013-10-22 13:11:26 #248 failed:     master Merge pull request #739 from logstash/fix-syslog-output
+2013-10-22 12:52:39 #244 errored:    master Merge pull request #737 from logstash/utf8-gonna-make-me-quit-computers
+2013-10-22 12:52:45 #243 passed:     master - update changelog through 1476322c4ab18e41c0c93e27a3f5aa2c6e6813f8
+2013-10-22 12:43:09 #242 passed:     master Merge pull request #728 from fbird/master
+2013-10-21 17:34:31 #236 passed:     master Merge pull request #704 from bernd/fix-syslog-input-memleak
+2013-10-21 13:35:00 #235 passed:     master Merge pull request #735 from logstash/fix-cabin-deps
+2013-10-19 20:15:29 #232 passed:     master Merge pull request #731 from logstash/json-streaming
+2013-10-18 19:20:12 #231 passed:     master Merge pull request #733 from logstash/support-@timestamp-in-json-filter-better
+2013-10-18 19:04:20 #228 passed:     master Merge pull request #734 from logstash/purge-amqp-plugin
+2013-10-18 18:52:20 #226 passed:     master Merge pull request #732 from logstash/output-workers-not-supported
+2013-10-17 10:23:50 #211 passed:     master Merge pull request #720 from nikicat/fix-unix
+2013-10-16 10:53:30 #208 errored:    master Merge pull request #725 from markabey/csv_quote_char
+2013-10-16 05:31:20 #205 passed:     master Merge pull request #686 from bodgit/netflow
+2013-10-16 05:31:04 #204 passed:     master Merge pull request #682 from bodgit/notin
+2013-10-15 16:31:05 #203 errored:    master Merge pull request #723 from logstash/remove-unused-build-stuff
+2013-10-15 15:24:20 #200 passed:     master Merge pull request #722 from untergeek/master
+2013-10-15 14:40:23 #198 failed:     master Merge pull request #721 from untergeek/master
+2013-10-15 14:38:04 #197 passed:     master Merge pull request #703 from logstash/upgrade-jruby
+2013-10-11 03:58:20 #185 errored:    master Merge pull request #714 from malthe/add-aws-proxy-support
+2013-10-10 20:27:53 #183 passed:     master - tweak wording
+2013-10-10 20:22:02 #182 failed:     master - Update changelog through 8f10ba8a854df9a3f678c363af0a52f168285c8e
+2013-10-10 07:48:10 #178 failed:     master update changelog
+2013-10-10 04:05:07 #175 passed:     master Merge pull request #674 from fbarbeira/patch-1
+2013-10-10 03:27:50 #174 passed:     master Merge pull request #672 from vspiewak/patch-1
+2013-10-10 03:09:14 #173 failed:     master Merge pull request #712 from jujugrrr/s3-output-varname
+2013-10-09 07:23:05 #169 passed:     master Merge pull request #710 from logstash/json-codec-fix
+2013-10-08 14:22:52 #165 failed:     master Merge pull request #685 from bernd/fix-fail-invocation
+2013-10-08 14:20:48 #164 failed:     master Merge pull request #693 from bernd/LOGSTASH-1416
+2013-10-08 13:40:52 #163 failed:     master Merge pull request #708 from logstash/multiple-output-workers
+2013-10-08 09:50:37 #158 passed:     master Merge pull request #673 from shadyabhi/fix_prefix_and_include_exclude_keys_related_bug
+2013-10-08 09:18:48 #155 errored:    master Merge pull request #706 from logstash/format-backwards-compat
+2013-10-08 08:56:02 #151 passed:     master Merge pull request #705 from logstash/fix-numeric-handling-in-config
+2013-10-08 04:34:50 #147 passed:     master Merge pull request #665 from turtlebender/feature/fix-oldlogstashjson-encode
+2013-10-07 19:26:57 #145 passed:     master Shrink port range to 9300-9305. This was done after a discussion with
+2013-10-07 19:25:06 #144 errored:    master Replace older event.type with event["type"]
+2013-10-07 03:22:40 #138 passed:     master Merge pull request #701 from logstash/es-http-async
+2013-10-07 02:34:45 #135 passed:     master Merge pull request #690 from bernd/LOGSTASH-1427
+2013-10-07 02:04:06 #134 passed:     master Merge pull request #700 from logstash/es-http-async
+2013-10-06 01:25:42 #130 passed:     master Merge pull request #694 from bernd/LOGSTASH-1394
+2013-10-04 13:14:14 #126 passed:     master - skip remove_tag if there are no tags.
+2013-10-04 02:54:56 #124 errored:    master Merge pull request #696 from logstash/elasticsearch_http-perf-improvements
+2013-10-03 14:33:59 #120 passed:     master host is required
+2013-10-03 13:58:01 #117 passed:     master - copy tests from elasticsearch_http to test type settings
+2013-10-03 13:29:18 #116 passed:     master - Add more tests to verify document index and index type settings
+2013-10-03 12:27:39 #115 passed:     master Merge pull request #687 from bernd/rufus-scheduler-version
+2013-10-03 11:34:35 #114 failed:     master Merge pull request #695 from logstash/es_http-fix
+2013-10-03 11:13:32 #110 failed:     master Merge pull request #688 from logstash/synchronous-elasticsearch
+2013-10-03 11:07:40 #108 failed:     master Merge pull request #678 from jippi/patch-1
+2013-09-30 16:09:23 #93 passed:      master Merge pull request #681 from logstash/grok-compile-capture-handling
+2013-09-27 17:02:51 #78 passed:      master - deprecate message as was intended in 1.2.0, but I forgot.
+2013-09-26 15:34:45 #70 errored:     master Merge pull request #657 from logstash/tcp-output-client-close-fix
+2013-09-26 15:36:08 #69 passed:      master fix event.tags usage on sort filter
+2013-09-26 12:34:02 #66 failed:      master Merge pull request #660 from logstash/remove-old-event-shims
+2013-09-26 12:18:18 #65 failed:      master Merge pull request #670 from electrical/es_input_fixes
+2013-09-25 17:14:41 #63 passed:      master Merge pull request #669 from logstash/travis
+2013-09-25 16:13:27 #62 passed:      master Merge pull request #668 from logstash/travis
+2013-09-25 12:28:13 #59 passed:      master Merge pull request #667 from logstash/doc-fix
+2013-09-24 14:48:29 #53 passed:      master Merge pull request #609 from fbird/master
+2013-09-23 13:31:47 #49 passed:      master Merge pull request #625 from jdve/date-overwrite
+2013-09-23 12:19:25 #48 passed:      master Merge pull request #664 from bernd/LOGSTASH-1344
+2013-09-23 10:23:01 #45 passed:      master Merge pull request #663 from bernd/changelog-typos
+2013-09-20 13:39:30 #37 passed:      master Merge pull request #659 from bitsofinfo/master
+2013-09-20 12:56:07 #36 passed:      master Merge pull request #596 from hco/patch-1
+2013-09-20 12:43:05 #34 passed:      master Merge pull request #658 from pieterlexis/debian_packaging
+2013-09-20 09:55:11 #31 passed:      master - dev version bump
+2013-09-20 09:52:16 #30 passed:      master Merge pull request #656 from Ziftr/useragent-update
+2013-09-19 18:29:36 #29 errored:     master Merge pull request #654 from logstash/improve-oldlogstashjson
+2013-09-19 18:30:53 #28 passed:      master Merge pull request #655 from logstash/logging-fix
+2013-09-19 17:09:48 #19 passed:      master Added make update
+2013-09-19 15:12:41 #16 passed:      master Add contributors and changes for recent pull requests.
+2013-09-19 14:59:46 #15 passed:      master Merge pull request #633 from wiibaa/spec-output-file
+2013-09-19 14:29:22 #14 errored:     master Merge pull request #545 from jbochi/master
+2013-09-19 11:59:13 #12 passed:      master Merge pull request #623 from bodgit/ipv6
+2013-09-19 11:44:16 #11 passed:      master Merge pull request #637 from hduregger/cannedAcl
+2013-09-19 11:20:25 #10 passed:      master Merge pull request #631 from mfournier/riemann-tags-issue
+2013-09-18 18:15:29 #9 passed:       master Merge pull request #652 from logstash/filter-tests
+2013-09-18 17:21:57 #6 passed:       master Merge pull request #640 from bernd/fix-twitter-input
+2013-09-18 17:21:11 #5 passed:       master Merge pull request #641 from michaelklishin/patch-1
+2013-09-18 17:21:07 #4 passed:       master Merge pull request #642 from michaelklishin/patch-2
+2013-09-18 12:03:18 #3 passed:       master fix broken graphite codec spec

@@ -1,0 +1,53 @@
+2014-09-23 17:50:39 #375 passed:     dmd-1.x Merge pull request #4019 from mihails-strasuns-sociomantic/di-shadowing-ignored
+2014-09-23 14:41:32 #374 passed:     dmd-1.x Merge pull request #4020 from mihails-strasuns-sociomantic/disable-typedef-message
+2014-09-11 15:34:47 #371 passed:     dmd-1.x Merge pull request #3976 from mihails-strasuns-sociomantic/d1-deprecated-modules
+2014-09-01 17:55:58 #369 passed:     dmd-1.x merge with D2 backend
+2014-08-11 02:44:44 #368 passed:     dmd-1.x fix Issue 12788 - -di doesn't warn about implicit conversion from char[] to char*
+2014-08-06 19:24:45 #367 passed:     dmd-1.x fix Issue 13237 Wrong code with -inline -O
+2014-08-06 04:08:45 #366 passed:     dmd-1.x Merge pull request #3845 from mihails-strasuns-sociomantic/fix13260-ice
+2014-07-29 16:03:22 #364 passed:     dmd-1.x Merge pull request #3830 from mihails-strasuns-sociomantic/dmd-1.x
+2014-07-29 03:15:03 #362 passed:     dmd-1.x D2: warn about static array parameters
+2014-07-28 14:14:39 #361 passed:     dmd-1.x don't need test
+2014-07-24 17:57:51 #360 passed:     dmd-1.x Fix Issue 13023 - optimizer produces wrong code for comparision and division of ulon
+2014-07-24 16:26:41 #359 passed:     dmd-1.x Fix Issue 12164 - Function returning ptrdiff_t.min in 64-bit returning 0 when -O is set
+2014-07-24 16:12:30 #358 passed:     dmd-1.x another case like #3803
+2014-07-24 05:06:56 #357 passed:     dmd-1.x Fix Issue 13190 - Optimizer breaks comparison with zero
+2014-07-23 15:53:36 #356 passed:     dmd-1.x bring backend up to date
+2014-07-23 15:13:23 #355 passed:     dmd-1.x fix build break
+2014-07-22 04:26:56 #354 failed:     dmd-1.x fix Issue 12057 - [ICE], backend/cg87.c 925
+2014-07-20 20:07:48 #353 failed:     dmd-1.x [v2] need 'override' to override
+2014-07-20 19:34:44 #352 failed:     dmd-1.x fix Issue 9449 - Static arrays of 128bit types segfault on initialization. Incorrect calling of memset128ii
+2014-07-13 22:39:45 #351 passed:     dmd-1.x add ( ) (from Lionello)
+2014-07-06 02:49:30 #350 passed:     dmd-1.x [-v2] detect use of D2 keywords
+2014-06-30 17:07:37 #349 passed:     dmd-1.x [-v2] use synchronized instead of volatile
+2014-06-30 16:43:52 #348 passed:     dmd-1.x [-v2] use alias instead of typedef
+2014-06-30 16:38:54 #347 passed:     dmd-1.x [-v2] parentheses after invariant
+2014-06-25 23:36:10 #346 passed:     dmd-1.x [-v2] require ; after do-while
+2014-06-25 20:03:34 #345 passed:     dmd-1.x [-v2] check for case fall-through
+2014-06-25 14:09:46 #344 passed:     dmd-1.x [-v2] check for default statement
+2014-06-20 16:21:36 #343 passed:     dmd-1.x Merge pull request #3681 from ibuclaw/dwopaddr
+2014-06-19 21:05:44 #342 passed:     dmd-1.x refactor extern(Windows) on 64 bit Windows to make clear it has C linkage
+2014-06-17 18:42:59 #341 passed:     dmd-1.x for root modules only
+2014-06-16 23:49:27 #340 passed:     dmd-1.x add -v2 check for octal literals
+2014-06-16 23:37:13 #339 passed:     dmd-1.x add -v2 switch
+2014-06-16 14:05:56 #338 passed:     dmd-1.x fix
+2014-06-14 17:14:51 #337 passed:     dmd-1.x bring up to date
+2014-06-10 18:00:44 #336 passed:     dmd-1.x add some array bounds check optimizations
+2014-06-09 03:01:55 #335 passed:     dmd-1.x Merge pull request #3653 from WalterBright/cond-noret
+2014-06-08 21:19:28 #334 passed:     dmd-1.x Merge pull request #3622 from WalterBright/fix12855
+2014-06-07 15:55:22 #333 passed:     dmd-1.x fix Issue 12852 - 64 bit wrong code generated
+2014-06-07 12:28:18 #332 passed:     dmd-1.x Fix Issue 10054 - x86_64 valgrind reports unrecognised instruction (DMD 2.062)
+2014-06-07 02:00:28 #331 passed:     dmd-1.x Fix Issue 12873 - Valgrind unhandled instruction bytes 0x48 0xDB (redundant REX_W prefix on x87 load)
+2014-06-03 00:03:19 #330 passed:     dmd-1.x harmonize with dmc++ back end
+2014-04-29 15:07:45 #328 passed:     dmd-1.x fix Issue 12313 - Unneeded stack temporaries created by tuple foreach
+2014-04-26 03:12:34 #327 passed:     dmd-1.x add D2 __LINE__ and __FILE__ ability
+2014-04-22 00:59:02 #326 passed:     dmd-1.x Stop "used before set" error for zero-size variable
+2014-02-28 18:57:08 #325 passed:     dmd-1.x merge back end changes with D2
+2014-02-12 18:45:49 #312 passed:     dmd-1.x Merge pull request #3182 from yebblies/issue12051
+2014-02-09 02:57:04 #309 passed:     dmd-1.x Merge pull request #3231 from yebblies/issue12095
+2014-01-31 00:42:56 #302 passed:     dmd-1.x Merge pull request #3176 from Dicebot/dmd1-stderr
+2014-01-23 23:28:26 #286 passed:     dmd-1.x Merge pull request #3133 from MartinNowak/fixTravis
+2014-01-15 05:36:31 #190 passed:     dmd-1.x Merge pull request #3100 from leandro-lucarella-sociomantic/ignore-verstr
+2014-01-12 19:21:40 #153 passed:     dmd-1.x Merge pull request #3087 from ibuclaw/dwarfv3
+2014-01-09 23:52:13 #124 passed:     dmd-1.x Merge pull request #3075 from leandro-lucarella-sociomantic/cond-conf-vars
+2013-12-29 16:10:26 #7 passed:       dmd-1.x Merge pull request #3048 from MartinNowak/fixDMDv1

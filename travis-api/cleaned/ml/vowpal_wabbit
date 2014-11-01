@@ -1,0 +1,593 @@
+2014-09-30 10:18:53 #1086 passed:    master remove wap from windows build
+2014-09-30 09:05:00 #1085 passed:    master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-09-30 06:25:14 #1084 passed:    master remove reference for wap.h
+2014-09-29 21:31:39 #1083 passed:    master added some preliminary eval stuff
+2014-09-29 12:51:58 #1082 passed:    master fixed hang on multiple pass to sender.cc bug
+2014-09-29 12:06:20 #1081 passed:    master fixed svm tests to not overwrite reference files
+2014-09-29 11:55:26 #1080 passed:    master removed wap.cc
+2014-09-29 10:50:08 #1079 passed:    master removed spurious print
+2014-09-29 10:31:00 #1078 failed:    master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-09-29 09:00:33 #1077 passed:    master Merge pull request #408 from hal3/master
+2014-09-25 17:47:43 #1075 passed:    master Merge pull request #405 from Jaimyoung/master
+2014-09-25 17:25:53 #1074 failed:    master Merge pull request #407 from alekh/ksvm
+2014-09-23 21:06:54 #1071 passed:    master Merge pull request #404 from sam-s/master
+2014-09-23 20:58:30 #1070 passed:    master revise windows directions
+2014-09-23 20:51:31 #1069 passed:    master various type fixes
+2014-09-23 16:17:27 #1068 passed:    master update for VS2013 build
+2014-09-22 16:49:57 #1064 passed:    master update autogen dependencies
+2014-09-22 10:58:35 #1062 passed:    master misindex bugfix from Sarah
+2014-09-22 10:47:33 #1061 passed:    master Merge pull request #403 from hal3/master
+2014-09-18 19:47:29 #1056 passed:    master Merge pull request #400 from hal3/master
+2014-09-18 15:18:26 #1051 passed:    master Merge pull request #402 from sam-s/master
+2014-09-17 07:38:43 #1049 passed:    master Merge pull request #399 from arielf/master
+2014-09-15 16:19:49 #1047 passed:    master Merge pull request #398 from ticcky/master
+2014-09-09 09:50:38 #1044 passed:    master Merge pull request #388 from smartkiwi/c_wrapper
+2014-09-09 09:49:27 #1043 passed:    master Merge pull request #396 from nicknussbaum/master
+2014-09-07 14:22:04 #1040 passed:    master Merge pull request #395 from alekh/ksvm
+2014-09-07 12:30:13 #1038 passed:    master Merge pull request #392 from nicknussbaum/master
+2014-09-07 11:52:11 #1037 passed:    master reenabling python.  Functionality under some compilers is better than nothing
+2014-09-07 11:49:56 #1036 passed:    master python not built by default
+2014-09-07 10:35:28 #1035 passed:    master fix to generalize runvw-yarn.sh
+2014-09-05 09:48:30 #1032 passed:    master Merge pull request #390 from alekh/ksvm
+2014-09-04 10:55:27 #1026 passed:    master Merge pull request #375 from alekh/ksvm
+2014-09-04 08:15:03 #1022 passed:    master Merge pull request #386 from nicknussbaum/master
+2014-09-03 15:04:45 #1019 passed:    master fix strange build-breaker
+2014-09-03 09:05:46 #1018 errored:   master fix finish default
+2014-09-03 08:14:54 #1017 passed:    master Merge pull request #371 from nicknussbaum/master
+2014-09-02 09:08:11 #1016 passed:    master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-09-01 20:50:56 #1015 passed:    master Merge pull request #383 from hal3/master
+2014-09-01 07:41:56 #1013 passed:    master Merge pull request #382 from arielf/master
+2014-08-24 16:12:28 #1011 passed:    master Merge pull request #379 from arielf/master
+2014-08-24 16:11:00 #1010 passed:    master Merge pull request #378 from doxav/fix_missing_0001_multi
+2014-08-23 06:36:29 #998 passed:     master removed bagging tests until dependencies are added
+2014-08-20 18:12:25 #996 passed:     master maybe fix for boost compile problems?
+2014-08-20 17:50:49 #995 passed:     master Makefile change for Ubuntu 14.04
+2014-08-20 15:46:59 #991 passed:     master Merge pull request #374 from dshore/mf_print_constant_fix
+2014-08-20 11:05:04 #989 passed:     master Merge pull request #373 from pmineiro/mo_hog_mo_wild
+2014-08-19 07:12:29 #986 passed:     master Merge pull request #372 from pmineiro/hogwild
+2014-08-18 09:04:48 #984 passed:     master Merge pull request #368 from doxav/bs_vote_fix_and_multi
+2014-08-18 09:03:22 #983 passed:     master Merge pull request #369 from pmineiro/dna_demo_fixes
+2014-08-13 07:52:24 #977 passed:     master Merge pull request #364 from doxav/bs_vote_fix_and_multi
+2014-08-12 17:42:08 #975 passed:     master Merge pull request #363 from pmineiro/lrq_demo_tweaks
+2014-08-10 09:34:20 #973 passed:     master Merge pull request #361 from KaiWeiChang/master
+2014-08-09 09:12:12 #972 passed:     master Merge pull request #360 from doxav/fix_bs_mean
+2014-08-08 14:53:37 #969 passed:     master added link function to VW
+2014-08-08 10:32:22 #968 passed:     master Merge pull request #358 from pmineiro/nn_alekh_bugfix
+2014-08-08 10:30:05 #967 passed:     master Merge pull request #357 from vinhkhuc/master
+2014-08-04 10:07:17 #962 passed:     master Merge pull request #354 from doxav/fixed_autogensh_linux
+2014-07-28 13:42:51 #960 passed:     master Merge pull request #352 from arielf/master
+2014-07-28 13:40:04 #959 passed:     master Merge pull request #351 from adamv/readme
+2014-07-26 13:58:11 #941 passed:     master Merge pull request #349 from hal3/master
+2014-07-26 12:10:44 #939 passed:     master minor tweaks to speed parsing
+2014-07-25 12:12:04 #937 passed:     master Added compile fix suggestions from Ariel
+2014-07-24 08:52:30 #936 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-07-24 08:36:54 #935 passed:     master Merge pull request #348 from qiaomuf/master
+2014-07-23 15:18:33 #932 passed:     master Merge pull request #347 from hal3/master
+2014-07-23 08:40:49 #929 passed:     master Merge pull request #346 from hal3/master
+2014-07-19 07:57:48 #925 passed:     master Merge pull request #343 from arielf/master
+2014-07-16 20:27:26 #923 passed:     master Merge pull request #341 from wfenchel/oaa_fix
+2014-07-14 20:49:39 #920 passed:     master further testing of LDA
+2014-07-14 16:06:03 #919 passed:     master added topic predictions to library interface
+2014-07-11 20:53:19 #918 passed:     master Merge pull request #340 from arielf/master
+2014-07-11 14:55:20 #916 passed:     master new dll interface which avoids various brokenness
+2014-07-11 14:41:02 #915 passed:     master windows compile tweaks
+2014-07-11 13:08:37 #914 passed:     master removed predict for test 54 to avoid spurious test failures
+2014-07-11 13:04:20 #913 passed:     master removed predict from test 54 due to instability
+2014-07-11 12:49:30 #912 passed:     master tweaked lrq.cc to report correct audit during training
+2014-07-11 12:43:17 #911 passed:     master removed warning message
+2014-07-11 12:24:43 #910 passed:     master add updated_prediction to bfgs
+2014-07-11 12:18:21 #909 passed:     master fix lda file loading
+2014-07-11 11:57:56 #908 passed:     master add updated prediction to gd.cc
+2014-07-10 18:19:05 #907 passed:     master Merge pull request #339 from arielf/master
+2014-07-10 10:27:47 #905 passed:     master remove predict from test 62 for reproducability
+2014-07-10 10:13:33 #904 failed:     master removed progress from active learning to avoid test failure
+2014-07-10 09:53:49 #903 failed:     master removed -ffast-math
+2014-07-10 09:25:36 #902 failed:     master fixed reduction bug
+2014-07-10 08:32:44 #901 failed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-07-09 20:11:47 #900 failed:     master fix hash inversion problem
+2014-07-09 17:18:19 #899 failed:     master remove eta_global
+2014-07-09 12:41:35 #898 failed:     master more refactoring
+2014-07-09 12:07:44 #897 failed:     master minor update
+2014-07-09 11:48:08 #896 failed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-07-09 07:20:35 #895 passed:     master Merge pull request #336 from arielf/master
+2014-07-08 16:41:28 #893 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-07-07 17:40:41 #892 passed:     master Merge pull request #335 from arielf/master
+2014-07-03 21:12:30 #890 passed:     master Merge pull request #333 from michaelbrundage/master
+2014-07-02 09:00:37 #888 passed:     master remove snapshot from sequence detection for debugging
+2014-06-30 11:13:54 #887 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-06-28 05:52:07 #886 passed:     master Merge pull request #331 from arielf/master
+2014-06-25 20:51:51 #883 passed:     master remove debug print from cbify
+2014-06-24 16:54:37 #882 passed:     master Merge pull request #330 from sam-s/master
+2014-06-21 17:16:49 #881 passed:     master importance weight works with binary
+2014-06-18 13:17:38 #879 passed:     master update to version 7.7
+2014-06-18 12:27:35 #877 passed:     master tweaks to C# example
+2014-06-18 12:19:25 #876 passed:     master make windows compile work
+2014-06-17 19:01:31 #875 passed:     master Merge pull request #325 from wfenchel/master
+2014-06-17 19:00:42 #874 passed:     master Merge pull request #329 from KaiWeiChang/master
+2014-06-16 16:58:19 #869 passed:     master Merge pull request #328 from petricek/spantree_debug
+2014-06-16 16:57:36 #868 passed:     master Merge pull request #327 from KaiWeiChang/master
+2014-06-16 16:40:38 #867 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-06-16 11:11:32 #864 passed:     master Merge pull request #326 from arielf/master
+2014-06-14 09:21:55 #861 passed:     master shift wpp multiplication to setup_example
+2014-06-13 12:42:43 #860 passed:     master change default swap_resistance to 4
+2014-06-13 12:29:30 #859 passed:     master make windows compile work
+2014-06-13 12:23:21 #858 passed:     master added log_multi tree
+2014-06-13 11:53:28 #857 passed:     master fix various compile issues
+2014-06-13 11:30:09 #856 passed:     master fixed? various windows build issues
+2014-06-13 10:43:05 #855 passed:     master Merge pull request #324 from alexeyrodriguez/fix_lrq_invert_hash
+2014-06-13 09:53:13 #853 passed:     master Merge pull request #322 from arielf/vw-top-errors
+2014-06-11 20:57:22 #850 passed:     master Merge pull request #321 from arielf/vw-top-errors
+2014-06-09 16:57:19 #848 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-06-06 20:52:29 #847 passed:     master Merge pull request #317 from hal3/master
+2014-05-31 13:56:10 #845 passed:     master Merge pull request #316 from adamv/homebrew
+2014-05-31 10:54:15 #843 passed:     master Merge pull request #315 from hal3/master
+2014-05-31 09:22:40 #841 passed:     master regularization fix, take III
+2014-05-31 09:10:42 #840 passed:     master fixed compile bug in some systems
+2014-05-31 08:59:30 #839 passed:     master add missing reference files
+2014-05-31 08:20:44 #838 passed:     master Merge pull request #314 from arielf/runtest
+2014-05-31 08:18:44 #837 passed:     master Merge pull request #308 from arielf/master
+2014-05-26 10:44:12 #834 passed:     master Merge pull request #309 from hal3/master
+2014-05-26 10:29:59 #833 passed:     master fixed merge issues
+2014-05-26 08:49:03 #832 passed:     master consolidate rate_decay computation
+2014-05-21 17:58:08 #825 passed:     master removed feature_mask_idx
+2014-05-20 16:48:03 #820 passed:     master fix regularization
+2014-05-20 13:18:34 #815 passed:     master fix memory leak in parse_args
+2014-05-19 17:41:22 #809 passed:     master fixed 32 bit searn build issue
+2014-05-19 17:29:04 #808 passed:     master various helpful renamings
+2014-05-18 17:58:32 #805 passed:     master another flatten_example fix
+2014-05-18 17:54:20 #804 passed:     master better flatten_example and free_flatten_example
+2014-05-18 14:59:06 #803 passed:     master updated tests
+2014-05-18 14:49:55 #802 passed:     master more refactoring of gd.cc
+2014-05-18 13:20:36 #801 passed:     master remove spurious dependency
+2014-05-18 13:18:21 #800 passed:     master compute stride once
+2014-05-18 12:25:52 #799 passed:     master update refactoring
+2014-05-18 12:06:26 #798 passed:     master more update simplifications
+2014-05-18 11:28:07 #797 passed:     master unified updates
+2014-05-18 09:46:08 #796 passed:     master more general computed types
+2014-05-18 06:08:56 #795 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-05-17 16:07:54 #794 passed:     master Merge pull request #304 from arielf/master
+2014-05-17 09:23:21 #792 passed:     master add help reference
+2014-05-17 09:04:51 #791 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-05-17 08:58:19 #790 passed:     master Merge pull request #301 from sam-s/master
+2014-05-17 08:51:58 #789 passed:     master early terminate the parser when bfgs converges, originally from spaghettification
+2014-05-16 20:39:19 #788 passed:     master eliminated sparse_dense.h
+2014-05-16 19:55:17 #787 passed:     master simplifying gd
+2014-05-16 19:10:12 #786 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-05-15 13:56:04 #783 passed:     master updated argmax
+2014-05-15 07:54:18 #781 passed:     master fixed sort_features bug
+2014-05-14 18:06:51 #780 passed:     master fixed race condition, I hope
+2014-05-13 18:40:28 #777 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-05-13 18:33:56 #776 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-05-13 09:53:22 #773 passed:     master tweaks to argmax sequence task
+2014-05-13 07:43:17 #772 failed:     master more argument rearrangement
+2014-05-12 12:39:44 #771 passed:     master bugfixes in cb and gd
+2014-05-08 12:54:48 #765 passed:     master more parsing relocation
+2014-05-08 09:47:15 #764 passed:     master more parse_args refactoring
+2014-05-08 08:53:35 #763 failed:     master Merge pull request #294 from arielf/master
+2014-05-08 07:39:05 #762 failed:     master refactoring locations of some argument options
+2014-05-07 16:12:13 #761 passed:     master clarified license
+2014-05-06 11:59:15 #756 passed:     master make -q :: work on anonymous namespace
+2014-05-06 08:42:43 #755 passed:     master new options parsing passes tests
+2014-05-02 15:49:11 #752 passed:     master unifying file and commandline options
+2014-05-02 13:28:48 #751 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-05-02 13:14:04 #750 failed:     master fix windows compile warnings
+2014-05-02 13:02:44 #749 failed:     master Merge pull request #291 from hal3/master
+2014-05-02 12:59:23 #747 failed:     master tweak argmax task to allow baseline
+2014-05-02 12:30:15 #745 failed:     master add default false_negative_cost
+2014-05-02 12:21:21 #744 failed:     master add false_negative_cost to argmax
+2014-05-02 11:09:06 #743 failed:     master fix minor sequence issue
+2014-05-02 11:05:25 #742 failed:     master fix minor sequence issue
+2014-05-02 10:34:23 #741 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-05-02 09:43:07 #740 passed:     master Merge pull request #290 from hal3/master
+2014-05-02 08:12:08 #736 passed:     master reorder some parsing
+2014-04-30 14:58:34 #732 passed:     master Merge pull request #289 from hal3/master
+2014-04-30 14:50:49 #730 passed:     master Merge pull request #288 from hal3/master
+2014-04-30 14:14:37 #728 passed:     master fixed allreduce compile bug
+2014-04-30 12:22:39 #727 errored:    master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-04-30 11:26:55 #726 passed:     master Merge pull request #287 from hal3/master
+2014-04-30 09:54:53 #724 passed:     master Merge pull request #286 from hal3/master
+2014-04-30 09:52:08 #722 passed:     master Merge pull request #285 from mdagost/master
+2014-04-30 09:51:06 #721 passed:     master Merge pull request #284 from hal3/master
+2014-04-29 14:20:24 #717 passed:     master Merge pull request #283 from hal3/master
+2014-04-29 13:06:17 #715 passed:     master Merge pull request #282 from hal3/master
+2014-04-29 11:46:05 #712 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-04-29 10:16:43 #711 passed:     master fix conflict
+2014-04-29 09:29:20 #710 passed:     master remove cost_sensitive special cases in parsing
+2014-04-23 11:09:15 #707 passed:     master removed global_weight from example
+2014-04-22 17:50:59 #706 passed:     master refactor problem types a bit
+2014-04-21 17:54:14 #704 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-04-16 20:29:59 #703 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-04-15 08:44:28 #702 passed:     master fixed LDA hang with minibatch 1 bug
+2014-04-14 18:12:37 #701 passed:     master added sleep delay on connect error in allreduce
+2014-04-14 16:33:54 #700 passed:     master allow up to 100 retries for allreduce initial connection
+2014-04-14 16:27:55 #699 passed:     master perform close() after shutdown() in spanning_tree
+2014-04-14 14:26:28 #698 passed:     master changed semantics of save_resume on test
+2014-04-14 13:00:06 #697 passed:     master avoid a double free
+2014-04-14 12:52:23 #696 passed:     master close sockets when finishing parallel compute
+2014-04-14 12:45:22 #695 passed:     master add --nondaemon option to spanning_tree.cc
+2014-04-11 07:49:44 #694 passed:     master Merge pull request #273 from someben/master
+2014-04-11 07:49:16 #693 passed:     master Merge pull request #274 from arielf/master
+2014-04-11 07:05:03 #692 failed:     master Merge pull request #275 from benwing/master
+2014-04-11 06:54:52 #691 passed:     master update to 7.6.1
+2014-04-10 15:56:10 #689 passed:     master No exception when stdin_off
+2014-04-04 08:33:01 #681 passed:     master Merge pull request #271 from alekh/for_allreduce
+2014-04-03 07:42:53 #678 passed:     master guard open_file exception for cache_file
+2014-04-02 14:40:37 #675 passed:     master bump version number
+2014-04-02 14:30:57 #674 passed:     master Merge pull request #270 from petricek/early_terminate_fix
+2014-04-02 14:21:40 #673 passed:     master fix VS compile
+2014-04-01 15:48:58 #670 passed:     master propagate error correction to tests
+2014-04-01 15:26:26 #669 failed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-04-01 15:14:40 #668 passed:     master Merge pull request #267 from hal3/master
+2014-04-01 11:18:22 #666 passed:     master renamed local_update and initialized min_label
+2014-04-01 03:58:41 #665 passed:     master Merge pull request #266 from arielf/master
+2014-03-31 21:23:14 #663 passed:     master Merge pull request #265 from pierce1987/master
+2014-03-31 14:18:40 #661 passed:     master fixed Martin's nasty multiline parse bug
+2014-03-31 10:52:50 #660 passed:     master error check all calls to calloc
+2014-03-31 10:26:19 #659 passed:     master removed leading _ in constant.h
+2014-03-31 10:23:13 #658 passed:     master uniform explicit include guards
+2014-03-27 10:13:11 #657 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-03-26 19:06:38 #656 passed:     master bumped minor version number
+2014-03-26 17:17:27 #655 passed:     master version control cb_algs
+2014-03-26 17:06:13 #654 errored:    master factor cb parsing out of cb algorithms
+2014-03-26 16:16:48 #653 passed:     master Merge pull request #263 from hal3/master
+2014-03-26 15:26:18 #650 passed:     master simplified labels as per Jiang's suggestion
+2014-03-25 21:59:24 #646 passed:     master add missing cs files
+2014-03-25 21:55:27 #645 errored:    master refactor cost_sensitive definitions out of csoaa
+2014-03-25 20:50:38 #644 passed:     master Merge pull request #261 from arielf/master
+2014-03-25 18:28:45 #642 passed:     master Merge pull request #259 from mdagost/wildcards
+2014-03-25 18:27:56 #641 passed:     master Merge pull request #258 from mdagost/vw-csv2bin
+2014-03-25 08:20:26 #636 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-03-24 10:43:33 #634 passed:     master Merge pull request #254 from policecar/shebang-fix
+2014-03-24 10:41:21 #633 passed:     master Merge pull request #253 from fulluey/master
+2014-03-21 07:16:53 #630 passed:     master fix more v120 issues
+2014-03-20 21:30:32 #629 passed:     master update some builds for v110
+2014-03-05 23:16:32 #626 passed:     master Merge pull request #250 from timcowlishaw/fix_mac_ac_path
+2014-03-03 19:43:52 #624 passed:     master fix windows build issues
+2014-03-01 17:17:31 #623 passed:     master Merge pull request #249 from hal3/master
+2014-02-25 15:04:13 #621 passed:     master fixed conflict
+2014-02-25 14:31:42 #620 passed:     master Merge pull request #245 from jhofman/master
+2014-02-19 19:42:57 #618 passed:     master fix 32bit/64bit regressor file incompatibility
+2014-02-19 18:57:51 #617 failed:     master more vs2012 tweaks
+2014-02-16 07:18:01 #615 passed:     master Merge pull request #244 from arielf/master
+2014-02-13 07:44:01 #613 passed:     master Merge pull request #239 from arielf/master
+2014-02-13 07:43:07 #612 passed:     master Merge pull request #242 from martinthomas/autogen_clang
+2014-02-09 10:22:56 #609 passed:     master Merge pull request #241 from martinthomas/make_clang
+2014-02-07 08:14:38 #606 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-02-05 20:26:13 #603 passed:     master Merge pull request #238 from arielf/master
+2014-02-03 20:23:28 #600 passed:     master fix audit quadratic bug
+2014-02-03 08:45:05 #599 passed:     master fix windows build
+2014-02-03 08:34:16 #598 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-01-31 19:09:41 #597 passed:     master Merge pull request #236 from arielf/master
+2014-01-29 12:34:45 #595 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-01-28 19:04:19 #594 passed:     master Merge pull request #235 from arielf/master
+2014-01-27 14:47:50 #593 passed:     master Merge pull request #234 from arielf/master
+2014-01-27 13:39:35 #591 passed:     master Merge pull request #233 from jhofman/master
+2014-01-25 14:59:53 #589 passed:     master minor tweaks
+2014-01-24 16:27:19 #588 passed:     master various cbify improvements
+2014-01-24 12:50:19 #587 passed:     master add missing stderr tests
+2014-01-24 12:42:44 #586 failed:     master fix cs indexing bug, fix cb indexing bug, add cb tests
+2014-01-24 09:53:01 #585 passed:     master minor warning removal
+2014-01-23 09:56:28 #584 passed:     master minor tweaks for build
+2014-01-21 22:38:28 #582 passed:     master changed pointers to references
+2014-01-18 12:43:40 #579 passed:     master fixed memory leak
+2014-01-18 09:57:29 #578 passed:     master fixed online print in cygwin bug
+2014-01-18 09:23:37 #577 passed:     master Merge pull request #231 from reunanen/master
+2014-01-14 15:25:39 #575 failed:     master Merge pull request #230 from arielf/master
+2014-01-13 17:05:33 #568 passed:     master Merge pull request #229 from jhofman/master
+2014-01-10 17:33:33 #565 passed:     master various windows fixes
+2014-01-10 16:15:23 #564 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-01-10 14:11:50 #563 passed:     master factored out more things
+2014-01-10 14:02:07 #562 passed:     master tweak foreach_feature to minimize time complexity
+2014-01-10 13:19:20 #561 passed:     master removed global data structure for inner loop of feature traversals
+2014-01-10 12:27:54 #560 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-01-10 12:15:29 #559 passed:     master Merge pull request #228 from hal3/master
+2014-01-10 11:20:26 #557 passed:     master factoring out inner loop ops
+2014-01-10 09:41:19 #556 passed:     master use ref instead of pointer in inner loop
+2014-01-10 08:52:05 #555 failed:     master removed label parser dereference
+2014-01-08 15:14:29 #551 passed:     master added scorer reduction
+2014-01-08 15:13:33 #550 errored:    master added scorer reduction
+2014-01-08 14:13:01 #549 passed:     master finished void* removal in learner.h
+2014-01-08 10:23:57 #548 passed:     master more void* removal
+2014-01-08 09:27:13 #547 failed:     master still doing void* removal
+2014-01-08 09:18:06 #546 passed:     master void* removal in process
+2014-01-08 07:57:32 #545 passed:     master Merge pull request #227 from jhofman/master
+2014-01-07 13:05:13 #543 passed:     master create update for gd
+2014-01-07 12:54:12 #542 passed:     master added update() to reduction interface
+2014-01-07 12:52:00 #541 passed:     master line chop + error fix in order
+2014-01-07 12:17:44 #540 passed:     master Merge pull request #226 from jhofman/master
+2014-01-07 09:02:19 #538 passed:     master template helper functions
+2014-01-07 07:46:09 #537 passed:     master Merge pull request #225 from arielf/master
+2014-01-04 14:17:16 #534 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-01-04 14:05:20 #533 failed:     master Merge pull request #223 from arielf/master
+2014-01-04 06:24:03 #530 passed:     master Merge pull request #224 from pmineiro/nnyaf
+2014-01-02 22:29:56 #527 passed:     master Merge pull request #222 from pmineiro/nntweak
+2014-01-02 14:54:42 #525 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2014-01-02 08:36:01 #524 passed:     master Merge pull request #221 from pmineiro/nnfixes
+2014-01-01 14:29:37 #519 passed:     master Merge pull request #220 from hal3/master
+2013-12-30 20:56:08 #516 passed:     master minor tweaks
+2013-12-30 20:42:46 #515 failed:     master Merge pull request #219 from pmineiro/mmftweak
+2013-12-30 17:41:48 #513 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-12-30 14:04:49 #512 passed:     master fix some vs compile issues
+2013-12-30 10:15:19 #511 passed:     master Merge pull request #217 from pmineiro/newdropoutmmf
+2013-12-29 11:31:05 #510 passed:     master Merge pull request #218 from lendle/master
+2013-12-27 20:56:45 #507 passed:     master fixed windows build
+2013-12-27 20:51:37 #506 passed:     master Merge pull request #216 from jhofman/master
+2013-12-27 20:22:09 #505 passed:     master Merge pull request #215 from arielf/master
+2013-12-27 08:51:59 #502 passed:     master Merge pull request #214 from arielf/master
+2013-12-26 21:34:44 #499 passed:     master Merge pull request #213 from arielf/master
+2013-12-26 14:34:41 #496 passed:     master Merge pull request #212 from arielf/master
+2013-12-26 14:34:39 #495 passed:     master Merge pull request #212 from arielf/master
+2013-12-26 10:33:05 #492 passed:     master remove spurious print
+2013-12-26 10:22:20 #491 failed:     master remove spurious learn_batch
+2013-12-24 17:04:54 #487 passed:     master added cbify
+2013-12-24 16:48:30 #486 errored:    master void* removal
+2013-12-19 06:49:14 #485 passed:     master Merge pull request #211 from petricek/travis-button
+2013-12-17 21:43:55 #483 passed:     master Merge pull request #210 from zaxtax/organize_help
+2013-12-16 11:54:29 #481 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-12-16 11:53:11 #480 passed:     master Merge pull request #208 from agrubb/bugfix-early-terminate-deadlock
+2013-12-16 11:52:58 #479 passed:     master Merge pull request #207 from hal3/master
+2013-12-16 11:50:01 #478 passed:     master Merge pull request #209 from arielf/master
+2013-12-08 18:54:19 #472 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-12-08 14:08:02 #471 passed:     master Merge pull request #206 from lendle/master
+2013-12-06 12:11:33 #469 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-12-01 09:34:23 #467 passed:     master setup headers
+2013-12-01 09:18:18 #466 passed:     master correctness by removal
+2013-12-01 09:09:18 #465 failed:     master changing minus to eliminate warning
+2013-12-01 09:04:47 #464 passed:     master fix constant in audit
+2013-11-29 20:38:21 #463 passed:     master fix constant in reductions
+2013-11-27 16:51:33 #462 passed:     master reenable vs projects
+2013-11-27 16:38:11 #461 passed:     master little bugfixes
+2013-11-27 13:50:56 #460 passed:     master fix holdout evaluation in parallel environments.
+2013-11-27 12:32:05 #459 passed:     master increase to 35 digits.
+2013-11-27 10:47:22 #458 passed:     master fixed parser segfault
+2013-11-27 09:33:44 #457 passed:     master Merge pull request #200 from NiruC/master
+2013-11-27 09:17:20 #456 passed:     master Merge pull request #201 from agrubb/bugfix-feature-mask-b
+2013-11-27 09:12:44 #455 passed:     master modified parser to limit precision
+2013-11-23 20:00:56 #451 passed:     master Merge pull request #198 from pierce1987/ih_wap_bug
+2013-11-21 15:30:49 #449 passed:     master bugfix from Weizhu Chen
+2013-11-21 15:11:07 #448 passed:     master Merge pull request #193 from agrubb/bugfix-feature-mask-header
+2013-11-21 15:02:21 #447 passed:     master Merge pull request #195 from agrubb/bugfix-max-examples
+2013-11-21 15:06:08 #446 passed:     master Merge pull request #194 from hal3/master
+2013-11-20 12:13:41 #444 passed:     master really fixed multiclass
+2013-11-19 08:05:38 #441 passed:     master fixed segfault in multiclass parsing
+2013-11-16 10:33:40 #439 passed:     master fixed merge
+2013-11-16 10:20:44 #438 passed:     master fixed merge
+2013-11-14 18:47:22 #437 passed:     master Merge pull request #192 from agrubb/bugfix-typo
+2013-11-11 21:56:21 #432 passed:     master Merge pull request #189 from petricek/recommend-mh
+2013-11-09 14:15:15 #415 passed:     master fixed misleading error message
+2013-11-09 14:11:53 #414 failed:     master changed tuple name to avoid confusions
+2013-11-09 14:06:32 #413 failed:     master Merge pull request #187 from rukshanb/master
+2013-11-09 13:57:34 #412 failed:     master fix --binary
+2013-11-07 20:51:14 #409 passed:     master fix windows compile warnings
+2013-11-07 18:44:08 #407 passed:     master Merge pull request #186 from hal3/master
+2013-11-06 07:28:28 #405 passed:     master Merge pull request #185 from HaveF/driver_fix
+2013-11-05 22:34:21 #403 passed:     master Merge pull request #183 from hal3/master
+2013-11-04 11:16:02 #400 failed:     master minor simplification
+2013-11-04 11:02:50 #399 passed:     master internalized increment calculations
+2013-11-01 16:59:29 #397 passed:     master Merge pull request #178 from hal3/master
+2013-11-01 15:51:22 #395 passed:     master Merge pull request #177 from hal3/master
+2013-11-01 15:18:47 #391 passed:     master remove audit from offset
+2013-11-01 15:09:07 #390 passed:     master eliminated base from many places
+2013-11-01 14:24:00 #389 passed:     master reductions now nonuniform
+2013-11-01 13:08:51 #388 passed:     master new version of learner.h for easier nonuniform reduction
+2013-11-01 12:34:41 #387 passed:     master Merge pull request #175 from hal3/master
+2013-10-31 20:11:03 #385 passed:     master Merge pull request #174 from hal3/master
+2013-10-31 12:22:07 #383 passed:     master Merge pull request #173 from hal3/master
+2013-10-30 16:03:47 #380 passed:     master Merge pull request #172 from hal3/master
+2013-10-30 14:07:29 #378 passed:     master cleanup bs tests
+2013-10-30 14:01:45 #377 passed:     master eliminated driver
+2013-10-30 13:38:37 #376 failed:     master synced with searn in Hal branch
+2013-10-30 13:05:34 #375 passed:     master finish is autorecursive
+2013-10-30 12:21:32 #374 errored:    master updated for windows compile and library interface
+2013-10-30 10:59:23 #372 passed:     master eliminated command_example() function
+2013-10-29 15:39:01 #371 passed:     master minimized noop.cc
+2013-10-29 15:32:57 #370 passed:     master setup cb init routine
+2013-10-29 15:27:49 #369 passed:     master added init_driver routine, fixed bfgs backstep
+2013-10-29 14:22:10 #368 passed:     master Merge pull request #170 from hal3/master
+2013-10-29 13:07:01 #366 passed:     master cut dead code
+2013-10-29 10:28:05 #364 passed:     master Merge pull request #169 from hal3/master
+2013-10-29 09:58:17 #361 passed:     master more standard drivers
+2013-10-28 16:02:04 #360 passed:     master genericize oaa driver
+2013-10-28 15:42:50 #359 passed:     master standardized nn driver
+2013-10-28 15:21:21 #358 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-10-28 13:16:44 #357 passed:     master Merge pull request #168 from hal3/master
+2013-10-28 13:15:26 #356 passed:     master Merge pull request #167 from ericwhyne/master
+2013-10-28 10:53:58 #354 passed:     master learner definition rewrites
+2013-10-25 15:50:59 #352 passed:     master normalizing sender driver
+2013-10-25 15:27:04 #351 passed:     master adding make test makefile
+2013-10-25 15:02:59 #350 errored:    master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-10-25 15:01:30 #349 passed:     master Merge pull request #166 from hal3/master
+2013-10-25 09:12:31 #341 passed:     master Merge pull request #162 from ericwhyne/master
+2013-10-15 21:30:11 #338 passed:     master Merge pull request #158 from petricek/bs_tests
+2013-10-15 21:22:02 #337 passed:     master Merge pull request #159 from someben/master
+2013-10-14 18:01:31 #333 passed:     master Merge pull request #157 from petricek/bs_type_fix
+2013-10-14 07:20:49 #331 passed:     master Merge pull request #155 from martinthomas/master
+2013-10-13 20:13:56 #329 passed:     master Merge pull request #154 from martinthomas/master
+2013-10-13 14:36:22 #327 passed:     master modify weighted average to work with norms properly
+2013-10-13 06:42:20 #326 passed:     master Merge pull request #153 from petricek/cleanup
+2013-10-13 06:40:06 #325 passed:     master Merge pull request #152 from petricek/bstypo
+2013-09-30 15:58:35 #322 passed:     master test check
+2013-09-30 15:01:47 #321 passed:     master fixed active learning bug, I believe
+2013-09-30 14:58:58 #320 failed:     master Merge pull request #149 from arielf/master
+2013-09-30 15:00:02 #319 passed:     master fixed some loss accounting
+2013-09-30 13:22:33 #318 passed:     master fix loss accounting bug
+2013-09-25 07:08:35 #316 passed:     master Merge pull request #151 from hal3/master
+2013-09-20 08:44:00 #313 passed:     master Merge pull request #150 from paraga/paraga/useInitialPredictionInMF
+2013-09-14 07:58:47 #311 passed:     master Merge pull request #147 from eHarmony/save_best
+2013-09-13 21:46:15 #310 passed:     master Merge pull request #141 from eHarmony/confi_interval
+2013-09-06 14:22:53 #306 passed:     master remove Instance.cs and bump version
+2013-09-06 09:20:59 #305 passed:     master fixed active learning bug located by Ariel
+2013-09-05 07:03:13 #302 passed:     master Merge pull request #148 from NiruC/master
+2013-09-04 11:51:06 #298 passed:     master fix reference
+2013-09-04 11:29:42 #297 errored:    master fixed audit for gd_mf
+2013-09-04 11:13:33 #296 passed:     master Merge pull request #146 from akhudek/master
+2013-08-31 08:28:04 #292 passed:     master Merge pull request #145 from eHarmony/save_best
+2013-08-27 21:06:54 #282 passed:     master Merge pull request #144 from arielf/master
+2013-08-26 09:07:17 #272 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-08-25 19:20:56 #271 passed:     master change 1/0 to FLT_MAX
+2013-08-25 17:04:04 #270 passed:     master Searn bug fix from Alex Hudek
+2013-08-25 09:25:11 #269 passed:     master Merge pull request #139 from eHarmony/save_best
+2013-08-25 08:47:29 #268 passed:     master Merge pull request #143 from eHarmony/truely_readable
+2013-08-25 08:40:53 #267 passed:     master Merge pull request #142 from arielf/master
+2013-08-19 13:49:54 #262 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-08-16 13:53:43 #259 passed:     master Merge pull request #140 from arielf/master
+2013-08-09 14:41:30 #252 passed:     master fixed initialization bug and holdout_off required by test
+2013-08-08 13:24:48 #251 passed:     master Merge pull request #135 from eHarmony/truely_readable
+2013-08-05 16:56:47 #248 passed:     master Merge pull request #137 from eHarmony/holdout_valid
+2013-07-29 11:48:21 #243 passed:     master minor wording tweak
+2013-07-29 11:45:02 #242 passed:     master Merge pull request #136 from eHarmony/mask
+2013-07-18 20:28:58 #239 passed:     master fix little bug
+2013-07-09 06:56:50 #236 passed:     master Merge pull request #133 from pmineiro/normalizeddemo
+2013-07-08 17:10:41 #234 passed:     master Merge pull request #132 from eHarmony/fancyq
+2013-07-05 15:00:00 #232 passed:     master Merge pull request #131 from eHarmony/fancyq
+2013-06-08 16:13:25 #230 passed:     master bump version number to 7.3
+2013-06-08 15:51:29 #228 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-06-08 13:16:45 #227 passed:     master added better active_interactor from Nikos
+2013-06-07 11:22:39 #226 passed:     master Merge pull request #130 from pmineiro/nnweightsperproblem2
+2013-06-04 09:04:02 #224 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-05-28 09:07:13 #223 passed:     master Merge pull request #128 from pmineiro/nnweightsperproblem
+2013-05-13 21:08:06 #219 passed:     master Merge pull request #127 from NiruC/master
+2013-05-13 16:58:04 #217 passed:     master fixed interface to use public function
+2013-05-13 16:13:14 #216 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-05-13 13:41:15 #215 passed:     master fix weights_per_problem rounding
+2013-05-13 10:03:33 #214 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-05-13 08:07:36 #213 passed:     master Merge pull request #126 from nicknussbaum/master
+2013-05-13 08:00:01 #212 passed:     master Merge pull request #125 from petricek/bfhits
+2013-05-05 17:36:54 #208 passed:     master updated inf pattern
+2013-05-04 11:36:52 #207 passed:     master Merge pull request #123 from harob/master
+2013-05-04 11:35:59 #206 passed:     master Merge pull request #124 from arielf/master
+2013-05-02 13:25:11 #204 passed:     master make tests work for lbfgs fix
+2013-05-02 13:12:57 #203 failed:     master better inf detection
+2013-05-02 13:03:57 #202 errored:    master bfgs preconditioner extreme case limiter
+2013-04-14 06:04:16 #199 passed:     master Merge pull request #122 from petricek/recommend
+2013-04-13 17:28:39 #197 passed:     master cleanup vw datastructure
+2013-04-10 12:07:36 #196 passed:     master Merge pull request #121 from jhofman/master
+2013-04-10 06:33:54 #194 passed:     master fix library build
+2013-04-10 06:31:15 #193 errored:    master Merge pull request #117 from petricek/recommend
+2013-04-10 06:25:51 #192 passed:     master remove spurious mains
+2013-04-10 06:18:51 #191 passed:     master Merge pull request #120 from NiruC/master
+2013-04-07 16:37:49 #188 passed:     master fix windows side export_example
+2013-04-07 16:25:27 #187 passed:     master fix export_example bug
+2013-04-04 20:00:01 #182 passed:     master remove extra newline
+2013-04-04 17:37:25 #181 passed:     master Merge pull request #116 from NiruC/master
+2013-04-04 12:11:42 #179 passed:     master dead code removal
+2013-04-04 08:50:03 #178 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-04-03 21:38:37 #177 passed:     master fixed windows build dependency
+2013-04-03 14:26:18 #176 passed:     master Merge pull request #115 from adkatrit/patch-1
+2013-04-03 13:44:55 #175 passed:     master removed named variables and make zero value features work anonymously
+2013-04-03 11:14:59 #173 passed:     master added variable names to template
+2013-04-03 10:24:00 #172 passed:     master fix silly type bug
+2013-04-02 12:41:25 #171 failed:     master fix some silly bugs
+2013-04-02 12:35:16 #170 errored:    master Merge pull request #114 from NiruC/master
+2013-04-02 10:23:41 #168 passed:     master added missing files
+2013-04-02 10:20:48 #167 errored:    master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-04-01 13:50:27 #165 passed:     master added C# interface to weights
+2013-04-01 13:16:19 #164 passed:     master added interface to weights for library
+2013-03-30 12:22:43 #163 passed:     master tweak interface from Matt Richardson
+2013-03-29 11:41:20 #162 passed:     master Merge pull request #111 from petricek/master
+2013-03-29 11:40:14 #161 passed:     master Merge pull request #112 from petricek/mf_save_per_pass
+2013-03-24 12:22:20 #158 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-03-22 08:09:22 #156 passed:     master Merge pull request #109 from fest/master
+2013-03-20 09:29:53 #153 passed:     master make learner initialization functional
+2013-03-19 21:27:00 #152 passed:     master cleaned learning algorithm interface per discussion with Miro
+2013-03-19 17:38:53 #151 passed:     master type the global
+2013-03-15 20:49:49 #150 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-03-14 22:42:42 #149 passed:     master Merge pull request #108 from pmineiro/faster
+2013-03-14 22:36:49 #148 passed:     master Merge pull request #107 from pmineiro/demo2
+2013-03-13 23:56:32 #147 passed:     master make dm loss reporting unbiased
+2013-03-13 09:56:21 #144 passed:     master remove partial_prediction settings
+2013-03-13 00:38:38 #143 passed:     master fix baseline bias in cb evaluation
+2013-03-10 19:42:49 #140 failed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-03-09 09:40:28 #139 passed:     master Merge pull request #106 from pmineiro/demo
+2013-03-04 11:19:21 #137 passed:     master ngrams work on namespaces now
+2013-02-28 20:29:22 #136 passed:     master fix incorrect norm for quad features bug
+2013-02-28 09:01:56 #134 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-02-27 15:06:26 #133 passed:     master make tab whitespace in parser
+2013-02-26 21:15:43 #132 passed:     master Merge pull request #103 from pmineiro/nnsavebugfix
+2013-02-25 08:58:42 #130 passed:     master bugfix for parallel code
+2013-02-24 20:46:12 #129 passed:     master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-02-23 20:30:04 #128 passed:     master added add_label() to dll interface
+2013-02-22 22:27:34 #127 passed:     master added reminder
+2013-02-22 22:21:13 #126 passed:     master bump version number
+2013-02-22 21:40:03 #123 passed:     master exit to exception conversion
+2013-02-22 21:18:18 #122 passed:     master allow exception pass through for C#
+2013-02-22 17:22:24 #121 passed:     master silly bugfix
+2013-02-22 17:22:00 #120 errored:    master added add_label() to library interface
+2013-02-22 15:37:34 #119 passed:     master example of multiple vw models
+2013-02-22 13:56:46 #118 passed:     master fix double pairing bug
+2013-02-22 11:49:52 #117 passed:     master Merge pull request #102 from arielf/master
+2013-02-22 11:46:37 #116 passed:     master fixed regularization bug from Ariel
+2013-02-13 22:20:28 #112 passed:     master fix build break
+2013-02-13 22:15:08 #111 errored:    master another searn fix
+2013-02-13 21:56:33 #110 errored:    master fix subtle bugs in searn
+2013-02-13 15:49:37 #109 passed:     master zero out VS warnings again
+2013-02-07 21:15:51 #108 passed:     master rename io io_buf
+2013-02-05 22:22:23 #107 passed:     master fix a bug in finalization
+2013-02-03 10:46:44 #106 passed:     master vs2010 fixes
+2013-02-02 15:39:38 #105 passed:     master add oaa test
+2013-02-02 08:50:46 #104 passed:     master fix bug that Luis Coelho points out
+2013-02-01 18:41:44 #103 passed:     master fixed label-related warnings
+2013-02-01 15:50:00 #102 passed:     master Merge pull request #99 from someben/master
+2013-02-01 14:03:42 #100 passed:     master Merge pull request #98 from yarikoptic/master
+2013-02-01 14:02:25 #99 passed:      master remove spurious allreduce.h include
+2013-01-29 10:05:36 #98 passed:      master add binary files
+2013-01-27 10:09:01 #95 passed:      master warnings for bad labels to multiclass
+2013-01-27 09:57:07 #94 passed:      master fix initialization order bug in csoaa
+2013-01-24 18:53:29 #92 passed:      master minor wording tweak
+2013-01-23 22:04:47 #91 passed:      master bug fixes from Nick for windows compile
+2013-01-23 19:22:03 #90 passed:      master fix empty line issue
+2013-01-23 18:53:33 #89 passed:      master eliminated isdigit call
+2013-01-23 18:36:14 #88 passed:      master add byte order mark detection to VW parser
+2013-01-22 17:41:01 #87 passed:      master deglobalized parser.cc locks
+2013-01-22 08:57:33 #86 passed:      master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-01-21 18:47:27 #85 passed:      master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-01-21 16:56:39 #84 passed:      master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-01-21 12:41:16 #83 passed:      master fixed windows build issues
+2013-01-21 11:42:18 #82 passed:      master various bug fixes
+2013-01-20 09:31:31 #81 passed:      master zero out VS warnings
+2013-01-20 08:50:18 #80 failed:      master Merge pull request #95 from nicknussbaum/master
+2013-01-17 22:33:54 #78 passed:      master fix text for lda and mf
+2013-01-16 15:58:38 #77 passed:      master fix lda include bug
+2013-01-15 19:17:23 #76 passed:      master fixed lda bug
+2013-01-15 19:02:35 #75 passed:      master fix 64 bit compile bug
+2013-01-15 18:17:38 #74 passed:      master Merge pull request #94 from hal3/master
+2013-01-15 16:09:49 #72 failed:      master remove time from bfgs
+2013-01-15 16:01:06 #71 failed:      master Merge pull request #93 from jhofman/master
+2013-01-15 13:58:11 #69 failed:      master remove sequence from VS build
+2013-01-14 20:08:44 #68 passed:      master fixed some bugs
+2013-01-14 16:37:08 #67 passed:      master setup gd so that it can save and resume without losing state
+2013-01-14 15:49:43 #66 failed:      master common load function for bfgs & gd
+2013-01-14 15:35:28 #65 passed:      master fixed Makefile flag
+2013-01-14 15:32:46 #64 failed:      master Merge pull request #92 from hal3/master
+2013-01-14 13:36:13 #62 failed:      master Merge pull request #91 from hal3/master
+2013-01-14 13:35:28 #60 failed:      master use namespaces
+2013-01-14 13:18:09 #59 failed:      master fixed uint32/size confusion
+2013-01-14 13:14:18 #58 failed:      master optimized make flags
+2013-01-14 13:10:33 #57 failed:      master Merge pull request #90 from hal3/master
+2013-01-14 13:09:12 #56 failed:      master update tests for fix to bfgs
+2013-01-14 12:32:07 #55 failed:      master made save/load modular
+2013-01-14 09:30:24 #53 failed:      master use open instead of fopen to avoid memory leak
+2013-01-14 09:16:48 #52 passed:      master more complete library make
+2013-01-14 09:10:44 #51 passed:      master safer read
+2013-01-14 08:52:02 #50 failed:      master fix save_load bugs
+2013-01-14 06:58:11 #49 failed:      master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-01-13 15:44:06 #48 failed:      master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-01-12 19:27:45 #47 failed:      master size_t to uint32_t for cross platform
+2013-01-12 14:08:17 #46 failed:      master little fix
+2013-01-12 13:37:50 #45 failed:      master rewrote save/load so that it can be made modular
+2013-01-11 14:08:11 #44 passed:      master Merge pull request #89 from hal3/master
+2013-01-11 13:39:57 #42 passed:      master devalgrind
+2013-01-11 13:36:22 #41 passed:      master silenced searn test
+2013-01-11 13:28:38 #40 passed:      master Merge pull request #88 from hal3/master
+2013-01-10 13:33:34 #34 passed:      master Merge pull request #84 from hal3/master
+2013-01-09 21:29:26 #29 passed:      master Merge branch 'master' of github.com:JohnLangford/vowpal_wabbit
+2013-01-09 20:54:05 #28 passed:      master Merge pull request #81 from hal3/master
+2013-01-09 17:27:41 #24 passed:      master ignore and audit work properly
+2013-01-09 17:22:02 #23 passed:      master fix missing casts in program options
+2013-01-08 14:51:33 #22 passed:      master zeroing out warnings
+2013-01-08 10:49:36 #21 passed:      master reduce default range for log loss
+2013-01-07 18:01:14 #20 passed:      master updated c# interface
+2012-12-30 07:06:09 #19 passed:      master Merge pull request #79 from arielf/master
+2012-12-28 20:46:16 #17 passed:      master retweaked README
+2012-12-28 17:33:59 #16 passed:      master Merge pull request #78 from nicknussbaum/master
+2012-12-28 13:53:44 #12 passed:      master add back -all-dev

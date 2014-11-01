@@ -1,0 +1,506 @@
+2014-10-03 17:16:19 #2744 passed:    master Merge pull request #1383 from scottpurdy/master
+2014-10-03 14:10:10 #2740 passed:    master Merge pull request #1401 from chetan51/issue-1400
+2014-10-03 00:27:26 #2734 passed:    master Merge pull request #1394 from chetan51/issue-1393
+2014-10-02 20:15:00 #2729 passed:    master Merge pull request #1398 from chetan51/issue-1397
+2014-10-02 17:24:11 #2727 passed:    master Merge pull request #1396 from subutai/random_sp_region
+2014-10-01 19:49:32 #2722 passed:    master Merge pull request #1392 from chetan51/issue-1391
+2014-10-01 18:59:20 #2720 errored:   master Merge pull request #1389 from numenta-ci/core-update-sha
+2014-10-01 17:57:29 #2718 passed:    master Merge pull request #1390 from subutai/image_sensor_spregion_bugs
+2014-10-01 14:33:35 #2715 passed:    master Merge pull request #1375 from chetan51/issue-1374
+2014-10-01 00:17:02 #2711 passed:    master Merge pull request #1388 from chetan51/issue-1387
+2014-09-29 16:24:54 #2706 passed:    master Merge pull request #1378 from subutai/region_bugs
+2014-09-29 12:42:13 #2703 errored:   master Merge pull request #1371 from chetan51/issue-1370
+2014-09-26 17:51:09 #2697 passed:    master Merge pull request #1372 from cogmission/stim_threshold_check
+2014-09-26 12:40:19 #2696 passed:    master Merge pull request #1373 from numenta-ci/core-update-sha
+2014-09-22 19:18:50 #2665 passed:    master Testing tooling server triggers.
+2014-09-20 23:52:34 #2646 passed:    master Merge pull request #1346 from chetan51/issue-1329_metrics
+2014-09-19 17:21:19 #2641 passed:    master Merge pull request #1338 from chetan51/issue-1329
+2014-09-19 13:38:16 #2639 passed:    master Merge pull request #1318 from chetan51/issue-1317
+2014-09-19 12:41:47 #2638 passed:    master Merge pull request #1337 from rhyolight/remote-examples-from-ci
+2014-09-18 10:06:44 #2608 passed:    master Merge pull request #1323 from rhyolight/add-back-osx
+2014-09-17 22:38:55 #2606 passed:    master Merge pull request #1327 from rhyolight/swarm-test-split
+2014-09-15 18:22:14 #2600 passed:    master Merge pull request #1316 from scottpurdy/example-notebook
+2014-09-15 17:42:15 #2599 passed:    master Merge pull request #1313 from allanino/issue-1312
+2014-09-15 00:59:49 #2593 passed:    master Merge pull request #1291 from chetan51/issue-1289
+2014-09-14 22:02:06 #2590 passed:    master Merge pull request #1286 from chetan51/issue-1285
+2014-09-12 20:14:48 #2582 passed:    master Merge branch 'master' of github.com:numenta/nupic into hotfix-py26-assert-raises
+2014-09-12 19:51:01 #2581 canceled:  master Merge pull request #1296 from scottpurdy/hotfix
+2014-09-12 18:52:42 #2579 errored:   master Merge pull request #1294 from rhyolight/fix-script-exit-codes-failure
+2014-09-12 17:57:29 #2578 passed:    master Merge pull request #1295 from scottpurdy/hotfix
+2014-09-12 16:48:08 #2574 passed:    master Merge pull request #1290 from scottpurdy/hotfix
+2014-09-12 11:54:35 #2571 passed:    master Merge pull request #1277 from scottpurdy/anomaly-changes
+2014-09-11 19:50:55 #2567 passed:    master Merge pull request #1287 from rhyolight/readme-install-update
+2014-09-11 11:10:22 #2554 passed:    master Merge pull request #956 from breznak/anomaly_modular
+2014-09-10 18:17:53 #2551 passed:    master Merge pull request #1274 from scottpurdy/validateModelInput
+2014-09-10 17:49:09 #2550 passed:    master Merge pull request #1273 from scottpurdy/check-input-delta
+2014-09-10 17:29:08 #2549 passed:    master Merge pull request #1272 from rhyolight/sp-docs-index
+2014-09-10 15:46:17 #2546 errored:   master Merge pull request #1270 from scottpurdy/validateModelInput
+2014-09-10 00:52:00 #2544 errored:   master Merge pull request #1271 from scottpurdy/master
+2014-09-09 18:44:07 #2541 passed:    master Merge pull request #1269 from scottpurdy/validateModelInput
+2014-09-09 14:23:31 #2539 passed:    master Merge pull request #1266 from numenta-ci/core-update-sha
+2014-09-05 21:42:57 #2537 passed:    master Merge pull request #1265 from breznak/fix_pushd_popd
+2014-09-05 14:29:32 #2534 passed:    master Merge pull request #1263 from oxtopus/issue-1193
+2014-09-04 13:51:16 #2531 passed:    master Merge pull request #1260 from simjega/issue-1259
+2014-09-04 12:49:06 #2530 passed:    master Merge pull request #1261 from numenta-ci/core-update-sha
+2014-09-03 16:21:20 #2524 errored:   master Merge pull request #1257 from rhyolight/gitter
+2014-09-03 15:21:16 #2523 passed:    master Merge pull request #1229 from baroobob/wrapAroundOff
+2014-09-03 10:40:45 #2519 errored:   master Merge pull request #1255 from numenta-ci/core-update-sha
+2014-09-03 00:15:53 #2517 passed:    master Merge pull request #1254 from oxtopus/custom-nupic.core-location
+2014-09-02 21:01:05 #2513 passed:    master Merge pull request #1189 from scottpurdy/random-sp
+2014-09-02 19:21:53 #2511 passed:    master Merge pull request #1241 from chetan51/more_tm_tests
+2014-09-02 17:04:41 #2505 errored:   master Merge pull request #1253 from scottpurdy/master
+2014-09-02 15:05:20 #2503 passed:    master Merge pull request #1252 from numenta-ci/core-update-sha
+2014-08-29 12:13:43 #2496 passed:    master Merge pull request #1250 from rhyolight/clean-travis-scripts
+2014-08-28 16:48:49 #2493 passed:    master Merge pull request #1224 from chetan51/issue-1143
+2014-08-28 16:29:44 #2492 passed:    master Merge pull request #1242 from oxtopus/SunOS-support
+2014-08-28 12:11:21 #2471 passed:    master Fix incorrect file name
+2014-08-21 15:04:45 #2454 passed:    master Merge pull request #1228 from rhyolight/remove-hsdump
+2014-08-20 12:33:24 #2445 passed:    master Merge pull request #1226 from rhyolight/remote-parallel-unit-tests
+2014-08-20 00:59:03 #2441 failed:    master Merge pull request #1221 from numenta-ci/core-update-sha
+2014-08-19 18:18:44 #2432 passed:    master Merge pull request #1222 from chetan51/issue-1220
+2014-08-18 15:59:53 #2426 passed:    master Merge pull request #1206 from syl20bnr/doxygen_syntax_issue_1093
+2014-08-18 15:57:09 #2425 passed:    master Merge pull request #1210 from numenta-ci/core-update-sha
+2014-08-18 13:03:39 #2424 passed:    master Merge pull request #1201 from chetan51/issue-1200
+2014-08-14 21:35:14 #2419 passed:    master Merge pull request #1204 from chetan51/issue-1198
+2014-08-14 20:39:23 #2418 passed:    master Merge pull request #1203 from chetan51/issue-1202
+2014-08-07 12:33:58 #2412 passed:    master Merge pull request #1192 from numenta-ci/core-update-sha
+2014-08-06 12:46:18 #2410 passed:    master Merge pull request #1191 from rhyolight/deploy-update
+2014-08-06 12:32:15 #2409 errored:   master Merge pull request #1190 from pgavazzi/fix/pg/byte_compile_failure
+2014-08-05 18:01:55 #2401 passed:    master Merge pull request #1187 from baroobob/master
+2014-08-05 16:56:37 #2399 passed:    master reverting all deploy changes to travis config so I don't pollute the master commits any more.
+2014-08-05 16:03:26 #2397 passed:    master Fixed emmensely stupid bug in travis.yml and I am dumb.
+2014-08-05 15:55:25 #2396 canceled:  master Trying deploy again, this time with the pre-deploy actions happening
+2014-08-05 14:59:29 #2395 errored:   master Using  instead of /Users/mtaylor/nta/nupic
+2014-08-05 14:02:04 #2394 errored:   master Changing into proper directory before deploy prep.
+2014-08-05 13:27:00 #2393 canceled:  master Merge branch 'master' of github.com:numenta/nupic into deploy
+2014-08-04 18:28:17 #2386 passed:    master Merge pull request #1185 from scottpurdy/network-example
+2014-08-04 17:19:55 #2374 passed:    master Merge pull request #1182 from scottpurdy/topDownComputeFix
+2014-07-31 18:18:17 #2371 passed:    master Merge pull request #1156 from rhyolight/missing-json-swarming
+2014-07-31 16:25:45 #2369 passed:    master Merge pull request #1146 from rhyolight/format-setup
+2014-07-31 16:13:44 #2368 passed:    master Merge pull request #1148 from rhyolight/optimize-imports
+2014-07-31 13:57:36 #2367 failed:    master Merge pull request #1152 from rhyolight/remove-math-mcmc
+2014-07-29 15:51:16 #2362 passed:    master Merge pull request #1144 from rhyolight/cmake-pypi
+2014-07-29 12:32:46 #2359 passed:    master Merge pull request #1137 from chetan51/issue-1086
+2014-07-26 14:37:39 #2335 passed:    master Merge pull request #1134 from rhyolight/optimize-imports
+2014-07-25 13:39:37 #2326 passed:    master Merge pull request #1128 from rhyolight/template-fix
+2014-07-20 21:56:59 #2287 passed:    master Merge pull request #1130 from allanino/docker-setuptools
+2014-07-18 18:56:21 #2285 passed:    master Merge pull request #1127 from numenta/revert-1124-update-readme
+2014-07-18 18:07:52 #2284 passed:    master Merge pull request #1123 from DavidRagazzi/patch-3
+2014-07-18 12:47:13 #2280 passed:    master Merge pull request #1124 from rhyolight/update-readme
+2014-07-18 07:07:17 #2272 passed:    master Merge pull request #1119 from DavidRagazzi/patch-2
+2014-07-17 15:00:21 #2270 passed:    master Merge pull request #1120 from rhyolight/ignore
+2014-07-17 10:29:42 #2267 errored:   master Merge pull request #1118 from rhyolight/simple-readme-dev
+2014-07-16 19:56:29 #2263 passed:    master Merge pull request #1117 from rhyolight/ide-readme
+2014-07-16 19:15:19 #2262 passed:    master Merge branch 'master' of github.com:numenta/nupic
+2014-07-16 18:30:57 #2261 errored:   master Merge pull request #1098 from vsinha/749
+2014-07-16 13:53:14 #2257 errored:   master Merge pull request #1116 from rhyolight/archive-fix
+2014-07-16 12:37:05 #2256 passed:    master Merge pull request #1112 from DavidRagazzi/patch-1
+2014-07-15 11:20:19 #2253 passed:    master Merge pull request #1113 from rhyolight/archive-skip
+2014-07-14 23:06:16 #2250 errored:   master Merge pull request #1111 from rhyolight/archive-skip
+2014-07-14 14:31:48 #2248 errored:   master Merge pull request #917 from DavidRagazzi/pip-installable
+2014-07-14 11:26:47 #2244 passed:    master Merge pull request #1099 from mafagafo/master
+2014-07-12 12:32:58 #2236 errored:   master Merge pull request #1095 from evelynmitchell/master
+2014-07-09 22:37:09 #2232 errored:   master Merge pull request #1092 from rhyolight/outdated
+2014-07-09 19:15:24 #2230 errored:   master Merge pull request #1048 from moorejpdx/fix_1st_order
+2014-07-03 18:31:29 #2219 passed:    master Merge pull request #882 from chetan51/issue-837
+2014-07-02 01:46:47 #2217 passed:    master Merge pull request #1085 from rhyolight/remove-osx-build
+2014-07-01 21:11:12 #2216 errored:   master Trigger Travis-CI because of hung OSX build.
+2014-07-01 19:28:21 #2214 errored:   master Merge pull request #1083 from rhyolight/cmake-cfg-fix
+2014-06-30 14:12:35 #2210 errored:   master Merge pull request #1057 from iandanforth/nup1051
+2014-06-23 17:15:55 #2201 passed:    master Merge pull request #1040 from rhyolight/add-regression-badge
+2014-06-22 17:54:54 #2196 passed:    master Merge pull request #1032 from oxtopus/revert-docker-rename
+2014-06-22 14:05:13 #2193 passed:    master Merge pull request #1033 from rhyolight/no-parallel-integration-coverage
+2014-06-22 09:20:21 #2185 failed:    master Merge pull request #1003 from DavidRagazzi/move-files-from-root
+2014-06-18 15:51:30 #2174 passed:    master Merge pull request #1019 from rhyolight/test-reconfiguration
+2014-06-16 20:17:31 #2150 passed:    master Merge pull request #1016 from baroobob/master
+2014-06-14 13:20:09 #2134 errored:   master Merge pull request #1015 from chetan51/improve_geospatial_encoder
+2014-06-13 19:23:11 #2124 failed:    master Added code coverage badge.
+2014-06-13 18:15:01 #2123 passed:    master Ignore coveralls warnings.
+2014-06-13 17:35:19 #2122 errored:   master cd to build dir before running coveralls.
+2014-06-13 16:10:21 #2121 passed:    master Trying a different python coveralls package.
+2014-06-13 14:28:36 #2120 errored:   master Trying sudo pip install coveralls
+2014-06-13 13:06:41 #2119 errored:   master Added service name to coveralls config, removed debug option on coveralls.
+2014-06-13 11:29:13 #2116 errored:   master Trying coveralls --verbose.
+2014-06-12 19:34:51 #2108 passed:    master Added coveralls config.
+2014-06-12 20:22:21 #2106 passed:    master Merge pull request #1011 from baroobob/master
+2014-06-12 14:43:15 #2105 errored:   master Merge pull request #1002 from DavidRagazzi/patch-2
+2014-06-11 11:47:22 #2099 passed:    master Merge pull request #1008 from rhyolight/add-coveralls-2
+2014-06-10 21:51:18 #2098 passed:    master Merge pull request #1005 from chetan51/issue-988
+2014-06-08 15:44:30 #2086 passed:    master Merge pull request #1000 from numenta-ci/core-update-sha
+2014-06-06 13:55:46 #2069 passed:    master Merge pull request #992 from iandanforth/991
+2014-06-06 12:13:11 #2066 passed:    master Merge pull request #989 from baroobob/master
+2014-06-04 23:37:07 #2060 passed:    master Merge pull request #987 from rhyolight/docfix
+2014-06-04 18:06:18 #2059 passed:    master Merge pull request #985 from scottpurdy/master
+2014-06-04 15:50:09 #2058 passed:    master Merge pull request #986 from numenta-ci/core-update-1a3a36e1bbf8e3a6ede51836f327f37857f18947
+2014-06-03 17:56:55 #2039 canceled:  master Merge pull request #983 from numenta-ci/core-update-980c16afb45bd1625164b32413ea0992b965a63c
+2014-06-03 17:21:03 #2037 passed:    master Merge pull request #976 from rhyolight/retry-pip-install
+2014-06-03 15:45:46 #2035 passed:    master Merge pull request #979 from numenta-ci/core-update-df86d7f6c61296a2524a86524f7db16d6a4d60fe
+2014-06-03 08:37:22 #2032 passed:    master Merge pull request #958 from breznak/parallel_unittests
+2014-06-03 06:16:54 #2028 passed:    master Minor changes in CMake file
+2014-06-02 20:02:39 #2023 passed:    master Merge pull request #975 from rhyolight/archive-pip-requirements
+not yet #2021 canceled:  master Merge pull request #976 from rhyolight/retry-pip-install
+2014-06-02 18:19:45 #2017 passed:    master Merge pull request #964 from jaredweiss/iss389
+2014-06-01 16:02:13 #2010 passed:    master Ignore bindings copied to root
+2014-06-01 13:55:14 #2009 passed:    master Merge pull request #965 from DavidRagazzi/pip-installable-temp
+2014-05-31 13:05:44 #2003 passed:    master Merge pull request #944 from rhyolight/anomaly-gym
+2014-05-31 08:58:03 #2000 passed:    master Merge pull request #970 from utensil/872-new-user-oriented-readme
+2014-05-30 10:35:03 #1987 passed:    master Adding deployment to S3 back in after testing.
+2014-05-30 00:35:42 #1983 passed:    master Commenting back out deploy directives.
+2014-05-30 00:05:17 #1982 canceled:  master Tarring up the right directory this time.
+2014-05-29 23:44:11 #1981 canceled:  master Commented out the deploy stuff from travis config to get build passing once again.
+2014-05-29 23:14:03 #1980 errored:   master attempt to make tar in cwd, then move into archive folder
+2014-05-29 22:35:37 #1979 errored:   master Trying to fix archive tar command for deployment.
+2014-05-29 21:40:14 #1978 errored:   master Fixed typo in tar command.
+2014-05-29 20:37:12 #1974 errored:   master Fixed bad yaml
+2014-05-29 17:24:10 #1973 errored:   master Merge branch 'master' of github.com:numenta/nupic
+2014-05-29 19:33:07 #1971 passed:    master Merge pull request #946 from rhyolight/anomaly-likelihood
+2014-05-29 16:12:00 #1970 errored:   master Switched to proper local deploy directory. Added conditions to only deploy on linux, clang, python 2.7, master branch.
+2014-05-29 15:28:51 #1969 canceled:  master Adding S3 deployment of build/release folder to travis-ci config.
+2014-05-28 13:27:31 #1962 passed:    master Merge pull request #950 from rhyolight/swarm-error-messages
+2014-05-27 20:12:07 #1959 passed:    master Merge pull request #959 from mrcslws/issue-919
+2014-05-27 19:41:07 #1958 passed:    master Merge pull request #962 from rhyolight/aggregator-docs
+2014-05-22 10:37:25 #1951 passed:    master Merge pull request #953 from utensil/952-doxygen-style-fix
+2014-05-21 15:48:33 #1946 passed:    master Merge pull request #942 from scottpurdy/optional-classifier
+2014-05-21 12:16:46 #1942 passed:    master Merge pull request #871 from utensil/issue-819-renaming
+2014-05-16 19:04:34 #1929 passed:    master Merge pull request #941 from oxtopus/numenta-nupic-937
+2014-05-16 15:38:41 #1924 passed:    master Merge pull request #938 from rhyolight/undo-pymysql-bump
+2014-05-16 14:36:04 #1923 errored:   master Merge pull request #939 from scottpurdy/936
+2014-05-16 11:56:17 #1920 errored:   master Merge pull request #937 from surge-/issue883#2
+2014-05-16 10:18:01 #1919 passed:    master Merge pull request #935 from rhyolight/osx-travis
+2014-05-13 17:31:17 #1908 passed:    master Merge pull request #879 from chetan51/issue-878
+2014-05-13 16:03:29 #1907 passed:    master Merge pull request #930 from rhyolight/new-core
+2014-05-12 17:39:15 #1905 passed:    master Merge pull request #929 from evelynmitchell/master
+2014-05-09 15:13:56 #1902 passed:    master Merge pull request #925 from moorejpdx/grok_cleanup_for_swarming_libraries
+2014-05-07 17:20:30 #1899 passed:    master Merge pull request #924 from wilsonk/NTA_ASM-fix
+2014-05-05 12:47:46 #1878 passed:    master Merge pull request #886 from scottpurdy/issue885
+2014-05-03 02:13:42 #1822 passed:    master Merge pull request #852 from chetan51/tests_pylintrc
+2014-05-03 01:40:42 #1821 passed:    master Merge pull request #914 from oxtopus/build-in-travis-as-cpp-project
+2014-05-03 01:36:45 #1820 passed:    master Merge pull request #895 from chetan51/issue-892
+2014-05-03 01:36:39 #1819 passed:    master Merge pull request #896 from chetan51/issue-887
+2014-05-02 14:10:35 #1800 passed:    master Merge pull request #904 from rhyolight/update-readme
+2014-05-02 12:58:24 #1796 passed:    master Merge pull request #900 from rhyolight/cmake-version
+2014-05-02 12:50:08 #1795 failed:    master Merge branch 'pip-installable' of github.com:DavidRagazzi/nupic into pip-installable
+2014-05-02 11:02:25 #1794 passed:    master Merge pull request #900 from rhyolight/cmake-version
+2014-05-02 09:35:49 #1790 passed:    master Merge pull request #906 from oxtopus/901-travis-cmake-errors
+2014-04-29 22:09:24 #1771 passed:    master Merge pull request #806 from subutai/spatialImp_switch_default
+2014-04-29 21:48:59 #1769 failed:    master Merge branch 'master' of github.com:numenta/nupic
+2014-04-29 15:09:33 #1767 passed:    master Merge pull request #873 from rhyolight/remove-distclean
+2014-04-29 14:50:33 #1766 passed:    master Merge pull request #874 from rhyolight/connected
+2014-04-26 11:48:27 #1751 errored:   master Merge pull request #420 from breznak/scalar_w3
+2014-04-25 19:39:39 #1746 passed:    master Merge pull request #867 from chetan51/issue-834
+2014-04-25 14:47:51 #1742 passed:    master Merge pull request #820 from breznak/fix_vector_opf
+2014-04-25 14:21:48 #1741 passed:    master Merge pull request #814 from breznak/remove_external_nupic2
+2014-04-25 13:49:43 #1740 passed:    master Merge pull request #847 from oxtopus/docker-add
+2014-04-25 13:19:16 #1738 passed:    master Merge pull request #861 from rhyolight/issues-readme
+2014-04-25 12:01:39 #1736 passed:    master Merge pull request #860 from rhyolight/no-artifacts
+2014-04-25 10:23:37 #1734 passed:    master Merge pull request #858 from rhyolight/one-hot-gym-prediction
+2014-04-25 01:22:17 #1731 passed:    master Merge pull request #849 from oxtopus/read-vars-from-config
+2014-04-25 00:21:34 #1728 passed:    master Merge pull request #851 from breznak/gitignore_cleanup
+2014-04-24 23:12:26 #1727 passed:    master Merge pull request #855 from rhyolight/one-hot-gym-prediction
+2014-04-24 13:32:29 #1716 passed:    master Merge pull request #848 from rhyolight/one-hot-gym-prediction
+2014-04-24 09:03:56 #1711 passed:    master Merge pull request #850 from breznak/fix_netbeans
+2014-04-23 10:21:19 #1703 passed:    master Merge pull request #846 from oxtopus/bugfix-docker
+2014-04-22 20:00:13 #1701 passed:    master Merge pull request #844 from oxtopus/followup-nupic_config
+2014-04-22 18:35:27 #1697 passed:    master Merge pull request #841 from rhyolight/perm-runner-options
+2014-04-22 15:24:04 #1693 passed:    master Merge pull request #407 from breznak/utility-encoder
+2014-04-22 09:14:12 #1691 passed:    master Merge pull request #792 from DavidRagazzi/env-variables
+2014-04-21 17:07:42 #1688 passed:    master Merge pull request #816 from chetan51/issue-709
+2014-04-21 14:39:46 #1685 passed:    master Merge pull request #831 from oxtopus/multidocker
+2014-04-21 11:50:33 #1683 passed:    master Merge pull request #830 from oxtopus/docker-ubuntu
+2014-04-21 10:29:20 #1682 passed:    master Merge pull request #817 from oxtopus/remove-git-submodule
+2014-04-15 14:20:32 #1658 passed:    master SHA update
+2014-04-14 13:00:55 #1631 passed:    master Merge pull request #804 from chetan51/hotgym_spatialImp
+2014-04-11 16:40:20 #1628 passed:    master Merge pull request #802 from rhyolight/clean-license
+2014-04-10 18:48:30 #1624 passed:    master Merge pull request #800 from rhyolight/README-fix
+2014-04-10 08:24:35 #1618 passed:    master `testeverything` project was moved to `nupic.core` (this is an orphaned file now)
+2014-04-10 00:13:03 #1613 passed:    master Merge pull request #793 from rhyolight/swarm-missing-action
+2014-04-08 22:17:25 #1608 passed:    master Merge pull request #788 from breznak/custom_targets
+2014-04-08 20:13:37 #1602 passed:    master Merge pull request #785 from oxtopus/restore-run_tests.sh
+2014-04-08 18:15:08 #1597 passed:    master Merge pull request #783 from scottpurdy/readme
+2014-04-08 15:55:56 #1593 passed:    master Merge pull request #751 from DavidRagazzi/master
+2014-04-05 11:23:40 #1591 passed:    master Merge pull request #764 from rhyolight/run-swarm-cli
+2014-04-04 00:53:41 #1576 passed:    master Merge pull request #768 from breznak/SHA_update_core
+2014-04-02 11:56:41 #1552 passed:    master "ie" replaced by "i.e."
+2014-03-29 10:55:49 #1540 passed:    master Merge pull request #754 from zacg/master
+2014-03-27 18:00:44 #1535 passed:    master Merge pull request #750 from rhyolight/update-readme
+2014-03-26 13:20:54 #1533 passed:    master Merge pull request #748 from rhyolight/update-readme
+2014-03-24 13:16:50 #1531 passed:    master Merge pull request #743 from rhyolight/remove-build-sh
+2014-03-21 09:21:10 #1528 passed:    master Merge pull request #742 from zacg/master
+2014-03-20 18:27:00 #1526 passed:    master Merge pull request #741 from subutai/update_pool_pct
+2014-03-20 12:04:25 #1524 passed:    master Merge pull request #737 from rhyolight/typos
+2014-03-20 11:47:29 #1523 passed:    master Merge pull request #738 from rhyolight/swarm-model-params
+2014-03-19 14:03:29 #1519 passed:    master Merge pull request #729 from subutai/update_swarm_anomaly_models
+2014-03-19 11:59:49 #1518 passed:    master Merge pull request #722 from lonesword/add_example
+2014-03-18 09:22:32 #1514 passed:    master Merge pull request #735 from salexashenko/master
+2014-03-17 15:42:49 #1512 passed:    master Merge pull request #733 from salexashenko/master
+2014-03-13 19:27:36 #1508 passed:    master Merge pull request #730 from scottpurdy/pylint
+2014-03-10 14:12:05 #1503 passed:    master Update CMakeLists.txt
+2014-03-10 13:41:31 #1502 passed:    master Merge pull request #720 from oxtopus/revert-719
+2014-03-08 16:31:53 #1500 passed:    master Merge pull request #721 from breznak/fix_runtests
+2014-03-07 19:42:24 #1495 passed:    master Merge pull request #719 from rhyolight/revert-python-build-changes
+2014-03-07 18:25:25 #1493 passed:    master Merge pull request #717 from oxtopus/cmake-python-binary
+2014-03-07 11:34:19 #1488 passed:    master Merge pull request #713 from subutai/gcc_4_4_fix
+2014-03-06 16:37:22 #1485 passed:    master Merge pull request #703 from breznak/silence_warnings2_nupicpart
+2014-03-05 14:47:11 #1481 passed:    master Merge pull request #707 from scottpurdy/master
+2014-03-04 10:43:31 #1474 passed:    master Merge pull request #692 from scottpurdy/master
+2014-03-03 18:34:19 #1472 passed:    master Merge pull request #696 from rhyolight/update-readme-logo
+2014-03-03 13:34:37 #1470 passed:    master Merge pull request #695 from iandanforth/patch-3
+2014-03-03 11:03:28 #1467 passed:    master Merge pull request #694 from breznak/move_from_nupic
+2014-02-28 11:51:55 #1460 errored:   master Merge pull request #685 from numenta/nta-nupic-env-check
+2014-02-27 19:29:12 #1458 passed:    master Merge pull request #687 from DavidRagazzi/master
+2014-02-27 15:21:22 #1452 passed:    master Merge pull request #670 from breznak/PIL_to_Pillow
+2014-02-27 10:15:52 #1451 passed:    master Merge pull request #681 from subutai/buildsh_changes
+2014-02-24 20:40:05 #1446 passed:    master Update CMakeLists.txt
+2014-02-24 20:33:47 #1445 passed:    master Peforms a 'clean' before CMake generate files
+2014-02-24 17:10:58 #1444 errored:   master Update CMakeLists.txt
+2014-02-24 13:27:50 #1443 errored:   master Fixed Readme file
+2014-02-21 18:31:00 #1437 passed:    master Merge pull request #660 from iandanforth/nupic658
+2014-02-21 18:02:19 #1436 passed:    master Merge pull request #668 from breznak/cmake_linux_fix
+2014-02-21 10:44:39 #1434 passed:    master Merge pull request #657 from rhyolight/david-patch-2
+2014-02-20 17:52:30 #1429 passed:    master Merge pull request #664 from subutai/issue_663
+2014-02-14 14:00:20 #1393 passed:    master Merge pull request #652 from rhyolight/defer-travis-artifacts-install
+2014-02-13 08:54:43 #1386 passed:    master Merge pull request #644 from DavidRagazzi/patch-1
+2014-02-12 11:00:33 #1382 passed:    master Merge pull request #642 from Cultrarius/dev/issue/636
+2014-02-11 17:04:48 #1380 passed:    master Merge pull request #639 from rhyolight/update-doxyfile
+2014-02-11 16:06:46 #1378 passed:    master Merge pull request #622 from chetan51/test_opf_experiment_results
+2014-02-10 16:42:22 #1376 passed:    master Merge pull request #635 from numenta/add-dockerfile
+2014-02-10 12:53:18 #1373 passed:    master Merge pull request #631 from jefffohl/master
+2014-02-07 20:46:17 #1368 passed:    master Merge pull request #612 from chetan51/test_nupic2_twonode
+2014-02-07 20:17:37 #1367 passed:    master Merge pull request #629 from chetan51/test_nupic2_syntactic_sugar
+2014-02-07 19:46:54 #1366 passed:    master Merge pull request #628 from chetan51/test_nupic2_unified_parameter
+2014-02-07 19:44:00 #1365 passed:    master Merge pull request #630 from chetan51/test_opf_experiment_results_actual
+2014-02-07 17:59:07 #1361 passed:    master Merge pull request #618 from chetan51/test_lang_py_spec
+2014-02-07 15:37:23 #1357 passed:    master Merge pull request #623 from subutai/support_new_sp_in_opf
+2014-02-07 13:44:42 #1354 passed:    master Merge pull request #606 from chetan51/test_helpers
+2014-02-07 13:14:32 #1353 passed:    master Merge pull request #607 from chetan51/test_getself
+2014-02-07 12:50:07 #1352 passed:    master Merge pull request #619 from chetan51/test_lang_py_pyregion
+2014-02-07 12:19:23 #1351 passed:    master Merge pull request #620 from chetan51/test_consoleprinter
+2014-02-07 11:35:06 #1350 passed:    master Merge pull request #621 from chetan51/test_opf_experiments
+2014-02-07 11:18:22 #1349 passed:    master Merge pull request #610 from chetan51/test_expgenerator
+2014-02-06 20:23:56 #1345 passed:    master Merge pull request #614 from chetan51/test_lang_py_net_test
+2014-02-06 14:09:33 #1332 passed:    master Merge pull request #613 from chetan51/test_nupic2_testnode_interchangeability
+2014-02-05 21:38:15 #1330 passed:    master Merge pull request #600 from chetan51/test_knn_classifier
+2014-02-05 19:37:48 #1324 passed:    master Merge pull request #611 from chetan51/update_readme
+2014-02-05 18:15:38 #1319 passed:    master Merge pull request #608 from scottpurdy/pylint
+2014-02-04 13:54:07 #1306 passed:    master Merge pull request #597 from rhyolight/core-submodule
+2014-01-30 11:44:48 #1299 passed:    master Merge pull request #592 from csimons/timer
+2014-01-28 00:40:52 #1297 passed:    master Merge pull request #580 from subutai/cppsp_docstring
+2014-01-28 00:39:55 #1296 passed:    master Merge pull request #581 from oxtopus/cleanup-gitignore
+2014-01-23 09:07:01 #1293 passed:    master Merge pull request #514 from DavidRagazzi/patch-4
+2014-01-19 12:31:29 #1291 passed:    master Merge pull request #563 from csimons/master
+2014-01-17 16:29:24 #1290 passed:    master Merge pull request #545 from danstanton/remove-strstream
+2014-01-17 09:06:01 #1288 passed:    master Merge pull request #565 from csimons/timer
+2014-01-16 12:54:02 #1284 passed:    master Merge pull request #566 from rhyolight/doc-encoders-attempt-two
+2014-01-16 12:06:31 #1283 passed:    master Merge pull request #564 from csimons/typo
+2014-01-14 15:06:58 #1271 passed:    master Merge pull request #539 from iandanforth/mer334
+2014-01-11 17:12:30 #1264 passed:    master Merge pull request #562 from csimons/master
+2014-01-11 12:48:19 #1259 passed:    master Merge pull request #560 from csimons/master
+2014-01-08 15:05:11 #1253 passed:    master Merge pull request #542 from rhyolight/travis-retry-artifact-install
+2014-01-08 11:17:16 #1250 errored:   master Merge pull request #537 from oxtopus/pip-fix
+2014-01-07 16:24:31 #1248 passed:    master Merge pull request #443 from breznak/vector
+2014-01-06 19:29:08 #1247 passed:    master Merge pull request #535 from rhyolight/network-docs
+2014-01-06 16:34:53 #1245 passed:    master Merge pull request #418 from akamlani/master
+2014-01-03 15:49:34 #1240 passed:    master Merge pull request #529 from rhyolight/add-contributing-doc
+2014-01-03 12:38:16 #1238 passed:    master Merge pull request #527 from ugurthemaster/master
+2014-01-02 17:20:48 #1236 passed:    master Merge pull request #520 from subutai/random_encoder
+2014-01-02 15:10:55 #1234 passed:    master Merge pull request #522 from ugurthemaster/patch-1
+2013-12-27 12:45:19 #1229 passed:    master Merge pull request #519 from scottpurdy/classifier
+2013-12-23 17:55:22 #1227 passed:    master Merge pull request #511 from subutai/sp_debugging_printouts
+2013-12-17 23:22:00 #1219 passed:    master Merge pull request #508 from rhyolight/link-output-input-docs
+2013-12-17 21:39:29 #1217 passed:    master Merge pull request #507 from rhyolight/nupic-network-docs
+2013-12-17 14:39:06 #1215 passed:    master Merge pull request #506 from rhyolight/region-dimensions-docs
+2013-12-16 16:46:39 #1211 passed:    master Merge pull request #501 from oxtopus/bugifx-identity-comparison
+2013-12-16 13:31:15 #1209 passed:    master Merge pull request #500 from oxtopus/bugfix-typo-in-clamodel
+2013-12-13 16:38:52 #1205 passed:    master Merge pull request #496 from oxtopus/clamodel-cleanup
+2013-12-13 15:28:22 #1204 passed:    master Merge pull request #495 from iandanforth/anomalycomment
+2013-12-12 13:07:31 #1201 passed:    master Merge pull request #493 from subutai/sp_boost_bugfix2
+2013-12-12 10:54:52 #1199 passed:    master Merge pull request #464 from subutai/sp_boost_bugfix
+2013-12-11 15:43:09 #1195 failed:    master Merge pull request #489 from subutai/fix_for_issue_487
+2013-12-11 12:31:55 #1191 passed:    master Merge pull request #486 from subutai/template_file_option_take_2
+2013-12-11 11:48:14 #1190 failed:    master Merge pull request #478 from oxtopus/fix-travis-builds
+2013-12-10 18:42:37 #1186 failed:    master Triggering fresh Travis-CI build.
+2013-12-10 18:34:12 #1185 canceled:  master Merge pull request #482 from rhyolight/docs
+2013-12-10 18:00:46 #1183 failed:    master Merge pull request #481 from rhyolight/docs
+2013-12-10 11:24:49 #1177 passed:    master Update DOCS.md
+2013-12-10 11:42:18 #1175 passed:    master Merge pull request #477 from oxtopus/fix-travis-builds
+2013-12-09 18:16:43 #1165 errored:   master Adding more docs, testing automatic doc build.
+2013-12-09 18:14:46 #1164 errored:   master Adding more docs, testing automatic doc build.
+2013-12-09 18:12:02 #1163 errored:   master Adding more docs, testing automatic doc build.
+2013-12-09 18:10:37 #1162 errored:   master Merge branch 'doc-test'
+2013-12-09 18:05:44 #1161 errored:   master Merge pull request #473 from rhyolight/doc-test
+2013-12-09 17:50:53 #1159 errored:   master Merge pull request #472 from rhyolight/doc-test
+2013-12-09 10:21:26 #1155 errored:   master Merge pull request #457 from macrintr/master
+2013-12-07 17:59:09 #1153 passed:    master Merge pull request #446 from jkthompson/bug/build/apr_base64
+2013-12-07 16:24:17 #1152 passed:    master Update DOCS.md
+2013-12-06 18:40:20 #1148 passed:    master Switched travis IRC channel to #nupic-hackers.
+2013-12-06 17:54:43 #1147 passed:    master Merge pull request #461 from rhyolight/doxygen
+2013-12-05 17:23:48 #1141 errored:   master Merge pull request #453 from subutai/issue_340
+2013-12-03 16:10:49 #1131 errored:   master Merge pull request #442 from oxtopus/graceful-missing-pytest-xdist
+2013-11-25 13:23:49 #1120 passed:    master Merge pull request #434 from keithcom/encoders
+2013-11-25 10:02:58 #1117 passed:    master Merge pull request #441 from breznak/pass-thru-enc
+2013-11-22 19:41:16 #1114 passed:    master Merge pull request #386 from subutai/spatial_pooler_debugging
+2013-11-21 17:40:41 #1107 passed:    master Merge pull request #426 from breznak/vector
+2013-11-18 12:42:02 #1088 passed:    master Merge pull request #356 from alexaltair/patch-1
+2013-11-18 10:04:00 #1085 passed:    master Merge pull request #417 from scottpurdy/readme
+2013-11-18 10:02:59 #1084 passed:    master Merge pull request #416 from breznak/fieldmeta-unittest
+2013-11-14 09:38:39 #1068 passed:    master Merge pull request #355 from breznak/c++11-clang-modernizer-lite
+2013-11-12 13:02:10 #1063 passed:    master Merge pull request #395 from oxtopus/travis-build_matrix-workaround
+2013-11-08 13:50:08 #1055 passed:    master Merge pull request #392 from oxtopus/travis_10k_limit
+2013-11-06 08:49:23 #1048 passed:    master Merge pull request #377 from oxtopus/optional-matplotlib
+2013-11-05 14:17:56 #1043 passed:    master Merge pull request #302 from breznak/llvm-support
+2013-10-31 19:14:05 #1030 passed:    master Merge pull request #372 from iandanforth/mer857
+2013-10-31 11:24:09 #1024 passed:    master Merge pull request #294 from oxtopus/NPC-308-Remove_external_python_dependencies
+2013-10-29 13:08:40 #1007 passed:    master Merge pull request #346 from scottpurdy/network-test
+2013-10-29 00:37:24 #1003 passed:    master Merge pull request #325 from scottpurdy/spcpp
+2013-10-28 17:23:11 #996 passed:     master Merge pull request #336 from scottpurdy/deadcode
+2013-10-25 15:09:03 #984 passed:     master Merge pull request #339 from oxtopus/yaml-cpp-darwin64
+2013-10-25 11:15:30 #979 passed:     master Merge pull request #301 from breznak/yaml-cpp
+2013-10-24 19:42:44 #972 passed:     master Merge pull request #322 from breznak/cleanup
+2013-10-24 18:14:09 #968 passed:     master Merge pull request #300 from scottpurdy/cleanup
+2013-10-24 15:52:45 #960 passed:     master Merge pull request #324 from scottpurdy/master
+2013-10-24 15:24:45 #957 passed:     master Merge pull request #317 from breznak/weird-err-run_tests-all
+2013-10-23 15:30:48 #943 passed:     master Merge pull request #319 from breznak/analyzer
+2013-10-22 18:52:55 #937 passed:     master Merge pull request #315 from vitaly-krugl/logexception
+2013-10-22 16:52:39 #934 passed:     master Merge pull request #313 from breznak/cleanup-deadcode
+2013-10-21 08:58:57 #925 passed:     master Merge pull request #176 from breznak/linux32-platform-support
+2013-10-17 13:43:14 #922 passed:     master Merge pull request #310 from rhyolight/fix-artifact-uploads
+2013-10-14 15:40:32 #909 passed:     master Merge pull request #299 from scottpurdy/readme
+2013-10-14 15:35:42 #908 passed:     master Merge pull request #296 from scottpurdy/tests
+2013-10-09 15:32:46 #900 passed:     master Merge pull request #295 from keithcom/encoders
+2013-10-09 11:24:38 #898 passed:     master Merge pull request #293 from keithcom/encoders
+2013-10-05 11:57:13 #895 passed:     master Merge pull request #292 from subutai/disable-filters-test
+2013-10-04 18:53:11 #893 passed:     master Merge pull request #291 from vitaly-krugl/setupmodule-fixture-test
+2013-10-04 18:22:40 #890 passed:     master Merge pull request #289 from scottpurdy/opf_benchmarks
+2013-10-04 15:37:18 #883 passed:     master Merge pull request #282 from scottpurdy/grokengine
+2013-10-04 12:29:16 #878 passed:     master Merge pull request #290 from rhyolight/add-trademark-to-readme
+2013-10-03 08:43:25 #870 passed:     master Merge pull request #287 from scottpurdy/data_tests
+2013-10-02 22:44:29 #866 passed:     master Merge pull request #286 from oxtopus/travis_img
+2013-10-02 19:09:36 #863 passed:     master Merge pull request #285 from subutai/getPredictedState
+2013-10-02 17:47:56 #856 errored:    master Merge pull request #283 from oxtopus/minor_cleanup
+2013-10-02 12:37:19 #851 passed:     master Merge pull request #280 from rhyolight/run-tests-exit-status
+2013-10-01 17:20:05 #846 passed:     master Merge pull request #277 from scottpurdy/date-encoder
+2013-10-01 14:49:23 #843 passed:     master Merge pull request #281 from subutai/encoder-test-failure
+2013-10-01 14:27:03 #842 failed:     master Merge pull request #279 from scottpurdy/classifier_test
+2013-10-01 11:55:41 #835 failed:     master Merge pull request #278 from rhyolight/run-tests-exit-status
+2013-09-27 17:31:59 #831 passed:     master Merge pull request #264 from breznak/encoders-unittests
+2013-09-27 16:11:49 #829 passed:     master Merge pull request #270 from breznak/clang-warnings
+2013-09-27 15:09:52 #827 passed:     master Merge pull request #273 from oxtopus/NPC-306-use-nupic-linux64
+2013-09-27 11:14:44 #824 passed:     master Merge pull request #257 from keithcom/encoders
+2013-09-25 13:45:20 #816 passed:     master Merge pull request #202 from keithcom/master
+2013-09-23 18:51:20 #808 passed:     master Merge pull request #155 from scottpurdy/arithmetic-encoder
+2013-09-23 18:41:47 #806 passed:     master Merge pull request #271 from scottpurdy/master
+2013-09-23 17:45:04 #802 passed:     master Merge pull request #272 from scottpurdy/vector_file_sensor_test
+2013-09-20 11:35:19 #786 passed:     master Merge pull request #268 from gilsho/cpp_serialize
+2013-09-19 17:01:17 #771 passed:     master Merge pull request #198 from gilsho/spcpp
+2013-09-19 09:09:05 #766 passed:     master Merge pull request #267 from oxtopus/NPC-399-calculate_numpy_include
+2013-09-18 11:32:26 #755 passed:     master Merge pull request #239 from oxtopus/build_artifact_revisions
+2013-09-17 19:23:25 #746 passed:     master Merge pull request #259 from breznak/cppcheck-performance
+2013-09-16 17:51:40 #741 passed:     master Merge pull request #263 from iandanforth/patch-5
+2013-09-16 16:50:55 #740 passed:     master Merge pull request #262 from iandanforth/patch-4
+2013-09-13 16:15:56 #732 passed:     master Merge pull request #181 from breznak/unify-NTA_PLATFORM_linux_darwin64
+2013-09-13 13:33:43 #727 passed:     master Merge pull request #258 from rmarianetti/fixUnicodeDecodeErrInSwarming
+2013-09-13 12:30:00 #724 passed:     master Merge pull request #254 from ewulczyn/master
+2013-09-13 00:44:19 #719 passed:     master Merge pull request #255 from subutai/test_db
+2013-09-12 16:12:02 #715 passed:     master Merge pull request #179 from breznak/remove-NUPIC2
+2013-09-12 14:15:20 #712 passed:     master Merge pull request #253 from breznak/update-apr
+2013-09-12 13:01:11 #707 passed:     master Merge pull request #251 from breznak/clang-warnings
+2013-09-12 09:17:24 #702 passed:     master Merge pull request #250 from chetan51/fix_csv_reader
+2013-09-11 12:48:46 #695 passed:     master Merge pull request #247 from oxtopus/cpu_predictor_plots
+2013-09-10 23:48:24 #687 passed:     master Merge pull request #143 from breznak/cleanup-build
+2013-09-10 17:31:56 #684 passed:     master Merge pull request #244 from breznak/ewulczyn-fixCustomErrMetric
+2013-09-10 10:45:27 #678 passed:     master Merge pull request #142 from breznak/update-boost
+2013-09-09 14:23:39 #671 passed:     master Merge pull request #230 from gilsho/spswitch
+2013-09-06 23:02:37 #665 passed:     master Merge pull request #233 from subutai/minor_clamodel_comments
+2013-09-03 16:58:04 #654 passed:     master Merge pull request #215 from breznak/fix-NPC345-_PY27-not-exported
+2013-09-03 12:30:16 #650 passed:     master Archiving build by SHA instead of Travis-CI job number.
+2013-08-30 11:30:25 #644 passed:     master Merge pull request #193 from gilsho/newsp
+2013-08-28 11:07:35 #633 passed:     master Merge pull request #226 from scottpurdy/pip-fail
+2013-08-27 16:33:10 #623 passed:     master Merge pull request #225 from rmarianetti/npc-73
+2013-08-27 13:10:17 #620 passed:     master Merge pull request #224 from rmarianetti/npc-73
+2013-08-27 12:25:14 #618 passed:     master Merge pull request #223 from chetan51/master
+2013-08-26 17:24:04 #612 passed:     master Merge pull request #204 from breznak/build-tweaks
+2013-08-26 13:50:06 #607 passed:     master Merge pull request #218 from oxtopus/testlist_runner
+2013-08-26 12:48:15 #601 passed:     master Merge pull request #212 from scottpurdy/master
+2013-08-26 11:01:11 #595 passed:     master Merge pull request #217 from rmarianetti/npc-73
+2013-08-26 09:54:10 #591 passed:     master Merge pull request #216 from rmarianetti/fixExpDataPath
+2013-08-23 20:53:37 #584 passed:     master Merge pull request #211 from rmarianetti/npc-73
+2013-08-23 14:56:35 #572 passed:     master Merge pull request #205 from breznak/resolve-gcc-warnings
+2013-08-22 22:06:58 #560 passed:     master Merge pull request #210 from oxtopus/restore-PIL
+2013-08-22 13:28:38 #547 passed:     master Merge pull request #146 from breznak/modular-python-modules
+2013-08-22 12:34:43 #545 passed:     master Merge pull request #140 from breznak/modular-PIL
+2013-08-21 21:12:21 #534 passed:     master Merge pull request #199 from oxtopus/pip-install-lib
+2013-08-21 16:42:05 #529 passed:     master Merge pull request #197 from oxtopus/pip-target-option
+2013-08-21 15:19:50 #525 passed:     master Merge pull request #190 from scottpurdy/verbosity
+2013-08-21 10:38:55 #521 passed:     master Missed a file name change, changed the name of the tar file.
+2013-08-21 10:05:11 #520 passed:     master Removing duplicate context in S3 path
+2013-08-21 10:04:51 #519 passed:     master Changing the file name of the archive file...
+2013-08-21 09:11:34 #518 passed:     master Merge pull request #196 from rhyolight/publish-artifacts
+2013-08-21 01:46:39 #516 passed:     master Merge pull request #187 from rhyolight/publish-artifacts
+2013-08-20 16:41:10 #505 passed:     master Merge pull request #189 from oxtopus/NPC-323-less_verbose_pip
+2013-08-20 12:16:32 #502 passed:     master Merge pull request #188 from oxtopus/python-version-fixed
+2013-08-20 10:29:55 #499 passed:     master Merge pull request #186 from scottpurdy/python-config
+2013-08-19 18:05:08 #490 passed:     master Merge pull request #184 from scottpurdy/fix-build
+2013-08-19 16:06:13 #487 passed:     master Merge pull request #178 from breznak/netbeans-code-advices
+2013-08-16 15:41:56 #468 passed:     master Merge pull request #182 from oxtopus/python27
+2013-08-15 13:26:34 #449 passed:     master Merge pull request #177 from breznak/gcc-remove-fpermissive
+2013-08-13 19:45:59 #425 passed:     master Merge pull request #170 from oxtopus/NPC-302
+2013-08-13 19:15:53 #423 passed:     master Merge pull request #169 from breznak/small-fixes
+2013-08-13 17:55:00 #421 passed:     master Merge pull request #168 from oxtopus/asteval-0.9.1
+2013-08-13 16:59:11 #419 passed:     master Merge pull request #167 from breznak/apple-gcc-fixups
+2013-08-12 18:43:43 #416 passed:     master Merge pull request #165 from scottpurdy/master
+2013-08-09 17:33:34 #411 passed:     master Merge pull request #163 from scottpurdy/master
+2013-08-09 16:47:04 #409 errored:    master Merge pull request #161 from scottpurdy/master
+2013-08-09 14:10:51 #407 passed:     master Merge pull request #150 from gilsho/master
+2013-08-09 12:59:33 #403 passed:     master Merge pull request #156 from breznak/optimizations
+2013-07-31 16:39:31 #363 passed:     master Merge pull request #149 from oxtopus/updated-licenses
+2013-07-31 16:05:13 #360 passed:     master Merge pull request #147 from breznak/fixen
+2013-07-31 13:42:15 #357 passed:     master Merge pull request #135 from chetan51/better_build
+2013-07-31 12:45:40 #355 passed:     master Merge pull request #151 from oxtopus/run_tests-results
+2013-07-29 13:56:18 #337 passed:     master Merge pull request #148 from oxtopus/modular-python-common
+2013-07-26 17:22:04 #318 passed:     master Merge pull request #144 from oxtopus/pip-install-scripts
+2013-07-25 14:07:03 #310 passed:     master Merge pull request #139 from oxtopus/pytest-2.4.0.dev8
+2013-07-25 11:44:19 #306 passed:     master Merge pull request #138 from oxtopus/cached-externals
+2013-07-24 16:12:35 #297 passed:     master Merge pull request #133 from oxtopus/pytest-cov-core-hotfix
+2013-07-24 12:46:29 #292 passed:     master Merge pull request #131 from oxtopus/pytest-requirements.txt
+2013-07-19 18:11:10 #287 passed:     master Merge pull request #130 from scottpurdy/master
+2013-07-19 16:32:28 #284 passed:     master Merge pull request #129 from scottpurdy/readme
+2013-07-19 15:33:15 #282 passed:     master Merge pull request #128 from scottpurdy/master
+2013-07-11 19:01:01 #280 passed:     master Merge pull request #125 from scottpurdy/examples
+2013-07-08 18:53:24 #277 passed:     master Merge pull request #119 from gilsho/examples
+2013-07-08 16:58:18 #275 passed:     master Merge pull request #120 from lscheinkman/clRegionName_ascii
+2013-07-08 16:27:00 #273 passed:     master Merge pull request #121 from rmarianetti/nup-2031
+2013-07-01 18:17:48 #257 passed:     master Merge pull request #118 from scottpurdy/buildfailure
+2013-06-28 17:16:55 #254 passed:     master Merge pull request #115 from scottpurdy/hotgym
+2013-06-28 11:56:07 #249 passed:     master Merge pull request #111 from scottpurdy/clean
+2013-06-27 17:52:04 #245 passed:     master Merge pull request #108 from breznak/recent-libs
+2013-06-27 17:32:40 #243 passed:     master Merge pull request #85 from breznak/python27-support
+2013-06-27 17:14:57 #241 passed:     master Merge pull request #113 from scottpurdy/master
+2013-06-27 16:16:19 #237 passed:     master Merge pull request #89 from breznak/compilation
+2013-06-26 12:54:42 #231 passed:     master Merge pull request #110 from rmarianetti/spatialClassification
+2013-06-26 12:41:32 #229 passed:     master Merge pull request #109 from scottpurdy/streaming
+2013-06-25 14:41:31 #226 passed:     master Merge pull request #106 from scottpurdy/load_model
+2013-06-25 14:04:55 #223 passed:     master Merge pull request #107 from scottpurdy/cleanbuild
+2013-06-25 12:42:10 #219 passed:     master Merge pull request #104 from scottpurdy/master
+2013-06-24 14:32:45 #209 passed:     master Merge pull request #105 from breznak/travis-run-examples
+2013-06-22 15:22:55 #202 passed:     master Merge pull request #103 from oxtopus/link-to-issues
+2013-06-22 14:37:41 #200 passed:     master Merge pull request #102 from subutai/master
+2013-06-22 05:51:33 #198 passed:     master Merge pull request #101 from subutai/master
+2013-06-22 05:47:04 #197 passed:     master Merge pull request #100 from scottpurdy/master
+2013-06-21 22:55:23 #191 passed:     master Merge pull request #99 from scottpurdy/master
+2013-06-19 17:52:01 #186 passed:     master Merge pull request #91 from oxtopus/redundant_validationerror_exception
+2013-06-18 14:48:15 #180 passed:     master Merge pull request #87 from numenta/updatedSpatialClassification
+2013-06-18 13:26:21 #176 passed:     master Direct change to travis config.
+2013-06-17 18:13:02 #173 passed:     master Merge pull request #84 from scottpurdy/master
+2013-06-17 17:10:56 #169 passed:     master Merge pull request #82 from iandanforth/patch-3
+2013-06-17 16:11:15 #166 passed:     master Merge pull request #76 from iandanforth/patch-2
+2013-06-17 16:08:28 #165 passed:     master Merge pull request #80 from rhyolight/process-testing
+2013-06-17 16:05:48 #163 passed:     master Merge pull request #79 from rhyolight/process-testing
+2013-06-17 15:56:01 #161 passed:     master Merge pull request #78 from rhyolight/travis-settings
+2013-06-07 15:31:06 #85 passed:      master Merge pull request #39 from scottpurdy/master
+2013-06-07 13:42:34 #78 passed:      master Merge pull request #39 from scottpurdy/master
+2013-06-06 23:26:00 #74 passed:      master Merge pull request #38 from scottpurdy/master
+2013-06-06 16:17:51 #68 passed:      master Merge pull request #35 from dbrody/updated-README-OPF-link
+2013-06-06 14:34:23 #66 passed:      master Merge pull request #31 from oxtopus/grokengine_configuration
+2013-06-06 12:03:32 #60 passed:      master Merge pull request #28 from rhyolight/add-a-link-ta-home
+2013-06-06 11:27:28 #56 passed:      master Merge pull request #29 from ravaa/upstream-master
+2013-06-05 19:40:29 #51 passed:      master Merge pull request #25 from numenta/travis-setup

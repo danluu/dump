@@ -1,0 +1,91 @@
+not yet #20468 failed:   master Merge pull request #17183 from prathamesh-sonpatki/fix-typo-in-am-guide
+2014-10-03 19:22:08 #20456 passed:   master :heart: 1.9
+2014-10-03 17:57:18 #20454 failed:   master Merge pull request #14146 from chewi/fix-underscore-acronyms-regex
+2014-10-03 17:41:07 #20453 passed:   master Merge pull request #17150 from effektz/tr-instead-of-gsub
+2014-10-03 14:48:19 #20450 canceled: master Fix typo
+2014-10-03 12:36:19 #20448 passed:   master Merge pull request #17167 from kuldeepaggarwal/doc-define_model_callbacks
+2014-10-03 09:55:12 #20446 passed:   master Merge pull request #17160 from lsylvester/duration-hash
+2014-10-02 16:05:50 #20429 passed:   master Merge pull request #17148 from mgenereu/patch-1
+2014-10-02 12:15:57 #20427 failed:   master Merge pull request #17068 from mokhan/update-active-job-documentation
+2014-10-01 20:58:30 #20416 passed:   master Merge pull request #17088 from robin850/jruby-dev
+2014-10-01 05:54:55 #20408 passed:   master Merge pull request #17125 from acrogenesis/master
+2014-10-01 01:50:31 #20405 passed:   master In render file, by default the current layout is rendered always
+2014-09-30 13:37:17 #20403 passed:   master Merge pull request #17113 from igor04/helpers-highlight
+2014-09-30 13:10:46 #20402 passed:   master Merge pull request #17114 from pabloh/replace_use_of_eval_with_lambda
+2014-09-30 11:47:08 #20399 passed:   master Generate the application pointing to rails-dom-testing master
+2014-09-30 10:08:10 #20398 failed:   master Merge pull request #17118 from zhangsu/patch-1
+2014-09-30 04:20:38 #20388 passed:   master Merge pull request #17110 from claudiob/remove-running-tests
+2014-09-30 03:23:35 #20387 errored:  master Responder was removed at ee77770d57de9da87b05a2fe84b9d46ec6852c62
+not yet #20384 failed:   master Merge pull request #17107 from kaspth/parse-html-as-fragments
+2014-09-29 14:36:25 #20383 passed:   master Merge pull request #17093 from phiggins/remove-dynamic-send-on-built-in-callbacks
+2014-09-29 12:58:26 #20380 errored:  master Merge pull request #17099 from sferik/each_key
+2014-09-29 11:40:05 #20377 passed:   master Merge pull request #17086 from seuros/master
+2014-09-29 08:51:02 #20368 passed:   master Merge pull request #17092 from Empact/defunct-ivars
+2014-09-28 11:36:52 #20353 errored:  master technical correction in guides under 'Generating an engine'
+2014-09-28 01:27:22 #20347 passed:   master Merge branch 'master' of github.com:rails/docrails
+2014-09-27 22:04:29 #20344 passed:   master Merge pull request #17077 from schneems/schneems/backtrace-string-allocations
+2014-09-27 07:32:39 #20339 passed:   master Make AJ integration tests much less verbose
+2014-09-27 06:46:24 #20338 passed:   master Merge pull request #17082 from prathamesh-sonpatki/fix-typo-in-upgrading-guide
+2014-09-27 06:29:20 #20337 failed:   master Merge pull request #17081 from prathamesh-sonpatki/fix-aj-typos
+2014-09-27 06:28:42 #20335 passed:   master Fix typo in AR changelog
+2014-09-27 02:03:26 #20331 passed:   master some object allocation reduction for new AR objects
+2014-09-26 15:52:18 #20318 passed:   master Preparing for 4.2.0.beta2 release
+2014-09-26 15:28:07 #20317 passed:   master Merge pull request #17071 from claudiob/don-t-require-action-dispatch-twice
+2014-09-26 14:58:09 #20315 failed:   master Merge pull request #17070 from felipecvo/master
+2014-09-25 18:03:16 #20298 passed:   master Revert "Merge pull request #16966 from why-el/symbolize-path-params"
+2014-09-25 17:26:47 #20297 passed:   master Merge pull request #17061 from bronzle/remove_extra_#
+2014-09-25 17:09:51 #20295 passed:   master Merge pull request #16966 from why-el/symbolize-path-params
+2014-09-25 16:27:28 #20294 passed:   master Keep the original implementation to not having to allocate new objects
+2014-09-25 15:39:11 #20292 passed:   master No need to install the deprecated_sanitizer gem
+2014-09-25 15:14:56 #20291 passed:   master rails-html-sanitizer is now the default
+2014-09-25 14:46:28 #20290 passed:   master Remove unused code
+2014-09-25 14:27:41 #20289 failed:   master :nail_care: the CSS
+2014-09-25 14:10:54 #20288 failed:   master Merge pull request #17024 from buddhamagnet/amend-welcome-page
+2014-09-25 12:17:33 #20287 passed:   master Fix string/gid collision in job arguments
+2014-09-25 12:17:20 #20286 canceled: master Fix actionpack test cases broken by #16888
+not yet #20285 canceled: master Use released rails-html-sanitizer and rails-deprecated_sanitizer
+2014-09-25 11:47:49 #20281 canceled: master Use release web-console
+2014-09-25 11:50:48 #20280 canceled: master Use released rails-dom-testing
+2014-09-24 15:53:15 #20269 passed:   master Merge pull request #17051 from jwworth/task/fix_typo
+2014-09-24 13:22:50 #20265 passed:   master Merge pull request #17042 from DanOlson/remove-skip-action-view
+2014-09-23 09:57:49 #20230 errored:  master Merge pull request #17020 from Sirupsen/ar-override-rack-test
+2014-09-23 08:51:26 #20228 passed:   master Merge pull request #17029 from grk/fix-loading-fixtures-in-engine-tests
+2014-09-23 06:22:40 #20225 passed:   master Merge pull request #17026 from prathamesh-sonpatki/mention-updating-pull-requests
+2014-09-23 04:17:18 #20218 passed:   master Merge pull request #17005 from y-yagi/fix_aj_test_helper
+2014-09-23 03:38:43 #20216 passed:   master Merge pull request #17022 from prathamesh-sonpatki/test-for-validate-message
+2014-09-22 19:30:14 #20207 passed:   master Merge pull request #17018 from prathamesh-sonpatki/tenderlove
+2014-09-22 18:12:12 #20204 passed:   master add a truncate method to the connection
+2014-09-22 17:16:40 #20201 errored:  master Merge pull request #17012 from petedmarsh/clarify-association-primary-key-option-documentation
+2014-09-22 16:20:33 #20198 errored:  master Merge pull request #16963 from collectiveidea/activejob-dj
+2014-09-22 15:56:59 #20197 errored:  master Merge pull request #17009 from arthurnn/foreign_key_symbols
+2014-09-22 15:47:51 #20195 errored:  master Revert "Merge pull request #16888 from jejacks0n/render_template"
+2014-09-22 14:53:07 #20194 failed:   master Move the array to a constant
+2014-09-22 14:01:44 #20192 failed:   master Merge pull request #16985 from matthewd/no-isolated-for-prs
+2014-09-22 13:15:10 #20191 failed:   master CHANGELOG for 07635a7
+2014-09-22 10:20:17 #20184 failed:   master Added RDoc for each Active Job adapter
+2014-09-22 11:04:39 #20180 passed:   master Merge pull request #16974 from silp-com/mail_was_called
+2014-09-22 02:27:47 #20174 passed:   master Merge pull request #17000 from yuki24/fix-false-assertions
+2014-09-21 17:00:29 #20169 passed:   master Merge pull request #16998 from yuki24/fix-false-assertion
+2014-09-21 11:14:41 #20161 passed:   master Merge pull request #16984 from chancancode/fix_16578
+2014-09-20 04:08:31 #20143 passed:   master No need to call to_sym here
+2014-09-20 02:59:23 #20142 passed:   master Quick fix to address the borken build caused by #15791
+2014-09-20 01:17:19 #20141 failed:   master Merge pull request #15791 from zev/add_model_to_recordnotfound_message
+2014-09-19 09:25:34 #20132 errored:  master Merge pull request #16973 from prathamesh-sonpatki/fixtures-features
+2014-09-19 07:13:31 #20131 passed:   master Merge pull request #16964 from Agis-/issue-16956
+2014-09-18 16:44:05 #20117 passed:   master Merge pull request #16936 from untidy-hair/plugin_test_db_migrate_path
+2014-09-18 16:15:08 #20116 passed:   master inject Rack::Lock if config.eager_load is false
+2014-09-18 13:31:14 #20112 passed:   master Merge pull request #16954 from geoffharcourt/inject-over-sum
+2014-09-18 00:49:33 #20105 errored:  master Use has_attribute?
+2014-09-17 15:11:32 #20104 errored:  master Merge pull request #16943 from sgrif/sg-fix-tz-converter-serialization
+2014-09-17 14:48:15 #20103 passed:   master Merge pull request #11794 from yoazt/duration-eql
+2014-09-17 14:15:06 #20102 passed:   master Merge pull request #16929 from kongregate/fix-activerecord-deprecated_finders-find-symbol
+2014-09-17 13:23:47 #20100 passed:   master OMG mysql!
+2014-09-17 13:03:32 #20099 failed:   master ruby-head should be green
+2014-09-17 04:47:59 #20096 passed:   master do not dump foreign keys for ignored tables.
+2014-09-17 04:26:26 #20095 passed:   master pg, correctly dump foreign keys targeting tables in a different schema.
+2014-09-16 14:29:04 #20087 passed:   master Merge pull request #16844 from zerothabhishek/master
+2014-09-16 14:11:34 #20086 passed:   master Merge pull request #16841 from tjouan/environment-config-consistency
+2014-09-16 08:53:03 #20082 failed:   master Merge pull request #16914 from untidy-hair/fix_plugin_dummy_path_error
+2014-09-15 07:16:50 #20073 passed:   master As of Unicode 6.3, Mongolian Vowel Separator is not whitespace
+2014-09-15 00:23:21 #20069 failed:   master Merge pull request #16574 from lsylvester/duration-respond_to
+2014-09-14 20:11:38 #20064 passed:   master Merge pull request #16922 from y-yagi/add_test_jobs_task

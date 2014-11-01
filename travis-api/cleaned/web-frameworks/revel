@@ -1,0 +1,256 @@
+2014-09-11 18:50:51 #1029 passed:    master Merge pull request #722 from revel/revert-719-master
+2014-09-11 17:26:52 #1026 failed:    master Merge pull request #719 from JaTochNietDan/master
+2014-08-10 18:58:29 #998 passed:     master Fixes typo and more acknowledgements
+2014-03-01 19:47:33 #824 passed:     master Release v0.9.1
+2014-03-01 19:45:03 #822 passed:     master Merge pull request #544 from revel/patch
+2014-02-25 22:32:47 #791 passed:     master Update upgrade notes in README.md
+2014-02-25 21:55:23 #790 failed:     master Fix travis reference to command line tools
+2014-02-25 21:52:43 #789 errored:    master Move revel command into its own repository
+2014-02-25 21:22:26 #787 passed:     master Remove CHANGELOG and replace with GH releases
+2014-02-25 21:01:16 #785 passed:     master Update more things to reference @revel organization
+2014-02-25 20:56:29 #784 passed:     master Update import paths to use @revel organization
+2014-02-25 12:01:43 #783 passed:     master Update README.md
+2014-02-25 12:01:49 #782 passed:     master Update CHANGELOG.md
+2014-02-25 11:59:56 #781 passed:     master Merge pull request #522 from iassic/bugfix/newCmd
+2014-02-25 01:25:42 #774 passed:     master HOTFIX: booking sample app error
+2014-02-25 00:56:31 #771 failed:     master v0.9 changelog and readme
+2014-01-05 21:42:05 #668 passed:     master Merge branch 'develop'
+2013-12-20 01:16:27 #639 passed:     master Upgrade to Go 1.2.  Sleep for 30 seconds between tests.
+2013-12-10 14:55:13 #624 failed:     master Merge pull request #350 from CasualSuperman/feature-compression
+2013-12-10 10:06:30 #623 failed:     master Merge pull request #406 from senseobservationsystems/add-testing-http-delete
+2013-12-10 00:39:31 #621 errored:    master Merge pull request #399 from arturolinares/patch-1
+2013-12-10 00:33:57 #620 errored:    master Merge pull request #388 from slogsdon/feature/prevent_access_jobs
+2013-12-07 16:36:31 #616 passed:     master Update jobrunner for change to cron library
+2013-12-07 11:39:55 #613 passed:     master Merge pull request #378 from damselem/fix-charset-encoding
+2013-12-05 20:10:24 #612 passed:     master Merge pull request #395 from nkatsaros/master
+2013-12-04 22:53:27 #608 failed:     master Merge pull request #381 from opennota/content_type
+2013-12-01 21:03:22 #604 passed:     master Merge pull request #383 from mceldeen/master
+2013-11-25 15:14:03 #593 passed:     master Fix for ValidationResult.Message args
+2013-11-25 11:58:15 #591 passed:     master Merge pull request #380 from opennota/error_check
+2013-11-20 10:15:31 #583 passed:     master Merge pull request #374 from immon/i191
+2013-11-20 09:09:08 #582 passed:     master Merge pull request #370 from brendensoares/master
+2013-11-10 16:07:19 #573 passed:     master Merge pull request #355 from romanoff/master
+2013-11-02 12:10:01 #564 passed:     master rand.seed
+2013-10-25 14:08:24 #561 passed:     master Merge pull request #359 from ygabo/master
+2013-10-12 16:14:27 #550 passed:     master Merge pull request #324 from hura/patch-6
+2013-10-11 14:14:20 #549 passed:     master Merge pull request #347 from rsenk330/debug-js-fixes
+2013-10-10 16:46:16 #546 passed:     master Merge pull request #344 from dougnukem/documentation-fix
+2013-10-02 20:28:24 #535 passed:     master Merge pull request #328 from hura/master
+2013-10-02 20:26:15 #534 passed:     master Merge pull request #327 from ottob/master
+2013-10-01 09:45:59 #533 passed:     master Sleep between tests to give more time to release port.
+2013-10-01 09:10:03 #532 failed:     master Fix Websockets for IE
+2013-09-15 20:28:03 #513 passed:     master Merge pull request #288 from marconi/master
+2013-09-10 20:47:57 #499 passed:     master Merge pull request #297 from dajohi/master
+2013-09-05 11:58:01 #491 passed:     master Merge pull request #295 from dajohi/master
+2013-08-24 19:28:25 #479 passed:     master errorClass: Further protect against nil errorMap.  Fixes #285
+2013-08-13 22:08:41 #467 passed:     master Merge pull request #267 from pa001024/master
+2013-08-13 13:56:33 #466 errored:    master Fix: avoid adding duplicate controller types
+2013-08-10 16:16:55 #461 passed:     master Merge pull request #263 from andrewmunsell/master
+2013-08-09 12:24:04 #458 passed:     master Merge pull request #266 from jlujan/master
+2013-08-05 21:34:52 #451 passed:     master Remove unnecessary logging from memcached error conversion
+2013-08-05 09:33:10 #449 passed:     master Merge pull request #259 from plroman/master
+2013-08-04 19:57:34 #444 passed:     master RenderTemplateResult: Handle HEAD requests
+2013-08-04 19:08:01 #443 passed:     master Update Jekyll version used for documentation gen
+2013-08-04 16:45:10 #442 passed:     master Revise the SSL support implementation details
+2013-08-03 12:23:33 #441 passed:     master Merge pull request #253 from jcvernaleo/jcv_memfile
+2013-08-03 11:51:00 #440 passed:     master Use hmac.Equal instead of string equals
+2013-08-02 08:27:20 #439 passed:     master Merge pull request #255 from serialx/tests-assertf-fix
+2013-07-31 08:41:48 #432 passed:     master Merge pull request #251 from pa001024/patch-1
+2013-07-29 07:42:30 #430 passed:     master Merge pull request #246 from karls/master
+2013-07-28 22:19:27 #429 passed:     master binder: support for maps
+2013-07-25 08:37:16 #424 passed:     master Merge pull request #242 from classmarkets/stateful-tests
+2013-07-25 08:16:25 #423 passed:     master Merge pull request #227 from op/simple-validation
+2013-07-24 20:59:48 #420 passed:     master Merge pull request #222 from jgraham909/debug
+2013-07-21 23:08:58 #415 passed:     master Fix: allow build to proceed if directory is empty
+2013-07-21 16:17:55 #414 failed:     master build/package: Only clobber the path if it has run.sh inside
+2013-07-18 09:10:52 #412 passed:     master Merge pull request #230 from plroman/master
+2013-07-15 21:52:56 #407 passed:     master Merge pull request #220 from purohit/master
+2013-07-12 08:29:52 #403 passed:     master Merge pull request #218 from captaincool/master
+2013-07-12 08:20:30 #402 passed:     master Merge pull request #213 from tgkokk/revel-help-exit-code
+2013-07-10 20:01:05 #399 passed:     master Merge pull request #214 from alexzorin/revel-package-path-win-206
+2013-07-10 19:56:56 #398 passed:     master Run all tests synchronously
+2013-07-03 16:58:35 #393 passed:     master Fix testsuite handling of session
+2013-07-02 08:30:53 #392 errored:    master Merge pull request #202 from landr0id/fix-content-disposition-filename
+2013-06-30 14:45:04 #390 passed:     master Merge pull request #201 from mem/master
+2013-06-30 11:37:17 #388 passed:     master Merge pull request #199 from ShaneWilton/master
+2013-06-26 10:46:39 #383 passed:     master Merge pull request #194 from plroman/master
+2013-06-24 23:48:56 #381 failed:     master Merge pull request #193 from pix64/slug-branch
+2013-06-23 19:27:31 #379 passed:     master Update CONTRIBUTING.md
+2013-06-23 18:45:58 #378 passed:     master Chunked encoding should not be default
+2013-06-23 16:15:35 #377 passed:     master Merge pull request #111 from seanmac02/master
+2013-06-23 14:34:54 #373 failed:     master Merge pull request #187 from pix64/slug-branch
+2013-06-23 13:17:26 #371 passed:     master Prettify the initial skeleton page.
+2013-06-19 12:49:38 #369 passed:     master Update CONTRIBUTING.md
+2013-06-19 12:46:02 #368 passed:     master Update CONTRIBUTING.md
+2013-06-17 21:40:58 #364 passed:     master Fix: "revel package" includes modules in the package too
+2013-06-15 14:08:56 #360 passed:     master Improved testing
+2013-06-14 15:28:19 #355 passed:     master Merge pull request #178 from pix64/slice-validators
+2013-06-14 15:19:03 #354 passed:     master Improve instructions for forking
+2013-06-14 07:39:10 #352 passed:     master Add SetAction benchmark
+2013-06-13 14:43:32 #348 passed:     master Merge pull request #177 from gmiller2007/patch-1
+2013-06-12 21:23:57 #346 passed:     master travis: Test against Go 1.1
+2013-06-12 20:54:22 #345 passed:     master revel test: Write logs to console as well, and stop if the app died
+2013-06-12 20:28:32 #344 passed:     master Merge pull request #176 from pix64/reverse-fix
+2013-06-12 09:17:43 #341 passed:     master Merge pull request #174 from pix64/master
+2013-06-10 14:49:43 #332 passed:     master Add link to github-pages Jekyll manual
+2013-06-10 14:46:00 #331 failed:     master Update directions for developing the site.
+2013-06-09 17:14:15 #329 passed:     master Update README.md
+2013-06-09 17:05:58 #328 passed:     master Merge branch 'tree-router'
+2013-06-09 16:59:27 #327 failed:     master Merge pull request #171 from plamb/master
+2013-06-06 09:02:43 #310 passed:     master Add large-router benchmark
+2013-06-05 19:56:27 #307 passed:     master Increase delay when polling for tests
+2013-06-05 19:25:13 #306 failed:     master Filters: Use funcs instead of vars.
+2013-06-05 18:06:46 #305 passed:     master Retry test request a few times in case the server is still starting up
+2013-06-05 17:58:30 #304 passed:     master Fix params.Bind and add a test
+2013-06-04 21:47:13 #303 passed:     master Add plaintext benchmark
+2013-06-04 21:38:50 #302 failed:     master Add plaintext benchmark
+2013-06-04 17:11:35 #301 passed:     master Merge pull request #164 from darkhelmet/rename-command-directory
+2013-06-02 20:24:11 #296 passed:     master Merge pull request #163 from purohit/master
+2013-06-02 16:36:41 #293 passed:     master Merge pull request #151 from robfig/filters
+2013-06-02 15:01:48 #290 passed:     master Merge pull request #159 from vascop/patch-1
+2013-05-19 10:52:50 #247 errored:    master Move fake app into a separate test file.
+2013-05-19 10:30:07 #243 errored:    master Add JSON benchmark to server_test
+2013-05-18 12:35:06 #238 errored:    master Add a test that the server_test benchmark works.
+2013-05-15 11:18:31 #234 passed:     master Fix build breakage
+2013-05-15 11:09:05 #233 failed:     master Merge pull request #129 from nolman/default-tests-to-test-env
+2013-05-15 06:47:28 #231 passed:     master Validation keys now recognize unary expressions (!myBool)
+2013-05-10 16:37:23 #226 passed:     master Merge pull request #143 from erikstmartin/assertions
+2013-05-07 08:56:29 #223 passed:     master harness/reflect: Record TypeExprs that we don't recognize as not Valid
+2013-05-05 22:06:56 #222 passed:     master Update the auto-go-getter for Go1.1
+2013-05-05 11:30:04 #220 passed:     master Update .travis.yml
+2013-05-05 11:18:12 #219 failed:     master Update .travis.yml
+2013-05-04 15:43:36 #218 failed:     master Update .travis.yml
+2013-05-04 10:29:54 #217 errored:    master Update .travis.yml
+2013-05-03 16:48:32 #216 errored:    master Merge pull request #128 from nolman/websocket-test-method
+2013-05-03 15:35:02 #215 errored:    master Update template reverse router to use Unbind
+2013-04-26 20:26:24 #214 passed:     master Merge pull request #138 from purohit/patch-support
+2013-04-14 21:37:22 #211 passed:     master Don't print an error if the app doesn't have messages.
+2013-04-08 07:51:23 #208 passed:     master Merge pull request #127 from UpstandingHackers/pull-req-session-injection
+2013-04-07 21:03:47 #206 passed:     master If no secret key is set, disable signing
+2013-04-02 15:48:45 #204 passed:     master Merge pull request #124 from nolman/AssertDeepEquals
+2013-04-01 07:43:41 #200 passed:     master Invoke interceptors on multi-embedded Controllers
+2013-03-31 22:12:19 #199 passed:     master Permit multi-embedding of *Controller
+2013-03-28 12:26:47 #198 passed:     master Merge pull request #118 from nolman/assertequals
+2013-03-24 21:55:25 #195 passed:     master Add .DevMode - a boolean to indicate if RunMode is a development mode.
+2013-03-24 14:15:57 #194 passed:     master Link to the contributor-ready issues
+2013-03-24 14:14:34 #193 passed:     master Update CONTRIBUTING
+2013-03-23 13:20:54 #192 passed:     master Merge pull request #115 from Shaban/checkboxhelper
+2013-03-23 10:10:32 #190 passed:     master Minor tweaks to comment and test
+2013-03-17 22:27:18 #182 passed:     master Fix func comparison to use .Pointer() (to work on Go tip)
+2013-03-17 16:47:52 #181 passed:     master Use "localhost" for wildcard
+2013-03-14 10:23:52 #179 passed:     master Move module.static into the global config area
+2013-03-12 19:45:32 #178 passed:     master ErrorResult: Protect against nil RenderArgs
+2013-03-12 19:42:21 #177 passed:     master Make BinaryResult accept io.Readers instead of io.ReadSeeker
+2013-03-08 08:00:55 #176 passed:     master Implement GetMulti by extracting a Getter interface from Cache
+2013-03-08 07:04:04 #175 passed:     master Merge pull request #96 from nolman/fix-jquery-tests
+2013-03-04 22:35:11 #173 passed:     master Follow struct embedding chains across packages
+2013-03-03 20:47:06 #172 passed:     master Merge pull request #93 from kyleconroy/jquery
+2013-03-03 10:04:15 #171 passed:     master Merge pull request #94 from objclxt/master
+2013-03-01 19:07:18 #168 passed:     master Revert watcher to use howeyc/fsnotify
+2013-02-25 22:52:06 #167 passed:     master Fix the build
+2013-02-25 22:37:40 #166 errored:    master Merge pull request #89 from jgraham909/static-routing
+2013-02-20 21:31:48 #151 passed:     master Move test fixtures up the suggested projects list (in priority)
+2013-02-20 21:13:43 #150 passed:     master Update the example test to use pointer receivers.
+2013-02-20 21:06:48 #149 passed:     master Update contributor projects
+2013-02-19 08:41:33 #147 passed:     master proper-case the reverse routes in booking header.
+2013-02-18 22:29:37 #146 passed:     master Make the router benchmark reflect a single average routing
+2013-02-17 20:39:37 #145 passed:     master Benchmark for the Revel request flow overhead
+2013-02-17 19:27:37 #144 passed:     master A job-runner for scheduled and recurring jobs
+2013-02-16 22:38:29 #143 passed:     master Print compilation errors to ERROR instead of TRACE
+2013-02-14 20:44:55 #141 passed:     master Harness template loader only loads the builtin error templates
+2013-02-11 21:23:02 #140 passed:     master Retry commit: "Clean up pluralize function, add some docs"
+2013-02-11 21:15:59 #139 failed:     master Look for a template of the requested format
+2013-02-11 21:13:37 #138 errored:    master Add the "raw" template helper
+2013-02-09 20:24:18 #137 passed:     master Revert the string of attempted windows fixes to get back into a known good state for Linux/OSX.
+2013-02-09 15:09:30 #136 passed:     master Dont confuse module path with windows drive spec
+2013-02-09 15:01:59 #135 passed:     master Replace path.IsAbs with filepath.IsAbs
+2013-02-09 14:58:44 #134 passed:     master Fix 2: make router test OS neutral
+2013-02-09 14:41:46 #133 passed:     master Fix test to not depend on / separator
+2013-02-09 14:35:38 #132 passed:     master Fix: Use filepath.Join instead of path.Join
+2013-02-08 17:06:17 #131 passed:     master Fix harness test
+2013-02-08 15:48:03 #130 failed:     master Merge pull request #71 from rverton/template_helper
+2013-02-04 09:18:22 #128 passed:     master Chat demo: autofocus to message box
+2013-02-03 22:03:04 #126 passed:     master Binder: Add parsing of uint and float values
+2013-02-02 17:08:20 #125 passed:     master Booking fix: Don't panic if the hotel is not found
+2013-02-01 15:39:19 #124 passed:     master Update to point to new goconfig repo
+2013-01-31 21:33:35 #123 passed:     master "revel package" uses tar.gz instead of .zip
+2013-01-31 10:09:21 #121 errored:    master Initial guy for CONTRIBUTING guide
+2013-01-29 08:46:30 #120 passed:     master Merge pull request #70 from rverton/template_helper
+2013-01-28 21:50:34 #118 passed:     master rev -> revel.  Fixes #54
+2013-01-28 08:43:38 #117 passed:     master Fix test to use new findSrcPaths
+2013-01-27 17:12:42 #116 errored:    master Allow Revel and the App to inhabit different GOPATHs
+2013-01-27 12:15:31 #115 passed:     master "revel build" - create a command to build an app without packaging it
+2013-01-26 22:38:06 #114 passed:     master If a template fails to execute, print the error to ERROR
+2013-01-26 10:24:02 #113 passed:     master Fix: Last minute variable change fail.
+2013-01-26 10:15:01 #112 failed:     master Bugfix: Change field.Value to field.Flash in booking app
+2013-01-25 18:17:19 #111 passed:     master Don't make i18n.cookie required -- default it to (prefix)_LANG like the other plugins do.
+2013-01-23 08:29:23 #110 failed:     master package run: Remove bashisms and support paths with spaces
+2013-01-21 14:27:02 #109 passed:     master Merge pull request #65 from tmbrggmn/http
+2013-01-21 13:51:40 #107 passed:     master Merge pull request #64 from tmbrggmn/i18n
+2013-01-20 10:01:42 #105 passed:     master Merge pull request #61 from tmbrggmn/i18n
+2013-01-14 20:18:29 #101 passed:     master Make NotFound behave like Printf
+2013-01-13 12:17:34 #100 passed:     master Revert "Simplify table-driven test."
+2013-01-13 12:05:00 #99 failed:      master Revert SliceOf usage, since that is not actually in go1 and the usage is not essential
+2013-01-13 11:33:36 #98 failed:      master Handle variadic arguments to actions
+2013-01-08 06:30:13 #97 passed:      master Support absolute filenames as a staticDir
+2012-12-18 10:56:53 #96 passed:      master Kill the app on receiving an interrupt or kill signal
+2012-12-11 20:05:05 #95 passed:      master Add two more validation examples the example app.
+2012-12-02 15:47:22 #94 passed:      master Merge pull request #52 from traviscline/master
+2012-12-01 22:24:44 #92 passed:      master Merge pull request #51 from traviscline/master
+2012-11-20 21:41:33 #90 passed:      master Import any package in app code that contains an init function
+2012-11-18 20:36:20 #89 passed:      master Merge pull request #47 from traviscline/master
+2012-11-18 20:35:54 #88 passed:      master Revert "Fix: Don't override the port if no override is specified!"
+2012-11-18 20:24:55 #87 passed:      master Fix: Don't override the port if no override is specified!
+2012-11-18 19:20:13 #86 passed:      master Fix specifying port on command line.
+2012-11-17 20:07:31 #81 passed:      master Don't rely on builtins being exported
+2012-11-17 19:36:03 #80 passed:      master Break the watcher config into 3 parts
+2012-11-16 08:07:48 #79 passed:      master Merge pull request #45 from nikoudel/harnessPortConfiguration
+2012-11-12 00:05:45 #74 passed:      master Remove unnecessarily chatty log message
+2012-11-10 09:45:53 #73 passed:      master Add a starter test suite to the skeleton app. .gitignore test results
+2012-11-04 18:15:12 #72 passed:      master Merge pull request #37 from robfig/twitter-oauth
+2012-11-04 17:33:13 #69 passed:      master Fix up the pull request to work with newer config object.
+2012-11-04 17:21:43 #68 passed:      master Merge pull request #23 from jamesward/master
+2012-11-04 17:05:27 #67 passed:      master Merge pull request #36 from robfig/testing
+2012-10-25 12:50:43 #59 passed:      master Merge pull request #32 from Meyermagic/patch-2
+2012-10-24 21:21:42 #57 passed:      master Update set & append so that value can come from a pipeline
+2012-10-23 21:20:40 #56 passed:      master Add bootstrap to skeleton project
+2012-10-21 16:17:08 #55 passed:      master Add Validation.Error() and Validation.Length
+2012-10-19 20:53:40 #54 passed:      master Make "revel package" put sources into a src directory within the archive.
+2012-10-18 09:36:58 #53 passed:      master Merge pull request #29 from gothy/oex_mimetype
+2012-10-14 21:25:01 #52 passed:      master Funcs -> TemplateFuncs (maintaining old name)
+2012-10-13 22:05:13 #51 passed:      master If the build fails due to an import error of "cannot find package", "go get" it and try again.
+2012-10-12 22:13:39 #50 passed:      master Build a map of default validation keys when building the app.
+2012-10-10 09:19:02 #49 passed:      master Chat app fix for Ubuntu
+2012-10-09 08:58:27 #47 passed:      master Use robfig/fsnotify, with the fix to directory watching on OSX
+2012-10-07 20:31:31 #44 passed:      master Improve the default favicon a bit.
+2012-10-05 18:07:14 #43 passed:      master Allow tabs anywhere there are spaces in route lines
+2012-09-30 21:24:21 #42 passed:      master Update bookings SaveSettings page to bcrypt
+2012-09-23 21:01:18 #40 passed:      master Booking app: Use bcrypt to safeguard users' passwords!
+2012-09-23 15:34:46 #39 passed:      master Switch to my goconfig to improve matters a little.
+2012-09-21 19:15:59 #36 passed:      master Fix a deadlock in the chat example
+2012-09-19 14:10:39 #35 passed:      master Required() is now satisfied by any non-zero integer
+2012-09-16 15:26:05 #34 passed:      master Merge pull request #16 from jstemmer/ignore-hidden-template-files
+2012-09-16 09:24:25 #33 passed:      master Merge pull request #17 from jstemmer/fix-error-exists
+2012-09-16 09:24:00 #32 passed:      master Merge pull request #14 from mattn/windows
+2012-09-14 10:11:35 #30 passed:      master Bug fix: In Prod mode, call Refresh() on router/templateloader to initialize them.
+2012-09-12 01:41:14 #25 passed:      master Merge pull request #12 from jstemmer/cmd-check-args
+2012-09-11 13:35:55 #22 passed:      master Merge pull request #11 from jstemmer/update-travis-config
+2012-09-10 21:12:14 #20 passed:      master Fix template errors.
+2012-09-10 10:09:12 #19 failed:      master Add LICENSE
+not yet #18 passed:      master Re-organize the rev command line tool.  Add the "new" command.
+2012-08-28 20:32:58 #17 passed:      master Add support for explicit 404s
+2012-08-12 15:55:18 #16 passed:      master Watch/reload routes file for changes, and validate it
+2012-08-01 21:50:46 #15 passed:      master Factor out Harness
+2012-07-04 17:50:55 #14 passed:      master Add a method to render a template by name
+2012-07-04 14:59:01 #13 passed:      master Add 404 errors, multi-format error pages
+2012-07-03 08:11:58 #12 passed:      master Make route matching case insensitive.  (So URL dont have to be capitalized just to match exported methods
+2012-06-30 22:55:08 #11 passed:      master BinaryResult - return files inline or as attachments
+2012-06-02 05:11:16 #10 passed:      master Allow binding unordered file arrays
+2012-05-27 09:19:21 #9 passed:       master Add "append" template func to support moreScripts, moreStyles
+2012-05-19 01:35:26 #8 passed:       master Make ResponseWriter public
+2012-05-10 08:51:52 #7 passed:       master WebSocket support -- action accepts a *websocket.Conn and is invoked as usual
+2012-05-08 20:43:00 #6 passed:       master Escape stuff.  Change tmpl to template.go
+2012-05-07 22:25:49 #5 passed:       master Make template Funcs publicly accessible.  Fix a comment
+2012-05-05 22:06:00 #4 passed:       master Improve the binder interface
+2012-04-30 20:36:22 #3 passed:       master Add some more router tests.
+2012-04-27 22:18:13 #2 passed:       master Update .travis.yml
