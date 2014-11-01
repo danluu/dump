@@ -1,9 +1,9 @@
 using Dates
 
-# Example usage: julia parse.jl cleaned/devops
-# Produces name,pass_rate,fail_rate,error_rate
+# Example usage: julia parse.jl cleaned/devops devops
+# Produces category,name,pass_rate,fail_rate,error_rate
 
-function process_travis_log(fname::String)
+function process_travis_log(fname::String, category::String, project::String)
     lines = readlines(open(fname))
     time_in_status = Dict()
 
@@ -38,16 +38,16 @@ function process_travis_log(fname::String)
     pass_rate = time_in_status["passed:"] / total_time
     fail_rate = time_in_status["failed:"] / total_time
     error_rate = time_in_status["errored:"] / total_time
-    println("$fname,$pass_rate,$fail_rate,$error_rate")
+    println("$category,$project,$pass_rate,$fail_rate,$error_rate")
 end
 
 # Run on one directory. Not recurisve.
-function process_logs(dir::String)
+function process_logs(dir::String, category::String)
     for f in readdir(dir)
         if !ismatch(r"Gemfile.*",f)
-            process_travis_log(string(dir,"/",f))    
+            process_travis_log(string(dir,"/",f), category, f)
         end
     end
 end
 
-process_logs(ARGS[1])
+process_logs(ARGS[1], ARGS[2])
