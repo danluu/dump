@@ -136,9 +136,6 @@ function top_words_for_author(all_words::Dict{String,Int}, their_words::Dict{Str
     for (word, count) in word_arr
         print(",$word")
         i += 1
-        if i > 20
-            break
-        end
     end
     println("")
 end
