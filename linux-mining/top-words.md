@@ -1,5 +1,5 @@
 | User | 1 | 2 | 3 | 4 | 5 | 6  | 7 | 8 | 9 | 10 |
-| User | --- | --- | --- | --- | --- | ---  | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | ---  | --- | --- | --- | --- |
 | viro | [patch] | switch | annotations |  | - | of | um: | endianness | we | get |
 | tiwai | alsa: | hda | - | [alsa] | codec | codecs | hda-codec | modules: | fix | with |
 | broonie | asoc: | mfd: | regulator: | convert | for | codec | dapm | we | driver | register |
