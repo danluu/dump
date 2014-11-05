@@ -47,6 +47,9 @@ function strip_punct(word::String)
     word = replace(word, r"`","")
     word = replace(word, r"!","")
     word = replace(word, r";","")
+    word = replace(word, r":","")
+    word = replace(word, r"\[","")
+    word = replace(word, r"\]","")
     word = replace(word, r"^1$","")
 end
 
@@ -134,11 +137,6 @@ function top_words_for_author(all_words::Dict{String,Int}, their_words::Dict{Str
     print("$author")
     sort!(word_arr,by= x -> -x[2])
 
-#    if ismatch(r"mingo",author)
-        # println("-----------------DEBUG SORTED ARRAY")
-        # print(word_arr)
-        # println("-----------------DEBUG END ARRAY")
- #   end
     i = 0
     for (word, count) in word_arr
         print(",$word")
