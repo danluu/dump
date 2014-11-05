@@ -120,10 +120,11 @@ function top_words_for_author(all_words::Dict{String,Int}, their_words::Dict{Str
         try 
             # "1+" is to avoid degenerate case that should never happen anyway.
             ratio = (1+num_words) / all_words[word]
-            idf = ratio > .1 ? 0 : log(ratio) # secondary filter for common words.
+            idf = log(ratio)
             tf_idf = count * idf
             word_arr[i] = (word, tf_idf)
-        catch
+
+        catch wat
             # try/catch is workaround for unicode string hash bug
             word_arr[i] = (word, 0)
         end
@@ -132,6 +133,12 @@ function top_words_for_author(all_words::Dict{String,Int}, their_words::Dict{Str
 
     print("$author")
     sort!(word_arr,by= x -> -x[2])
+
+#    if ismatch(r"mingo",author)
+        # println("-----------------DEBUG SORTED ARRAY")
+        # print(word_arr)
+        # println("-----------------DEBUG END ARRAY")
+ #   end
     i = 0
     for (word, count) in word_arr
         print(",$word")

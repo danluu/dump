@@ -9,7 +9,7 @@ function read_csv()
     while line != ""
         chunks = split(line,',')
         num_words = length(chunks) - 1
-        null_pos = find(x -> x == "null", chunks)
+        null_pos = find(x -> x == "fix", chunks)
         assert(length(null_pos) <= 1)
         if length(null_pos) > 0
             word_pos = null_pos[1] - 1

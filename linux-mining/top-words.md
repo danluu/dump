@@ -1,41 +1,42 @@
-| User | 1 | 2 | 3 | 4 | 5 |
-| --- | --- | --- | --- | --- | --- |
-| viro | initramfs: | null | halfway-created | dumber | f_vfsmnt |
-| tiwai | 5461 | null | snd_hda_codec_free | snd-pcsp | bug#3275 |
-| broonie | piecemeal | wm9715 | 5399/1: | null | copyrights |
-| davem | dev | __lmb_alloc_base | null | rollback_registered_many+0x17d/0x2c0 | tb->tlb_nr |
-| gregkh | dev | kobjects: | confined | mitas | null |
-| mchehab | confined | mirror/upside | 7388: | null | pinheiro |
-| tglx | timekeeping_get_ns | alot | enjoy | sys_get_robust_list | status_on_stack_has_interrupt_priority_mask |
-| hsweeten | usbdux_pwm_pattern | das16_detach | ni_private_common | null | glb_mutex |
-| mingo | dev | [<c01197d0>] | null | 847203627] | unserialized |
-| joe | $text; | pata_hpt{37x|3x2n}: | default:; | sound/soc/codecs/wm8994o | nand: |
-| tj | dev | rearrangement | [<ffffffff813b94d3>] | kamezawas | memblock_error |
-| lethal | dev | ioport_map | null | uniformly | arch/sh/boards/mach-sdk7786/setupo |
-| axel.lin | module_platform_driver | omap4430_phy_init | [sound/soc/soc-coreo] | tps65023_reg_con_ctrl2 | null |
-| hch | uselib: | xfs_initialize_vnode | jfs_get_inode_flags | null | everywhere |
-| sachin.kamat | dev | nand: | null | speakup/kobjects: | s5p_mfc_opr_v6c:572 |
-| bzolnier | {ataatapi}_ | ata_device_obs | palm_bk3710 | ide_arm_init | smart_read_values |
-| alan | youd | chocolate | null | everywhere | -ac |
-| ralf | 0x500 | syscallh:60:1: | newport_conc:18: | enjoy | usb_hcd_giveback_urb+0x63/0x93 |
-| johannes.berg | mvm | youd | reduced/split | null | everywhere |
-| trond.myklebust | balance_dirty_pages_rate_limited | work-queue | pnfs_insert_layout | nfs4_open_done | de571dac |
-| shemminger | ect0 | tokenring: | rearrangement | contemplate | hysdn: |
-| linux | 5288/1: | dma-mappingh:40: | null | regulator_get_optional: | everywhere |
-| bunk | ‘tc6393xb_attach_irq’: | dibusb-mbc: | null | custom_sched_clock | ipv6: |
-| hartleys | acquire/free | null | arch_ep93xx | favor | ep93xx_spi_chp_setup |
-| jg1.han | spi-fsl-dspic:318:21: | nand: | null | ld9040 | nand/r852c:685:6: |
-| akpm | msrc: | ext4_get_group_no_and_offset: | sata_fslc:337: | null | config_no_idle_hz=n |
-| rmk+kernel | practise | pcmcia_assabet_init | tiles | piecemeal | list_lru_count_node&sb->s_inode_lru |
-| daniel.vetter | dev | gem_free_object_unlocked | null | ring-base | 45e2b5f640b3766da3eda48f6c35f088155c06f3 |
-| bskeggs | confined | practise | drm/nouveau/aux: | tiles | simultanenously |
-| acme | piecemeal | llc_frame_alloc | null | 5952419837 | __pskb_pull |
-| khali | null | everywhere | misdetected | helping | whose |
-| torvalds | null | out_wakeup | 228 | caught | v2614-rc4 |
-| chris | rearrangement | fdi_pll_bios_0 | null | [<c103734c>] | perf_counterc |
-| neilb | clear_bit_unlock | volatages | rearrangement | svc_sock_put | null |
-| lars | pm2301_chargerc:1013:22: | nand: | null | dapm_create_or_share_mixmux_kcontrol | snd_soc_cnew |
-| kaber | tcp_acceptable_seq | host/network | null | copyrights | everywhere |
-| dhowells | piecemeal | copy_keys | null | 00007fb6fb51a7000000 | &call->resend_timer{+-}: |
-| heiko.carstens | s390/checksum: | null | everywhere | helping | whose |
-| ebiederm | dev | youd | audit_compare_id | null | everywhere |
+| User | 1 | 2 | 3 | 4 | 5 | 6  | 7 | 8 | 9 | 10 |
+| User | --- | --- | --- | --- | --- | ---  | --- | --- | --- | --- |
+| viro | [patch] | switch | annotations |  | - | of | um: | endianness | we | get |
+| tiwai | alsa: | hda | - | [alsa] | codec | codecs | hda-codec | modules: | fix | with |
+| broonie | asoc: | mfd: | regulator: | convert | for | codec | dapm | we | driver | register |
+| davem | [sparc64]: | sparc64: | we | kill | fix | in | ipv4: | use | by | and |
+| gregkh | cc: | staging: | usb: | remove | hank | janssen | driver | hv: | kay | sievers |
+| mchehab | [media] | v4l/dvb | at | were | em28xx: | some | a | dvbv5 | it | for |
+| tglx | x86: | genirq: | prepare | irq | shared | which | convert | use | code | functions |
+| hsweeten | comedi: | staging: | tidy | remove | subdevice | private | comedi | analog | aesthetics | function |
+| mingo | zijlstra | x86: | melo | peter | arnaldo | sched: | de | lkml-reference: | carvalho | - |
+| joe | unnecessary | convert | pr_<level> | use | remove | maintainers: | logging | checkpatch: | pr_fmt | cleanups |
+| tj | doesnt | cgroup: | which | it | be | any | and | is | are | while |
+| lethal | sh: | up | off | kill | presently | for | sh | this | support | build |
+| axel.lin | regulator: | asoc: | convert | thus | use | fix | error | below | spi: | remove |
+| hch | xfs: | [xfs] | sgi-pv: | sgi-modid: | remove | we | into | a | inode | it |
+| sachin.kamat | redundant | remove | simpler | null | of_match_ptr | 0998d06310 | devm_ | following | iio: | use |
+| bzolnier | ide: | shtylyov | sergei | acked-by: |  | caused | remove | no | functional | changes |
+| alan | gma500: | tty: | tty | we | up | et131x: | fix | and | [patch] | a |
+| ralf | [mips] | mips: | fix | build | mips | of | ip27: | by | a | for |
+| johannes.berg | mac80211: | iwlwifi: | mac80211 | it | iwlagn: | emmanuel | grumbach | that | cfg80211: | so |
+| trond.myklebust | nfs: | nfsv4: | sunrpc: | ensure | nfsv41: | we | that | server | rpc | up |
+| shemminger | sky2: | net_device_ops | skge: | convert | [patch] | driver | device | to | is | sky2 |
+| linux | hwmon: | pcmcia: | pcmcia | use | and | cc: | code | convert | with | simplify |
+| bunk | needlessly | static | global | [patch] | patch | make | following | checker | coverity | remove |
+| hartleys | comedi: | staging: | remove | subdevice | driver | local | comedi | variable | boardinfo | macro |
+| jg1.han | simpler | device_release | unnecessary | clears | thus | manually | data | rtc: | probe | paths |
+| akpm | cc: | [patch] | warning: | fix | function | warning | david | error: | garzik | in |
+| rmk+kernel | arm: | acked-by: | rather | tested-by: | we | than | which | l2c: | this | code |
+| daniel.vetter | drm/i915: | reviewed-by: | v2: | wilson | vetter | chris | daniel | signed-off-by: | we | cc: |
+| bskeggs | drm/nouveau: | drm/nv50: | drm/nvd0/disp: | on | chipsets | drm/nvc0: | for | engine | drm/nouveau/bios: | some |
+| acme | perf | galbraith | weisbecker | eranian | stephane | mike | mackerras | zijlstra | frederic | peter |
+| khali | hwmon: | i2c: | i2c | driver | drivers | so | [patch] | it | drop | as |
+| torvalds | linux | commit | just | cc: | revert | reverts | but | that | it | acked-by: |
+| chris | drm/i915: | we | gpu | bugzilla: | whilst | as | that | so | object | a |
+| neilb | md: | array | so | [patch] | md | that | we | when | be | it |
+| lars | asoc: | driver | of | iio | use | struct | it | is | a | so |
+| kaber | [netfilter]: | netfilter: | [net_sched]: | conntrack | fix | nf_conntrack: | by | nat | packet | when |
+| dhowells | keys: | rather | key | uapi: | that | be | as | than | cred: | frv: |
+| heiko.carstens | [s390] | s390 | s390: | since | call | of | which | fix | function | code |
+| ebiederm | namespace | hallyn | serge | userns: | sysctl: | that | sysctl | [patch] | network | acked-by: |
+| hverkuil | v4l/dvb | v4l/dvb: | ivtv: | [media] | convert | v4l2_subdev | i2c | v4l2 | fix | obsolete |
