@@ -1,0 +1,13 @@
+diff --git a/lib/travis/cli/history.rb b/lib/travis/cli/history.rb
+index 643f3a0..f4496a5 100644
+--- a/lib/travis/cli/history.rb
++++ b/lib/travis/cli/history.rb
+@@ -37,7 +37,7 @@ module Travis
+ 
+         def display(build)
+           say [
+-            date? && color(formatter.time(build.finished_at || build.started_at), build.color),
++            date? && color(formatter.time(build.started_at), build.color),
+             color("##{build.number} #{build.state}:".ljust(16), [build.color, :bold]),
+             color("#{build.branch_info}", :info),
+             committer? && build.commit.author_name.ljust(25),
