@@ -23,7 +23,7 @@ function process_travis_log(fname::String, category::String, project::String)
         # print(line)
         parts = split(line)        
         time_str = string(parts[1], ' ', parts[2])
-        if time_str == "not yet"
+        if time_str == "not yet" # indicates aborted build.
             continue
         else
             time = DateTime(time_str, "y-m-d H:M:S")
