@@ -1,8 +1,9 @@
 using Dates
 
+# Parse travis API logs with a very specific structure. Apologies if you're looking at this -- this is a 5-minute hack.
+
 # Example usage: julia parse.jl cleaned/devops devops
 # Produces category,name,pass_rate,fail_rate,error_rate
-
 
 function number_of_9s(pct::Float64)
     log(10, 1 / (1.0 - pct))

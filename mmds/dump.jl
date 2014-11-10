@@ -66,7 +66,20 @@ function distance(p)
     return l1a < l1b && l2a > l2b
 end
 
-println(distance([53,18]))
-println(distance([56,13]))
-println(distance([66,5]))
-println(distance([50,18]))
+# println(distance([53,18]))
+# println(distance([56,13]))
+# println(distance([66,5]))
+# println(distance([50,18]))
+
+# Center is a vector and not a tuple so we can use vector functions. 
+# Length of center should always be the dimension, which should always be 2.
+
+type Centroid
+    center::Vector{Int}
+    points::Set{Vector{Int}}
+end
+
+function make_initial_centroids()
+    initial_centers = Array[[25,125], [44,105], [29,97], [35,63], [55,63], [42,57], [23,40], [64,37], [33,22], [55,20]]
+    
+end
