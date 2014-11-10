@@ -30,6 +30,7 @@ function process_travis_log(fname::String, category::String, project::String)
         end
         status = parts[4]
 
+        # Compute delta from last build result.
         if last_time != nothing
             diff = div(int(last_time - time),1000) # difference in seconds
             if diff < 0
