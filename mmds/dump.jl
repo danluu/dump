@@ -75,11 +75,162 @@ end
 # Length of center should always be the dimension, which should always be 2.
 
 type Centroid
-    center::Vector{Int}
+    center::Vector{Float64}
     points::Set{Vector{Int}}
 end
 
-function make_initial_centroids()
-    initial_centers = Array[[25,125], [44,105], [29,97], [35,63], [55,63], [42,57], [23,40], [64,37], [33,22], [55,20]]
-    
+function print_centroids(centroids::Array{Centroid})
+    for c in centroids
+        println("Center: $(c.center)")
+        println("Points: $(c.points)")
+    end
 end
+
+function find_closest_centroid(cents::Array{Centroid}, point::Vector{Int})
+    min_dist = typemax(Float64)
+    closest = nothing
+    for c in cents
+        dist = norm(c.center - point)
+        if dist < min_dist
+            min_dist = dist
+            closest = c
+            # println("Distance from $point to $c is $dist")
+        end
+    end
+    closest
+end
+
+function recompute_center(centroid::Centroid)
+    average = [0,0]
+    for p in centroid.points
+        average += p
+    end
+    centroid.center = average / length(centroid.points)
+end
+
+function recompute_centers(centroids::Vector{Centroid})
+    for c in centroids
+        recompute_center(c)
+    end
+end
+
+function reassign_point(to::Centroid, from::Centroid, point)
+    push!(to.points, point)
+    delete!(from.points, point)
+end
+
+function reassign_points(centroids::Vector{Centroid})
+    for cent in centroids
+        for p in cent.points
+            closest = find_closest_centroid(centroids, p)
+            if closest != cent
+                println("Reassigning $p from $cent to $closest")
+                reassign_point(closest, cent, p)
+            end
+        end
+    end
+end
+
+# naive algo that recomputes a ton of stuff. Should be ok for the number of points we have.
+function make_initial_centroids(initial_centers, initial_free_points)
+    
+
+
+    centroids = Array(Centroid,0)
+
+    # Add initial centers
+    for c in initial_centers
+        new_list = Set{Vector{Int}}()
+        push!(new_list, c)
+        new_cent = Centroid(c, new_list)
+        push!(centroids, new_cent)
+    end
+
+    # Add initial non-centers
+    for p in initial_free_points
+        closest = find_closest_centroid(centroids, p)
+        push!(closest.points, p)
+    end
+
+    centroids
+end
+
+function crappy_knn(initial_centers, initial_free_points, initial::Bool)
+    cents = make_initial_centroids(initial_centers, initial_free_points)
+    if initial
+        print_centroids(cents)
+    end
+    recompute_centers(cents)
+    if !initial
+        print_centroids(cents)
+    end
+    println("")
+    return # blow away stuff below this.
+    reassign_points(cents)
+    # print_centroids(cents)
+    recompute_centers(cents)
+    # print_centroids(cents)
+end
+
+ crappy_knn(
+     Array[[25,125], [44,105], [29,97], [35,63], [55,63], [42,57], [23,40], [64,37], [33,22], [55,20]], 
+     Array[[28,145],[50,130],[65,140],[38,115],[55,118],[50,90],[43,83],[63,88],[50,60],[50,30]], false)
+
+
+# crappy_knn(Array[[5,10], [20,5]], Array[[3,3],[10,1],[15,14],[20,10]], true)
+# crappy_knn(Array[[5,10], [20,5]], Array[[6,7],[11,14],[11,5],[17,2]], true)
+# crappy_knn(Array[[5,10], [20,5]], Array[[7,8],[12,5],[13,10],[16,4]], true)
+# crappy_knn(Array[[5,10], [20,5]], Array[[3,3],[10,1],[13,10],[16,4]], true)
+
+crappy_knn(Array[[5,10], [20,5]], Array[[6,15],[13,7],[16,19],[25,12]], true)
+crappy_knn(Array[[5,10], [20,5]], Array[[7,12],[12,8],[16,16],[18,5]], true)
+crappy_knn(Array[[5,10], [20,5]], Array[[7,8],[12,5],[15,14],[20,10]], true)
+crappy_knn(Array[[5,10], [20,5]], Array[[7,8],[12,5],[13,10],[16,4]], true)
+
+
+# Return indices of bits set in Int
+# Starts at 1 because julia is 1-indexed
+function index_of_bits(x::Int)
+    assert(x >= 0)
+    set_bits = Array(Int,0)
+    
+    i = 1
+    current_idx = 1
+    while x != 0
+        if x & 1 == 1
+            push!(set_bits, i)
+        end
+        x >>= 1
+        i += 1
+    end
+    set_bits
+end
+
+# brute force. Slow implementation. Lots of copying + GC.
+function set_cover_brutal(input)
+    sets = map(x -> Set(x), input)
+    cover = union(sets...)
+    minimal_set = Int
+    minimal_size = typemax(Int)
+
+    num_bits = length(sets)
+    for i in 1:(2^num_bits-1)
+        indices = index_of_bits(i)
+        working_set = Set{Char}()
+        for idx in indices
+            union!(working_set, sets[idx])
+        end
+        
+        # Replace minimal set if we have a smaller cover.
+        if working_set == cover
+            if count_ones(i) < minimal_size
+                minimal_set = i
+                minimal_size = count_ones(minimal_set)
+            end
+        end
+    end
+
+    minimal_set
+end
+
+brutal_size = count_ones(set_cover_brutal(["AB", "BC", "CD", "DE", "EF", "FG", "GH", "AH", "ADG", "ADF"]))
