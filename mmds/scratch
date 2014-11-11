@@ -1,0 +1,95 @@
+he
+she
+his
+hers
+
+he/she : 1
+he/his : 3
+he/hers: 2
+she/his : 4
+she/hers : 3
+his/hers : 3
+
+minhash:
+- - R4 -
+- R6 R4 -
+- R6 R4 -
+- R6 R4 R3
+R5 R6 R4 R3
+
+LSH
+C2/C5
+C1/C6
+
+10000 choose 2 ~ 50 M -> 200 Mbytes
+2m pairs -- m items
+1M 
+
+Sampling
+
+10^8 users
+
+Sample 10^10 bytes
+
+100 bytes per message => 10^8 messages, i.e. 1 per user
+so fraction is fraction of users.
+
+12345 - 3
+23253 - 3
+55532 - 4
+
+-2 -1  0  1  2
+-1  0 -1  2  0
+1   1  1 -1 -2
+--------------
+-2  0  0  2  0
+
+-1.33 -1  0   .33 2
+ -.33  0 -1  1.33 0
+ 1.66  1  1 -1.66 -2
+
+
+A 10101 2
+B 11001 6
+C 01010 2
+
+10101 2
+01010 2
+
+A.C = 4a
+A.B = 2 + 12a
+B.C = 1 + 12a
+
+A ~ sqrt(3 + 4a^2) 
+B ~ sqrt(3 + 36a^2)
+C ~ sqrt(2 + 4a^2)
+
+A~B = 2 + 12a / 
+      
+B~C = 1 + 12a /
+
+["AB", "BC", "CD", "DE", "EF", "FG", "GH", "AH", "ADG", "ADF"]
+
+ADG, AB, BC, DE, EF, GH
+
+a2-b0
+a4-b3
+a2-b4
+!!
+
+
+a0-b0
+a4-b4
+a2-b4
+!!
+
+a4-b3
+a3-b1
+a2-b4
+a0-b0
+
+a0-b1
+a1-b3
+a2-b0
+a4-b4
+
