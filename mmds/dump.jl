@@ -172,9 +172,9 @@ function crappy_knn(initial_centers, initial_free_points, initial::Bool)
     # print_centroids(cents)
 end
 
- crappy_knn(
-     Array[[25,125], [44,105], [29,97], [35,63], [55,63], [42,57], [23,40], [64,37], [33,22], [55,20]], 
-     Array[[28,145],[50,130],[65,140],[38,115],[55,118],[50,90],[43,83],[63,88],[50,60],[50,30]], false)
+ # crappy_knn(
+ #     Array[[25,125], [44,105], [29,97], [35,63], [55,63], [42,57], [23,40], [64,37], [33,22], [55,20]], 
+ #     Array[[28,145],[50,130],[65,140],[38,115],[55,118],[50,90],[43,83],[63,88],[50,60],[50,30]], false)
 
 
 # crappy_knn(Array[[5,10], [20,5]], Array[[3,3],[10,1],[15,14],[20,10]], true)
@@ -182,10 +182,10 @@ end
 # crappy_knn(Array[[5,10], [20,5]], Array[[7,8],[12,5],[13,10],[16,4]], true)
 # crappy_knn(Array[[5,10], [20,5]], Array[[3,3],[10,1],[13,10],[16,4]], true)
 
-crappy_knn(Array[[5,10], [20,5]], Array[[6,15],[13,7],[16,19],[25,12]], true)
-crappy_knn(Array[[5,10], [20,5]], Array[[7,12],[12,8],[16,16],[18,5]], true)
-crappy_knn(Array[[5,10], [20,5]], Array[[7,8],[12,5],[15,14],[20,10]], true)
-crappy_knn(Array[[5,10], [20,5]], Array[[7,8],[12,5],[13,10],[16,4]], true)
+# crappy_knn(Array[[5,10], [20,5]], Array[[6,15],[13,7],[16,19],[25,12]], true)
+# crappy_knn(Array[[5,10], [20,5]], Array[[7,12],[12,8],[16,16],[18,5]], true)
+# crappy_knn(Array[[5,10], [20,5]], Array[[7,8],[12,5],[15,14],[20,10]], true)
+# crappy_knn(Array[[5,10], [20,5]], Array[[7,8],[12,5],[13,10],[16,4]], true)
 
 
 # Return indices of bits set in Int
@@ -233,4 +233,67 @@ function set_cover_brutal(input)
     minimal_set
 end
 
-brutal_size = count_ones(set_cover_brutal(["AB", "BC", "CD", "DE", "EF", "FG", "GH", "AH", "ADG", "ADF"]))
+# brutal_size = count_ones(set_cover_brutal(["AB", "BC", "CD", "DE", "EF", "FG", "GH", "AH", "ADG", "ADF"]))
+
+# Slack formula: y * (dot(w,x) + b) >= 1 - slack
+# y is our "positive" var
+function compute_slack(point::Array{Int}, positive::Bool)
+    res = dot([-1,1],point) - 2
+    res = positive ? res : -res
+    return -(res - 1)
+end
+
+function compute_all_slacks(pos, neg)
+    for point in pos
+        slack = compute_slack(point, true)
+        println("$point $slack")
+    end
+    for point in neg
+        slack = compute_slack(point, false)
+        println("$point $slack")
+    end     
+end
+
+compute_all_slacks(
+Array[[5,10],[7,0],[1,8],[3,8],[7,8],[1,6],[3,6],[3,4]],
+Array[[5,8],[5,6],[7,6],[1,4],[5,4],[7,4],[1,2],[3,2]]
+)
+ 
+function classify_with_decision_tree(point::Array{Int})
+    # [age, salary]
+    assert(length(point) == 2)
+    if point[1] < 45 
+        if point[2] < 110
+            return false
+        else
+            return true
+        end
+    else
+        if point[2] < 75
+            return false
+        else
+            return true
+        end        
+    end
+end
+
+function decision_tree_fixed(yes, no)
+    # should buy. false means misclassified
+    for point in yes
+        if !classify_with_decision_tree(point)
+            println("$point should buy, didn't")
+        end
+    end
+
+    for point in no
+        if classify_with_decision_tree(point)
+            println("$point should buy, didn't")
+        end
+    end 
+end
+
+decision_tree_fixed(
+    Array[[28,145], [38,115], [43,83], [50,130], [50,90], [50,60], [50,30], [55,118], [63,88], [65,140]],
+    Array[[23,40], [25,125], [29,97], [33,22], [35,63], [42,57], [44, 105], [55,63], [55,20], [64,37]]
+)
+
