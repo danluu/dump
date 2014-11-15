@@ -1,42 +1,42 @@
-| User | 1 | 2 | 3 | 4 | 5 | 6  | 7 | 8 | 9 | 10 |
-| --- | --- | --- | --- | --- | --- | ---  | --- | --- | --- | --- |
-| viro | switch | annotations | patch | - |  | of | endianness | um | we | get |
-| tiwai | alsa | hda | - | codec | codecs | hda-codec | fix | with | for | driver |
-| broonie | asoc | regmap | mfd | regulator | wm8994 | convert | for | dapm | codec | core |
-| davem | sparc64 | sparc | we | kill | fix | ipv4 | in | use | by | net |
-| gregkh | cc | staging | usb | remove | hank | janssen | driver | hv | kay | sievers |
-| mchehab | v4l/dvb | media | at | were | em28xx | some | a | dvbv5 | fix | it |
-| tglx | x86 | genirq | irq | prepare | shared | which | convert | use | code | functions |
-| hsweeten | comedi | staging | tidy | remove | subdevice | private | analog | aesthetics | function | data |
-| mingo | x86 | sched | zijlstra | melo | peter | arnaldo | de | lkml-reference | carvalho | - |
-| joe | unnecessary | checkpatch | convert | pr_<level> | use | maintainers | remove | logging | pr_fmt | cleanups |
-| tj | cgroup | doesnt | which | it | workqueue | be | any | and | is | while |
-| lethal | sh | up | off | sh64 | kill | presently | for | this | support | build |
-| axel.lin | regulator | asoc | convert | thus | use | fix | error | below | remove | spi |
-| hch | xfs | sgi-pv | sgi-modid | remove | we | into | a | inode | it | that |
-| sachin.kamat | redundant | remove | simpler | null | of_match_ptr | 0998d06310 | devm_ | following | use | iio |
-| bzolnier | ide | shtylyov | sergei | acked-by | caused | remove |  | no | functional | changes |
-| alan | tty | gma500 | we | up | et131x | fix | and | a | clean | staging |
-| ralf | mips | fix | build | ip27 | of | smtc | by | a | for | in |
-| johannes.berg | mac80211 | iwlwifi | it | cfg80211 | iwlagn | emmanuel | grumbach | that | so | station |
-| trond.myklebust | nfs | nfsv4 | sunrpc | nfsv41 | ensure | we | rpc | server | that | up |
-| shemminger | sky2 | net_device_ops | skge | convert | bridge | driver | patch | device | to | is |
-| linux | hwmon | pcmcia | use | and | cc | code | convert | with | simplify | for |
-| bunk | static | needlessly | global | patch | make | following | checker | coverity | remove | this |
-| hartleys | comedi | staging | remove | subdevice | driver | local | variable | boardinfo | macro | devpriv |
-| jg1.han | simpler | device_release | unnecessary | clears | thus | manually | data | probe | paths | clear |
-| akpm | cc | warning | fix | function | patch | david | garzik | in | type | jeff |
-| rmk+kernel | arm | acked-by | rather | tested-by | we | than | which | l2c | this | code |
-| daniel.vetter | drm/i915 | reviewed-by | v2 | wilson | vetter | chris | daniel | signed-off-by | drm | we |
-| bskeggs | drm/nouveau | drm/nv50 | drm/nvd0/disp | on | chipsets | drm/nvc0 | for | engine | drm/nouveau/bios | some |
-| acme | galbraith | perf | weisbecker | eranian | stephane | mike | mackerras | zijlstra | frederic | peter |
-| khali | hwmon | i2c | driver | drivers | so | it | drop | as | new-style | monitoring |
-| torvalds | linux | commit | just | revert | cc | reverts | but | that | it | acked-by |
-| chris | drm/i915 | we | gpu | bugzilla | whilst | as | that | so | object | a |
-| neilb | md | array | so | that | we | when | be | it | if | md/raid5 |
-| lars | asoc | driver | iio | dapm | of | use | struct | it | core | is |
-| kaber | netfilter | conntrack | net_sched | nf_conntrack | fix | by | nat | packet | netlink | when |
-| dhowells | keys | rather | key | that | uapi | be | as | frv | than | cred |
-| heiko.carstens | s390 | since | call | of | fix | which | code | function | cpu | get |
-| ebiederm | namespace | userns | hallyn | serge | sysctl | that | network | namespaces | acked-by | so |
-| hverkuil | v4l/dvb | ivtv | media | v4l2 | convert | v4l2_subdev | i2c | fix | v4l | obsolete |
+| User | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- |
+| viro | switch | annotations | patch | - |  |
+| tiwai | alsa | hda | - | codec | codecs |
+| broonie | asoc | regmap | mfd | regulator | wm8994 |
+| davem | sparc64 | sparc | we | kill | fix |
+| gregkh | cc | staging | usb | remove | hank |
+| mchehab | v4l/dvb | media | at | were | em28xx |
+| tglx | x86 | genirq | irq | prepare | shared |
+| hsweeten | comedi | staging | tidy | remove | subdevice |
+| mingo | x86 | sched | zijlstra | melo | peter |
+| joe | unnecessary | checkpatch | convert | pr_<level> | use |
+| tj | cgroup | doesnt | which | it | workqueue |
+| lethal | sh | up | off | sh64 | kill |
+| axel.lin | regulator | asoc | convert | thus | use |
+| hch | xfs | sgi-pv | sgi-modid | remove | we |
+| sachin.kamat | redundant | remove | simpler | null | of_match_ptr |
+| bzolnier | ide | shtylyov | sergei | acked-by | caused |
+| alan | tty | gma500 | we | up | et131x |
+| ralf | mips | fix | build | ip27 | of |
+| johannes.berg | mac80211 | iwlwifi | it | cfg80211 | iwlagn |
+| trond.myklebust | nfs | nfsv4 | sunrpc | nfsv41 | ensure |
+| shemminger | sky2 | net_device_ops | skge | convert | bridge |
+| linux | hwmon | pcmcia | use | and | cc |
+| bunk | static | needlessly | global | patch | make |
+| hartleys | comedi | staging | remove | subdevice | driver |
+| jg1.han | simpler | device_release | unnecessary | clears | thus |
+| akpm | cc | warning | fix | function | patch |
+| rmk+kernel | arm | acked-by | rather | tested-by | we |
+| daniel.vetter | drm/i915 | reviewed-by | v2 | wilson | vetter |
+| bskeggs | drm/nouveau | drm/nv50 | drm/nvd0/disp | on | chipsets |
+| acme | galbraith | perf | weisbecker | eranian | stephane |
+| khali | hwmon | i2c | driver | drivers | so |
+| torvalds | linux | commit | just | revert | cc |
+| chris | drm/i915 | we | gpu | bugzilla | whilst |
+| neilb | md | array | so | that | we |
+| lars | asoc | driver | iio | dapm | of |
+| kaber | netfilter | conntrack | net_sched | nf_conntrack | fix |
+| dhowells | keys | rather | key | that | uapi |
+| heiko.carstens | s390 | since | call | of | fix |
+| ebiederm | namespace | userns | hallyn | serge | sysctl |
+| hverkuil | v4l/dvb | ivtv | media | v4l2 | convert |

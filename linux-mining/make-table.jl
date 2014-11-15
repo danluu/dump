@@ -2,7 +2,7 @@
 
 function read_csv()
     fname = "all.csv"
-    max_col = 11
+    max_col = 6
     max_row = 40
     
     f = open(fname)
