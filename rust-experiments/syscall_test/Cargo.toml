@@ -1,0 +1,9 @@
+[package]
+
+name = "syscall_test"
+version = "0.0.1"
+authors = ["Dan Luu <danluu@gmail.com>"]
+
+[dependencies.syscall]
+
+git = "https://github.com/kmcallister/syscall.rs.git"

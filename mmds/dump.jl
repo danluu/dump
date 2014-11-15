@@ -254,10 +254,10 @@ function compute_all_slacks(pos, neg)
     end     
 end
 
-compute_all_slacks(
-Array[[5,10],[7,0],[1,8],[3,8],[7,8],[1,6],[3,6],[3,4]],
-Array[[5,8],[5,6],[7,6],[1,4],[5,4],[7,4],[1,2],[3,2]]
-)
+# compute_all_slacks(
+# Array[[5,10],[7,0],[1,8],[3,8],[7,8],[1,6],[3,6],[3,4]],
+# Array[[5,8],[5,6],[7,6],[1,4],[5,4],[7,4],[1,2],[3,2]]
+# )
  
 function classify_with_decision_tree(point::Array{Int})
     # [age, salary]
@@ -292,8 +292,52 @@ function decision_tree_fixed(yes, no)
     end 
 end
 
-decision_tree_fixed(
-    Array[[28,145], [38,115], [43,83], [50,130], [50,90], [50,60], [50,30], [55,118], [63,88], [65,140]],
-    Array[[23,40], [25,125], [29,97], [33,22], [35,63], [42,57], [44, 105], [55,63], [55,20], [64,37]]
-)
+# decision_tree_fixed(
+#     Array[[28,145], [38,115], [43,83], [50,130], [50,90], [50,60], [50,30], [55,118], [63,88], [65,140]],
+#     Array[[23,40], [25,125], [29,97], [33,22], [35,63], [42,57], [44, 105], [55,63], [55,20], [64,37]]
+# )
 
+function make_initial_ts_graph()
+    g = Dict{Int, Array{Int}}()
+    g[1] = [2,3]
+    g[2] = [1]
+    g[3] = [4]
+    g[4] = [3]
+    g
+end
+
+function ts_teleport()
+    if rand() <= 2/3
+        return 1
+    else
+        return 2
+    end
+end
+
+function step_ts_graph(g::Dict{Int,Array{Int}}, beta::Float64, node::Int)
+    # Teleport to starting set with probability beta
+    # Walk to a random next node with probability 1-beta
+    if rand() <= beta
+        return ts_teleport()
+    else
+        possible_next_nodes = g[node]
+        return possible_next_nodes[rand(1:length(possible_next_nodes))]
+    end
+end
+
+function walk_ts_graph(n::Int)
+    g = make_initial_ts_graph()
+    beta = .3
+    node = 1
+    ts_pagerank_numerator = zeros(Int,4)
+
+    for _ in 1:n
+        node = step_ts_graph(g, beta, node)
+        ts_pagerank_numerator[node] += 1
+    end
+
+    denominator = sum(ts_pagerank_numerator)
+    ts_pagerank = ts_pagerank_numerator / denominator
+end
+
+println(walk_ts_graph(10000000))
