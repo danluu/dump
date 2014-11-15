@@ -1,6 +1,6 @@
-#![feature(phase)]
+#![feature(phase)]      // needed for macro import?
 
-#[phase(plugin, link)]
+#[phase(plugin, link)]  // needed for macro import?
 extern crate syscall;
 
 fn write(fd: uint, buf: &[u8]) {
