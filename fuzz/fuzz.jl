@@ -1,12 +1,15 @@
-const test_dir = "jl_input"
 const max_rand_string_len = 100
 
+# Filter types returned by names that we can't call.
+# TODO: add some way to call non-generic fns.
 function checkable_name(name)
     typeof(eval(name)) == Function && isgeneric(eval(name))
     # it should be possible to add support for 'DataType'
 end
 
 # get list of functions to avoid calling.
+# includes things that create files, allocate memory, etc.
+# TODO: run in a sandbox and allow calls to those fns.
 function get_fn_exclusion_list(fname)
     banned = Set{Symbol}()
     f = open(fname)
@@ -20,7 +23,8 @@ function get_fn_exclusion_list(fname)
     return banned
 end
 
-# Somewhat involved because MethodTable doesn't provide any means of indexing.
+# MethodTable doesn't provide any means of indexing.
+# Iterate through methods and pick one at random.
 function get_rand_method(mt::MethodTable)
     some_method = start(mt)
     n = rand(1:length(mt))
@@ -30,7 +34,8 @@ function get_rand_method(mt::MethodTable)
     return some_method
 end
 
-function gen_rand_fn(name)    
+# Given a name, get a random function with args (as string).
+function gen_rand_fn(name)
     # println("gen_rand_fn $name")
     # Note that this won't work for functions that take no args. That seems ok since those 
     # are unlikely to crash julia or hang.
@@ -46,6 +51,7 @@ function gen_rand_fn(name)
     end
 end
 
+# generate and call a random function with eval(parse(_))
 function call_rand_fn(fn_log, banned_fns::Set{Symbol})
     potential_names = sort(names(Base)) # names are returned in a random order.
     potential_names = filter(checkable_name, potential_names)
@@ -62,6 +68,8 @@ function call_rand_fn(fn_log, banned_fns::Set{Symbol})
     flush(fn_log)
 end
 
+# Generate a random float
+# TODO: generate more denorms and interesting numbers.
 function rand_float(t)
     if t == Float64
         return string(reinterpret(Float64, rand(Uint64)))
@@ -86,7 +94,6 @@ function rand_char_raw()
     assert(false)
 end
 
-
 function rand_char()
     return string("'",rand_char_raw(),"'") 
 end
@@ -109,6 +116,7 @@ function rand_string(n::Integer)
     return string("\"",rand_string_raw(n),"\"")
 end
 
+# Walk down tree until we get to a concrete type.
 function get_concrete_type(t::DataType)
     # println("get_concrete_type $t")
     if length(subtypes(t)) == 0
@@ -120,6 +128,7 @@ function get_concrete_type(t::DataType)
     end
 end
 
+# Given a type, produce an appropriate string of random data.
 function generate_rand_data(t::DataType)
     # println("generate_rand_data $t")
     # First, try to generate data based on the type.
@@ -175,6 +184,7 @@ function generate_rand_data(t::DataType)
     assert(false)
 end
 
+# Given a tuple, produce a string of rand data for each type in the tuple.
 function generate_rand_data(sig::Tuple)
     can_generate = true
     args = ""
@@ -201,6 +211,7 @@ function generate_rand_data(sig::Tuple)
     end
 end
 
+# Helper function to try to track down non-deterministic bug with `displayable`
 function bogus_displayable(fn_log)
     text = gen_rand_fn(:displayable)
     write(fn_log, text)
@@ -208,6 +219,9 @@ function bogus_displayable(fn_log)
     eval(parse(text))
 end
 
+# Call random fns in try/catch.
+# There is a bug with try/catch that will cause this to randomly fail
+# and let exceptions inside the try kill the script.
 function try_fns(banned_fns::Set{Symbol})
     i = 0
     fn_log = open("log","w")
@@ -254,6 +268,8 @@ function try_displayable()
     close(fn_log)
 end
 
+# Generate a file with random characters.
+const test_dir = "jl_input"
 function generate_rand_strings(n::Int64)
     for i in 1:n
         len = rand(1:2^18)
@@ -264,6 +280,7 @@ function generate_rand_strings(n::Int64)
     end
 end
 
+# top level function.
 function fuzz_fns(args)
     srand(int(args[1])) # rand seed is arg
     banned_fns = get_fn_exclusion_list("../../banned.txt")
