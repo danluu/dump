@@ -1,7 +1,7 @@
 # Convert first N columns of a csv to markdown table format.
 
-function read_csv()
-    fname = "all.csv"
+function read_csv(args)
+    fname = args[1]  # all.csv, tf-only.csv, etc.
     max_col = 6
     max_row = 40
     
@@ -17,4 +17,4 @@ function read_csv()
     end
 end
 
-read_csv()
+read_csv(ARGS)
