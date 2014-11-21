@@ -1,10 +1,12 @@
-#include <vector>
-#include <stdlib.h>
 #include <assert.h>
+#include <stdlib.h>
 
-enum Suits {Club, Diamond, Heart, Spades};
+#include <iostream>
+#include <vector>
 
-class Player {};
+// This would be a lot simpler and more efficient if cards were represented as a bit mask.
+// That would only require 52 of 64 bits, and passing around cards would be trivial.
+// Instead, this is OO-ified just to see what this looks like.
 
 // A card is an int from 0 to 51.
 // Within a suit, cards are numbered from 0 to 12
@@ -15,47 +17,165 @@ class Player {};
 // Hearts   26-38
 // Spades   39-51
 
-class Deck {
+class Player {
 public:
-  Deck(){
-    for (int i = 0; i < 51; ++i) {
-      _cards.push_back(i);
-    }
-    this->shuffle();
-  };
+  Player(int id) : id_(id), num_sets_(0) {
+    
+  }
 
-  void shuffle() {
-    // Maintain invariant that cards <= i are randomly shuffled.
-    for (int i = 0; i < _cards.size(); ++i) {
-      int target = rand() % (i + 1); // not very random, but should be ok.
-      int temp = _cards[target];
-      _cards[target] = _cards[i];
-      _cards[i] = temp;
+  int has_suit(int suit) {
+    int base_card_num = suit * 13;
+    int highest_card_num = base_card_num + 12;
+    for (int card : hand_) {
+      if (card > base_card_num && card < highest_card_num) {
+	return true;
+      }
+    }
+    return false;
+  }
+
+  void lose_suit(std::vector<int>& matching_cards, int suit) {
+    assert(matching_cards.size() == 0);
+    int base_card_num = suit * 13;
+    int highest_card_num = base_card_num + 12;
+    auto it = hand_.begin();
+    while (it != hand_.end()) {
+      if (*it > base_card_num && *it < highest_card_num) {
+	matching_cards.push_back(*it);
+	it = hand_.erase(it);
+      } else {
+	++it;
+      }
     }
   }
 
+  void gain_cards(std::vector<int>& new_cards) {
+    for (int card : new_cards) {
+      hand_.push_back(card);
+    }
+    // TODO: handle existence of new sets that might have been created.
+  }
+
+  void gain_card(int card) {
+    hand_.push_back(card);
+    // TODO: handle existence of new sets that might have been created.
+  }
+
+  // The function to check to see if we have a suit will be kind of terrible.
+  // We have a vector, but what we really want is a map.
+  // If we just used a single int, we would have sidestepped his problem.
+
+  int num_cards() {
+    return hand_.size();
+  }
+
+private:
+  std::vector<int> hand_; // Contains cards in deck. Cards are removed as they're dealt.
+  int num_sets_;
+  int id_;
+};
+
+class Deck {
+public:
+  Deck(){
+    reset_deck();
+  };
+
+  void reset_deck() {
+    cards_.clear();
+    for (int i = 0; i < 51; ++i) {
+      cards_.push_back(i);
+    }
+    this->shuffle();
+  }
+
+  void shuffle() {
+    // Maintain invariant that cards <= i are randomly shuffled.
+    for (int i = 0; i < cards_.size(); ++i) {
+      int target = rand() % (i + 1); // not very random, but should be ok.
+      int temp = cards_[target];
+      cards_[target] = cards_[i];
+      cards_[i] = temp;
+    }
+  }
+
+  int num_cards() {
+    return cards_.size();
+  }
+
   int get_card() {
-    assert(_cards.size() > 0);
-    int card = _cards.back();
-    _cards.pop_back();
+    assert(cards_.size() > 0); // game should have already ended.
+    int card = cards_.back();
+    cards_.pop_back();
     return card;
   }
   
   ~Deck();
 
 private:
-  std::vector<int> _cards; // Contains cards in deck. Cards are removed as they're dealt.
+  std::vector<int> cards_; // Contains cards in deck. Cards are removed as they're dealt.
 };
 
 class Game {
 public: 
-  Game(int num_players) {
-    assert(num_players < 10);
-    
-    
+  Game(int num_players) : deck_(new Deck()), num_players_(num_players), game_over_(false) {
+    assert(num_players <= 10); // 5 cards per player. 10 players = 50 cards.
+    for (int i = 0; i < num_players; ++i) {
+      players_.push_back(std::unique_ptr<Player>(new Player(i)));
+    }
   }
+
+  // Check that deck has 0 cards or any player has 0 cards.
+  int game_over() {
+    if (deck_->num_cards() == 0) {
+      return 1;
+    }
+    for (int i = 0; i < players_.size(); ++i) {
+      if (players_[i]->num_cards() == 0) {
+	return 1;
+      }
+    }
+    return 0;
+  }
+
+  void play_game() {
+    while (!game_over_) {
+      for (int current_player = 0; current_player < num_players_; current_player++) {
+	int failed_action = false;
+	while (!failed_action) {
+	  // Take a single action. We get to go again if we don't fail.
+	  int target_player, target_suit;
+	  std::cout << "Player " << current_player << "target player?\n";
+	  std::cin >> target_player;
+	  std::cout << "Player " << current_player << "target suit?\n";
+	  std::cin >> target_suit;
+	  // TODO: check that current player has suit
+	  if (target_player < num_players_ && target_suit < 4) {
+	    if (players_[target_player]->has_suit(target_suit)) {
+	      std::vector<int> cards_to_pass;
+	      players_[target_player]->lose_suit(cards_to_pass, target_suit);
+	      players_[current_player]->gain_cards(cards_to_pass);
+
+	    } else {
+	      failed_action = true;
+	      int new_card = deck_->get_card();
+	      players_[current_player]->gain_card(new_card);
+	    }
+	  
+	    if (game_over()) {
+	      // TODO: end game.
+	    }
+	}
+	}
+      }
+    }
+  }
+
 private:
-  std::unique_ptr<Deck> _deck;
+  std::unique_ptr<Deck> deck_;
+  std::vector<std::unique_ptr<Player>> players_;
+  int num_players_;
+  bool game_over_;
   
 };
 
