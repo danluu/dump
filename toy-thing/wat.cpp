@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include <iostream>
+#include <set>
 #include <vector>
 
 // This would be a lot simpler and more efficient if cards were represented as a bit mask.
@@ -51,26 +52,49 @@ public:
 
   void gain_cards(std::vector<int>& new_cards) {
     for (int card : new_cards) {
-      hand_.push_back(card);
+      hand_.insert(card);
     }
-    // TODO: handle existence of new sets that might have been created.
+    check_set_completion();
   }
 
   void gain_card(int card) {
-    hand_.push_back(card);
-    // TODO: handle existence of new sets that might have been created.
+    hand_.insert(card);
+    check_set_completion();
   }
+  
+  void check_set_completion() {
+    int total_cards = num_cards() + 4*num_sets_; // Only used for debug/assert.
 
-  // The function to check to see if we have a suit will be kind of terrible.
-  // We have a vector, but what we really want is a map.
-  // If we just used a single int, we would have sidestepped his problem.
+    for (int i = 0; i < 13; ++i) {
+      auto club = hand_.count(i);
+      auto diamond = hand_.count(i+13);
+      auto heart = hand_.count(i+26);
+      auto spade = hand_.count(i+39);
+
+      if (club && diamond && heart && spade) {
+	++num_sets_;
+	hand_.erase(i);
+	hand_.erase(i+13);
+	hand_.erase(i+26);
+	hand_.erase(i+39);
+      }
+
+      // Should never create or destroy cards.
+      assert(total_cards == num_cards() + 4*num_sets_);
+    }
+
+    if (num_cards() == 0) {
+      std::cout << "Player " << id_ << " won\n";
+      // TODO: handle winning somehow.
+    }
+  }
 
   int num_cards() {
     return hand_.size();
   }
 
 private:
-  std::vector<int> hand_; // Contains cards in deck. Cards are removed as they're dealt.
+  std::set<int> hand_; // Contains cards in deck. Cards are removed as they're dealt.
   int num_sets_;
   int id_;
 };
