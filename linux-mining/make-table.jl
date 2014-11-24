@@ -2,7 +2,7 @@
 
 function read_csv(args)
     fname = args[1]  # all.csv, tf-only.csv, etc.
-    max_col = 6
+    max_col = 2
     max_row = 40
     
     f = open(fname)

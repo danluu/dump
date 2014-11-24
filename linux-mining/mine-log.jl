@@ -147,11 +147,12 @@ end
 
 # Reads a git commit log. Does some magic that assumes linux kernel format, but shouldn't break on an arbitrary
 # log
-function read_log(fname::String)
+function read_log(fname::String, by_author::String)
     author_words = Dict{String,Dict{String,Int}}()
     all_words = Dict{String,Int}()
     num_author_commits = Dict{String,Int}()
     num_chunks = 0
+    process_each_author = bool(int(by_author)) # horrible hack to convert arg to bool. 0 = false.
 
     f = open(fname)
     chunk = ""
@@ -167,10 +168,17 @@ function read_log(fname::String)
         end
     end
     
-    sorted_authors = sort_authors(num_author_commits)
-    for (author,count) in sorted_authors
-        top_words_for_author(all_words, author_words[author], author, num_chunks)
+    if process_each_author
+        sorted_authors = sort_authors(num_author_commits)
+        for (author,count) in sorted_authors
+            top_words_for_author(all_words, author_words[author], author, num_chunks)
+        end
+    else
+        sorted_words = sort_authors(all_words)
+        for (k,v) in sorted_words
+            println("$k,$v")
+        end
     end
 end
 
-print(read_log(ARGS[1]))
+print(read_log(ARGS[1], ARGS[2]))
