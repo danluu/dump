@@ -77,8 +77,8 @@ function process_chunk(chunk::String, all_words::Dict{String,Int}, author_words:
     second_line = search(chunk, '\n', first_line+1) # strip Date
 
     # search returns a BoundsError if not found, so we have to try/catch this.
-    # Seems like an API mistake/bug since this inconsistent with other 'search'
-    # methods.
+    # This seems like it's because of a unicode bug. Try/catch also has a bug.
+    # If an exception blows through this, just re-run and it will probably work.
     chunk_words = Array(String,0)
     try
         sign_off = search(chunk,r"Signed-off-by:")[1]-1
