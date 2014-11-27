@@ -44,3 +44,4 @@ We can see this in gdb:
 (gdb) x ptr -4
 0x603f74:       0x00001234
 
+Ok. Now test-1 works. But ls still crashes
