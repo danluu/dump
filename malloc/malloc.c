@@ -2,7 +2,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
-// Don't include stdlb since the names will conflict!
+// Don't include stdlb since the names will conflict?
 
 // sbrk some extra space every time we need it.
 // This does no bookkeeping and therefore has no ability to free, realloc, etc.
@@ -128,8 +128,4 @@ void *realloc(void *ptr, size_t size) {
   memcpy(new_ptr, ptr, block_ptr->size);
   free(ptr);  
   return new_ptr;
-}
-
-int main() {
-  return 0;
 }
