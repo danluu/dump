@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <stdio.h> // used for printf debugging.
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -62,6 +63,7 @@ struct block_meta *request_space(struct block_meta* last, size_t size) {
 }
 
 void *malloc(size_t size) {
+  // printf("malloc'ing %zx", size);
   // TODO: align size? What happens if we don't align it?
   
   struct block_meta *block;
