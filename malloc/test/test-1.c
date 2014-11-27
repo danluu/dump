@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define RUNS 2
+#define RUNS 10000
 
 int main() {
   malloc(1);

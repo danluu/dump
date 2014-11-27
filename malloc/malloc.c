@@ -1,5 +1,4 @@
 #include <assert.h>
-#include <stdio.h> // used for printf debugging.
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -63,7 +62,6 @@ struct block_meta *request_space(struct block_meta* last, size_t size) {
 }
 
 void *malloc(size_t size) {
-  // printf("malloc'ing %zx", size);
   // TODO: align size? What happens if we don't align it?
   
   struct block_meta *block;
@@ -101,12 +99,13 @@ void *calloc(size_t nelem, size_t elsize) {
 
 // TODO: maybe do some validation here.
 struct block_meta *get_block_ptr(void *ptr) {
-  return (struct block_meta*)ptr - META_SIZE;
+  return (struct block_meta*)ptr - 1;
 }
 
 void free(void *ptr) {
   // TODO: consider merging blocks once splitting blocks is implemented.
   struct block_meta* block_ptr = get_block_ptr(ptr);
+  assert(block_ptr->free == 0);
   block_ptr->free = 1;
   block_ptr->magic = 0x5555;  
 }
