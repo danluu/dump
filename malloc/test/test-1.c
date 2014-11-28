@@ -21,11 +21,11 @@ int main() {
       return 1;
     }
     
-    *(arr[i]) = i;
+    *(arr[i]) = i+1;
   }
 
   for (i = 0; i < RUNS; i++) {
-    if (*(arr[i]) != i) {
+    if (*(arr[i]) != i+1) {
       printf("Memory failed to contain correct data after many allocations!\n");
       return 2;
     }

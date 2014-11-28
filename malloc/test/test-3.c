@@ -4,6 +4,8 @@
 #define START_MALLOC_SIZE 1024*1024*128
 #define STOP_MALLOC_SIZE  1024
 
+void dummy() { return; }
+
 void *reduce(void *ptr, int size) {
   if (size > STOP_MALLOC_SIZE) {
     void *ptr1 = realloc(ptr, size / 2);
@@ -22,11 +24,14 @@ void *reduce(void *ptr, int size) {
       exit(2);
     }
 
+    void *old_ptr1 = ptr1;
     ptr1 = realloc(ptr1, size);
     free(ptr2);
 
     if (*((int *)ptr1) != size / 2) {
       printf("Memory failed to contain correct data after realloc()!\n");
+      printf("Expected %i found %i (old %i)\n", (size/2), *((int *)ptr1), *((int *)old_ptr1));
+      dummy();
       exit(3);
     }
 
@@ -36,10 +41,7 @@ void *reduce(void *ptr, int size) {
     *((int *)ptr) = size;
     return ptr;
   }
-
-
 }
-
 
 int main() {
   malloc(1);

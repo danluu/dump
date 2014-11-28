@@ -18,30 +18,20 @@ Wait a sec. If we print something from our malloc, it doesn't get printed with t
 
 But running after doing another make causes test-1 to segfault from inside the wrapper in gdb? How did tha that happen? 
 
-Ah-ha! Assert that block_ptr->free == 0 fails.
+Ah-ha! Assert that block_ptr->free == 0 and that magic is correct fails.
 
-Whoops. 
-struct block_meta *get_block_ptr(void *ptr) {
-  return (struct block_meta*)ptr - META_SIZE;
-}
+The problem is that sizeof(struct block_meta) is 32, but...
 
-Needed to be:
-char *get_block_ptr(void *ptr) {
-  return (char*)ptr - META_SIZE;
-}
+p/x *(struct block_meta*)(ptr-24)
+$20 = {size = 0x4, next = 0x0, free = 0x0, magic = 0x1234, data = {0x1}}
 
-or
+It seems like the tutorial I was following was wrong? This was so suspicious that I even left a comment as I was copying it down.
+struct block_meta {
+  size_t size;
+  struct block_meta *next;
+  int free;
+  int magic;    // For debugging only. TODO: remove this in non-debug mode.
+  char data[1]; // Used to get pointer to data. Is this safe?
+};
 
-struct block_meta *get_block_ptr(void *ptr) {
-  return (struct block_meta*)ptr - 1;
-}
-
-
-We can see this in gdb:
-(gdb) x block_ptr
-0x7ffff7dea560 <_dl_fini>:      0xe5894855
-
-(gdb) x ptr -4
-0x603f74:       0x00001234
-
-Ok. Now test-1 works. But ls still crashes
+Removing the data member and just returning a pointer to the correct offset, instead of a pointer to the data member seems to work.

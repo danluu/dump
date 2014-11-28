@@ -24,7 +24,6 @@ struct block_meta {
   struct block_meta *next;
   int free;
   int magic;    // For debugging only. TODO: remove this in non-debug mode.
-  char data[1]; // Used to get pointer to data. Is this safe?
 };
 
 #define META_SIZE sizeof(struct block_meta)
@@ -87,7 +86,7 @@ void *malloc(size_t size) {
     }
   }
   
-  return(block->data);
+  return(block+1); //DEBUG: changing this
 }
 
 void *calloc(size_t nelem, size_t elsize) {
@@ -106,6 +105,7 @@ void free(void *ptr) {
   // TODO: consider merging blocks once splitting blocks is implemented.
   struct block_meta* block_ptr = get_block_ptr(ptr);
   assert(block_ptr->free == 0);
+  assert(block_ptr->magic == 0xaaaa || block_ptr->magic == 0x1234);
   block_ptr->free = 1;
   block_ptr->magic = 0x5555;  
 }
@@ -127,6 +127,7 @@ void *realloc(void *ptr, size_t size) {
     return NULL; // TODO: set errno on failure.
   }
   memcpy(new_ptr, ptr, block_ptr->size);
+  //memcpy(new_ptr, &(block_ptr->data), block_ptr->size+4);
   free(ptr);  
   return new_ptr;
 }
