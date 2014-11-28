@@ -35,3 +35,24 @@ struct block_meta {
 };
 
 Removing the data member and just returning a pointer to the correct offset, instead of a pointer to the data member seems to work.
+
+(gdb) run /bin/ls
+Starting program: /home/dluu/dev/dump/malloc/wrapper /bin/ls
+process 19161 is executing new program: /bin/ls
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff7bd7d5d in free (ptr=0x0) at malloc.c:109
+109       assert(block_ptr->free == 0);
+(gdb) list
+104     }
+105
+106     void free(void *ptr) {
+107       // TODO: consider merging blocks once splitting blocks is implemented.
+108       struct block_meta* block_ptr = get_block_ptr(ptr);
+109       assert(block_ptr->free == 0);
+110       assert(block_ptr->magic == 0xaaaa || block_ptr->magic == 0x1234);
+111       block_ptr->free = 1;
+112       block_ptr->magic = 0x5555;  
+113     }
+(gdb) p ptr
+$1 = (void *) 0x0

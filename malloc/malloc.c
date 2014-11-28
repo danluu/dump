@@ -4,6 +4,8 @@
 #include <unistd.h>
 // Don't include stdlb since the names will conflict?
 
+// TODO: align
+
 // sbrk some extra space every time we need it.
 // This does no bookkeeping and therefore has no ability to free, realloc, etc.
 void *nofree_malloc(size_t size) {
@@ -102,6 +104,10 @@ struct block_meta *get_block_ptr(void *ptr) {
 }
 
 void free(void *ptr) {
+  if (!ptr) {
+    return;
+  }
+
   // TODO: consider merging blocks once splitting blocks is implemented.
   struct block_meta* block_ptr = get_block_ptr(ptr);
   assert(block_ptr->free == 0);
@@ -127,7 +133,6 @@ void *realloc(void *ptr, size_t size) {
     return NULL; // TODO: set errno on failure.
   }
   memcpy(new_ptr, ptr, block_ptr->size);
-  //memcpy(new_ptr, &(block_ptr->data), block_ptr->size+4);
   free(ptr);  
   return new_ptr;
 }
