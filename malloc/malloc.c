@@ -11,12 +11,10 @@
 void *nofree_malloc(size_t size) {
   void *p = sbrk(0);
   void *request = sbrk(size);
-  if (request == (void*) -1) { // sbrk failed
-    return NULL;
+  if (request == (void*) -1) { 
+    return NULL; // sbrk failed
   } else {
-    // This code is not thread safe. Assert should only fail if
-    // this code is incorrectly used in threaded code.
-    assert(p == request);
+    assert(p == request); // Not thread safe.
     return p;
   }
 }
@@ -30,7 +28,7 @@ struct block_meta {
 
 #define META_SIZE sizeof(struct block_meta)
 
-void *global_base;
+void *global_base = NULL;
 
 // Iterate through blocks until we find one that's large enough.
 // TODO: split block up if it's larger than necessary
@@ -47,21 +45,24 @@ struct block_meta *request_space(struct block_meta* last, size_t size) {
   struct block_meta *block;
   block = sbrk(0);
   void *request = sbrk(size + META_SIZE);
+  assert((void*)block == request); // Not thread safe.
   if (request == (void*) -1) {
-    return NULL;
-  } else {
-    block->size = size;
-    block->next = NULL;
-    if (last) { // NULL on first request.
-      last->next = block;
-    }
-    block->free = 0;
-    block->magic = 0x1234;
-    return block;
+    return NULL; // sbrk failed.
   }
-  assert(0);
+  
+  if (last) { // NULL on first request.
+    last->next = block;
+  }
+  block->size = size;
+  block->next = NULL;
+  block->free = 0;
+  block->magic = 0x12345678;
+  return block;
 }
 
+// If it's the first ever call, i.e., global_base == NULL, request_space and set global_base.
+// Otherwise, if we can find a free block, use it.
+// If not, request_space.
 void *malloc(size_t size) {
   struct block_meta *block;
   // TODO: align size?
@@ -87,7 +88,7 @@ void *malloc(size_t size) {
     } else {      // Found free block
       // TODO: consider splitting block here.
       block->free = 0;
-      block->magic = 0xaaaa;
+      block->magic = 0x77777777;
     }
   }
   
@@ -114,22 +115,25 @@ void free(void *ptr) {
   // TODO: consider merging blocks once splitting blocks is implemented.
   struct block_meta* block_ptr = get_block_ptr(ptr);
   assert(block_ptr->free == 0);
-  assert(block_ptr->magic == 0xaaaa || block_ptr->magic == 0x1234);
+  assert(block_ptr->magic == 0x77777777 || block_ptr->magic == 0x12345678);
   block_ptr->free = 1;
-  block_ptr->magic = 0x5555;  
+  block_ptr->magic = 0x55555555;  
 }
 
 void *realloc(void *ptr, size_t size) {
-  if (!ptr) { // NULL ptr. realloc should act like malloc.
+  if (!ptr) { 
+    // NULL ptr. realloc should act like malloc.
     return malloc(size);
   }
 
   struct block_meta* block_ptr = get_block_ptr(ptr);
-  if (block_ptr->size >= size) { // We have enough space. Could free some once we implement split.
+  if (block_ptr->size >= size) {
+    // We have enough space. Could free some once we implement split.
     return ptr;
   }
 
   // Need to really realloc. Malloc new space and free old space.
+  // Then copy old data to new space.
   void *new_ptr;
   new_ptr = malloc(size);
   if (!new_ptr) {
