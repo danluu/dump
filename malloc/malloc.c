@@ -67,7 +67,7 @@ void *malloc(size_t size) {
   
   struct block_meta *block;
 
-  if (!size) { // First call.
+  if (!global_base) { // First call.
     block = request_space(NULL, size);
     if (!block) {
       return NULL;
