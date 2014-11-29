@@ -63,9 +63,12 @@ struct block_meta *request_space(struct block_meta* last, size_t size) {
 }
 
 void *malloc(size_t size) {
-  // TODO: align size? What happens if we don't align it?
-  
   struct block_meta *block;
+  // TODO: align size?
+
+  if (size <= 0) {
+    return NULL;
+  }
 
   if (!global_base) { // First call.
     block = request_space(NULL, size);
@@ -88,7 +91,7 @@ void *malloc(size_t size) {
     }
   }
   
-  return(block+1); //DEBUG: changing this
+  return(block+1);
 }
 
 void *calloc(size_t nelem, size_t elsize) {
