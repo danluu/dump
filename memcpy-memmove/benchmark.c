@@ -72,7 +72,7 @@ void test_and_print(int length) {
 }
 
 int main() {
-  for (int i = 1; i < 134217728; i *=2) {
+  for (int i = 1; i <= SCRATCH_SIZE; i *=2) {
     test_and_print(i);
   }
   return 0;
