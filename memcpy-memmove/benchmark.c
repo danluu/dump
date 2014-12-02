@@ -13,7 +13,7 @@
 #define PAGE_SIZE 4096
 
 // memcpy or memmove
-uint64_t access_mem(size_t length, int runs, int memcpy) {
+uint64_t access_mem(size_t length, int runs, int do_memcpy) {
   //  static uint64_t a[2 * MAX_NUM_LINES * PG_SIZE];
  #ifdef HUGEPAGE
   uint64_t *a = mmap(NULL, ALLOC_SIZE, PROT_READ | PROT_WRITE,
@@ -38,7 +38,7 @@ uint64_t access_mem(size_t length, int runs, int memcpy) {
   // Move regions around so we're not running out of cache for small sizes?
   for (int i = 0; i < runs; i++) {
     RDTSC_START(tsc_before);
-    if (memcpy) {
+    if (do_memcpy) {
       memcpy(src, dst, length);
     } else {
       memmove(src, dst, length);
