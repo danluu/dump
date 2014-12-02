@@ -1,4 +1,6 @@
-// Measure the cost of associativity misses
+// Compare memcpy v. memmove
+// This completely fails to reproduce the findings in 
+// https://news.ycombinator.com/item?id=8683636
 
 #define __STDC_FORMAT_MACROS // For PRIu64, etc.
 
