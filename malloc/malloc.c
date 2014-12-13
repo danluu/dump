@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <pthread.h>
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -42,9 +43,14 @@ struct block_meta *find_free_block(struct block_meta **last, size_t size) {
 }
 
 struct block_meta *request_space(struct block_meta* last, size_t size) {
+  static pthread_mutex_t sbrk_mutex = PTHREAD_MUTEX_INITIALIZER;
   struct block_meta *block;
+
+  pthread_mutex_lock(&sbrk_mutex);
   block = sbrk(0);
   void *request = sbrk(size + META_SIZE);
+  pthread_mutex_unlock(&sbrk_mutex);
+
   assert((void*)block == request); // Not thread safe.
   if (request == (void*) -1) {
     return NULL; // sbrk failed.
@@ -114,8 +120,8 @@ void free(void *ptr) {
 
   // TODO: consider merging blocks once splitting blocks is implemented.
   struct block_meta* block_ptr = get_block_ptr(ptr);
-  assert(block_ptr->free == 0);
   assert(block_ptr->magic == 0x77777777 || block_ptr->magic == 0x12345678);
+  assert(block_ptr->free == 0);
   block_ptr->free = 1;
   block_ptr->magic = 0x55555555;  
 }
