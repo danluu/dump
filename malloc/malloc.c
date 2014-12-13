@@ -6,20 +6,6 @@
 // Don't include stdlb since the names will conflict?
 
 // TODO: align
-
-// sbrk some extra space every time we need it.
-// This does no bookkeeping and therefore has no ability to free, realloc, etc.
-void *nofree_malloc(size_t size) {
-  void *p = sbrk(0);
-  void *request = sbrk(size);
-  if (request == (void*) -1) { 
-    return NULL; // sbrk failed
-  } else {
-    assert(p == request); // Not thread safe.
-    return p;
-  }
-}
-
 struct block_meta {
   size_t size;
   struct block_meta *next;
@@ -30,6 +16,9 @@ struct block_meta {
 #define META_SIZE sizeof(struct block_meta)
 
 void *global_base = NULL;
+// This is misnamed. This is actually a global lock that protects find_free_block, global_base, and
+// sbrk. TODO: maybe make this finer grained.
+static pthread_mutex_t sbrk_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 // Iterate through blocks until we find one that's large enough.
 // TODO: split block up if it's larger than necessary
@@ -43,15 +32,11 @@ struct block_meta *find_free_block(struct block_meta **last, size_t size) {
 }
 
 struct block_meta *request_space(struct block_meta* last, size_t size) {
-  static pthread_mutex_t sbrk_mutex = PTHREAD_MUTEX_INITIALIZER;
   struct block_meta *block;
 
-  pthread_mutex_lock(&sbrk_mutex);
   block = sbrk(0);
   void *request = sbrk(size + META_SIZE);
-  pthread_mutex_unlock(&sbrk_mutex);
-
-  assert((void*)block == request); // Not thread safe.
+  assert((void*)block == request);
   if (request == (void*) -1) {
     return NULL; // sbrk failed.
   }
@@ -77,9 +62,12 @@ void *malloc(size_t size) {
     return NULL;
   }
 
+
+  pthread_mutex_lock(&sbrk_mutex);
   if (!global_base) { // First call.
     block = request_space(NULL, size);
     if (!block) {
+      pthread_mutex_unlock(&sbrk_mutex);
       return NULL;
     }
     global_base = block;
@@ -89,6 +77,7 @@ void *malloc(size_t size) {
     if (!block) { // Failed to find free block.
       block = request_space(last, size);
       if (!block) {
+	pthread_mutex_unlock(&sbrk_mutex);
 	return NULL;
       }
     } else {      // Found free block
@@ -98,6 +87,7 @@ void *malloc(size_t size) {
     }
   }
   
+  pthread_mutex_unlock(&sbrk_mutex);
   return(block+1);
 }
 
