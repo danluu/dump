@@ -15,7 +15,7 @@ void dummy_fn() {
 void asm_inc() {
   int *p_counter = &counter;
   for (int i = 0; i < NUM_ITERS; ++i) {
-    __asm__("incl (%0) \n\t" : "+r" (p_counter));
+    __asm__("incl (%0) \n\t" : : "r" (p_counter));
   }
 }
 
