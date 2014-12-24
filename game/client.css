@@ -1,0 +1,9 @@
+.card-treasure { background-color: yellow }
+.card-curse { background-color: purple }
+.card-victory { background-color: green }
+.card-reaction { background-color: blue }
+.card-duration { background-color: orange }
+
+a.choice { color: #ccc; padding-left: 3ex }
+a.choice:hover { color: red; cursor: pointer }
+

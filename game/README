@@ -1,0 +1,25 @@
+Here's a very early version of the code that I pulled out of source
+control, as I was just starting to implement the web interface.  I've
+ripped out the Dominion parts and replaced them with a lame little
+"game" that you can see in net.py under the comment "# here we would
+start the game".
+
+To set it up:
+
+1. Download the closure library
+   (http://code.google.com/closure/library/) and put it somewhere that
+   it's served by your web server.
+
+2. Change the first <script> tag in client.html to point to the copy
+   of closure that you've installed on your machine.
+
+3. Run "python3 net.py 2".  The "2" is the number of players.
+   (There's no "lobby" in this code, it just starts a game as soon as
+   that number of clients connect.)
+
+4. Open two browser windows and point each to
+   http://localhost:9999/client.html (or if your browser's on a different
+   machine than you're running the game, the machine name instead of
+   "localhost").  They should connect and play the "game".
+
+
