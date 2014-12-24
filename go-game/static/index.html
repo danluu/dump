@@ -5,31 +5,38 @@
 <div id="them"></div>
 <div id="middle"></div>
 <div id="us"></div>
+<div id="something">
+  <button id="Add">Press me!</button>
+</div>
+
+
+<script src="jquery-2.1.3.js"></script>
 
 <script type="text/javascript">
-function WebSocketTest()
+function WebSocketTest(ws)
 {
   if ("WebSocket" in window)
   {
      alert("WebSocket is supported by your Browser!");
      // Let us open a web socket
      var ws = new WebSocket("ws://localhost:9999/echo");
-     ws.onopen = function()
-     {
-        // Web Socket is connected, send data using send()
-        ws.send("Message to send");
-        alert("Message is sent...");
-     };
      ws.onmessage = function (evt) 
      { 
-        var received_msg = evt.data;
-        alert("Message is received...");
+       var received_msg = evt.data;
+       $('<p>Text</p>').appendTo('#something');
      };
      ws.onclose = function()
      { 
         // websocket is closed.
         alert("Connection is closed..."); 
      };
+
+     <!-- Send a websockets message on click -->
+     $(function () {
+       $('#Add').on('click', function () {
+       ws.send("Message body");
+       });
+     });
   }
   else
   {
@@ -38,7 +45,6 @@ function WebSocketTest()
   }
 }
 WebSocketTest();
-</script>
 
-<script src="jquery-2.1.3.js"></script>
+</script>
 </body>
