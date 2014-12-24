@@ -17,7 +17,7 @@ function WebSocketTest(ws)
 {
   if ("WebSocket" in window)
   {
-     alert("WebSocket is supported by your Browser!");
+     $('<p>Websocket connection opened</p>').appendTo('#something');
      // Let us open a web socket
      var ws = new WebSocket("ws://localhost:9999/echo");
      ws.onmessage = function (evt) 
@@ -27,8 +27,7 @@ function WebSocketTest(ws)
      };
      ws.onclose = function()
      { 
-        // websocket is closed.
-        alert("Connection is closed..."); 
+       $('<p>Websocket connection closed</p>').appendTo('#something');
      };
 
      <!-- Send a websockets message on click -->
