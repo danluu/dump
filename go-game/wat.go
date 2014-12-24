@@ -13,9 +13,7 @@ func HomeHandler(response http.ResponseWriter, request *http.Request) {
 func main() {
 	r := mux.NewRouter()
 
-	r.HandleFunc("/",HomeHandler)
-
-	//-
+	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
 	http.Handle("/", r)
 
 	// wait for clients
