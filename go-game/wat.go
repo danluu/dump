@@ -96,34 +96,34 @@ func sendToAll(all hub, message []byte) {
 	}
 }
 
-func (globalHub *hub) run() {
+func (all *hub) run() {
 	numPlayers := 0
 	for {
 		select {
-		case c := <-globalHub.register:
-			globalHub.connections[c] = true
+		case c := <-all.register:
+			all.connections[c] = true
 			numPlayers++
 			if numPlayers == 2 {
-				go func() {globalHub.ready <- true;}() // This seems bad.
+				go func() {all.ready <- true;}() // This seems bad.
 				fmt.Println("queued ready send")
 			}
-		case c := <-globalHub.unregister:
-			if _, ok := globalHub.connections[c]; ok {
-				delete(globalHub.connections, c)
+		case c := <-all.unregister:
+			if _, ok := all.connections[c]; ok {
+				delete(all.connections, c)
 				close(c.send)
 				numPlayers--
 			}
-		case b := <-globalHub.ready:
+		case b := <-all.ready:
 			if b {
-				sendToAll(*globalHub, []byte("Ready to start"))
+				sendToAll(*all, []byte("Ready to start"))
 			}
-		case m := <-globalHub.broadcast:
-			for c := range globalHub.connections {
+		case m := <-all.broadcast:
+			for c := range all.connections {
 				select {
 				case c.send <-m:
 				default:
 					close(c.send)
-					delete(globalHub.connections, c)
+					delete(all.connections, c)
 				}
 			}
 		}
