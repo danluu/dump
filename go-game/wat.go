@@ -122,15 +122,8 @@ func (all *hub) run() {
 			if b {
 				sendToAll(*all, []byte("Ready to start"))
 			}
-		case m := <-all.broadcast:
-			for c := range all.connections {
-				select {
-				case c.send <-m:
-				default:
-					close(c.send)
-					delete(all.connections, c)
-				}
-			}
+		case message := <-all.broadcast:
+			sendToAll(*all, message)
 		}
 		
 	}
