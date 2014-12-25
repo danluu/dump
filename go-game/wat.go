@@ -20,9 +20,10 @@ const (
 	maxMessageSize = 512
 )
 
+// send is the message from the hub we want to send to the websocket.
 type connection struct {
 	websocket *websocket.Conn
-	send chan[] byte // Why don't we need one for recv?
+	send chan[] byte 
 }
 
 func (conn *connection) fromBrowser() {
