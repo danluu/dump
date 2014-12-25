@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-func HomeHandler(response http.ResponseWriter, request *http.Request) {
-	fmt.Fprintf(response, "Hello, world!\n")
-}
-
 const (
 	writeWait = 10 * time.Second
 	pongWait = 60 * time.Second
@@ -134,18 +130,6 @@ func wsHandler(response http.ResponseWriter, request *http.Request) {
 	globalHub.register <- conn
 	go conn.toBrowser()
 	conn.fromBrowser()
-
-	/*
-	for {
-		messageType, p, err := conn.ReadMessage()
-		if err != nil {
-			return
-		}
-		if err = conn.WriteMessage(messageType, p); err != nil {
-			return // We should indicate an error somehow.
-		}
-	}
-*/
 }
 
 func main() {
@@ -154,10 +138,8 @@ func main() {
 	r := mux.NewRouter()
 
 	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
-	// r.PathPrefix("/echo").Handler(wsHandler)
 	http.HandleFunc("/echo",wsHandler)
 	http.Handle("/", r)
-
 
 	// wait for clients
 	http.ListenAndServe(":9999", nil)
