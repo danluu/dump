@@ -23,7 +23,7 @@ function WebSocketTest(ws)
      ws.onmessage = function (evt) 
      { 
        var received_msg = evt.data;
-       $('<p>Text</p>').appendTo('#something');
+       $('<p>' + received_msg + '</p>').appendTo('#something');
      };
      ws.onclose = function()
      { 
