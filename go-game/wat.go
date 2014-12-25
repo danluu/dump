@@ -17,10 +17,15 @@ const (
 	maxMessageSize = 512
 )
 
+type TestMessage struct {
+	Type string
+	Body string
+}
+
 // send is the message from the hub we want to send to the websocket.
 type connection struct {
 	websocket *websocket.Conn
-	send chan[] byte 
+	send chan TestMessage
 }
 
 func (conn *connection) fromBrowser() {
@@ -45,6 +50,11 @@ func (conn *connection) write(messageType int, payload []byte) error {
 	return conn.websocket.WriteMessage(messageType, payload)
 }
 
+func (conn *connection) writeJSON(message TestMessage) error {
+	conn.websocket.SetWriteDeadline(time.Now().Add(writeWait))
+	return conn.websocket.WriteJSON(message)
+}
+
 func (conn *connection) toBrowser() {
 	ticker := time.NewTicker(pingPeriod)
 	defer func() {
@@ -58,7 +68,7 @@ func (conn *connection) toBrowser() {
 				conn.write(websocket.CloseMessage, []byte{})
 				return
 			}
-			if err := conn.write(websocket.TextMessage, message); err != nil {
+			if err := conn.writeJSON(message); err != nil {
 				return
 			}
 		case <-ticker.C:
@@ -90,7 +100,7 @@ var globalHub = hub{
 	unregister:  make(chan *connection),
 }
 
-func sendToAll(all hub, message []byte) {
+func sendToAll(all hub, message TestMessage) {
 	for c := range all.connections {
 		select {
 		case c.send <- message:
@@ -120,10 +130,12 @@ func (all *hub) run() {
 			}
 		case b := <-all.ready:
 			if b {
-				sendToAll(*all, []byte("Ready to start"))
+				message := TestMessage{"Ready",""}
+				sendToAll(*all, message)
 			}
 		case message := <-all.broadcast:
-			sendToAll(*all, message)
+			m := TestMessage{"Echo",string(message)}
+			sendToAll(*all, m)
 		}
 		
 	}
@@ -146,7 +158,7 @@ func wsHandler(response http.ResponseWriter, request *http.Request) {
 		return
 	}
 
-	conn := &connection{send: make(chan []byte, 256), websocket: wsConnection}
+	conn := &connection{send: make(chan TestMessage, 256), websocket: wsConnection}
 	globalHub.register <- conn
 	go conn.toBrowser()
 	conn.fromBrowser()
