@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"log"
-	"github.com/gorilla/mux"
-	"github.com/gorilla/websocket"
 	"net/http"
 	"time"
+
+	"github.com/gorilla/mux"
+	"github.com/gorilla/websocket"
 )
 
 const (
@@ -69,17 +70,30 @@ func (conn *connection) toBrowser() {
 }
 
 type hub struct {
-	connections map[*connection]bool
 	broadcast chan []byte
+	connections map[*connection]bool
+	ready chan bool
 	register chan *connection
 	unregister chan *connection
 }
 
 var globalHub = hub{
 	broadcast:   make(chan []byte),
+	connections: make(map[*connection]bool),
+	ready:       make(chan bool),
 	register:    make(chan *connection),
 	unregister:  make(chan *connection),
-	connections: make(map[*connection]bool),
+}
+
+func sendToAll(all hub, message []byte) {
+	for c := range all.connections {
+		select {
+		case c.send <- message:
+		default:
+			close(c.send)
+			delete(all.connections, c)
+		}
+	}
 }
 
 func (globalHub *hub) run() {
@@ -89,11 +103,19 @@ func (globalHub *hub) run() {
 		case c := <-globalHub.register:
 			globalHub.connections[c] = true
 			numPlayers++
+			if numPlayers == 2 {
+				go func() {globalHub.ready <- true;}() // This seems bad.
+				fmt.Println("queued ready send")
+			}
 		case c := <-globalHub.unregister:
 			if _, ok := globalHub.connections[c]; ok {
 				delete(globalHub.connections, c)
 				close(c.send)
 				numPlayers--
+			}
+		case b := <-globalHub.ready:
+			if b {
+				sendToAll(*globalHub, []byte("Ready to start"))
 			}
 		case m := <-globalHub.broadcast:
 			for c := range globalHub.connections {
