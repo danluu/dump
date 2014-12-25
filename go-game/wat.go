@@ -87,14 +87,17 @@ var globalHub = hub{
 }
 
 func (globalHub *hub) run() {
+	numPlayers := 0
 	for {
 		select {
 		case c := <-globalHub.register:
 			globalHub.connections[c] = true
+			numPlayers++
 		case c := <-globalHub.unregister:
 			if _, ok := globalHub.connections[c]; ok {
 				delete(globalHub.connections, c)
 				close(c.send)
+				numPlayers--
 			}
 		case m := <-globalHub.broadcast:
 			for c := range globalHub.connections {
