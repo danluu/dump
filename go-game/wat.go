@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"log"
+	"math/rand"
 	"net/http"
 	"time"
 
@@ -15,10 +15,11 @@ const (
 	pongWait = 60 * time.Second
 	pingPeriod = (pongWait * 9) / 10
 	maxMessageSize = 512
+	numCards = 52
 )
 
 type GameMessage struct {
-	type string
+	message string
 	cards int
 }
 
@@ -88,8 +89,19 @@ type hub struct {
 }
 
 type gameState struct {
-	started bool
+	cardsWon []uint64
+	center uint64
 	hands []uint64
+	numPlayers int
+	started bool
+}
+
+var globalState = gameState{
+	cardsWon: make([]uint64, 4),
+	center: 0,
+	hands: make([]uint64, 4),
+	numPlayers: 0,
+	started: false,
 }
 
 var globalHub = hub{
@@ -120,15 +132,19 @@ func (all *hub) run() {
 			numPlayers++
 			if numPlayers == 2 {
 				go func() {all.ready <- true;}() // This seems bad.
-				fmt.Println("queued ready send")
 			}
 		case c := <-all.unregister:
 			if _, ok := all.connections[c]; ok {
 				delete(all.connections, c)
 				close(c.send)
-				numPlayers--
 			}
 		case b := <-all.ready:
+			cardOrder := rand.Perm(numCards)
+			dealToPlayer := 0
+			for i := 0; i < numCards; i++ {
+				globalState.hands[dealToPlayer] |= 1 << uint(cardOrder[i])
+				dealToPlayer = (dealToPlayer + 1) % 4;
+			}
 			if b {
 				message := GameMessage{"start_game",0}
 				sendToAll(*all, message)
