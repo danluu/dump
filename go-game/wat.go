@@ -17,15 +17,15 @@ const (
 	maxMessageSize = 512
 )
 
-type TestMessage struct {
-	Type string
-	Body string
+type GameMessage struct {
+	type string
+	cards int
 }
 
 // send is the message from the hub we want to send to the websocket.
 type connection struct {
 	websocket *websocket.Conn
-	send chan TestMessage
+	send chan GameMessage
 }
 
 func (conn *connection) fromBrowser() {
@@ -50,7 +50,7 @@ func (conn *connection) write(messageType int, payload []byte) error {
 	return conn.websocket.WriteMessage(messageType, payload)
 }
 
-func (conn *connection) writeJSON(message TestMessage) error {
+func (conn *connection) writeJSON(message GameMessage) error {
 	conn.websocket.SetWriteDeadline(time.Now().Add(writeWait))
 	return conn.websocket.WriteJSON(message)
 }
@@ -100,7 +100,7 @@ var globalHub = hub{
 	unregister:  make(chan *connection),
 }
 
-func sendToAll(all hub, message TestMessage) {
+func sendToAll(all hub, message GameMessage) {
 	for c := range all.connections {
 		select {
 		case c.send <- message:
@@ -130,11 +130,11 @@ func (all *hub) run() {
 			}
 		case b := <-all.ready:
 			if b {
-				message := TestMessage{"Ready",""}
+				message := GameMessage{"start_game",0}
 				sendToAll(*all, message)
 			}
-		case message := <-all.broadcast:
-			m := TestMessage{"Echo",string(message)}
+		case <-all.broadcast:
+			m := GameMessage{"echo",0}
 			sendToAll(*all, m)
 		}
 		
@@ -158,7 +158,7 @@ func wsHandler(response http.ResponseWriter, request *http.Request) {
 		return
 	}
 
-	conn := &connection{send: make(chan TestMessage, 256), websocket: wsConnection}
+	conn := &connection{send: make(chan GameMessage, 256), websocket: wsConnection}
 	globalHub.register <- conn
 	go conn.toBrowser()
 	conn.fromBrowser()
