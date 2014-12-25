@@ -77,6 +77,11 @@ type hub struct {
 	unregister chan *connection
 }
 
+type gameState struct {
+	started bool
+	hands []uint64
+}
+
 var globalHub = hub{
 	broadcast:   make(chan []byte),
 	connections: make(map[*connection]bool),
