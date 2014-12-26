@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+//	"encoding/json"
 	"log"
 	"math/rand"
 	"net/http"
@@ -10,6 +12,12 @@ import (
 	"github.com/gorilla/websocket"
 )
 
+func assert(cond bool, message string) {
+	if !cond {
+		fmt.Println("assert failed: " + message)
+	}
+}
+
 const (
 	writeWait = 10 * time.Second
 	pongWait = 60 * time.Second
@@ -18,9 +26,20 @@ const (
 	numCards = 52
 )
 
+func popcount(x uint64) (n int) {
+	x -= (x >> 1) & 0x5555555555555555
+	x = (x>>2)&0x3333333333333333 + x&0x3333333333333333
+	x += x >> 4
+	x &= 0x0f0f0f0f0f0f0f0f
+	x *= 0x0101010101010101
+	return int(x >> 56)
+}
+
+
 type GameMessage struct {
 	message string
-	cards int
+	player int
+	cards []string
 }
 
 // send is the message from the hub we want to send to the websocket.
@@ -69,6 +88,7 @@ func (conn *connection) toBrowser() {
 				conn.write(websocket.CloseMessage, []byte{})
 				return
 			}
+			fmt.Println(message);
 			if err := conn.writeJSON(message); err != nil {
 				return
 			}
@@ -86,6 +106,34 @@ type hub struct {
 	ready chan bool
 	register chan *connection
 	unregister chan *connection
+}
+
+func cardSuitStr(card int) string {
+	switch card {
+	case 0: return "H"
+	case 1: return "D"
+	case 2: return "C"
+	case 3: return "S"
+	default: return "Suit Error"
+	}
+}
+
+func serializeCard(card int) string {
+	value := string(card / 4);
+	suit := cardSuitStr(card);
+	return value + suit;
+}
+
+func serializeHand(hand uint64) []string {
+	handSize := popcount(hand)
+	var handStr []string
+	for i := 0; i < numCards; i++ {
+		if hand & 1 == 1 {
+			handStr = append(handStr, serializeCard(i))
+		}
+	}
+	assert(handSize == len(handStr), "serializeHand handSize check")
+	return handStr
 }
 
 type gameState struct {
@@ -146,11 +194,11 @@ func (all *hub) run() {
 				dealToPlayer = (dealToPlayer + 1) % 4;
 			}
 			if b {
-				message := GameMessage{"start_game",0}
+				message := GameMessage{"start_game",0,[]string{}}
 				sendToAll(*all, message)
 			}
 		case <-all.broadcast:
-			m := GameMessage{"echo",0}
+			m := GameMessage{"echo",0,[]string{}}
 			sendToAll(*all, m)
 		}
 		
