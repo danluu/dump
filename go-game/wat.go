@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-//	"encoding/json"
 	"log"
 	"math/rand"
 	"net/http"
@@ -37,9 +36,9 @@ func popcount(x uint64) (n int) {
 
 
 type GameMessage struct {
-	message string
-	player int
-	cards []string
+	Message string
+	Player int
+	Cards []string
 }
 
 // send is the message from the hub we want to send to the websocket.
@@ -88,7 +87,6 @@ func (conn *connection) toBrowser() {
 				conn.write(websocket.CloseMessage, []byte{})
 				return
 			}
-			fmt.Println(message);
 			if err := conn.writeJSON(message); err != nil {
 				return
 			}
