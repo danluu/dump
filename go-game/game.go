@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/gorilla/mux"
 	"github.com/gorilla/websocket"
 )
 
@@ -18,6 +17,10 @@ func assert(cond bool, message string) {
 }
 
 const (
+	writeWait = 10 * time.Second
+	pongWait = 60 * time.Second
+	pingPeriod = (pongWait * 9) / 10
+	maxMessageSize = 512
 	numCards = 52
 )
 
@@ -220,17 +223,4 @@ func wsHandler(response http.ResponseWriter, request *http.Request) {
 	globalHub.register <- conn
 	go conn.toBrowser()
 	conn.fromBrowser()
-}
-
-func main() {
-	go globalHub.run()
-
-	r := mux.NewRouter()
-
-	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
-	http.HandleFunc("/echo",wsHandler)
-	http.Handle("/", r)
-
-	// wait for clients
-	http.ListenAndServe(":9999", nil)
 }
