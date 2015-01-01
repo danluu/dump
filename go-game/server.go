@@ -146,5 +146,8 @@ func main() {
 	http.Handle("/", r)
 
 	// wait for clients
-	http.ListenAndServe(":9999", nil)
+	err := http.ListenAndServe(":9999", nil)
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 }
