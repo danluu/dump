@@ -5,58 +5,21 @@ import (
 )
 
 const (
-	numCards = 52
+	maxCard = 12
 )
 
-func popcount(x uint64) (n int) {
-	x -= (x >> 1) & 0x5555555555555555
-	x = (x>>2)&0x3333333333333333 + x&0x3333333333333333
-	x += x >> 4
-	x &= 0x0f0f0f0f0f0f0f0f
-	x *= 0x0101010101010101
-	return int(x >> 56)
-}
-
-func cardSuitStr(card int) string {
-	switch card {
-	case 0: return "H"
-	case 1: return "D"
-	case 2: return "C"
-	case 3: return "S"
-	default: return "Suit Error"
-	}
-}
-
-func serializeCard(card int) string {
-	value := string(card / 4);
-	suit := cardSuitStr(card);
-	return value + suit;
-}
-
-func serializeHand(hand uint64) []string {
-	handSize := popcount(hand)
-	var handStr []string
-	for i := 0; i < numCards; i++ {
-		if hand & 1 == 1 {
-			handStr = append(handStr, serializeCard(i))
-		}
-	}
-	assert(handSize == len(handStr), "serializeHand handSize check")
-	return handStr
-}
-
+// last is the last thing played, which needs to get sent to clients
+// might not need/want it as part of state.
 type gameState struct {
-	cardsWon []uint64
-	center uint64
-	hands []uint64
+	hands []map[int]int
+	last []int
 	numPlayers int
 	started bool
 }
 
 var globalState = gameState{
-	cardsWon: make([]uint64, 4),
-	center: 0,
-	hands: make([]uint64, 4),
+	hands: make([]map[int]int, 10), // TODO: fix this 10
+	last: make([]int,0),
 	numPlayers: 0,
 	started: false,
 
@@ -78,12 +41,30 @@ func (all *hub) run() {
 				close(c.send)
 			}
 		case b := <-all.ready:
-			cardOrder := rand.Perm(numCards)
-			dealToPlayer := 0
-			for i := 0; i < numCards; i++ {
-				globalState.hands[dealToPlayer] |= 1 << uint(cardOrder[i])
-				dealToPlayer = (dealToPlayer + 1) % 4;
+			deck := make([]int, 0)
+			// Put cards into deck to be shuffled.
+			for i := 0; i <= maxCard; i++ {
+				if (i == 0) { 
+					// TODO: wildcards.
+				} else {
+					// Deal out i cards of value i
+					for j := 0; j < i; j++ {
+						deck = append(deck, i);
+					}
+				}
+
 			}
+
+			// Shuffle deck.
+			shuffledDeck := make([]int, len(deck))
+			perm := rand.Perm(len(deck))
+			for i, v := range perm { shuffledDeck[v] = deck[i] }
+
+			// Deal cards to people.
+			for i, card := range shuffledDeck { 
+				globalState.hands[i % numPlayers][card] += 1
+			}
+			
 			if b {
 				message := GameMessage{"start_game",0,[]string{}}
 				sendToAll(*all, message)
