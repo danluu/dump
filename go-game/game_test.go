@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -32,4 +33,14 @@ func Test_dealDeck_1(t *testing.T) {
 		started: false,
 	}
 	dealDeck(&someState, deck, numPlayers)
+	
+	p0Cards := someState.hands[0]
+	p0Total := 0
+	for _, num := range p0Cards {
+		p0Total += num
+	}
+	if (p0Total != 39) {
+		fmt.Println(p0Total)
+		t.Error("Incorrect number of p0 cards")
+	}
 }
