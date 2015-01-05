@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <thread>
 
-#define NUM_REPEAT 1000000
+#define NUM_REPEAT 10000
 #define NUM_ITERS 10000
 #define NUM_THREADS 2
 
@@ -29,7 +29,7 @@ void increment_lots() {
   for (int i = 0; i < NUM_THREADS; ++i) {
     t[i].join();
   }
-  printf(",%i", counter);
+  printf("%i\n", counter);
 }
 
 int main () {
