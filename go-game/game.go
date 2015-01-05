@@ -50,11 +50,16 @@ func shuffleDeck(deck []int) []int {
 }
 
 func dealDeck(state *gameState, deck[]int, numPlayers int) {
-	for i, card := range deck {
-		_, ok := state.hands[i % numPlayers][card] 
-		if !ok {
-			state.hands[i % numPlayers][card] = 0
+	// Initialize unitialized maps in array of hands.
+	for i := 0; i < numPlayers; i++ {
+		state.hands[i] = make(map[int]int)
+		for j := 0; j < maxCard+1; j++ {
+			state.hands[i][j] = 0
 		}
+
+	}
+
+	for i, card := range deck {
 		state.hands[i % numPlayers][card] += 1
 	}	
 }
