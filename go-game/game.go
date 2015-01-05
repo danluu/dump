@@ -25,6 +25,23 @@ var globalState = gameState{
 
 }
 
+func makeDeck() []int {
+	deck := make([]int, 0)
+	// Put cards into deck to be shuffled.
+	for i := 0; i <= maxCard; i++ {
+		if (i == 0) { 
+			// TODO: wildcards.
+		} else {
+			// Deal out i cards of value i
+			for j := 0; j < i; j++ {
+				deck = append(deck, i);
+			}
+		}
+		
+	}
+	return deck
+}
+
 func (all *hub) run() {
 	numPlayers := 0
 	for {
@@ -41,27 +58,20 @@ func (all *hub) run() {
 				close(c.send)
 			}
 		case b := <-all.ready:
-			deck := make([]int, 0)
-			// Put cards into deck to be shuffled.
-			for i := 0; i <= maxCard; i++ {
-				if (i == 0) { 
-					// TODO: wildcards.
-				} else {
-					// Deal out i cards of value i
-					for j := 0; j < i; j++ {
-						deck = append(deck, i);
-					}
-				}
-
-			}
+			deck := makeDeck()
 
 			// Shuffle deck.
+			sendToAll(*all, GameMessage{"shuffle",0,[]string{}})
 			shuffledDeck := make([]int, len(deck))
 			perm := rand.Perm(len(deck))
 			for i, v := range perm { shuffledDeck[v] = deck[i] }
 
 			// Deal cards to people.
-			for i, card := range shuffledDeck { 
+			for i, card := range shuffledDeck {
+				_, ok := globalState.hands[i % numPlayers][card] 
+				if !ok {
+					globalState.hands[i % numPlayers][card] = 0
+				}
 				globalState.hands[i % numPlayers][card] += 1
 			}
 			
