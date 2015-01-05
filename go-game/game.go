@@ -42,6 +42,13 @@ func makeDeck() []int {
 	return deck
 }
 
+func shuffleDeck(deck []int) []int {
+	shuffledDeck := make([]int, len(deck))
+	perm := rand.Perm(len(deck))
+	for i, v := range perm { shuffledDeck[v] = deck[i] }
+	return shuffledDeck
+}
+
 func (all *hub) run() {
 	numPlayers := 0
 	for {
@@ -59,13 +66,7 @@ func (all *hub) run() {
 			}
 		case b := <-all.ready:
 			deck := makeDeck()
-
-			// Shuffle deck.
-			sendToAll(*all, GameMessage{"shuffle",0,[]string{}})
-			shuffledDeck := make([]int, len(deck))
-			perm := rand.Perm(len(deck))
-			for i, v := range perm { shuffledDeck[v] = deck[i] }
-
+			shuffledDeck := shuffleDeck(deck)
 			// Deal cards to people.
 			for i, card := range shuffledDeck {
 				_, ok := globalState.hands[i % numPlayers][card] 
