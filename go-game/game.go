@@ -49,6 +49,16 @@ func shuffleDeck(deck []int) []int {
 	return shuffledDeck
 }
 
+func dealDeck(state *gameState, deck[]int, numPlayers int) {
+	for i, card := range deck {
+		_, ok := state.hands[i % numPlayers][card] 
+		if !ok {
+			state.hands[i % numPlayers][card] = 0
+		}
+		state.hands[i % numPlayers][card] += 1
+	}	
+}
+
 func (all *hub) run() {
 	numPlayers := 0
 	for {
@@ -67,14 +77,7 @@ func (all *hub) run() {
 		case b := <-all.ready:
 			deck := makeDeck()
 			shuffledDeck := shuffleDeck(deck)
-			// Deal cards to people.
-			for i, card := range shuffledDeck {
-				_, ok := globalState.hands[i % numPlayers][card] 
-				if !ok {
-					globalState.hands[i % numPlayers][card] = 0
-				}
-				globalState.hands[i % numPlayers][card] += 1
-			}
+			dealDeck(&globalState, shuffledDeck, numPlayers)
 			
 			if b {
 				message := GameMessage{"start_game",0,[]string{}}
