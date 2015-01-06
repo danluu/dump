@@ -1,6 +1,8 @@
 package main
 
 import (
+	"encoding/json"
+	"fmt"
 	"math/rand"
 	"strconv"
 )
@@ -109,6 +111,11 @@ func (all *hub) run() {
 		case <-all.broadcast:
 			m := GameMessage{"echo",0,map[string]int{}}
 			sendToAll(*all, m)
+		case incoming := <-all.process:
+			fmt.Println(incoming)
+			var wat interface{}
+			json.Unmarshal(incoming, &wat)
+			fmt.Println(wat)
 		}
 		
 	}

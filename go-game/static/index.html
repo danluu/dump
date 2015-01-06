@@ -4,16 +4,13 @@
 <body>
   <form id="send-cards" class="form-inline">
     <div class="form-group">
-      <input id="input-handle" type="text" class="form-control" placeholder="Card" autofocus />
+      <input id="input-card" type="text" class="form-control" placeholder="Card" autofocus />
     </div>
     <div class="form-group">
-      <input id="input-text" type="text" class="form-control" placeholder="# of cards" autofocus />
+      <input id="input-num-cards" type="text" class="form-control" placeholder="# of cards" autofocus />
     </div>
     <button class="btn btn-primary" type="submit">Send</button>
   </form>
-<div id="them"></div>
-<div id="middle"></div>
-<div id="us"></div>
 <div id="something">
   <button id="Add">Press me!</button>
 </div>
@@ -47,9 +44,9 @@ function WebSocketTest()
      <!-- Make the form work -->
      $("#send-cards").on("submit", function(event) {
        event.preventDefault();
-       var handle = $("#input-handle")[0].value;
-       var text   = $("#input-text")[0].value;
-       ws.send(JSON.stringify({ handle: handle, text: text }));
+       var card = $("#input-card")[0].value;
+       var num_cards   = $("#input-num-cards")[0].value;
+       ws.send(JSON.stringify({ card: card, num_cards: num_cards }));
        $("#input-text")[0].value = "";
      });   
   }
