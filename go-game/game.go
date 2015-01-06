@@ -67,7 +67,8 @@ func dealDeck(state *gameState, deck[]string, numPlayers int) {
 
 func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
 	for i := 0; i < numPlayers; i++ {
-		cardMessage := GameMessage{"player_cards",i,map[string]int{}}
+		hand := state.hands[i]
+		cardMessage := GameMessage{"player_cards",i,hand}
 		sendTo(*gameHub, cardMessage, i)
 	}
 }
