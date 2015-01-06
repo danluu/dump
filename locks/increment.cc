@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <thread>
 
-#define NUM_REPEAT 10000
+#define NUM_REPEAT 100000
 #define NUM_ITERS 10000
 #define NUM_THREADS 2
 
