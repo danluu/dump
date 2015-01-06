@@ -29,7 +29,7 @@ void increment_lots() {
   for (int i = 0; i < NUM_THREADS; ++i) {
     t[i].join();
   }
-  printf("%i,sbridge\n", counter);
+  printf("%i,haswell\n", counter);
 }
 
 int main () {
