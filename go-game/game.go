@@ -73,6 +73,14 @@ func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
 	}
 }
 
+func gameLoop(gameHub *hub, state *gameState, numPlayers int) {
+	startMessage := GameMessage{"start_game",0,map[string]int{}}
+	sendToAll(*gameHub, startMessage)
+	for {
+		select {}
+	}
+}
+
 func (all *hub) run() {
 	numPlayers := 0
 	for {
@@ -96,10 +104,8 @@ func (all *hub) run() {
 			dealDeck(&globalState, shuffledDeck, numPlayers)
 			
 			sendPlayerCards(all, &globalState, numPlayers)
-
-			startMessage := GameMessage{"start_game",0,map[string]int{}}
-			sendToAll(*all, startMessage)
-
+			
+			go gameLoop(all, &globalState, numPlayers)
 		case <-all.broadcast:
 			m := GameMessage{"echo",0,map[string]int{}}
 			sendToAll(*all, m)
