@@ -102,6 +102,13 @@ var globalHub = hub{
 	unregister:  make(chan *connection),
 }
 
+func sendTo(all hub, message GameMessage, player int) {
+	select {
+	case all.connections[player].send <-message:
+	default: // TODO: handle error.
+	}	
+}
+
 func sendToAll(all hub, message GameMessage) {
 	for _,c := range all.connections {
 		select {

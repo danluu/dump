@@ -64,6 +64,13 @@ func dealDeck(state *gameState, deck[]int, numPlayers int) {
 	}	
 }
 
+func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
+	for i := 0; i < numPlayers; i++ {
+		cardMessage := GameMessage{"player_cards",i,[]string{}}
+		sendTo(*gameHub, cardMessage, i)
+	}
+}
+
 func (all *hub) run() {
 	numPlayers := 0
 	for {
@@ -81,15 +88,16 @@ func (all *hub) run() {
 			// 	// TODO: delete connection somehow.
 			// 	close(c.send)
 			// }
-		case b := <-all.ready:
+		case <-all.ready:
 			deck := makeDeck()
 			shuffledDeck := shuffleDeck(deck)
 			dealDeck(&globalState, shuffledDeck, numPlayers)
 			
-			if b {
-				message := GameMessage{"start_game",0,[]string{}}
-				sendToAll(*all, message)
-			}
+			sendPlayerCards(all, &globalState, numPlayers)
+
+			startMessage := GameMessage{"start_game",0,[]string{}}
+			sendToAll(*all, startMessage)
+
 		case <-all.broadcast:
 			m := GameMessage{"echo",0,[]string{}}
 			sendToAll(*all, m)
