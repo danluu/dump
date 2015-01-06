@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+// func Test_serializeHand(t *testing.T) {
+// 	hand := make(map[int]int)
+// 	fmt.Println(hand)
+// 	hand[0] = 0
+// 	hand[12] = 7
+// }
+
 // Check for correct number of cards.
 func Test_makeDeck_1(t *testing.T) {
 	deck := makeDeck()

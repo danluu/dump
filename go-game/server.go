@@ -23,10 +23,12 @@ func assert(cond bool, message string) {
 	}
 }
 
+// Note that gameState has map[int]int but go JSON forces this to be
+// map[string]int
 type GameMessage struct {
 	Message string
 	Player int
-	Cards []string
+	Cards map[string]int
 }
 
 // send is the message from the hub we want to send to the websocket.

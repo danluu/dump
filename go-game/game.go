@@ -2,6 +2,7 @@ package main
 
 import (
 	"math/rand"
+	"strconv"
 )
 
 const (
@@ -11,22 +12,22 @@ const (
 // last is the last thing played, which needs to get sent to clients
 // might not need/want it as part of state.
 type gameState struct {
-	hands []map[int]int
-	last []int
+	hands []map[string]int
+	last []string
 	numPlayers int
 	started bool
 }
 
 var globalState = gameState{
-	hands: make([]map[int]int, 10), // TODO: fix this 10
-	last: make([]int,0),
+	hands: make([]map[string]int, 10), // TODO: fix this 10
+	last: make([]string,0),
 	numPlayers: 0,
 	started: false,
 
 }
 
-func makeDeck() []int {
-	deck := make([]int, 0)
+func makeDeck() []string {
+	deck := make([]string, 0)
 	// Put cards into deck to be shuffled.
 	for i := 0; i <= maxCard; i++ {
 		if (i == 0) { 
@@ -34,7 +35,7 @@ func makeDeck() []int {
 		} else {
 			// Deal out i cards of value i
 			for j := 0; j < i; j++ {
-				deck = append(deck, i);
+				deck = append(deck, strconv.Itoa(i));
 			}
 		}
 		
@@ -42,19 +43,19 @@ func makeDeck() []int {
 	return deck
 }
 
-func shuffleDeck(deck []int) []int {
-	shuffledDeck := make([]int, len(deck))
+func shuffleDeck(deck []string) []string {
+	shuffledDeck := make([]string, len(deck))
 	perm := rand.Perm(len(deck))
 	for i, v := range perm { shuffledDeck[v] = deck[i] }
 	return shuffledDeck
 }
 
-func dealDeck(state *gameState, deck[]int, numPlayers int) {
+func dealDeck(state *gameState, deck[]string, numPlayers int) {
 	// Initialize unitialized maps in array of hands.
 	for i := 0; i < numPlayers; i++ {
-		state.hands[i] = make(map[int]int)
+		state.hands[i] = make(map[string]int)
 		for j := 0; j < maxCard+1; j++ {
-			state.hands[i][j] = 0
+			state.hands[i][strconv.Itoa(j)] = 0
 		}
 
 	}
@@ -66,7 +67,7 @@ func dealDeck(state *gameState, deck[]int, numPlayers int) {
 
 func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
 	for i := 0; i < numPlayers; i++ {
-		cardMessage := GameMessage{"player_cards",i,[]string{}}
+		cardMessage := GameMessage{"player_cards",i,map[string]int{}}
 		sendTo(*gameHub, cardMessage, i)
 	}
 }
@@ -95,11 +96,11 @@ func (all *hub) run() {
 			
 			sendPlayerCards(all, &globalState, numPlayers)
 
-			startMessage := GameMessage{"start_game",0,[]string{}}
+			startMessage := GameMessage{"start_game",0,map[string]int{}}
 			sendToAll(*all, startMessage)
 
 		case <-all.broadcast:
-			m := GameMessage{"echo",0,[]string{}}
+			m := GameMessage{"echo",0,map[string]int{}}
 			sendToAll(*all, m)
 		}
 		
