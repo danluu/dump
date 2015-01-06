@@ -113,9 +113,10 @@ func (all *hub) run() {
 			sendToAll(*all, m)
 		case incoming := <-all.process:
 			fmt.Println(incoming)
-			var wat interface{}
-			json.Unmarshal(incoming, &wat)
+			var wat GameMessage
+			err := json.Unmarshal(incoming, &wat)
 			fmt.Println(wat)
+			fmt.Println(err)
 		}
 		
 	}

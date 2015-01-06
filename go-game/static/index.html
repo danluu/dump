@@ -45,8 +45,11 @@ function WebSocketTest()
      $("#send-cards").on("submit", function(event) {
        event.preventDefault();
        var card = $("#input-card")[0].value;
-       var num_cards   = $("#input-num-cards")[0].value;
-       ws.send(JSON.stringify({ card: card, num_cards: num_cards }));
+       var num_cards   = Number($("#input-num-cards")[0].value);
+       var play = {};
+       var bogus_player = 0;
+       play[card] = num_cards;
+       ws.send(JSON.stringify({ Message : "play_card", Player : bogus_player, Cards : play }));
        $("#input-text")[0].value = "";
      });   
   }
