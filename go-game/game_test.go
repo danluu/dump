@@ -34,8 +34,8 @@ func Test_dealDeck_1(t *testing.T) {
 	deck := makeDeck()
 	numPlayers := 2
 	someState := gameState{
-		hands: make([]map[int]int, 10),
-		last: make([]int,0),
+		hands: make([]map[string]int, 10),
+		last: make([]string,0),
 		numPlayers: 0,
 		started: false,
 	}

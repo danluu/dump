@@ -116,8 +116,8 @@ func (all *hub) run() {
 			// message is from.
 			fmt.Println(incoming)
 			var incomingMessage GameMessage
-			err := json.Unmarshal(incoming, &wat)
-			if (err) {
+			err := json.Unmarshal(incoming, &incomingMessage)
+			if err != nil {
 				// TODO: log this
 				fmt.Println(err)
 				fmt.Println(incoming)
