@@ -88,7 +88,7 @@ func (conn *connection) toBrowser() {
 
 type hub struct {
 	broadcast chan []byte
-	connections map[*connection]bool
+	connections []*connection
 	ready chan bool
 	register chan *connection
 	unregister chan *connection
@@ -96,19 +96,20 @@ type hub struct {
 
 var globalHub = hub{
 	broadcast:   make(chan []byte),
-	connections: make(map[*connection]bool),
+	connections: make([]*connection, 0),
 	ready:       make(chan bool),
 	register:    make(chan *connection),
 	unregister:  make(chan *connection),
 }
 
 func sendToAll(all hub, message GameMessage) {
-	for c := range all.connections {
+	for _,c := range all.connections {
 		select {
 		case c.send <- message:
 		default:
 			close(c.send)
-			delete(all.connections, c)
+			// Close connection somehow.
+			// delete(all.connections, c)
 		}
 	}
 }

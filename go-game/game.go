@@ -69,16 +69,18 @@ func (all *hub) run() {
 	for {
 		select {
 		case c := <-all.register:
-			all.connections[c] = true
+			all.connections = append(all.connections, c)
 			numPlayers++
 			if numPlayers == 2 {
 				go func() {all.ready <- true;}() // This seems bad.
 			}
-		case c := <-all.unregister:
-			if _, ok := all.connections[c]; ok {
-				delete(all.connections, c)
-				close(c.send)
-			}
+		case <-all.unregister:
+			// TODO: handle unregister.
+			// if _, ok := all.connections[c]; ok {
+			// 	// delete(all.connections, c)
+			// 	// TODO: delete connection somehow.
+			// 	close(c.send)
+			// }
 		case b := <-all.ready:
 			deck := makeDeck()
 			shuffledDeck := shuffleDeck(deck)
