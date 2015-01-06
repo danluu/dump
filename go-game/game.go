@@ -112,11 +112,18 @@ func (all *hub) run() {
 			m := GameMessage{"echo",0,map[string]int{}}
 			sendToAll(*all, m)
 		case incoming := <-all.process:
+			// TODO: need to figure out which player the
+			// message is from.
 			fmt.Println(incoming)
-			var wat GameMessage
+			var incomingMessage GameMessage
 			err := json.Unmarshal(incoming, &wat)
-			fmt.Println(wat)
-			fmt.Println(err)
+			if (err) {
+				// TODO: log this
+				fmt.Println(err)
+				fmt.Println(incoming)
+				fmt.Println(incomingMessage)
+			}
+			// TODO: play the card.
 		}
 		
 	}
