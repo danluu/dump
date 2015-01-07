@@ -104,6 +104,8 @@ func numCards(set map[string]int) int {
 func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	fmt.Println("playCards")
 	fmt.Println(incoming)
+	// TODO: subtract played cards from hand.
+	// TODO: check for win/exit.
 	state.lastCards = incoming.Cards
 	state.currentPlayer = state.currentPlayer + 1 % state.numPlayers
 	incoming.Message = "played"
