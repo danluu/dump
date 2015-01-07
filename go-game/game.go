@@ -116,13 +116,14 @@ func (all *hub) run() {
 			// message is from.
 			fmt.Println(incoming)
 			var incomingMessage GameMessage
-			err := json.Unmarshal(incoming, &incomingMessage)
+			err := json.Unmarshal(incoming.Message, &incomingMessage)
 			if err != nil {
 				// TODO: log this
 				fmt.Println(err)
 				fmt.Println(incoming)
 				fmt.Println(incomingMessage)
 			}
+			incomingMessage.Player = incoming.Player
 			// TODO: play the card.
 		}
 		

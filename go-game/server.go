@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"errors"
 	"log"
 	"net/http"
 	"time"
@@ -23,6 +24,11 @@ func assert(cond bool, message string) {
 	}
 }
 
+type BrowserMessage struct {
+	Message []byte
+	Player  int
+}
+
 // Note that gameState has map[int]int but go JSON forces this to be
 // map[string]int
 type GameMessage struct {
@@ -35,6 +41,15 @@ type GameMessage struct {
 type connection struct {
 	websocket *websocket.Conn
 	send chan GameMessage
+}
+
+func (conn *connection) connectionId() (int, error) {
+	for i, c := range globalHub.connections {
+		if c == conn {
+			return i, nil
+		}
+	}
+	return -1, errors.New("Failed to find connection in list")
 }
 
 func (conn *connection) fromBrowser() {
@@ -50,7 +65,9 @@ func (conn *connection) fromBrowser() {
 		if err != nil {
 			break
 		}
-		globalHub.process <- message
+		player, err := conn.connectionId()
+		toProcess := BrowserMessage{message, player}
+		globalHub.process <- toProcess
 		globalHub.broadcast <- message
 	}
 }
@@ -92,7 +109,7 @@ func (conn *connection) toBrowser() {
 type hub struct {
 	broadcast chan []byte
 	connections []*connection
-	process chan []byte
+	process chan BrowserMessage
 	ready chan bool
 	register chan *connection
 	unregister chan *connection
@@ -101,7 +118,7 @@ type hub struct {
 var globalHub = hub{
 	broadcast:   make(chan []byte),
 	connections: make([]*connection, 0),
-	process:     make(chan []byte),
+	process:     make(chan BrowserMessage),
 	ready:       make(chan bool),
 	register:    make(chan *connection),
 	unregister:  make(chan *connection),
