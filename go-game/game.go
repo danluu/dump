@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	maxCard = 3
+	maxCard = 12
 )
 
 // last is the last thing played, which needs to get sent to clients
@@ -130,6 +130,7 @@ func numCards(set map[string]int) int {
 // Take cards out of a player's hand.
 // Return indication that hand is now empty.
 func subtractCards(state *gameState, play GameMessage) bool {
+	fmt.Println("subtractCards")
 	p := play.Player
 	for playCard, playNum := range play.Cards {
 		if handNum, ok := state.hands[p][playCard]; ok {
