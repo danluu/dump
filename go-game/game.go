@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	maxCard = 12
+	maxCard = 3
 )
 
 // last is the last thing played, which needs to get sent to clients
@@ -112,11 +112,12 @@ func hasCards(hand map[string]int, play map[string]int) bool {
 	return possiblePlay
 }
 
-func validPlay(state *gameState, play GameMessage) bool {
+func validPlay(state *gameState, play GameMessage, firstPlay bool) bool {
 	playerHand := state.hands[play.Player]
 	playedCards := play.Cards
 	lastCards := state.lastCards
-	return playMatchesLast(lastCards, playedCards) && hasCards(playerHand, playedCards)
+	playMatches := firstPlay || playMatchesLast(lastCards, playedCards)
+	return playMatches && hasCards(playerHand, playedCards)
 }
 
 func numCards(set map[string]int) int {
@@ -224,10 +225,7 @@ func incomingCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	if numCards(incoming.Cards) == 0 {
 		// Pass.
 		passedTurn(gameHub, state, incoming)
-	} else if len(state.lastCards) == 0 {
-		// First play.
-		playCards(gameHub, state, incoming)
-	} else if validPlay(state, incoming) {
+	} else if validPlay(state, incoming, len(state.lastCards) == 0) {
 		// Nth play.
 		playCards(gameHub, state, incoming)
 	} else {
