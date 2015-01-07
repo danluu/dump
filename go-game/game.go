@@ -16,7 +16,9 @@ const (
 type gameState struct {
 	currentPlayer int
 	firstPass int
+	finishOrder []int
 	hands []map[string]int
+	inGame []bool
 	lastCards map[string]int
 	lastPlayed int
 	numPlayers int
@@ -26,7 +28,9 @@ type gameState struct {
 var globalState = gameState{
 	currentPlayer: 0,
 	firstPass: -1,
+	finishOrder: make([]int, 0),
 	hands: make([]map[string]int, 10), // TODO: fix this 10
+	inGame: make([]bool, 10), // TODO: fix this 10
 	lastCards: make(map[string]int),
 	lastPlayed: -1,
 	numPlayers: 0,
@@ -59,7 +63,9 @@ func shuffleDeck(deck []string) []string {
 
 func dealDeck(state *gameState, deck[]string, numPlayers int) {
 	// Initialize unitialized maps in array of hands.
+	// Also set inGame (deal players into game).
 	for i := 0; i < numPlayers; i++ {
+		state.inGame[i] = true
 		state.hands[i] = make(map[string]int)
 		for j := 0; j < maxCard+1; j++ {
 			state.hands[i][strconv.Itoa(j)] = 0
@@ -122,13 +128,63 @@ func numCards(set map[string]int) int {
 	return -1
 }
 
+// Take cards out of a player's hand.
+// Return indication that hand is now empty.
+func subtractCards(state *gameState, play GameMessage) bool {
+	p := play.Player
+	for playCard, playNum := range play.Cards {
+		if handNum, ok := state.hands[p][playCard]; ok {
+			assert(handNum >= playNum, "subtractCards on too many cards")
+			state.hands[p][playCard] = handNum - playNum
+		} else {
+			assert(false, "subtractCards on cards that don't exist")
+		}
+	}
+
+	handEmpty := true
+	for _, num := range state.hands[p] {
+		if num > 0 {
+			handEmpty = false
+		}
+	}
+	return handEmpty
+}
+
+func isGameOver(state *gameState) bool {
+	numActivePlayers := state.numPlayers - len(state.finishOrder)
+	return numActivePlayers > 1
+}
+
+func setNextPlayer(state *gameState) {
+	state.currentPlayer = state.currentPlayer + 1 % state.numPlayers
+	if !state.inGame[state.currentPlayer] {
+		setNextPlayer(state)
+	}
+}
+
+// 1. Remove played cards from hand.
+// 2. Check for player exit/win.
+// 1/2 handled by subtractCards
+// 3. Set last played cards.
+// 4. Update current player.
+// 5. Send message telling everyone what was played.
+// We assume that the game can only end from this function since players can
+// only exit by having played cards.
 func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
+
 	fmt.Println("playCards")
 	fmt.Println(incoming)
-	// TODO: subtract played cards from hand.
-	// TODO: check for win/exit.
+	if subtractCards(state, incoming) {
+		state.finishOrder = append(state.finishOrder, state.currentPlayer)
+		state.inGame[state.currentPlayer] = false
+		// TODO: send message indicating that player is out.
+	}
 	state.lastCards = incoming.Cards
-	state.currentPlayer = state.currentPlayer + 1 % state.numPlayers
+
+	if isGameOver(state) {
+		// TODO: do something when game is over.
+	}
+	setNextPlayer(state)
 	incoming.Message = "played"
 	sendToAll(*gameHub, incoming)
 }
