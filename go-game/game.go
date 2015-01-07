@@ -17,7 +17,8 @@ type gameState struct {
 	currentPlayer int
 	firstPass int
 	hands []map[string]int
-	last map[string]int
+	lastCards map[string]int
+	lastPlayed int
 	numPlayers int
 	started bool
 }
@@ -26,7 +27,8 @@ var globalState = gameState{
 	currentPlayer: 0,
 	firstPass: -1,
 	hands: make([]map[string]int, 10), // TODO: fix this 10
-	last: make(map[string]int),
+	lastCards: make(map[string]int),
+	lastPlayed: -1,
 	numPlayers: 0,
 	started: false,
 }
@@ -78,13 +80,13 @@ func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
 	}
 }
 
-func validPlay(last map[string]int, current map[string]int) bool {
+func validPlay(lastCards map[string]int, current map[string]int) bool {
 	// TODO: check that player has cards to play.
 
-	assert(len(last) == 1, "last len != 1")	
+	assert(len(lastCards) == 1, "last len != 1")	
 	assert(len(current) == 1, "current len != 1")
 	for currentCard, currentNum := range current {
-		for lastCard, lastNum := range last {
+		for lastCard, lastNum := range lastCards {
 			return currentNum == lastNum && currentCard < lastCard
 		}
 	}
@@ -92,19 +94,63 @@ func validPlay(last map[string]int, current map[string]int) bool {
 	return false
 }
 
+func numCards(set map[string]int) int {
+	assert(len(set) == 1, "numCards len(set) != 1")
+	for _, numCards := range set { return numCards }
+	assert(false, "numCards fallthrough")
+	return -1
+}
+
 func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
-	state.last = incoming.Cards
+	fmt.Println("playCards")
+	fmt.Println(incoming)
+	state.lastCards = incoming.Cards
+	state.currentPlayer = state.currentPlayer + 1 % state.numPlayers
 	incoming.Message = "played"
 	sendToAll(*gameHub, incoming)
 }
 
-func incomingCards(gameHub *hub, state *gameState, incoming GameMessage) {
-	if state.currentPlayer != incoming.Player {
-		// TODO: handle wrong player.
+func passedTurn(gameHub *hub, state *gameState, incoming GameMessage) {
+	fmt.Println("passedTurn")
+	fmt.Println(incoming)
+	if (state.firstPass == -1) {
+		state.firstPass = incoming.Player
+	} else if (state.firstPass == incoming.Player) {
+		// Everybody passed. Hand over.
+		if (state.lastPlayed == -1) {
+			// Nobody played.
+			state.currentPlayer = state.firstPass
+			state.firstPass = -1
+			state.lastPlayed = -1
+			// TODO: send everybody passed message.
+		} else {
+			// Normal winner
+			state.currentPlayer = state.lastPlayed
+			state.firstPass = -1
+			state.lastPlayed = -1
+			// TODO: send hand won message.
+		}
+	} else {
+		// TODO: send pass message.
 	}
-	if len(state.last) == 0 {
-		// TODO: handle first play. Can always play.
-	} else if validPlay(state.last, incoming.Cards) {
+}
+
+func incomingCards(gameHub *hub, state *gameState, incoming GameMessage) {
+	fmt.Println("incomingCards")
+	fmt.Println(incoming)
+	fmt.Println(state)
+	if state.currentPlayer != incoming.Player {
+		// TODO: send message indicating wrong player attempted to play.
+		return
+	}
+	if numCards(incoming.Cards) == 0 {
+		// Pass.
+		passedTurn(gameHub, state, incoming)
+	} else if len(state.lastCards) == 0 {
+		// First play.
+		playCards(gameHub, state, incoming)
+	} else if validPlay(state.lastCards, incoming.Cards) {
+		// Nth play.
 		playCards(gameHub, state, incoming)
 	} else {
 		// TODO: handle bogus play.
