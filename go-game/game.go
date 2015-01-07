@@ -87,8 +87,6 @@ func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
 }
 
 func playMatchesLast(lastCards map[string]int, current map[string]int) bool {
-	// TODO: check that player has cards to play.
-
 	assert(len(lastCards) == 1, "last len != 1")	
 	assert(len(current) == 1, "current len != 1")
 	for currentCard, currentNum := range current {
@@ -177,12 +175,13 @@ func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	if subtractCards(state, incoming) {
 		state.finishOrder = append(state.finishOrder, state.currentPlayer)
 		state.inGame[state.currentPlayer] = false
-		// TODO: send message indicating that player is out.
+		sendToAll(*gameHub, GameMessage{"player_out",incoming.Player,map[string]int{}})
 	}
 	state.lastCards = incoming.Cards
 
 	if isGameOver(state) {
-		// TODO: do something when game is over.
+		sendToAll(*gameHub, GameMessage{"game_over",incoming.Player,map[string]int{}})
+		// TODO: send order in which players exited.
 	}
 	setNextPlayer(state)
 	incoming.Message = "played"
@@ -201,16 +200,16 @@ func passedTurn(gameHub *hub, state *gameState, incoming GameMessage) {
 			state.currentPlayer = state.firstPass
 			state.firstPass = -1
 			state.lastPlayed = -1
-			// TODO: send everybody passed message.
+			sendToAll(*gameHub, GameMessage{"all_pass",0,map[string]int{}})
 		} else {
 			// Normal winner
+			sendToAll(*gameHub, GameMessage{"won_trick",state.lastPlayed,map[string]int{}})
 			state.currentPlayer = state.lastPlayed
 			state.firstPass = -1
 			state.lastPlayed = -1
-			// TODO: send hand won message.
 		}
 	} else {
-		// TODO: send pass message.
+		sendToAll(*gameHub, GameMessage{"player_pass",incoming.Player,map[string]int{}})
 	}
 }
 
