@@ -37,6 +37,7 @@ var globalState = gameState{
 	started: false,
 }
 
+// Create a deck with i copies of card of value i.
 func makeDeck() []string {
 	deck := make([]string, 0)
 	// Put cards into deck to be shuffled.
@@ -54,6 +55,7 @@ func makeDeck() []string {
 	return deck
 }
 
+// Shuffle an array. TODO: random seeds.
 func shuffleDeck(deck []string) []string {
 	shuffledDeck := make([]string, len(deck))
 	perm := rand.Perm(len(deck))
@@ -90,6 +92,7 @@ func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
 	}
 }
 
+// Check that the current play is the same number of cards of some lower value.
 func playMatchesLast(lastCards map[string]int, current map[string]int) bool {
 	assert(len(lastCards) == 1, "last len != 1")	
 	assert(len(current) == 1, "current len != 1")
@@ -102,6 +105,7 @@ func playMatchesLast(lastCards map[string]int, current map[string]int) bool {
 	return false
 }
 
+// Check that a play is a subset of a hand.
 func hasCards(hand map[string]int, play map[string]int) bool {
 	possiblePlay := true
 	for playCard, playNum := range play {
@@ -116,6 +120,9 @@ func hasCards(hand map[string]int, play map[string]int) bool {
 	return possiblePlay
 }
 
+// 1. The player must have the cards they want to play
+// 2. If the play isn't the first play of the trick, the cards must match
+// the previous play and be of lower rank.
 func validPlay(state *gameState, play GameMessage, firstPlay bool) bool {
 	playerHand := state.hands[play.Player]
 	playedCards := play.Cards
@@ -154,11 +161,14 @@ func subtractCards(state *gameState, play GameMessage) bool {
 	return handEmpty
 }
 
+// End game when 1 player is left in since they can just play their cards
+// in any arbitrary order.
 func isGameOver(state *gameState) bool {
 	numActivePlayers := state.numPlayers - len(state.finishOrder)
 	return numActivePlayers <= 1
 }
 
+// Find next player who isn't out.
 func setNextPlayer(state *gameState) {
 	fmt.Println("setNextPlayer")
 	state.currentPlayer = (state.currentPlayer + 1) % state.numPlayers
@@ -170,9 +180,11 @@ func setNextPlayer(state *gameState) {
 // 1. Remove played cards from hand.
 // 2. Check for player exit/win.
 // 1/2 handled by subtractCards
-// 3. Set last played cards.
-// 4. Update current player.
+// 3. Check if game is over.
+// 4. Set last played cards.
 // 5. Send message telling everyone what was played.
+// 6. Update current player.
+// 7. Send message to tell new current player about their cards.
 // We assume that the game can only end from this function since players can
 // only exit by having played cards.
 func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
@@ -193,12 +205,16 @@ func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	incoming.Message = "played"
 	sendToAll(*gameHub, incoming)
 	state.lastPlayed = state.currentPlayer
+	state.firstPass = -1
 
 	setNextPlayer(state)
 	sendOnePlayerCards(gameHub, state, state.currentPlayer)
 }
 
 // TODO fix minor bug where the first passing player has to pass twice.
+// This logic should be re-worked since it's a bit brittle.
+// An "easy" fix for the TODO would be to set the first passed to last played
+// but if that player went out they won't have a turn and the trick will never end.
 func passedTurn(gameHub *hub, state *gameState, incoming GameMessage) {
 	fmt.Println("passedTurn")
 	fmt.Println(incoming)
