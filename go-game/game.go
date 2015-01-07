@@ -80,7 +80,7 @@ func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
 	}
 }
 
-func validPlay(lastCards map[string]int, current map[string]int) bool {
+func playMatchesLast(lastCards map[string]int, current map[string]int) bool {
 	// TODO: check that player has cards to play.
 
 	assert(len(lastCards) == 1, "last len != 1")	
@@ -90,8 +90,29 @@ func validPlay(lastCards map[string]int, current map[string]int) bool {
 			return currentNum == lastNum && currentCard < lastCard
 		}
 	}
-	assert(false, "fell through validPlay")
+	assert(false, "fell through playMatchesLast")
 	return false
+}
+
+func hasCards(hand map[string]int, play map[string]int) bool {
+	possiblePlay := true
+	for playCard, playNum := range play {
+		if handNum, ok := hand[playCard]; ok {
+			if (playNum > handNum) {
+				possiblePlay = false
+			}
+		} else {
+			possiblePlay = false
+		}
+	}
+	return possiblePlay
+}
+
+func validPlay(state *gameState, play GameMessage) bool {
+	playerHand := state.hands[play.Player]
+	playedCards := play.Cards
+	lastCards := state.lastCards
+	return playMatchesLast(lastCards, playedCards) && hasCards(playerHand, playedCards)
 }
 
 func numCards(set map[string]int) int {
@@ -151,7 +172,7 @@ func incomingCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	} else if len(state.lastCards) == 0 {
 		// First play.
 		playCards(gameHub, state, incoming)
-	} else if validPlay(state.lastCards, incoming.Cards) {
+	} else if validPlay(state, incoming) {
 		// Nth play.
 		playCards(gameHub, state, incoming)
 	} else {
