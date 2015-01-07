@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	maxCard = 12
+	maxCard = 3
 )
 
 // last is the last thing played, which needs to get sent to clients
@@ -78,11 +78,15 @@ func dealDeck(state *gameState, deck[]string, numPlayers int) {
 	}	
 }
 
+func sendOnePlayerCards(gameHub *hub, state *gameState, player int) {
+	hand := state.hands[player]
+	cardMessage := GameMessage{"player_cards",player,hand}
+	sendTo(*gameHub, cardMessage, player)
+}
+
 func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
 	for i := 0; i < numPlayers; i++ {
-		hand := state.hands[i]
-		cardMessage := GameMessage{"player_cards",i,hand}
-		sendTo(*gameHub, cardMessage, i)
+		sendOnePlayerCards(gameHub, state, i)
 	}
 }
 
@@ -152,11 +156,12 @@ func subtractCards(state *gameState, play GameMessage) bool {
 
 func isGameOver(state *gameState) bool {
 	numActivePlayers := state.numPlayers - len(state.finishOrder)
-	return numActivePlayers > 1
+	return numActivePlayers <= 1
 }
 
 func setNextPlayer(state *gameState) {
-	state.currentPlayer = state.currentPlayer + 1 % state.numPlayers
+	fmt.Println("setNextPlayer")
+	state.currentPlayer = (state.currentPlayer + 1) % state.numPlayers
 	if !state.inGame[state.currentPlayer] {
 		setNextPlayer(state)
 	}
@@ -185,16 +190,23 @@ func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
 		sendToAll(*gameHub, GameMessage{"game_over",incoming.Player,map[string]int{}})
 		// TODO: send order in which players exited.
 	}
-	setNextPlayer(state)
 	incoming.Message = "played"
 	sendToAll(*gameHub, incoming)
+	state.lastPlayed = state.currentPlayer
+
+	setNextPlayer(state)
+	sendOnePlayerCards(gameHub, state, state.currentPlayer)
 }
 
+// TODO fix minor bug where the first passing player has to pass twice.
 func passedTurn(gameHub *hub, state *gameState, incoming GameMessage) {
 	fmt.Println("passedTurn")
 	fmt.Println(incoming)
 	if (state.firstPass == -1) {
 		state.firstPass = incoming.Player
+		sendToAll(*gameHub, GameMessage{"player_pass",incoming.Player,map[string]int{}})
+		setNextPlayer(state)
+		sendOnePlayerCards(gameHub, state, state.currentPlayer)		
 	} else if (state.firstPass == incoming.Player) {
 		// Everybody passed. Hand over.
 		if (state.lastPlayed == -1) {
@@ -203,15 +215,19 @@ func passedTurn(gameHub *hub, state *gameState, incoming GameMessage) {
 			state.firstPass = -1
 			state.lastPlayed = -1
 			sendToAll(*gameHub, GameMessage{"all_pass",0,map[string]int{}})
+			sendOnePlayerCards(gameHub, state, state.currentPlayer)		
 		} else {
 			// Normal winner
 			sendToAll(*gameHub, GameMessage{"won_trick",state.lastPlayed,map[string]int{}})
 			state.currentPlayer = state.lastPlayed
 			state.firstPass = -1
 			state.lastPlayed = -1
+			sendOnePlayerCards(gameHub, state, state.currentPlayer)		
 		}
 	} else {
 		sendToAll(*gameHub, GameMessage{"player_pass",incoming.Player,map[string]int{}})
+		setNextPlayer(state)
+		sendOnePlayerCards(gameHub, state, state.currentPlayer)		
 	}
 }
 
@@ -251,6 +267,7 @@ func (all *hub) run() {
 			all.connections = append(all.connections, c)
 			numPlayers++
 			if numPlayers == 2 {
+				globalState.numPlayers = 2
 				go func() {all.ready <- true;}() // This seems bad.
 			}
 		case <-all.unregister:
@@ -268,9 +285,6 @@ func (all *hub) run() {
 			sendPlayerCards(all, &globalState, numPlayers)
 			
 			go gameLoop(all, &globalState, numPlayers)
-		case <-all.broadcast:
-			m := GameMessage{"echo",0,map[string]int{}}
-			sendToAll(*all, m)
 		case incoming := <-all.process:
 			// TODO: need to figure out which player the
 			// message is from.

@@ -68,7 +68,6 @@ func (conn *connection) fromBrowser() {
 		player, err := conn.connectionId()
 		toProcess := BrowserMessage{message, player}
 		globalHub.process <- toProcess
-		globalHub.broadcast <- message
 	}
 }
 
@@ -107,7 +106,6 @@ func (conn *connection) toBrowser() {
 }
 
 type hub struct {
-	broadcast chan []byte
 	connections []*connection
 	process chan BrowserMessage
 	ready chan bool
@@ -116,7 +114,6 @@ type hub struct {
 }
 
 var globalHub = hub{
-	broadcast:   make(chan []byte),
 	connections: make([]*connection, 0),
 	process:     make(chan BrowserMessage),
 	ready:       make(chan bool),
