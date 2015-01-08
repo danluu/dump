@@ -25,6 +25,21 @@
 
     <script src="jquery-2.1.3.js"></script>
     <script type="text/javascript">
+     function getSortedKeys(obj) {
+	 // TODO: sort by integer value and not string value.
+	 keys = Object.keys(obj)
+	 return keys.sort();
+     }
+
+     function makeCardString(cardObj) {
+	 keys = getSortedKeys(cardObj);
+	 var cards = ""
+	 for (var k in keys) {
+	     cards += (k + ":" + cardObj[k] + " ")
+	 }
+	 return cards;
+     }
+
      function WebSocketTest() {
 	 if ("WebSocket" in window) {
 	     $('<p>Websocket connection opened</p>').appendTo('#log');
@@ -33,11 +48,13 @@
 	     ws.onmessage = function (evt) { 
 		 var received_msg = evt.data;
 		 var received_obj = JSON.parse(received_msg);
+		 console.debug("%o", received_obj);
 		 switch(received_obj.Message) {
 			 case "player_cards":
 			 console.log("Got player_cards");
 			 document.getElementById("my-cards").innerHTML = "";
-			 $('<p>' + received_msg + '</p>').appendTo('#my-cards');
+			 var cards = makeCardString(received_obj.Cards);
+			 $('<p>' + cards + '</p>').appendTo('#my-cards');
 			 break;
 			 case "start_game":
 			 console.log("Got start_game");
@@ -46,8 +63,6 @@
 			 console.log("Unknown message type");
 			 $('<p>' + received_msg + '</p>').appendTo('#log');
 		 }
-		 console.debug("%o", received_obj);
-
 	     };
 	     ws.onclose = function() { 
 		 $('<p>Websocket connection closed</p>').appendTo('#log');
