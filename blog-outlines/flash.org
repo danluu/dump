@@ -1,0 +1,10 @@
+* Flash fails!
+** 3 months! bad!
+* Why?
+** Background
+*** Charge pos/neg
+*** Voltage is potential. E-field is delta potential. Like rolling down a hill. Current flow.
+*** Bands. Why they exist. Metals vs. Semiconductors.
+** Flash device
+*** Goal is to make a switch like thing
+*** One cell.
