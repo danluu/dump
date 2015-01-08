@@ -11,9 +11,15 @@
 	</div>
 	<button class="btn btn-primary" type="submit">Send</button>
     </form>
-    <div id="other-cards"></div>
-    <div id="last-cards"></div>
-    <div id="my-cards"></div>
+    <div id="other-cards-header"><h3>Other Cards</h3>
+	<div id="other-cards"></div>
+    </div>
+    <div id="last-play-header"><h3>Last Play</h3>
+	<div id="last-cards"></div>
+    </div>
+    <div id="my-cards-header"><h3>My Cards</h3>
+	<div id="my-cards"></div>
+    </div>
     <div id="log"></div>
     <script src="jquery-2.1.3.js"></script>
 
@@ -29,14 +35,18 @@
 		 switch(received_obj.Message) {
 			 case "player_cards":
 			 console.log("Got player_cards");
+			 document.getElementById("my-cards").innerHTML = "";
+			 $('<p>' + received_msg + '</p>').appendTo('#my-cards');
 			 break;
 			 case "start_game":
 			 console.log("Got start_game");
+			 break;
 			 default:
 			 console.log("Unknown message type");
+			 $('<p>' + received_msg + '</p>').appendTo('#log');
 		 }
 		 console.debug("%o", received_obj);
-		 $('<p>' + received_msg + '</p>').appendTo('#log');
+
 	     };
 	     ws.onclose = function() { 
 		 $('<p>Websocket connection closed</p>').appendTo('#log');
