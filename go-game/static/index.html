@@ -25,6 +25,17 @@
 	     var ws = new WebSocket("ws://localhost:9999/echo");
 	     ws.onmessage = function (evt) { 
 		 var received_msg = evt.data;
+		 var received_obj = JSON.parse(received_msg);
+		 switch(received_obj.Message) {
+			 case "player_cards":
+			 console.log("Got player_cards");
+			 break;
+			 case "start_game":
+			 console.log("Got start_game");
+			 default:
+			 console.log("Unknown message type");
+		 }
+		 console.debug("%o", received_obj);
 		 $('<p>' + received_msg + '</p>').appendTo('#log');
 	     };
 	     ws.onclose = function() { 
