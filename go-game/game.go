@@ -15,26 +15,32 @@ const (
 // might not need/want it as part of state.
 type gameState struct {
 	currentPlayer int
-	firstPass int
 	finishOrder []int
 	hands []map[string]int
 	inGame []bool
 	lastCards map[string]int
 	lastPlayed int
 	numPlayers int
+	playerPassed []bool
 	started bool
 }
 
 var globalState = gameState{
 	currentPlayer: 0,
-	firstPass: -1,
 	finishOrder: make([]int, 0),
 	hands: make([]map[string]int, 10), // TODO: fix this 10
 	inGame: make([]bool, 10), // TODO: fix this 10
 	lastCards: make(map[string]int),
 	lastPlayed: -1,
 	numPlayers: 0,
+	playerPassed: make([]bool, 10), // TODO: fix this 10
 	started: false,
+}
+
+func resetPassState(state *gameState) {
+	for i := 0; i < state.numPlayers; i++ {
+		state.playerPassed[i] = false;
+	}
 }
 
 // Create a deck with i copies of card of value i.
@@ -66,6 +72,8 @@ func shuffleDeck(deck []string) []string {
 func dealDeck(state *gameState, deck[]string, numPlayers int) {
 	// Initialize unitialized maps in array of hands.
 	// Also set inGame (deal players into game).
+	// And set pass state to false for each player.
+	resetPassState(state)
 	for i := 0; i < numPlayers; i++ {
 		state.inGame[i] = true
 		state.hands[i] = make(map[string]int)
@@ -188,9 +196,9 @@ func setNextPlayer(state *gameState) {
 // We assume that the game can only end from this function since players can
 // only exit by having played cards.
 func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
-
 	fmt.Println("playCards")
 	fmt.Println(incoming)
+
 	if subtractCards(state, incoming) {
 		state.finishOrder = append(state.finishOrder, state.currentPlayer)
 		state.inGame[state.currentPlayer] = false
@@ -205,45 +213,52 @@ func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	incoming.Message = "played"
 	sendToAll(*gameHub, incoming)
 	state.lastPlayed = state.currentPlayer
-	state.firstPass = -1
 
+	resetPassState(state)	
 	setNextPlayer(state)
 	sendOnePlayerCards(gameHub, state, state.currentPlayer)
 }
 
-// TODO fix minor bug where the first passing player has to pass twice.
-// This logic should be re-worked since it's a bit brittle.
-// An "easy" fix for the TODO would be to set the first passed to last played
-// but if that player went out they won't have a turn and the trick will never end.
+func everyonePassed(state *gameState) bool {
+	allPass := true
+	for i := 0; i < state.numPlayers; i++ {
+		if (!state.playerPassed[i]) && state.inGame[i] {
+			allPass = false
+		}
+	}
+	return allPass
+}
+
+// We keep track of everyone who's passed. That's reset on every card play.
+// If everyone who's inGame has passed the trick is over. Play goes to the
+// last person to have played.
+// TODO: handle case where person who's out gets a turn. At the start of their
+// turn there should be a check to see if they're in the game. If they're not,
+// setNextPlayer should get called.
+// If no one's played and everyone passed, setNextPlayer should set the correct 
+// next player.
 func passedTurn(gameHub *hub, state *gameState, incoming GameMessage) {
 	fmt.Println("passedTurn")
 	fmt.Println(incoming)
-	if (state.firstPass == -1) {
-		state.firstPass = incoming.Player
-		sendToAll(*gameHub, GameMessage{"player_pass",incoming.Player,map[string]int{}})
-		setNextPlayer(state)
-		sendOnePlayerCards(gameHub, state, state.currentPlayer)		
-	} else if (state.firstPass == incoming.Player) {
-		// Everybody passed. Hand over.
-		if (state.lastPlayed == -1) {
-			// Nobody played.
-			state.currentPlayer = state.firstPass
-			state.firstPass = -1
-			state.lastPlayed = -1
-			sendToAll(*gameHub, GameMessage{"all_pass",0,map[string]int{}})
-			sendOnePlayerCards(gameHub, state, state.currentPlayer)		
-		} else {
-			// Normal winner
+
+	state.playerPassed[incoming.Player] = true
+	if everyonePassed(state) {
+		resetPassState(state)
+		if state.lastPlayed != -1 {
+			// Someone won the trick.
 			sendToAll(*gameHub, GameMessage{"won_trick",state.lastPlayed,map[string]int{}})
 			state.currentPlayer = state.lastPlayed
-			state.firstPass = -1
 			state.lastPlayed = -1
-			sendOnePlayerCards(gameHub, state, state.currentPlayer)		
+			state.lastCards =  make(map[string]int) // TODO: don't GC and alloc this
+		} else {
+			// Everyone passed without playing. Trick over.
+			sendToAll(*gameHub, GameMessage{"all_pass",0,map[string]int{}})
+			setNextPlayer(state)
 		}
 	} else {
+		// A player passed. Trick continues.
 		sendToAll(*gameHub, GameMessage{"player_pass",incoming.Player,map[string]int{}})
 		setNextPlayer(state)
-		sendOnePlayerCards(gameHub, state, state.currentPlayer)		
 	}
 }
 
