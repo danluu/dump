@@ -15,7 +15,7 @@ import (
 // Check for correct number of cards.
 func Test_makeDeck_1(t *testing.T) {
 	deck := makeDeck()
-	if (len(deck) != (maxCard+1) * maxCard / 2) {
+	if len(deck) != (maxCard+1)*maxCard/2 {
 		t.Error("Incorrect number of cards")
 	}
 }
@@ -24,9 +24,9 @@ func Test_makeDeck_1(t *testing.T) {
 func Test_shuffleDeck_1(t *testing.T) {
 	deck := makeDeck()
 	shuffledDeck := shuffleDeck(deck)
-	if (len(shuffledDeck) != (maxCard+1) * maxCard / 2) {
+	if len(shuffledDeck) != (maxCard+1)*maxCard/2 {
 		t.Error("Incorrect number of cards")
-	}	
+	}
 }
 
 // Check that we can deal out cards without crashing. Unshuffled deck.
@@ -34,20 +34,20 @@ func Test_dealDeck_1(t *testing.T) {
 	deck := makeDeck()
 	numPlayers := 2
 	someState := gameState{
-		hands: make([]map[string]int, 10),
-		inGame: make([]bool, 10),
-		lastCards: make(map[string]int),
+		hands:      make([]map[string]int, 10),
+		inGame:     make([]bool, 10),
+		lastCards:  make(map[string]int),
 		numPlayers: 0,
-		started: false,
+		started:    false,
 	}
 	dealDeck(&someState, deck, numPlayers)
-	
+
 	p0Cards := someState.hands[0]
 	p0Total := 0
 	for _, num := range p0Cards {
 		p0Total += num
 	}
-	if (p0Total != 39) {
+	if p0Total != 39 {
 		fmt.Println(p0Total)
 		t.Error("Incorrect number of p0 cards")
 	}
@@ -67,7 +67,7 @@ func Test_subtractCards_1(t *testing.T) {
 	}
 
 	playCards := map[string]int{"2": 2}
-	play := GameMessage{"foobar",0,playCards}	
+	play := GameMessage{"foobar", 0, playCards}
 
 	subtractCards(&someState, play)
 	totalCards := 0

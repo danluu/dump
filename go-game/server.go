@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 	"log"
 	"net/http"
 	"time"
@@ -12,9 +12,9 @@ import (
 )
 
 const (
-	writeWait = 10 * time.Second
-	pongWait = 60 * time.Second
-	pingPeriod = (pongWait * 9) / 10
+	writeWait      = 10 * time.Second
+	pongWait       = 60 * time.Second
+	pingPeriod     = (pongWait * 9) / 10
 	maxMessageSize = 512
 )
 
@@ -33,14 +33,14 @@ type BrowserMessage struct {
 // map[string]int
 type GameMessage struct {
 	Message string
-	Player int
-	Cards map[string]int
+	Player  int
+	Cards   map[string]int
 }
 
 // send is the message from the hub we want to send to the websocket.
 type connection struct {
 	websocket *websocket.Conn
-	send chan GameMessage
+	send      chan GameMessage
 }
 
 func (conn *connection) connectionId() (int, error) {
@@ -107,10 +107,10 @@ func (conn *connection) toBrowser() {
 
 type hub struct {
 	connections []*connection
-	process chan BrowserMessage
-	ready chan bool
-	register chan *connection
-	unregister chan *connection
+	process     chan BrowserMessage
+	ready       chan bool
+	register    chan *connection
+	unregister  chan *connection
 }
 
 var globalHub = hub{
@@ -123,13 +123,13 @@ var globalHub = hub{
 
 func sendTo(all hub, message GameMessage, player int) {
 	select {
-	case all.connections[player].send <-message:
+	case all.connections[player].send <- message:
 	default: // TODO: handle error.
-	}	
+	}
 }
 
 func sendToAll(all hub, message GameMessage) {
-	for _,c := range all.connections {
+	for _, c := range all.connections {
 		select {
 		case c.send <- message:
 		default:
@@ -150,7 +150,7 @@ func wsHandler(response http.ResponseWriter, request *http.Request) {
 		http.Error(response, "Method not allowed", 405)
 		return
 	}
-	
+
 	wsConnection, err := upgrader.Upgrade(response, request, nil)
 	if err != nil {
 		log.Println(err)
@@ -169,7 +169,7 @@ func main() {
 	r := mux.NewRouter()
 
 	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
-	http.HandleFunc("/echo",wsHandler)
+	http.HandleFunc("/echo", wsHandler)
 	http.Handle("/", r)
 
 	// wait for clients
