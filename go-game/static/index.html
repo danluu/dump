@@ -1,66 +1,60 @@
 <head>
-<link href="simple.css" type="text/css" rel="stylesheet" />
+    <link href="simple.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-  <form id="send-cards" class="form-inline">
-    <div class="form-group">
-      <input id="input-card" type="text" class="form-control" placeholder="Card" autofocus />
-    </div>
-    <div class="form-group">
-      <input id="input-num-cards" type="text" class="form-control" placeholder="# of cards" autofocus />
-    </div>
-    <button class="btn btn-primary" type="submit">Send</button>
-  </form>
-<div id="other-cards"></div>
-<div id="last-cards"></div>
-<div id="my-cards"></div>
-<div id="log"></div>
-<script src="jquery-2.1.3.js"></script>
+    <form id="send-cards" class="form-inline">
+	<div class="form-group">
+	    <input id="input-card" type="text" class="form-control" placeholder="Card" autofocus />
+	</div>
+	<div class="form-group">
+	    <input id="input-num-cards" type="text" class="form-control" placeholder="# of cards" autofocus />
+	</div>
+	<button class="btn btn-primary" type="submit">Send</button>
+    </form>
+    <div id="other-cards"></div>
+    <div id="last-cards"></div>
+    <div id="my-cards"></div>
+    <div id="log"></div>
+    <script src="jquery-2.1.3.js"></script>
 
-<script type="text/javascript">
-function WebSocketTest()
-{
-  if ("WebSocket" in window)
-  {
-     $('<p>Websocket connection opened</p>').appendTo('#log');
-     // Let us open a web socket
-     var ws = new WebSocket("ws://localhost:9999/echo");
-     ws.onmessage = function (evt) 
-     { 
-       var received_msg = evt.data;
-       $('<p>' + received_msg + '</p>').appendTo('#log');
-     };
-     ws.onclose = function()
-     { 
-       $('<p>Websocket connection closed</p>').appendTo('#log');
-     };
+    <script type="text/javascript">
+     function WebSocketTest() {
+	 if ("WebSocket" in window) {
+	     $('<p>Websocket connection opened</p>').appendTo('#log');
+	     // Let us open a web socket
+	     var ws = new WebSocket("ws://localhost:9999/echo");
+	     ws.onmessage = function (evt) { 
+		 var received_msg = evt.data;
+		 $('<p>' + received_msg + '</p>').appendTo('#log');
+	     };
+	     ws.onclose = function() { 
+		 $('<p>Websocket connection closed</p>').appendTo('#log');
+	     };
 
-     <!-- Send a websockets message on click -->
-     $(function () {
-       $('#Add').on('click', function () {
-       ws.send("Message body");
-       });
-     });
+	     <!-- Send a websockets message on click -->
+	     $(function () {
+		 $('#Add').on('click', function () {
+		     ws.send("Message body");
+		 });
+	     });
 
-     <!-- Make the form work -->
-     $("#send-cards").on("submit", function(event) {
-       event.preventDefault();
-       var card = $("#input-card")[0].value;
-       var num_cards   = Number($("#input-num-cards")[0].value);
-       var play = {};
-       var bogus_player = 0;
-       play[card] = num_cards;
-       ws.send(JSON.stringify({ Message : "play_card", Player : bogus_player, Cards : play }));
-       $("#input-text")[0].value = "";
-     });   
-  }
-  else
-  {
-     // The browser doesn't support WebSocket
-     alert("WebSocket NOT supported by your Browser!");
-  }
-}
-WebSocketTest();
-
-</script>
+	     <!-- Make the form work -->
+	     $("#send-cards").on("submit", function(event) {
+		 event.preventDefault();
+		 var card = $("#input-card")[0].value;
+		 var num_cards   = Number($("#input-num-cards")[0].value);
+		 var play = {};
+		 var bogus_player = 0;
+		 play[card] = num_cards;
+		 ws.send(JSON.stringify({ Message : "play_card", Player : bogus_player, Cards : play }));
+		 $("#input-text")[0].value = "";
+	     });   
+	 } else {
+	     // The browser doesn't support WebSocket
+	     alert("WebSocket NOT supported by your Browser!");
+	 }
+     }
+     WebSocketTest();
+     
+    </script>
 </body>
