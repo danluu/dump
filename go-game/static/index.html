@@ -5,6 +5,9 @@
     <div id="other-cards-header"><h3>Other Cards</h3>
 	<div id="other-cards"></div>
     </div>
+    <div id="player-actions-header"><h3>Player Actions</h3>
+	<div id="player-actions"></div>
+    </div>    
     <div id="last-play-header"><h3>Last Play</h3>
 	<div id="last-cards"></div>
     </div>
@@ -56,6 +59,11 @@
 			 var cards = makeCardString(received_obj.Cards);
 			 $('<p>' + cards + '</p>').appendTo('#my-cards');
 			 break;
+			 case "last_play":
+			 console.log("Got last_play");
+			 document.getElementById("last-play").innerHTML = "";
+			 var cards = makeCardString(received_obj.Cards);
+			 $('<p>' + cards + '</p>').appendTo('#last-play');
 			 case "start_game":
 			 console.log("Got start_game");
 			 break;
