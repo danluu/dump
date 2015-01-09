@@ -40,6 +40,8 @@
 	 var keys = getSortedKeys(cardObj);
 	 console.log(keys);
 	 var cards = ""
+	 // TODO: figure out better syntax for this so we don't have to
+	 // index all the time.
 	 for (var k in keys) {
 	     cards += (keys[k] + ":" + cardObj[keys[k]] + " ");
 	 }
