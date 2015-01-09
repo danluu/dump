@@ -35,10 +35,7 @@
      }
 
      function makeCardString(cardObj) {
-	 console.log("makeCardString");
-	 console.log(cardObj);
 	 var keys = getSortedKeys(cardObj);
-	 console.log(keys);
 	 var cards = ""
 	 // TODO: figure out better syntax for this so we don't have to
 	 // index all the time.
@@ -55,6 +52,12 @@
 	 var appendMe = lastPlayerAction.join(' ');
 	 console.log(appendMe);
 	 $('<p>' + appendMe + '</p>').appendTo('#player-actions'); 
+     }
+
+     function resetPlayerAction(lastPlayerAction, numPlayers) {
+	 for (var i = 0; i < numPlayers; i++) {
+	     lastPlayerAction[i] = "None";
+	 }
      }
 
      function WebSocketTest() {
@@ -80,19 +83,45 @@
 			 document.getElementById("last-play").innerHTML = "";
 			 var cards = makeCardString(received_obj.Cards);
 			 $('<p>' + cards + '</p>').appendTo('#last-play');
+			 break;
 			 case "played":
 			 console.log("Got played");
 			 var player = received_obj.Player;
 			 var cards = makeCardString(received_obj.Cards);
 			 lastPlayerAction[player] = cards;
-			 console.log(lastPlayerAction);
 			 updatePlayerAction(lastPlayerAction);
+			 break;
+			 case "player_pass":
+			 console.log("Got player_pass");
+			 var player = received_obj.Player;
+			 lastPlayerAction[player] = "Pass";
+			 updatePlayerAction(lastPlayerAction);
+			 break;
+			 case "all_pass":
+			 console.log("Got all_pass");
+			 resetPlayerAction(lastPlayerAction, numPlayers);
+			 updatePlayerAction(lastPlayerAction);
+			 break;
+			 case "won_trick":
+			 console.log("Got won_trick");
+			 var player = received_obj.Player;
+			 resetPlayerAction(lastPlayerAction, numPlayers);
+			 lastPlayerAction[player] = "Won Trick";
+			 break;
+			 case "player_out":
+			 // TODO: figure out how to handle this. We want players to stay out
+			 // and not get their status reset to "None". If it's handled on the
+			 // client side then the client has to remember stuff. If it's handled
+			 // by the server, the server needs to have more state and send different
+			 // types of messages.								
+			 break;
 			 case "start_game":
 			 console.log("Got start_game");
 			 numPlayers = received_obj.Player;
 			 for (var i = 0; i < numPlayers; i++) {
 			     lastPlayerAction.push("None");
 			 }
+			 resetPlayerAction(lastPlayerAction, numPlayers);
 			 updatePlayerAction(lastPlayerAction);
 			 break;
 			 default:
