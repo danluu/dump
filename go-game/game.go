@@ -286,14 +286,6 @@ func incomingCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	return
 }
 
-func gameLoop(gameHub *hub, state *gameState, numPlayers int) {
-	startMessage := GameMessage{"start_game", 0, map[string]int{}}
-	sendToAll(*gameHub, startMessage)
-	for {
-		select {}
-	}
-}
-
 func (all *hub) run() {
 	numPlayers := 0
 	for {
@@ -319,7 +311,8 @@ func (all *hub) run() {
 
 			sendPlayerCards(all, &globalState, numPlayers)
 
-			go gameLoop(all, &globalState, numPlayers)
+			startMessage := GameMessage{"start_game", numPlayers, map[string]int{}}
+			sendToAll(*all, startMessage)
 		case incoming := <-all.process:
 			// TODO: need to figure out which player the
 			// message is from.

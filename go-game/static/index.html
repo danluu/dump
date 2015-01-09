@@ -30,17 +30,29 @@
     <script type="text/javascript">
      function getSortedKeys(obj) {
 	 // TODO: sort by integer value and not string value.
-	 keys = Object.keys(obj)
+	 var keys = Object.keys(obj);
 	 return keys.sort();
      }
 
      function makeCardString(cardObj) {
-	 keys = getSortedKeys(cardObj);
+	 console.log("makeCardString");
+	 console.log(cardObj);
+	 var keys = getSortedKeys(cardObj);
+	 console.log(keys);
 	 var cards = ""
 	 for (var k in keys) {
-	     cards += (k + ":" + cardObj[k] + " ")
+	     cards += (keys[k] + ":" + cardObj[keys[k]] + " ");
 	 }
 	 return cards;
+     }
+
+     // TODO: highlight last action taken.
+     function updatePlayerAction(lastPlayerAction) {
+	 console.log("updatePlayerAction");
+	 document.getElementById("player-actions").innerHTML = "";	
+	 var appendMe = lastPlayerAction.join(' ');
+	 console.log(appendMe);
+	 $('<p>' + appendMe + '</p>').appendTo('#player-actions'); 
      }
 
      function WebSocketTest() {
@@ -48,6 +60,8 @@
 	     $('<p>Websocket connection opened</p>').appendTo('#log');
 	     // Let us open a web socket
 	     var ws = new WebSocket("ws://localhost:9999/echo");
+	     var numPlayers = 0;
+	     var lastPlayerAction = [];
 	     ws.onmessage = function (evt) { 
 		 var received_msg = evt.data;
 		 var received_obj = JSON.parse(received_msg);
@@ -64,8 +78,20 @@
 			 document.getElementById("last-play").innerHTML = "";
 			 var cards = makeCardString(received_obj.Cards);
 			 $('<p>' + cards + '</p>').appendTo('#last-play');
+			 case "played":
+			 console.log("Got played");
+			 var player = received_obj.Player;
+			 var cards = makeCardString(received_obj.Cards);
+			 lastPlayerAction[player] = cards;
+			 console.log(lastPlayerAction);
+			 updatePlayerAction(lastPlayerAction);
 			 case "start_game":
 			 console.log("Got start_game");
+			 numPlayers = received_obj.Player;
+			 for (var i = 0; i < numPlayers; i++) {
+			     lastPlayerAction.push("None");
+			 }
+			 updatePlayerAction(lastPlayerAction);
 			 break;
 			 default:
 			 console.log("Unknown message type");
