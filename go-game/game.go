@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math/rand"
 	"strconv"
+	"strings"
 )
 
 const (
@@ -236,23 +237,23 @@ func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	}
 	state.lastCards = incoming.Cards
 
+	incoming.Message = "played"
+	sendToAll(*gameHub, incoming)
+	state.lastPlayed = state.currentPlayer
+
+	// TODO: pretty print or something.
+	cardsPlayed := strings.TrimPrefix(fmt.Sprintf("%v", incoming.Cards), "map")
+	state.lastAction[state.currentPlayer] = "Played " + cardsPlayed
+	sendLastAction(gameHub, state, state.currentPlayer)
+	sendOnePlayerCards(gameHub, state, state.currentPlayer)
 	if isGameOver(state) {
 		sendToAll(*gameHub, GameMessage{"game_over", incoming.Player, map[string]int{}})
 		// TODO: send order in which players exited.
 		return
 		// TODO: set up next game with new player "seating".
 	}
-	incoming.Message = "played"
-	sendToAll(*gameHub, incoming)
-	state.lastPlayed = state.currentPlayer
-
-	// TODO: pretty print or something.
-	cardsPlayed := fmt.Sprintf("%v", incoming.Cards)
-	state.lastAction[state.currentPlayer] = "Played " + cardsPlayed
-	sendLastAction(gameHub, state, state.currentPlayer)
 	resetPassState(state)
 	setNextPlayer(state)
-	sendOnePlayerCards(gameHub, state, state.currentPlayer)
 }
 
 func everyonePassed(state *gameState) bool {
