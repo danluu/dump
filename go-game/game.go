@@ -11,13 +11,22 @@ const (
 	maxCard = 3
 )
 
-// last is the last thing played, which needs to get sent to clients
-// might not need/want it as part of state.
+// currentPlayer:
+// finishOrder: order in which players went out. [0] is winner.
+// hands:       cards each player has.
+// inGame:      whether or not player is still playing.
+// lastAction:  last action for each player. For client display.
+// lastCards:   cards in "center".
+// lastPlayed:  last player to play. Used to determine trick winner.
+// numPlayers:
+// playerPassed: whether or not player has passed.
+// started:     whether or not game has started. Currently unused?
 type gameState struct {
 	currentPlayer int
 	finishOrder   []int
 	hands         []map[string]int
 	inGame        []bool
+	lastAction    []string
 	lastCards     map[string]int
 	lastPlayed    int
 	numPlayers    int
@@ -30,6 +39,7 @@ var globalState = gameState{
 	finishOrder:   make([]int, 0),
 	hands:         make([]map[string]int, 10), // TODO: fix this 10
 	inGame:        make([]bool, 10),           // TODO: fix this 10
+	lastAction:    make([]string, 10),         // TODO: fix this 10
 	lastCards:     make(map[string]int),
 	lastPlayed:    -1,
 	numPlayers:    0,
@@ -40,6 +50,16 @@ var globalState = gameState{
 func resetPassState(state *gameState) {
 	for i := 0; i < state.numPlayers; i++ {
 		state.playerPassed[i] = false
+	}
+}
+
+func resetLastAction(state *gameState) {
+	for i := 0; i < state.numPlayers; i++ {
+		if state.inGame[i] {
+			state.lastAction[i] = "None"
+		} else {
+			state.lastAction[i] = "Out"
+		}
 	}
 }
 
@@ -79,6 +99,7 @@ func dealDeck(state *gameState, deck []string, numPlayers int) {
 	for i := 0; i < numPlayers; i++ {
 		state.inGame[i] = true
 		state.hands[i] = make(map[string]int)
+		resetLastAction(state)
 		for j := 0; j < maxCard+1; j++ {
 			state.hands[i][strconv.Itoa(j)] = 0
 		}
@@ -88,6 +109,11 @@ func dealDeck(state *gameState, deck []string, numPlayers int) {
 	for i, card := range deck {
 		state.hands[i%numPlayers][card] += 1
 	}
+}
+
+func sendLastAction(gameHub *hub, state *gameState, lastPlayer int) {
+	actionMessage := LastActionMessage{"last_action", lastPlayer, state.lastAction}
+	sendToAll(*gameHub, actionMessage)
 }
 
 func sendOnePlayerCards(gameHub *hub, state *gameState, player int) {
@@ -213,11 +239,17 @@ func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	if isGameOver(state) {
 		sendToAll(*gameHub, GameMessage{"game_over", incoming.Player, map[string]int{}})
 		// TODO: send order in which players exited.
+		return
+		// TODO: set up next game with new player "seating".
 	}
 	incoming.Message = "played"
 	sendToAll(*gameHub, incoming)
 	state.lastPlayed = state.currentPlayer
 
+	// TODO: pretty print or something.
+	cardsPlayed := fmt.Sprintf("%v", incoming.Cards)
+	state.lastAction[state.currentPlayer] = "Played " + cardsPlayed
+	sendLastAction(gameHub, state, state.currentPlayer)
 	resetPassState(state)
 	setNextPlayer(state)
 	sendOnePlayerCards(gameHub, state, state.currentPlayer)
@@ -252,15 +284,22 @@ func passedTurn(gameHub *hub, state *gameState, incoming GameMessage) {
 			// Someone won the trick.
 			sendToAll(*gameHub, GameMessage{"won_trick", state.lastPlayed, map[string]int{}})
 			state.currentPlayer = state.lastPlayed
+			resetLastAction(state)
+			state.lastAction[state.lastPlayed] = "Won Trick"
+			sendLastAction(gameHub, state, state.lastPlayed)
 			state.lastPlayed = -1
 			state.lastCards = make(map[string]int) // TODO: don't GC and alloc this
 		} else {
 			// Everyone passed without playing. Trick over.
 			sendToAll(*gameHub, GameMessage{"all_pass", 0, map[string]int{}})
+			resetLastAction(state)
+			sendLastAction(gameHub, state, incoming.Player)
 			setNextPlayer(state)
 		}
 	} else {
 		// A player passed. Trick continues.
+		state.lastAction[incoming.Player] = "Passed"
+		sendLastAction(gameHub, state, incoming.Player)
 		sendToAll(*gameHub, GameMessage{"player_pass", incoming.Player, map[string]int{}})
 		setNextPlayer(state)
 	}

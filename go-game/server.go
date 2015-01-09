@@ -24,23 +24,34 @@ func assert(cond bool, message string) {
 	}
 }
 
+// TODO: add some type assertions to make sure we're not passing 
+// bad messages around.
+type Message interface {
+
+}
+
 type BrowserMessage struct {
 	Message []byte
 	Player  int
 }
 
-// Note that gameState has map[int]int but go JSON forces this to be
-// map[string]int
 type GameMessage struct {
 	Message string
 	Player  int
 	Cards   map[string]int
 }
 
+// This could be combined with GameMessage.
+type LastActionMessage struct {
+	Message string
+	Player int
+	Action []string
+}
+
 // send is the message from the hub we want to send to the websocket.
 type connection struct {
 	websocket *websocket.Conn
-	send      chan GameMessage
+	send      chan Message
 }
 
 func (conn *connection) connectionId() (int, error) {
@@ -76,7 +87,8 @@ func (conn *connection) write(messageType int, payload []byte) error {
 	return conn.websocket.WriteMessage(messageType, payload)
 }
 
-func (conn *connection) writeJSON(message GameMessage) error {
+// TODO: make this typecheck in some reasonable way?
+func (conn *connection) writeJSON(message Message) error {
 	conn.websocket.SetWriteDeadline(time.Now().Add(writeWait))
 	return conn.websocket.WriteJSON(message)
 }
@@ -121,14 +133,14 @@ var globalHub = hub{
 	unregister:  make(chan *connection),
 }
 
-func sendTo(all hub, message GameMessage, player int) {
+func sendTo(all hub, message Message, player int) {
 	select {
 	case all.connections[player].send <- message:
 	default: // TODO: handle error.
 	}
 }
 
-func sendToAll(all hub, message GameMessage) {
+func sendToAll(all hub, message Message) {
 	for _, c := range all.connections {
 		select {
 		case c.send <- message:
@@ -157,7 +169,7 @@ func wsHandler(response http.ResponseWriter, request *http.Request) {
 		return
 	}
 
-	conn := &connection{send: make(chan GameMessage, 256), websocket: wsConnection}
+	conn := &connection{send: make(chan Message, 256), websocket: wsConnection}
 	globalHub.register <- conn
 	go conn.toBrowser()
 	conn.fromBrowser()

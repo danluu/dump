@@ -46,18 +46,12 @@
      }
 
      // TODO: highlight last action taken.
-     function updatePlayerAction(lastPlayerAction) {
+     function updatePlayerAction(actions, player) {
 	 console.log("updatePlayerAction");
 	 document.getElementById("player-actions").innerHTML = "";	
-	 var appendMe = lastPlayerAction.join(' ');
+	 var appendMe = actions.join(' | ');
 	 console.log(appendMe);
 	 $('<p>' + appendMe + '</p>').appendTo('#player-actions'); 
-     }
-
-     function resetPlayerAction(lastPlayerAction, numPlayers) {
-	 for (var i = 0; i < numPlayers; i++) {
-	     lastPlayerAction[i] = "None";
-	 }
      }
 
      function WebSocketTest() {
@@ -88,25 +82,23 @@
 			 console.log("Got played");
 			 var player = received_obj.Player;
 			 var cards = makeCardString(received_obj.Cards);
-			 lastPlayerAction[player] = cards;
-			 updatePlayerAction(lastPlayerAction);
+			 break;
+			 case "last_action":
+			 console.log("Got last_action");
+			 var player = received_obj.Player;
+			 var actions = received_obj.Action;
+			 updatePlayerAction(actions, player);
 			 break;
 			 case "player_pass":
 			 console.log("Got player_pass");
 			 var player = received_obj.Player;
-			 lastPlayerAction[player] = "Pass";
-			 updatePlayerAction(lastPlayerAction);
 			 break;
 			 case "all_pass":
 			 console.log("Got all_pass");
-			 resetPlayerAction(lastPlayerAction, numPlayers);
-			 updatePlayerAction(lastPlayerAction);
 			 break;
 			 case "won_trick":
 			 console.log("Got won_trick");
 			 var player = received_obj.Player;
-			 resetPlayerAction(lastPlayerAction, numPlayers);
-			 lastPlayerAction[player] = "Won Trick";
 			 break;
 			 case "player_out":
 			 // TODO: figure out how to handle this. We want players to stay out
@@ -118,11 +110,10 @@
 			 case "start_game":
 			 console.log("Got start_game");
 			 numPlayers = received_obj.Player;
+			 // TODO: remove this.
 			 for (var i = 0; i < numPlayers; i++) {
 			     lastPlayerAction.push("None");
 			 }
-			 resetPlayerAction(lastPlayerAction, numPlayers);
-			 updatePlayerAction(lastPlayerAction);
 			 break;
 			 default:
 			 console.log("Unknown message type");
