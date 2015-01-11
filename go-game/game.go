@@ -35,19 +35,6 @@ type gameState struct {
 	started       bool
 }
 
-var globalState = gameState{
-	currentPlayer: 0,
-	finishOrder:   make([]int, 0),
-	hands:         make([]map[string]int, 10), // TODO: fix this 10
-	inGame:        make([]bool, 10),           // TODO: fix this 10
-	lastAction:    make([]string, 10),         // TODO: fix this 10
-	lastCards:     make(map[string]int),
-	lastPlayed:    -1,
-	numPlayers:    0,
-	playerPassed:  make([]bool, 10), // TODO: fix this 10
-	started:       false,
-}
-
 func resetPassState(state *gameState) {
 	for i := 0; i < state.numPlayers; i++ {
 		state.playerPassed[i] = false
@@ -112,20 +99,20 @@ func dealDeck(state *gameState, deck []string, numPlayers int) {
 	}
 }
 
-func sendLastAction(gameHub *hub, state *gameState, lastPlayer int) {
+func sendLastAction(localHub *hub, state *gameState, lastPlayer int) {
 	actionMessage := LastActionMessage{"last_action", lastPlayer, state.lastAction}
-	sendToAll(*gameHub, actionMessage)
+	sendToAll(*localHub, actionMessage)
 }
 
-func sendOnePlayerCards(gameHub *hub, state *gameState, player int) {
+func sendOnePlayerCards(localHub *hub, state *gameState, player int) {
 	hand := state.hands[player]
 	cardMessage := GameMessage{"player_cards", player, hand}
-	sendTo(*gameHub, cardMessage, player)
+	sendTo(*localHub, cardMessage, player)
 }
 
-func sendPlayerCards(gameHub *hub, state *gameState, numPlayers int) {
+func sendPlayerCards(localHub *hub, state *gameState, numPlayers int) {
 	for i := 0; i < numPlayers; i++ {
-		sendOnePlayerCards(gameHub, state, i)
+		sendOnePlayerCards(localHub, state, i)
 	}
 }
 
@@ -226,28 +213,28 @@ func setNextPlayer(state *gameState) {
 // 7. Send message to tell new current player about their cards.
 // We assume that the game can only end from this function since players can
 // only exit by having played cards.
-func playCards(gameHub *hub, state *gameState, incoming GameMessage) {
+func playCards(localHub *hub, state *gameState, incoming GameMessage) {
 	fmt.Println("playCards")
 	fmt.Println(incoming)
 
 	if subtractCards(state, incoming) {
 		state.finishOrder = append(state.finishOrder, state.currentPlayer)
 		state.inGame[state.currentPlayer] = false
-		sendToAll(*gameHub, GameMessage{"player_out", incoming.Player, map[string]int{}})
+		sendToAll(*localHub, GameMessage{"player_out", incoming.Player, map[string]int{}})
 	}
 	state.lastCards = incoming.Cards
 
 	incoming.Message = "played"
-	sendToAll(*gameHub, incoming)
+	sendToAll(*localHub, incoming)
 	state.lastPlayed = state.currentPlayer
 
 	// TODO: pretty print or something.
 	cardsPlayed := strings.TrimPrefix(fmt.Sprintf("%v", incoming.Cards), "map")
 	state.lastAction[state.currentPlayer] = "Played " + cardsPlayed
-	sendLastAction(gameHub, state, state.currentPlayer)
-	sendOnePlayerCards(gameHub, state, state.currentPlayer)
+	sendLastAction(localHub, state, state.currentPlayer)
+	sendOnePlayerCards(localHub, state, state.currentPlayer)
 	if isGameOver(state) {
-		sendToAll(*gameHub, GameMessage{"game_over", incoming.Player, map[string]int{}})
+		sendToAll(*localHub, GameMessage{"game_over", incoming.Player, map[string]int{}})
 		// TODO: send order in which players exited.
 		return
 		// TODO: set up next game with new player "seating".
@@ -274,7 +261,7 @@ func everyonePassed(state *gameState) bool {
 // setNextPlayer should get called.
 // If no one's played and everyone passed, setNextPlayer should set the correct
 // next player.
-func passedTurn(gameHub *hub, state *gameState, incoming GameMessage) {
+func passedTurn(localHub *hub, state *gameState, incoming GameMessage) {
 	fmt.Println("passedTurn")
 	fmt.Println(incoming)
 
@@ -283,30 +270,30 @@ func passedTurn(gameHub *hub, state *gameState, incoming GameMessage) {
 		resetPassState(state)
 		if state.lastPlayed != -1 {
 			// Someone won the trick.
-			sendToAll(*gameHub, GameMessage{"won_trick", state.lastPlayed, map[string]int{}})
+			sendToAll(*localHub, GameMessage{"won_trick", state.lastPlayed, map[string]int{}})
 			state.currentPlayer = state.lastPlayed
 			resetLastAction(state)
 			state.lastAction[state.lastPlayed] = "Won Trick"
-			sendLastAction(gameHub, state, state.lastPlayed)
+			sendLastAction(localHub, state, state.lastPlayed)
 			state.lastPlayed = -1
 			state.lastCards = make(map[string]int) // TODO: don't GC and alloc this
 		} else {
 			// Everyone passed without playing. Trick over.
-			sendToAll(*gameHub, GameMessage{"all_pass", 0, map[string]int{}})
+			sendToAll(*localHub, GameMessage{"all_pass", 0, map[string]int{}})
 			resetLastAction(state)
-			sendLastAction(gameHub, state, incoming.Player)
+			sendLastAction(localHub, state, incoming.Player)
 			setNextPlayer(state)
 		}
 	} else {
 		// A player passed. Trick continues.
 		state.lastAction[incoming.Player] = "Passed"
-		sendLastAction(gameHub, state, incoming.Player)
-		sendToAll(*gameHub, GameMessage{"player_pass", incoming.Player, map[string]int{}})
+		sendLastAction(localHub, state, incoming.Player)
+		sendToAll(*localHub, GameMessage{"player_pass", incoming.Player, map[string]int{}})
 		setNextPlayer(state)
 	}
 }
 
-func incomingCards(gameHub *hub, state *gameState, incoming GameMessage) {
+func incomingCards(localHub *hub, state *gameState, incoming GameMessage) {
 	fmt.Println("incomingCards")
 	fmt.Println(incoming)
 	fmt.Println(state)
@@ -316,44 +303,57 @@ func incomingCards(gameHub *hub, state *gameState, incoming GameMessage) {
 	}
 	if numCards(incoming.Cards) == 0 {
 		// Pass.
-		passedTurn(gameHub, state, incoming)
+		passedTurn(localHub, state, incoming)
 	} else if validPlay(state, incoming, len(state.lastCards) == 0) {
 		// Nth play.
-		playCards(gameHub, state, incoming)
+		playCards(localHub, state, incoming)
 	} else {
 		// TODO: handle bogus play.
 	}
 	return
 }
 
-func (all *hub) run() {
+func (localHub *hub) run() {
+	var localState = gameState{
+		currentPlayer: 0,
+		finishOrder:   make([]int, 0),
+		hands:         make([]map[string]int, 10), // TODO: fix this 10
+		inGame:        make([]bool, 10),           // TODO: fix this 10
+		lastAction:    make([]string, 10),         // TODO: fix this 10
+		lastCards:     make(map[string]int),
+		lastPlayed:    -1,
+		numPlayers:    0,
+		playerPassed:  make([]bool, 10), // TODO: fix this 10
+		started:       false,
+	}
+
 	numPlayers := 0
 	for {
 		select {
-		case c := <-all.register:
-			all.connections = append(all.connections, c)
+		case c := <-localHub.register:
+			localHub.connections = append(localHub.connections, c)
 			numPlayers++
 			if numPlayers == 2 {
-				globalState.numPlayers = 2
-				go func() { all.ready <- true }() // This seems bad.
+				localState.numPlayers = 2
+				go func() { localHub.ready <- true }() // This seems bad.
 			}
-		case <-all.unregister:
+		case <-localHub.unregister:
 			// TODO: handle unregister.
-			// if _, ok := all.connections[c]; ok {
-			// 	// delete(all.connections, c)
+			// if _, ok := localHub.connections[c]; ok {
+			// 	// delete(localHub.connections, c)
 			// 	// TODO: delete connection somehow.
 			// 	close(c.send)
 			// }
-		case <-all.ready:
+		case <-localHub.ready:
 			deck := makeDeck()
 			shuffledDeck := shuffleDeck(deck)
-			dealDeck(&globalState, shuffledDeck, numPlayers)
+			dealDeck(&localState, shuffledDeck, numPlayers)
 
-			sendPlayerCards(all, &globalState, numPlayers)
+			sendPlayerCards(localHub, &localState, numPlayers)
 
 			startMessage := GameMessage{"start_game", numPlayers, map[string]int{}}
-			sendToAll(*all, startMessage)
-		case incoming := <-all.process:
+			sendToAll(*localHub, startMessage)
+		case incoming := <-localHub.process:
 			// TODO: need to figure out which player the
 			// message is from.
 			fmt.Println(incoming)
@@ -366,7 +366,7 @@ func (all *hub) run() {
 				fmt.Println(incomingMessage)
 			}
 			incomingMessage.Player = incoming.Player
-			incomingCards(all, &globalState, incomingMessage)
+			incomingCards(localHub, &localState, incomingMessage)
 
 		}
 

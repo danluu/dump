@@ -125,6 +125,9 @@ type hub struct {
 	unregister  chan *connection
 }
 
+// TODO: make a hub for each game. But we still need a global hub to handle stuff from every
+// websocket, and then something that sends messages from the global hub to the correct local
+// hub if we're going to have multiple games.
 var globalHub = hub{
 	connections: make([]*connection, 0),
 	process:     make(chan BrowserMessage),
