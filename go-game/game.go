@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+// TODO: make this 12. This is 3 for easy/short debugging games.
 const (
 	maxCard = 3
 )
@@ -79,10 +80,10 @@ func shuffleDeck(deck []string) []string {
 	return shuffledDeck
 }
 
+
+// Initialize unitialized maps in array of hands.
+// Also set inGame, lastAction, and playerPassed.
 func dealDeck(state *gameState, deck []string, numPlayers int) {
-	// Initialize unitialized maps in array of hands.
-	// Also set inGame (deal players into game).
-	// And set pass state to false for each player.
 	resetPassState(state)
 	for i := 0; i < numPlayers; i++ {
 		state.inGame[i] = true
@@ -98,6 +99,8 @@ func dealDeck(state *gameState, deck []string, numPlayers int) {
 		state.hands[i%numPlayers][card] += 1
 	}
 }
+
+// send* funcs send directly or indirectly send messages to clients.
 
 func sendLastAction(localHub *hub, state *gameState, lastPlayer int) {
 	actionMessage := LastActionMessage{"last_action", lastPlayer, state.lastAction}
@@ -129,7 +132,7 @@ func playMatchesLast(lastCards map[string]int, current map[string]int) bool {
 	return false
 }
 
-// Check that a play is a subset of a hand.
+// Check that player has cards to make attempted play.
 func hasCards(hand map[string]int, play map[string]int) bool {
 	possiblePlay := true
 	for playCard, playNum := range play {
@@ -155,6 +158,8 @@ func validPlay(state *gameState, play GameMessage, firstPlay bool) bool {
 	return playMatches && hasCards(playerHand, playedCards)
 }
 
+// Get number of cards in set. This is currently only used for sets consisting
+// of one type of card.
 func numCards(set map[string]int) int {
 	assert(len(set) == 1, "numCards len(set) != 1")
 	for _, numCards := range set {
@@ -206,11 +211,11 @@ func setNextPlayer(state *gameState) {
 // 1. Remove played cards from hand.
 // 2. Check for player exit/win.
 // 1/2 handled by subtractCards
-// 3. Check if game is over.
-// 4. Set last played cards.
-// 5. Send message telling everyone what was played.
-// 6. Update current player.
-// 7. Send message to tell new current player about their cards.
+// 3. Set last played cards.
+// 4. Send message telling everyone what was played.
+// 5. Send message telling player what cards they have left
+// 6. Check if game is over.
+// 7. Update current player.
 // We assume that the game can only end from this function since players can
 // only exit by having played cards.
 func playCards(localHub *hub, state *gameState, incoming GameMessage) {
@@ -256,11 +261,6 @@ func everyonePassed(state *gameState) bool {
 // We keep track of everyone who's passed. That's reset on every card play.
 // If everyone who's inGame has passed the trick is over. Play goes to the
 // last person to have played.
-// TODO: handle case where person who's out gets a turn. At the start of their
-// turn there should be a check to see if they're in the game. If they're not,
-// setNextPlayer should get called.
-// If no one's played and everyone passed, setNextPlayer should set the correct
-// next player.
 func passedTurn(localHub *hub, state *gameState, incoming GameMessage) {
 	fmt.Println("passedTurn")
 	fmt.Println(incoming)
@@ -293,6 +293,8 @@ func passedTurn(localHub *hub, state *gameState, incoming GameMessage) {
 	}
 }
 
+// Look at attempted play and decide if it was a pass or a play and if
+// the play was sucessful.
 func incomingCards(localHub *hub, state *gameState, incoming GameMessage) {
 	fmt.Println("incomingCards")
 	fmt.Println(incoming)
@@ -354,8 +356,6 @@ func (localHub *hub) run() {
 			startMessage := GameMessage{"start_game", numPlayers, map[string]int{}}
 			sendToAll(*localHub, startMessage)
 		case incoming := <-localHub.process:
-			// TODO: need to figure out which player the
-			// message is from.
 			fmt.Println(incoming)
 			var incomingMessage GameMessage
 			err := json.Unmarshal(incoming.Message, &incomingMessage)
@@ -364,9 +364,10 @@ func (localHub *hub) run() {
 				fmt.Println(err)
 				fmt.Println(incoming)
 				fmt.Println(incomingMessage)
+			} else {
+				incomingMessage.Player = incoming.Player
+				incomingCards(localHub, &localState, incomingMessage)
 			}
-			incomingMessage.Player = incoming.Player
-			incomingCards(localHub, &localState, incomingMessage)
 
 		}
 

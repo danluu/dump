@@ -18,6 +18,8 @@ const (
 	maxMessageSize = 512
 )
 
+// Go doesn't have asserts! So here's an assert
+// TODO: add real logging infrastructure and have this log somewhere.
 func assert(cond bool, message string) {
 	if !cond {
 		fmt.Println("assert failed: " + message)
@@ -35,13 +37,14 @@ type BrowserMessage struct {
 	Player  int
 }
 
+// Used to send most game updates to browser.
 type GameMessage struct {
 	Message string
 	Player  int
 	Cards   map[string]int
 }
 
-// This could be combined with GameMessage.
+// Used to send list of last player actions to browser.
 type LastActionMessage struct {
 	Message string
 	Player int
@@ -54,6 +57,10 @@ type connection struct {
 	send      chan Message
 }
 
+// We really want some kind of ordered map, like you'd get from the STL.
+// Instead, here's something that will look up a connection's index from
+// the connection.
+// This should be fixed if we ever end up with thousands of clients.
 func (conn *connection) connectionId() (int, error) {
 	for i, c := range globalHub.connections {
 		if c == conn {
@@ -63,6 +70,8 @@ func (conn *connection) connectionId() (int, error) {
 	return -1, errors.New("Failed to find connection in list")
 }
 
+// Take raw websocket message from browser and convert it to a chan on the hub.
+// TODO: add local game hubs, forward the message to the right game/hub.
 func (conn *connection) fromBrowser() {
 	defer func() {
 		globalHub.unregister <- conn
@@ -87,7 +96,6 @@ func (conn *connection) write(messageType int, payload []byte) error {
 	return conn.websocket.WriteMessage(messageType, payload)
 }
 
-// TODO: make this typecheck in some reasonable way?
 func (conn *connection) writeJSON(message Message) error {
 	conn.websocket.SetWriteDeadline(time.Now().Add(writeWait))
 	return conn.websocket.WriteJSON(message)
@@ -136,6 +144,7 @@ var globalHub = hub{
 	unregister:  make(chan *connection),
 }
 
+// send a message to a specific player.
 func sendTo(all hub, message Message, player int) {
 	select {
 	case all.connections[player].send <- message:
@@ -143,6 +152,7 @@ func sendTo(all hub, message Message, player int) {
 	}
 }
 
+// send a message to everyone.
 func sendToAll(all hub, message Message) {
 	for _, c := range all.connections {
 		select {
@@ -160,6 +170,8 @@ var upgrader = websocket.Upgrader{
 	WriteBufferSize: 1024,
 }
 
+// Create per-client toBrowser and fromBrowser goroutines to convert from websockets to
+// hub chan messages.
 func wsHandler(response http.ResponseWriter, request *http.Request) {
 	if request.Method != "GET" {
 		http.Error(response, "Method not allowed", 405)
