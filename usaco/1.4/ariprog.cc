@@ -58,7 +58,6 @@ vector<int> create_bisquares(int m) {
   return bisquares;
 }
 
-
 int seq_starts_at(int diff, int n, int start) {
   int i = 0;
   int current = start;
@@ -80,6 +79,7 @@ vector<int> possible_diffs(const vector<int>& bisquares, int start) {
   return diffs;
 }
 
+// Prune solution by only starting at real bisquare values and avoiding impossible diffs.
 void solve_reverse(int n, int m, ofstream& fout) {
   int found_one = 0;
   set_bisquares(m);
