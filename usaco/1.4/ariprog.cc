@@ -23,6 +23,20 @@ LANG: C++11
 
 using namespace std;
 
+#define HUGE_NUM 250*250*2+1
+
+int is_bisquare[HUGE_NUM];
+
+void set_bisquares(int m) {
+  memset(is_bisquare, 0, HUGE_NUM * sizeof(int));
+  for (int i = 0; i <= m; ++i) {
+    for (int j = i; j <= m; ++j) {
+      is_bisquare[i*i + j*j] = 1;
+    }
+  }
+  cout << "finished set\n";
+}
+
 int cmp_pairs(const pair<int,int>& left, const pair<int,int>& right) {
   if (left.second < right.second) {
     return 1;
@@ -33,30 +47,26 @@ int cmp_pairs(const pair<int,int>& left, const pair<int,int>& right) {
   }
   assert(0);
 }
-
+  
 vector<int> create_bisquares(int m) {
-  set<int> unique_bisquares;
-  for (int i = 0; i <= m; ++i) {
-    for (int j = i; j <= m; ++j) {
-      unique_bisquares.insert(i*i + j*j);
+  vector<int> bisquares;
+  for (int i = 0; i < HUGE_NUM; ++i) {
+    if (is_bisquare[i]) {
+      bisquares.push_back(i);
     }
   }
-  vector<int> bisquares(unique_bisquares.begin(), unique_bisquares.end());
   return bisquares;
 }
 
-int seq_starts_at(const vector<int>& bisquares, int diff, int n, int start) {
-  int i = start;
-  int target = bisquares[start];
-  int seq_len = 0;
-  int bsize = bisquares.size();
-  while (seq_len < n) {
-    if (bisquares[i] == target) {
-      target += diff;
-      ++seq_len;
-    } else if (bisquares[i] > target || i >= bsize) {
+
+int seq_starts_at(int diff, int n, int start) {
+  int i = 0;
+  int current = start;
+  while (i < n) {
+    if (current >= HUGE_NUM || !is_bisquare[current]) {
       return 0;
     }
+    current += diff;
     ++i;
   }
   return 1;
@@ -72,13 +82,14 @@ vector<int> possible_diffs(const vector<int>& bisquares, int start) {
 
 void solve_reverse(int n, int m, ofstream& fout) {
   int found_one = 0;
+  set_bisquares(m);
   vector<pair<int,int>> ans;
   ans.reserve(10000);
   auto bisquares = create_bisquares(m);
   for (int start = 0; start < bisquares.size(); ++start) {
     auto diffs = possible_diffs(bisquares, start);
     for (auto& diff : diffs) {
-      if (seq_starts_at(bisquares, diff, n, start)) {
+      if (diff > 0 && seq_starts_at(diff, n, bisquares[start])) {
 	ans.push_back(make_pair(bisquares[start],diff));
       }
     }
