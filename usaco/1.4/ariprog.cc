@@ -49,11 +49,12 @@ int seq_starts_at(const vector<int>& bisquares, int diff, int n, int start) {
   int i = start;
   int target = bisquares[start];
   int seq_len = 0;
+  int bsize = bisquares.size();
   while (seq_len < n) {
     if (bisquares[i] == target) {
       target += diff;
       ++seq_len;
-    } else if (bisquares[i] > target || i >= bisquares.size()) {
+    } else if (bisquares[i] > target || i >= bsize) {
       return 0;
     }
     ++i;
