@@ -12,17 +12,18 @@ import (
 var authKey = []byte("somesecret")
 
 // Encryption Key
-var cryptKey = []byte("someothersecret")
+var cryptKey = []byte("someothersecret!")
 
 var store = sessions.NewCookieStore(authKey, cryptKey)
 
 func initSession(request *http.Request) *sessions.Session {
-	session, _ := store.Get(request, "wat_cookie") // TODO: handle error.
+	session, _ := store.Get(request, "wat_cookie2") // TODO: handle error.
 	if session.IsNew {
-		session.Options.Domain = ""       // TODO: set domain.
-		session.Options.MaxAge = 3600 * 8 // 8 hours.
+		session.Options.Domain = "" // TODO: set domain.
+		session.Options.MaxAge = 10 // 10 seconds for debugging.
+		session.Options.Path = "/"
 		session.Options.HttpOnly = true
-		session.Options.Secure = false
+		session.Options.Secure = true
 	}
 	return session
 }
@@ -30,7 +31,10 @@ func initSession(request *http.Request) *sessions.Session {
 func pageWithSession(writer http.ResponseWriter, request *http.Request) {
 	session := initSession(request)
 	session.Values["page"] = "view"
-	session.Save(request, writer)
+	err := session.Save(request, writer)
+	if err != nil {
+		log.Fatal("session.Save: ", err)
+	}
 	fmt.Println("Attempted to make session cookie")
 }
 
