@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"log"
 	"net/http"
 
@@ -46,8 +47,38 @@ func pageWithSession(writer http.ResponseWriter, request *http.Request) {
 	fmt.Println("Attempted to make session cookie")
 }
 
+func loginUrl(response http.ResponseWriter, request *http.Request) {
+	if request.Method == "GET" {
+		t, _ := template.ParseFiles("static/index.html")
+		t.Execute(response, nil)
+	} else if request.Method == "POST" {
+		request.ParseForm()
+		username := request.PostFormValue("username")
+		fmt.Println("Username: ", username)
+
+		session := initSession(request)
+		userId, ok := session.Values["userId"].(string)
+		if ok {
+			// Already has username. This section for debugging only.
+			fmt.Println("Changing username %v : %v", userId, username)
+		}
+
+		session.Values["userId"] = username
+		err := session.Save(request, response)
+		if err != nil {
+			log.Fatal("session.Save: ", err)
+		}
+
+		// Can't redirect from here.
+		http.Redirect(response, request, "localhost:9999/play", 301)
+	} else {
+		http.Error(response, "Method not allowed", 405)
+		return
+	}
+}
+
 func main() {
-	http.HandleFunc("/", pageWithSession)
+	http.HandleFunc("/", loginUrl)
 
 	err := http.ListenAndServe(":9999", nil)
 	if err != nil {
