@@ -80,7 +80,6 @@ func shuffleDeck(deck []string) []string {
 	return shuffledDeck
 }
 
-
 // Initialize unitialized maps in array of hands.
 // Also set inGame, lastAction, and playerPassed.
 func dealDeck(state *gameState, deck []string, numPlayers int) {

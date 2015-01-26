@@ -26,10 +26,9 @@ func assert(cond bool, message string) {
 	}
 }
 
-// TODO: add some type assertions to make sure we're not passing 
+// TODO: add some type assertions to make sure we're not passing
 // bad messages around.
 type Message interface {
-
 }
 
 type BrowserMessage struct {
@@ -47,8 +46,8 @@ type GameMessage struct {
 // Used to send list of last player actions to browser.
 type LastActionMessage struct {
 	Message string
-	Player int
-	Action []string
+	Player  int
+	Action  []string
 }
 
 // send is the message from the hub we want to send to the websocket.
