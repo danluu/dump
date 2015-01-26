@@ -30,7 +30,15 @@ func initSession(request *http.Request) *sessions.Session {
 
 func pageWithSession(writer http.ResponseWriter, request *http.Request) {
 	session := initSession(request)
-	session.Values["page"] = "view"
+
+	userId, ok := session.Values["user"].(string)
+	if !ok {
+		// Never seen the user before or some weirdo error.
+		userId = "watwatwat"
+	}
+	fmt.Println("Exiting user id: ", userId)
+
+	session.Values["user"] = userId + " 1"
 	err := session.Save(request, writer)
 	if err != nil {
 		log.Fatal("session.Save: ", err)
