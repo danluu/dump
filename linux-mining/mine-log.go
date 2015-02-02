@@ -9,6 +9,7 @@ import (
 	"log"
 	"os"
 	"regexp"
+	"sort"
 	"strings"
 )
 
@@ -16,8 +17,27 @@ var (
 	emailMatch = regexp.MustCompile("^Author.*<(.*)@.*>")
 )
 
-type AuthorWord struct {
-	Name, Word string
+type Pair struct {
+	Key string
+	Val int
+}
+
+type PairVector []Pair
+
+func (p PairVector) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
+func (p PairVector) Less(i, j int) bool { return p[i].Val > p[j].Val } // Put biggest first.
+func (p PairVector) Len() int           { return len(p) }
+
+// TODO: use a treap if this is on the critical path, which it probably won't be.
+func sortMapByValue(m map[string]int) PairVector {
+	pairs := make(PairVector, len(m))
+	i := 0
+	for k, v := range m {
+		pairs[i] = Pair{k, v}
+		i++
+	}
+	sort.Sort(pairs)
+	return pairs
 }
 
 // This isn't great since this can combine stuff that shouldn't be combined.
@@ -42,9 +62,17 @@ func stripPunct(old string) string {
 	return old
 }
 
+func addWord(m map[string]map[string]int, author, word string) {
+	mm, ok := m[author]
+	if !ok {
+		mm = make(map[string]int)
+		m[author] = mm
+	}
+	mm[word]++
+}
+
 func main() {
 	filename := os.Args[1]
-	fmt.Println(filename)
 
 	file, err := os.Open(filename)
 	if err != nil {
@@ -57,16 +85,21 @@ func main() {
 	isMergeCommit := false
 	wordInCommit := make(map[string]bool)
 	allWords := make(map[string]int)
-	authorWords := make(map[AuthorWord]int)
+	authorWords := make(map[string]map[string]int)
+	authorCommits := make(map[string]int)
+
+	// Loop over all lines. "^commit" demarcates a new "chunk". Count number of times an author uses a word at least
+	// once in a chunk. Then use tf-idf to sort word usage.
 	for scanner.Scan() {
 		line := scanner.Text()
 		switch {
 		case strings.HasPrefix(line, "commit "):
 			// Start of new commit. Process old commit here.
 			if !isMergeCommit && author != "" {
+				authorCommits[author]++
 				for w, _ := range wordInCommit {
 					allWords[w]++
-					authorWords[AuthorWord{author, w}]++
+					addWord(authorWords, author, w)
 				}
 			}
 			// Reset state.
@@ -96,11 +129,23 @@ func main() {
 				}
 			}
 		}
+	}
+
+	authorList := sortMapByValue(authorCommits)
+	for _, authorCommitPair := range authorList {
+		theirWords := authorWords[authorCommitPair.Key]
+		sortedWords := sortMapByValue(theirWords)
+		fmt.Print(authorCommitPair.Key)
+		// TODO: generate tf-idf and sort by that instead of sorting by raw usage.
+		for _, wordPair := range sortedWords {
+			fmt.Print(",", wordPair.Key)
+		}
+		fmt.Print("\n")
+		// fmt.Println(pair)
 
 	}
 
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
 	}
-
 }
