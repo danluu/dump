@@ -16,15 +16,17 @@ func getCurrentId() int {
 	if err != nil {
 		log.Fatal("Failed to read .myvcs:", err)
 	}
-	// Files should be in sorted order, so the Id should be the last
-	// conversion. However, this ignores the error case of having
-	// extra junk in the directory.
-	if len(files) > 0 {
-		id, _ := strconv.Atoi(files[len(files)-1].Name())
-		return id
-	} else {
-		return -1
+
+	// files is sorted, so we just want the last valid int.
+	id := -1
+	for _, f := range files {
+		fint, err := strconv.Atoi(f.Name())
+		if err == nil {
+			id = fint
+		}
 	}
+
+	return id
 }
 
 func getNextId() int {
@@ -46,6 +48,8 @@ func copyFile(src string, dst string) (err error) {
 	_, err = io.Copy(dstFile, srcFile)
 	if err != nil {
 		// TODO: delete file if we created it but couldn't copy it.
+		// In fact, if we fail at all inside a copy we should revert everything.
+		// This needs a notion of a transaction.
 		return err
 	}
 	srcStat, err := os.Stat(src)
@@ -100,6 +104,19 @@ func copyDir(src string, dst string) (err error) {
 	return
 }
 
+func setHead(next int) {
+	byteString := []byte(strconv.Itoa(next))
+	ioutil.WriteFile(".myvcs/head", byteString, 0666)
+}
+
+func getHead() string {
+	head, err := ioutil.ReadFile(".myvcs/head")
+	if err != nil {
+		log.Fatal("Failed to read head:", err)
+	}
+	return string(head)
+}
+
 func commit() {
 	// TODO: handle not being at root.
 	// Traverse upwards until we find a ".myvcs"
@@ -111,6 +128,7 @@ func commit() {
 	if err != nil {
 		log.Fatal("Failed to copyDir: ", err)
 	}
+	setHead(id)
 
 	return
 }
@@ -141,6 +159,8 @@ func main() {
 	} else if args[0] == "latest" {
 		id := getCurrentId()
 		checkout(strconv.Itoa(id))
+	} else if args[0] == "current" {
+		fmt.Println(getHead())
 	} else {
 		log.Fatal("Unknown option:", args)
 	}
