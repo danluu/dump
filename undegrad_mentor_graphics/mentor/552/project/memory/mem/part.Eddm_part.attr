@@ -1,0 +1,18 @@
+A 5 u Eddm_part 3caf77c373b5.03.80.69.70.93.00.2e.15 3 2 2 0
+V v 1 1 3caf77c373b6.03.80.69.70.93.00.2e.15
+F f 1 "part.part_1"
+V v 2 1 3caf77caad46.03.80.69.70.93.00.2e.15
+F f 2 "part.part_2"
+V v 3 1 3caf791e4160.03.80.69.70.93.00.2e.15
+F f 3 "part.part_3"
+O 3
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/schematic" 1 mgc_schematic 3caf76fd1e0e.03.80.69.70.93.00.2e.15 3caf76fd1e0d.03.80.69.70.93.00.2e.15
+R csduv 1 "/u/d/l/dluu/mentor/552/project/memory/mem/mem" 3 mgc_symbol 3caf791e315e.03.80.69.70.93.00.2e.15 3caf77ca9a9e.03.80.69.70.93.00.2e.15
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/schematic" 1 mgc_schematic 3caf76fd1e0e.03.80.69.70.93.00.2e.15 3caf76fd1e0d.03.80.69.70.93.00.2e.15
+R csduv 1 "/u/d/l/dluu/mentor/552/project/memory/mem/mem" 1 mgc_symbol 3caf77ca9a9f.03.80.69.70.93.00.2e.15 3caf77ca9a9e.03.80.69.70.93.00.2e.15
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/schematic" 1 mgc_schematic 3caf76fd1e0e.03.80.69.70.93.00.2e.15 3caf76fd1e0d.03.80.69.70.93.00.2e.15

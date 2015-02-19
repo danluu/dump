@@ -1,0 +1,11 @@
+A 5 u Eddm_part 3ccf1ac76aa7.03.80.69.70.9e.00.36.2d 2 2 1 0
+V v 1 1 3ccf1ac76aa8.03.80.69.70.9e.00.36.2d
+F f 1 "part.part_1"
+V v 2 1 3ccf1acd1c15.03.80.69.70.9e.00.36.2d
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/cache_unit/cache_unit" 2 mgc_symbol 3ccf1acd1ae7.03.80.69.70.9e.00.36.2d 3ccf1ac51807.03.80.69.70.9e.00.36.2d
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/cache_unit/cache_unit" 1 mgc_symbol 3ccf1ac51808.03.80.69.70.9e.00.36.2d 3ccf1ac51807.03.80.69.70.9e.00.36.2d

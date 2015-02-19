@@ -1,0 +1,10 @@
+A 5 u mgc_schematic 3c50978eaeed.03.80.69.77.78.00.38.45 2 2 1 0
+V v 1 1 3c50978eaeee.03.80.69.77.78.00.38.45
+F o 0 ""
+V v 2 1 3c509b7cc343.03.80.69.77.78.00.38.45
+F o 0 ""
+O 2
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw1/p1/schematic/sheet1" 1 mgc_sheet 3c50978ebf94.03.80.69.77.78.00.38.45 3c50978ebf93.03.80.69.77.78.00.38.45
+O 1
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw1/p1/schematic/sheet1" 1 mgc_sheet 3c50978ebf94.03.80.69.77.78.00.38.45 3c50978ebf93.03.80.69.77.78.00.38.45
+P "eddm__refer_state" "eddm__refer_floating"

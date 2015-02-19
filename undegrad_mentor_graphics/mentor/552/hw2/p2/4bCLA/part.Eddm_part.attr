@@ -1,0 +1,19 @@
+A 5 u Eddm_part 3c6582f75f2e.03.80.69.77.66.00.30.e7 12 2 2 0
+V v 10 1 3cd049b39237.03.80.69.70.93.00.35.10
+F f 10 "part.part_10"
+V v 11 1 3cd04c9c7182.03.80.69.70.93.00.35.10
+F f 11 "part.part_11"
+V v 12 1 3cd053ab2f61.03.80.69.70.93.00.35.10
+F f 12 "part.part_12"
+O 12
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/schematic" 1 mgc_schematic 3c6573a2cec1.03.80.69.77.66.01.30.e7 3c6573a2cec1.03.80.69.77.66.00.30.e7
+R csduv 1 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/4bCLA" 17 mgc_symbol 3cd053ab2063.03.80.69.70.93.00.35.10 3c6e854045ba.03.80.69.77.69.00.2d.00
+O 11
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/schematic" 1 mgc_schematic 3c6573a2cec1.03.80.69.77.66.01.30.e7 3c6573a2cec1.03.80.69.77.66.00.30.e7
+R csduv 1 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/4bCLA" 15 mgc_symbol 3cd04c9c64be.03.80.69.70.93.00.35.10 3c6e854045ba.03.80.69.77.69.00.2d.00
+O 10
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/schematic" 1 mgc_schematic 3c6573a2cec1.03.80.69.77.66.01.30.e7 3c6573a2cec1.03.80.69.77.66.00.30.e7
+R csduv 1 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/4bCLA" 14 mgc_symbol 3cd049ae70a4.03.80.69.70.93.00.35.10 3c6e854045ba.03.80.69.77.69.00.2d.00

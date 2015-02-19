@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3c9d01f8421e.03.80.69.77.6a.00.2f.68 4 2 1 0
+V v 2 1 3c9d053bc286.03.80.69.77.6a.00.2f.68
+F o 0 ""
+V v 3 1 3cb0bd750e38.03.80.69.70.93.00.32.48
+F o 0 ""
+V v 4 1 3cb0c1d72816.03.80.69.70.93.00.32.ba
+F o 0 ""
+O 4
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/misc/extend/schematic/sheet1" 4 mgc_sheet 3cb0c1d65c3f.03.80.69.70.93.00.32.ba 3c9d01f85847.03.80.69.77.6a.00.2f.68
+O 3
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/misc/extend/schematic/sheet1" 3 mgc_sheet 3cb0bd74eb7c.03.80.69.70.93.00.32.48 3c9d01f85847.03.80.69.77.6a.00.2f.68
+O 2
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/misc/extend/schematic/sheet1" 2 mgc_sheet 3c9d053bb3fa.03.80.69.77.6a.00.2f.68 3c9d01f85847.03.80.69.77.6a.00.2f.68

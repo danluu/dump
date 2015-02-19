@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3caf77ca9a9e.03.80.69.70.93.00.2e.15 4 2 1 0
+V v 2 1 3caf78239409.03.80.69.70.93.00.2e.15
+F f 2 "mem.smbl_2"
+V v 3 1 3caf791e315e.03.80.69.70.93.00.2e.15
+F f 3 "mem.smbl_3"
+V v 4 1 3caf79372281.03.80.69.70.93.00.2e.15
+F f 4 "mem.smbl_4"
+O 4
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/part" 3 Eddm_part 3caf791e4160.03.80.69.70.93.00.2e.15 3caf77c373b5.03.80.69.70.93.00.2e.15
+O 3
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/part" 3 Eddm_part 3caf791e4160.03.80.69.70.93.00.2e.15 3caf77c373b5.03.80.69.70.93.00.2e.15
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/part" 2 Eddm_part 3caf77caad46.03.80.69.70.93.00.2e.15 3caf77c373b5.03.80.69.70.93.00.2e.15

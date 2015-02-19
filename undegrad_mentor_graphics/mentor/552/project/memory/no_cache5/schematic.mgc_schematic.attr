@@ -1,0 +1,9 @@
+A 5 u mgc_schematic 3cd2d6aca54e.03.80.69.70.92.00.2f.c8 2 2 1 0
+V v 1 1 3cd2d6aca550.03.80.69.70.92.00.2f.c8
+F o 0 ""
+V v 2 1 3cd2d7539c39.03.80.69.70.92.00.2f.c8
+F o 0 ""
+O 2
+R cspuv 0 "/u/j/e/jeshua/prj/memory/no_cache5/schematic/sheet1" 2 mgc_sheet 3cd2d7535de2.03.80.69.70.92.00.2f.c8 3cd2d6acbbfb.03.80.69.70.92.00.2f.c8
+O 1
+R cspuv 0 "/u/j/e/jeshua/prj/memory/no_cache5/schematic/sheet1" 1 mgc_sheet 3cd2d6acbbfc.03.80.69.70.92.00.2f.c8 3cd2d6acbbfb.03.80.69.70.92.00.2f.c8

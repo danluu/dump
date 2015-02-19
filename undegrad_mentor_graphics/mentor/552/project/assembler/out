@@ -1,0 +1,37 @@
+*******************************************
+WISC-SP02 Assembler: Usage asmsp02 <infile> 
+
+>38: andi r7 0 
+>39: ori r7 N 
+>40: ldi r1 r7 0
+>46: andi r7 0 
+>47: ori r7 RESULT 
+>48: ldi r6 r7 0
+>50: andi r2 0 
+>51: sti r2 r6 0
+>52: addi r2 r2 1
+>53: sti r2 r6 1
+>54: addi r6 r6 2
+>55: andi r5 0 
+>56: ori r5 1 
+>59: ldi r3 r6 -2
+>60: add r2 r2 r3
+>62: sti r2 r6 0
+>64: addi r6 r6 1
+>65: addi r5 r5 1
+>67: sub r4 r5 r1
+>68: bltz r4 LOOP 
+>70: halt   
+>72: data 10  
+>73: data 34952  
+>74: data 43981  
+
+
+Label map
+LOOP	13 == 0xd
+_DEF_H_	0 == 0x0
+FOLLOW	22 == 0x16
+N	21 == 0x15
+RESULT	23 == 0x17
+
+ Memory output in file: MemFile 

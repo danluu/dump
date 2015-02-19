@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3c6ee8486ef4.03.80.69.77.6e.00.32.97 4 2 1 0
+V v 2 1 3c6ee87d8c05.03.80.69.77.6e.00.32.97
+F f 2 "inc.smbl_2"
+V v 3 1 3c6eea14332a.03.80.69.77.6e.00.32.97
+F f 3 "inc.smbl_3"
+V v 4 1 3c6eedc63874.03.80.69.77.6e.00.32.97
+F f 4 "inc.smbl_4"
+O 4
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p3/inc/part" 2 Eddm_part 3c6ee84881e9.03.80.69.77.6e.00.32.97 3c6ee5484048.03.80.69.77.6e.00.32.97
+O 3
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p3/inc/part" 2 Eddm_part 3c6ee84881e9.03.80.69.77.6e.00.32.97 3c6ee5484048.03.80.69.77.6e.00.32.97
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p3/inc/part" 2 Eddm_part 3c6ee84881e9.03.80.69.77.6e.00.32.97 3c6ee5484048.03.80.69.77.6e.00.32.97

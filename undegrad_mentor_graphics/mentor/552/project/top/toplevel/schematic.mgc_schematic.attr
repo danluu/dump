@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3caf40f13f50.03.80.69.70.93.00.2e.15 68 2 1 0
+V v 66 1 3cd58ec15454.03.80.69.70.92.00.34.4b
+F o 0 ""
+V v 67 1 3cd590819113.03.80.69.70.92.00.34.4b
+F o 0 ""
+V v 68 1 3cd5a11a0020.03.80.69.70.92.00.34.4b
+F o 0 ""
+O 68
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/top/toplevel/schematic/sheet1" 67 mgc_sheet 3cd5a119ee6b.03.80.69.70.92.00.34.4b 3caf40f15c70.03.80.69.70.93.00.2e.15
+O 67
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/top/toplevel/schematic/sheet1" 66 mgc_sheet 3cd590817a90.03.80.69.70.92.00.34.4b 3caf40f15c70.03.80.69.70.93.00.2e.15
+O 66
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/top/toplevel/schematic/sheet1" 65 mgc_sheet 3cd58ec14f66.03.80.69.70.92.00.34.4b 3caf40f15c70.03.80.69.70.93.00.2e.15

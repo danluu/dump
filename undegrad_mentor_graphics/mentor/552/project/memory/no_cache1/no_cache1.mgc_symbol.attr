@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3cd2d6c624ca.03.80.69.70.92.00.2f.c8 2 2 1 0
+V v 1 1 3cd2d6c624cb.03.80.69.70.92.00.2f.c8
+F f 1 "no_cache1.smbl_1"
+V v 2 1 3cd2d6d0e81b.03.80.69.70.92.00.2f.c8
+F f 2 "no_cache1.smbl_2"
+O 2
+R csduv 0 "/u/j/e/jeshua/prj/memory/no_cache1/part" 2 Eddm_part 3cd2d6c63a14.03.80.69.70.92.00.2f.c8 3cd2d66225c2.03.80.69.70.92.00.2f.c8
+O 1
+R csduv 0 "/u/j/e/jeshua/prj/memory/no_cache1/part" 2 Eddm_part 3cd2d6c63a14.03.80.69.70.92.00.2f.c8 3cd2d66225c2.03.80.69.70.92.00.2f.c8

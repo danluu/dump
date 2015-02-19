@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3c6ee3164b04.03.80.69.77.6e.00.32.97 4 2 1 0
+V v 2 1 3c6ee54864ed.03.80.69.77.6e.00.32.97
+F o 0 ""
+V v 3 1 3c6ee62e698e.03.80.69.77.6e.00.32.97
+F o 0 ""
+V v 4 1 3c6eedc11bd0.03.80.69.77.6e.00.32.97
+F o 0 ""
+O 4
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw2/p3/inc/schematic/sheet1" 3 mgc_sheet 3c6eedc111d9.03.80.69.77.6e.00.32.97 3c6ee3165c22.03.80.69.77.6e.00.32.97
+O 3
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw2/p3/inc/schematic/sheet1" 2 mgc_sheet 3c6ee62dc63a.03.80.69.77.6e.00.32.97 3c6ee3165c22.03.80.69.77.6e.00.32.97
+O 2
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw2/p3/inc/schematic/sheet1" 1 mgc_sheet 3c6ee3165c23.03.80.69.77.6e.00.32.97 3c6ee3165c22.03.80.69.77.6e.00.32.97

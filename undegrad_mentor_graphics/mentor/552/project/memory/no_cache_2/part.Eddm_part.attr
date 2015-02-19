@@ -1,0 +1,7 @@
+A 5 u Eddm_part 3cd59bcfcdfe.03.80.69.70.91.00.34.b7 1 2 1 0
+V v 1 1 3cd59bcfce00.03.80.69.70.91.00.34.b7
+F f 1 "part.part_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/prj/memory/no_cache_2/schematic" 1 mgc_schematic 3cd59bcf752d.03.80.69.70.91.00.34.b7 3cd59bcf752c.03.80.69.70.91.00.34.b7
+P "eddm__refer_state" "eddm__refer_floating"

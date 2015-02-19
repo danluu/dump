@@ -1,0 +1,14 @@
+A 5 u Eddm_part 3caf5c1ae972.03.80.69.70.93.00.2e.15 2 2 2 0
+V v 1 1 3caf5c1ae974.03.80.69.70.93.00.2e.15
+F f 1 "part.part_1"
+V v 2 1 3caf5d0a594d.03.80.69.70.93.00.2e.15
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x4/schematic" 1 mgc_schematic 3caf5c1aa5b3.03.80.69.70.93.00.2e.15 3caf5c1aa5b1.03.80.69.70.93.00.2e.15
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x4/0x4" 1 mgc_symbol 3caf5ceac4fb.03.80.69.70.93.00.2e.15 3caf5c465951.03.80.69.70.93.00.2e.15
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x4/schematic" 1 mgc_schematic 3caf5c1aa5b3.03.80.69.70.93.00.2e.15 3caf5c1aa5b1.03.80.69.70.93.00.2e.15
+P "eddm__refer_state" "eddm__refer_floating"

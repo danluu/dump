@@ -1,0 +1,43 @@
+A 5 u mgc_sheet 3caf76fd34c7.03.80.69.70.93.00.2e.15 8 2 15 0
+V v 6 2 3cc70d124dd2.03.80.69.77.6a.00.30.e4
+F f 6 "sheet1.ssht_6"
+F f 6 "sheet1.sgfx_6"
+V v 7 2 3cc70dee97b1.03.80.69.77.6a.00.30.e4
+F f 7 "sheet1.ssht_7"
+F f 7 "sheet1.sgfx_7"
+V v 8 2 3cc70e46ae19.03.80.69.77.6a.00.30.e4
+F f 8 "sheet1.ssht_8"
+F f 8 "sheet1.sgfx_8"
+O 8
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/schematic" 1 mgc_schematic 3caf76fd1e0e.03.80.69.70.93.00.2e.15 3caf76fd1e0d.03.80.69.70.93.00.2e.15
+R csduv 1 "$MGC_GENLIB/portin/part" 1 Eddm_part 35b533a5f2c8.03.89.ca.2b.4d.00.0e.21 35b53c90ba98.03.89.ca.2b.4d.00.4f.9c
+R csduv 2 "$MGC_GENLIB/portin/portin" 1 mgc_symbol 35b533a5f114.03.89.ca.2b.4d.00.0e.21 35b53c90baa4.03.89.ca.2b.4d.00.4f.9c
+R csduv 3 "$MGC_GENLIB/portout/part" 1 Eddm_part 35b534b3d69a.03.89.ca.2b.4d.00.0e.21 35b53c93a547.03.89.ca.2b.4d.00.4f.9c
+R csduv 4 "$MGC_GENLIB/portout/portout" 1 mgc_symbol 35b534b3d562.03.89.ca.2b.4d.00.0e.21 35b53c93a542.03.89.ca.2b.4d.00.4f.9c
+R csduv 5 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/part" 2 Eddm_part 3cc70802cb44.03.80.69.77.6a.00.30.e4 3cc707836713.03.80.69.77.6a.00.30.e4
+R csduv 6 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/memory_unit" 3 mgc_symbol 3cc70816d57a.03.80.69.77.6a.00.30.e4 3cc70782dc9c.03.80.69.77.6a.00.30.e4
+R csduv 13 "/u/j/e/jeshua/mentor/dluu/vhdlsym/no_cache/part" 2 Eddm_part 3cc70aaa3386.03.80.69.77.6b.00.32.76 3cc70aa478e2.03.80.69.77.6b.00.32.76
+R csduv 14 "/u/j/e/jeshua/mentor/dluu/vhdlsym/no_cache/no_cache" 2 mgc_symbol 3cc70aaa32cd.03.80.69.77.6b.00.32.76 3cc70aa434aa.03.80.69.77.6b.00.32.76
+O 7
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/schematic" 1 mgc_schematic 3caf76fd1e0e.03.80.69.70.93.00.2e.15 3caf76fd1e0d.03.80.69.70.93.00.2e.15
+R csduv 1 "$MGC_GENLIB/portin/part" 1 Eddm_part 35b533a5f2c8.03.89.ca.2b.4d.00.0e.21 35b53c90ba98.03.89.ca.2b.4d.00.4f.9c
+R csduv 2 "$MGC_GENLIB/portin/portin" 1 mgc_symbol 35b533a5f114.03.89.ca.2b.4d.00.0e.21 35b53c90baa4.03.89.ca.2b.4d.00.4f.9c
+R csduv 3 "$MGC_GENLIB/portout/part" 1 Eddm_part 35b534b3d69a.03.89.ca.2b.4d.00.0e.21 35b53c93a547.03.89.ca.2b.4d.00.4f.9c
+R csduv 4 "$MGC_GENLIB/portout/portout" 1 mgc_symbol 35b534b3d562.03.89.ca.2b.4d.00.0e.21 35b53c93a542.03.89.ca.2b.4d.00.4f.9c
+R csduv 5 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/part" 2 Eddm_part 3cc70802cb44.03.80.69.77.6a.00.30.e4 3cc707836713.03.80.69.77.6a.00.30.e4
+R csduv 6 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/memory_unit" 3 mgc_symbol 3cc70816d57a.03.80.69.77.6a.00.30.e4 3cc70782dc9c.03.80.69.77.6a.00.30.e4
+R csduv 13 "/u/j/e/jeshua/mentor/dluu/vhdlsym/no_cache/part" 2 Eddm_part 3cc70aaa3386.03.80.69.77.6b.00.32.76 3cc70aa478e2.03.80.69.77.6b.00.32.76
+R csduv 14 "/u/j/e/jeshua/mentor/dluu/vhdlsym/no_cache/no_cache" 2 mgc_symbol 3cc70aaa32cd.03.80.69.77.6b.00.32.76 3cc70aa434aa.03.80.69.77.6b.00.32.76
+O 6
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/schematic" 1 mgc_schematic 3caf76fd1e0e.03.80.69.70.93.00.2e.15 3caf76fd1e0d.03.80.69.70.93.00.2e.15
+R csduv 1 "$MGC_GENLIB/portin/part" 1 Eddm_part 35b533a5f2c8.03.89.ca.2b.4d.00.0e.21 35b53c90ba98.03.89.ca.2b.4d.00.4f.9c
+R csduv 2 "$MGC_GENLIB/portin/portin" 1 mgc_symbol 35b533a5f114.03.89.ca.2b.4d.00.0e.21 35b53c90baa4.03.89.ca.2b.4d.00.4f.9c
+R csduv 3 "$MGC_GENLIB/portout/part" 1 Eddm_part 35b534b3d69a.03.89.ca.2b.4d.00.0e.21 35b53c93a547.03.89.ca.2b.4d.00.4f.9c
+R csduv 4 "$MGC_GENLIB/portout/portout" 1 mgc_symbol 35b534b3d562.03.89.ca.2b.4d.00.0e.21 35b53c93a542.03.89.ca.2b.4d.00.4f.9c
+R csduv 5 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/part" 2 Eddm_part 3cc70802cb44.03.80.69.77.6a.00.30.e4 3cc707836713.03.80.69.77.6a.00.30.e4
+R csduv 6 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/memory_unit" 3 mgc_symbol 3cc70816d57a.03.80.69.77.6a.00.30.e4 3cc70782dc9c.03.80.69.77.6a.00.30.e4
+R csduv 13 "/u/j/e/jeshua/mentor/dluu/vhdlsym/no_cache/part" 2 Eddm_part 3cc70aaa3386.03.80.69.77.6b.00.32.76 3cc70aa478e2.03.80.69.77.6b.00.32.76
+R csduv 14 "/u/j/e/jeshua/mentor/dluu/vhdlsym/no_cache/no_cache" 2 mgc_symbol 3cc70aaa32cd.03.80.69.77.6b.00.32.76 3cc70aa434aa.03.80.69.77.6b.00.32.76

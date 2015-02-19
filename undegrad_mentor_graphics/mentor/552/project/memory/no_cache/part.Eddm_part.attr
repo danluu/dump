@@ -1,0 +1,22 @@
+A 5 u Eddm_part 3cc70c1921a6.03.80.69.77.6a.00.30.e4 9 2 2 0
+V v 7 1 3cd58e271195.03.80.69.70.92.00.34.4b
+F f 7 "part.part_7"
+V v 8 1 3cd58e679f0c.03.80.69.70.92.00.34.4b
+F f 8 "part.part_8"
+V v 9 1 3cd5a0b53b18.03.80.69.70.92.00.34.4b
+F f 9 "part.part_9"
+O 9
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/no_cache/schematic" 1 mgc_schematic 3cc70c18e072.03.80.69.77.6a.00.30.e4 3cc70c18e071.03.80.69.77.6a.00.30.e4
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/memory/no_cache/no_cache" 14 mgc_symbol 3cd5a0b528ab.03.80.69.70.92.00.34.4b 3cc70e622d60.03.80.69.77.6a.00.30.e4
+O 8
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/no_cache/schematic" 1 mgc_schematic 3cc70c18e072.03.80.69.77.6a.00.30.e4 3cc70c18e071.03.80.69.77.6a.00.30.e4
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/memory/no_cache/no_cache" 12 mgc_symbol 3cd58e5d8fec.03.80.69.70.92.00.34.4b 3cc70e622d60.03.80.69.77.6a.00.30.e4
+O 7
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/no_cache/schematic" 1 mgc_schematic 3cc70c18e072.03.80.69.77.6a.00.30.e4 3cc70c18e071.03.80.69.77.6a.00.30.e4
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/memory/no_cache/no_cache" 11 mgc_symbol 3cd58ded53a9.03.80.69.70.92.00.34.4b 3cc70e622d60.03.80.69.77.6a.00.30.e4

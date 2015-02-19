@@ -1,0 +1,6 @@
+A 5 u Eddm_part 3c6e93c4c13f.03.80.69.77.69.00.2d.00 1 2 1 0
+V v 1 1 3c6e93c4c140.03.80.69.77.69.00.2d.00
+F f 1 "part.part_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/nbit_test/schematic" 1 mgc_schematic 3c6e9317210a.03.80.69.77.69.01.2d.00 3c6e9317210a.03.80.69.77.69.00.2d.00

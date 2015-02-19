@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3cc70e622d60.03.80.69.77.6a.00.30.e4 16 2 1 0
+V v 14 1 3cd5a0b528ab.03.80.69.70.92.00.34.4b
+F f 14 "no_cache.smbl_14"
+V v 15 1 3cd5a0bda9c0.03.80.69.70.92.00.34.4b
+F f 15 "no_cache.smbl_15"
+V v 16 1 3cd5a0cb283a.03.80.69.70.92.00.34.4b
+F f 16 "no_cache.smbl_16"
+O 16
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/no_cache/part" 9 Eddm_part 3cd5a0b53b18.03.80.69.70.92.00.34.4b 3cc70c1921a6.03.80.69.77.6a.00.30.e4
+O 15
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/no_cache/part" 9 Eddm_part 3cd5a0b53b18.03.80.69.70.92.00.34.4b 3cc70c1921a6.03.80.69.77.6a.00.30.e4
+O 14
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/no_cache/part" 9 Eddm_part 3cd5a0b53b18.03.80.69.70.92.00.34.4b 3cc70c1921a6.03.80.69.77.6a.00.30.e4

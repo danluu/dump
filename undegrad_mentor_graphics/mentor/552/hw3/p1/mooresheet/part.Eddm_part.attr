@@ -1,0 +1,6 @@
+A 5 u Eddm_part 3c80ef318f8f.03.80.69.77.69.00.2d.a4 1 2 1 0
+V v 1 1 3c80ef318f8f.03.80.69.77.69.01.2d.a4
+F f 1 "part.part_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/hw3/p1/mooresheet/schematic" 1 mgc_schematic 3c80ee834907.03.80.69.77.69.00.2d.a4 3c80ee834906.03.80.69.77.69.00.2d.a4

@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3c55f2090884.03.80.69.70.8f.00.31.ad 4 2 1 0
+V v 2 1 3c55f246c187.03.80.69.70.8f.00.31.ad
+F f 2 "p2c1.smbl_2"
+V v 3 1 3c55f2548325.03.80.69.70.8f.00.31.ad
+F f 3 "p2c1.smbl_3"
+V v 4 1 3c55f2ce9740.03.80.69.70.8f.00.31.ad
+F f 4 "p2c1.smbl_4"
+O 4
+R csduv 0 "/u/d/l/dluu/mentor/552/hw1/p2c1/part" 4 Eddm_part 3c55f2548f00.03.80.69.70.8f.00.31.ad 3c55efb0e36c.03.80.69.70.8f.00.31.ad
+O 3
+R csduv 0 "/u/d/l/dluu/mentor/552/hw1/p2c1/part" 4 Eddm_part 3c55f2548f00.03.80.69.70.8f.00.31.ad 3c55efb0e36c.03.80.69.70.8f.00.31.ad
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/hw1/p2c1/part" 3 Eddm_part 3c55f246ce6e.03.80.69.70.8f.00.31.ad 3c55efb0e36c.03.80.69.70.8f.00.31.ad

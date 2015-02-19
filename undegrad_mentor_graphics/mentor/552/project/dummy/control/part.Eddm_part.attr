@@ -1,0 +1,19 @@
+A 5 u Eddm_part 3caf751ace72.03.80.69.70.93.00.2e.15 4 2 2 0
+V v 2 1 3caf7524ac2a.03.80.69.70.93.00.2e.15
+F f 2 "part.part_2"
+V v 3 1 3caf76afb15f.03.80.69.70.93.00.2e.15
+F f 3 "part.part_3"
+V v 4 1 3cc1fefec7f0.03.80.69.70.93.00.31.6f
+F f 4 "part.part_4"
+O 4
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/schematic" 1 mgc_schematic 3caf72dab6ca.03.80.69.70.93.00.2e.15 3caf72dab6c9.03.80.69.70.93.00.2e.15
+R csduv 1 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/control" 5 mgc_symbol 3cc1fefeb2f8.03.80.69.70.93.00.31.6f 3caf75249408.03.80.69.70.93.00.2e.15
+O 3
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/schematic" 1 mgc_schematic 3caf72dab6ca.03.80.69.70.93.00.2e.15 3caf72dab6c9.03.80.69.70.93.00.2e.15
+R csduv 1 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/control" 3 mgc_symbol 3caf76af9bda.03.80.69.70.93.00.2e.15 3caf75249408.03.80.69.70.93.00.2e.15
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/schematic" 1 mgc_schematic 3caf72dab6ca.03.80.69.70.93.00.2e.15 3caf72dab6c9.03.80.69.70.93.00.2e.15
+R csduv 1 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/control" 1 mgc_symbol 3caf7524940a.03.80.69.70.93.00.2e.15 3caf75249408.03.80.69.70.93.00.2e.15

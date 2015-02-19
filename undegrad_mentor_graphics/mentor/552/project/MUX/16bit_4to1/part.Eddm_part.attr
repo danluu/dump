@@ -1,0 +1,22 @@
+A 5 u Eddm_part 3c9cf6f2ee83.03.80.69.77.6a.00.2f.68 5 2 2 0
+V v 3 1 3c9cf8986f69.03.80.69.77.6a.00.2f.68
+F f 3 "part.part_3"
+V v 4 1 3c9cf8b2db73.03.80.69.77.6a.00.2f.68
+F f 4 "part.part_4"
+V v 5 1 3c9cf8b8e1b4.03.80.69.77.6a.00.2f.68
+F f 5 "part.part_5"
+O 5
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_4to1/schematic" 1 mgc_schematic 3c9cf6f2b741.03.80.69.77.6a.00.2f.68 3c9cf6f2b740.03.80.69.77.6a.00.2f.68
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/MUX/16bit_4to1/16bit_4to1" 3 mgc_symbol 3c9cf8b8d967.03.80.69.77.6a.00.2f.68 3c9cf8985ee0.03.80.69.77.6a.00.2f.68
+O 4
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_4to1/schematic" 1 mgc_schematic 3c9cf6f2b741.03.80.69.77.6a.00.2f.68 3c9cf6f2b740.03.80.69.77.6a.00.2f.68
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/MUX/16bit_4to1/16bit_4to1" 2 mgc_symbol 3c9cf8b2d39a.03.80.69.77.6a.00.2f.68 3c9cf8985ee0.03.80.69.77.6a.00.2f.68
+O 3
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_4to1/schematic" 1 mgc_schematic 3c9cf6f2b741.03.80.69.77.6a.00.2f.68 3c9cf6f2b740.03.80.69.77.6a.00.2f.68
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/MUX/16bit_4to1/16bit_4to1" 1 mgc_symbol 3c9cf8985ee0.03.80.69.77.6a.01.2f.68 3c9cf8985ee0.03.80.69.77.6a.00.2f.68

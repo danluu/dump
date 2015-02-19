@@ -1,0 +1,22 @@
+A 5 u Eddm_part 3c9a5d7818b5.03.80.69.70.92.01.31.96 14 2 2 0
+V v 12 1 3cd04cc1a2ea.03.80.69.70.93.00.35.10
+F f 12 "part.part_12"
+V v 13 1 3cd05421493e.03.80.69.70.93.00.35.10
+F f 13 "part.part_13"
+V v 14 1 3cd0569683ca.03.80.69.70.93.00.35.10
+F f 14 "part.part_14"
+O 14
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/schematic" 1 mgc_schematic 3c6e8b2a28ab.03.80.69.77.69.00.2d.00 3c9a5d7818b5.03.80.69.70.92.00.31.96
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/ALUv1" 22 mgc_symbol 3cd056967242.03.80.69.70.93.00.35.10 3c9a5d7818b6.03.80.69.70.92.00.31.96
+O 13
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/schematic" 1 mgc_schematic 3c6e8b2a28ab.03.80.69.77.69.00.2d.00 3c9a5d7818b5.03.80.69.70.92.00.31.96
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/ALUv1" 20 mgc_symbol 3cd0542137f1.03.80.69.70.93.00.35.10 3c9a5d7818b6.03.80.69.70.92.00.31.96
+O 12
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/schematic" 1 mgc_schematic 3c6e8b2a28ab.03.80.69.77.69.00.2d.00 3c9a5d7818b5.03.80.69.70.92.00.31.96
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/ALUv1" 18 mgc_symbol 3cd04cc1966a.03.80.69.70.93.00.35.10 3c9a5d7818b6.03.80.69.70.92.00.31.96

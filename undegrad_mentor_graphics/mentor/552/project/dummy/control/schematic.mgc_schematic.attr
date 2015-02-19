@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3caf72dab6c9.03.80.69.70.93.00.2e.15 6 2 1 0
+V v 4 1 3caf7698b8cf.03.80.69.70.93.00.2e.15
+F o 0 ""
+V v 5 1 3caf76a527d3.03.80.69.70.93.00.2e.15
+F o 0 ""
+V v 6 1 3cc1fef0471d.03.80.69.70.93.00.31.6f
+F o 0 ""
+O 6
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/schematic/sheet1" 5 mgc_sheet 3cc1fef0382b.03.80.69.70.93.00.31.6f 3caf72dad012.03.80.69.70.93.00.2e.15
+O 5
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/schematic/sheet1" 4 mgc_sheet 3caf76a522f0.03.80.69.70.93.00.2e.15 3caf72dad012.03.80.69.70.93.00.2e.15
+O 4
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/schematic/sheet1" 3 mgc_sheet 3caf7698b3dd.03.80.69.70.93.00.2e.15 3caf72dad012.03.80.69.70.93.00.2e.15

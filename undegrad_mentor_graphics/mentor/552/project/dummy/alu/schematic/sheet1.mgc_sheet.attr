@@ -1,0 +1,11 @@
+A 5 u mgc_sheet 3caf6f0f2aea.03.80.69.70.93.00.2e.15 1 2 5 0
+V v 1 2 3caf6f0f2aeb.03.80.69.70.93.00.2e.15
+F f 1 "sheet1.ssht_1"
+F f 1 "sheet1.sgfx_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/alu/schematic" 1 mgc_schematic 3caf6f0f15a3.03.80.69.70.93.00.2e.15 3caf6f0f15a2.03.80.69.70.93.00.2e.15
+R csduv 1 "$MGC_GENLIB/portin/part" 1 Eddm_part 35b533a5f2c8.03.89.ca.2b.4d.00.0e.21 35b53c90ba98.03.89.ca.2b.4d.00.4f.9c
+R csduv 2 "$MGC_GENLIB/portin/portin" 1 mgc_symbol 35b533a5f114.03.89.ca.2b.4d.00.0e.21 35b53c90baa4.03.89.ca.2b.4d.00.4f.9c
+R csduv 3 "$MGC_GENLIB/portout/part" 1 Eddm_part 35b534b3d69a.03.89.ca.2b.4d.00.0e.21 35b53c93a547.03.89.ca.2b.4d.00.4f.9c
+R csduv 4 "$MGC_GENLIB/portout/portout" 1 mgc_symbol 35b534b3d562.03.89.ca.2b.4d.00.0e.21 35b53c93a542.03.89.ca.2b.4d.00.4f.9c

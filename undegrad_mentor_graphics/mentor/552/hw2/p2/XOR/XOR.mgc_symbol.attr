@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3c6e87ba620c.03.80.69.77.69.00.2d.00 3 2 1 0
+V v 1 1 3c6e87ba620d.03.80.69.77.69.00.2d.00
+F f 1 "XOR.smbl_1"
+V v 2 1 3c6e87c94f4f.03.80.69.77.69.00.2d.00
+F f 2 "XOR.smbl_2"
+V v 3 1 3c6e88523061.03.80.69.77.69.00.2d.00
+F f 3 "XOR.smbl_3"
+O 3
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/XOR/part" 2 Eddm_part 3c6e87c955d1.03.80.69.77.69.00.2d.00 3c6e87ba6745.03.80.69.77.69.00.2d.00
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/XOR/part" 2 Eddm_part 3c6e87c955d1.03.80.69.77.69.00.2d.00 3c6e87ba6745.03.80.69.77.69.00.2d.00
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/XOR/part" 1 Eddm_part 3c6e87ba6746.03.80.69.77.69.00.2d.00 3c6e87ba6745.03.80.69.77.69.00.2d.00

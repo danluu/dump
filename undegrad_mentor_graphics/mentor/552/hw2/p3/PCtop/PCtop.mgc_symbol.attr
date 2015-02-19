@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3c6ef1f969f1.03.80.69.77.6e.00.32.97 2 2 1 0
+V v 1 1 3c6ef1f969f1.03.80.69.77.6e.01.32.97
+F f 1 "PCtop.smbl_1"
+V v 2 1 3c6ef24f84eb.03.80.69.77.6e.00.32.97
+F f 2 "PCtop.smbl_2"
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p3/PCtop/part" 2 Eddm_part 3c6ef1f97567.03.80.69.77.6e.00.32.97 3c6ef082a5ed.03.80.69.77.6e.00.32.97
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p3/PCtop/part" 2 Eddm_part 3c6ef1f97567.03.80.69.77.6e.00.32.97 3c6ef082a5ed.03.80.69.77.6e.00.32.97

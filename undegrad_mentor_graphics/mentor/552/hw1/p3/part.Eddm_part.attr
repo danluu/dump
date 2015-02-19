@@ -1,0 +1,7 @@
+A 5 u Eddm_part 3c5c2cd95a1b.03.80.69.70.8f.00.2e.3b 1 2 1 0
+V v 1 1 3c5c2cd95a1c.03.80.69.70.8f.00.2e.3b
+F f 1 "part.part_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/hw1/p3/schematic" 1 mgc_schematic 3c5c2a19af57.03.80.69.70.8f.00.2e.3b 3c5c2a19af56.03.80.69.70.8f.00.2e.3b
+P "eddm__refer_state" "eddm__refer_floating"

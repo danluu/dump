@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3caf511ab279.03.80.69.70.93.00.2e.15 3 2 1 0
+V v 1 1 3caf511ab27a.03.80.69.70.93.00.2e.15
+F f 1 "1bit_2to1.smbl_1"
+V v 2 1 3caf6198eec4.03.80.69.70.93.00.2e.15
+F f 2 "1bit_2to1.smbl_2"
+V v 3 1 3caf6252cbba.03.80.69.70.93.00.2e.15
+F f 3 "1bit_2to1.smbl_3"
+O 3
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/1bit_2to1/part" 3 Eddm_part 3caf61e29bfa.03.80.69.70.93.00.2e.15 3caf4ffcc9c9.03.80.69.70.93.00.2e.15
+O 2
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/1bit_2to1/part" 3 Eddm_part 3caf61e29bfa.03.80.69.70.93.00.2e.15 3caf4ffcc9c9.03.80.69.70.93.00.2e.15
+O 1
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/1bit_2to1/part" 2 Eddm_part 3caf51560adc.03.80.69.70.93.00.2e.15 3caf4ffcc9c9.03.80.69.70.93.00.2e.15

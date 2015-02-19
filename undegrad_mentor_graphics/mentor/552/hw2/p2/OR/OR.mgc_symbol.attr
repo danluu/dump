@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3c6e8adf9ebc.03.80.69.77.69.00.2d.00 2 2 1 0
+V v 1 1 3c6e8adf9ebc.03.80.69.77.69.01.2d.00
+F f 1 "OR.smbl_1"
+V v 2 1 3c6e8b1fdaf2.03.80.69.77.69.00.2d.00
+F f 2 "OR.smbl_2"
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/OR/part" 2 Eddm_part 3c6e8adfaa9e.03.80.69.77.69.00.2d.00 3c6e8acfe438.03.80.69.77.69.00.2d.00
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/OR/part" 2 Eddm_part 3c6e8adfaa9e.03.80.69.77.69.00.2d.00 3c6e8acfe438.03.80.69.77.69.00.2d.00

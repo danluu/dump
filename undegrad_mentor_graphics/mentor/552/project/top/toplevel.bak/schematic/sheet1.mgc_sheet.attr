@@ -1,0 +1,47 @@
+A 5 u mgc_sheet 3cc9a038285b.03.80.69.70.9a.00.32.72 1 2 41 0
+V v 1 2 3cc9a038285d.03.80.69.70.9a.00.32.72
+F f 1 "sheet1.ssht_1"
+F f 1 "sheet1.sgfx_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/top/toplevel.bak/schematic" 1 mgc_schematic 3cc9a037ec64.03.80.69.70.9a.00.32.72 3cc9a037ec63.03.80.69.70.9a.00.32.72
+R csduv 1 "/u/d/l/dluu/mentor/552/project/memory/no_cache/part" 5 Eddm_part 3cc737049c91.03.80.69.77.6a.00.30.e4 3cc70c1921a6.03.80.69.77.6a.00.30.e4
+R csduv 2 "/u/d/l/dluu/mentor/552/project/memory/no_cache/no_cache" 8 mgc_symbol 3cc737094627.03.80.69.77.6a.00.30.e4 3cc70e622d60.03.80.69.77.6a.00.30.e4
+R csduv 3 "$MGC_GENLIB/buf/part" 1 Eddm_part 5f94a50ed000.0d.00.02.e4.17.00.00.00 5f9a0e79a000.0d.00.02.e4.17.00.00.00
+R csduv 4 "$MGC_GENLIB/buf/buf" 1 mgc_symbol 5e8fb2a03000.0d.00.02.ed.d4.00.00.00 5f9a0e79b000.0d.00.02.e4.17.00.00.00
+R csduv 5 "$MGC_GENLIB/inv/part" 1 Eddm_part 5f94b1676000.0d.00.02.e4.17.00.00.00 5f9a0e6a7000.0d.00.02.e4.17.00.00.00
+R csduv 6 "$MGC_GENLIB/inv/inv" 1 mgc_symbol 5e8fb4bcd000.0d.00.02.ed.d4.00.00.00 5f9a0e6a8000.0d.00.02.e4.17.00.00.00
+R csduv 7 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/part" 8 Eddm_part 3cc99f473dc6.03.80.69.70.99.00.30.7c 3c9a5d7818b5.03.80.69.70.92.01.31.96
+R csduv 8 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/ALUv1" 11 mgc_symbol 3cc99f60abb3.03.80.69.70.99.00.30.7c 3c9a5d7818b6.03.80.69.70.92.00.31.96
+R csduv 9 "$MGC_GENLIB/portin/part" 1 Eddm_part 35b533a5f2c8.03.89.ca.2b.4d.00.0e.21 35b53c90ba98.03.89.ca.2b.4d.00.4f.9c
+R csduv 10 "$MGC_GENLIB/portin/portin" 1 mgc_symbol 35b533a5f114.03.89.ca.2b.4d.00.0e.21 35b53c90baa4.03.89.ca.2b.4d.00.4f.9c
+R csduv 11 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/16bit_4to1/part" 5 Eddm_part 3c9cf8b8e1b4.03.80.69.77.6a.00.2f.68 3c9cf6f2ee83.03.80.69.77.6a.00.2f.68
+R csduv 12 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/16bit_4to1/16bit_4to1" 5 mgc_symbol 3caf4a45ad9c.03.80.69.70.93.00.2e.15 3c9cf8985ee0.03.80.69.77.6a.00.2f.68
+R csduv 13 "/u/d/l/dluu/mentor/552/project/MUX/16bit_8to1/part" 2 Eddm_part 3c9cf9f37127.03.80.69.77.6a.00.2f.68 3c9cf8fe9d62.03.80.69.77.6a.00.2f.68
+R csduv 14 "/u/d/l/dluu/mentor/552/project/MUX/16bit_8to1/16bit_8to1" 2 mgc_symbol 3c9cfa0c514b.03.80.69.77.6a.00.2f.68 3c9cf9f36499.03.80.69.77.6a.00.2f.68
+R csduv 15 "/u/d/l/dluu/mentor/552/project/reg/16bit_posedge/part" 2 Eddm_part 3c9cfdc93cf3.03.80.69.77.6a.00.2f.68 3c9cfdc42f3f.03.80.69.77.6a.00.2f.68
+R csduv 16 "/u/d/l/dluu/mentor/552/project/reg/16bit_posedge/16bit_posedge" 2 mgc_symbol 3c9cfdda9778.03.80.69.77.6a.00.2f.68 3c9cfdc92fb0.03.80.69.77.6a.00.2f.68
+R csduv 17 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x1/part" 2 Eddm_part 3caf6d1655e2.03.80.69.70.93.00.2e.15 3caf6d07137f.03.80.69.70.93.00.2e.15
+R csduv 18 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x1/0x1" 2 mgc_symbol 3caf6d2c0614.03.80.69.70.93.00.2e.15 3caf6d164678.03.80.69.70.93.00.2e.15
+R csduv 19 "/u/d/l/dluu/mentor/552/project/misc/extend/part" 2 Eddm_part 3c9d054b9dbe.03.80.69.77.6a.00.2f.68 3c9d01f8846c.03.80.69.77.6a.00.2f.68
+R csduv 20 "/u/d/l/dluu/mentor/552/project/misc/extend/extend" 2 mgc_symbol 3c9d056b538a.03.80.69.77.6a.00.2f.68 3c9d054b8f95.03.80.69.77.6a.00.2f.68
+R csduv 21 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/part" 5 Eddm_part 3c9a734417cb.03.80.69.70.91.00.0d.c5 3c9a6a044954.03.80.69.70.92.01.31.96
+R csduv 22 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/16b8regs" 7 mgc_symbol 3caf4f765cf2.03.80.69.70.93.00.2e.15 3c9a6a044955.03.80.69.70.92.00.31.96
+R csduv 23 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/3bit_2to1/part" 2 Eddm_part 3caf52edbf91.03.80.69.70.93.00.2e.15 3caf52190c4c.03.80.69.70.93.00.2e.15
+R csduv 24 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/3bit_2to1/3bit_2to1" 1 mgc_symbol 3caf52ca810f.03.80.69.70.93.00.2e.15 3caf52ca8105.03.80.69.70.93.00.2e.15
+R csduv 25 "/u/j/e/jeshua/mentor/dluu/552/project/constants/R7/part" 2 Eddm_part 3caf586b1d6a.03.80.69.70.93.00.2e.15 3caf585f4787.03.80.69.70.93.00.2e.15
+R csduv 26 "/u/j/e/jeshua/mentor/dluu/552/project/constants/R7/R7" 1 mgc_symbol 3caf58250db9.03.80.69.70.93.00.2e.15 3caf58250db8.03.80.69.70.93.00.2e.15
+R csduv 27 "$MGC_GENLIB/or3/part" 1 Eddm_part 5f94c4dae000.0d.00.02.e4.17.00.00.00 5f9a0e570000.0d.00.02.e4.17.00.00.00
+R csduv 28 "$MGC_GENLIB/or3/or3" 1 mgc_symbol 5e8fb88ba000.0d.00.02.ed.d4.00.00.00 5f9a0e571000.0d.00.02.e4.17.00.00.00
+R csduv 29 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x8/part" 2 Eddm_part 3caf5bde6611.03.80.69.70.93.00.2e.15 3caf5b904149.03.80.69.70.93.00.2e.15
+R csduv 30 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x8/0x8" 1 mgc_symbol 3caf5b9f9b01.03.80.69.70.93.00.2e.15 3caf5b9f9b00.03.80.69.70.93.00.2e.15
+R csduv 31 "$MGC_GENLIB/and2/part" 1 Eddm_part 5f94a08df000.0d.00.02.e4.17.00.00.00 5f9a0e7c6000.0d.00.02.e4.17.00.00.00
+R csduv 32 "$MGC_GENLIB/and2/and2" 1 mgc_symbol 5e8fb21da000.0d.00.02.ed.d4.00.00.00 5f9a0e7c7000.0d.00.02.e4.17.00.00.00
+R csduv 33 "/u/j/e/jeshua/mentor/dluu/552/project/reg/16bit_enable/part" 2 Eddm_part 3caf629c9fde.03.80.69.70.93.00.2e.15 3caf5fe465a1.03.80.69.70.93.00.2e.15
+R csduv 34 "/u/j/e/jeshua/mentor/dluu/552/project/reg/16bit_enable/16bit_enable" 2 mgc_symbol 3caf63062fde.03.80.69.70.93.00.2e.15 3caf629c66fe.03.80.69.70.93.00.2e.15
+R csduv 35 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/16bit_2to1/part" 3 Eddm_part 3caf50238191.03.80.69.70.93.00.2e.15 3c9cf81bc739.03.80.69.77.6a.00.2f.68
+R csduv 36 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/16bit_2to1/16bit_2to1" 4 mgc_symbol 3caf50606e41.03.80.69.70.93.00.2e.15 3c9cf82c29c6.03.80.69.77.6a.00.2f.68
+R csduv 37 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x0/part" 3 Eddm_part 3caf72529c39.03.80.69.70.93.00.2e.15 3caf71f05511.03.80.69.70.93.00.2e.15
+R csduv 38 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x0/0x0" 3 mgc_symbol 3caf72616b37.03.80.69.70.93.00.2e.15 3caf722479c9.03.80.69.70.93.00.2e.15
+R csduv 39 "/u/j/e/jeshua/mentor/dluu/vhdlsym/control/part" 5 Eddm_part 3cc7361f7cd1.03.80.69.77.6b.00.37.87 3cc70d0ea052.03.80.69.77.6b.00.32.76
+R csduv 40 "/u/j/e/jeshua/mentor/dluu/vhdlsym/control/control" 5 mgc_symbol 3cc7361f7b77.03.80.69.77.6b.00.37.87 3cc70d0e3aa2.03.80.69.77.6b.00.32.76

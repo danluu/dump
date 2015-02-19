@@ -1,0 +1,11 @@
+A 5 u Eddm_part 3cd2d4b20e66.03.80.69.70.92.00.2f.c8 2 2 1 0
+V v 1 1 3cd2d4b20e67.03.80.69.70.92.00.2f.c8
+F f 1 "part.part_1"
+V v 2 1 3cd2d4c17ad4.03.80.69.70.92.00.2f.c8
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/memory_unit2/memory_unit2" 2 mgc_symbol 3cd2d4c179ef.03.80.69.70.92.00.2f.c8 3cd2d4b1a81c.03.80.69.70.92.00.2f.c8
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/memory_unit2/memory_unit2" 1 mgc_symbol 3cd2d4b1a81d.03.80.69.70.92.00.2f.c8 3cd2d4b1a81c.03.80.69.70.92.00.2f.c8

@@ -1,0 +1,14 @@
+A 5 u mgc_schematic 3c55f2dd857d.03.80.69.70.8f.00.31.ad 3 2 1 0
+V v 1 1 3c55f2dd857f.03.80.69.70.8f.00.31.ad
+F o 0 ""
+V v 2 1 3c55f49c271c.03.80.69.70.8f.00.31.ad
+F o 0 ""
+V v 3 1 3c55f5cfca1b.03.80.69.70.8f.00.31.ad
+F o 0 ""
+O 3
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw1/p2c2/schematic/sheet1" 2 mgc_sheet 3c55f5cfc50c.03.80.69.70.8f.00.31.ad 3c55f2dd99bb.03.80.69.70.8f.00.31.ad
+O 2
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw1/p2c2/schematic/sheet1" 1 mgc_sheet 3c55f2dd99bd.03.80.69.70.8f.00.31.ad 3c55f2dd99bb.03.80.69.70.8f.00.31.ad
+O 1
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw1/p2c2/schematic/sheet1" 1 mgc_sheet 3c55f2dd99bd.03.80.69.70.8f.00.31.ad 3c55f2dd99bb.03.80.69.70.8f.00.31.ad
+P "eddm__refer_state" "eddm__refer_floating"

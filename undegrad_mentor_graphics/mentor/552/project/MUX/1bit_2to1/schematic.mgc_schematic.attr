@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3caf4ffc7b08.03.80.69.70.93.00.2e.15 3 2 1 0
+V v 1 1 3caf4ffc7b0a.03.80.69.70.93.00.2e.15
+F o 0 ""
+V v 2 1 3caf51083d3d.03.80.69.70.93.00.2e.15
+F o 0 ""
+V v 3 1 3caf6172a959.03.80.69.70.93.00.2e.15
+F o 0 ""
+O 3
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/1bit_2to1/schematic/sheet1" 3 mgc_sheet 3caf61729b80.03.80.69.70.93.00.2e.15 3caf4ffc95e9.03.80.69.70.93.00.2e.15
+O 2
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/1bit_2to1/schematic/sheet1" 2 mgc_sheet 3caf5108310e.03.80.69.70.93.00.2e.15 3caf4ffc95e9.03.80.69.70.93.00.2e.15
+O 1
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/MUX/1bit_2to1/schematic/sheet1" 1 mgc_sheet 3caf4ffc95eb.03.80.69.70.93.00.2e.15 3caf4ffc95e9.03.80.69.70.93.00.2e.15

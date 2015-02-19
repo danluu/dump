@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3c9cf8985ee0.03.80.69.77.6a.00.2f.68 5 2 1 0
+V v 3 1 3c9cf8b8d967.03.80.69.77.6a.00.2f.68
+F f 3 "16bit_4to1.smbl_3"
+V v 4 1 3c9cf8d1a8c0.03.80.69.77.6a.00.2f.68
+F f 4 "16bit_4to1.smbl_4"
+V v 5 1 3caf4a45ad9c.03.80.69.70.93.00.2e.15
+F f 5 "16bit_4to1.smbl_5"
+O 5
+R csduv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_4to1/part" 5 Eddm_part 3c9cf8b8e1b4.03.80.69.77.6a.00.2f.68 3c9cf6f2ee83.03.80.69.77.6a.00.2f.68
+O 4
+R csduv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_4to1/part" 5 Eddm_part 3c9cf8b8e1b4.03.80.69.77.6a.00.2f.68 3c9cf6f2ee83.03.80.69.77.6a.00.2f.68
+O 3
+R csduv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_4to1/part" 5 Eddm_part 3c9cf8b8e1b4.03.80.69.77.6a.00.2f.68 3c9cf6f2ee83.03.80.69.77.6a.00.2f.68

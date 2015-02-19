@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3c7d6721a90e.03.80.69.70.9f.00.31.fc 3 2 1 0
+V v 1 1 3c7d6721a90f.03.80.69.70.9f.00.31.fc
+F f 1 "4to1MUX_3state.smbl_1"
+V v 2 1 3c7d67c045ed.03.80.69.70.9f.00.31.fc
+F f 2 "4to1MUX_3state.smbl_2"
+V v 3 1 3c7d680bab47.03.80.69.70.9f.00.31.fc
+F f 3 "4to1MUX_3state.smbl_3"
+O 3
+R csduv 0 "/u/d/l/dluu/mentor/552/4to1MUX_3state/part" 4 Eddm_part 3c7d680baba9.03.80.69.70.9f.00.31.fc 3c7d67030f41.03.80.69.70.9f.00.31.fc
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/4to1MUX_3state/part" 3 Eddm_part 3c7d67c04679.03.80.69.70.9f.00.31.fc 3c7d67030f41.03.80.69.70.9f.00.31.fc
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/552/4to1MUX_3state/part" 2 Eddm_part 3c7d6721c6b5.03.80.69.70.9f.00.31.fc 3c7d67030f41.03.80.69.70.9f.00.31.fc

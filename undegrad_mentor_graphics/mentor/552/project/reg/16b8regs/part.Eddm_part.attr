@@ -1,0 +1,22 @@
+A 5 u Eddm_part 3c9a6a044954.03.80.69.70.92.01.31.96 7 2 2 0
+V v 5 1 3c9a734417cb.03.80.69.70.91.00.0d.c5
+F f 5 "part.part_5"
+V v 6 1 3ccf3c00d9f5.03.80.69.70.97.00.3a.1a
+F f 6 "part.part_6"
+V v 7 1 3cd36ceb4888.03.80.69.70.93.00.43.af
+F f 7 "part.part_7"
+O 7
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/schematic" 1 mgc_schematic 3c6f14101142.03.80.69.77.6f.01.3d.06 3c9a6a044954.03.80.69.70.92.00.31.96
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/16b8regs" 11 mgc_symbol 3cd36ca18ef5.03.80.69.70.93.00.43.af 3c9a6a044955.03.80.69.70.92.00.31.96
+O 6
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/schematic" 1 mgc_schematic 3c6f14101142.03.80.69.77.6f.01.3d.06 3c9a6a044954.03.80.69.70.92.00.31.96
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/16b8regs" 8 mgc_symbol 3ccf3c00bdd9.03.80.69.70.97.00.3a.1a 3c9a6a044955.03.80.69.70.92.00.31.96
+O 5
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/schematic" 1 mgc_schematic 3c6f14101142.03.80.69.77.6f.01.3d.06 3c9a6a044954.03.80.69.70.92.00.31.96
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/16b8regs" 5 mgc_symbol 3c9a734406f6.03.80.69.70.91.00.0d.c5 3c9a6a044955.03.80.69.70.92.00.31.96

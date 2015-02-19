@@ -1,0 +1,12 @@
+A 5 u Eddm_part 3caf702ad8d3.03.80.69.70.93.00.2e.15 2 2 2 0
+V v 1 1 3caf702ad8d4.03.80.69.70.93.00.2e.15
+F f 1 "part.part_1"
+V v 2 1 3caf705e722e.03.80.69.70.93.00.2e.15
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/alu/schematic" 1 mgc_schematic 3caf6f0f15a3.03.80.69.70.93.00.2e.15 3caf6f0f15a2.03.80.69.70.93.00.2e.15
+R csduv 1 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/alu/alu" 1 mgc_symbol 3caf703284bf.03.80.69.70.93.00.2e.15 3caf703284be.03.80.69.70.93.00.2e.15
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/alu/schematic" 1 mgc_schematic 3caf6f0f15a3.03.80.69.70.93.00.2e.15 3caf6f0f15a2.03.80.69.70.93.00.2e.15

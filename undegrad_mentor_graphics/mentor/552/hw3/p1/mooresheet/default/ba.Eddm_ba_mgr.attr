@@ -1,0 +1,6 @@
+A 5 u Eddm_ba_mgr 3c80efae6ba8.03.80.69.77.69.00.2f.5c 1 2 1 0
+V v 1 1 3c80efae6ba8.03.80.69.77.69.01.2f.5c
+F f 1 "ba.ba_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw3/p1/mooresheet/default" 1 Eddm_design_viewpoint 3c80efae4883.03.80.69.77.69.00.2f.5c 3c80efae4882.03.80.69.77.69.00.2f.5c

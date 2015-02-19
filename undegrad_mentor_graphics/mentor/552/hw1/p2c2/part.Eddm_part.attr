@@ -1,0 +1,6 @@
+A 5 u Eddm_part 3c55f49be24a.03.80.69.70.8f.00.31.ad 1 2 1 0
+V v 1 1 3c55f49be24b.03.80.69.70.8f.00.31.ad
+F f 1 "part.part_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/hw1/p2c2/schematic" 1 mgc_schematic 3c55f2dd857f.03.80.69.70.8f.00.31.ad 3c55f2dd857d.03.80.69.70.8f.00.31.ad

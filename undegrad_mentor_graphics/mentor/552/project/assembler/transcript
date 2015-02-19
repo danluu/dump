@@ -1,0 +1,31 @@
+# cosim -lib vhdl552 -cosim -t ns toplevel_qsim 
+# //  ModelSim EE/VHDL 5.3d Feb  4 2000 SunOS 5.8
+# //
+# //  Copyright (c) Mentor Graphics Corporation, 1982-2000, All Rights Reserved.
+# //                       UNPUBLISHED, LICENSED SOFTWARE.
+# //            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+# //          PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS.
+# //
+# //  Copyright (c) Model Technology Incorporated 1990-2000, All Rights Reserved.
+# //
+# Loading /s/mentor-c.4/pkgs/modeltech.any/std.standard
+# Loading /s/mentor-c.4/pkgs/modeltech.any/ieee.std_logic_1164(body)
+# Loading /s/mentor-c.4/pkgs/modeltech.any/ieee.math_real(body)
+# Loading /s/mentor-c.4/pkgs/modeltech.any/std.textio(body)
+# Loading /u/d/l/dluu/mentor/vhdllib.toplevel_qsim(qspro_shadow)
+# Loading /u/d/l/dluu/mentor/vhdllib.control(version1)
+# Loading /u/d/l/dluu/mentor/vhdllib.\EI$1041\(qspro_shadow)
+# Loading /u/d/l/dluu/mentor/vhdllib.memory_unit5(mem1)
+# Loading /u/d/l/dluu/mentor/vhdllib.no_cache(version1)
+# QuickSim Pro FlexSim Integration v8.6_5.11 Mon Sep 11 15:00:07 EET DST 2000
+# restart -force
+# force -fixed /toplevel_qsim/LD 0 @0 ns
+# 
+# force -fixed /toplevel_qsim/DUMP_SIG 0 @0 ns
+# 
+# force -fixed /toplevel_qsim/LD 1 @60 ns
+# 
+# force -fixed /toplevel_qsim/DUMP_SIG 1 @180000 ns
+# 
+# force -fixed /toplevel_qsim/DUMP_SIG 0 @180050 ns
+# 

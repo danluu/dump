@@ -1,0 +1,10 @@
+A 5 u mgc_schematic 3c9cf74713b2.03.80.69.77.6a.00.2f.68 2 2 1 0
+V v 1 1 3c9cf74713b3.03.80.69.77.6a.00.2f.68
+F o 0 ""
+V v 2 1 3c9cf81bde41.03.80.69.77.6a.00.2f.68
+F o 0 ""
+O 2
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_2to1/schematic/sheet1" 1 mgc_sheet 3c9cf7472e3c.03.80.69.77.6a.00.2f.68 3c9cf7472e3b.03.80.69.77.6a.00.2f.68
+O 1
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_2to1/schematic/sheet1" 1 mgc_sheet 3c9cf7472e3c.03.80.69.77.6a.00.2f.68 3c9cf7472e3b.03.80.69.77.6a.00.2f.68
+P "eddm__refer_state" "eddm__refer_floating"

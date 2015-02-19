@@ -1,0 +1,10 @@
+A 5 u mgc_schematic 3caf6f0f15a2.03.80.69.70.93.00.2e.15 2 2 1 0
+V v 1 1 3caf6f0f15a3.03.80.69.70.93.00.2e.15
+F o 0 ""
+V v 2 1 3caf702b0468.03.80.69.70.93.00.2e.15
+F o 0 ""
+O 2
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/alu/schematic/sheet1" 1 mgc_sheet 3caf6f0f2aeb.03.80.69.70.93.00.2e.15 3caf6f0f2aea.03.80.69.70.93.00.2e.15
+O 1
+R cspuv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/alu/schematic/sheet1" 1 mgc_sheet 3caf6f0f2aeb.03.80.69.70.93.00.2e.15 3caf6f0f2aea.03.80.69.70.93.00.2e.15
+P "eddm__refer_state" "eddm__refer_floating"

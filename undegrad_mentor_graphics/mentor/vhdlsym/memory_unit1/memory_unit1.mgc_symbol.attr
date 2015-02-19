@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3cd2d3f47705.03.80.69.70.92.00.2f.c8 2 2 1 0
+V v 1 1 3cd2d3f47706.03.80.69.70.92.00.2f.c8
+F f 1 "memory_unit1.smbl_1"
+V v 2 1 3cd2d42d2242.03.80.69.70.92.00.2f.c8
+F f 2 "memory_unit1.smbl_2"
+O 2
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/memory_unit1/part" 2 Eddm_part 3cd2d42d2334.03.80.69.70.92.00.2f.c8 3cd2d3f55b51.03.80.69.70.92.00.2f.c8
+O 1
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/memory_unit1/part" 1 Eddm_part 3cd2d3f55b53.03.80.69.70.92.00.2f.c8 3cd2d3f55b51.03.80.69.70.92.00.2f.c8

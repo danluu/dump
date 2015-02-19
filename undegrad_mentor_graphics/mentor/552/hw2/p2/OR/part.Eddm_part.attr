@@ -1,0 +1,12 @@
+A 5 u Eddm_part 3c6e8acfe438.03.80.69.77.69.00.2d.00 2 2 2 0
+V v 1 1 3c6e8acfe439.03.80.69.77.69.00.2d.00
+F f 1 "part.part_1"
+V v 2 1 3c6e8adfaa9e.03.80.69.77.69.00.2d.00
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/OR/schematic" 1 mgc_schematic 3c6e8a4654cf.03.80.69.77.69.00.2d.00 3c6e8a4654ce.03.80.69.77.69.00.2d.00
+R csduv 1 "/u/d/l/dluu/mentor/552/hw2/p2/OR/OR" 1 mgc_symbol 3c6e8adf9ebc.03.80.69.77.69.01.2d.00 3c6e8adf9ebc.03.80.69.77.69.00.2d.00
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/OR/schematic" 1 mgc_schematic 3c6e8a4654cf.03.80.69.77.69.00.2d.00 3c6e8a4654ce.03.80.69.77.69.00.2d.00

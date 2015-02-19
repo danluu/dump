@@ -1,0 +1,12 @@
+A 5 u Eddm_design_viewpoint 3cc70f4b2f8b.03.80.69.77.6a.00.33.6e 1 2 3 0
+V v 1 4 3cc70f4b2f8c.03.80.69.77.6a.00.33.6e
+F f 1 "default.dvpt_1"
+F o 0 
+F o 0 
+F o 0 
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/top/toplevel/part" 1 Eddm_part 3caf5644f175.03.80.69.70.93.00.2e.15 3caf5644f173.03.80.69.70.93.00.2e.15
+R cspuv 1 "/u/j/e/jeshua/mentor/dluu/552/project/top/toplevel/schematic" 1 mgc_schematic 3caf40f13f51.03.80.69.70.93.00.2e.15 3caf40f13f50.03.80.69.70.93.00.2e.15
+P "eddm__refer_state" "eddm__refer_floating"
+R cspuv 2 "/u/d/l/dluu/mentor/552/project/top/toplevel/default/ba" 1 Eddm_ba_mgr 3cc70f4b59f7.03.80.69.77.6a.00.33.6e 3cc70f4b59f6.03.80.69.77.6a.00.33.6e

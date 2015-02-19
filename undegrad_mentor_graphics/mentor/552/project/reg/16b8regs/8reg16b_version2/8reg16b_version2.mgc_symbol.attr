@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3c9a6a2cb937.03.80.69.70.92.02.31.96 3 2 1 0
+V v 1 1 3c716a152e67.03.80.69.70.92.00.31.76
+F f 1 "8reg16b_version2.smbl_1"
+V v 2 1 3c716b37b9ac.03.80.69.70.92.00.31.76
+F f 2 "8reg16b_version2.smbl_2"
+V v 3 1 3c716b3dc6f1.03.80.69.70.92.00.31.76
+F f 3 "8reg16b_version2.smbl_3"
+O 3
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/8reg16b_version2/part" 2 Eddm_part 3c716a156120.03.80.69.70.92.00.31.76 3c9a6a2cb937.03.80.69.70.92.00.31.96
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/8reg16b_version2/part" 2 Eddm_part 3c716a156120.03.80.69.70.92.00.31.76 3c9a6a2cb937.03.80.69.70.92.00.31.96
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/8reg16b_version2/part" 2 Eddm_part 3c716a156120.03.80.69.70.92.00.31.76 3c9a6a2cb937.03.80.69.70.92.00.31.96

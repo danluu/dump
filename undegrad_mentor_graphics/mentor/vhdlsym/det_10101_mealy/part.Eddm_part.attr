@@ -1,0 +1,16 @@
+A 5 u Eddm_part 3c80f5b16fc7.03.80.69.77.69.00.2d.a4 5 2 1 0
+V v 3 1 3c80f664a034.03.80.69.77.69.00.2d.a4
+F f 3 "part.part_3"
+V v 4 1 3c80f89bdcf8.03.80.69.77.69.00.2d.a4
+F f 4 "part.part_4"
+V v 5 1 3c80f8a08ac6.03.80.69.77.69.00.2d.a4
+F f 5 "part.part_5"
+O 5
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/det_10101_mealy/det_10101_mealy" 5 mgc_symbol 3c80f8a08a80.03.80.69.77.69.00.2d.a4 3c80f5b17366.03.80.69.77.69.00.2d.a4
+O 4
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/det_10101_mealy/det_10101_mealy" 4 mgc_symbol 3c80f89ba6e7.03.80.69.77.69.00.2d.a4 3c80f5b17366.03.80.69.77.69.00.2d.a4
+O 3
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/det_10101_mealy/det_10101_mealy" 3 mgc_symbol 3c80f6649feb.03.80.69.77.69.00.2d.a4 3c80f5b17366.03.80.69.77.69.00.2d.a4

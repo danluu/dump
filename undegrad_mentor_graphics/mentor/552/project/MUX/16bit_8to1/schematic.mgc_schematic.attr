@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3c9cf736c8d0.03.80.69.77.6a.00.2f.68 4 2 1 0
+V v 2 1 3c9cf8feb52e.03.80.69.77.6a.00.2f.68
+F o 0 ""
+V v 3 1 3c9cf9771ee6.03.80.69.77.6a.00.2f.68
+F o 0 ""
+V v 4 1 3c9cf9ec911a.03.80.69.77.6a.00.2f.68
+F o 0 ""
+O 4
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_8to1/schematic/sheet1" 3 mgc_sheet 3c9cf9ec8959.03.80.69.77.6a.00.2f.68 3c9cf736dd7d.03.80.69.77.6a.00.2f.68
+O 3
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_8to1/schematic/sheet1" 2 mgc_sheet 3c9cf9771b4c.03.80.69.77.6a.00.2f.68 3c9cf736dd7d.03.80.69.77.6a.00.2f.68
+O 2
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/MUX/16bit_8to1/schematic/sheet1" 1 mgc_sheet 3c9cf736dd7e.03.80.69.77.6a.00.2f.68 3c9cf736dd7d.03.80.69.77.6a.00.2f.68

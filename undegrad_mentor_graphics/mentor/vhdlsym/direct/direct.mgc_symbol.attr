@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3cc70a76e62f.03.80.69.77.6b.00.32.76 8 2 1 0
+V v 6 1 3cd5bf0ff149.03.80.69.70.91.00.3c.8d
+F f 6 "direct.smbl_6"
+V v 7 1 3cd6c13974ef.03.80.69.70.93.00.2f.93
+F f 7 "direct.smbl_7"
+V v 8 1 3cd6c13f1339.03.80.69.70.93.00.2f.93
+F f 8 "direct.smbl_8"
+O 8
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/direct/part" 8 Eddm_part 3cd6c13f153f.03.80.69.70.93.00.2f.93 3cc70a77812a.03.80.69.77.6b.00.32.76
+O 7
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/direct/part" 7 Eddm_part 3cd6c13a347d.03.80.69.70.93.00.2f.93 3cc70a77812a.03.80.69.77.6b.00.32.76
+O 6
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/direct/part" 6 Eddm_part 3cd5bf0ff37d.03.80.69.70.91.00.3c.8d 3cc70a77812a.03.80.69.77.6b.00.32.76

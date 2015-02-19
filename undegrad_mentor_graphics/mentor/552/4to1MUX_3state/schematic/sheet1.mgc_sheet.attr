@@ -1,0 +1,15 @@
+A 5 u mgc_sheet 3c7d65dd0885.03.80.69.70.9f.00.31.fc 1 2 9 0
+V v 1 2 3c7d65dd0886.03.80.69.70.9f.00.31.fc
+F f 1 "sheet1.ssht_1"
+F f 1 "sheet1.sgfx_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/4to1MUX_3state/schematic" 1 mgc_schematic 3c7d65dce5a7.03.80.69.70.9f.00.31.fc 3c7d65dce5a5.03.80.69.70.9f.00.31.fc
+R csduv 1 "$MGC_GENLIB/buf.3so/part" 1 Eddm_part 5e8fb2b0c000.0d.00.02.ed.d4.00.00.00 5f9a0e7a8000.0d.00.02.e4.17.00.00.00
+R csduv 2 "$MGC_GENLIB/buf.3so/buf.3so" 1 mgc_symbol 5e8fb2b0b000.0d.00.02.ed.d4.00.00.00 5f9a0e7a9000.0d.00.02.e4.17.00.00.00
+R csduv 3 "$MGC_GENLIB/bufl.3so/part" 1 Eddm_part 5e8fb30bc000.0d.00.02.ed.d4.00.00.00 5f9a0e77d000.0d.00.02.e4.17.00.00.00
+R csduv 4 "$MGC_GENLIB/bufl.3so/bufl.3so" 1 mgc_symbol 5e8fb30bb000.0d.00.02.ed.d4.00.00.00 5f9a0e77e000.0d.00.02.e4.17.00.00.00
+R csduv 5 "$MGC_GENLIB/portin/part" 1 Eddm_part 35b533a5f2c8.03.89.ca.2b.4d.00.0e.21 35b53c90ba98.03.89.ca.2b.4d.00.4f.9c
+R csduv 6 "$MGC_GENLIB/portin/portin" 1 mgc_symbol 35b533a5f114.03.89.ca.2b.4d.00.0e.21 35b53c90baa4.03.89.ca.2b.4d.00.4f.9c
+R csduv 7 "$MGC_GENLIB/portout/part" 1 Eddm_part 35b534b3d69a.03.89.ca.2b.4d.00.0e.21 35b53c93a547.03.89.ca.2b.4d.00.4f.9c
+R csduv 8 "$MGC_GENLIB/portout/portout" 1 mgc_symbol 35b534b3d562.03.89.ca.2b.4d.00.0e.21 35b53c93a542.03.89.ca.2b.4d.00.4f.9c

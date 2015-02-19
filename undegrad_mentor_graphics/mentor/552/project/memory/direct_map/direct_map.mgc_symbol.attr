@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3cd2c514b17b.03.80.69.70.91.00.30.21 14 2 1 0
+V v 12 1 3cd5a00f1ced.03.80.69.70.91.00.34.b7
+F f 12 "direct_map.smbl_12"
+V v 13 1 3cd5a0e0643e.03.80.69.70.91.00.34.b7
+F f 13 "direct_map.smbl_13"
+V v 14 1 3cd5a1c7e61a.03.80.69.70.91.00.34.b7
+F f 14 "direct_map.smbl_14"
+O 14
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/direct_map/part" 9 Eddm_part 3cd5a1c8015b.03.80.69.70.91.00.34.b7 3ccf195f1465.03.80.69.70.9e.00.36.2d
+O 13
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/direct_map/part" 8 Eddm_part 3cd5a0e076bf.03.80.69.70.91.00.34.b7 3ccf195f1465.03.80.69.70.9e.00.36.2d
+O 12
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/direct_map/part" 7 Eddm_part 3cd5a00f2fe4.03.80.69.70.91.00.34.b7 3ccf195f1465.03.80.69.70.9e.00.36.2d

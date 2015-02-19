@@ -1,0 +1,12 @@
+A 5 u Eddm_part 3c9cfdc42f3f.03.80.69.77.6a.00.2f.68 2 2 2 0
+V v 1 1 3c9cfdc42f3f.03.80.69.77.6a.01.2f.68
+F f 1 "part.part_1"
+V v 2 1 3c9cfdc93cf3.03.80.69.77.6a.00.2f.68
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16bit_posedge/schematic" 1 mgc_schematic 3c9cfcaf73a5.03.80.69.77.6a.01.2f.68 3c9cfcaf73a5.03.80.69.77.6a.00.2f.68
+R csduv 1 "/u/d/l/dluu/mentor/552/project/reg/16bit_posedge/16bit_posedge" 1 mgc_symbol 3c9cfdc92fb1.03.80.69.77.6a.00.2f.68 3c9cfdc92fb0.03.80.69.77.6a.00.2f.68
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16bit_posedge/schematic" 1 mgc_schematic 3c9cfcaf73a5.03.80.69.77.6a.01.2f.68 3c9cfcaf73a5.03.80.69.77.6a.00.2f.68

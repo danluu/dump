@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3c6e8b2a28aa.03.80.69.77.69.00.2d.00 8 2 1 0
+V v 6 1 3c6eb56a1dd7.03.80.69.77.69.00.2d.00
+F o 0 ""
+V v 7 1 3c6eb6dc0a10.03.80.69.77.69.00.2d.00
+F o 0 ""
+V v 8 1 3c6eb737d7ce.03.80.69.77.69.00.2d.00
+F o 0 ""
+O 8
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw2/p2/ALU/schematic/sheet1" 7 mgc_sheet 3c6eb737d449.03.80.69.77.69.00.2d.00 3c6e8b2a3972.03.80.69.77.69.00.2d.00
+O 7
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw2/p2/ALU/schematic/sheet1" 6 mgc_sheet 3c6eb6dc0376.03.80.69.77.69.00.2d.00 3c6e8b2a3972.03.80.69.77.69.00.2d.00
+O 6
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw2/p2/ALU/schematic/sheet1" 5 mgc_sheet 3c6eb56a1a04.03.80.69.77.69.00.2d.00 3c6e8b2a3972.03.80.69.77.69.00.2d.00

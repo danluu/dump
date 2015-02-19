@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3caf75249408.03.80.69.70.93.00.2e.15 6 2 1 0
+V v 4 1 3caf76c63423.03.80.69.70.93.00.2e.15
+F f 4 "control.smbl_4"
+V v 5 1 3cc1fefeb2f8.03.80.69.70.93.00.31.6f
+F f 5 "control.smbl_5"
+V v 6 1 3cc1ff6ca24c.03.80.69.70.93.00.31.6f
+F f 6 "control.smbl_6"
+O 6
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/part" 4 Eddm_part 3cc1fefec7f0.03.80.69.70.93.00.31.6f 3caf751ace72.03.80.69.70.93.00.2e.15
+O 5
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/part" 4 Eddm_part 3cc1fefec7f0.03.80.69.70.93.00.31.6f 3caf751ace72.03.80.69.70.93.00.2e.15
+O 4
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/dummy/control/part" 3 Eddm_part 3caf76afb15f.03.80.69.70.93.00.2e.15 3caf751ace72.03.80.69.70.93.00.2e.15

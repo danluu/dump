@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3ccf195ea1d5.03.80.69.70.9e.00.36.2d 34 2 1 0
+V v 32 1 3cd5bfafe9f4.03.80.69.70.91.00.3c.8d
+F o 0 ""
+V v 33 1 3cd5bfce3281.03.80.69.70.91.00.3c.8d
+F o 0 ""
+V v 34 1 3cd5c4af80ea.03.80.69.70.91.00.3c.8d
+F o 0 ""
+O 34
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/memory/direct_map/schematic/sheet1" 34 mgc_sheet 3cd5c4af74e8.03.80.69.70.91.00.3c.8d 3ccf195ebaae.03.80.69.70.9e.00.36.2d
+O 33
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/memory/direct_map/schematic/sheet1" 33 mgc_sheet 3cd5bfce2c8e.03.80.69.70.91.00.3c.8d 3ccf195ebaae.03.80.69.70.9e.00.36.2d
+O 32
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/memory/direct_map/schematic/sheet1" 32 mgc_sheet 3cd5bfafe377.03.80.69.70.91.00.3c.8d 3ccf195ebaae.03.80.69.70.9e.00.36.2d

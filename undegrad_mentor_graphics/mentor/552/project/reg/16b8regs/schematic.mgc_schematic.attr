@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3c9a6a044954.03.80.69.70.92.00.31.96 26 2 1 0
+V v 24 1 3cd038e2a4b7.03.80.69.70.93.00.32.d5
+F o 0 ""
+V v 25 1 3cd36c6f8a70.03.80.69.70.93.00.43.af
+F o 0 ""
+V v 26 1 3cd371d49f51.03.80.69.70.93.00.44.e6
+F o 0 ""
+O 26
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/schematic/sheet1" 25 mgc_sheet 3cd371d4993c.03.80.69.70.93.00.44.e6 3c9a6a044955.03.80.69.70.92.01.31.96
+O 25
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/schematic/sheet1" 24 mgc_sheet 3cd36c6f6a3b.03.80.69.70.93.00.43.af 3c9a6a044955.03.80.69.70.92.01.31.96
+O 24
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/reg/16b8regs/schematic/sheet1" 23 mgc_sheet 3cd038e29ed0.03.80.69.70.93.00.32.d5 3c9a6a044955.03.80.69.70.92.01.31.96

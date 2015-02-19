@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3c9cfdc92fb0.03.80.69.77.6a.00.2f.68 2 2 1 0
+V v 1 1 3c9cfdc92fb1.03.80.69.77.6a.00.2f.68
+F f 1 "16bit_posedge.smbl_1"
+V v 2 1 3c9cfdda9778.03.80.69.77.6a.00.2f.68
+F f 2 "16bit_posedge.smbl_2"
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16bit_posedge/part" 2 Eddm_part 3c9cfdc93cf3.03.80.69.77.6a.00.2f.68 3c9cfdc42f3f.03.80.69.77.6a.00.2f.68
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/552/project/reg/16bit_posedge/part" 2 Eddm_part 3c9cfdc93cf3.03.80.69.77.6a.00.2f.68 3c9cfdc42f3f.03.80.69.77.6a.00.2f.68

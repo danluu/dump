@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3caf6d164678.03.80.69.70.93.00.2e.15 2 2 1 0
+V v 1 1 3caf6d164679.03.80.69.70.93.00.2e.15
+F f 1 "0x1.smbl_1"
+V v 2 1 3caf6d2c0614.03.80.69.70.93.00.2e.15
+F f 2 "0x1.smbl_2"
+O 2
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x1/part" 2 Eddm_part 3caf6d1655e2.03.80.69.70.93.00.2e.15 3caf6d07137f.03.80.69.70.93.00.2e.15
+O 1
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x1/part" 2 Eddm_part 3caf6d1655e2.03.80.69.70.93.00.2e.15 3caf6d07137f.03.80.69.70.93.00.2e.15

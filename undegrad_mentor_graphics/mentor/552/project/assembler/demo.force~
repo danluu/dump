@@ -1,0 +1,68 @@
+// This is the force file that is used to run the project demos for CS
+// 552-1, Spring 2001, at the University of Wisconsin--Madison.
+//
+
+// Open a new trace window.
+//open trace
+
+// Set up the trace window.
+$set_active_window("trace");                    
+$reposition_window(7, 232, 1002, 635);
+reset state -Discard
+$delete_forces(@all, void);
+
+delete traces -all
+delete cursor -all
+delete force -all
+
+
+add traces RESET LD DUMP_SIG CLK
+add traces /I$1041/MemAddr(15:0) /I$1041/MemRead /I$1041/MemWrite
+add traces /I$1041/data_ready
+add traces /I$1041/MemReadData(15:0) /I$1041/MemWriteData(15:0)
+add traces IR(15:0) IR(7:5)
+//reg_a(15:0)
+// add traces /I$205/rd_reg2(2:0) /I$205/reg_b(15:0)
+add traces /RegFile/WRITE_SEL(2:0) /RegFile/DATA_IN(15:0)
+add traces /I$4/S(1:0) /I$4/OUT(15:0)
+//ALUSrcA, ALU_A
+add traces /I$2/S(2:0) /I$2/OUT(15:0)
+//ALUSrcB, ALU_B
+add traces /I$837/S /I$837/OUT(15:0)
+//ALUSrcC, ALU_C
+add traces /RegFile/DATA_IN(15:0)  /I$214/S(1:0)
+//add traces InA(15:0) InB(15:0) Result(15:0) Overflow Clock
+//add traces OpCode(4:0) PC(15:0)
+
+add cursor cursor1 0
+set user scale -type time 1e-09
+set label interval 100 40
+
+
+force LD 0 0 -fixed
+force RESET 0 0 -fixed
+force DUMP_SIG 0 0 -fixed
+//force dump_cache 0 0 -fixed
+
+force RESET 1  10 -fixed
+force RESET 0  55 -fixed
+
+force LD 1  60 -fixed
+//below is added
+//force LD 0  110 -fixed
+
+force DUMP_SIG 0  0 -fixed
+force DUMP_SIG 1  150000 -fixed
+force DUMP_SIG 0  150050 -fixed
+
+set Clock period 100
+force Clock 0 0 -repeat
+force Clock 1 50 -repeat
+
+set Clock period 100
+force Clock90 0 0 -repeat
+force Clock90 1 25 -repeat
+
+// Run the simulation.
+run 150200
+

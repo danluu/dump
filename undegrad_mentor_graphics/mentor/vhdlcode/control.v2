@@ -1,0 +1,439 @@
+--ALU Noop passes through B, not A
+--Enable MemoryOut register w/ MemRead signal
+--ThreeOps and ALUSrcC are the same?
+
+-----------------------------------------------------
+
+library ieee ;
+use ieee.std_logic_1164.all;
+
+-----------------------------------------------------
+
+entity control is port(	
+	clk, reset, data_ready:	in std_logic;
+	opcode:		in std_logic_vector(4 downto 0);
+	function_code:	in std_logic_vector(1 downto 0);
+MemAccess:	out std_logic;	
+Halt, ThreeOps, MemRead, MemWrite, IRWrite, PCWrite, RegWrite, RegAddrSrc, Beqz, Bltz, ALUSrcC, ArithmOp:	out std_logic;
+	ShiftType, ALUSrcA, MemDataSrc, RegDataSrc:	out std_logic_vector(1 downto 0);
+	ALUOp, ALUSrcB, MemAddrSrc, ImmKind, PCDataSrc:	out std_logic_vector(2 downto 0)
+	
+);
+end control;
+
+-----------------------------------------------------
+
+architecture version1 of control is
+
+
+    type state_type is (FETCH, FETCH_MEM, DECODE, BRANCH, BRANCH_COMPLETE, JUMP, JR, MMOVE, MMOVE_MEM, MMOVE_COMPLETE, MMOVE_COMPLETE_MEM, MEMI, LOAD, LOAD_MEM, LOAD_COMPLETE, STORE, STORE_MEM, MEMR, LUI, I_TYPE, ARITHMETIC, LOGIC_I, WRITE_RD, MEMOP, MEMOP_MEM, MEMOP_COMPUTE, RRR, INITIAL);	--RET taken out
+    signal current_state: state_type;
+
+begin
+    
+    -- cocurrent process#1: state registers
+    state_reg: process(clk, reset, data_ready)
+    begin
+
+	if (reset='1') then
+	current_state <= INITIAL;
+	PCWrite <= '0';
+	Halt	<= '0';
+	MemRead	<= '0';
+	MemWrite	<= '0';
+	MemAccess	<= '0';
+	Beqz	<= '0';
+	Bltz	<= '0';
+	RegWrite	<= '0';
+	elsif ((clk'event and clk='1') or (data_ready'event and data_ready='1'))then
+	case current_state is
+	when INITIAL =>
+		Beqz <= '0';
+		Bltz <= '0';
+		ThreeOps <= '0'; -- may not matter?
+		ALUSrcA <= "10";
+		ALUSrcB <= "100";
+		ALUSrcC <= '0';
+		ALUOp <= "011";
+		
+		
+		current_state <= FETCH;
+	    when FETCH =>			
+		Halt		<= '0';
+		ThreeOps	<= '0';
+		MemAccess	<= '1';
+		MemRead		<= '1';
+		MemWrite	<= '0';
+		IRWrite		<= '1';
+PCWrite <= '0';
+--		PCWrite		<= '1';
+		RegWrite	<= '0';
+		RegAddrSrc	<= '0';		--Rd
+		Beqz		<= '0';
+		Bltz		<= '0';
+		ALUSrcC		<= '0';
+		ArithmOp	<= '0';		--add
+		
+		ShiftType	<= "00";
+		ALUSrcA		<= "10";	--PC
+		RegDataSrc	<= "11";	--ALUOut
+		MemDataSrc	<= "00";
+		
+		ALUOp		<= "011";	--arithmetic
+		ALUSrcB		<= "100";	--constant 1
+		ImmKind		<= "010";	--11bit SE
+		MemAddrSrc	<= "010";	--PC
+		PCDataSrc	<= "010";	--ALU
+		
+		current_state <= FETCH_MEM;
+
+		when FETCH_MEM =>
+		MemAccess	<= '0';
+--		PCWrite		<= '0';
+if data_ready ='1' then
+		current_state	<= DECODE;
+PCWrite <= '1';
+end if;		
+		MemRead		<= '0';
+
+	    when DECODE =>
+PCWrite <= '0';
+		IRWrite		<= '0';
+		
+		ALUSrcB		<= "011";	--immediate
+		
+		if (opcode="00000") then	--Halt code
+		    Halt <= '1';
+		elsif (opcode(4 downto 2)= "100") then 
+		    current_state	<= BRANCH;
+		elsif (opcode(4 downto 2)= "101") then
+		    current_state	<= JUMP;
+		elsif (opcode="10111" or opcode="11000") then
+		    current_state	<= JR;
+		elsif (opcode="11001") then
+		    current_state	<= MMOVE;
+		elsif (opcode(4 downto 2)= "110") then
+		    current_state	<= MEMI;
+		elsif (opcode(4 downto 2)= "111") then
+		    current_state	<= MEMR;
+		elsif (opcode= "00100") then
+		    current_state	<= LUI;
+		elsif (opcode(4 downto 3)= "00") then
+		    current_state	<= I_TYPE;
+		elsif (opcode= "01011") then
+		    current_state	<= ARITHMETIC;
+		elsif (opcode(4 downto 2)= "010") then
+		    current_state	<= LOGIC_I;
+		    ALUSrcA		<= "00";		--Rd
+		    
+		    if (opcode(1 downto 0)= "00") then	--ANDI
+			ALUOp	<= "101";		--AND
+			ImmKind	<= "101";		--8bit OE
+		    elsif (opcode(1 downto 0)= "01") then	--ORI
+			ALUOp	<= "100";		--OR
+			ImmKind	<= "100";		--8bit ZE
+		    elsif (opcode(1 downto 0)= "10") then	--XORI
+			ALUOp	<= "110";		--XOR
+			ImmKind	<= "001";		--8bit SE
+		    end if;
+		elsif (opcode= "01100") then
+		    current_state	<= MEMOP;
+		elsif (opcode(4 downto 1)= "0111") then
+		    current_state	<= RRR;
+		else
+		    halt	<= '1';		--no opcode match, so stop
+		end if;
+		
+		
+	    when BRANCH =>						
+		ImmKind		<= "001";	--8bit SE
+		
+		current_state <= BRANCH_COMPLETE;
+		
+	    when BRANCH_COMPLETE =>					
+		ALUSrcB		<= "000";	--Rd (called Rs)
+		
+		ALUOp		<= "111";	--NOP (passes SrcB through)
+		
+		if (opcode(1 downto 0)="00") then	--BEQZ
+		    Beqz <= '1';
+		elsif (opcode(1 downto 0)="01") then	--BLTZ
+		    Bltz <= '1';
+		else					--BLEZ
+		    Beqz <= '1';
+		    Bltz <= '1';
+		end if;
+		
+		current_state <= FETCH;
+		
+	    when JUMP =>						
+		PCWrite		<= '1';
+		RegAddrSrc	<= '1';			--R7
+		
+		if (opcode(1 downto 0)="00") then	--RET
+		    PCDataSrc	<= "100";		--R7
+		elsif (opcode(1 downto 0)="01") then	--J
+		    PCDataSrc	<= "011";		--ALUOut
+		else					--JAL
+		    PCDataSrc	<= "011";		--ALUOut
+		    RegWrite	<= '1';
+		    RegDataSrc	<= "10";		--PC
+		end if;
+		
+		current_state <= FETCH;
+		
+	    when JR =>							
+		PCWrite 	<= '1';
+		RegAddrSrc	<= '0';			--Rd
+		RegDataSrc	<= "10";		--PC
+		
+		if (opcode(3)='1') then			--JR
+		    PCDataSrc	<= "000";		--Rd
+		elsif (opcode(3)='0') then		--JALR
+		    PCDataSrc	<= "001";		--Rs
+		    RegWrite	<= '1';			--Write PC
+		end if;
+		
+		current_state <= FETCH;
+		
+	    when MMOVE =>
+		MemAccess	<= '1';
+		MemRead		<= '1';
+		
+		MemAddrSrc	<= "001";		--Rs
+
+current_state <= MMOVE_MEM;
+
+		when MMOVE_MEM =>
+		MemAccess <= '0';
+if data_ready ='1' then
+		current_state	<= MMOVE_COMPLETE;
+end if;		
+				
+	    when MMOVE_COMPLETE =>					
+		MemAccess	<= '1';
+		MemRead		<= '0';
+		MemWrite	<= '1';
+		MemDataSrc	<= "01";		--memory
+		
+		MemAddrSrc	<= "000";		--Rd
+		
+current_state <= MMOVE_COMPLETE_MEM;
+
+		when MMOVE_COMPLETE_MEM =>
+		MemAccess <= '0';
+if data_ready ='1' then
+		current_state	<= FETCH;
+end if;		
+		
+	    when MEMI =>						
+		ArithmOp	<= '0';			--add
+		
+		ALUSrcA		<= "01";		--Rs
+		
+		ALUOp		<= "011";		--Arithmetic
+		ALUSrcB		<= "011";		--immediate
+		ImmKind		<= "000";		--5bit SE
+		
+		if (opcode(1 downto 0)= "10") then	--LDI
+		    current_state	<= LOAD;
+		else					--STI
+		    current_state	<= STORE;
+		end if;
+		
+	    when LOAD =>						
+		MemAccess	<= '1';
+		MemRead		<= '1';
+		
+		MemAddrSrc	<= "011";		--ALUOut
+		
+current_state <= LOAD_MEM;
+
+		when LOAD_MEM =>
+		MemAccess <= '0';
+if data_ready ='1' then
+		current_state	<= LOAD_COMPLETE;
+end if;		
+		
+		
+	    when LOAD_COMPLETE =>					
+		MemRead		<= '0';
+		RegWrite	<= '1';
+		RegAddrSrc	<= '0';			--Rd
+		
+		RegDataSrc	<= "01";		--memory
+		
+		current_state	<= FETCH;
+		
+	    when STORE =>						
+		MemAccess	<= '1';
+		MemWrite	<= '1';
+		
+		MemAddrSrc	<= "011";		--ALUOut
+		
+current_state <= STORE_MEM;
+
+		when STORE_MEM =>
+		MemAccess <= '0';
+if data_ready ='1' then
+		current_state	<= FETCH;
+end if;	
+
+		
+	    when MEMR =>						
+		ALUSrcA		<= "01";		--Rs
+		ALUSrcB		<= "001";		--Rt
+		
+		if (function_code = "00") then		--LD
+		    current_state	<= LOAD;
+		else					--ST
+		    current_state	<= STORE;
+		end if;
+		
+	    when LUI =>							
+		ShiftType	<= "01";		--Rotate Right
+		ALUSrcA		<= "11";		--immediate
+		
+		ALUOp		<= "010";		--shift
+		ALUSrcB		<= "101";		--rotate by 8
+		ImmKind		<= "100";		--8bit ZE
+		
+		current_state	<= WRITE_RD;
+	    
+	    when I_TYPE =>						
+		ALUSrcA		<= "01";		--Rs
+		
+		ImmKind		<= "011";		--5bit ZE
+		
+		if (opcode(2 downto 0)= "010") then	--ADDI
+		    ArithmOp	<= '0';			--add
+		    ALUOp	<= "011";		--arithmetic
+		elsif (opcode(2 downto 0)= "011") then	--SUBI
+		    ArithmOp	<= '1';			--sub
+		    ALUOp	<= "011";		--arithmetic
+		elsif (opcode(2 downto 0)= "101") then	--RORI
+		    ShiftType	<= "01";		--rotate
+		    ALUop	<= "010";		--shift
+		elsif (opcode(2 downto 0)= "110") then	--SRLI
+		    ShiftType	<= "10";		--logical
+		    ALUop	<= "010";		--shift
+		elsif (opcode(2 downto 0)= "111") then	--SRAI
+		    ShiftType	<= "11";		--arithmetic
+		    ALUop	<= "010";		--shift
+		end if;
+		
+		current_state	<= WRITE_RD;
+		
+	    when WRITE_RD =>						
+--		RegWrite	<= '1';
+RegWrite <= '0';
+		current_state	<= FETCH;
+		
+	    when ARITHMETIC =>						
+		ALUSrcB		<= "001";		--Rt
+		
+		if (function_code= "00") then		--ADD
+		    ThreeOps	<= '0';
+		    ALUSrcC	<= '0';			--zero
+		    ArithmOp	<= '0';			--add
+		    ALUSrcA	<= "01";		--Rs
+		elsif (function_code= "01") then	--ADDT
+		    ThreeOps	<= '1';
+		    ALUSrcC	<= '1';			--Rs
+		    ArithmOp	<= '0';			--add
+		    ALUSrcA	<= "00";		--Rd
+		elsif (function_code= "10") then	--SUB
+		    ThreeOps	<= '0';
+		    ALUSrcC	<= '0';			--zero
+		    ArithmOp	<= '1';			--sub
+		    ALUSrcA	<= "01";		--Rs
+		elsif (function_code= "11") then	--SUBT
+		    ThreeOps	<= '1';
+		    ALUSrcC	<= '1';			--Rs
+		    ArithmOp	<= '1';			--sub
+		    ALUSrcA	<= "00";		--Rd
+		end if;
+		
+		current_state	<= WRITE_RD;
+		
+	    when LOGIC_I =>						
+		RegWrite	<= '1';
+		
+		current_state	<= WRITE_RD;
+		
+	    when MEMOP =>						
+		MemAccess	<= '1';
+		MemRead		<= '1';
+		
+		MemAddrSrc	<= "100";		--Rt
+		
+current_state <= MEMOP_MEM;
+
+		when MEMOP_MEM =>
+		MemAccess <= '0';
+if data_ready ='1' then
+		current_state	<= MEMOP_COMPUTE;
+end if;	
+
+		
+	    when MEMOP_COMPUTE =>					
+		MemRead		<= '0';
+		
+		ALUSrcA		<= "01";		--Rs
+		
+		ALUSrcB		<= "010";		--memory
+		
+		if(function_code= "00") then		--ADDM
+		    ArithmOp	<= '0';			--add
+		else					--SUBM
+		    ArithmOp	<= '1';			--sub
+		end if;
+		
+		current_state	<= WRITE_RD;
+		
+	    when RRR =>							
+		ALUSrcA		<= "01";		--Rs
+		
+		ALUSrcB		<= "001";		--Rt
+		
+		if (opcode(0)='0' and function_code= "01") then		--AND
+		    ALUOp	<= "101";		--AND
+		elsif (opcode(0)='0' and function_code= "10") then	--OR
+		    ALUOp	<= "100";		--OR
+		elsif (opcode(0)='0' and function_code= "11") then	--XOR
+		    ALUOp	<= "110";		--XOR
+		else
+		    ALUOp	<= "010";		--shift
+		    if (function_code= "01") then	--ROR
+			ShiftType	<= "01";	--ROR
+		    elsif (function_code= "10") then	--SRL
+			ShiftType	<= "10";	--SRL
+		    elsif (function_code= "11") then	--SRA
+			ShiftType	<= "11";	--SRA
+		    end if;
+		end if;
+		
+		current_state	<= WRITE_RD;
+	    
+	    when others =>
+		current_state	<= FETCH;
+
+	end case;
+	end if;
+    end process;
+
+end version1;
+
+-----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+

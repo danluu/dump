@@ -1,0 +1,11 @@
+A 5 u Eddm_part 3cc707836713.03.80.69.77.6a.00.30.e4 2 2 1 0
+V v 1 1 3cc707836714.03.80.69.77.6a.00.30.e4
+F f 1 "part.part_1"
+V v 2 1 3cc70802cb44.03.80.69.77.6a.00.30.e4
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/memory_unit" 2 mgc_symbol 3cc70802caad.03.80.69.77.6a.00.30.e4 3cc70782dc9c.03.80.69.77.6a.00.30.e4
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/memory_unit" 1 mgc_symbol 3cc70782dc9d.03.80.69.77.6a.00.30.e4 3cc70782dc9c.03.80.69.77.6a.00.30.e4

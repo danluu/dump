@@ -1,0 +1,9 @@
+A 5 u mgc_schematic 3cd5bd8b6549.03.80.69.70.91.00.3c.8d 2 2 1 0
+V v 1 1 3cd5bd8b654a.03.80.69.70.91.00.3c.8d
+F o 0 ""
+V v 2 1 3cd5bda727c5.03.80.69.70.91.00.3c.8d
+F o 0 ""
+O 2
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/MUX/7bit_2to1/schematic/sheet1" 2 mgc_sheet 3cd5bda722f0.03.80.69.70.91.00.3c.8d 3cd5bd8b7f33.03.80.69.70.91.00.3c.8d
+O 1
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/MUX/7bit_2to1/schematic/sheet1" 1 mgc_sheet 3cd5bd8b7f34.03.80.69.70.91.00.3c.8d 3cd5bd8b7f33.03.80.69.70.91.00.3c.8d

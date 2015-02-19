@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3c9a5d7818b5.03.80.69.70.92.00.31.96 27 2 1 0
+V v 25 1 3cd054382c78.03.80.69.70.93.00.35.10
+F o 0 ""
+V v 26 1 3cd0567daa75.03.80.69.70.93.00.35.10
+F o 0 ""
+V v 27 1 3cd5aca16702.03.80.69.70.92.00.34.4b
+F o 0 ""
+O 27
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/schematic/sheet1" 26 mgc_sheet 3cd5aca16047.03.80.69.70.92.00.34.4b 3c9a5d7818b6.03.80.69.70.92.01.31.96
+O 26
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/schematic/sheet1" 25 mgc_sheet 3cd0567d9c73.03.80.69.70.93.00.35.10 3c9a5d7818b6.03.80.69.70.92.01.31.96
+O 25
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/alu/ALUv1/schematic/sheet1" 24 mgc_sheet 3cd05438257a.03.80.69.70.93.00.35.10 3c9a5d7818b6.03.80.69.70.92.01.31.96

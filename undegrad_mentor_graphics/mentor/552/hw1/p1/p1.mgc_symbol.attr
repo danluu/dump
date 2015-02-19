@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3c509ccb0e1d.03.80.69.77.78.00.38.45 2 2 1 0
+V v 1 1 3c509ccb0e1d.03.80.69.77.78.01.38.45
+F f 1 "p1.smbl_1"
+V v 2 1 3c509ce2ac34.03.80.69.77.78.00.38.45
+F f 2 "p1.smbl_2"
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/hw1/p1/part" 2 Eddm_part 3c509ccb28b8.03.80.69.77.78.00.38.45 3c509b7c60a7.03.80.69.77.78.00.38.45
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/552/hw1/p1/part" 2 Eddm_part 3c509ccb28b8.03.80.69.77.78.00.38.45 3c509b7c60a7.03.80.69.77.78.00.38.45

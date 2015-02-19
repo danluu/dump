@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3c9a5e30cb84.03.80.69.70.92.00.31.96 10 2 1 0
+V v 8 1 3c7d75929a43.03.80.69.70.9f.00.31.fc
+F o 0 ""
+V v 9 1 3c7d777dea59.03.80.69.70.9f.00.31.fc
+F o 0 ""
+V v 10 1 3c7d7e04d110.03.80.69.70.9f.00.31.fc
+F o 0 ""
+O 10
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/alu/rorshrasrv1/schematic/sheet1" 9 mgc_sheet 3c7d7e04c4bd.03.80.69.70.9f.00.31.fc 3c9a5e30cb85.03.80.69.70.92.00.31.96
+O 9
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/alu/rorshrasrv1/schematic/sheet1" 8 mgc_sheet 3c7d777de46f.03.80.69.70.9f.00.31.fc 3c9a5e30cb85.03.80.69.70.92.00.31.96
+O 8
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/alu/rorshrasrv1/schematic/sheet1" 7 mgc_sheet 3c7d75929470.03.80.69.70.9f.00.31.fc 3c9a5e30cb85.03.80.69.70.92.00.31.96

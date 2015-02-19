@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3c6ed25728ab.03.80.69.77.6e.00.32.97 2 2 1 0
+V v 1 1 3c6ed25728ac.03.80.69.77.6e.00.32.97
+F f 1 "ALU.smbl_1"
+V v 2 1 3c6ed348cda9.03.80.69.77.6e.00.32.97
+F f 2 "ALU.smbl_2"
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/ALU/part" 2 Eddm_part 3c6ed257389a.03.80.69.77.6e.00.32.97 3c6e8d2edb24.03.80.69.77.69.00.2d.00
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/ALU/part" 2 Eddm_part 3c6ed257389a.03.80.69.77.6e.00.32.97 3c6e8d2edb24.03.80.69.77.69.00.2d.00

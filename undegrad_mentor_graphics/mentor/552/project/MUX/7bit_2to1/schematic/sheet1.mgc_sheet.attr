@@ -1,0 +1,29 @@
+A 5 u mgc_sheet 3cd5bd8b7f33.03.80.69.70.91.00.3c.8d 2 2 9 0
+V v 1 2 3cd5bd8b7f34.03.80.69.70.91.00.3c.8d
+F f 1 "sheet1.ssht_1"
+F f 1 "sheet1.sgfx_1"
+V v 2 2 3cd5bda722f0.03.80.69.70.91.00.3c.8d
+F f 2 "sheet1.ssht_2"
+F f 2 "sheet1.sgfx_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/MUX/7bit_2to1/schematic" 1 mgc_schematic 3cd5bd8b654a.03.80.69.70.91.00.3c.8d 3cd5bd8b6549.03.80.69.70.91.00.3c.8d
+R csduv 1 "$MGC_GENLIB/bufl.3so/part" 1 Eddm_part 5e8fb30bc000.0d.00.02.ed.d4.00.00.00 5f9a0e77d000.0d.00.02.e4.17.00.00.00
+R csduv 2 "$MGC_GENLIB/bufl.3so/bufl.3so" 1 mgc_symbol 5e8fb30bb000.0d.00.02.ed.d4.00.00.00 5f9a0e77e000.0d.00.02.e4.17.00.00.00
+R csduv 3 "$MGC_GENLIB/buf.3so/part" 1 Eddm_part 5e8fb2b0c000.0d.00.02.ed.d4.00.00.00 5f9a0e7a8000.0d.00.02.e4.17.00.00.00
+R csduv 4 "$MGC_GENLIB/buf.3so/buf.3so" 1 mgc_symbol 5e8fb2b0b000.0d.00.02.ed.d4.00.00.00 5f9a0e7a9000.0d.00.02.e4.17.00.00.00
+R csduv 5 "$MGC_GENLIB/portin/part" 1 Eddm_part 35b533a5f2c8.03.89.ca.2b.4d.00.0e.21 35b53c90ba98.03.89.ca.2b.4d.00.4f.9c
+R csduv 6 "$MGC_GENLIB/portin/portin" 1 mgc_symbol 35b533a5f114.03.89.ca.2b.4d.00.0e.21 35b53c90baa4.03.89.ca.2b.4d.00.4f.9c
+R csduv 7 "$MGC_GENLIB/portout/part" 1 Eddm_part 35b534b3d69a.03.89.ca.2b.4d.00.0e.21 35b53c93a547.03.89.ca.2b.4d.00.4f.9c
+R csduv 8 "$MGC_GENLIB/portout/portout" 1 mgc_symbol 35b534b3d562.03.89.ca.2b.4d.00.0e.21 35b53c93a542.03.89.ca.2b.4d.00.4f.9c
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/MUX/7bit_2to1/schematic" 1 mgc_schematic 3cd5bd8b654a.03.80.69.70.91.00.3c.8d 3cd5bd8b6549.03.80.69.70.91.00.3c.8d
+R csduv 1 "$MGC_GENLIB/bufl.3so/part" 1 Eddm_part 5e8fb30bc000.0d.00.02.ed.d4.00.00.00 5f9a0e77d000.0d.00.02.e4.17.00.00.00
+R csduv 2 "$MGC_GENLIB/bufl.3so/bufl.3so" 1 mgc_symbol 5e8fb30bb000.0d.00.02.ed.d4.00.00.00 5f9a0e77e000.0d.00.02.e4.17.00.00.00
+R csduv 3 "$MGC_GENLIB/buf.3so/part" 1 Eddm_part 5e8fb2b0c000.0d.00.02.ed.d4.00.00.00 5f9a0e7a8000.0d.00.02.e4.17.00.00.00
+R csduv 4 "$MGC_GENLIB/buf.3so/buf.3so" 1 mgc_symbol 5e8fb2b0b000.0d.00.02.ed.d4.00.00.00 5f9a0e7a9000.0d.00.02.e4.17.00.00.00
+R csduv 5 "$MGC_GENLIB/portin/part" 1 Eddm_part 35b533a5f2c8.03.89.ca.2b.4d.00.0e.21 35b53c90ba98.03.89.ca.2b.4d.00.4f.9c
+R csduv 6 "$MGC_GENLIB/portin/portin" 1 mgc_symbol 35b533a5f114.03.89.ca.2b.4d.00.0e.21 35b53c90baa4.03.89.ca.2b.4d.00.4f.9c
+R csduv 7 "$MGC_GENLIB/portout/part" 1 Eddm_part 35b534b3d69a.03.89.ca.2b.4d.00.0e.21 35b53c93a547.03.89.ca.2b.4d.00.4f.9c
+R csduv 8 "$MGC_GENLIB/portout/portout" 1 mgc_symbol 35b534b3d562.03.89.ca.2b.4d.00.0e.21 35b53c93a542.03.89.ca.2b.4d.00.4f.9c

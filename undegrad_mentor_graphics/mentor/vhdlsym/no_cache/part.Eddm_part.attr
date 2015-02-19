@@ -1,0 +1,16 @@
+A 5 u Eddm_part 3cc70aa478e2.03.80.69.77.6b.00.32.76 4 2 1 0
+V v 2 1 3cc70aaa3386.03.80.69.77.6b.00.32.76
+F f 2 "part.part_2"
+V v 3 1 3cc7369db76a.03.80.69.77.6a.00.30.e4
+F f 3 "part.part_3"
+V v 4 1 3cc736a4941c.03.80.69.77.6a.00.30.e4
+F f 4 "part.part_4"
+O 4
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/no_cache/no_cache" 4 mgc_symbol 3cc736a492b8.03.80.69.77.6a.00.30.e4 3cc70aa434aa.03.80.69.77.6b.00.32.76
+O 3
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/no_cache/no_cache" 3 mgc_symbol 3cc7369d567b.03.80.69.77.6a.00.30.e4 3cc70aa434aa.03.80.69.77.6b.00.32.76
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/vhdlsym/no_cache/no_cache" 2 mgc_symbol 3cc70aaa32cd.03.80.69.77.6b.00.32.76 3cc70aa434aa.03.80.69.77.6b.00.32.76

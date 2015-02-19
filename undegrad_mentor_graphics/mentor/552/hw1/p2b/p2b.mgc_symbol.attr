@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3c55eda00eab.03.80.69.70.8f.00.31.ad 2 2 1 0
+V v 1 1 3c55eda00eac.03.80.69.70.8f.00.31.ad
+F f 1 "p2b.smbl_1"
+V v 2 1 3c55ee337bf2.03.80.69.70.8f.00.31.ad
+F f 2 "p2b.smbl_2"
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/552/hw1/p2b/part" 2 Eddm_part 3c55eda0208a.03.80.69.70.8f.00.31.ad 3c55e96aa38c.03.80.69.70.8f.00.31.ad
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/552/hw1/p2b/part" 2 Eddm_part 3c55eda0208a.03.80.69.70.8f.00.31.ad 3c55e96aa38c.03.80.69.70.8f.00.31.ad

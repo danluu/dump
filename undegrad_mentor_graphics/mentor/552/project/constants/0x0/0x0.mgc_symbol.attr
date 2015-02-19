@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3caf722479c9.03.80.69.70.93.00.2e.15 3 2 1 0
+V v 1 1 3caf722479ca.03.80.69.70.93.00.2e.15
+F f 1 "0x0.smbl_1"
+V v 2 1 3caf725290a6.03.80.69.70.93.00.2e.15
+F f 2 "0x0.smbl_2"
+V v 3 1 3caf72616b37.03.80.69.70.93.00.2e.15
+F f 3 "0x0.smbl_3"
+O 3
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x0/part" 3 Eddm_part 3caf72529c39.03.80.69.70.93.00.2e.15 3caf71f05511.03.80.69.70.93.00.2e.15
+O 2
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x0/part" 3 Eddm_part 3caf72529c39.03.80.69.70.93.00.2e.15 3caf71f05511.03.80.69.70.93.00.2e.15
+O 1
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/constants/0x0/part" 2 Eddm_part 3caf72248a2f.03.80.69.70.93.00.2e.15 3caf71f05511.03.80.69.70.93.00.2e.15

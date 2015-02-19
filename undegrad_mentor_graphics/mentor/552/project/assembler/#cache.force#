@@ -1,0 +1,92 @@
+// This is the force file that is used to run the project demos for CS
+// 552-1, Spring 2001, at the University of Wisconsin--Madison.
+//
+
+// Open a new trace window.
+open trace
+
+// Set up the trace window.
+$set_active_window("trace");                    
+//$reposition_window(7, 232, 1002, 635);
+reset state -Discard
+$delete_forces(@all, void);
+
+delete traces -all
+delete cursor -all
+delete force -all
+
+
+add traces RESET LD DUMP_SIG CLK
+add traces /MemAddr(15:0) /MemRead /MemWrite /MemAccess
+add traces /data_ready
+add traces /MemReadData(15:0) /MemWriteData(15:0)
+add traces IR(15:0)
+add traces /RegFile/READ_SEL1(2:0) /RegFile/READ_SEL2(2:0)
+add traces /RegFile/READ_SEL3(2:0) /RegFile/WRITE_SEL(2:0)
+add traces /RegFile/DATA_IN(15:0) /RegFile/WRITE_ENABLE
+add traces /RegFile/READ1(15:0) /RegFile/READ2(15:0)
+add traces /RegFile/READ3(15:0) /RegFile/READ4(15:0)
+
+//temp
+add traces /RegFile/debug(31:16)
+add traces /RegFile/debug(47:32)
+add traces /RegFile/debug(63:48)
+add traces /RegFile/debug(79:64)
+add traces /RegFile/debug(95:80)
+add traces /RegFile/debug(111:96)
+add traces /RegFile/debug(127:112)
+//end temp
+
+add traces /I$63/ALUSrcA(1:0) /I$51/A(15:0)
+add traces /I$63/ALUSrcB(2:0) /I$51/B(15:0)
+add traces /I$63/ALUSrcC /I$51/C(15:0)
+
+add traces /I$51/O(15:0) /I$51/Zero /I$51/Neg
+//add traces InA(15:0) InB(15:0) Result(15:0) Overflow Clock
+//add traces OpCode(4:0) PC(15:0)
+
+add cursor cursor1 0
+set user scale -type time 1e-09
+set label interval 100 40
+
+
+force LD 0 0 -fixed
+force RESET 0 0 -fixed
+force DUMP_SIG 0 0 -fixed
+//force dump_cache 0 0 -fixed
+
+force RESET 1  10 -fixed
+force RESET 0  55 -fixed
+
+force LD 1  60 -fixed
+//below is added
+//force LD 0  110 -fixed
+
+force DUMP_SIG 0  0 -fixed
+force DUMP_SIG 1  180000 -fixed
+force DUMP_SIG 0  180050 -fixed
+
+set Clock period 100
+force Clock 0 0 -repeat
+force Clock 1 50 -repeat
+
+set Clock period 100
+force Clock90 0 0 -repeat
+force Clock90 1 75 -repeat
+
+// Run the simulation.
+run 180200
+
+
+
+
+
+
+
+
+
+
+
+
+
+

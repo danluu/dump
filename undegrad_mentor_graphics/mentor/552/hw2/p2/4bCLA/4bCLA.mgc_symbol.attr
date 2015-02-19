@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3c6e854045ba.03.80.69.77.69.00.2d.00 18 2 1 0
+V v 16 1 3cd04ca0f157.03.80.69.70.93.00.35.10
+F f 16 "4bCLA.smbl_16"
+V v 17 1 3cd053ab2063.03.80.69.70.93.00.35.10
+F f 17 "4bCLA.smbl_17"
+V v 18 1 3cd053b809f0.03.80.69.70.93.00.35.10
+F f 18 "4bCLA.smbl_18"
+O 18
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/part" 12 Eddm_part 3cd053ab2f61.03.80.69.70.93.00.35.10 3c6582f75f2e.03.80.69.77.66.00.30.e7
+O 17
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/part" 12 Eddm_part 3cd053ab2f61.03.80.69.70.93.00.35.10 3c6582f75f2e.03.80.69.77.66.00.30.e7
+O 16
+R csduv 0 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/part" 11 Eddm_part 3cd04c9c7182.03.80.69.70.93.00.35.10 3c6582f75f2e.03.80.69.77.66.00.30.e7

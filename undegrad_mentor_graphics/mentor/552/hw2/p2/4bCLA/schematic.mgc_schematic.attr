@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3c6573a2cec1.03.80.69.77.66.00.30.e7 24 2 1 0
+V v 22 1 3cd049a7d823.03.80.69.70.93.00.35.10
+F o 0 ""
+V v 23 1 3cd04c66cb31.03.80.69.70.93.00.35.10
+F o 0 ""
+V v 24 1 3cd053a4dc88.03.80.69.70.93.00.35.10
+F o 0 ""
+O 24
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/schematic/sheet1" 23 mgc_sheet 3cd053a4d54f.03.80.69.70.93.00.35.10 3c6573a2e77b.03.80.69.77.66.00.30.e7
+O 23
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/schematic/sheet1" 22 mgc_sheet 3cd04c66c356.03.80.69.70.93.00.35.10 3c6573a2e77b.03.80.69.77.66.00.30.e7
+O 22
+R cspuv 0 "/u/d/l/dluu/mentor/552/hw2/p2/4bCLA/schematic/sheet1" 21 mgc_sheet 3cd049a7d341.03.80.69.70.93.00.35.10 3c6573a2e77b.03.80.69.77.66.00.30.e7

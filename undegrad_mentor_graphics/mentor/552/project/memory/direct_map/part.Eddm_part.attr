@@ -1,0 +1,22 @@
+A 5 u Eddm_part 3ccf195f1465.03.80.69.70.9e.00.36.2d 9 2 2 0
+V v 7 1 3cd5a00f2fe4.03.80.69.70.91.00.34.b7
+F f 7 "part.part_7"
+V v 8 1 3cd5a0e076bf.03.80.69.70.91.00.34.b7
+F f 8 "part.part_8"
+V v 9 1 3cd5a1c8015b.03.80.69.70.91.00.34.b7
+F f 9 "part.part_9"
+O 9
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/direct_map/schematic" 1 mgc_schematic 3ccf195ea1d6.03.80.69.70.9e.00.36.2d 3ccf195ea1d5.03.80.69.70.9e.00.36.2d
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/memory/direct_map/direct_map" 14 mgc_symbol 3cd5a1c7e61a.03.80.69.70.91.00.34.b7 3cd2c514b17b.03.80.69.70.91.00.30.21
+O 8
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/direct_map/schematic" 1 mgc_schematic 3ccf195ea1d6.03.80.69.70.9e.00.36.2d 3ccf195ea1d5.03.80.69.70.9e.00.36.2d
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/memory/direct_map/direct_map" 13 mgc_symbol 3cd5a0e0643e.03.80.69.70.91.00.34.b7 3cd2c514b17b.03.80.69.70.91.00.30.21
+O 7
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/d/l/dluu/mentor/552/project/memory/direct_map/schematic" 1 mgc_schematic 3ccf195ea1d6.03.80.69.70.9e.00.36.2d 3ccf195ea1d5.03.80.69.70.9e.00.36.2d
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/d/l/dluu/mentor/552/project/memory/direct_map/direct_map" 12 mgc_symbol 3cd5a00f1ced.03.80.69.70.91.00.34.b7 3cd2c514b17b.03.80.69.70.91.00.30.21

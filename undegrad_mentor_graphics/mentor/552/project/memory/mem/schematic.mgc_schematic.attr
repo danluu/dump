@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3caf76fd1e0d.03.80.69.70.93.00.2e.15 9 2 1 0
+V v 7 1 3cc70d127747.03.80.69.77.6a.00.30.e4
+F o 0 ""
+V v 8 1 3cc70dee9ff5.03.80.69.77.6a.00.30.e4
+F o 0 ""
+V v 9 1 3cc70e46b240.03.80.69.77.6a.00.30.e4
+F o 0 ""
+O 9
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/schematic/sheet1" 8 mgc_sheet 3cc70e46ae19.03.80.69.77.6a.00.30.e4 3caf76fd34c7.03.80.69.70.93.00.2e.15
+O 8
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/schematic/sheet1" 7 mgc_sheet 3cc70dee97b1.03.80.69.77.6a.00.30.e4 3caf76fd34c7.03.80.69.70.93.00.2e.15
+O 7
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/memory/mem/schematic/sheet1" 6 mgc_sheet 3cc70d124dd2.03.80.69.77.6a.00.30.e4 3caf76fd34c7.03.80.69.70.93.00.2e.15

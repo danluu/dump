@@ -1,0 +1,14 @@
+A 5 u Eddm_part 3cd2d66225c2.03.80.69.70.92.00.2f.c8 2 2 2 0
+V v 1 1 3cd2d66225c3.03.80.69.70.92.00.2f.c8
+F f 1 "part.part_1"
+V v 2 1 3cd2d6c63a14.03.80.69.70.92.00.2f.c8
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/prj/memory/no_cache1/schematic" 1 mgc_schematic 3cd2d661c5f0.03.80.69.70.92.00.2f.c8 3cd2d661c5ef.03.80.69.70.92.00.2f.c8
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/u/j/e/jeshua/prj/memory/no_cache1/no_cache1" 1 mgc_symbol 3cd2d6c624cb.03.80.69.70.92.00.2f.c8 3cd2d6c624ca.03.80.69.70.92.00.2f.c8
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/u/j/e/jeshua/prj/memory/no_cache1/schematic" 1 mgc_schematic 3cd2d661c5f0.03.80.69.70.92.00.2f.c8 3cd2d661c5ef.03.80.69.70.92.00.2f.c8
+P "eddm__refer_state" "eddm__refer_floating"

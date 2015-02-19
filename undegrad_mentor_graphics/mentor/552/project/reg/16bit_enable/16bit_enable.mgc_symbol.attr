@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3caf629c66fe.03.80.69.70.93.00.2e.15 2 2 1 0
+V v 1 1 3caf629c66ff.03.80.69.70.93.00.2e.15
+F f 1 "16bit_enable.smbl_1"
+V v 2 1 3caf63062fde.03.80.69.70.93.00.2e.15
+F f 2 "16bit_enable.smbl_2"
+O 2
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/reg/16bit_enable/part" 2 Eddm_part 3caf629c9fde.03.80.69.70.93.00.2e.15 3caf5fe465a1.03.80.69.70.93.00.2e.15
+O 1
+R csduv 0 "/u/j/e/jeshua/mentor/dluu/552/project/reg/16bit_enable/part" 2 Eddm_part 3caf629c9fde.03.80.69.70.93.00.2e.15 3caf5fe465a1.03.80.69.70.93.00.2e.15

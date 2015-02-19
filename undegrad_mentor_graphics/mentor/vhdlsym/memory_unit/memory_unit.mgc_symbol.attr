@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 3cc70782dc9c.03.80.69.77.6a.00.30.e4 3 2 1 0
+V v 1 1 3cc70782dc9d.03.80.69.77.6a.00.30.e4
+F f 1 "memory_unit.smbl_1"
+V v 2 1 3cc70802caad.03.80.69.77.6a.00.30.e4
+F f 2 "memory_unit.smbl_2"
+V v 3 1 3cc70816d57a.03.80.69.77.6a.00.30.e4
+F f 3 "memory_unit.smbl_3"
+O 3
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/part" 2 Eddm_part 3cc70802cb44.03.80.69.77.6a.00.30.e4 3cc707836713.03.80.69.77.6a.00.30.e4
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/part" 2 Eddm_part 3cc70802cb44.03.80.69.77.6a.00.30.e4 3cc707836713.03.80.69.77.6a.00.30.e4
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/memory_unit/part" 1 Eddm_part 3cc707836714.03.80.69.77.6a.00.30.e4 3cc707836713.03.80.69.77.6a.00.30.e4

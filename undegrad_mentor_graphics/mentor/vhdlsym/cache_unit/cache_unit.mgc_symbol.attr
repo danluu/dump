@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 3cc70add8f53.03.80.69.77.6a.00.30.e4 2 2 1 0
+V v 1 1 3cc70add8f54.03.80.69.77.6a.00.30.e4
+F f 1 "cache_unit.smbl_1"
+V v 2 1 3cc70ae45b90.03.80.69.77.6a.00.30.e4
+F f 2 "cache_unit.smbl_2"
+O 2
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/cache_unit/part" 2 Eddm_part 3cc70ae45c49.03.80.69.77.6a.00.30.e4 3cc70addde69.03.80.69.77.6a.00.30.e4
+O 1
+R csduv 0 "/u/d/l/dluu/mentor/vhdlsym/cache_unit/part" 1 Eddm_part 3cc70addde6a.03.80.69.77.6a.00.30.e4 3cc70addde69.03.80.69.77.6a.00.30.e4

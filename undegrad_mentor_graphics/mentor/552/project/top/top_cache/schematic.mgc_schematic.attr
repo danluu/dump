@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 3ccf19345b67.03.80.69.70.9e.00.36.2d 16 2 1 0
+V v 14 1 3cd5a13fbfa4.03.80.69.70.91.00.34.b7
+F o 0 ""
+V v 15 1 3cd6bf353cf9.03.80.69.70.93.00.2f.93
+F o 0 ""
+V v 16 1 3cd6c1ec9e3a.03.80.69.70.93.00.2f.93
+F o 0 ""
+O 16
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/top/top_cache/schematic/sheet1" 16 mgc_sheet 3cd6c1ec99bb.03.80.69.70.93.00.2f.93 3ccf1934712f.03.80.69.70.9e.00.36.2d
+O 15
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/top/top_cache/schematic/sheet1" 15 mgc_sheet 3cd6bf35324c.03.80.69.70.93.00.2f.93 3ccf1934712f.03.80.69.70.9e.00.36.2d
+O 14
+R cspuv 0 "/u/d/l/dluu/mentor/552/project/top/top_cache/schematic/sheet1" 14 mgc_sheet 3cd5a13fb806.03.80.69.70.91.00.34.b7 3ccf1934712f.03.80.69.70.9e.00.36.2d

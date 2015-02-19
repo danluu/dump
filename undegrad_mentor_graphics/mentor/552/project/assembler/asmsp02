@@ -1,0 +1,435 @@
+#!/bin/sh
+# mpas (kai doylecei) assembler
+#
+# Assembler for CS552-2 Spring 2002
+#
+# To use, type:  asmsp02  <infile>
+#
+#   The listing from the assembler will appear on the standard output,
+#   and the binary output will appear in the file "MemFile".
+#
+# Last update: April 6, 2002
+
+ROOTDIR="."
+
+cat $ROOTDIR/def.h $1 | /usr/ccs/lib/cpp -P -B | $ROOTDIR/hex2dec |
+/bin/awk '
+BEGIN {
+	printf "*******************************************\n"
+	printf "WISC-SP02 Assembler: Usage asmsp02 <infile> \n\n"
+	mentor = 0
+
+	# Instruction place specifiers
+	F_opcd = 2048 # for instruction opcode
+	F_rd = 256    # for Rd of instruction
+	F_rs = 32     # for Rs of instruction
+	F_rt = 4      # for Rt of instruction
+	F_i = 1       # for immediate value  
+
+	# for label backpatch
+	format_J  = 0
+	format_I  = 1
+	format_RI = 2
+	format_BR = 3
+	
+	# Opcode for the various instructions
+        opcd[ "halt" ]    = 0
+        opcd[ "addi" ]    = 2
+	opcd[ "subi" ]    = 3
+	opcd[ "lui" ]     = 4 
+	opcd[ "rori" ]    = 5
+	opcd[ "srli" ]    = 6
+	opcd[ "srai" ]    = 7
+	opcd[ "andi" ]    = 8
+	opcd[ "ori" ]     = 9
+	opcd[ "xori" ]    = 10
+	opcd[ "add" ]     = 11
+	opcd[ "addt" ]    = 11
+	opcd[ "sub" ]     = 11
+	opcd[ "subt" ]    = 11
+	opcd[ "addm" ]    = 12
+        opcd[ "subm" ]    = 12
+	opcd[ "and" ]     = 14
+	opcd[ "or" ]      = 14
+	opcd[ "xor" ]     = 14
+	opcd[ "ror" ]     = 15
+	opcd[ "srl" ]     = 15
+	opcd[ "sra" ]     = 15
+	opcd[ "beqz" ]    = 16
+	opcd[ "bltz" ]    = 17
+	opcd[ "blez" ]    = 18
+	opcd[ "ret" ]     = 20
+	opcd[ "j" ]       = 21
+	opcd[ "jal" ]     = 22
+        opcd[ "jalr" ]    = 23
+	opcd[ "jr" ]      = 24
+	opcd[ "mmove" ]   = 25
+	opcd[ "ldi" ]     = 26
+	opcd[ "sti" ]     = 27
+	opcd[ "ld" ]      = 28
+	opcd[ "st" ]      = 28
+
+	pcount = 0
+	PC = 0	# some initial value
+	init_pc_value = pc
+	patch = 0
+}
+/^[\t ]*\\\\/	{ next }
+/^[\t ]*$/	{ next }
+/org/	{ 
+	if ($1~/:/) {NPC = $3}
+	else {NPC = $2}
+
+	if ( NPC~/^-?[0-9]+/) {
+          PC = NPC+0
+	} else {
+          print NR ": illegal address, org failed " NPC
+	}
+	next
+}
+/equ/	{ 
+	if (NF == 3) {
+          labels[substr($1, 1, length($1)-1)] = $3
+	} else {
+          print NR ": equ failed"
+	}
+	next
+}
+{ # fix fields ... remove labels.
+	if ($1~/:/) {
+		f1 = $2
+		f2 = $3
+		f3 = $4
+		f4 = $5
+		NF = NF - 1
+		lbl = substr($1, 1, length($1)-1)
+		if (labels[lbl] != "") {
+			print NR ": error: Label " lbl " redefined"
+			exit 1
+		}
+		labels[lbl] = PC
+	} else {
+		f1 = $1
+		f2 = $2
+		f3 = $3
+		f4 = $4
+	}
+
+        # Skip blank lines.
+	if (f1 == "") next
+
+	print ">" NR ":",f1, f2, f3, f4
+
+        # Handle data statements.
+	if (f1 == "data") {
+#		if ( ! (f2~/^[+-]?[0-9]+/)) {	# Its a label
+#			print NR ": error in data, number expected"
+#			next
+#		} else {	# plain number
+#			rest = f2
+#		}
+#		# 2`s complement XXXX
+#		if (rest < 0) {
+#		   rest = -rest - 1
+#		}
+#		mem[PC] = rest
+#		PC++
+#		next
+#	}
+#
+#	if (opcd[ f1 ] == "") {
+#		print  NR ": Illegal op-code ", f1
+#		next
+
+	  mem[PC] = f2
+#printf "Result = 0x%04x\n", mem[PC]
+          PC++
+	  next
+	}
+
+	###################
+	# 0 OPERAND OPCODES
+	###################
+	if ((f1 == "halt") || (f1 == "ret")) {
+	  mem [PC] = (opcd[f1] * F_opcd)
+	  #printf "Result = 0x%04x\n", mem[PC]
+	  PC++
+	  next
+        }
+	
+	##############################
+	# J FORMAT 1 immediate operand
+	##############################
+        if ((f1 == "j") || (f1 == "jal")) { 
+	  # is it a constant?
+	  if (f2~/^[+-]?[0-9]+/) { 
+	    imm = f2 + 0
+	  } else {
+	    patch = 1
+	    patch_lbl[PC] = f2
+	    patch_fmt[PC] = format_J
+	    patch_line[PC] = NR
+	    imm = 0
+	  }
+	  # convert to 2s complement
+          if (imm < 0) { 
+            imm = (-imm) % 2048
+            imm = 2048 - imm
+          }
+	  mem[PC] = (opcd[f1] * F_opcd) + (imm * F_i) 
+#printf "Result = 0x%04x\n", mem[PC]
+	  PC++
+	  next
+	}  
+
+	###################
+	# J FORMAT Branches
+	###################
+	if ((f1 == "beqz") || (f1 == "bltz") || (f1 == "blez")) {
+	    if (f2~/^r[0-7]/) {
+	      Rd = substr(f2, 2, 1) + 0
+            } else {
+	      print NR ":error: illegal Rd register specifier"
+	      exit 1
+	    }
+	    # is it a constant?
+	    if (f3~/^[+-]?[0-9]+/) {  
+	      imm = f3 + 0
+	      imm = imm % 256                
+	      if (imm < 0 ) {imm = 256 + imm}
+	    } else {
+	      patch = 1
+	      patch_lbl[PC] = f3
+	      patch_fmt[PC] = format_BR
+	      patch_line[PC] = NR
+	      imm = 0
+		
+	    }
+	    mem[PC] = (opcd[f1] * F_opcd) + (Rd * F_rd) + (imm * F_i)
+#printf "Result = 0x%04x\n", mem[PC]
+	    PC++
+	    next
+	}
+	
+	##################################################
+	# The remaining instructions, all use Rd. So check 
+	# the validity of Rd.
+	if (f2~/^r[0-7]/) {
+	  Rd = substr(f2, 2, 1) + 0
+	} else {
+	  print NR ":error: illegal Rd register specifier OR opcode"
+	  exit 1
+        }
+	
+	
+	###################### 
+	# RR format 1 REGISTER
+	######################
+	if (f1 == "jr") {
+	  mem[PC] = (opcd[f1] * F_opcd) + (Rd * F_rd)  
+	  # printf "Result = 0x%04x\n", mem[PC]
+	  PC++
+	  next
+	}
+
+	#################################
+	# I format 2 instructions
+	# 1 REGISTER, 1 IMMEDIATE OPCODES
+	#################################
+	if ((f1 == "lui") || (f1 == "andi") || (f1=="ori") || (f1 == "xori")) {
+	  # is f3 a number?
+	  if (f3~/^[+-]?[0-9]+/) {
+	    imm = f3 + 0
+	    imm = imm % 256
+	    if (imm < 0 ){ imm = 256 + imm }
+	  } else {
+            patch = 1
+	    patch_lbl[PC] = f3
+	    patch_fmt[PC] = format_I
+	    patch_line[PC] = NR
+	    imm = 0
+	     
+	  }
+	  mem[PC] = (opcd[f1] * F_opcd) + (Rd * F_rd) + (imm * F_i)
+	    # printf "Result = 0x%04x\n", mem[PC]
+	  PC++
+	  next
+	}
+
+	#############################
+	# 2 REGISTER OPERANDS OPCODES
+	if (f3~/^r[0-7]/) {
+	  Rs = substr(f3, 2, 1)
+        } else {
+	  print NR ":error: illegal Rs register specifier or opcode"
+	  exit 1
+	}
+
+	###########################
+	# RR & MM format 2 REGISTER
+	###########################
+        if ((f1 == "jalr")||(f1=="mmove")) {                   
+	  mem[PC] = (opcd[f1] * F_opcd) + (Rd * F_rd) + (Rs * F_rs)
+#printf "Result = 0x%04x\n", mem[PC]
+	  PC++
+	  next
+        }
+
+	############################
+	# I format 1 instructions
+	# 2 REGS, 1 5bit IMM OPCODES
+	############################
+	if ((f1 == "addi") || (f1 == "subi") || (f1 == "rori") || (f1 == "srli") || (f1 == "srai") || (f1 == "ldi") || (f1 == "sti")) {
+	  # is f4 a number?
+	  if (f4~/^[+-]?[0-9]+/) {
+	    imm = f4 + 0
+	  } else {
+            patch = 1
+	    patch_lbl[PC] = f4
+	    patch_fmt[PC] = format_RI
+	    patch_line[PC] = NR
+	    imm = 0
+	     
+	  }
+	  imm = imm % 32
+	  if(imm < 0 ) imm = 32 + imm
+	  mem[PC] = (opcd[f1] * F_opcd) + (Rd * F_rd) + (Rs * F_rs) + (imm * F_i)
+#printf "Result = 0x%04x\n", mem[PC]
+	  PC++
+	  next
+	}
+
+	#############################
+	# 3 REGISTER OPERANDS OPCODES
+	if (f4~/^r[0-7]/) {
+	  Rt = substr(f4, 2, 1)
+        } else {
+	  print NR ":error: illegal Rt register specifier OR opcode"
+	  exit 1
+	}
+
+	############
+	# RR format
+	# RRR format
+	# RM format
+	############
+	if((f1=="ld") || (f1=="st") || (f1=="add") || (f1=="sub") || (f1=="and") || (f1=="or") || (f1=="xor") || (f1=="ror") || (f1=="srl") || (f1=="sra") || (f1=="addt") || (f1=="subt") || (f1=="addm") || (f1=="subm")) {
+
+	    fn_code = 0
+	    # add, addt, sub, subt group
+	    if(f1=="add")  fn_code = 0
+	    if(f1=="addt") fn_code = 1
+	    if(f1=="sub")  fn_code = 2
+	    if(f1=="subt") fn_code = 3
+
+	    # addm, subm group
+	    if(f1=="addm") fn_code = 0
+	    if(f1=="subm") fn_code = 2
+
+	    # and, or, xor group
+	    if(f1=="and")  fn_code = 1
+	    if(f1=="or")   fn_code = 2
+	    if(f1=="xor")  fn_code = 3
+
+	    # ror, srl, sra group
+	    if(f1=="ror")  fn_code = 1
+	    if(f1=="srl")  fn_code = 2
+	    if(f1=="sra")  fn_code = 3
+
+	    # ld, st group
+	    if(f1=="ld")   fn_code = 0
+	    if(f1=="st")   fn_code = 2
+
+	    mem[PC] = (opcd[f1] * F_opcd) + (Rd * F_rd) + (Rs * F_rs) + (Rt * F_rt) + fn_code
+	#printf "Result = 0x%04x\n", mem[PC]
+	    PC++
+	    next
+	}
+
+	print NR ": Illegal Opcode"
+ 	exit 1
+}
+
+
+END {
+	# First patch the labels...
+	if (patch == 1)
+	for (PC in patch_lbl) {
+		lbl = patch_lbl[PC]
+		lblval = labels[lbl]
+		if (lblval == "") {
+		  print patch_line[PC]":error: undefined label " lbl
+		  continue
+		}
+		if (patch_fmt[PC] == format_I) {
+		  lblval = lblval + 0
+		  if (lblval < 0) {
+		    lblval = (-lblval -1) % 256
+		    lblval = 256 - lblval
+		  }
+		  mem[PC] = mem[PC] + lblval
+		  continue
+		}
+
+		if (patch_fmt[PC] == format_RI) {
+		  lblval = lblval + 0
+		  if (lblval < 0) {
+		    lblval = (-lblval -1) % 32
+		    lblval = 32 - lblval
+		  }
+		  mem[PC] = mem[PC] + lblval
+		  continue
+		}
+
+		if (patch_fmt[PC] == format_J) {
+		  lblval = lblval - (PC+1)   # Next PC.
+		  if (lblval < 0) {
+		    lblval = (-lblval) % 2048
+		    lblval = 2048 - lblval
+		  }
+		  mem[PC] = mem[PC] + lblval
+		  continue
+		}
+
+		if (patch_fmt[PC] == format_BR) {
+		  lblval = lblval - (PC+1)   # Next PC.
+		  if (lblval < 0) {
+		    lblval = (-lblval) % 256
+		    lblval = 256 - lblval
+		  }
+		  mem[PC] = mem[PC] + lblval
+		  continue
+		}
+	
+		print "internal error"
+	}
+			
+	if (mentor) {
+	  for (i in mem) {
+	    b0 = mem[i] / 256
+	    b1 = mem[i] % 256
+	    printf "      %04x     /    %02x   ;\n      %04x     /    %02x   ;\n",i * 2, b0, i * 2 + 1, b1 | "sort > MemFile"
+	  }
+       }
+	else 
+	   for (i in mem)
+		printf "%04x %04x\n", i , mem[i]  | "sort > MemFile"
+	#	printf "%04x /  X\"%04x\" \n", i , mem[i]  | "sort > MemFile"
+	printf "\n\nLabel map\n"
+
+	for (i in labels)
+		printf("%s	%d == 0x%x\n", i , labels[i] , labels[i])
+
+	printf "\n Memory output in file: MemFile \n"
+}
+'
+
+
+
+
+
+
+
+
+
+
