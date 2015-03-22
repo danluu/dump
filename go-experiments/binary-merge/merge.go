@@ -10,7 +10,8 @@ import (
 /*
 
 Usage:
-go run merge.go [input files] [output file]
+To execute:   go run merge.go [input files] [output file]
+To run tests: go test
 
 Merges binary files containing sorted input into a single
 file. Individual objects can be larger than memory or even virtual
