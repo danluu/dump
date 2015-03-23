@@ -73,6 +73,8 @@ corner cases to get targeted. All of that should be changed. A
 somewhat related thing is that I'm pretty sure that the test generator
 can generate bogus tests, but I haven't dug into it.
 
+6. Input arguments should use the flags library, have -help, etc.
+
 I haven't made the refactoring changes above because I spent about
 half a day writing this code, plus time on testing, which seems like
 an appropriate amount of time for an interview exercise.
