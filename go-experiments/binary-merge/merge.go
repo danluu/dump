@@ -123,16 +123,16 @@ func readBytes(r io.Reader, length uint64) []byte {
 	return data
 }
 
-// os.File as writeAt, but there's no binary.WriteAt
-func writeUint64At(w *os.File, outu uint64, offset int64) {
-	oldOffset := getOffset(w)
-	w.Seek(offset, 0)
-	err := binary.Write(w, binary.BigEndian, outu)
-	if err != nil {
-		log.Fatal("failed to write uint64:", err)
+// Read value lengths and values from input files.  On collisions,
+// arbitrarily use data from "last" file.
+func readData(files []BinFile, keyIndices []int) []byte {
+	var valLen uint64
+	var data []byte
+	for _, i := range keyIndices {
+		valLen = readUint64(files[i].fd)
+		data = readBytes(files[i].fd, valLen)
 	}
-	w.Seek(oldOffset, 0)
-	return
+	return data
 }
 
 func writeBytes(w io.Writer, data []byte) {
@@ -152,6 +152,18 @@ func writeUint64(w io.Writer, outu uint64) {
 	if err != nil {
 		log.Fatal("failed to write uint64:", err)
 	}
+	return
+}
+
+// os.File as writeAt, but there's no binary.WriteAt
+func writeUint64At(w *os.File, outu uint64, offset int64) {
+	oldOffset := getOffset(w)
+	w.Seek(offset, 0)
+	err := binary.Write(w, binary.BigEndian, outu)
+	if err != nil {
+		log.Fatal("failed to write uint64:", err)
+	}
+	w.Seek(oldOffset, 0)
 	return
 }
 
@@ -188,7 +200,7 @@ func firstObjects(files []BinFile) []int {
 // Check if any input files contain unread objects.
 func objsRemain(files []BinFile) bool {
 	for i := range files {
-		// This check for "" is necessary because getObjName
+		// This check for "" is necessary because readObjNames
 		// reads numKeys. If the last object is an object with
 		// numKeys == 0, we'll be at eof even though we need
 		// to write the object.  The check for isEOF is
@@ -204,7 +216,7 @@ func objsRemain(files []BinFile) bool {
 }
 
 // Read object frame (length, name, number of keys/vals).
-func getObjNames(files []BinFile) {
+func readObjNames(files []BinFile) {
 	for i := range files {
 		if files[i].objName == "" && !isEOF(files[i].fd) {
 			objNameLen := readUint64(files[i].fd)
@@ -213,6 +225,13 @@ func getObjNames(files []BinFile) {
 			numKeys := readUint64(files[i].fd)
 			files[i].numKeys = numKeys
 		}
+	}
+}
+
+func resetObjNames(files []BinFile, indices []int) {
+	for _, i := range indices {
+		files[i].curKey = 0
+		files[i].objName = ""
 	}
 }
 
@@ -239,29 +258,6 @@ func firstKeys(files []BinFile, indices []int) []int {
 	return keyIndices
 }
 
-// Read key lengths and names from input files.
-func readKeyNames(files []BinFile, indices []int) {
-	for _, i := range indices {
-		if files[i].keyName == "" && (files[i].curKey < files[i].numKeys) {
-			keyNameLen := readUint64(files[i].fd)
-			keyName := readString(files[i].fd, keyNameLen)
-			files[i].keyName = keyName
-		}
-	}
-}
-
-// Read value lengths and values from input files.  On collisions,
-// arbitrarily use data from "last" file.
-func readData(files []BinFile, keyIndices []int) []byte {
-	var valLen uint64
-	var data []byte
-	for _, i := range keyIndices {
-		valLen = readUint64(files[i].fd)
-		data = readBytes(files[i].fd, valLen)
-	}
-	return data
-}
-
 // Check if relevant input files have unread keys in current object.
 func keysRemain(files []BinFile, indices []int) bool {
 	for _, i := range indices {
@@ -275,6 +271,17 @@ func keysRemain(files []BinFile, indices []int) bool {
 	return false
 }
 
+// Read key lengths and names from input files.
+func readKeyNames(files []BinFile, indices []int) {
+	for _, i := range indices {
+		if files[i].keyName == "" && (files[i].curKey < files[i].numKeys) {
+			keyNameLen := readUint64(files[i].fd)
+			keyName := readString(files[i].fd, keyNameLen)
+			files[i].keyName = keyName
+		}
+	}
+}
+
 func incrementKeys(files []BinFile, keyIndices []int) {
 	for _, i := range keyIndices {
 		files[i].curKey++
@@ -284,13 +291,6 @@ func incrementKeys(files []BinFile, keyIndices []int) {
 func resetKeyNames(files []BinFile, keyIndices []int) {
 	for _, i := range keyIndices {
 		files[i].keyName = ""
-	}
-}
-
-func resetObjNames(files []BinFile, indices []int) {
-	for _, i := range indices {
-		files[i].curKey = 0
-		files[i].objName = ""
 	}
 }
 
@@ -323,13 +323,19 @@ func writeObj(files []BinFile, outfd *os.File) {
 		data := readData(files, keyIndices)
 		writeField(outfd, data) // write value length and conents.
 
-		// Update state to restore invariants.
+		// Update state to restore invariants.  "" in a name
+		// indicates key or object is finished. A non ""
+		// string indicates that it's pointing to a valid key
+		// or object. numKeys and curKey should be correct
+		// after each iteration, too.
 		resetKeyNames(files, keyIndices)
 		incrementKeys(files, keyIndices)
 		numKeys++
 
 	}
 	writeUint64At(outfd, numKeys, offsetNumKeys)
+
+	// Update state to restore invariants.
 	resetObjNames(files, indices)
 }
 
@@ -360,7 +366,7 @@ func mergeFiles(filenames []string, outFilename string) {
 	}
 
 	for objsRemain(files) {
-		getObjNames(files)
+		readObjNames(files)
 		writeObj(files, outfd)
 	}
 }
