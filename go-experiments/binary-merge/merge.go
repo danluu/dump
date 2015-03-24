@@ -57,21 +57,22 @@ Some comments on style/refactoring:
 
 1. I don't really know go, so this is probably not idiomatic go.
 
-2. Using "" as a sentinal value is sort of heinous and should be refactored out.
+2. Using "" as a sentinal value is sort of heinous and should be
+refactored out.
 
 3. Keeping finished files inside the array and rechecking them for
-eof, instead of removing them is a bit silly and that should be
+eof, instead of removing them, is a bit silly and that should be
 refactored.
 
 4. The current setup with keyName vs. objName causes a lot of almost,
 but not quite, duplicated code.
 
 5. The test generation has a bunch of stuff hardcoded that shouldn't
-be hardcoded, and the random distributions are arbitrary and not
-picked for any particular reason, and there's nothing that causes
-corner cases to get targeted. All of that should be changed. A
-somewhat related thing is that I'm pretty sure that the test generator
-can generate bogus tests, but I haven't dug into it.
+be hardcoded, the random distributions are arbitrary and not picked
+for any particular reason, and there's nothing that causes corner
+cases to get targeted. All of that should be changed. A somewhat
+related thing is that I'm pretty sure that the test generator can
+generate bogus tests, but I haven't dug into it.
 
 6. Input arguments should use the flags library, have -help, etc.
 
@@ -209,7 +210,7 @@ func objsRemain(files []BinFile) bool {
 		// necessary because we don't have a special function
 		// to move the state out of "" the first time this is
 		// run. This check could be simplified to a single
-		// check by changing either of those things above.
+		// check by changing either of those things.
 		if !(isEOF(files[i].fd) && files[i].objName == "") {
 			return true
 		}
