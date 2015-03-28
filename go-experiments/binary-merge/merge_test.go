@@ -13,6 +13,8 @@ import (
 	"testing"
 )
 
+// TODO: generate tests that have errors, check that error handling works.
+
 // ----------------- HELPER FNS ------------------------
 
 // TODO: allow other characters?
@@ -91,7 +93,7 @@ func genData(length int) []byte {
 	return data
 }
 
-// Generate a valid output file, and arbitrarily split the data into
+// Generate a valid output file and arbitrarily split the data into
 // input files. Collisions possible.  Note: this setup can result in
 // objects with 0 keys and keys with 0 length data, but not To make
 // for easier debugging, object names are upper case, key names are
