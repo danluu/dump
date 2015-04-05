@@ -36,7 +36,6 @@ func solve(dist [][]float64, table []float64, nIn int, mask int) float64 {
 }
 
 func main() {
-
 	c := 1
 	for {
 		var nPairs int
