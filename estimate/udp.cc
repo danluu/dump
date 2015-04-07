@@ -9,7 +9,7 @@
 #include <iostream>
 #include <vector>
 
-#define BUFFER_SZ 1024*1024
+#define BUFFER_SZ 1024*1024*128
 #define PAYLOAD_SZ 1024
 #define NUM_SENDS 1000000
 
@@ -28,7 +28,6 @@ int main() {
     std::cout << "failed to resolve remote socket address: " << err << std::endl;
     return 1;
   }
-
 
   int fd=socket(res->ai_family, res->ai_socktype, res->ai_protocol);
   if (fd == -1) {
@@ -59,5 +58,6 @@ int main() {
     }
     idx = (idx + PAYLOAD_SZ) % BUFFER_SZ;
   }
-
+  
+  return 0;
 }
