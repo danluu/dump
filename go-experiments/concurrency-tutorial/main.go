@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sync"
 )
 
 func gen(nums ...int) <-chan int {
@@ -15,12 +16,43 @@ func gen(nums ...int) <-chan int {
 	return out
 }
 
-func square(in <-chan int) <-chan int {
+func square(done <-chan struct{}, in <-chan int) <-chan int {
 	out := make(chan int)
 	go func() {
+		defer close(out)
 		for x := range in {
-			out <- x * x
+			select {
+			case out <- x * x:
+			case <-done:
+				return
+			}
 		}
+	}()
+	return out
+}
+
+func merge(done <-chan struct{}, cs ...<-chan int) <-chan int {
+	var wg sync.WaitGroup
+	out := make(chan int)
+	output := func(ch <-chan int) {
+		defer wg.Done()
+		for x := range ch {
+			select {
+			case out <- x:
+			case <-done:
+				return
+			}
+		}
+		wg.Done()
+	}
+
+	wg.Add(len(cs))
+	for _, ch := range cs {
+		go output(ch)
+	}
+
+	go func() {
+		wg.Wait()
 		close(out)
 	}()
 	return out
@@ -28,9 +60,20 @@ func square(in <-chan int) <-chan int {
 
 func main() {
 	fmt.Println("Concurrency?")
-	ch := gen(2, 3, 4, 5)
-	sq := square(ch)
-	for res := range sq {
-		fmt.Println(res)
-	}
+	done := make(chan struct{})
+	defer close(done)
+
+	fmt.Println("Part 2")
+	nums := gen(2, 3, 5, 7, 11, 13)
+	s1 := square(done, nums)
+	s2 := square(done, nums)
+
+	out := merge(done, s1, s2)
+	fmt.Println(<-out)
+	/*
+		for res := range merge(done, s1, s2) {
+			fmt.Println(res)
+		}
+	*/
+
 }
