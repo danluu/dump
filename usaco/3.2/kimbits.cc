@@ -34,6 +34,7 @@ int main() {
   fin >> N >> L >> I;
 
   // TODO: fix this to not overflow for "large" problems.
+  /*
   cout << "make fact\n";
   vector<long long> fact(N+1);
   fact[0] = 1;
@@ -44,22 +45,22 @@ int main() {
     cout << x << " ";
   }
   cout << endl;
+  */
 
   // TODO: use recurrence to calculate (n choose k).
   // This shouldn't overflow.
   cout << "make choose\n";
   vector<vector<long long>> choose(N+1, vector<long long>(N+1));
-  for (long long i = 0; i <= N; ++i) {
-    for (long long j = 0; j <= N; ++j) {
-      if (j > i) {
-	choose[i][j] = 0;
+  for (long long n = 0; n <= N; ++n) {
+    for (long long k = 0; k <= N; ++k) {
+      if (k > n) {
+	choose[n][k] = 0;
+      } else if (k == 0 || n == 0) {
+	choose[n][k] = 1;
       } else {
-	assert(i-j >= 0);
-	choose[i][j] = fact[i] / (fact[i-j] * fact[j]);
+	choose[n][k] = choose[n-1][k-1] + choose[n-1][k];
       }
-      cout << choose[i][j] << " " ;
     }
-    cout << endl;
   }
 
   cout << "make ways\n";
