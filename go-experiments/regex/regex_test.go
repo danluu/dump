@@ -34,7 +34,7 @@ func TestStar(t *testing.T) {
 		}
 	}
 
-	aStarBMisses := []string{"a", "aa", "aaa", "aaaaaaaaaaaaaaaaaaaaaaaa", ""}
+	aStarBMisses := []string{"a", "aa", "aaa", "aaaaaaaaaaaaaaaaaaaaaaaa", "", "acb"}
 	for _, miss := range aStarBMisses {
 		if match(aStarB, miss) {
 			t.Fatal("Failed match against a*b:", miss)
