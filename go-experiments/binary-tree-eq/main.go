@@ -87,5 +87,4 @@ func main() {
 	t1 := New(10)
 	t2 := New(10)
 	fmt.Println(Same(t1, t2))
-
 }
