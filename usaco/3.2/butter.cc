@@ -28,6 +28,30 @@ LANG: C++11
 #include <vector>
 
 using namespace std;
+
+class Order {
+  bool Operator()(pair<int, int> &a, pair<int, int> &b) {
+    return a.second < a.first;
+  }
+};
+
+void dijk(vector<vector<int>> &g, const vector<int> &hascow, const int start, const int num_nodes) {
+  vector<int> d(num_nodes, numeric_limits<int>::max() / 2);
+
+  d[start] = 0;
+  // Note: this queue has no decrease key op, so we just toss everything in
+  // and check on withdrawl.
+  priority_queue<pair<int, int>, vector<pair<int, int>>, Order> qu;
+  for (const auto &p : g[start]) {
+    qu.insert(p);
+  }
+
+  for (const auto & p : qu) {
+    cout << p.first << ":" << p.second << endl;
+  }
+}
+
+
 int main() {
   ofstream fout ("butter.out");
   ifstream fin ("butter.in");
@@ -37,7 +61,7 @@ int main() {
   fin >> num_cows >> num_nodes >> num_paths;
 
   vector<int> hascow(num_nodes, 0);
-  vector<vector<int>> g(num_nodes, vector<int>(num_nodes+1, numeric_limits<int>::max() / 2));
+  vector<vector<int>> g(num_nodes, vector<pair<int, int>>);
 
   for (int i = 0; i < num_cows; ++i) {
     int p;
@@ -48,32 +72,19 @@ int main() {
   for (int i = 0; i < num_paths; ++i) {
     int left, right, dist;
     fin >> left >> right >> dist;
-    g[left-1][right-1] = dist;
-    g[right-1][left-1] = dist;
+    g[left].push_back(pair<int, int>(right, dist));
+    g[right].push_back(pair<int, int>(left, dist));
   }
 
-  for (int k = 0; k < num_nodes; ++k) {
-    for (int i = 0; i < num_nodes; ++i) {
-      for (int j = 0; j < num_nodes; ++j) {
-	g[i][j] = min(g[i][j], g[i][k] + g[k][j]);
-      }
+  for (int i = 0; i < num_paths; ++i) {
+    if (hascow[i]) {
+      dijk(g, hascow, i, num_nodes);
+      return 0;
     }
   }
 
-  int best_node = -1;
-  int best_dist = numeric_limits<int>::max();
-  for (int i = 0; i < num_nodes; ++i) {
-    int sum_dists = 0;
-    for (int j = 0; j < num_nodes; ++j) {
-      if (i != j) {
-	sum_dists += hascow[j] * g[i][j];
-      }
-    }
-    if (sum_dists < best_dist) {
-      best_node = i;
-      best_dist = sum_dists;
-    }
-  }
+  int best_dist = numeric_limits<int>::max() / 2;
+
 
   fout << best_dist << endl;
   
