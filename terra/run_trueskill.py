@@ -38,20 +38,27 @@ rankees = defaultdict(make_player)
 
 wat = open('all_games.json')
 jd = json.load(wat)
-game = jd['simple']
-current_facs = []
-for player in game['players']:
-    fac = player['faction']
-    rnk = player['rank']
-    rankees[fac].rank = rnk
+i = 0
+for game_id in jd:
+    game = jd[game_id]
+    current_facs = []
+    print 'game'
+    for player in game['players']:
+        fac = player['faction']
+        rnk = player['rank']
+        rankees[fac].rank = rnk
+        
+        current_facs.append(fac)
+        print player['faction']
+        print player['rank']
+        print rankees[fac].skill
 
-    current_facs.append(fac)
-    print player['faction']
-    print player['rank']
-
+    # ts.AdjustPlayers has divide by 0 error if there's only one player.
+    if len(current_facs) > 1:
+        ts.AdjustPlayers([rankees[x] for x in current_facs])
 
 # ts.AdjustPlayers([rankees['alchemists'], rankees['swarmlings'], rankees['nomads'], rankees['witches'], rankees['nofaction2']])
-ts.AdjustPlayers([rankees[x] for x in current_facs])
+
 for fac in rankees:
     print fac
     print rankees[fac].skill
