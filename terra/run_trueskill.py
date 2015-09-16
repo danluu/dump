@@ -27,6 +27,7 @@ for game_id in jd:
         print rankees[fac].skill
 
     # ts.AdjustPlayers has divide by 0 error if there's only one player.
+    # TODO: look at games with one player to see how they exist. Could be a bug in this code?
     if len(current_facs) > 1:
         ts.AdjustPlayers([rankees[x] for x in current_facs])
 
