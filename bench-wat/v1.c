@@ -1,17 +1,21 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// #include "iacaMarks.h"
+
 
 void repeat(char* array, int NUMBER) {
   int i;
   int j = 1;
   for (i = 0; i < NUMBER; ++i) {
+    // IACA_START    
     j = j * 2;
     if (j > NUMBER) {
       j = j - NUMBER;
     }
     array[j] = 5;
   }
+  // IACA_END  
 }
 
 // Number to guess: How big of an array (in bytes)

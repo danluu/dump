@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// #include "iacaMarks.h"
+
 int nearest_power_of_two(int v) {
   v--;
   v |= v >> 1;
@@ -20,9 +22,11 @@ void repeat(volatile char* array, int NUMBER, int ORIGINAL_NUMBER) {
   int i;
   int j = 1;
   for (i = 0; i < ORIGINAL_NUMBER; ++i) {
+    // IACA_START
     j = (j * 7) & NUMBER;
     array[j] = 5;
   }
+  // IACA_END
 }
 
 int main(int argc, char **argv) {
