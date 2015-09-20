@@ -6,7 +6,7 @@ void repeat(char* array, int NUMBER) {
   int i;
   int j = 1;
   for (i = 0; i < NUMBER; ++i) {
-    j = j * 7;
+    j = j * 2;
     if (j > NUMBER) {
       j = j - NUMBER;
     }
