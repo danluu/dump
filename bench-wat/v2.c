@@ -18,7 +18,7 @@ int nearest_power_of_two(int v) {
 // can we allocate and fill with 5s in a second?
 // The catch: We do it out of order instead of in order.
 
-void repeat(volatile char* array, int NUMBER, int ORIGINAL_NUMBER) {
+void repeat(char* array, int NUMBER, int ORIGINAL_NUMBER) {
   int i;
   int j = 1;
   for (i = 0; i < ORIGINAL_NUMBER; ++i) {
@@ -38,13 +38,8 @@ int main(int argc, char **argv) {
   NUMBER = nearest_power_of_two(ORIGINAL_NUMBER) - 1;
   printf("%d\n", NUMBER);
 
-  volatile char* array = malloc(NUMBER);
+  char* array = malloc(NUMBER);
   repeat(array, NUMBER, ORIGINAL_NUMBER);
-  // Prevent things from being optimized out.
-  int i;
-  for (i = 0; i < NUMBER; i++) {
-    asm volatile("" :: "m" (array[i]));
-  }
   
   return 0;
 }
