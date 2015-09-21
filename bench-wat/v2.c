@@ -36,7 +36,6 @@ int main(int argc, char **argv) {
 
   ORIGINAL_NUMBER = atoi(argv[1]);
   NUMBER = nearest_power_of_two(ORIGINAL_NUMBER) - 1;
-  printf("%d\n", NUMBER);
 
   char* array = malloc(NUMBER);
   repeat(array, NUMBER, ORIGINAL_NUMBER);
