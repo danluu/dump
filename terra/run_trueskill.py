@@ -19,7 +19,17 @@ def load_all_games():
     jd = json.load(wat)
     return jd
 
-def calc_faction_ts(jd):
+def get_name(player, num_players, subset):
+    if subset == 0:
+        return "p" + str(num_players) + "," + player['faction']
+    elif subset == 1:
+        if 'id_hash' in player:
+            return player['id_hash']
+        else:
+            return "empty_hash"
+    
+
+def calc_faction_ts(jd, subset):
     rankees = defaultdict(make_player)
     i = 0
     early_break = False
@@ -30,8 +40,8 @@ def calc_faction_ts(jd):
         print 'game'
         num_players = len(game['players'])
 
-        for player in game['players']:
-            fac = "p" + str(num_players) + "," + player['faction']
+        for player in game['players']:            
+            fac = get_name(player, num_players, subset)
 
             rnk = player['rank']
             rankees[fac].rank = rnk
@@ -59,7 +69,7 @@ def calc_faction_ts(jd):
     return rankees
 
 
-def sort_ranks(rankees):
+def sort_ranks(rankees, ):
     detail_ranks = defaultdict(dict)
     for tsitem in rankees:
         num_players, fac = tsitem.split(",")
@@ -85,5 +95,5 @@ def sort_ranks(rankees):
             print wat
 
 jd = load_all_games()
-rankees = calc_faction_ts(jd)
+rankees = calc_faction_ts(jd, 1)
 sort_ranks(rankees)
