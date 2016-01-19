@@ -1,6 +1,6 @@
 // Check different between addresses in stack and 
 // `ulimit -s`
-// Build with `g++ -std=c++11 -pthread wat.cc`
+// Build with `g++ -std=c++11 -pthread addr.cc`
 
 #include <cstdio>
 #include <thread>
