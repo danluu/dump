@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 	"regexp"
 	"strconv"
 	"strings"
@@ -86,7 +87,7 @@ func convertTokens(tls []TokenLit) ImgParts {
 		switch state {
 		case expectOpen:
 			if pair.t != open {
-				log.Fatal("Bad open", pair, tls)
+				log.Fatal("Bad open\n", pair, "\n", tls, "\n")
 			}
 			state = expectImg
 
@@ -137,32 +138,35 @@ func convertTokens(tls []TokenLit) ImgParts {
 	return res
 }
 
-func convertFile(fname string) {
-	file, err := os.Open(fname)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
+func convertFile(fname string, fi os.FileInfo, err error) error {
+	if !fi.IsDir() {
+		file, err := os.Open(fname)
+		if err != nil {
+			log.Fatal(err)
+		}
+		defer file.Close()
 
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		line := scanner.Text()
-		if isImg.MatchString(line) {
-			tls := tokenizeString(line)
-			fmt.Println(tls)
-			imgP := convertTokens(tls)
-			fmt.Println(imgP)
+		scanner := bufio.NewScanner(file)
+		for scanner.Scan() {
+			line := scanner.Text()
+			if err := scanner.Err(); err != nil {
+				log.Fatal(fname, err)
+			}
+			if isImg.MatchString(line) {
+				tls := tokenizeString(line)
+				// fmt.Println(tls)
+				imgP := convertTokens(tls)
+				fmt.Println(imgP)
+			}
+		}
+
+		if err := scanner.Err(); err != nil {
+			log.Fatal(err)
 		}
 	}
-
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
-	}
+	return nil
 }
 
 func main() {
-	fmt.Println("wat")
-
-	testFile := "/home/dluu/dev/hugo-wat/content/post/2choices-eviction.markdown"
-	convertFile(testFile)
+	filepath.Walk("/home/dluu/dev/hugo-wat/content/post/", convertFile)
 }
