@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path"
 	"path/filepath"
 	"regexp"
 	"strconv"
@@ -71,7 +72,7 @@ func tokenizeString(octoString string) []TokenLit {
 			res = append(res, TokenLit{digits, literal})
 		} else {
 			cleaned := strings.Trim(literal, "'`‘")
-			if len(cleaned) > 0 {
+			if len(cleaned) > 0 && cleaned != "images" {
 				res = append(res, TokenLit{text, cleaned})
 			}
 		}
@@ -146,6 +147,10 @@ func convertFile(fname string, fi os.FileInfo, err error) error {
 		}
 		defer file.Close()
 
+		dstDir := "/home/dluu/dev/hugo-wat/content/post/"
+		dstFile := dstDir + path.Base(fname)
+		wFile, err := os.Create(dstFile)
+
 		scanner := bufio.NewScanner(file)
 		for scanner.Scan() {
 			line := scanner.Text()
@@ -154,9 +159,21 @@ func convertFile(fname string, fi os.FileInfo, err error) error {
 			}
 			if isImg.MatchString(line) {
 				tls := tokenizeString(line)
-				// fmt.Println(tls)
 				imgP := convertTokens(tls)
-				fmt.Println(imgP)
+				imgTag := fmt.Sprintf("<img src=\"%s\"", imgP.src)
+				if imgP.alt != "" {
+					imgTag += fmt.Sprintf(" alt=\"%s\"", strings.Trim(imgP.alt, " "))
+				}
+				if (imgP.height == "") != (imgP.width == "") {
+					log.Fatal("Bad height/width", imgP)
+				}
+				if imgP.height != "" {
+					imgTag += fmt.Sprintf(" width=\"%s\" height=\"%s\"", imgP.width, imgP.height)
+				}
+				imgTag += ">"
+				wFile.WriteString(imgTag + "\n")
+			} else {
+				wFile.WriteString(line + "\n")
 			}
 		}
 
@@ -168,5 +185,5 @@ func convertFile(fname string, fi os.FileInfo, err error) error {
 }
 
 func main() {
-	filepath.Walk("/home/dluu/dev/hugo-wat/content/post/", convertFile)
+	filepath.Walk("/home/dluu/dev/hugo-wat/tmp/", convertFile)
 }
