@@ -26,18 +26,20 @@ func minifyFun(path string, info os.FileInfo, err error) error {
 		log.Fatal(err)
 		return nil
 	}
+	if strings.Contains(path, "file-consistency") {
+		fmt.Println("Skipping", path)
+		return nil
+	}
 	if strings.HasSuffix(path, ".html") {
 		cmd := "html-minifier"
 		dstPath := dstDir + strings.TrimPrefix(path, srcDir)
 		fmt.Println(dstPath)
 		curArgs := baseArgs + " -o " + dstPath + " " + path
 		args := strings.Split(curArgs, " ")
-		cmdOut, err := exec.Command(cmd, args...).Output()
+		_, err := exec.Command(cmd, args...).Output()
 		if err != nil {
 			log.Fatal("FAIL", path, err)
 		}
-
-		fmt.Println(string(cmdOut))
 	}
 
 	return nil
