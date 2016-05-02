@@ -3,43 +3,83 @@
 #include "NativeJIT/Function.h"
 #include "Temporary/Allocator.h"
 
+#include <cassert>
 #include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
 
+using NativeJIT::Allocator;
+using NativeJIT::ExecutionBuffer;
+using NativeJIT::Function;
+using NativeJIT::FunctionBuffer;
+
+
+NativeJIT::ParameterNode<int64_t> *getParam(Function<int64_t, int64_t, int64_t> &expr, int paramNum) {
+    switch (paramNum) {
+    case 1:     return &expr.GetP1();
+    case 2:     return &expr.GetP2();
+    default: assert(0);
+    }
+    return &expr.GetP1();
+}
+
+
+
 int64_t calc() {
-    // std::istringstream istream(input);
+    ExecutionBuffer codeAllocator(8192);
+    Allocator allocator(8192);
+    FunctionBuffer code(codeAllocator, 8192);
+    Function<int64_t, int64_t, int64_t> expr(allocator, code);
+
+    int numArgs = 2;
+    int curArg = 1;
+
     std::string tok;
     std::vector<int64_t> stack;
+    NativeJIT::Node<int64_t> *temp;
+
+    std::vector<int64_t> args;
     while (std::cin >> tok) {
         int64_t digits;
         if (std::istringstream(tok) >> digits) {
-            stack.push_back(digits);
-        } else {
-            if (stack.size() < 2) {
-                // No error to avoid failing fuzzer.
-                std::cout << "Ran out of operands\n";
-                return 0;
-            }
-            int64_t op2 = stack.back(); stack.pop_back();
-            int64_t op1 = stack.back(); stack.pop_back();
-            if (tok == "+") {
-                stack.push_back(op1 + op2);
+            if (curArg < numArgs) {
+                stack.push_back(digits);
+                args.push_back(digits);
+                ++curArg;
             } else {
-                // No error to avoid failing fuzzer.
-                std::cout << "Invalid input: " << tok << " with operands: "
-                          << op1 << ":" << op2 << std::endl;
-                return 0;
+                std::cout << "Out of arguments. Please enter an operator.\n";
             }
+        } else {
+            if (stack.size() <= 2) {
+                std::cout << "Not enough operands. Please enter an operand.\n";
+                continue;
+            }
+
+            if (tok == "+") {
+                int64_t op2 = stack.back(); stack.pop_back();
+                int64_t op1 = stack.back(); stack.pop_back();
+                stack.push_back(op1 + op2);
+                temp = &expr.Add(*getParam(expr, 1), expr.GetP2());
+            } else if (tok == "*") {
+                int64_t op2 = stack.back(); stack.pop_back();
+                int64_t op1 = stack.back(); stack.pop_back();
+                stack.push_back(op1 * op2);
+                temp = &expr.Mul(expr.GetP1(), expr.GetP2());
+            } else {
+                std::cout << "Invalid input: " << tok << std::endl;
+            }
+        }
+        if (curArg == numArgs && stack.size() == 1) {
+            auto fn = expr.Compile(*temp);
+            int64_t res = fn(args[0], args[1]);
+            assert(res == stack.back());
+            return stack.back();
         }
     }
 
-    if (stack.size() != 1) {
-        return 0;
-    } else {
-        return stack.back();
-    }
+    assert(0);
+    return -1;
 }
 
 int main() {
