@@ -27,10 +27,14 @@ int64_t calc() {
                           << op1 << ":" << op2 << std::endl;
                 return 0;
             }
-                
         }
     }
-    return stack.back();
+
+    if (stack.size() != 1) {
+        return 0;
+    } else {
+        return stack.back();
+    }
 }
 
 int main() {
