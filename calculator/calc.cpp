@@ -37,7 +37,7 @@ int64_t calc() {
 
     std::string tok;
     std::vector<int64_t> stack;
-    NativeJIT::Node<int64_t> *temp;
+    NativeJIT::Node<int64_t> *temp = NULL;
 
     std::vector<int64_t> args;
     while (std::cin >> tok) {
@@ -47,6 +47,7 @@ int64_t calc() {
                 stack.push_back(digits);
                 args.push_back(digits);
                 ++curArg;
+                std::cout << "Add token to stack" << std::endl;
             } else {
                 std::cout << "Out of arguments. Please enter an operator.\n";
             }
@@ -60,17 +61,21 @@ int64_t calc() {
                 int64_t op2 = stack.back(); stack.pop_back();
                 int64_t op1 = stack.back(); stack.pop_back();
                 stack.push_back(op1 + op2);
-                temp = &expr.Add(*getParam(expr, 1), expr.GetP2());
+                // temp = &expr.Add(*getParam(expr, 1), expr.GetP2());
+                std::cout << "Add node" << std::endl;
+                temp = &expr.Add(expr.GetP1(), expr.GetP2());
             } else if (tok == "*") {
                 int64_t op2 = stack.back(); stack.pop_back();
                 int64_t op1 = stack.back(); stack.pop_back();
                 stack.push_back(op1 * op2);
+                std::cout << "Mul node" << std::endl;
                 temp = &expr.Mul(expr.GetP1(), expr.GetP2());
             } else {
                 std::cout << "Invalid input: " << tok << std::endl;
             }
         }
         if (curArg == numArgs && stack.size() == 1) {
+            std::cout << "Compiling" << std::endl;
             auto fn = expr.Compile(*temp);
             int64_t res = fn(args[0], args[1]);
             assert(res == stack.back());
