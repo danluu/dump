@@ -1,0 +1,55 @@
+* Intro
+** What we're talking about
+*** Search
+*** How to reason about performance
+** In particular
+*** Search is big. Slide from Dick Sites talk
+Note: 2:40
+*** On performance, going to talk about how to figure out when you have "big data" problem vs. a problem that can be solved on a laptop.
+* Scale
+** Some representative corpus sizes: 10K, 10M, 10B docs
+** Say each doc is... 5K on average.
+** 10k docs: think of typical personal email or web forum.
+*** 10k * 5k = 50MB. Trivial. Amazon sells a $50 phone with 1GB of RAM
+*** just put it in memory and scan through memory.
+** 10m docs: think Wikpedia.
+*** 10M * 5k = 50GB. English wikipedia (articles only) is ~ 50GB.
+*** Can fit 50 GB in RAM
+**** you can buy a full machine with 128GB of RAM for $2000.
+**** Problem! That machine has about 25GB/s of bandwidth.
+**** 25GB/s * 50GB = 2s latency! Also, 1/2 QPS.
+*** Use an index!
+**** Need citation. See dsfjldkjfd
+**** This is what Lucene does.
+**** Anandtech benchmarked wikipedia, got ~30 QPS (show graph!)
+**** We index substantially more per machine (do we?), and get 1k-10k QPS.
+**** Not really a fair comparison
+***** Lucene is designed to run off of disk, so even if you give it a ton of RAM, it's not really optimal for LUcene (even with RAMDirectory)
+***** The queries are different
+***** we have more sophisticated ranking
+***** ofc the more data thing.
+** 10B * 5k = 50 TB. Internet has maybe ~1T documents, not necessarily even an order of magnitude, so 10B is a small fraction.
+*** This is large enough that you need more than one machine.
+*** Mostly beyond the scope of this talk, except that...
+*** If we can do wikipedia on one machine, and it takes 1000 machines to index a small fraction of the internet...
+**** Let's say the TCO of a machine is $1000/yr. That's $1M/yr. If you have 10 geos, $10M/yr!
+**** Even incremental improvements can pay someone's salary for a year, and BitFunnel was an order of magnitude improvement over the existing system in Bing.
+* Traditional search algorithms
+** Posting list
+*** Basically a list of lists
+*** Explain techniques from Zobel et al. paper
+*** Story about how this is the standard technique
+*** Story about how citations often overgeneralize
+**** Some quotes from papers
+**** Course listings on search
+* BitFunnel (above here is mabye 10min to 15min).
+
+
+Note: explicitly mention why we think memory is a bottleneck.
+Random examples: 4 story water chiller, 2s
+
+Note about what's hard to explain:
+in the old ppt, to get it to fit on the screen. 3 terms/row, 3 rows.
+But actually it's 10k terms per row... But if it's only 3 terms/row, why do this?
+
+Hard to explain the idea of noise.
