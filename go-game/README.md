@@ -3,5 +3,5 @@ To run,
 Connect N browsers to localhost:9999. Default N = 2.
 
 #### Dependencies
-`go get gorilla/mux`
-`go get gorilla/websocket`
+`go get -u github.com/gorilla/mux`
+`go get -u github.com/gorilla/websocket`
