@@ -1,16 +1,33 @@
-def read_fasta(f):
-    name = f.readline().rstrip()[1:]
-    data = ""
-    while True:
-        ch = f.read(1)
-        if not ch:
-            break
-        if ch == '>':
-            f.seek(f.tell()-1)
-            break
-        data += ch
-        data += f.readline().rstrip()
-    return name, data
+class Fasta:
+    def __init__(self, file):
+        self.file = file
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        name, data = Fasta.read_fasta(f)
+        if name == "":
+            raise StopIteration
+        return name, data
+
+    def read_fasta(f):
+        name = f.readline().rstrip()[1:]
+        data = ""
+
+        # Loop until we run into the next name or the file is finished. If we
+        # ran into the next name, rewind so that the next time we're called we
+        # get the start of the name.
+        while True:
+            ch = f.read(1)
+            if not ch:
+                break
+            if ch == '>':
+                f.seek(f.tell()-1)
+                break
+            data += ch
+            data += f.readline().rstrip()
+        return name, data
 
 def increment_count(data, count):
     for i in range(len(data.rstrip())):
@@ -23,7 +40,8 @@ def display_letter_count(letter, count):
 
 
 def cons(f):
-    name, data = read_fasta(f)
+    fastas = Fasta(f)
+    name, data = next(fastas)
 
     count = {}
     count['A'] = [0] * len(data)
@@ -34,11 +52,7 @@ def cons(f):
     # print(name)
     increment_count(data, count)
     # TODO: how do you create an iterator in Python?
-    while True:
-        name, data = read_fasta(f)
-        if (name == ""):
-            break
-        # print(name)
+    for name, data in fastas:
         increment_count(data, count)
 
     most_common = ""
