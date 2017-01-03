@@ -13,6 +13,10 @@ class Fasta:
             raise StopIteration
         return name, data
 
+
+    def reset(self):
+        self.file.seek(0)
+
     def read_fasta(self):
         name = self.file.readline().rstrip()[1:]
         data = ""
