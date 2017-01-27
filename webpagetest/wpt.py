@@ -59,7 +59,6 @@ def save_json_urls(payload, urls, connections):
             writer.writerow(['url','connection','wpt_json'])
             writer.writerow([uu, cc, json_url])
             print("{},{},{}".format(uu, cc, json_url))
-            # json_url = 'http://www.webpagetest.org/jsonResult.php?test=170127_BG_CF'
         
             #result = poll_test_result(json_url)
             # print_results(result, cc)
