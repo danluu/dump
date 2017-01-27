@@ -1,0 +1,50 @@
+{
+    "FIOS": {
+	"bwDown": 20000,
+	"bwUp": 5000,
+	"latency": 4,
+	"plr": 0
+    },
+    "Cable": {
+	"bwDown": 5000,
+	"bwUp": 1000,
+	"latency": 28,
+	"plr": 0
+    },
+    "LTE": {
+	"bwDown": 12000,
+	"bwUp": 12000,
+	"latency": 70,
+	"plr": 0
+    },
+    "3G": {
+	"bwDown": 780,
+	"bwUp": 330,
+	"latency": 200,
+	"plr": 0
+    },
+    "2G": {
+	"bwDown": 280,
+	"bwUp": 256,
+	"latency": 800,
+	"plr": 0
+    },
+    "Dial": {
+	"bwDown": 49,
+	"bwUp": 30,
+	"latency": 120,
+	"plr": 0
+    },
+    "Bad": {
+	"bwDown": 49,
+	"bwUp": 30,
+	"latency": 1000,
+	"plr": 10
+    },
+    "Terrible": {
+	"bwDown": 49,
+	"bwUp": 30,
+	"latency": 1000,
+	"plr": 10
+    }
+}
