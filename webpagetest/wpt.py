@@ -5,7 +5,7 @@ import time
 
 # connections = ['FIOS', 'Cable', '3G', 'Dial']
 connections = ['FIOS', 'Dial']
-urls = ['http://danluu.com', 'https://danluu.com']
+urls = ['https://danluu.com', 'http://danluu.com']
 num_runs = 2
 
 key = ''
@@ -48,16 +48,6 @@ def poll_test_result(json_url):
     result = req_result.json()
     return result
 
-def save_result(result, url, connection):    
-    successful_runs = result['data']['successfulFVRuns']
-    bytes_in = result['data']['average']['firstView']['bytesIn']
-    num_reqs = result['data']['average']['firstView']['requests']
-    tt_complete = result['data']['average']['firstView']['visualComplete']
-
-    print("successful_runs: {}".format(successful_runs))
-    print("num_reqs: {}".format(num_reqs))
-    print("tt_complete: {}".format(tt_complete))
-
 def save_json_urls(payload, urls, connections):
     csvf = open('/tmp/wpt_urls.csv', 'w', newline='')
     writer = csv.writer(csvf)
@@ -80,9 +70,10 @@ def get_test_results():
     header = next(reader)
     assert header == ['url','connection','wpt_json']
 
-    # csvf_results = open('/tmp/wpt_results.csv', 'w', newline='')    
-    # writer = csv.writer(csvf_results)
-    
+    csvf_results = open('/tmp/wpt_results.csv', 'w', newline='')
+    writer = csv.writer(csvf_results)
+
+    per_conn = {}
     per_url = {}
 
     for row in reader:
@@ -94,11 +85,22 @@ def get_test_results():
         if not url in per_url:
             per_url[url] = {}
 
+        if not url in per_conn:
+            per_conn[url] = {}
+
+        if not connection in per_conn[url]:
+            per_conn[url][connection] = {}
+
         result = poll_test_result(wpt_json)
 
         bytesIn = result['data']['average']['firstView']['bytesIn']
         connections = result['data']['average']['firstView']['connections']
         requests = result['data']['average']['firstView']['requests']
+        visualComplete = result['data']['average']['firstView']['visualComplete']
+
+        per_conn[url][connection] = visualComplete
+
+        # TODO: look at each run and pull out %-ile info.
         if 'bytesIn' in per_url[url]:
             if bytesIn < per_url[url]['bytesIn']:
                 failed = True
@@ -113,10 +115,12 @@ def get_test_results():
         else:
             per_url[url]['requests'] = requests
                     
-        save_result(result, url, connection)
-
     with open('/tmp/wpt_per_url.json','w') as jsonf:
         json.dump(per_url, jsonf)
+
+    with open('/tmp/wpt_per_conn.json','w') as jsonf:
+        json.dump(per_conn, jsonf)
+
         
 
 # save_json_urls(payload, urls, connections)
