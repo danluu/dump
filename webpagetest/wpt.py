@@ -122,9 +122,31 @@ def get_test_results():
     with open('/tmp/wpt_per_conn.json','w') as jsonf:
         json.dump(per_conn, jsonf)
 
-        
+
+def make_csv_table():
+    per_url = {}
+    with open('/tmp/wpt_per_url.json','r') as jsonf:
+        per_url = json.load(jsonf)
+
+    per_conn = {}
+    with open('/tmp/wpt_per_conn.json','r') as jsonf:
+        per_conn = json.load(jsonf)
+
+    csvf = open('/tmp/wpt_table.csv', 'w', newline='')
+    writer = csv.writer(csvf)
+    header = ['url','size','reqs','conns'] + connections
+    writer.writerow(header)
+    for uu in urls:
+        current_row = [per_url[uu]['bytesIn'],
+                       per_url[uu]['requests'],
+                       per_url[uu]['connections']]
+        for cc in connections:
+            current_row.append(per_conn[uu][cc])
+        writer.writerow(current_row)
+
 
 # save_json_urls(payload, urls, connections)
-get_test_results()
+# get_test_results()
+make_csv_table()
     
     
