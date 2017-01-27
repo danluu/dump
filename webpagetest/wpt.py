@@ -35,12 +35,12 @@ def poll_test_result(json_url):
     num_attempts = 0
     result = {}
     while True:
-        print("Polling attempt {}".format(num_attempts))
+        print("{}: attempt {}".format(json_url, num_attempts))
         req_result = requests.get(json_url)
         num_attempts += 1
         if req_result.status_code == 200 or num_attempts > 100:
             result = req_result.json()
-            print(req_result.json())
+            # print(req_result.json())
             if result['statusCode'] == 200:
                 break
         time.sleep(5)
@@ -56,6 +56,8 @@ def save_json_urls(payload, urls, connections):
             payload['location'] = "Dulles.{}".format(cc)
             payload['url'] = uu
             json_url = send_test_request(payload)
+            if json_url.startswith('http'):
+                json_url = 'https' + json_url[4:]
             writer.writerow(['url','connection','wpt_json'])
             writer.writerow([uu, cc, json_url])
             print("{},{},{}".format(uu, cc, json_url))
