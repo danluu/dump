@@ -1,5 +1,6 @@
 import csv
 import json
+import pandas
 import requests
 import time
 
@@ -124,6 +125,7 @@ def get_test_results():
 
 
 def make_csv_table():
+    print("Making csv table")
     per_url = {}
     with open('/tmp/wpt_per_url.json','r') as jsonf:
         per_url = json.load(jsonf)
@@ -137,16 +139,23 @@ def make_csv_table():
     header = ['url','size','reqs','conns'] + connections
     writer.writerow(header)
     for uu in urls:
-        current_row = [per_url[uu]['bytesIn'],
+        current_row = [uu,
+                       per_url[uu]['bytesIn'],
                        per_url[uu]['requests'],
                        per_url[uu]['connections']]
         for cc in connections:
             current_row.append(per_conn[uu][cc])
         writer.writerow(current_row)
 
+def csv_to_html():
+    print("Converting csv to HTML")
+    df = pandas.read_csv('/tmp/wpt_table.csv')
+    print(df)
+    df.to_html('/tmp/wpt.html',index=False)
 
 # save_json_urls(payload, urls, connections)
 # get_test_results()
 make_csv_table()
+csv_to_html()
     
     
