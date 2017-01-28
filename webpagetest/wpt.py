@@ -11,7 +11,7 @@ urls = ['https://danluu.com',
         'https://jvns.ca',
         'http://jvns.ca',
         'https://www.joelonsoftware.com',
-        'https://codinghorror.com']
+        'https://blog.codinghorror.com']
 num_runs = 2
 
 key = ''
