@@ -5,8 +5,13 @@ import requests
 import time
 
 # connections = ['FIOS', 'Cable', '3G', 'Dial']
-connections = ['FIOS', 'Dial']
-urls = ['https://danluu.com', 'http://danluu.com']
+connections = ['FIOS', 'Cable', 'Dial', 'Terrible']
+urls = ['https://danluu.com',
+        'http://danluu.com',
+        'https://jvns.ca',
+        'http://jvns.ca',
+        'https://www.joelonsoftware.com',
+        'https://codinghorror.com']
 num_runs = 2
 
 key = ''
@@ -21,6 +26,11 @@ payload = {'url': 'http://danluu.com/',
            'runs':num_runs,
            'noopt':'1'  # disable optimization checks???
 }
+
+conn_props = {}
+with open('connections.json','r') as jsonf:
+    conn_props = json.load(jsonf)
+
 
 def send_test_request(payload):    
     print('sending request')
@@ -54,8 +64,13 @@ def save_json_urls(payload, urls, connections):
     writer = csv.writer(csvf)
     for uu in urls:
         for cc in connections:
-            payload['location'] = "Dulles.{}".format(cc)
+            # payload['location'] = "Dulles.{}".format(cc)
+            payload['location'] = "Dulles.custom"
             payload['url'] = uu
+            payload['bwDown'] = conn_props[cc]['bwDown']
+            payload['bwUp'] = conn_props[cc]['bwUp']
+            payload['latency'] = conn_props[cc]['latency']
+            payload['plr'] = conn_props[cc]['plr']
             json_url = send_test_request(payload)
             if json_url.startswith('http'):
                 json_url = 'https' + json_url[4:]
@@ -155,7 +170,7 @@ def csv_to_html():
 
 # save_json_urls(payload, urls, connections)
 # get_test_results()
-make_csv_table()
-csv_to_html()
+# make_csv_table()
+# csv_to_html()
     
     
