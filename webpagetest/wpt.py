@@ -62,6 +62,7 @@ def poll_test_result(json_url):
 def save_json_urls(payload, urls, connections):
     csvf = open('/tmp/wpt_urls.csv', 'w', newline='')
     writer = csv.writer(csvf)
+    writer.writerow(['url','connection','wpt_json'])
     for uu in urls:
         for cc in connections:
             # payload['location'] = "Dulles.{}".format(cc)
@@ -74,7 +75,6 @@ def save_json_urls(payload, urls, connections):
             json_url = send_test_request(payload)
             if json_url.startswith('http'):
                 json_url = 'https' + json_url[4:]
-            writer.writerow(['url','connection','wpt_json'])
             writer.writerow([uu, cc, json_url])
             print("{},{},{}".format(uu, cc, json_url))
         
@@ -110,12 +110,16 @@ def get_test_results():
 
         result = poll_test_result(wpt_json)
 
+        if result['data']['successfulFVRuns'] != num_runs:
+            failed = True
+            per_conn[url][connection] = "X"
+            break
+
+        print(type(result))
         bytesIn = result['data']['average']['firstView']['bytesIn']
         connections = result['data']['average']['firstView']['connections']
         requests = result['data']['average']['firstView']['requests']
         visualComplete = result['data']['average']['firstView']['visualComplete']
-
-        per_conn[url][connection] = visualComplete
 
         # TODO: look at each run and pull out %-ile info.
         if 'bytesIn' in per_url[url]:
@@ -131,6 +135,13 @@ def get_test_results():
                 failed = True
         else:
             per_url[url]['requests'] = requests
+
+        if failed:
+            per_conn[url][connection] = "X"
+        else:
+            per_conn[url][connection] = visualComplete
+
+
                     
     with open('/tmp/wpt_per_url.json','w') as jsonf:
         json.dump(per_url, jsonf)
