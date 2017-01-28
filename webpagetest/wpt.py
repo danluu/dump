@@ -113,28 +113,26 @@ def get_test_results():
         if result['data']['successfulFVRuns'] != num_runs:
             failed = True
             per_conn[url][connection] = "X"
-            break
-
-        print(type(result))
-        bytesIn = result['data']['average']['firstView']['bytesIn']
-        connections = result['data']['average']['firstView']['connections']
-        requests = result['data']['average']['firstView']['requests']
-        visualComplete = result['data']['average']['firstView']['visualComplete']
-
-        # TODO: look at each run and pull out %-ile info.
-        if 'bytesIn' in per_url[url]:
-            if bytesIn < per_url[url]['bytesIn']:
-                failed = True
         else:
-            per_url[url]['bytesIn'] = bytesIn
+            bytesIn = result['data']['average']['firstView']['bytesIn']
+            connections = result['data']['average']['firstView']['connections']
+            requests = result['data']['average']['firstView']['requests']
+            visualComplete = result['data']['average']['firstView']['visualComplete']
 
-        per_url[url]['connections'] = connections
+            # TODO: look at each run and pull out %-ile info.
+            if 'bytesIn' in per_url[url]:
+                if bytesIn < per_url[url]['bytesIn']:
+                    failed = True
+            else:
+                per_url[url]['bytesIn'] = bytesIn
 
-        if 'requests' in per_url[url]:
-            if requests < per_url[url]['requests']:
-                failed = True
-        else:
-            per_url[url]['requests'] = requests
+            per_url[url]['connections'] = connections
+
+            if 'requests' in per_url[url]:
+                if requests < per_url[url]['requests']:
+                    failed = True
+            else:
+                per_url[url]['requests'] = requests
 
         if failed:
             per_conn[url][connection] = "X"
