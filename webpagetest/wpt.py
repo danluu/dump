@@ -116,52 +116,30 @@ def get_test_results():
             per_conn[url] = {}
 
         if not connection in per_conn[url]:
-            per_conn[url][connection] = {}
+            per_conn[url][connection] = []
 
         result = poll_test_result(wpt_json)
 
-        if result['data']['successfulFVRuns'] != num_runs:
-            failed = True
-            print("Failing {}:{} on sucessfulFVRuns".format(url, connection))
-            per_conn[url][connection] = "X"
-        else:
-            bytesIn = result['data']['average']['firstView']['bytesIn']
-            connections = result['data']['average']['firstView']['connections']
-            requests = result['data']['average']['firstView']['requests']
-            visualComplete = result['data']['average']['firstView']['visualComplete']
-
-            # TODO: look at each run and pull out %-ile info.
-            if 'bytesIn' in per_url[url]:
-                if bytesIn < per_url[url]['bytesIn']:
-                    if False:
-                    # For some reason, sessions can vary by 1k-ish?
-                        print("Not failing {}:{} on bytesIn".format(url, connection))
-                        failed = True
+        # if result['data']['successfulFVRuns'] != num_runs:
+        #     failed = True
+        #     print("Failing {}:{} on sucessfulFVRuns".format(url, connection))
+        #     per_conn[url][connection] = "X"
+        runs = result['data']['runs']
+        complete_times = []
+        for run in range(1, num_runs+1):
+            # print(result['data']['runs'][str(run)]['firstView'])
+            if 'visualComplete' in runs[str(run)]['firstView']:
+                complete_times.append(float(runs[str(run)]['firstView']['visualComplete']))
             else:
-                per_url[url]['bytesIn'] = bytesIn
-
-            per_url[url]['connections'] = connections
-
-            if 'requests' in per_url[url]:
-                if requests < per_url[url]['requests']:
-                    print("Failing {}:{} on requests".format(url, connection))
-                    failed = True
-            pelse:
-                per_url[url]['requests'] = requests
-
-        if failed:
-            per_conn[url][connection] = "X"
-        else:
-            per_conn[url][connection] = visualComplete
-
-
+                complete_times.append(float('inf'))
+            complete_times.sort()
+            per_conn[url][connection] = complete_times
                     
     with open('/tmp/wpt_per_url.json','w') as jsonf:
         json.dump(per_url, jsonf)
 
     with open('/tmp/wpt_per_conn.json','w') as jsonf:
         json.dump(per_conn, jsonf)
-
 
 def make_csv_table():
     print("Making csv table")
