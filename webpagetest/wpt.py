@@ -5,18 +5,26 @@ import requests
 import time
 
 # connections = ['FIOS', 'Cable', '3G', 'Dial']
-connections = ['FIOS', 'Cable', 'Dial', 'Terrible']
+# connections = ['FIOS', 'Cable', 'Dial', 'Terrible']
+connections = ['FIOS', 'Terrible']
+# urls = ['https://danluu.com',
+#         'http://danluu.com',
+#         'https://jvns.ca',
+#         'http://jvns.ca',
+#         'https://www.joelonsoftware.com',
+#         'https://blog.codinghorror.com']
 urls = ['https://danluu.com',
-        'http://danluu.com',
-        'https://jvns.ca',
-        'http://jvns.ca',
-        'https://www.joelonsoftware.com',
-        'https://blog.codinghorror.com']
-num_runs = 2
+        'http://danluu.com']
+num_runs = 10
 
 key = ''
 with open('key.txt') as f:
     key = f.readline().rstrip()
+
+hostname = ''
+with open('hostname.txt') as f:
+    hostname = f.readline().rstrip()
+
 
 payload = {'url': 'http://danluu.com/',
            'k':key,
@@ -34,7 +42,7 @@ with open('connections.json','r') as jsonf:
 
 def send_test_request(payload):    
     print('sending request')
-    req = requests.get('http://www.webpagetest.org/runtest.php', params=payload)
+    req = requests.get('http://{}/runtest.php'.format(hostname), params=payload)
     result = req.json()
     print(result)
     if result['statusText'] != 'Ok':
@@ -66,15 +74,17 @@ def save_json_urls(payload, urls, connections):
     for uu in urls:
         for cc in connections:
             # payload['location'] = "Dulles.{}".format(cc)
-            payload['location'] = "Dulles.custom"
+            # payload['location'] = "Dulles.custom"
+            payload['location'] = "micro_oregon_wptdriver.custom"
             payload['url'] = uu
             payload['bwDown'] = conn_props[cc]['bwDown']
             payload['bwUp'] = conn_props[cc]['bwUp']
             payload['latency'] = conn_props[cc]['latency']
             payload['plr'] = conn_props[cc]['plr']
             json_url = send_test_request(payload)
-            if json_url.startswith('http'):
-                json_url = 'https' + json_url[4:]
+            # Don't have https set up on local server (yet?)
+            # if json_url.startswith('http'):
+            #     json_url = 'https' + json_url[4:]
             writer.writerow([uu, cc, json_url])
             print("{},{},{}".format(uu, cc, json_url))
         
@@ -136,7 +146,7 @@ def get_test_results():
                 if requests < per_url[url]['requests']:
                     print("Failing {}:{} on requests".format(url, connection))
                     failed = True
-            else:
+            pelse:
                 per_url[url]['requests'] = requests
 
         if failed:
