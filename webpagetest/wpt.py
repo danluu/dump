@@ -126,14 +126,37 @@ def get_test_results():
         #     per_conn[url][connection] = "X"
         runs = result['data']['runs']
         complete_times = []
+        bytes_in_max = 0
+        requests_max = 0
+        connection_max = 0
         for run in range(1, num_runs+1):
             # print(result['data']['runs'][str(run)]['firstView'])
             if 'visualComplete' in runs[str(run)]['firstView']:
                 complete_times.append(float(runs[str(run)]['firstView']['visualComplete']))
             else:
                 complete_times.append(float('inf'))
-            complete_times.sort()
-            per_conn[url][connection] = complete_times
+
+            if 'bytesIn' in runs[str(run)]['firstView']:
+                bytes_in = runs[str(run)]['firstView']['bytesIn']
+                if bytes_in_max < bytes_in:
+                    bytes_in_max = bytes_in
+
+            # TODO: this number may be wrong due to flakiness or something?
+            if 'requestsFull' in runs[str(run)]['firstView']:
+                requests = runs[str(run)]['firstView']['requestsFull']
+                if requests_max < requests:
+                    requests_max = requests
+
+            if 'connections' in runs[str(run)]['firstView']:
+                connection = runs[str(run)]['firstView']['connections']
+                if connection_max < connection:
+                    connection_max = connection
+
+        complete_times.sort()
+        per_conn[url][connection] = complete_times
+        per_url[url]['bytesIn'] = bytes_in_max
+        per_url[url]['requests'] = requests_max
+        per_url[url]['connections'] = connection_max
                     
     with open('/tmp/wpt_per_url.json','w') as jsonf:
         json.dump(per_url, jsonf)
@@ -141,7 +164,7 @@ def get_test_results():
     with open('/tmp/wpt_per_conn.json','w') as jsonf:
         json.dump(per_conn, jsonf)
 
-def make_csv_table():
+def make_csv_table(filename, idx):
     print("Making csv table")
     per_url = {}
     with open('/tmp/wpt_per_url.json','r') as jsonf:
@@ -151,7 +174,7 @@ def make_csv_table():
     with open('/tmp/wpt_per_conn.json','r') as jsonf:
         per_conn = json.load(jsonf)
 
-    csvf = open('/tmp/wpt_table.csv', 'w', newline='')
+    csvf = open(filename, 'w', newline='')
     writer = csv.writer(csvf)
     header = ['url','size','reqs','conns'] + connections
     writer.writerow(header)
@@ -161,7 +184,7 @@ def make_csv_table():
                        per_url[uu]['requests'],
                        per_url[uu]['connections']]
         for cc in connections:
-            current_row.append(per_conn[uu][cc])
+            current_row.append(per_conn[uu][cc][idx])
         writer.writerow(current_row)
 
 def csv_to_html():
@@ -172,7 +195,7 @@ def csv_to_html():
 
 # save_json_urls(payload, urls, connections)
 # get_test_results()
-# make_csv_table()
+# make_csv_table('/tmp/wpt_table.csv', 4)
 # csv_to_html()
     
     
