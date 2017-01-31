@@ -128,7 +128,7 @@ def get_test_results():
         complete_times = []
         bytes_in_max = 0
         requests_max = 0
-        connection_max = 0
+        connections_max = 0
         for run in range(1, num_runs+1):
             # print(result['data']['runs'][str(run)]['firstView'])
             if 'visualComplete' in runs[str(run)]['firstView']:
@@ -148,15 +148,16 @@ def get_test_results():
                     requests_max = requests
 
             if 'connections' in runs[str(run)]['firstView']:
-                connection = runs[str(run)]['firstView']['connections']
-                if connection_max < connection:
-                    connection_max = connection
+                connections = runs[str(run)]['firstView']['connections']
+                if connections_max < connections:
+                    connections_max = connections
 
         complete_times.sort()
         per_conn[url][connection] = complete_times
+
         per_url[url]['bytesIn'] = bytes_in_max
         per_url[url]['requests'] = requests_max
-        per_url[url]['connections'] = connection_max
+        per_url[url]['connections'] = connections_max
                     
     with open('/tmp/wpt_per_url.json','w') as jsonf:
         json.dump(per_url, jsonf)
