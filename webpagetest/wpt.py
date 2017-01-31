@@ -211,7 +211,7 @@ def display_float(x):
         return '%10.0f' % x
 
 def pandas_style(val):
-    if type(val) != type('') and val > 10:
+    if val > 10:
         return 'color: red'
     else:
         return 'color: black'
@@ -221,17 +221,14 @@ def csv_to_html():
     df = pandas.read_csv('/tmp/wpt_table_50.csv')
 
     print(df)
-    # df.to_html('/tmp/wpt.html',
-    #            index=False,
-    #            float_format=display_float)
 
-    # to_html doesn't save style info, so we use this hack instead.
+    # df.to_html doesn't save style info, so we use this hack instead.
     html = (
         df.style
-        .applymap(pandas_style)
+        .applymap(pandas_style,
+                  subset=pandas.IndexSlice[:,connections])
         .render()
         )
-    # print(html)
 
     with open('/tmp/wpt.html', 'w') as out:
         out.write(html)
