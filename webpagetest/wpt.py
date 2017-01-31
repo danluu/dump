@@ -145,6 +145,7 @@ def get_test_results():
             else:
                 complete_times.append(float('inf'))
 
+            # TODO: reported sizes seem to be wrong for large sites. Need to figure out why.
             if 'bytesIn' in runs[str(run)]['firstView']:
                 bytes_in = runs[str(run)]['firstView']['bytesIn']
                 if bytes_in_max < bytes_in:
@@ -201,11 +202,39 @@ def make_csv_table(filename, idx):
             current_row.append(per_conn[uu][cc][idx])
         writer.writerow(current_row)
 
+def display_float(x):
+    if x < 1:
+        return '%10.2f' % x
+    elif x < 10:
+        return '%10.1f' % x
+    else:
+        return '%10.0f' % x
+
+def pandas_style(val):
+    if type(val) != type('') and val > 10:
+        return 'color: red'
+    else:
+        return 'color: black'
+
 def csv_to_html():
     print("Converting csv to HTML")
     df = pandas.read_csv('/tmp/wpt_table_50.csv')
+
     print(df)
-    df.to_html('/tmp/wpt.html',index=False)
+    # df.to_html('/tmp/wpt.html',
+    #            index=False,
+    #            float_format=display_float)
+
+    # to_html doesn't save style info, so we use this hack instead.
+    html = (
+        df.style
+        .applymap(pandas_style)
+        .render()
+        )
+    # print(html)
+
+    with open('/tmp/wpt.html', 'w') as out:
+        out.write(html)
 
 # save_json_urls(payload, urls, connections)
 # get_test_results()
