@@ -42,8 +42,8 @@
 	"plr": 10
     },
     "Terrible": {
-	"bwDown": 49,
-	"bwUp": 30,
+	"bwDown": 12,
+	"bwUp": 8,
 	"latency": 1000,
 	"plr": 10
     }

@@ -5,16 +5,24 @@ import requests
 import time
 
 # connections = ['FIOS', 'Cable', '3G', 'Dial']
-# connections = ['FIOS', 'Cable', 'Dial', 'Terrible']
-connections = ['FIOS', 'Terrible']
-# urls = ['https://danluu.com',
-#         'http://danluu.com',
-#         'https://jvns.ca',
-#         'http://jvns.ca',
-#         'https://www.joelonsoftware.com',
-#         'https://blog.codinghorror.com']
+connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', 'Terrible']
+# connections = ['FIOS', 'Terrible']
 urls = ['https://danluu.com',
-        'http://danluu.com']
+        'http://danluu.com',
+        'https://jvns.ca',
+        'http://jvns.ca',
+        'https://www.joelonsoftware.com',
+#        'https://steve-yegge.blogspot.com',
+#        'https://fgiesen.wordpress.com',
+        'https://google.com',
+        'https://bing.com',
+        'https://amazon.com',
+        'https://blog.codinghorror.com',
+        'https://news.ycombinator.com/',
+        'https://www.reddit.com/']
+# TODO: add https://signalvnoise.com
+# urls = ['https://danluu.com',
+#         'http://danluu.com']
 num_runs = 10
 
 key = ''
@@ -71,6 +79,7 @@ def save_json_urls(payload, urls, connections):
     csvf = open('/tmp/wpt_urls.csv', 'w', newline='')
     writer = csv.writer(csvf)
     writer.writerow(['url','connection','wpt_json'])
+    # TODO: swap loop ordering to avoid hammering a single URL ~100 times in a row.
     for uu in urls:
         for cc in connections:
             # payload['location'] = "Dulles.{}".format(cc)
@@ -132,7 +141,7 @@ def get_test_results():
         for run in range(1, num_runs+1):
             # print(result['data']['runs'][str(run)]['firstView'])
             if 'visualComplete' in runs[str(run)]['firstView']:
-                complete_times.append(float(runs[str(run)]['firstView']['visualComplete']))
+                complete_times.append(float(runs[str(run)]['firstView']['visualComplete'])/1000)
             else:
                 complete_times.append(float('inf'))
 
@@ -142,6 +151,7 @@ def get_test_results():
                     bytes_in_max = bytes_in
 
             # TODO: this number may be wrong due to flakiness or something?
+            # TODO: need to fail test based on not enough requests/connections?
             if 'requestsFull' in runs[str(run)]['firstView']:
                 requests = runs[str(run)]['firstView']['requestsFull']
                 if requests_max < requests:
@@ -158,7 +168,10 @@ def get_test_results():
         per_url[url]['bytesIn'] = bytes_in_max
         per_url[url]['requests'] = requests_max
         per_url[url]['connections'] = connections_max
-                    
+
+    # TODO: dump results periodically instead of at the end
+    # Running a full set of tests can take a day and we shouldn't have to
+    # attach a debugger to the process to inspect results before it's finished.
     with open('/tmp/wpt_per_url.json','w') as jsonf:
         json.dump(per_url, jsonf)
 
@@ -190,7 +203,7 @@ def make_csv_table(filename, idx):
 
 def csv_to_html():
     print("Converting csv to HTML")
-    df = pandas.read_csv('/tmp/wpt_table.csv')
+    df = pandas.read_csv('/tmp/wpt_table_50.csv')
     print(df)
     df.to_html('/tmp/wpt.html',index=False)
 
