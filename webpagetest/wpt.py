@@ -196,7 +196,8 @@ def csv_to_html():
 
 # save_json_urls(payload, urls, connections)
 # get_test_results()
-# make_csv_table('/tmp/wpt_table.csv', 4)
+# make_csv_table('/tmp/wpt_table_50.csv', 4)
+# make_csv_table('/tmp/wpt_table_90.csv', 8)
 # csv_to_html()
     
     
