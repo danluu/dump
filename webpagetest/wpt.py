@@ -1,7 +1,9 @@
 import csv
 import json
+import numpy as np
 import pandas
 import requests
+import seaborn as sns
 import time
 
 # connections = ['FIOS', 'Cable', '3G', 'Dial']
@@ -212,9 +214,12 @@ def display_float(x):
 
 def pandas_style(val):
     if val > 10:
-        return 'color: red'
+        return 'background-color: red'
+    elif val < 1:
+        return 'background-color: green'
     else:
-        return 'color: black'
+        return 'background-color: white'
+
 
 def csv_to_html():
     print("Converting csv to HTML")
@@ -222,7 +227,11 @@ def csv_to_html():
 
     print(df)
 
+    cm = sns.diverging_palette(240, 10, n=9, as_cmap=True)
+    # cm = sns.light_palette("seagreen", reverse=True, as_cmap=True)
+    
     # df.to_html doesn't save style info, so we use this hack instead.
+    # Not using background_gradient because it has data-dependent bugs that sometimes cause nonsensical gradients.
     html = (
         df.style
         .applymap(pandas_style,
