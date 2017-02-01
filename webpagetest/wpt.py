@@ -8,6 +8,7 @@ import time
 # connections = ['FIOS', 'Cable', '3G', 'Dial']
 connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', 'Terrible']
 # connections = ['FIOS', 'Terrible']
+# TODO: change www.reddit.com to reddit.com
 urls = ['https://danluu.com',
         'http://danluu.com',
         'https://jvns.ca',
