@@ -11,18 +11,21 @@ connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', 'Terrible']
 # TODO: change www.reddit.com to reddit.com
 urls = ['https://danluu.com',
         'http://danluu.com',
+        'http://bellard.org',
         'https://news.ycombinator.com/',
         'https://jvns.ca',
         'http://jvns.ca',
         'https://www.joelonsoftware.com',
-#        'https://steve-yegge.blogspot.com',
-#        'https://fgiesen.wordpress.com',
+        'https://steve-yegge.blogspot.com',
+        'https://blog.regehr.org',
+        'http://blog.regehr.org',
+        'https://fgiesen.wordpress.com',
+        'https://signalvnoise.com',
         'https://google.com',
         'https://bing.com',
         'https://amazon.com',
         'https://blog.codinghorror.com',
-        'https://www.reddit.com/']
-# TODO: add https://signalvnoise.com
+        'https://reddit.com/']
 # urls = ['https://danluu.com',
 #         'http://danluu.com']
 num_runs = 10
