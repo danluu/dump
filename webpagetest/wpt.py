@@ -1,9 +1,8 @@
 import csv
 import json
-import numpy as np
+import math
 import pandas
 import requests
-import seaborn as sns
 import time
 
 # connections = ['FIOS', 'Cable', '3G', 'Dial']
@@ -227,7 +226,7 @@ def pandas_style(val):
         color = reds[len(reds)-1]
         return 'background-color: {}'.format(color)
     elif val > 2:
-        color = gradient(reds, 2.0, 360.0, val)
+        color = gradient(reds, math.log2(2.0), math.log2(360.0), math.log2(val))
         return 'background-color: {}'.format(color)
     elif val < 1:
         color = gradient(greens, 0.0, 1.0, val)
@@ -241,9 +240,6 @@ def csv_to_html():
     df = pandas.read_csv('/tmp/wpt_table_50.csv')
 
     print(df)
-
-    cm = sns.diverging_palette(240, 10, n=9, as_cmap=True)
-    # cm = sns.light_palette("seagreen", reverse=True, as_cmap=True)
     
     # df.to_html doesn't save style info, so we use this hack instead.
     # Not using background_gradient because it has data-dependent bugs that sometimes cause nonsensical gradients.
@@ -262,5 +258,3 @@ def csv_to_html():
 # make_csv_table('/tmp/wpt_table_50.csv', 4)
 # make_csv_table('/tmp/wpt_table_90.csv', 8)
 # csv_to_html()
-    
-    
