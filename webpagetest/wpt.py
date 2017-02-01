@@ -212,10 +212,9 @@ def display_float(x):
     else:
         return '%10.0f' % x
 
-# TODO: generate gradients from end points instead of using giant constants.
-greens = ["#F7FCFD", "#F3F9F9", "#EFF6F5", "#EBF3F2", "#E7F0EE", "#E3EDEB", "#DFEAE7", "#DBE7E3", "#D7E4E0", "#D3E1DC", "#CFDED9", "#CBDBD5", "#C7D8D1", "#C4D6CE", "#C0D3CA", "#BCD0C7", "#B8CDC3", "#B4CAC0", "#B0C7BC", "#ACC4B8", "#A8C1B5", "#A4BEB1", "#A0BBAE", "#9CB8AA", "#98B5A6", "#94B2A3", "#91B09F", "#8DAD9C", "#89AA98", "#85A794", "#81A491", "#7DA18D", "#799E8A", "#759B86", "#719883", "#6D957F", "#69927B", "#658F78", "#628D74", "#5E8A71", "#5A876D", "#568469", "#528166", "#4E7E62", "#4A7B5F", "#46785B", "#427557", "#3E7254", "#3A6F50", "#366C4D", "#326949", "#2F6746", "#2B6442", "#27613E", "#235E3B", "#1F5B37", "#1B5834", "#175530", "#13522C", "#0F4F29", "#0B4C25", "#074922", "#03461E", "#00441B"]
+greens = ['#f7fcfd','#e5f5f9','#ccece6','#99d8c9','#66c2a4','#41ae76','#238b45','#006d2c','#00441b']
 greens.reverse()
-reds = ["#FFF7EC", "#FCF3E8", "#FAEFE4", "#F8EBE0", "#F6E7DD", "#F4E3D9", "#F2DFD5", "#F0DBD1", "#EED7CE", "#ECD3CA", "#EACFC6", "#E8CBC2", "#E6C7BF", "#E4C4BB", "#E2C0B7", "#E0BCB3", "#DEB8B0", "#DCB4AC", "#DAB0A8", "#D8ACA4", "#D6A8A1", "#D4A49D", "#D2A099", "#D09C95", "#CE9892", "#CC948E", "#CA918A", "#C88D86", "#C68983", "#C4857F", "#C2817B", "#C07D77", "#BD7974", "#BB7570", "#B9716C", "#B76D68", "#B56965", "#B36561", "#B1625D", "#AF5E59", "#AD5A56", "#AB5652", "#A9524E", "#A74E4A", "#A54A47", "#A34643", "#A1423F", "#9F3E3B", "#9D3A38", "#9B3634", "#993230", "#972F2C", "#952B29", "#932725", "#912321", "#8F1F1D", "#8D1B1A", "#8B1716", "#891312", "#870F0E", "#850B0B", "#830707", "#810303", "#7F0000"]
+reds = ['#fff7ec','#fee8c8','#fdd49e','#fdbb84','#fc8d59','#ef6548','#d7301f','#b30000','#7f0000']
 
 def gradient(colors, low, high, value):
     max_idx = len(colors) - 1
