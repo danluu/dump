@@ -212,11 +212,26 @@ def display_float(x):
     else:
         return '%10.0f' % x
 
+greens = ['#f7fcfd','#e5f5f9','#ccece6','#99d8c9','#66c2a4','#41ae76','#238b45','#006d2c','#00441b']
+greens.reverse()
+reds = ['#fff7ec','#fee8c8','#fdd49e','#fdbb84','#fc8d59','#ef6548','#d7301f','#b30000','#7f0000']
+
+def gradient(colors, low, high, value):
+    max_idx = len(colors) - 1
+    bucket_size = (high - low) / max_idx
+    bucket = int((value - low) / bucket_size)
+    return colors[bucket]
+
 def pandas_style(val):
-    if val > 10:
-        return 'background-color: red'
+    if val == float('inf'):
+        color = reds[len(reds)-1]
+        return 'background-color: {}'.format(color)
+    elif val > 2:
+        color = gradient(reds, 2.0, 360.0, val)
+        return 'background-color: {}'.format(color)
     elif val < 1:
-        return 'background-color: green'
+        color = gradient(greens, 0.0, 1.0, val)
+        return 'background-color: {}'.format(color)
     else:
         return 'background-color: white'
 
