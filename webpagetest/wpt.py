@@ -11,6 +11,7 @@ connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', 'Terrible']
 # TODO: change www.reddit.com to reddit.com
 urls = ['https://danluu.com',
         'http://danluu.com',
+        'https://news.ycombinator.com/',
         'https://jvns.ca',
         'http://jvns.ca',
         'https://www.joelonsoftware.com',
@@ -20,7 +21,6 @@ urls = ['https://danluu.com',
         'https://bing.com',
         'https://amazon.com',
         'https://blog.codinghorror.com',
-        'https://news.ycombinator.com/',
         'https://www.reddit.com/']
 # TODO: add https://signalvnoise.com
 # urls = ['https://danluu.com',
@@ -122,6 +122,9 @@ def get_test_results():
 
         if not url in per_url:
             per_url[url] = {}
+            per_url[url]['bytesIn'] = 0
+            # per_url[url]['requests'] = 0
+            per_url[url]['connections'] = 0
 
         if not url in per_conn:
             per_conn[url] = {}
@@ -137,9 +140,6 @@ def get_test_results():
         #     per_conn[url][connection] = "X"
         runs = result['data']['runs']
         complete_times = []
-        bytes_in_max = 0
-        requests_max = 0
-        connections_max = 0
         for run in range(1, num_runs+1):
             # print(result['data']['runs'][str(run)]['firstView'])
             if 'visualComplete' in runs[str(run)]['firstView']:
@@ -150,27 +150,23 @@ def get_test_results():
             # TODO: reported sizes seem to be wrong for large sites. Need to figure out why.
             if 'bytesIn' in runs[str(run)]['firstView']:
                 bytes_in = runs[str(run)]['firstView']['bytesIn']
-                if bytes_in_max < bytes_in:
-                    bytes_in_max = bytes_in
+                if per_url[url]['bytesIn'] < bytes_in:
+                    per_url[url]['bytesIn'] = bytes_in
 
-            # TODO: this number may be wrong due to flakiness or something?
-            # TODO: need to fail test based on not enough requests/connections?
-            if 'requestsFull' in runs[str(run)]['firstView']:
-                requests = runs[str(run)]['firstView']['requestsFull']
-                if requests_max < requests:
-                    requests_max = requests
+            # # TODO: this number may be wrong due to flakiness or something?
+            # # TODO: need to fail test based on not enough requests/connections?
+            # if 'requestsFull' in runs[str(run)]['firstView']:
+            #     requests = runs[str(run)]['firstView']['requestsFull']
+            #     if per_url[url]['requests'] < requests:
+            #         per_url['requests'] = requests
 
             if 'connections' in runs[str(run)]['firstView']:
                 connections = runs[str(run)]['firstView']['connections']
-                if connections_max < connections:
-                    connections_max = connections
+                if per_url[url]['connections'] < connections:
+                    per_url[url]['connections'] = connections
 
         complete_times.sort()
         per_conn[url][connection] = complete_times
-
-        per_url[url]['bytesIn'] = bytes_in_max
-        per_url[url]['requests'] = requests_max
-        per_url[url]['connections'] = connections_max
 
     # TODO: dump results periodically instead of at the end
     # Running a full set of tests can take a day and we shouldn't have to
@@ -193,12 +189,12 @@ def make_csv_table(filename, idx):
 
     csvf = open(filename, 'w', newline='')
     writer = csv.writer(csvf)
-    header = ['url','size','reqs','conns'] + connections
+    header = ['url','size','cons'] + connections
     writer.writerow(header)
     for uu in urls:
         current_row = [uu,
                        per_url[uu]['bytesIn'],
-                       per_url[uu]['requests'],
+                       # per_url[uu]['requests'],
                        per_url[uu]['connections']]
         for cc in connections:
             current_row.append(per_conn[uu][cc][idx])
