@@ -9,23 +9,23 @@ import time
 connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', 'Terrible']
 # connections = ['FIOS', 'Terrible']
 # TODO: change www.reddit.com to reddit.com
-urls = ['https://danluu.com',
+urls = ['http://bellard.org',
         'http://danluu.com',
-        'http://bellard.org',
         'https://news.ycombinator.com/',
-        'https://jvns.ca',
+        'https://danluu.com',
         'http://jvns.ca',
-        'https://www.joelonsoftware.com',
-        'https://steve-yegge.blogspot.com',
-        'https://blog.regehr.org',
-        'http://blog.regehr.org',
+        'https://jvns.ca',
         'https://fgiesen.wordpress.com',
-        'https://signalvnoise.com',
         'https://google.com',
+        'https://www.joelonsoftware.com',
         'https://bing.com',
+        'https://reddit.com/',
+        'https://signalvnoise.com',
         'https://amazon.com',
+        'https://steve-yegge.blogspot.com',
         'https://blog.codinghorror.com',
-        'https://reddit.com/']
+        'http://blog.regehr.org',
+        'https://blog.regehr.org']
 # urls = ['https://danluu.com',
 #         'http://danluu.com']
 num_runs = 10
@@ -203,7 +203,16 @@ def make_csv_table(filename, idx):
             current_row.append(per_conn[uu][cc][idx])
         writer.writerow(current_row)
 
-def display_float(x):
+def float_style(x):
+    if x < 1:
+        return '%10.2f' % x
+    elif x < 9.95:
+        return '%10.1f' % x
+    else:
+        return '%10.0f' % x
+
+def size_style(x):
+    x = x / 1000000
     if x < 1:
         return '%10.2f' % x
     elif x < 10:
@@ -221,7 +230,7 @@ def gradient(colors, low, high, value):
     bucket = int((value - low) / bucket_size)
     return colors[bucket]
 
-def pandas_style(val):
+def conn_bg_style(val):
     if val == float('inf'):
         color = reds[len(reds)-1]
         return 'background-color: {}'.format(color)
@@ -230,6 +239,22 @@ def pandas_style(val):
         return 'background-color: {}'.format(color)
     elif val < 1:
         color = gradient(greens, 0.0, 1.0, val)
+        return 'background-color: {}'.format(color)
+    else:
+        return 'background-color: white'
+
+def conn_fg_style(val):
+    if val == float('inf'):
+        return 'color: white'
+    else:
+        return 'color: black'
+
+def size_bg_style(val):
+    if val > 1000000:
+        color = gradient(reds, math.log2(1000000), math.log2(30000000), math.log2(val))
+        return 'background-color: {}'.format(color)
+    elif val < 500000:
+        color = gradient(greens, 0.0, 500000, val)
         return 'background-color: {}'.format(color)
     else:
         return 'background-color: white'
@@ -245,8 +270,16 @@ def csv_to_html():
     # Not using background_gradient because it has data-dependent bugs that sometimes cause nonsensical gradients.
     html = (
         df.style
-        .applymap(pandas_style,
+        .applymap(conn_bg_style,
                   subset=pandas.IndexSlice[:,connections])
+        .applymap(conn_fg_style,
+                  subset=pandas.IndexSlice[:,connections])
+        .applymap(size_bg_style,
+                  subset=pandas.IndexSlice[:,'size'])
+        .format(float_style,
+                subset=pandas.IndexSlice[:,connections])
+        .format(size_style,
+                subset=pandas.IndexSlice[:,'size'])
         .render()
         )
 
