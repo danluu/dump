@@ -5,6 +5,7 @@ import pandas
 import requests
 import time
 
+# TODO: use a name that's shorter than 'Terrible'.
 connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', 'Terrible']
 # connections = ['FIOS', 'Terrible']
 # TODO: remove slash from ycombinator.
