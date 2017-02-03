@@ -5,10 +5,9 @@ import pandas
 import requests
 import time
 
-# connections = ['FIOS', 'Cable', '3G', 'Dial']
 connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', 'Terrible']
 # connections = ['FIOS', 'Terrible']
-# TODO: change www.reddit.com to reddit.com
+# TODO: remove slash from ycombinator.
 urls = ['http://bellard.org',
         'http://danluu.com',
         'https://news.ycombinator.com/',
@@ -267,7 +266,13 @@ def csv_to_html():
     print(df)
     
     # df.to_html doesn't save style info, so we use this hack instead.
-    # Not using background_gradient because it has data-dependent bugs that sometimes cause nonsensical gradients.
+    # Not using background_gradient because it has data-dependent bugs
+    # that sometimes cause nonsensical gradients.
+    #
+    # The set_table_styles stuff is because pandas only has an API for
+    # removing the index from to_ methods, which aren't compatible
+    # with styles.
+
     html = (
         df.style
         .applymap(conn_bg_style,
@@ -280,6 +285,8 @@ def csv_to_html():
                 subset=pandas.IndexSlice[:,connections])
         .format(size_style,
                 subset=pandas.IndexSlice[:,'size'])
+        .set_table_styles([
+            {'selector': '.row_heading, .blank', 'props': [('display', 'none;')]}])
         .render()
         )
 
