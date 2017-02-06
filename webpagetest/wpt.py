@@ -9,6 +9,7 @@ import time
 connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', 'Terrible']
 # connections = ['FIOS', 'Terrible']
 # TODO: remove slash from ycombinator.
+# TODO: remove slash from reddit.
 urls = ['http://bellard.org',
         'http://danluu.com',
         'https://news.ycombinator.com/',
@@ -23,9 +24,7 @@ urls = ['http://bellard.org',
         'https://signalvnoise.com',
         'https://amazon.com',
         'https://steve-yegge.blogspot.com',
-        'https://blog.codinghorror.com',
-        'http://blog.regehr.org',
-        'https://blog.regehr.org']
+        'https://blog.codinghorror.com']
 # urls = ['https://danluu.com',
 #         'http://danluu.com']
 num_runs = 10
@@ -110,9 +109,6 @@ def get_test_results():
     reader = csv.reader(csvf_urls)
     header = next(reader)
     assert header == ['url','connection','wpt_json']
-
-    csvf_results = open('/tmp/wpt_results.csv', 'w', newline='')
-    writer = csv.writer(csvf_results)
 
     per_conn = {}
     per_url = {}
@@ -208,6 +204,8 @@ def float_style(x):
         return '%10.2f' % x
     elif x < 9.95:
         return '%10.1f' % x
+    elif x == float('inf'):
+        return 'FAIL'
     else:
         return '%10.0f' % x
 
@@ -259,10 +257,16 @@ def size_bg_style(val):
     else:
         return 'background-color: white'
 
+def size_fg_style(val):
+    if val < 40000:
+        return 'color: white'
+    else:
+        return 'color: black'
 
-def csv_to_html():
+
+def csv_to_html(in_file, out_file):
     print("Converting csv to HTML")
-    df = pandas.read_csv('/tmp/wpt_table_50.csv')
+    df = pandas.read_csv(in_file)
 
     print(df)
     
@@ -282,6 +286,8 @@ def csv_to_html():
                   subset=pandas.IndexSlice[:,connections])
         .applymap(size_bg_style,
                   subset=pandas.IndexSlice[:,'size'])
+        .applymap(size_fg_style,
+                  subset=pandas.IndexSlice[:,'size'])
         .format(float_style,
                 subset=pandas.IndexSlice[:,connections])
         .format(size_style,
@@ -291,11 +297,12 @@ def csv_to_html():
         .render()
         )
 
-    with open('/tmp/wpt.html', 'w') as out:
+    with open(out_file, 'w') as out:
         out.write(html)
 
 # save_json_urls(payload, urls, connections)
 # get_test_results()
-# make_csv_table('/tmp/wpt_table_50.csv', 4)
+make_csv_table('/tmp/wpt_table_50.csv', 4)
 # make_csv_table('/tmp/wpt_table_90.csv', 8)
-# csv_to_html()
+csv_to_html('/tmp/wpt_table_50.csv', '/tmp/wpt_50.html')
+# csv_to_html('/tmp/wpt_table_90.csv', '/tmp/wpt_90.html')
