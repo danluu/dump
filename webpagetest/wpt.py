@@ -6,21 +6,21 @@ import requests
 import time
 
 # TODO: use a name that's shorter than 'Terrible'.
-connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', 'Terrible']
+connections = ['FIOS', 'Cable', 'LTE', '3G', '2G', 'Dial', 'Bad', '😱']
 # connections = ['FIOS', 'Terrible']
 # TODO: remove slash from ycombinator.
 # TODO: remove slash from reddit.
 urls = ['http://bellard.org',
         'http://danluu.com',
-        'https://news.ycombinator.com/',
+        'https://news.ycombinator.com',
         'https://danluu.com',
         'http://jvns.ca',
         'https://jvns.ca',
         'https://fgiesen.wordpress.com',
         'https://google.com',
-        'https://www.joelonsoftware.com',
+        'https://joelonsoftware.com',
         'https://bing.com',
-        'https://reddit.com/',
+        'https://reddit.com',
         'https://signalvnoise.com',
         'https://amazon.com',
         'https://steve-yegge.blogspot.com',
@@ -218,6 +218,12 @@ def size_style(x):
     else:
         return '%10.0f' % x
 
+def url_style(url):
+    if url.startswith("https://"):
+        return url[8:]
+    else:
+        return url
+
 greens = ['#f7fcfd','#e5f5f9','#ccece6','#99d8c9','#66c2a4','#41ae76','#238b45','#006d2c','#00441b']
 greens.reverse()
 reds = ['#fff7ec','#fee8c8','#fdd49e','#fdbb84','#fc8d59','#ef6548','#d7301f','#b30000','#7f0000']
@@ -292,6 +298,8 @@ def csv_to_html(in_file, out_file):
                 subset=pandas.IndexSlice[:,connections])
         .format(size_style,
                 subset=pandas.IndexSlice[:,'size'])
+        .format(url_style,
+                subset=pandas.IndexSlice[:,'url'])
         .set_table_styles([
             {'selector': '.row_heading, .blank', 'props': [('display', 'none;')]}])
         .render()
