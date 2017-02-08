@@ -14,9 +14,13 @@ import (
 
 // TODO: fix link spacing so that we don't have to use --conservative-collapse.
 
+// With some versions of html-minify, srcPath can't equal dstPath, so we need to
+// add a workaround that puts the output somewhere else and then moves it back.
+// However, some (most??) versions work fine without the workaround.
+
 var (
-	srcDir   = "/home/dluu/dev/dist"
-	dstDir   = "/home/dluu/dev/dist"
+	srcDir   = "/home/danluu/dev/dist"
+	dstDir   = "/home/danluu/dev/dist"
 	baseArgs = "--remove-comments --collapse-whitespace --conservative-collapse --collapse-boolean-attributes --collapse-inline-tag-whitespace --remove-tag-whitespace --remove-attribute-quotes --use-short-doctype --remove-empty-attributes --remove-optional-tags --remove-empty-elements --minify-css"
 )
 
@@ -33,13 +37,15 @@ func minifyFun(path string, info os.FileInfo, err error) error {
 	if strings.HasSuffix(path, ".html") {
 		cmd := "html-minifier"
 		dstPath := dstDir + strings.TrimPrefix(path, srcDir)
+		badTempPath := "/tmp/mini"
 		fmt.Println(dstPath)
-		curArgs := baseArgs + " -o " + dstPath + " " + path
+		curArgs := baseArgs + " -o " + badTempPath + " " + path
 		args := strings.Split(curArgs, " ")
 		_, err := exec.Command(cmd, args...).Output()
 		if err != nil {
 			log.Fatal("FAIL", path, err)
 		}
+		os.Rename(badTempPath, dstPath)
 	}
 
 	return nil
