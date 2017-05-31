@@ -10,6 +10,7 @@ constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 / WORD_SIZE;
 constexpr size_t LINE_SIZE = 128 / WORD_SIZE;
 constexpr size_t MAX_CACHE_SIZE = 16 * 1024 * 1024 / WORD_SIZE;
 constexpr size_t INTERNAL_ITERS = 128;
+constexpr size_t ITERS = 4;
 
 uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
                          size_t len,
@@ -74,6 +75,17 @@ uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
   return cnt;
 }
 
+void make_naive_list(std::vector<uint64_t>& buf, size_t size) {
+  for (int i = 0; i < buf.size(); ++i) {
+    if (i >= buf.size() - LINE_SIZE) {
+      buf[i] = 0;
+    } else {
+      buf[i] = i + LINE_SIZE;
+    }
+  }
+  buf[buf.size() - 1] = 0;
+}
+
 uint64_t naive_list(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
   for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
@@ -110,17 +122,9 @@ int main() {
     sizes_in_bytes.push_back(s*WORD_SIZE);
   }
 
-  const int iters = 32;
+  const int iters = ITERS;
 
-  // Set up buf for naive_list.
-  for (int i = 0; i < buf.size(); ++i) {
-    if (i >= buf.size() - LINE_SIZE) {
-      buf[i] = 0;
-    } else {
-      buf[i] = i + LINE_SIZE;
-    }
-  }
-  buf[buf.size() - 1] = 0;
+  make_naive_list(buf, MAX_CACHE_SIZE);
 
   auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, noop);
   auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, naive_loop);
