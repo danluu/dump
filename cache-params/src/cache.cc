@@ -54,6 +54,12 @@ std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
   return cycles_per_load;
 }
 
+uint64_t noop(const std::vector<uint64_t>& buf, size_t size) {
+  uint64_t cnt = 0;
+
+  return cnt;
+}
+
 uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
   // Note: unrolling this loop manually does not increase performance
@@ -94,10 +100,14 @@ int main() {
 
   const int iters = 4;
 
-  auto cycles_per_load = sweep_timing(buf, sizes, iters, naive_loop);
+  auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, noop);
+  auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, naive_loop);
+  auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, naive_list);
 
   std::cout << join(sizes) << std::endl;
-  std::cout << join(cycles_per_load) << std::endl;
+  std::cout << join(cycles_per_load_noop) << std::endl;
+  std::cout << join(cycles_per_load_naive_loop) << std::endl;
+  std::cout << join(cycles_per_load_naive_list) << std::endl;
 
   return 0;
 }
