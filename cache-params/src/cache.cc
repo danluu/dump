@@ -5,9 +5,10 @@
 
 #include "rdtsc.h"
 
-constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128;
-constexpr size_t LINE_SIZE = 128 / 8; // Number of uint64_t per cache line.
-constexpr size_t MAX_CACHE_SIZE = 16 * 1024 * 1024 / 8; // In units of uint64_t
+constexpr size_t WORD_SIZE = 8;
+constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 / WORD_SIZE;
+constexpr size_t LINE_SIZE = 128 / WORD_SIZE;
+constexpr size_t MAX_CACHE_SIZE = 16 * 1024 * 1024 / WORD_SIZE;
 
 uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
                          size_t len,
@@ -72,10 +73,10 @@ uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
 
 uint64_t naive_list(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
-  size_t i = 0;
-  while (size -= LINE_SIZE > 0) {
-    i = buf[i];
-    cnt += i;
+  size_t idx = 0;
+  for (size_t i = 0; i < size; i += LINE_SIZE) {
+    idx = buf[idx];
+    cnt += idx;
   }
 
   return cnt;
@@ -99,11 +100,13 @@ int main() {
   std::vector<uint64_t> buf(BUFFER_SIZE);
 
   std::vector<size_t> sizes;
+  std::vector<size_t> sizes_in_bytes;
   for (size_t s = LINE_SIZE; s <= MAX_CACHE_SIZE; s <<= 1) {
     sizes.push_back(s);
+    sizes_in_bytes.push_back(s*WORD_SIZE);
   }
 
-  const int iters = 4;
+  const int iters = 32;
 
   // Set up buf for naive_list.
   for (int i = 0; i < buf.size(); ++i) {
@@ -119,7 +122,7 @@ int main() {
   auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, naive_loop);
   auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, naive_list);
 
-  std::cout << join(sizes) << std::endl;
+  std::cout << join(sizes_in_bytes) << std::endl;
   std::cout << join(cycles_per_load_noop) << std::endl;
   std::cout << join(cycles_per_load_naive_loop) << std::endl;
   std::cout << join(cycles_per_load_naive_list) << std::endl;
