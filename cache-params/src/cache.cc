@@ -1,3 +1,5 @@
+#include <assert.h>
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -11,6 +13,12 @@ constexpr size_t LINE_SIZE = 128 / WORD_SIZE;
 constexpr size_t MAX_CACHE_SIZE = 16 * 1024 * 1024 / WORD_SIZE;
 constexpr size_t INTERNAL_ITERS = 128;
 constexpr size_t ITERS = 4;
+
+// Backing buffer must be twice the size of measured cache size because of our naive scheme to send list accesses
+// to a distance location by flipping the high bit, which gives us half utilization of the buffer.
+static_assert(MAX_CACHE_SIZE * 2 < BUFFER_SIZE, "Buffer size not large enough for high-bit flip scheme.");
+// In fact, we should assert something larger to make sure that when we clear the cache, we clear everything with
+// high probaiblity regardless of the replacement scheme.
 
 uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
                          size_t len,
@@ -96,6 +104,11 @@ uint64_t naive_list(const std::vector<uint64_t>& buf, size_t size) {
     }
   }
   return cnt;
+}
+
+void make_list(std::vector<uint64_t>& buf, size_t size) {
+  assert(size % 2 == 0);
+
 }
 
 template <typename T>
