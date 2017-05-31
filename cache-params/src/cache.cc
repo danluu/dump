@@ -47,7 +47,6 @@ std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
     uint64_t cycles = run_and_time_fn(buf, len, iterations, fn);
 
     double num_loads = len / LINE_SIZE;
-    std::cout << num_loads << std::endl;
     double cpl = cycles / num_loads;
     cycles_per_load.push_back(cpl);
   }
