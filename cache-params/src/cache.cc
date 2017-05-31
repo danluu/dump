@@ -19,10 +19,11 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
   min_tsc = 0;
   min_tsc--;
 
+  for (size_t j = 0; j < len; ++j) {
+    asm volatile("" :: "m" (buf[j]));
+  }
+
   for (int i = 0; i < iterations; ++i) {
-    for (size_t j = 0; j < len; ++j) {
-      asm volatile("" :: "m" (buf[j]));
-    }
     RDTSC_START(tsc_before);
     total += fn(buf, len);
     RDTSC_STOP(tsc_after);
@@ -72,6 +73,11 @@ uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
 
 uint64_t naive_list(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
+  size_t i = 0;
+  while (size -= LINE_SIZE > 0) {
+    i = buf[i];
+    cnt += i;
+  }
 
   return cnt;
 }
@@ -99,6 +105,16 @@ int main() {
   }
 
   const int iters = 4;
+
+  // Set up buf for naive_list.
+  for (int i = 0; i < buf.size(); ++i) {
+    if (i >= buf.size() - LINE_SIZE) {
+      buf[i] = 0;
+    } else {
+      buf[i] = i + LINE_SIZE;
+    }
+  }
+  buf[buf.size() - 1] = 0;
 
   auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, noop);
   auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, naive_loop);
