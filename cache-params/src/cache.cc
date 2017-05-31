@@ -5,11 +5,11 @@
 
 #include "rdtsc.h"
 
-#define BUFFER_SIZE 1024 * 1024 * 128
-#define LINE_SIZE 128
-#define MAX_CACHE_SIZE 16 * 1024 * 1024
+constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128;
+constexpr size_t LINE_SIZE = 128 / 8; // Number of uint64_t per cache line.
+constexpr size_t MAX_CACHE_SIZE = 16 * 1024 * 1024 / 8; // In units of uint64_t
 
-uint64_t run_and_time_fn(std::vector<uint8_t>& buf, size_t len, int iterations, uint64_t(*fn)(const std::vector<uint8_t>&, size_t)) {
+uint64_t run_and_time_fn(std::vector<uint64_t>& buf, size_t len, int iterations, uint64_t(*fn)(const std::vector<uint64_t>&, size_t)) {
 
   uint64_t total = 0;
   uint64_t tsc_before, tsc_after, tsc, min_tsc;
@@ -33,7 +33,7 @@ uint64_t run_and_time_fn(std::vector<uint8_t>& buf, size_t len, int iterations, 
   return min_tsc;
 }
 
-uint64_t naive_loop(const std::vector<uint8_t>& buf, size_t size) {
+uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
   // Note: unrolling this loop manually does not increase performance
   // when compiling with -O2.
@@ -58,7 +58,7 @@ std::string join(std::vector<T> const &v) {
 }
 
 int main() {
-  std::vector<uint8_t> buf(BUFFER_SIZE);
+  std::vector<uint64_t> buf(BUFFER_SIZE);
 
   std::vector<size_t> sizes;
   for (size_t s = LINE_SIZE; s <= MAX_CACHE_SIZE; s <<= 1) {
@@ -73,6 +73,7 @@ int main() {
     uint64_t cycles = run_and_time_fn(buf, len, iters, naive_loop);
 
     double num_loads = len / LINE_SIZE;
+    std::cout << num_loads << std::endl;
     double cpl = cycles / num_loads;
     cycles_per_load.push_back(cpl);
   }
