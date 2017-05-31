@@ -9,7 +9,10 @@ constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128;
 constexpr size_t LINE_SIZE = 128 / 8; // Number of uint64_t per cache line.
 constexpr size_t MAX_CACHE_SIZE = 16 * 1024 * 1024 / 8; // In units of uint64_t
 
-uint64_t run_and_time_fn(std::vector<uint64_t>& buf, size_t len, int iterations, uint64_t(*fn)(const std::vector<uint64_t>&, size_t)) {
+uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
+                         size_t len,
+                         int iterations,
+                         uint64_t(*fn)(const std::vector<uint64_t>&, size_t)) {
 
   uint64_t total = 0;
   uint64_t tsc_before, tsc_after, tsc, min_tsc;
@@ -33,6 +36,24 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf, size_t len, int iterations,
   return min_tsc;
 }
 
+std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
+                                 std::vector<size_t> const & sizes,
+                                 int iterations,
+                                 uint64_t(*fn)(const std::vector<uint64_t>&, size_t)) {
+  std::vector<double> cycles_per_load;
+
+  for (const size_t len : sizes) {
+    uint64_t cycles = run_and_time_fn(buf, len, iterations, fn);
+
+    double num_loads = len / LINE_SIZE;
+    std::cout << num_loads << std::endl;
+    double cpl = cycles / num_loads;
+    cycles_per_load.push_back(cpl);
+  }
+
+  return cycles_per_load;
+}
+
 uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
   // Note: unrolling this loop manually does not increase performance
@@ -40,6 +61,12 @@ uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
   for (size_t i = 0; i < size; i += LINE_SIZE) {
     cnt += buf[i];
   }
+  return cnt;
+}
+
+uint64_t naive_list(const std::vector<uint64_t>& buf, size_t size) {
+  uint64_t cnt = 0;
+
   return cnt;
 }
 
@@ -62,21 +89,12 @@ int main() {
 
   std::vector<size_t> sizes;
   for (size_t s = LINE_SIZE; s <= MAX_CACHE_SIZE; s <<= 1) {
-    std::cout << s << std::endl;
     sizes.push_back(s);
   }
 
   const int iters = 4;
-  std::vector<double> cycles_per_load;
 
-  for (const size_t len : sizes) {
-    uint64_t cycles = run_and_time_fn(buf, len, iters, naive_loop);
-
-    double num_loads = len / LINE_SIZE;
-    std::cout << num_loads << std::endl;
-    double cpl = cycles / num_loads;
-    cycles_per_load.push_back(cpl);
-  }
+  auto cycles_per_load = sweep_timing(buf, sizes, iters, naive_loop);
 
   std::cout << join(sizes) << std::endl;
   std::cout << join(cycles_per_load) << std::endl;
