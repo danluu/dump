@@ -9,6 +9,7 @@ constexpr size_t WORD_SIZE = 8;
 constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 / WORD_SIZE;
 constexpr size_t LINE_SIZE = 128 / WORD_SIZE;
 constexpr size_t MAX_CACHE_SIZE = 16 * 1024 * 1024 / WORD_SIZE;
+constexpr size_t INTERNAL_ITERS = 128;
 
 uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
                          size_t len,
@@ -32,8 +33,6 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
     min_tsc = min_tsc < tsc ? min_tsc : tsc;
   }
 
-  //  assert(total == iterations * 3); // Check that we don't have an off by one error.
-
   asm volatile("" :: "m" (total));
   return min_tsc;
 }
@@ -47,7 +46,7 @@ std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
   for (const size_t len : sizes) {
     uint64_t cycles = run_and_time_fn(buf, len, iterations, fn);
 
-    double num_loads = len / LINE_SIZE;
+    double num_loads = (len / LINE_SIZE) * INTERNAL_ITERS;
     double cpl = cycles / num_loads;
     cycles_per_load.push_back(cpl);
   }
@@ -57,28 +56,33 @@ std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
 
 uint64_t noop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
+  for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
 
+  }
   return cnt;
 }
 
 uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
-  // Note: unrolling this loop manually does not increase performance
-  // when compiling with -O2.
-  for (size_t i = 0; i < size; i += LINE_SIZE) {
-    cnt += buf[i];
+  for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
+    // Note: unrolling this loop manually does not increase performance
+    // when compiling with -O2.
+    for (size_t i = 0; i < size; i += LINE_SIZE) {
+      cnt += buf[i];
+    }
   }
   return cnt;
 }
 
 uint64_t naive_list(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
-  size_t idx = 0;
-  for (size_t i = 0; i < size; i += LINE_SIZE) {
-    idx = buf[idx];
-    cnt += idx;
+  for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
+    size_t idx = 0;
+    for (size_t i = 0; i < size; i += LINE_SIZE) {
+      idx = buf[idx];
+      cnt += idx;
+    }
   }
-
   return cnt;
 }
 
