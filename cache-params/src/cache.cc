@@ -93,7 +93,8 @@ std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_
 }
 
 void clear_caches(std::vector<uint64_t>& buf) {
-  naive_loop(buf, buf.size());
+  auto result = naive_loop(buf, buf.size());
+  asm volatile("" :: "m" (result.second));
 }
 
 // Note that this scheme effectively flips the high bit of every other access. This increases the probability
