@@ -26,7 +26,7 @@ static_assert(MAX_CACHE_SIZE * 2 < BUFFER_SIZE, "Buffer size not large enough fo
 uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
                          size_t len,
                          int iterations,
-                         uint64_t(*fn)(const std::vector<uint64_t>&, size_t)) {
+                         std::pair<uint64_t, uint64_t>(*fn)(const std::vector<uint64_t>&, size_t)) {
 
   uint64_t total = 0;
   uint64_t tsc_before, tsc_after, tsc, min_tsc;
@@ -38,10 +38,9 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
   }
 
   for (int i = 0; i < iterations; ++i) {
-    RDTSC_START(tsc_before);
-    total += fn(buf, len);
-    RDTSC_STOP(tsc_after);
-    tsc = tsc_after - tsc_before;
+    auto result = fn(buf, len);
+    total += result.second;
+    tsc = result.first;
     min_tsc = min_tsc < tsc ? min_tsc : tsc;
   }
 
@@ -52,7 +51,7 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
 std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
                                  std::vector<size_t> const & sizes,
                                  int iterations,
-                                 uint64_t(*fn)(const std::vector<uint64_t>&, size_t)) {
+                                 std::pair<uint64_t, uint64_t>(*fn)(const std::vector<uint64_t>&, size_t)) {
   std::vector<double> cycles_per_load;
 
   for (const size_t len : sizes) {
@@ -66,16 +65,21 @@ std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
   return cycles_per_load;
 }
 
-uint64_t noop(const std::vector<uint64_t>& buf, size_t size) {
+std::pair<uint64_t, uint64_t> noop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
+  uint64_t tsc_before, tsc_after;
+  RDTSC_START(tsc_before);
   for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
 
   }
-  return cnt;
+  RDTSC_STOP(tsc_after);
+  return std::make_pair(tsc_after - tsc_before, cnt);
 }
 
-uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
+std::pair<uint64_t, uint64_t> naive_loop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
+  uint64_t tsc_before, tsc_after;
+  RDTSC_START(tsc_before);
   for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
     // Note: unrolling this loop manually does not increase performance
     // when compiling with -O2.
@@ -83,7 +87,8 @@ uint64_t naive_loop(const std::vector<uint64_t>& buf, size_t size) {
       cnt += buf[i];
     }
   }
-  return cnt;
+  RDTSC_STOP(tsc_after);
+  return std::make_pair(tsc_after - tsc_before, cnt);
 }
 
 void make_naive_list(std::vector<uint64_t>& buf, size_t size) {
@@ -97,8 +102,10 @@ void make_naive_list(std::vector<uint64_t>& buf, size_t size) {
   buf[buf.size() - 1] = 0;
 }
 
-uint64_t naive_list(const std::vector<uint64_t>& buf, size_t size) {
+std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
+  uint64_t tsc_before, tsc_after;
+  RDTSC_START(tsc_before);
   for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
     size_t idx = 0;
     for (size_t i = 0; i < size; i += LINE_SIZE) {
@@ -106,7 +113,8 @@ uint64_t naive_list(const std::vector<uint64_t>& buf, size_t size) {
       cnt += idx;
     }
   }
-  return cnt;
+  RDTSC_STOP(tsc_after);
+  return std::make_pair(tsc_after - tsc_before, cnt);
 }
 
 // Note that this scheme effectively flips the high bit of every other access. This increases the probability
