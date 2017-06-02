@@ -220,12 +220,12 @@ int main() {
   make_list(buf, MAX_CACHE_SIZE, true);
   auto cycles_per_load_far_list = sweep_timing(buf, sizes, iters, naive_list);
 
-  std::cout << join(sizes_in_bytes) << std::endl;
-  std::cout << join(cycles_per_load_noop) << std::endl;
-  std::cout << join(cycles_per_load_naive_loop) << std::endl;
-  std::cout << join(cycles_per_load_naive_list) << std::endl;
-  std::cout << join(cycles_per_load_list) << std::endl;
-  std::cout << join(cycles_per_load_far_list) << std::endl;
+  std::cout << join(sizes_in_bytes) << ",pattern" << std::endl;
+  std::cout << join(cycles_per_load_noop) << ",nop" << std::endl;
+  std::cout << join(cycles_per_load_naive_loop) << ",loop" << std::endl;
+  std::cout << join(cycles_per_load_naive_list) << ",linear list" << std::endl;
+  std::cout << join(cycles_per_load_list) << ",random list" << std::endl;
+  std::cout << join(cycles_per_load_far_list) << ",far list" << std::endl;
 
   return 0;
 }
