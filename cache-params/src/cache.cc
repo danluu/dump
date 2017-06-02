@@ -13,6 +13,7 @@
 constexpr size_t WORD_SIZE = 8;
 constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 / WORD_SIZE;
 constexpr size_t LINE_SIZE = 128 / WORD_SIZE;
+constexpr size_t LINE_SIZE_BITS = 7 - 3;
 constexpr size_t MAX_CACHE_SIZE = 16 * 1024 * 1024 / WORD_SIZE;
 constexpr size_t INTERNAL_ITERS = 32;
 constexpr size_t ITERS = 4;
@@ -138,7 +139,7 @@ std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_
 void make_list(std::vector<uint64_t>& buf, size_t size) {
   assert(size % 2 == 0);
 
-  std::vector<uint64_t> perm(size);
+  std::vector<uint64_t> perm(size / LINE_SIZE);
   for (int i = 0; i < perm.size(); ++i) {
     perm[i] = i;
   }
@@ -160,8 +161,11 @@ void make_list(std::vector<uint64_t>& buf, size_t size) {
   // At this point, perm should be a random permutation of {0, 1, ..., size-1}
   // We now use this to generate a list, but we flip the high bit of the address each time to make sure
   // we don't hit an open DRAM row when going to the next access, if we get a cache miss.
+  size_t idx = 0;
   for (int i = 0; i < perm.size(); ++i) {
-    buf[i] = perm[i];
+    size_t new_idx = perm[i] << LINE_SIZE_BITS;
+    buf[idx] = new_idx;
+    idx = new_idx;
   }
 }
 
