@@ -1,11 +1,14 @@
 #include <assert.h>
 
+#include <algorithm>
 #include <iostream>
-#include <string>
+#include <random>
 #include <sstream>
 #include <vector>
 
 #include "rdtsc.h"
+
+// TODO: warm up cache before timing starts. This could be done by doing one iteration before timing begins.
 
 constexpr size_t WORD_SIZE = 8;
 constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 / WORD_SIZE;
@@ -106,9 +109,36 @@ uint64_t naive_list(const std::vector<uint64_t>& buf, size_t size) {
   return cnt;
 }
 
+// Note that this scheme effectively flips the high bit of every other access. This increases the probability
+// of associativity misses.
 void make_list(std::vector<uint64_t>& buf, size_t size) {
   assert(size % 2 == 0);
 
+  std::vector<uint64_t> perm(size);
+  for (int i = 0; i < perm.size(); ++i) {
+    perm[i] = i;
+  }
+
+  auto rengine = std::default_random_engine{};
+  std::shuffle(std::begin(perm), std::end(perm), rengine);
+
+  // Naive way to get number of bits in size.
+  int num_bits = 0;
+  size_t size_mut = size;
+  while (size_mut != 0) {
+    ++num_bits;
+    size_mut >>= 1;
+  }
+
+  assert(num_bits != 0);
+  uint64_t mask = 1 << num_bits;
+
+  // At this point, perm should be a random permutation of {0, 1, ..., size-1}
+  // We now use this to generate a list, but we flip the high bit of the address each time to make sure
+  // we don't hit an open DRAM row when going to the next access, if we get a cache miss.
+  for (int i = 0; i < perm.size(); ++i) {
+    buf[i] = perm[i];
+  }
 }
 
 template <typename T>
@@ -143,10 +173,14 @@ int main() {
   auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, naive_loop);
   auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, naive_list);
 
+  make_list(buf, MAX_CACHE_SIZE);
+  auto cycles_per_load_list = sweep_timing(buf, sizes, iters, naive_list);
+
   std::cout << join(sizes_in_bytes) << std::endl;
   std::cout << join(cycles_per_load_noop) << std::endl;
   std::cout << join(cycles_per_load_naive_loop) << std::endl;
   std::cout << join(cycles_per_load_naive_list) << std::endl;
+  std::cout << join(cycles_per_load_list) << std::endl;
 
   return 0;
 }
