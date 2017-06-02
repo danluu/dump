@@ -14,7 +14,7 @@ constexpr size_t WORD_SIZE = 8;
 constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 / WORD_SIZE;
 constexpr size_t LINE_SIZE = 128 / WORD_SIZE;
 constexpr size_t MAX_CACHE_SIZE = 16 * 1024 * 1024 / WORD_SIZE;
-constexpr size_t INTERNAL_ITERS = 128;
+constexpr size_t INTERNAL_ITERS = 32;
 constexpr size_t ITERS = 4;
 
 // Backing buffer must be twice the size of measured cache size because of our naive scheme to send list accesses
@@ -79,6 +79,13 @@ std::pair<uint64_t, uint64_t> noop(const std::vector<uint64_t>& buf, size_t size
 std::pair<uint64_t, uint64_t> naive_loop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
   uint64_t tsc_before, tsc_after;
+
+  // Warmup.
+  for (size_t i = 0; i < size; i += LINE_SIZE) {
+    cnt += buf[i];
+  }
+
+  // Timed execution.
   RDTSC_START(tsc_before);
   for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
     // Note: unrolling this loop manually does not increase performance
@@ -105,9 +112,18 @@ void make_naive_list(std::vector<uint64_t>& buf, size_t size) {
 std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
   uint64_t tsc_before, tsc_after;
+
+  // Warmup.
+  size_t idx = 0;
+  for (size_t i = 0; i < size; i += LINE_SIZE) {
+    idx = buf[idx];
+    cnt += idx;
+  }
+
+  // Timed execution.
   RDTSC_START(tsc_before);
   for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
-    size_t idx = 0;
+    idx = 0;
     for (size_t i = 0; i < size; i += LINE_SIZE) {
       idx = buf[idx];
       cnt += idx;
@@ -168,7 +184,7 @@ int main() {
 
   std::vector<size_t> sizes;
   std::vector<size_t> sizes_in_bytes;
-  for (size_t s = LINE_SIZE; s <= MAX_CACHE_SIZE; s <<= 1) {
+  for (size_t s = LINE_SIZE * 8; s <= MAX_CACHE_SIZE; s <<= 1) {
     sizes.push_back(s);
     sizes_in_bytes.push_back(s*WORD_SIZE);
   }
