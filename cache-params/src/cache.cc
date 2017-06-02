@@ -98,7 +98,7 @@ void clear_caches(std::vector<uint64_t>& buf) {
 
 // Note that this scheme effectively flips the high bit of every other access. This increases the probability
 // of associativity misses.
-void make_list(std::vector<uint64_t>& buf, size_t size) {
+void make_list(std::vector<uint64_t>& buf, size_t size, bool avoid_open_row) {
   assert(size % 2 == 0);
 
   std::vector<uint64_t> perm(size / LINE_SIZE);
@@ -124,10 +124,12 @@ void make_list(std::vector<uint64_t>& buf, size_t size) {
   // At this point, perm should be a random permutation of {0, 1, ..., size-1}
   // We now use this to generate a list, but we flip the high bit of the address each time to make sure
   // we don't hit an open DRAM row when going to the next access, if we get a cache miss.
-  // TODO: make a version that doesn't have DRAM open page avoidance so we can explicitly compare.
   size_t idx = 0;
   for (int i = 0; i < perm.size(); ++i) {
-    uint64_t new_high_bit = (mask & idx) ^ mask;
+    uint64_t new_high_bit = 0;
+    if (avoid_open_row) {
+      new_high_bit = (mask & idx) ^ mask;
+    }
     size_t new_idx = perm[i] << LINE_SIZE_BITS;
     new_idx = (new_idx & inverse_mask) | new_high_bit;
     buf[idx] = new_idx;
@@ -204,20 +206,25 @@ int main() {
 
   const int iters = ITERS;
 
-  make_naive_list(buf, MAX_CACHE_SIZE);
 
   auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, noop);
   auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, naive_loop);
+
+  make_naive_list(buf, MAX_CACHE_SIZE);
   auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, naive_list);
 
-  make_list(buf, MAX_CACHE_SIZE);
+  make_list(buf, MAX_CACHE_SIZE, false);
   auto cycles_per_load_list = sweep_timing(buf, sizes, iters, naive_list);
+
+  make_list(buf, MAX_CACHE_SIZE, true);
+  auto cycles_per_load_far_list = sweep_timing(buf, sizes, iters, naive_list);
 
   std::cout << join(sizes_in_bytes) << std::endl;
   std::cout << join(cycles_per_load_noop) << std::endl;
   std::cout << join(cycles_per_load_naive_loop) << std::endl;
   std::cout << join(cycles_per_load_naive_list) << std::endl;
   std::cout << join(cycles_per_load_list) << std::endl;
+  std::cout << join(cycles_per_load_far_list) << std::endl;
 
   return 0;
 }
