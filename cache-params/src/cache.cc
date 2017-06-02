@@ -24,48 +24,6 @@ static_assert(MAX_CACHE_SIZE * 2 < BUFFER_SIZE, "Buffer size not large enough fo
 // In fact, we should assert something larger to make sure that when we clear the cache, we clear everything with
 // high probaiblity regardless of the replacement scheme.
 
-uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
-                         size_t len,
-                         int iterations,
-                         std::pair<uint64_t, uint64_t>(*fn)(const std::vector<uint64_t>&, size_t)) {
-
-  uint64_t total = 0;
-  uint64_t tsc_before, tsc_after, tsc, min_tsc;
-  min_tsc = 0;
-  min_tsc--;
-
-  for (size_t j = 0; j < len; ++j) {
-    asm volatile("" :: "m" (buf[j]));
-  }
-
-  for (int i = 0; i < iterations; ++i) {
-    auto result = fn(buf, len);
-    total += result.second;
-    tsc = result.first;
-    min_tsc = min_tsc < tsc ? min_tsc : tsc;
-  }
-
-  asm volatile("" :: "m" (total));
-  return min_tsc;
-}
-
-std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
-                                 std::vector<size_t> const & sizes,
-                                 int iterations,
-                                 std::pair<uint64_t, uint64_t>(*fn)(const std::vector<uint64_t>&, size_t)) {
-  std::vector<double> cycles_per_load;
-
-  for (const size_t len : sizes) {
-    uint64_t cycles = run_and_time_fn(buf, len, iterations, fn);
-
-    double num_loads = (len / LINE_SIZE) * INTERNAL_ITERS;
-    double cpl = cycles / num_loads;
-    cycles_per_load.push_back(cpl);
-  }
-
-  return cycles_per_load;
-}
-
 std::pair<uint64_t, uint64_t> noop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
   uint64_t tsc_before, tsc_after;
@@ -134,6 +92,10 @@ std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_
   return std::make_pair(tsc_after - tsc_before, cnt);
 }
 
+void clear_caches(std::vector<uint64_t>& buf) {
+  naive_loop(buf, buf.size());
+}
+
 // Note that this scheme effectively flips the high bit of every other access. This increases the probability
 // of associativity misses.
 void make_list(std::vector<uint64_t>& buf, size_t size) {
@@ -157,13 +119,17 @@ void make_list(std::vector<uint64_t>& buf, size_t size) {
 
   assert(num_bits != 0);
   uint64_t mask = 1 << num_bits;
+  uint64_t inverse_mask = ~mask;
 
   // At this point, perm should be a random permutation of {0, 1, ..., size-1}
   // We now use this to generate a list, but we flip the high bit of the address each time to make sure
   // we don't hit an open DRAM row when going to the next access, if we get a cache miss.
+  // TODO: make a version that doesn't have DRAM open page avoidance so we can explicitly compare.
   size_t idx = 0;
   for (int i = 0; i < perm.size(); ++i) {
+    uint64_t new_high_bit = (mask & idx) ^ mask;
     size_t new_idx = perm[i] << LINE_SIZE_BITS;
+    new_idx = (new_idx & inverse_mask) | new_high_bit;
     buf[idx] = new_idx;
     idx = new_idx;
   }
@@ -181,6 +147,49 @@ std::string join(std::vector<T> const &v) {
   }
 
   return ss.str();
+}
+
+uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
+                         size_t len,
+                         int iterations,
+                         std::pair<uint64_t, uint64_t>(*fn)(const std::vector<uint64_t>&, size_t)) {
+
+  uint64_t total = 0;
+  uint64_t tsc_before, tsc_after, tsc, min_tsc;
+  min_tsc = 0;
+  min_tsc--;
+
+  for (size_t j = 0; j < len; ++j) {
+    asm volatile("" :: "m" (buf[j]));
+  }
+
+  for (int i = 0; i < iterations; ++i) {
+    clear_caches(buf);
+    auto result = fn(buf, len);
+    total += result.second;
+    tsc = result.first;
+    min_tsc = min_tsc < tsc ? min_tsc : tsc;
+  }
+
+  asm volatile("" :: "m" (total));
+  return min_tsc;
+}
+
+std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
+                                 std::vector<size_t> const & sizes,
+                                 int iterations,
+                                 std::pair<uint64_t, uint64_t>(*fn)(const std::vector<uint64_t>&, size_t)) {
+  std::vector<double> cycles_per_load;
+
+  for (const size_t len : sizes) {
+    uint64_t cycles = run_and_time_fn(buf, len, iterations, fn);
+
+    double num_loads = (len / LINE_SIZE) * INTERNAL_ITERS;
+    double cpl = cycles / num_loads;
+    cycles_per_load.push_back(cpl);
+  }
+
+  return cycles_per_load;
 }
 
 int main() {
