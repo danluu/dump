@@ -12,11 +12,11 @@
 
 constexpr size_t WORD_SIZE = 8;
 constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 / WORD_SIZE;
-constexpr size_t LINE_SIZE = 128 / WORD_SIZE;
+constexpr size_t LINE_SIZE = 64 / WORD_SIZE;
 constexpr size_t LINE_SIZE_BITS = 7 - 3;
 constexpr size_t MAX_CACHE_SIZE = 8 * 1024 * 1024 / WORD_SIZE;
-constexpr size_t INTERNAL_ITERS = 32;
-constexpr size_t ITERS = 4;
+constexpr size_t INTERNAL_ITERS = 4;
+constexpr size_t ITERS = 2;
 
 // Backing buffer must be twice the size of measured cache size because of our naive scheme to send list accesses
 // to a distance location by flipping the high bit, which gives us half utilization of the buffer.
@@ -68,6 +68,16 @@ void make_naive_list(std::vector<uint64_t>& buf, size_t size) {
   buf[buf.size() - 1] = 0;
 }
 
+void make_naive_list2(std::vector<uint64_t>& buf, size_t size) {
+  for (int i = 0; i < buf.size(); ++i) {
+    if (i >= size - LINE_SIZE) {
+      buf[i] = reinterpret_cast<uint64_t>(&buf[0]);
+    } else {
+      buf[i] = reinterpret_cast<uint64_t>(&buf[i + LINE_SIZE]);
+    }
+  }
+}
+
 std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
   uint64_t tsc_before, tsc_after;
@@ -90,6 +100,29 @@ std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_
   }
   RDTSC_STOP(tsc_after);
   return std::make_pair(tsc_after - tsc_before, cnt);
+}
+
+std::pair<uint64_t, uint64_t> traverse_list(const std::vector<uint64_t>& buf, size_t size) {
+  // TODO: warmup.
+  uint64_t tsc_before, tsc_after;
+
+  // std::cout << "traverse_list " << size << std::endl;
+
+  uint64_t const* p = &buf[0];
+  uint64_t const* p_last = &buf[0];
+
+  int iterations = (size / LINE_SIZE) * INTERNAL_ITERS;
+
+  RDTSC_START(tsc_before);
+  for (int i = 0; i < iterations; ++i) {
+    p_last = p;
+    p = reinterpret_cast<uint64_t*>(*p);
+
+    // std::cout << p << ":" << p_last << ":" << p - p_last << std::endl;
+  }
+
+  RDTSC_STOP(tsc_after);
+  return std::make_pair(tsc_after - tsc_before, reinterpret_cast<uint64_t>(p));
 }
 
 void clear_caches(std::vector<uint64_t>& buf) {
@@ -181,10 +214,13 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
 std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
                                  std::vector<size_t> const & sizes,
                                  int iterations,
+                                 void(*init_fn)(std::vector<uint64_t>&, size_t),
                                  std::pair<uint64_t, uint64_t>(*fn)(const std::vector<uint64_t>&, size_t)) {
   std::vector<double> cycles_per_load;
 
   for (const size_t len : sizes) {
+    init_fn(buf, len);
+
     uint64_t cycles = run_and_time_fn(buf, len, iterations, fn);
 
     double num_loads = (len / LINE_SIZE) * INTERNAL_ITERS;
@@ -208,24 +244,25 @@ int main() {
   const int iters = ITERS;
 
 
-  auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, noop);
-  auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, naive_loop);
+  // No actual init fn necessary. Just passing in due to janky code structure.
+  auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, make_naive_list, noop);
+  auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, make_naive_list, naive_loop);
+  auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, make_naive_list, naive_list);
+  auto cycles_per_load_naive_list2 = sweep_timing(buf, sizes, iters, make_naive_list2, traverse_list);
 
-  make_naive_list(buf, MAX_CACHE_SIZE);
-  auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, naive_list);
-
-  make_list(buf, MAX_CACHE_SIZE, false);
-  auto cycles_per_load_list = sweep_timing(buf, sizes, iters, naive_list);
-
-  make_list(buf, MAX_CACHE_SIZE, true);
-  auto cycles_per_load_far_list = sweep_timing(buf, sizes, iters, naive_list);
+//  make_list(buf, MAX_CACHE_SIZE, false);
+//  auto cycles_per_load_list = sweep_timing(buf, sizes, iters, naive_list);
+//
+//  make_list(buf, MAX_CACHE_SIZE, true);
+//  auto cycles_per_load_far_list = sweep_timing(buf, sizes, iters, naive_list);
 
   std::cout << join(sizes_in_bytes) << ",pattern" << std::endl;
   std::cout << join(cycles_per_load_noop) << ",nop" << std::endl;
   std::cout << join(cycles_per_load_naive_loop) << ",loop" << std::endl;
   std::cout << join(cycles_per_load_naive_list) << ",linear list" << std::endl;
-  std::cout << join(cycles_per_load_list) << ",random list" << std::endl;
-  std::cout << join(cycles_per_load_far_list) << ",far list" << std::endl;
+  std::cout << join(cycles_per_load_naive_list2) << ",linear list2" << std::endl;
+  // std::cout << join(cycles_per_load_list) << ",random list" << std::endl;
+  // std::cout << join(cycles_per_load_far_list) << ",far list" << std::endl;
 
   return 0;
 }
