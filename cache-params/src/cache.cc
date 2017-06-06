@@ -13,7 +13,7 @@
 constexpr size_t WORD_SIZE = 8;
 constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 * 4 / WORD_SIZE;
 constexpr size_t LINE_SIZE = 64 / WORD_SIZE;
-constexpr size_t LINE_SIZE_BITS = 7 - 3;
+constexpr size_t LINE_SIZE_BITS = 6 - 3;
 constexpr size_t MAX_CACHE_SIZE = 128 * 1024 * 1024 / WORD_SIZE;
 // constexpr size_t MAX_CACHE_SIZE = 8 * 1024 / WORD_SIZE;
 constexpr size_t INTERNAL_ITERS = 32;
