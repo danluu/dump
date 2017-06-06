@@ -15,6 +15,7 @@ constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 / WORD_SIZE;
 constexpr size_t LINE_SIZE = 64 / WORD_SIZE;
 constexpr size_t LINE_SIZE_BITS = 7 - 3;
 constexpr size_t MAX_CACHE_SIZE = 8 * 1024 * 1024 / WORD_SIZE;
+// constexpr size_t MAX_CACHE_SIZE = 8 * 1024 / WORD_SIZE;
 constexpr size_t INTERNAL_ITERS = 4;
 constexpr size_t ITERS = 2;
 
@@ -23,6 +24,20 @@ constexpr size_t ITERS = 2;
 static_assert(MAX_CACHE_SIZE * 2 < BUFFER_SIZE, "Buffer size not large enough for high-bit flip scheme.");
 // In fact, we should assert something larger to make sure that when we clear the cache, we clear everything with
 // high probaiblity regardless of the replacement scheme.
+
+template <typename T>
+std::string join(std::vector<T> const &v) {
+  std::stringstream ss;
+
+  for (size_t i = 0; i < v.size(); ++i) {
+    if (i != 0) {
+      ss << ",";
+    }
+    ss << v[i];
+  }
+
+  return ss.str();
+}
 
 std::pair<uint64_t, uint64_t> noop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
@@ -132,16 +147,31 @@ void clear_caches(std::vector<uint64_t>& buf) {
 
 // Note that this scheme effectively flips the high bit of every other access. This increases the probability
 // of associativity misses.
-void make_list(std::vector<uint64_t>& buf, size_t size, bool avoid_open_row) {
+void make_list(std::vector<uint64_t>& buf, size_t size) {
+  const bool avoid_open_row = false;
   assert(size % 2 == 0);
+
+  std::cout << "make_list " << size << std::endl;
 
   std::vector<uint64_t> perm(size / LINE_SIZE);
   for (int i = 0; i < perm.size(); ++i) {
     perm[i] = i;
   }
 
-  auto rengine = std::default_random_engine{};
-  std::shuffle(std::begin(perm), std::end(perm), rengine);
+  // Generate a random permutation with one cycle of length n.
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  for (uint64_t i = perm.size() - 1; i != 0; --i) {
+    std::uniform_int_distribution<uint64_t> rd_dis(0, i-1);
+    int r = rd_dis(gen);
+
+    uint64_t tmp = perm[i];
+    perm[i] = perm[r];
+    perm[r] = tmp;
+  }
+
+  // std::cout << "perm" << std::endl;
+  // std::cout << join(perm) << std::endl;
 
   // Naive way to get number of bits in size.
   int num_bits = 0;
@@ -158,31 +188,23 @@ void make_list(std::vector<uint64_t>& buf, size_t size, bool avoid_open_row) {
   // At this point, perm should be a random permutation of {0, 1, ..., size-1}
   // We now use this to generate a list, but we flip the high bit of the address each time to make sure
   // we don't hit an open DRAM row when going to the next access, if we get a cache miss.
+  // std::cout << "idx:new_idx" << std::endl;
   size_t idx = 0;
-  for (int i = 0; i < perm.size(); ++i) {
+  // Note that we do one more assignment than the number of items in the list because the first assignment
+  // (from 0 -> ???) is bogus an the actual 0 -> ??? assignment comes while we traverse the list.
+  for (int i = 0; i <= perm.size(); ++i) {
     uint64_t new_high_bit = 0;
     if (avoid_open_row) {
       new_high_bit = (mask & idx) ^ mask;
     }
-    size_t new_idx = perm[i] << LINE_SIZE_BITS;
+    size_t new_idx = perm[i % (perm.size() - 1)] << LINE_SIZE_BITS;
     new_idx = (new_idx & inverse_mask) | new_high_bit;
     buf[idx] = new_idx;
+
+    // std::cout << idx << ":" << new_idx << std::endl;
+
     idx = new_idx;
   }
-}
-
-template <typename T>
-std::string join(std::vector<T> const &v) {
-  std::stringstream ss;
-
-  for (size_t i = 0; i < v.size(); ++i) {
-    if (i != 0) {
-      ss << ",";
-    }
-    ss << v[i];
-  }
-
-  return ss.str();
 }
 
 uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
@@ -245,23 +267,22 @@ int main() {
 
 
   // No actual init fn necessary. Just passing in due to janky code structure.
-  auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, make_naive_list, noop);
-  auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, make_naive_list, naive_loop);
-  auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, make_naive_list, naive_list);
+//  auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, make_naive_list, noop);
+//  auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, make_naive_list, naive_loop);
+//  auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, make_naive_list, naive_list);
   auto cycles_per_load_naive_list2 = sweep_timing(buf, sizes, iters, make_naive_list2, traverse_list);
 
-//  make_list(buf, MAX_CACHE_SIZE, false);
-//  auto cycles_per_load_list = sweep_timing(buf, sizes, iters, naive_list);
-//
+  auto cycles_per_load_list = sweep_timing(buf, sizes, iters, make_list, naive_list); // BUG!
+
 //  make_list(buf, MAX_CACHE_SIZE, true);
 //  auto cycles_per_load_far_list = sweep_timing(buf, sizes, iters, naive_list);
 
   std::cout << join(sizes_in_bytes) << ",pattern" << std::endl;
-  std::cout << join(cycles_per_load_noop) << ",nop" << std::endl;
-  std::cout << join(cycles_per_load_naive_loop) << ",loop" << std::endl;
-  std::cout << join(cycles_per_load_naive_list) << ",linear list" << std::endl;
+//  std::cout << join(cycles_per_load_noop) << ",nop" << std::endl;
+//  std::cout << join(cycles_per_load_naive_loop) << ",loop" << std::endl;
+// std::cout << join(cycles_per_load_naive_list) << ",linear list" << std::endl;
   std::cout << join(cycles_per_load_naive_list2) << ",linear list2" << std::endl;
-  // std::cout << join(cycles_per_load_list) << ",random list" << std::endl;
+  std::cout << join(cycles_per_load_list) << ",random list" << std::endl;
   // std::cout << join(cycles_per_load_far_list) << ",far list" << std::endl;
 
   return 0;
