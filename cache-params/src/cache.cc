@@ -27,11 +27,11 @@ static_assert(MAX_CACHE_SIZE * 2 < BUFFER_SIZE, "Buffer size not large enough fo
 std::pair<uint64_t, uint64_t> noop(const std::vector<uint64_t>& buf, size_t size) {
   uint64_t cnt = 0;
   uint64_t tsc_before, tsc_after;
-  RDTSC_START(tsc_before);
+  RDTSC(tsc_before);
   for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
 
   }
-  RDTSC_STOP(tsc_after);
+  RDTSC(tsc_after);
   return std::make_pair(tsc_after - tsc_before, cnt);
 }
 
@@ -45,7 +45,7 @@ std::pair<uint64_t, uint64_t> naive_loop(const std::vector<uint64_t>& buf, size_
   }
 
   // Timed execution.
-  RDTSC_START(tsc_before);
+  RDTSC(tsc_before);
   for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
     // Note: unrolling this loop manually does not increase performance
     // when compiling with -O2.
@@ -53,7 +53,7 @@ std::pair<uint64_t, uint64_t> naive_loop(const std::vector<uint64_t>& buf, size_
       cnt += buf[i];
     }
   }
-  RDTSC_STOP(tsc_after);
+  RDTSC(tsc_after);
   return std::make_pair(tsc_after - tsc_before, cnt);
 }
 
@@ -90,7 +90,7 @@ std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_
   }
 
   // Timed execution.
-  RDTSC_START(tsc_before);
+  RDTSC(tsc_before);
   for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
     idx = 0;
     for (size_t i = 0; i < size; i += LINE_SIZE) {
@@ -98,7 +98,7 @@ std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_
       cnt += idx;
     }
   }
-  RDTSC_STOP(tsc_after);
+  RDTSC(tsc_after);
   return std::make_pair(tsc_after - tsc_before, cnt);
 }
 
@@ -113,7 +113,7 @@ std::pair<uint64_t, uint64_t> traverse_list(const std::vector<uint64_t>& buf, si
 
   int iterations = (size / LINE_SIZE) * INTERNAL_ITERS;
 
-  RDTSC_START(tsc_before);
+  RDTSC(tsc_before);
   for (int i = 0; i < iterations; ++i) {
     p_last = p;
     p = reinterpret_cast<uint64_t*>(*p);
@@ -121,7 +121,7 @@ std::pair<uint64_t, uint64_t> traverse_list(const std::vector<uint64_t>& buf, si
     // std::cout << p << ":" << p_last << ":" << p - p_last << std::endl;
   }
 
-  RDTSC_STOP(tsc_after);
+  RDTSC(tsc_after);
   return std::make_pair(tsc_after - tsc_before, reinterpret_cast<uint64_t>(p));
 }
 

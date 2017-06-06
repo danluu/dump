@@ -1,34 +1,23 @@
 #include <stdint.h>
 
+// See http://akaros.cs.berkeley.edu/lxr/akaros/kern/arch/x86/rdtsc_test.c
+// See https://stackoverflow.com/questions/38994549/is-intels-timestamp-reading-asm-code-example-using-two-more-registers-than-are
+
 #ifdef __i386__
-#  define RDTSC_DIRTY "%eax", "%ebx", "%ecx", "%edx"
+#  define RDTSC_DIRTY "%eax", "%edx"
 #elif __x86_64__
-#  define RDTSC_DIRTY "%rax", "%rbx", "%rcx", "%rdx"
+#  define RDTSC_DIRTY "%rax", "%rdx"
 #else
 # error unknown platform
 #endif
 
-#define RDTSC_START(cycles)                                \
+#define RDTSC(cycles)                                      \
     do {                                                   \
         unsigned cyc_high, cyc_low;                        \
-        asm volatile("CPUID\n\t"                           \
+        asm volatile("LFENCE\n\t"                          \
                      "RDTSC\n\t"                           \
-                     "mov %%edx, %0\n\t"                   \
-                     "mov %%eax, %1\n\t"                   \
-                     : "=r" (cyc_high), "=r" (cyc_low)     \
+                     : "=d" (cyc_high), "=a" (cyc_low)     \
                      :: RDTSC_DIRTY);                      \
         (cycles) = ((uint64_t)cyc_high << 32) | cyc_low;   \
     } while (0)
-
-#define RDTSC_STOP(cycles)                                 \
-    do {                                                   \
-        unsigned cyc_high, cyc_low;                        \
-        asm volatile("RDTSCP\n\t"                          \
-                     "mov %%edx, %0\n\t"                   \
-                     "mov %%eax, %1\n\t"                   \
-                     "CPUID\n\t"                           \
-                     : "=r" (cyc_high), "=r" (cyc_low)     \
-                     :: RDTSC_DIRTY);                      \
-        (cycles) = ((uint64_t)cyc_high << 32) | cyc_low;   \
-    } while(0)
 
