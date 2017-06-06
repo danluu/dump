@@ -11,13 +11,13 @@
 // TODO: warm up cache before timing starts. This could be done by doing one iteration before timing begins.
 
 constexpr size_t WORD_SIZE = 8;
-constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 / WORD_SIZE;
+constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 * 4 / WORD_SIZE;
 constexpr size_t LINE_SIZE = 64 / WORD_SIZE;
 constexpr size_t LINE_SIZE_BITS = 7 - 3;
-constexpr size_t MAX_CACHE_SIZE = 8 * 1024 * 1024 / WORD_SIZE;
+constexpr size_t MAX_CACHE_SIZE = 128 * 1024 * 1024 / WORD_SIZE;
 // constexpr size_t MAX_CACHE_SIZE = 8 * 1024 / WORD_SIZE;
-constexpr size_t INTERNAL_ITERS = 4;
-constexpr size_t ITERS = 2;
+constexpr size_t INTERNAL_ITERS = 32;
+constexpr size_t ITERS = 4;
 
 // Backing buffer must be twice the size of measured cache size because of our naive scheme to send list accesses
 // to a distance location by flipping the high bit, which gives us half utilization of the buffer.
@@ -72,7 +72,7 @@ std::pair<uint64_t, uint64_t> naive_loop(const std::vector<uint64_t>& buf, size_
   return std::make_pair(tsc_after - tsc_before, cnt);
 }
 
-void make_naive_list(std::vector<uint64_t>& buf, size_t size) {
+void make_naive_list(std::vector<uint64_t>& buf, size_t size, bool) {
   for (int i = 0; i < buf.size(); ++i) {
     if (i >= buf.size() - LINE_SIZE) {
       buf[i] = 0;
@@ -83,7 +83,7 @@ void make_naive_list(std::vector<uint64_t>& buf, size_t size) {
   buf[buf.size() - 1] = 0;
 }
 
-void make_naive_list2(std::vector<uint64_t>& buf, size_t size) {
+void make_naive_list2(std::vector<uint64_t>& buf, size_t size, bool) {
   for (int i = 0; i < buf.size(); ++i) {
     if (i >= size - LINE_SIZE) {
       buf[i] = reinterpret_cast<uint64_t>(&buf[0]);
@@ -104,17 +104,17 @@ std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_
     cnt += idx;
   }
 
+
+  int iterations = (size / LINE_SIZE) * INTERNAL_ITERS;
+
   // Timed execution.
   RDTSC(tsc_before);
-  for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
-    idx = 0;
-    for (size_t i = 0; i < size; i += LINE_SIZE) {
-      idx = buf[idx];
-      cnt += idx;
-    }
+  idx = 0;
+  for (int i = 0; i < iterations; ++i) {
+    idx = buf[idx];
   }
   RDTSC(tsc_after);
-  return std::make_pair(tsc_after - tsc_before, cnt);
+  return std::make_pair(tsc_after - tsc_before, idx);
 }
 
 std::pair<uint64_t, uint64_t> traverse_list(const std::vector<uint64_t>& buf, size_t size) {
@@ -147,11 +147,10 @@ void clear_caches(std::vector<uint64_t>& buf) {
 
 // Note that this scheme effectively flips the high bit of every other access. This increases the probability
 // of associativity misses.
-void make_list(std::vector<uint64_t>& buf, size_t size) {
-  const bool avoid_open_row = false;
+void make_list(std::vector<uint64_t>& buf, size_t size, bool avoid_open_row) {
   assert(size % 2 == 0);
 
-  std::cout << "make_list " << size << std::endl;
+  // std::cout << "make_list " << size << std::endl;
 
   std::vector<uint64_t> perm(size / LINE_SIZE);
   for (int i = 0; i < perm.size(); ++i) {
@@ -194,14 +193,15 @@ void make_list(std::vector<uint64_t>& buf, size_t size) {
   // (from 0 -> ???) is bogus an the actual 0 -> ??? assignment comes while we traverse the list.
   for (int i = 0; i <= perm.size(); ++i) {
     uint64_t new_high_bit = 0;
-    if (avoid_open_row) {
+    if (avoid_open_row && i != perm.size()) {
       new_high_bit = (mask & idx) ^ mask;
     }
     size_t new_idx = perm[i % (perm.size() - 1)] << LINE_SIZE_BITS;
+    uint64_t new_idx_near = new_idx;
     new_idx = (new_idx & inverse_mask) | new_high_bit;
     buf[idx] = new_idx;
 
-    // std::cout << idx << ":" << new_idx << std::endl;
+    // std::cout << idx << "\t" << new_idx_near << "\t" << new_idx << "\t" << new_high_bit << std::endl;
 
     idx = new_idx;
   }
@@ -221,8 +221,8 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
     asm volatile("" :: "m" (buf[j]));
   }
 
+  clear_caches(buf);
   for (int i = 0; i < iterations; ++i) {
-    clear_caches(buf);
     auto result = fn(buf, len);
     total += result.second;
     tsc = result.first;
@@ -236,12 +236,13 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
 std::vector<double> sweep_timing(std::vector<uint64_t>& buf,
                                  std::vector<size_t> const & sizes,
                                  int iterations,
-                                 void(*init_fn)(std::vector<uint64_t>&, size_t),
+                                 bool init_mod,
+                                 void(*init_fn)(std::vector<uint64_t>&, size_t, bool),
                                  std::pair<uint64_t, uint64_t>(*fn)(const std::vector<uint64_t>&, size_t)) {
   std::vector<double> cycles_per_load;
 
   for (const size_t len : sizes) {
-    init_fn(buf, len);
+    init_fn(buf, len, init_mod);
 
     uint64_t cycles = run_and_time_fn(buf, len, iterations, fn);
 
@@ -267,23 +268,22 @@ int main() {
 
 
   // No actual init fn necessary. Just passing in due to janky code structure.
-//  auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, make_naive_list, noop);
-//  auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, make_naive_list, naive_loop);
-//  auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, make_naive_list, naive_list);
-  auto cycles_per_load_naive_list2 = sweep_timing(buf, sizes, iters, make_naive_list2, traverse_list);
+  auto cycles_per_load_noop = sweep_timing(buf, sizes, iters, false, make_naive_list, noop);
+  auto cycles_per_load_naive_loop = sweep_timing(buf, sizes, iters, false, make_naive_list, naive_loop);
+  auto cycles_per_load_naive_list = sweep_timing(buf, sizes, iters, false, make_naive_list, naive_list);
+  auto cycles_per_load_naive_list2 = sweep_timing(buf, sizes, iters, false, make_naive_list2, traverse_list);
 
-  auto cycles_per_load_list = sweep_timing(buf, sizes, iters, make_list, naive_list); // BUG!
+  auto cycles_per_load_list = sweep_timing(buf, sizes, iters, false, make_list, naive_list);
+  auto cycles_per_load_far_list = sweep_timing(buf, sizes, iters, true, make_list, naive_list);
 
-//  make_list(buf, MAX_CACHE_SIZE, true);
-//  auto cycles_per_load_far_list = sweep_timing(buf, sizes, iters, naive_list);
 
   std::cout << join(sizes_in_bytes) << ",pattern" << std::endl;
-//  std::cout << join(cycles_per_load_noop) << ",nop" << std::endl;
-//  std::cout << join(cycles_per_load_naive_loop) << ",loop" << std::endl;
-// std::cout << join(cycles_per_load_naive_list) << ",linear list" << std::endl;
+  std::cout << join(cycles_per_load_noop) << ",nop" << std::endl;
+  std::cout << join(cycles_per_load_naive_loop) << ",loop" << std::endl;
+  std::cout << join(cycles_per_load_naive_list) << ",linear list" << std::endl;
   std::cout << join(cycles_per_load_naive_list2) << ",linear list2" << std::endl;
   std::cout << join(cycles_per_load_list) << ",random list" << std::endl;
-  // std::cout << join(cycles_per_load_far_list) << ",far list" << std::endl;
+  std::cout << join(cycles_per_load_far_list) << ",far list" << std::endl;
 
   return 0;
 }
