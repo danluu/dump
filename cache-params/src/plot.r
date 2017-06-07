@@ -12,9 +12,15 @@ raw_data <- read.csv(file="result.csv", header=TRUE, sep=",")
 data <- melt(raw_data,id.vars=c("pattern"))
 
 ggplot(data, aes(variable, value)) + geom_point(aes(colour=factor(pattern))) +
+ # scale_y_log10(
+ #   breaks = scales::trans_breaks("log10", function(x) 10^x),
+ #   labels = scales::trans_format("log10", scales::math_format(10^.x))
+ # ) +
+ # This janky method of generating breaks is because gridSVG produces SVG output that doesn't display correctly in chrome.
+ expand_limits(y=1) +
  scale_y_log10(
-   breaks = scales::trans_breaks("log10", function(x) 10^x),
-   labels = scales::trans_format("log10", scales::math_format(10^.x))
+   breaks = c(1, 10, 100),
+   labels = c("10⁰","10¹","10²")
  ) +
  labs(x="size",y="cycles/load",colour="pattern") +
  theme_minimal() +
