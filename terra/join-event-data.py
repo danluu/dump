@@ -1,13 +1,9 @@
-import json
+# Event data is a list of games scattered into files by month. We want to join
+# the data into a single file and create a dict from game => game data to allow
+# indexing for other analysis.
 
-# filter for:
-# 4p
-# original map (base_map => 126fe960806d587c78546b30f1a90853b1ada468)
-# No drop
-# No exclude_from_stats
-# id_hash not null
-# No "fire-and-ice-final-scoring"
-# Player has rating
+import glob
+import json
 
 def keep_game(game, all_players):
     if game["base_map"] != "126fe960806d587c78546b30f1a90853b1ada468":
@@ -32,7 +28,10 @@ def keep_game(game, all_players):
             return False
 
     return True
-    
+
+all_games = {}
+with open('all_games.json', 'r') as f:
+    all_games = json.load(f)
 
 all_players = {}
 with open('all_players.json', 'r') as f:
@@ -43,20 +42,18 @@ with open('ratings.json', 'r') as f:
     parsed = json.load(f)
     ratings = parsed["players"]
 
-all_events = {}
-with open('all_events.json', 'r') as f:
-    all_events = json.load(f)
+filtered_events = {}
+for filename in glob.iglob('game-data/*.json'):
+    with open(filename) as f:
+        json_data = json.load(f)
+        for game in json_data:
+            game_name = game['game']
+            summary_game_data = all_games[game_name]
+            if keep_game(summary_game_data, all_players):
+                filtered_events[game_name] = game
 
-filtered_games = {}
-with open('all_games.json', 'r') as f:
-    parsed = json.load(f)
-    for game_name in parsed:        
-        game = parsed[game_name]
-        if keep_game(game, all_players):
-            filtered_games[game_name] = game
+with open('filtered_events.json', 'w') as outfile:
+    json.dump(filtered_events, outfile)
 
-with open('filtered_games.json', 'w') as outfile:
-    json.dump(filtered_games, outfile) 
-            
-        
+
 

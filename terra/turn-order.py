@@ -2,7 +2,7 @@ import json
 
 lowest_score = 300.0
 highest_score = 1300.0
-increment = 100.0
+increment = 10.0
 
 ratings = {}
 with open('ratings.json', 'r') as f:
@@ -57,8 +57,8 @@ with open('filtered_games.json', 'r') as f:
                 num_wins[bucket][highest_start_order-1] += 1
 
 
-print(num_wins)
-print(total_games)
+# print(num_wins)
+# print(total_games)
     
 print("rating,player,win rate")
 for bucket in range(num_slots):
