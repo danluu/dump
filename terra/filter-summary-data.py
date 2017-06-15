@@ -46,6 +46,8 @@ def keep_game(game_name, game, all_players, keep_if):
         if not 'score' in ratings[username]:
             return False
 
+    # TODO: hoist game option loop to top level.
+
     if "fire-and-ice-final-scoring" in keep_if:
         seen_fi_scoring = False
         for option in game["options"]:
@@ -56,6 +58,21 @@ def keep_game(game_name, game, all_players, keep_if):
                     seen_fi_scoring = True
         if keep_if["fire-and-ice-final-scoring"] == True and seen_fi_scoring == False:
             return False
+
+    if "fire-and-ice-factions" in keep_if:
+        # We look for all or none here, so we check for count == 3.
+        # We also disallow original or v2 variable factions.
+        fi_faction_count = 0
+        for option in game["options"]:
+            if option.startswith("fire-and-ice-factions"):
+                if keep_if["fire-and-ice-factions"] == False:
+                    return False
+                if option == "fire-and-ice-factions/variable" or option == "fire-and-ice-factions/variable_v2":
+                    return False
+                fi_faction_count += 1
+        if keep_if["fire-and-ice-factions"] == True:
+            if fi_faction_count != 3:
+                return False
 
     # if not game_name in filtered_events:
     #     return False
@@ -77,22 +94,33 @@ def keep_game(game_name, game, all_players, keep_if):
     #                 if didnt_take_fav11_in_round1(faction):
     #                     return False
     return True
-    
+
+# Fire-and-ice factions here means all f&i factions enabled, shapeshifters v3 or later.
 keep_params = {
     "base_map": True,
     "player_count": 4,
     "fire-and-ice-final-scoring": False,
+    "fire-and-ice-factions": False,
 }
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-fis", "--fireandicescoring", help="[t/f]")
+parser.add_argument("-fif", "--fireandicefactions", help="[t/f]")
 parser.add_argument("-o", "--output", help="[filename]")
 args = parser.parse_args()
 
-if args.fireandicescoring.lower()[0] == 't':
+if args.fireandicescoring.lower() == "t" or args.fireandicescoring.lower() == "true":
     keep_params["fire-and-ice-final-scoring"] = True
-elif args.fireandicescoring.lower()[0] == 'f':
+elif args.fireandicescoring.lower() == 'f' or args.fireandicescoring.lower() == "false":
     keep_params["fire-and-ice-final-scoring"] = False
+else:
+    print("Don't understand --fireandicescoring argument", args.fireandicescoring)
+    assert(False)
+
+if args.fireandicefactions.lower() == "t" or args.fireandicefactions.lower() == "true":
+    keep_params["fire-and-ice-factions"] = True
+elif args.fireandicescoring.lower() == 'f' or args.fireandicefactions.lower() == "false":
+    keep_params["fire-and-ice-factions"] = False
 else:
     print("Don't understand --fireandicescoring argument", args.fireandicescoring)
     assert(False)
