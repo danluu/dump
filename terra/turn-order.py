@@ -1,8 +1,9 @@
 import json
 
-lowest_score = 300.0
+lowest_score = 1000.0
 highest_score = 1300.0
 increment = 10.0
+num_slots = int((highest_score - lowest_score) / increment)
 
 ratings = {}
 with open('ratings.json', 'r') as f:
@@ -23,16 +24,11 @@ def lowest_rating_in_game(game):
     assert(lowest != 10000.0)
     return lowest
 
-# TODO: off by one?
-num_slots = int((highest_score - lowest_score) / increment)
-total_games = [0] * num_slots
-num_wins = [[0 for i in range(4)] for j in range(num_slots)]
+def win_rate_vs_rating(games):
+    total_games = [0] * num_slots
+    num_wins = [[0 for i in range(4)] for j in range(num_slots)]
 
-# Already filtered to 4p, base map, no drops.
-with open('filtered_games.json', 'r') as f:
-# with open('filtered_games.fav11.json', 'r') as f:
-    parsed = json.load(f)
-    for junk, game in parsed.items():
+    for junk, game in games.items():
         lowest_rating = lowest_rating_in_game(game)
         # print("lowest", lowest_rating)
         for bucket in range(num_slots):
@@ -51,7 +47,16 @@ with open('filtered_games.json', 'r') as f:
                 # print("bucket {} player {}".format(bucket, highest_start_order))
                 # print(num_wins)
                 num_wins[bucket][highest_start_order-1] += 1
+    return total_games, num_wins
 
+
+total_games = []
+num_wins = []
+# Already filtered to 4p, base map, no drops.
+with open('filtered_games.json', 'r') as f:
+# with open('filtered_games.fav11.json', 'r') as f:
+    parsed = json.load(f)
+    total_games, num_wins = win_rate_vs_rating(parsed)
 
 print(num_wins)
 print(total_games)
