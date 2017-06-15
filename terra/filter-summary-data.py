@@ -20,11 +20,18 @@ def didnt_take_fav11_in_round1(faction):
     return True
     
 
-def keep_game(game_name, game, all_players):
-    if game["base_map"] != "126fe960806d587c78546b30f1a90853b1ada468":
-        return False
-    if game["player_count"] != 4:
-        return False
+def keep_game(game_name, game, all_players, keep_if):
+    if "base_map" in keep_if:
+        if keep_if["base_map"] == True and game["base_map"] != "126fe960806d587c78546b30f1a90853b1ada468":
+            return False
+        elif keep_if["base_map"] == False and game["base_map"] == "126fe960806d587c78546b30f1a90853b1ada468":
+            return False
+
+    if "player_count" in keep_if:
+        required_count = keep_if["player_count"]
+        if game["player_count"] != required_count:
+            return False
+
     for player in game["players"]:
         if player["exclude_from_stats"] == 1 or player["dropped"] == 1:
             return False
@@ -38,29 +45,36 @@ def keep_game(game_name, game, all_players):
         if not 'score' in ratings[username]:
             return False
 
-    for option in game["options"]:
-        if option == "fire-and-ice-final-scoring":
+    if "fire-and-ice-final-scoring" in keep_if:
+        seen_fi_scoring = False
+        for option in game["options"]:
+            if option == "fire-and-ice-final-scoring":
+                if keep_if["fire-and-ice-final-scoring"] == False:
+                    return False
+                else:
+                    seen_fi_scoring = True
+        if keep_if["fire-and-ice-final-scoring"] == True and seen_fi_scoring == False:
             return False
 
-    if not game_name in filtered_events:
-        return False
-    else:
-        game_events = filtered_events[game_name]
-        for faction_name,faction in game_events["events"]["faction"].items():
-            # Ever went first?
-            if "order:1" in faction:
-                # Went first in rd1?
-                if "1" in faction["order:1"]["round"]:
-                    if didnt_take_fav11_in_round1(faction):
-                        return False
-            if "order:2" in faction:
-                if "1" in faction["order:2"]["round"]:
-                    if didnt_take_fav11_in_round1(faction):
-                        return False
-            if "order:3" in faction:
-                if "1" in faction["order:3"]["round"]:
-                    if didnt_take_fav11_in_round1(faction):
-                        return False
+    # if not game_name in filtered_events:
+    #     return False
+    # else:
+    #     game_events = filtered_events[game_name]
+    #     for faction_name,faction in game_events["events"]["faction"].items():
+    #         # Ever went first?
+    #         if "order:1" in faction:
+    #             # Went first in rd1?
+    #             if "1" in faction["order:1"]["round"]:
+    #                 if didnt_take_fav11_in_round1(faction):
+    #                     return False
+    #         if "order:2" in faction:
+    #             if "1" in faction["order:2"]["round"]:
+    #                 if didnt_take_fav11_in_round1(faction):
+    #                     return False
+    #         if "order:3" in faction:
+    #             if "1" in faction["order:3"]["round"]:
+    #                 if didnt_take_fav11_in_round1(faction):
+    #                     return False
     return True
     
 
@@ -73,20 +87,26 @@ with open('ratings.json', 'r') as f:
     parsed = json.load(f)
     ratings = parsed["players"]
 
-filtered_events = {}
-with open('filtered_events.json', 'r') as f:
-    filtered_events = json.load(f)
+# filtered_events = {}
+# with open('filtered_events.json', 'r') as f:
+#     filtered_events = json.load(f)
+
+keep_params = {
+    "base_map": True,
+    "player_count": 4,
+    "fire-and-ice-final-scoring": False,
+}
 
 filtered_games = {}
 with open('all_games.json', 'r') as f:
     parsed = json.load(f)
     for game_name in parsed:        
         game = parsed[game_name]
-        if keep_game(game_name, game, all_players):
+        if keep_game(game_name, game, all_players, keep_params):
             filtered_games[game_name] = game
 
-# with open('filtered_games.json', 'w') as outfile:
-with open('filtered_games.fav11.json', 'w') as outfile:
+with open('filtered_games.json', 'w') as outfile:
+# with open('filtered_games.fav11.json', 'w') as outfile:
     json.dump(filtered_games, outfile) 
 
             
