@@ -9,11 +9,6 @@ with open('ratings.json', 'r') as f:
     parsed = json.load(f)
     ratings = parsed["players"]
 
-games = {}
-with open('filtered_games.json', 'r') as f:
-    games = json.load(f)
-
-
 players = {}
 with open('all_players.json', 'r') as f:
     players = json.load(f)
@@ -35,6 +30,7 @@ num_wins = [[0 for i in range(4)] for j in range(num_slots)]
 
 # Already filtered to 4p, base map, no drops.
 with open('filtered_games.json', 'r') as f:
+# with open('filtered_games.fav11.json', 'r') as f:
     parsed = json.load(f)
     for junk, game in parsed.items():
         lowest_rating = lowest_rating_in_game(game)
@@ -57,8 +53,8 @@ with open('filtered_games.json', 'r') as f:
                 num_wins[bucket][highest_start_order-1] += 1
 
 
-# print(num_wins)
-# print(total_games)
+print(num_wins)
+print(total_games)
     
 print("rating,player,win rate")
 for bucket in range(num_slots):
@@ -66,4 +62,6 @@ for bucket in range(num_slots):
         bucket_rating = lowest_score + bucket * increment
         player_number = i+1
         win_pct = num_wins[bucket][i] / total_games[bucket]
-        print("{},{},{}".format(bucket_rating, player_number, win_pct))
+        # print("{},{}.fav11.123,{}".format(bucket_rating, player_number, win_pct))
+        print("{},{}.all,{}".format(bucket_rating, player_number, win_pct))
+        # print("{},{},true,{}".format(bucket_rating, player_number, win_pct))
