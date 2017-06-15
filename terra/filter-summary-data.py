@@ -99,7 +99,7 @@ def keep_game(game_name, game, all_players, keep_if):
 keep_params = {
     "base_map": True,
     "player_count": 4,
-    "fire-and-ice-final-scoring": False,
+    # "fire-and-ice-final-scoring": False,
     "fire-and-ice-factions": False,
 }
 
@@ -109,12 +109,13 @@ parser.add_argument("-fif", "--fireandicefactions", help="[t/f]")
 parser.add_argument("-o", "--output", help="[filename]")
 args = parser.parse_args()
 
-if args.fireandicescoring.lower() == "t" or args.fireandicescoring.lower() == "true":
-    keep_params["fire-and-ice-final-scoring"] = True
-elif args.fireandicescoring.lower() == 'f' or args.fireandicescoring.lower() == "false":
-    keep_params["fire-and-ice-final-scoring"] = False
-else:
-    print("Don't understand --fireandicescoring argument", args.fireandicescoring)
+if args.fireandicescoring != None:
+    if args.fireandicescoring.lower() == "t" or args.fireandicescoring.lower() == "true":
+        keep_params["fire-and-ice-final-scoring"] = True
+    elif args.fireandicescoring.lower() == 'f' or args.fireandicescoring.lower() == "false":
+        keep_params["fire-and-ice-final-scoring"] = False
+    else:
+        print("Don't understand --fireandicescoring argument", args.fireandicescoring)
     assert(False)
 
 if args.fireandicefactions.lower() == "t" or args.fireandicefactions.lower() == "true":

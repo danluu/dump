@@ -49,24 +49,44 @@ def win_rate_vs_rating(games):
                 num_wins[bucket][highest_start_order-1] += 1
     return total_games, num_wins
 
+def process_games_file(filename):
+    with open(filename, 'r') as f:
+        parsed = json.load(f)
+        return win_rate_vs_rating(parsed)
 
-total_games = []
-num_wins = []
-# Already filtered to 4p, base map, no drops.
-with open('filtered_games.json', 'r') as f:
-# with open('filtered_games.fav11.json', 'r') as f:
-    parsed = json.load(f)
-    total_games, num_wins = win_rate_vs_rating(parsed)
+# total_games, num_wins = process_games_file("filtered_games.json")
 
-print(num_wins)
-print(total_games)
-    
-print("rating,player,win rate")
-for bucket in range(num_slots):
-    for i in range(len(num_wins[bucket])):
-        bucket_rating = lowest_score + bucket * increment
+def fi_vs_nofi():
+    total_games = {}
+    num_wins = {}
+    game_types = ["base", "fif"]
+    total_games["base"], num_wins["base"] = process_games_file("filtered_games.json")
+    total_games["fif"], num_wins["fif"] = process_games_file("filtered_games.fif.json")
+
+    print(total_games)
+
+    for i in range(len(num_wins["base"][0])):
         player_number = i+1
-        win_pct = num_wins[bucket][i] / total_games[bucket]
-        # print("{},{}.fav11.123,{}".format(bucket_rating, player_number, win_pct))
-        print("{},{}.all,{}".format(bucket_rating, player_number, win_pct))
-        # print("{},{},true,{}".format(bucket_rating, player_number, win_pct))
+        outname = "order.fif.{}.csv".format(player_number)
+        with open(outname, 'w') as outfile:
+            print("rating,player,win rate", file=outfile)
+            for bucket in range(num_slots):
+                bucket_rating = lowest_score + bucket * increment
+                for gt in game_types:
+                    win_pct = num_wins[gt][bucket][i] / total_games[gt][bucket]
+                    print("{},{}.{},{}".format(bucket_rating, player_number, gt, win_pct), file=outfile)
+
+fi_vs_nofi()
+
+# print(num_wins)
+# print(total_games)
+
+# print("rating,player,win rate")
+# for bucket in range(num_slots):
+#     for i in range(len(num_wins[bucket])):
+#         bucket_rating = lowest_score + bucket * increment
+#         player_number = i+1
+#         win_pct = num_wins[bucket][i] / total_games[bucket]
+#         # print("{},{}.fav11.123,{}".format(bucket_rating, player_number, win_pct))
+#         print("{},{}.all,{}".format(bucket_rating, player_number, win_pct))
+#         # print("{},{},true,{}".format(bucket_rating, player_number, win_pct))
