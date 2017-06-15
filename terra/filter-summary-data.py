@@ -1,3 +1,4 @@
+import argparse
 import json
 
 # filter for:
@@ -77,6 +78,24 @@ def keep_game(game_name, game, all_players, keep_if):
     #                     return False
     return True
     
+keep_params = {
+    "base_map": True,
+    "player_count": 4,
+    "fire-and-ice-final-scoring": False,
+}
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-fis", "--fireandicescoring", help="[t/f]")
+parser.add_argument("-o", "--output", help="[filename]")
+args = parser.parse_args()
+
+if args.fireandicescoring.lower()[0] == 't':
+    keep_params["fire-and-ice-final-scoring"] = True
+elif args.fireandicescoring.lower()[0] == 'f':
+    keep_params["fire-and-ice-final-scoring"] = False
+else:
+    print("Don't understand --fireandicescoring argument", args.fireandicescoring)
+    assert(False)
 
 all_players = {}
 with open('all_players.json', 'r') as f:
@@ -91,12 +110,6 @@ with open('ratings.json', 'r') as f:
 # with open('filtered_events.json', 'r') as f:
 #     filtered_events = json.load(f)
 
-keep_params = {
-    "base_map": True,
-    "player_count": 4,
-    "fire-and-ice-final-scoring": False,
-}
-
 filtered_games = {}
 with open('all_games.json', 'r') as f:
     parsed = json.load(f)
@@ -105,10 +118,8 @@ with open('all_games.json', 'r') as f:
         if keep_game(game_name, game, all_players, keep_params):
             filtered_games[game_name] = game
 
-with open('filtered_games.json', 'w') as outfile:
+# with open('filtered_games.json', 'w') as outfile:
 # with open('filtered_games.fav11.json', 'w') as outfile:
+with open(args.output, 'w') as outfile:
     json.dump(filtered_games, outfile) 
-
-            
-        
 
