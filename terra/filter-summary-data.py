@@ -10,15 +10,20 @@ import json
 # No "fire-and-ice-final-scoring"
 # Player has rating
 
+debug_fav11 = set()
+with open('fav11-games.txt') as f:
+    for line in f:
+        debug_fav11.add(line.strip())
+
 def didnt_take_fav11_in_round1(faction):
     # Never took FAV11?
     if not "favor:FAV11" in faction:
-        return False
+        return True
     # Didn't take FAV11 in round 1?
     if not "1" in faction["favor:FAV11"]["round"]:
-        return False
+        return True
 
-    return True
+    return False
     
 
 def keep_game(game_name, game, all_players, keep_if):
@@ -74,38 +79,58 @@ def keep_game(game_name, game, all_players, keep_if):
             if fi_faction_count != 3:
                 return False
 
-    # if not game_name in filtered_events:
-    #     return False
-    # else:
-    #     game_events = filtered_events[game_name]
-    #     for faction_name,faction in game_events["events"]["faction"].items():
-    #         # Ever went first?
-    #         if "order:1" in faction:
-    #             # Went first in rd1?
-    #             if "1" in faction["order:1"]["round"]:
-    #                 if didnt_take_fav11_in_round1(faction):
-    #                     return False
-    #         if "order:2" in faction:
-    #             if "1" in faction["order:2"]["round"]:
-    #                 if didnt_take_fav11_in_round1(faction):
-    #                     return False
-    #         if "order:3" in faction:
-    #             if "1" in faction["order:3"]["round"]:
-    #                 if didnt_take_fav11_in_round1(faction):
-    #                     return False
+    # if "fav11-123" in keep_game and keep_game["fav11-123"] == True:
+    if not game_name in filtered_events:
+        if game_name in debug_fav11:
+            print("Failed to find in filtered_events", game_name)
+        return False
+    else:
+        game_events = filtered_events[game_name]
+        for faction_name,faction in game_events["events"]["faction"].items():
+            # Ever went first?
+            if "order:1" in faction:
+                # Went first in rd1?
+                if "1" in faction["order:1"]["round"]:
+                    if didnt_take_fav11_in_round1(faction):
+                        if game_name in debug_fav11:
+                            print("Failed p1 check", game_name, faction_name)
+                        return False
+            if "order:2" in faction:
+                if "1" in faction["order:2"]["round"]:
+                    if didnt_take_fav11_in_round1(faction):
+                        if game_name in debug_fav11:
+                            print("Failed p2 check", game_name, faction_name)
+                        return False
+            if "order:3" in faction:
+                if "1" in faction["order:3"]["round"]:
+                    if didnt_take_fav11_in_round1(faction):
+                        if game_name in debug_fav11:
+                            print(game_name)
+
+                            # print(faction)
+                            # print(faction["favor:FAV11"])
+
+                            # if not "favor:FAV11" in faction:
+                            #     print("Fail 1")
+                            # if not "1" in faction["favor:FAV11"]["round"]:
+                            #     print("Fail 2")
+
+                        return False
     return True
 
 # Fire-and-ice factions here means all f&i factions enabled, shapeshifters v3 or later.
 keep_params = {
     "base_map": True,
     "player_count": 4,
-    # "fire-and-ice-final-scoring": False,
+    "fire-and-ice-final-scoring": False,
     "fire-and-ice-factions": False,
+    "fav11-123": True, # TODO: remove from default.
 }
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-fis", "--fireandicescoring", help="[t/f]")
 parser.add_argument("-fif", "--fireandicefactions", help="[t/f]")
+parser.add_argument("-f11", "--fav11_123", help="[t/f]")
 parser.add_argument("-o", "--output", help="[filename]")
 args = parser.parse_args()
 
@@ -116,15 +141,18 @@ if args.fireandicescoring != None:
         keep_params["fire-and-ice-final-scoring"] = False
     else:
         print("Don't understand --fireandicescoring argument", args.fireandicescoring)
-    assert(False)
+        assert(False)
 
-if args.fireandicefactions.lower() == "t" or args.fireandicefactions.lower() == "true":
-    keep_params["fire-and-ice-factions"] = True
-elif args.fireandicescoring.lower() == 'f' or args.fireandicefactions.lower() == "false":
-    keep_params["fire-and-ice-factions"] = False
-else:
-    print("Don't understand --fireandicescoring argument", args.fireandicescoring)
-    assert(False)
+if args.fireandicefactions != None:
+    if args.fireandicefactions.lower() == "t" or args.fireandicefactions.lower() == "true":
+        keep_params["fire-and-ice-factions"] = True
+    elif args.fireandicescoring.lower() == 'f' or args.fireandicefactions.lower() == "false":
+        keep_params["fire-and-ice-factions"] = False
+    else:
+        print("Don't understand --fireandicescoring argument", args.fireandicescoring)
+        assert(False)
+
+# TODO: handle fav11 argument.
 
 all_players = {}
 with open('all_players.json', 'r') as f:
@@ -135,9 +163,9 @@ with open('ratings.json', 'r') as f:
     parsed = json.load(f)
     ratings = parsed["players"]
 
-# filtered_events = {}
-# with open('filtered_events.json', 'r') as f:
-#     filtered_events = json.load(f)
+filtered_events = {}
+with open('filtered_events.json', 'r') as f:
+    filtered_events = json.load(f)
 
 filtered_games = {}
 with open('all_games.json', 'r') as f:

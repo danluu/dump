@@ -8,5 +8,4 @@ with open('/Users/danluu/dev/dump/terra/filtered_events.json','r') as f:
     parsed = json.load(f)
     # print(json.dumps(parsed, indent=2))
 
-print(parsed["29"]["events"]["faction"]["chaosmagicians"])
-    
+print(json.dumps(parsed["4pLeague_S1_D1L1_G4"]["events"]["faction"], indent=2))
