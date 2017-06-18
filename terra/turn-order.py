@@ -76,7 +76,30 @@ def fi_vs_nofi():
                     win_pct = num_wins[gt][bucket][i] / total_games[gt][bucket]
                     print("{},{}.{},{}".format(bucket_rating, player_number, gt, win_pct), file=outfile)
 
-fi_vs_nofi()
+# TODO: refactor code in common with fi_vs_nofi.
+
+def fav11():
+    total_games = {}
+    num_wins = {}
+    game_types = ["all", "fav11"]
+    total_games["all"], num_wins["all"] = process_games_file("filtered_games.json")
+    total_games["fav11"], num_wins["fav11"] = process_games_file("filtered_games.fav11.json")
+
+    print(total_games)
+
+    for i in range(len(num_wins["all"][0])):
+        player_number = i+1
+        outname = "order.fav11.{}.csv".format(player_number)
+        with open(outname, 'w') as outfile:
+            print("rating,player,win rate", file=outfile)
+            for bucket in range(num_slots):
+                bucket_rating = lowest_score + bucket * increment
+                for gt in game_types:
+                    win_pct = num_wins[gt][bucket][i] / total_games[gt][bucket]
+                    print("{},{}.{},{}".format(bucket_rating, player_number, gt, win_pct), file=outfile)
+
+# fi_vs_nofi()
+fav11()
 
 # print(num_wins)
 # print(total_games)
