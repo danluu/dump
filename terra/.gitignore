@@ -1,0 +1,6 @@
+*.json
+*.csv
+*~
+output*
+*.svg
+*.txt

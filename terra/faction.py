@@ -3,9 +3,9 @@ import json
 
 # TODO: refactor to share code with the very similar turn-order.py.
 
-lowest_score = 1000.0
-highest_score = 1260.0
-increment = 10.0
+lowest_score = 900.0
+highest_score = 1320.0
+increment = 20.0
 num_slots = int((highest_score - lowest_score) / increment)
 
 factions = [
