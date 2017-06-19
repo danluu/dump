@@ -81,10 +81,10 @@ def keep_game(game_name, game, all_players, keep_if):
 
     # Always remove old variable factions. Note that this conflicts with the above code block.
     for option in game["options"]:
-        # if option.startswith("fire-and-ice-factions/variable") and option != "fire-and-ice-factions/variable_v5":
-        #     return False
-        if option == "fire-and-ice-factions/variable" or option == "fire-and-ice-factions/variable_v2":
+        if option.startswith("fire-and-ice-factions/variable") and option != "fire-and-ice-factions/variable_v5":
             return False
+        # if option == "fire-and-ice-factions/variable" or option == "fire-and-ice-factions/variable_v2":
+        #     return False
 
     # # if "fav11-123" in keep_game and keep_game["fav11-123"] == True:
     # if not game_name in filtered_events:
