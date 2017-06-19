@@ -31,6 +31,31 @@ factions = [
     'fakirs',
 ]
 
+# https://boardgamegeek.com/thread/1758810/new-starting-vps-base-game-map
+faction_adjustment = {
+    'swarmlings': 2,
+    'darklings': -5,
+    'chaosmagicians': -1,
+    'icemaidens': 0,
+    'riverwalkers': 1,
+    'auren': 7,
+    'witches': -1,
+    'mermaids': -1,
+    'alchemists': 7,
+    'acolytes': 3,
+    'halflings': 0,
+    'cultists': -4,
+    'giants': 5,
+    'engineers': -4,
+    'yetis': 2,
+    'nomads': -1,
+    'dwarves': 0,
+    'dragonlords': 4,
+    'shapeshifters': 2,
+    'fakirs': 13,
+}
+
+
 ratings = {}
 with open('ratings.json', 'r') as f:
     parsed = json.load(f)
@@ -67,8 +92,10 @@ def win_rate_vs_rating(games):
                 for player in game['players']:
                     faction = player['faction']
                     total_games[bucket][faction] += 1
-                    if player['vp'] > highest_vp:
-                        highest_vp = player['vp']
+                    vps = player['vp']
+                    # vps + = faction_adjustment[faction]
+                    if vps > highest_vp:
+                        highest_vp = vps
                         highest_faction = faction
                 assert(highest_faction != 'FAILED_TO_FIND_FACTION')
                 # print("bucket {} player {}".format(bucket, highest_start_order))
@@ -93,9 +120,11 @@ def base_factions():
     for bucket in range(num_slots):
         total_games_in_bucket_debug = 0
         for faction in num_wins[bucket]:
-            bucket_rating = lowest_score + bucket * increment
-            win_pct = num_wins[bucket][faction] / total_games[bucket][faction]
-            print("{},{},{}".format(bucket_rating, faction, win_pct))
+            # Not enough data due to recent v4 faction adjustment.
+            if faction != 'riverwalkers' and faction != 'shapeshifters':
+                bucket_rating = lowest_score + bucket * increment
+                win_pct = num_wins[bucket][faction] / total_games[bucket][faction]
+                print("{},{},{}".format(bucket_rating, faction, win_pct))
 
 base_factions()
 
