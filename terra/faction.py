@@ -4,8 +4,8 @@ import json
 # TODO: refactor to share code with the very similar turn-order.py.
 
 lowest_score = 900.0
-highest_score = 1320.0
-increment = 20.0
+increment = 50.0
+highest_score = 1300.0 + increment
 num_slots = int((highest_score - lowest_score) / increment)
 
 factions = [
@@ -93,7 +93,7 @@ def win_rate_vs_rating(games):
                     faction = player['faction']
                     total_games[bucket][faction] += 1
                     vps = player['vp']
-                    # vps + = faction_adjustment[faction]
+                    # vps += faction_adjustment[faction]
                     if vps > highest_vp:
                         highest_vp = vps
                         highest_faction = faction
