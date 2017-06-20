@@ -8,7 +8,20 @@ increment = 50.0
 highest_score = 1300.0 + increment
 num_slots = int((highest_score - lowest_score) / increment)
 
-factions = [
+
+factions_top_base = {
+    'yetis',
+    'engineers',
+    'alchemists',
+    'darklings',
+    'dragonlords',
+    'acolytes',
+    'halflings',
+    'cultists',
+    'witches',
+}
+
+faction_splits = [
     'swarmlings',
     'darklings',
     'chaosmagicians',
@@ -30,6 +43,30 @@ factions = [
     'shapeshifters',
     'fakirs',
 ]
+
+faction_splits = {
+    'swarmlings': 1,
+    'darklings': 0,
+    'chaosmagicians': 2,
+    'icemaidens': 1,
+    'riverwalkers': 1,
+    'auren': 2,
+    'witches': 1,
+    'mermaids': 1,
+    'alchemists': 0,
+    'acolytes': 0,
+    'halflings': 1,
+    'cultists': 1,
+    'giants': 2,
+    'engineers': 0,
+    'yetis': 0,
+    'nomads': 1,
+    'dwarves': 1,
+    'dragonlords': 0,
+    'shapeshifters': 1,
+    'fakirs': 2,
+}
+
 
 # https://boardgamegeek.com/thread/1758810/new-starting-vps-base-game-map
 faction_adjustment = {
@@ -75,7 +112,7 @@ def lowest_rating_in_game(game):
     assert(lowest != 10000.0)
     return lowest
 
-def win_rate_vs_rating(games):
+def win_rate_vs_rating(games, do_adjustment):
     total_games = [collections.defaultdict(int) for i in range(num_slots)]
     num_wins = [collections.defaultdict(int) for i in range(num_slots)]
 
@@ -93,7 +130,8 @@ def win_rate_vs_rating(games):
                     faction = player['faction']
                     total_games[bucket][faction] += 1
                     vps = player['vp']
-                    # vps += faction_adjustment[faction]
+                    if (do_adjustment):
+                        vps += faction_adjustment[faction]
                     if vps > highest_vp:
                         highest_vp = vps
                         highest_faction = faction
@@ -103,10 +141,10 @@ def win_rate_vs_rating(games):
                 num_wins[bucket][highest_faction] += 1
     return total_games, num_wins
 
-def process_games_file(filename):
+def process_games_file(filename, do_adjustment):
     with open(filename, 'r') as f:
         parsed = json.load(f)
-        return win_rate_vs_rating(parsed)
+        return win_rate_vs_rating(parsed, do_adjustment)
 
 # total_games, num_wins = process_games_file("filtered_games.json")
 # print(total_games)
@@ -114,17 +152,25 @@ def process_games_file(filename):
 
 
 def base_factions():
-    print("rating,faction,win rate")
-    total_games, num_wins = process_games_file("filtered_games.json")
+    total_games, num_wins = process_games_file("filtered_games.json", False)
+
+    splits = [0,1,2]
+    handles = []
+
+    for ss in splits:
+        filename = "faction.{}.csv".format(ss)
+        handles.append(open(filename, 'w'))
+        print("rating,faction,win rate", file=handles[ss])
 
     for bucket in range(num_slots):
         total_games_in_bucket_debug = 0
         for faction in num_wins[bucket]:
             # Not enough data due to recent v4 faction adjustment.
             if faction != 'riverwalkers' and faction != 'shapeshifters':
+                ss = faction_splits[faction]
                 bucket_rating = lowest_score + bucket * increment
                 win_pct = num_wins[bucket][faction] / total_games[bucket][faction]
-                print("{},{},{}".format(bucket_rating, faction, win_pct))
+                print("{},{},{}".format(bucket_rating, faction, win_pct), file=handles[ss])
 
 base_factions()
 
