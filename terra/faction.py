@@ -92,6 +92,56 @@ faction_adjustment = {
     'fakirs': 13,
 }
 
+neighboring_colors = {
+    'darklings': ['brown', 'blue'],
+    'alchemists': ['brown', 'blue'],
+    'mermaids': ['black', 'green'],
+    'swarmlings': ['black', 'green'],
+    'witches': ['blue', 'grey'],
+    'auren': ['blue', 'grey'],
+    'engineers': ['green', 'red'],
+    'dwarves': ['green', 'red'],
+    'giants': ['grey', 'yellow'],
+    'chaosmagicians': ['grey', 'yellow'],
+    'nomads': ['red', 'brown'],
+    'fakirs': ['red', 'brown'],
+    'cultists': ['yellow', 'black'],
+    'halflings': ['yellow', 'black'],
+}
+
+color_to_faction = {
+    'black': {'darklings', 'alchemists'},
+    'blue': {'mermaids', 'swarmlings'},
+    'green': {'witches', 'auren'},
+    'grey': {'engineers', 'dwarves'},
+    'red': {'chaosmagicians', 'giants'},
+    'yellow': {'nomads', 'fakirs'},
+    'brown': {'cultists', 'halflings'},
+}
+
+def get_faction_neighbors(faction, factions_in_game):
+    num_neighbors = 0
+    neighbor = 'FAILED TO FIND FACTION'
+    for color in neighboring_colors[faction]:
+        for other_faction in factions_in_game:
+            if other_faction in color_to_faction[color]:
+                num_neighbors += 1
+                neighbor = color
+    if num_neighbors == 2:
+        neighbor = 'both'
+
+    if num_neighbors > 0:
+        return '{}.{}'.format(faction, neighbor)
+    else:
+        # We don't need this case, but we use this so that our
+        # debug sentinel value will fall through if we have a bug.
+        return '{}.none'.format(faction)
+    
+
+# Input: list of factions
+# Output: something like [darklings.both or darklings.blue, etc.]
+def factions_with_neighbors(factions_in_game):
+    return [get_faction_neighbors(faction, factions_in_game) for factions in factions_in_game]
 
 ratings = {}
 with open('ratings.json', 'r') as f:
@@ -112,26 +162,31 @@ def lowest_rating_in_game(game):
     assert(lowest != 10000.0)
     return lowest
 
-def win_rate_vs_rating(games, do_adjustment):
+def win_rate_vs_rating(games, do_adjustment, compute_neighbors):
     total_games = [collections.defaultdict(int) for i in range(num_slots)]
     num_wins = [collections.defaultdict(int) for i in range(num_slots)]
 
     for junk, game in games.items():
         lowest_rating = lowest_rating_in_game(game)
-        # print("lowest", lowest_rating)
         for bucket in range(num_slots):
             bucket_rating = lowest_score + bucket * increment
-            # print("bucket_rating", bucket_rating)
             highest_vp = -1
             highest_faction = 'FAILED_TO_FIND_FACTION'
+            
+            factions_in_game = []
+            for player in game['players']:
+                faction = player['faction']
+                factions_in_game.append(faction)
+
             if lowest_rating >= bucket_rating:
-                # print("incrementing bucket", bucket)
                 for player in game['players']:
                     faction = player['faction']
-                    total_games[bucket][faction] += 1
                     vps = player['vp']
                     if (do_adjustment):
                         vps += faction_adjustment[faction]
+                    if compute_neighbors:
+                        faction = get_faction_neighbors(faction, factions_in_game)
+                    total_games[bucket][faction] += 1
                     if vps > highest_vp:
                         highest_vp = vps
                         highest_faction = faction
@@ -141,18 +196,34 @@ def win_rate_vs_rating(games, do_adjustment):
                 num_wins[bucket][highest_faction] += 1
     return total_games, num_wins
 
-def process_games_file(filename, do_adjustment):
+def process_games_file(filename, do_adjustment, compute_neighbors):
     with open(filename, 'r') as f:
         parsed = json.load(f)
-        return win_rate_vs_rating(parsed, do_adjustment)
+        return win_rate_vs_rating(parsed, do_adjustment, compute_neighbors)
 
 # total_games, num_wins = process_games_file("filtered_games.json")
 # print(total_games)
 # print(num_wins)
 
+def rank_factions():
+    total_games, num_wins = process_games_file("filtered_games.json", True, True)
+
+    
+    for bucket in range(num_slots):
+        factions_with_rates = []
+        bucket_rating = lowest_score + bucket * increment
+        for faction in num_wins[bucket]:
+            win_pct = num_wins[bucket][faction] / total_games[bucket][faction]
+            factions_with_rates.append((faction, win_pct))
+
+        sorted_factions = sorted(factions_with_rates, key=lambda x: x[1])
+    
+        print("--------{}---------".format(bucket_rating))
+        for faction, win_pct in sorted_factions:
+            print("{:<24s}{:>.2f}".format(faction, win_pct))
 
 def base_factions():
-    total_games, num_wins = process_games_file("filtered_games.json", False)
+    total_games, num_wins = process_games_file("filtered_games.json", False, False)
 
     splits = [0,1,2]
     handles = []
@@ -172,5 +243,8 @@ def base_factions():
                 win_pct = num_wins[bucket][faction] / total_games[bucket][faction]
                 print("{},{},{}".format(bucket_rating, faction, win_pct), file=handles[ss])
 
-base_factions()
+# base_factions()
+
+rank_factions()
+
 

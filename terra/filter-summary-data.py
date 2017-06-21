@@ -130,8 +130,8 @@ def keep_game(game_name, game, all_players, keep_if):
 keep_params = {
     "base_map": True,
     "player_count": 4,
-    # "fire-and-ice-final-scoring": False,
-    # "fire-and-ice-factions": False,
+    "fire-and-ice-final-scoring": False,
+    "fire-and-ice-factions": False,
     # "fav11-123": True, # TODO: remove from default.
 }
 
