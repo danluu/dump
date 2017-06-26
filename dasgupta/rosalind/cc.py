@@ -1,29 +1,20 @@
 # Start with a set of unvisited nodes.
 # while the set is not empty, remove an arbitrary element from the set and run dfs.
 # In the dfs, visit every unvisited node.
+from collections import defaultdict
 
 def read_graph():
-    gr = dict()
-    header = True
+    gr = defaultdict(list)
     # with open('rosalind_cc.txt') as f:
     with open('/Users/danluu/Downloads/rosalind_cc.txt') as f:
-        for line in f:
-            
+        for line in f:            
             parts = line.split()
-            if (len(parts) != 2):
-                print("ERROR: unparsable line: ", parts)
-                assert(False)
-                            
-            n1 = int(parts[0])
-            n2 = int(parts[1])
-            if header:
-                header = False
-                # Create empty list for each node
-                for i in range(1, n1+1):
-                    gr[i] = []
-            else:
-                gr[n1].append(n2)
-                gr[n2].append(n1)
+            if len(parts) != 2:
+                raise Exception("ERROR: unparsable line: %s" % parts)
+            
+            n1, n2 = map(int, parts)
+            gr[n1].append(n2)
+            gr[n2].append(n1)
     return gr
 
 def dfs(node, unvisited):
@@ -34,12 +25,10 @@ def dfs(node, unvisited):
     return
 
 gr = read_graph()
-unvisited = set()
-for node in gr:
-    unvisited.add(node)
+unvisited = set(gr.keys())
 
 num_cc = 0
-while len(unvisited) != 0:
+while unvisited:
     node = unvisited.pop()
     num_cc += 1
     dfs(node, unvisited)
