@@ -13,6 +13,15 @@ def sattolo(a):
         a[i], a[j] = a[j], a[i]
     return a
 
+def is_derangement(a):
+    return True
+
+def derangement(n):
+    a = list(range(n))
+    while not is_derangement(a):
+        a = shuffle(a)
+    return a
+
 def check_uniformity(fn):
     length = 5
     bins = [[0 for junk0 in range(length)] for junk1 in range (length)]
