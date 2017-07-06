@@ -5,19 +5,21 @@
 #include <random>
 #include <sstream>
 #include <vector>
+#include <limits>
 
 #include "rdtsc.h"
 
-// TODO: warm up cache before timing starts. This could be done by doing one iteration before timing begins.
+static_assert(sizeof(size_t) == sizeof(uint64_t), "Program assumption about sizes invalidated");
 
+// TODO: warm up cache before timing starts. This could be done by doing one iteration before timing begins.
 constexpr size_t WORD_SIZE = 8;
-constexpr size_t BUFFER_SIZE = 1024 * 1024 * 128 * 4 / WORD_SIZE;
 constexpr size_t LINE_SIZE = 64 / WORD_SIZE;
 constexpr size_t LINE_SIZE_BITS = 6 - 3;
 constexpr size_t MAX_CACHE_SIZE = 128 * 1024 * 1024 / WORD_SIZE;
+constexpr size_t BUFFER_SIZE = 4 * MAX_CACHE_SIZE;
 // constexpr size_t MAX_CACHE_SIZE = 8 * 1024 / WORD_SIZE;
-constexpr size_t INTERNAL_ITERS = 32;
-constexpr size_t ITERS = 4;
+constexpr size_t INTERNAL_ITERS = 8;
+constexpr size_t ITERS = 2;
 
 // Backing buffer must be twice the size of measured cache size because of our naive scheme to send list accesses
 // to a distance location by flipping the high bit, which gives us half utilization of the buffer.
@@ -43,9 +45,6 @@ std::pair<uint64_t, uint64_t> noop(const std::vector<uint64_t>& buf, size_t size
   uint64_t cnt = 0;
   uint64_t tsc_before, tsc_after;
   RDTSC(tsc_before);
-  for (size_t ii = 0; ii < INTERNAL_ITERS; ++ii) {
-
-  }
   RDTSC(tsc_after);
   return std::make_pair(tsc_after - tsc_before, cnt);
 }
@@ -74,13 +73,12 @@ std::pair<uint64_t, uint64_t> naive_loop(const std::vector<uint64_t>& buf, size_
 
 void make_naive_list(std::vector<uint64_t>& buf, size_t size, bool) {
   for (int i = 0; i < buf.size(); ++i) {
-    if (i >= buf.size() - LINE_SIZE) {
+    if (i >= size - LINE_SIZE) {
       buf[i] = 0;
     } else {
       buf[i] = i + LINE_SIZE;
     }
   }
-  buf[buf.size() - 1] = 0;
 }
 
 void make_naive_list2(std::vector<uint64_t>& buf, size_t size, bool) {
@@ -94,22 +92,18 @@ void make_naive_list2(std::vector<uint64_t>& buf, size_t size, bool) {
 }
 
 std::pair<uint64_t, uint64_t> naive_list(const std::vector<uint64_t>& buf, size_t size) {
-  uint64_t cnt = 0;
   uint64_t tsc_before, tsc_after;
 
   // Warmup.
   size_t idx = 0;
   for (size_t i = 0; i < size; i += LINE_SIZE) {
     idx = buf[idx];
-    cnt += idx;
   }
-
 
   int iterations = (size / LINE_SIZE) * INTERNAL_ITERS;
 
   // Timed execution.
   RDTSC(tsc_before);
-  idx = 0;
   for (int i = 0; i < iterations; ++i) {
     idx = buf[idx];
   }
@@ -124,18 +118,13 @@ std::pair<uint64_t, uint64_t> traverse_list(const std::vector<uint64_t>& buf, si
   // std::cout << "traverse_list " << size << std::endl;
 
   uint64_t const* p = &buf[0];
-  uint64_t const* p_last = &buf[0];
 
   int iterations = (size / LINE_SIZE) * INTERNAL_ITERS;
 
   RDTSC(tsc_before);
   for (int i = 0; i < iterations; ++i) {
-    p_last = p;
     p = reinterpret_cast<uint64_t*>(*p);
-
-    // std::cout << p << ":" << p_last << ":" << p - p_last << std::endl;
   }
-
   RDTSC(tsc_after);
   return std::make_pair(tsc_after - tsc_before, reinterpret_cast<uint64_t>(p));
 }
@@ -197,12 +186,11 @@ void make_list(std::vector<uint64_t>& buf, size_t size, bool avoid_open_row) {
       new_high_bit = (mask & idx) ^ mask;
     }
     size_t new_idx = perm[i % (perm.size() - 1)] << LINE_SIZE_BITS;
-    uint64_t new_idx_near = new_idx;
+    // uint64_t new_idx_near = new_idx;
     new_idx = (new_idx & inverse_mask) | new_high_bit;
     buf[idx] = new_idx;
 
     // std::cout << idx << "\t" << new_idx_near << "\t" << new_idx << "\t" << new_high_bit << std::endl;
-
     idx = new_idx;
   }
 }
@@ -214,12 +202,7 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
 
   uint64_t total = 0;
   uint64_t tsc_before, tsc_after, tsc, min_tsc;
-  min_tsc = 0;
-  min_tsc--;
-
-  for (size_t j = 0; j < len; ++j) {
-    asm volatile("" :: "m" (buf[j]));
-  }
+  min_tsc = std::numeric_limits<uint64_t>::max();
 
   clear_caches(buf);
   for (int i = 0; i < iterations; ++i) {
@@ -278,7 +261,7 @@ int main() {
 
 
   std::cout << join(sizes_in_bytes) << ",pattern" << std::endl;
-  std::cout << join(cycles_per_load_noop) << ",nop" << std::endl;
+  // std::cout << join(cycles_per_load_noop) << ",nop" << std::endl;
   std::cout << join(cycles_per_load_naive_loop) << ",loop" << std::endl;
   std::cout << join(cycles_per_load_naive_list) << ",linear list" << std::endl;
   std::cout << join(cycles_per_load_naive_list2) << ",linear list2" << std::endl;
