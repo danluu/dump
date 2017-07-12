@@ -1,0 +1,10 @@
+/bin/zsh
+/bin/bash
+/bin/ksh
+/bin/tcsh
+/usr/local/bin/powershell
+/usr/local/bin/dash
+/usr/local/bin/fish
+
+# No appreciable difference in perf between bash, dash, and powershell.
+# Also no appreciable difference between tmux and no tmux.

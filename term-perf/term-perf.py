@@ -8,7 +8,7 @@ def sort_results(raw_results):
 
 def get_results_by_type():
     raw_results = collections.defaultdict(list)
-    with open('results.csv') as csvf:
+    with open('fullscreen-busy.csv') as csvf:
         reader = csv.reader(csvf)
         header = next(reader)
         for row in reader:
@@ -79,8 +79,8 @@ def percentile(x):
         return interpolate_percentile(x)
     
 raw_results = get_results_by_type()
-# output_csv(raw_results)
-output_percentile(raw_results)
+output_csv(raw_results)
+# output_percentile(raw_results)
 
 # print(p90_percentile(1))
 # print(p90_percentile(2))
