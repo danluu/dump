@@ -1,5 +1,5 @@
 CC = clang++
-FLAGS = -g -c -std=c++11
+FLAGS = -g -c -std=c++14
 
 SOURCEDIR = src
 SOURCES = $(wildcard $(SOURCEDIR)/*.cc)
