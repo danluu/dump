@@ -9,9 +9,11 @@
 
 #include "rdtsc.h"
 
-static_assert(sizeof(size_t) == sizeof(uint64_t), "Program assumption about sizes invalidated");
+static_assert(sizeof(size_t) == sizeof(uint64_t),
+              "Program assumption about sizes invalidated");
 
-// TODO: warm up cache before timing starts. This could be done by doing one iteration before timing begins.
+// TODO: warm up cache before timing starts. This could be done by doing one
+// iteration before timing begins.
 constexpr size_t WORD_SIZE = 8;
 constexpr size_t LINE_SIZE = 64 / WORD_SIZE;
 constexpr size_t LINE_SIZE_BITS = 6 - 3;
@@ -21,11 +23,14 @@ constexpr size_t BUFFER_SIZE = 4 * MAX_CACHE_SIZE;
 constexpr size_t INTERNAL_ITERS = 8;
 constexpr size_t ITERS = 2;
 
-// Backing buffer must be twice the size of measured cache size because of our naive scheme to send list accesses
-// to a distance location by flipping the high bit, which gives us half utilization of the buffer.
-static_assert(MAX_CACHE_SIZE * 2 < BUFFER_SIZE, "Buffer size not large enough for high-bit flip scheme.");
-// In fact, we should assert something larger to make sure that when we clear the cache, we clear everything with
-// high probaiblity regardless of the replacement scheme.
+// Backing buffer must be twice the size of measured cache size because of our
+// naive scheme to send list accesses to a distance location by flipping the
+// high bit, which gives us half utilization of the buffer.
+static_assert(MAX_CACHE_SIZE * 2 < BUFFER_SIZE,
+              "Buffer size not large enough for high-bit flip scheme.");
+// In fact, we should assert something larger to make sure that when we clear
+// the cache, we clear everything with high probaiblity regardless of the
+// replacement scheme.
 
 template <typename T>
 std::string join(std::vector<T> const &v) {
@@ -134,8 +139,8 @@ void clear_caches(std::vector<uint64_t>& buf) {
   asm volatile("" :: "m" (result.second));
 }
 
-// Note that this scheme effectively flips the high bit of every other access. This increases the probability
-// of associativity misses.
+// Note that this scheme effectively flips the high bit of every other access.
+// This increases the probability of associativity misses.
 void make_list(std::vector<uint64_t>& buf, size_t size, bool avoid_open_row) {
   assert(size % 2 == 0);
 
@@ -174,12 +179,14 @@ void make_list(std::vector<uint64_t>& buf, size_t size, bool avoid_open_row) {
   uint64_t inverse_mask = ~mask;
 
   // At this point, perm should be a random permutation of {0, 1, ..., size-1}
-  // We now use this to generate a list, but we flip the high bit of the address each time to make sure
-  // we don't hit an open DRAM row when going to the next access, if we get a cache miss.
-  // std::cout << "idx:new_idx" << std::endl;
+  // We now use this to generate a list, but we flip the high bit of the address
+  // each time to make sure we don't hit an open DRAM row when going to the next
+  // access, if we get a cache miss.
+  //std::cout << "idx:new_idx" << std::endl;
   size_t idx = 0;
-  // Note that we do one more assignment than the number of items in the list because the first assignment
-  // (from 0 -> ???) is bogus an the actual 0 -> ??? assignment comes while we traverse the list.
+  // Note that we do one more assignment than the number of items in the list
+  // because the first assignment (from 0 -> ???) is bogus an the actual 0 ->
+  // ??? assignment comes while we traverse the list.
   for (int i = 0; i <= perm.size(); ++i) {
     uint64_t new_high_bit = 0;
     if (avoid_open_row && i != perm.size()) {
