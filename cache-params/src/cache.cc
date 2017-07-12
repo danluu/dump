@@ -47,6 +47,8 @@ std::string join(std::vector<T> const &v) {
 }
 
 std::pair<uint64_t, uint64_t> noop(const std::vector<uint64_t>& buf, size_t size) {
+  (void)buf;
+  (void)size;
   uint64_t cnt = 0;
   uint64_t tsc_before, tsc_after;
   RDTSC(tsc_before);
@@ -77,7 +79,7 @@ std::pair<uint64_t, uint64_t> naive_loop(const std::vector<uint64_t>& buf, size_
 }
 
 void make_naive_list(std::vector<uint64_t>& buf, size_t size, bool) {
-  for (int i = 0; i < buf.size(); ++i) {
+  for (size_t i = 0; i < buf.size(); ++i) {
     if (i >= size - LINE_SIZE) {
       buf[i] = 0;
     } else {
@@ -87,7 +89,7 @@ void make_naive_list(std::vector<uint64_t>& buf, size_t size, bool) {
 }
 
 void make_naive_list2(std::vector<uint64_t>& buf, size_t size, bool) {
-  for (int i = 0; i < buf.size(); ++i) {
+  for (size_t i = 0; i < buf.size(); ++i) {
     if (i >= size - LINE_SIZE) {
       buf[i] = reinterpret_cast<uint64_t>(&buf[0]);
     } else {
@@ -147,7 +149,7 @@ void make_list(std::vector<uint64_t>& buf, size_t size, bool avoid_open_row) {
   // std::cout << "make_list " << size << std::endl;
 
   std::vector<uint64_t> perm(size / LINE_SIZE);
-  for (int i = 0; i < perm.size(); ++i) {
+  for (size_t i = 0; i < perm.size(); ++i) {
     perm[i] = i;
   }
 
@@ -187,7 +189,7 @@ void make_list(std::vector<uint64_t>& buf, size_t size, bool avoid_open_row) {
   // Note that we do one more assignment than the number of items in the list
   // because the first assignment (from 0 -> ???) is bogus an the actual 0 ->
   // ??? assignment comes while we traverse the list.
-  for (int i = 0; i <= perm.size(); ++i) {
+  for (size_t i = 0; i <= perm.size(); ++i) {
     uint64_t new_high_bit = 0;
     if (avoid_open_row && i != perm.size()) {
       new_high_bit = (mask & idx) ^ mask;
@@ -208,7 +210,7 @@ uint64_t run_and_time_fn(std::vector<uint64_t>& buf,
                          std::pair<uint64_t, uint64_t>(*fn)(const std::vector<uint64_t>&, size_t)) {
 
   uint64_t total = 0;
-  uint64_t tsc_before, tsc_after, tsc, min_tsc;
+  uint64_t  tsc, min_tsc;
   min_tsc = std::numeric_limits<uint64_t>::max();
 
   clear_caches(buf);
