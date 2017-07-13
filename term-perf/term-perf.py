@@ -51,21 +51,22 @@ def float_range(start, stop, step):
 
 def output_percentile(raw_results, filename):
     with open(filename,'w') as f:
-        f.write("nines,latency.ms,terminal")
+        f.write("nines,latency.ms,terminal\n")
         for name in raw_results:
             total = len(raw_results[name])
             i = 0
             delta = 0.01
-            for x in float_range(0.0, 3.0 + delta, delta):
+            percentile_50th = 0.3
+            for x in float_range(percentile_50th, 3.0 + delta, delta):
                 cur_fraction = percentile(x) * total
                 while i < cur_fraction:
                     i += 1
-                    f.write("{},{},{}".format(x,raw_results[name][i],name))
+                f.write("{},{},{}\n".format(x,raw_results[name][i],name))
                 # print("DEBUG: i {} cur_fraction {} percentile {}".format(i,cur_fraction,percentile(x)))
 
 # (10**x - 1) / (10**x)
 def p90_percentile(x):
-    assert(x >= 1.0)
+    # assert(x >= 1.0)
     tentox = math.pow(10, x)
     return (tentox - 1) / tentox
 
@@ -76,10 +77,11 @@ def interpolate_percentile(x):
 # log scale for p90 and above
 # currently linear for 0 to 90, but it should probably also be log.
 def percentile(x):
-    if x >= 1.0:
-        return p90_percentile(x)
-    else:
-        return interpolate_percentile(x)
+    return p90_percentile(x)
+    # if x >= 1.0:
+    #     return p90_percentile(x)
+    # else:
+    #     return interpolate_percentile(x)
 
 input_fname = sys.argv[1]
 no_extension = os.path.splitext(input_fname)[0]
