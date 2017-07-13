@@ -1,14 +1,16 @@
 import collections
 import csv
 import math
+import os
+import sys
 
 def sort_results(raw_results):
     for name in raw_results:
         raw_results[name].sort()
 
-def get_results_by_type():
+def get_results_by_type(fname):
     raw_results = collections.defaultdict(list)
-    with open('fullscreen-busy.csv') as csvf:
+    with open(fname) as csvf:
         reader = csv.reader(csvf)
         header = next(reader)
         for row in reader:
@@ -47,18 +49,19 @@ def float_range(start, stop, step):
         compo = (temp - total) - y
         total = temp
 
-def output_percentile(raw_results):
-    print("nines,latency.ms,terminal")
-    for name in raw_results:
-        total = len(raw_results[name])
-        i = 0
-        delta = 0.01
-        for x in float_range(0.0, 3.0 + delta, delta):
-            cur_fraction = percentile(x) * total
-            while i < cur_fraction:
-                i += 1
-            print("{},{},{}".format(x,raw_results[name][i],name))
-            # print("DEBUG: i {} cur_fraction {} percentile {}".format(i,cur_fraction,percentile(x)))
+def output_percentile(raw_results, filename):
+    with open(filename,'w') as f:
+        f.write("nines,latency.ms,terminal")
+        for name in raw_results:
+            total = len(raw_results[name])
+            i = 0
+            delta = 0.01
+            for x in float_range(0.0, 3.0 + delta, delta):
+                cur_fraction = percentile(x) * total
+                while i < cur_fraction:
+                    i += 1
+                    f.write("{},{},{}".format(x,raw_results[name][i],name))
+                # print("DEBUG: i {} cur_fraction {} percentile {}".format(i,cur_fraction,percentile(x)))
 
 # (10**x - 1) / (10**x)
 def p90_percentile(x):
@@ -77,10 +80,14 @@ def percentile(x):
         return p90_percentile(x)
     else:
         return interpolate_percentile(x)
+
+input_fname = sys.argv[1]
+no_extension = os.path.splitext(input_fname)[0]
+output_fname = no_extension + "-percentile.csv"
     
-raw_results = get_results_by_type()
-output_csv(raw_results)
-# output_percentile(raw_results)
+raw_results = get_results_by_type(input_fname)
+# output_csv(raw_results)
+output_percentile(raw_results, output_fname)
 
 # print(p90_percentile(1))
 # print(p90_percentile(2))
