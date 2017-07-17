@@ -32,9 +32,9 @@
      showgrid="false"
      inkscape:zoom="1.3222775"
      inkscape:cx="271.97746"
-     inkscape:cy="112.55158"
-     inkscape:window-x="32"
-     inkscape:window-y="0"
+     inkscape:cy="142.80242"
+     inkscape:window-x="216"
+     inkscape:window-y="67"
      inkscape:window-maximized="0"
      inkscape:current-layer="layout.2" />
   <metadata
@@ -922,7 +922,7 @@
                y="-263.93854" /></text>
           <text
              xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00bf7d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00bf7d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              x="385.69815"
              y="-263.18225"
              id="text3916"
@@ -930,11 +930,11 @@
              transform="scale(1,-1)"><tspan
                sodipodi:role="line"
                id="tspan3918"
-               x="385.69815"
+               x="385"
                y="-263.18225">iTerm2</tspan></text>
           <text
              xml:space="preserve"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#39b600;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#39b600;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
              x="384.94189"
              y="-218.56229"
              id="text3920"
@@ -942,8 +942,8 @@
              transform="scale(1,-1)"><tspan
                sodipodi:role="line"
                id="tspan3922"
-               x="384.94189"
-               y="-218.56229">Hyper</tspan></text>
+               x="385"
+               y="-218.56229">hyper</tspan></text>
           <text
              xml:space="preserve"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00bfc4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -954,7 +954,7 @@
              transform="scale(1,-1)"><tspan
                sodipodi:role="line"
                id="tspan3926"
-               x="385.69815"
+               x="385"
                y="-179.23621">linux-alacritty</tspan></text>
           <text
              xml:space="preserve"
@@ -966,7 +966,7 @@
              transform="scale(1,-1)"><tspan
                sodipodi:role="line"
                id="tspan3930"
-               x="385.69815"
+               x="385"
                y="-164.86703">alacritty</tspan></text>
           <text
              xml:space="preserve"
@@ -978,7 +978,7 @@
              transform="scale(1,-1)"><tspan
                sodipodi:role="line"
                id="tspan3934"
-               x="384.94189"
+               x="385"
                y="-147.47281">linux-lxterminal</tspan></text>
           <text
              xml:space="preserve"
@@ -990,7 +990,7 @@
              transform="scale(1,-1)"><tspan
                sodipodi:role="line"
                id="tspan3957"
-               x="384.94189"
+               x="385"
                y="-135.3725">emacs-term</tspan></text>
           <text
              xml:space="preserve"
@@ -1002,7 +1002,7 @@
              transform="scale(1,-1)"><tspan
                sodipodi:role="line"
                id="tspan3961"
-               x="385.69815"
+               x="385"
                y="-122.51587">terminal.app</tspan></text>
           <text
              xml:space="preserve"
@@ -1014,7 +1014,7 @@
              transform="scale(1,-1)"><tspan
                sodipodi:role="line"
                id="tspan3965"
-               x="386.45441"
+               x="385"
                y="-107.39047">linux-st</tspan></text>
           <text
              xml:space="preserve"
@@ -1026,7 +1026,7 @@
              transform="scale(1,-1)"><tspan
                sodipodi:role="line"
                id="tspan3969"
-               x="385.69815"
+               x="385"
                y="-93.021332">emacs-eshell</tspan></text>
         </g>
       </g>
