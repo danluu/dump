@@ -1,0 +1,5 @@
+Hyper doesn't really do this correctly. It outputs a screen or two of text and then hangs, while the "Hyper Helper" process uses 100% CPU. After that, things go back to normal and the terminal is responsive again.
+
+Terminal.app "looks" slow -- the text that scrolls by is jumpy, as if the screen is only rarely updating.
+
+Emacs-term falls behind the output slightly. The status bar that shows the line number appears to be correct, but it takes a few seconds for the display to finish dumping the text to the screen, so you see a bunch of text get updated while the line number doesn't change and the temrinal is unresponsive for a few extra seconds beyond the running of the command.
