@@ -1,0 +1,1 @@
+base32 produces a multiline file by default. Some data structures that are suitable for large amounts of multi-line text will have problems when recieving a single large line, but all terminals that could handle the multi-line verison also handled the single-line version fine.
