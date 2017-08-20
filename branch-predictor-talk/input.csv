@@ -1,0 +1,12 @@
+scheme,accuracy
+none,0.0
+taken,0.7
+btfnt,0.8
+one,0.85
+two,0.9
+global,0.93
+local,0.94
+gshare,0.94
+agree,0.95
+hybrid,0.96
+perfect,1.0
