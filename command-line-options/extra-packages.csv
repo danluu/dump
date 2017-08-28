@@ -80,17 +80,6 @@ lastlog
 newgrp
 nologin
 sg
-gpg
-gpg-zip
-gpgconf
-gpgparsemail
-gpgsplit
-kbxutil
-lspgpot
-migrate-pubring-from-classic-gpg
-watchgnupg
-addgnupghome
-applygnupgdefaults
 findmnt
 mount
 umount
