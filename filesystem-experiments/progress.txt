@@ -1,0 +1,15 @@
+Created an ubuntu16 server image and a fat16 image. Can mount can create a file
+
+Run blkdebug with no config:
+sudo qemu-system-x86_64 -curses -hda test.img -drive file=blkdebug:empty.conf:fat16.iso,media=disk -m 512 --enable-kvm -k en-us
+
+Things seem to work as normal
+
+Run blkdebug with config that returns ENOSPC:
+sudo qemu-system-x86_64 -curses -hda test.img -drive file=blkdebug:fail-writes.conf:fat16.iso,media=disk -m 512 --enable-kvm -k en-us
+
+qemu hangs on file write. Seems to be qemu hang and not system hang
+
+Hang seems to be because qemu will hang on ENOSPC or other error: https://qemu.weilnetz.de/doc/qemu-doc.html. Try passing werror=ignore,rerror=ignore.
+
+After adding werror=ignore,error=ignore, fail-writes.conf doesn't stop writes from occuring.
