@@ -2,6 +2,8 @@
 
 coins = [50,25,10,5,1]
 
+# rem: amount remaining.
+# denom: index of denomination we're currently using.
 def solve(rem, denom):
     if rem < 0:
         assert(False)
