@@ -25863,7 +25863,7 @@ dhcpcd5,46
 hlbr,4
 mimedefang-multiplexor,37
 munin-html,4
-ifconfig,3
+ifconfig,24
 cyrdeliver,8
 restart,7
 aideinit,6
