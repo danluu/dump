@@ -1,0 +1,392 @@
+rm:
+       -d, --dir
+              remove empty directories
+cp:
+  -Z set SELinux security context of dest to default type
+  -context[=CTX] like -Z, or if CTX specified, set SELinux or SMACK security context
+mv:
+       -Z, --context
+              set SELinux security context of destination file to default type
+mkdir:
+       -Z     set SELinux security context of each created  directory  to  the
+              default type
+ln:
+       -r, --relative
+              create symbolic links relative to link location
+df:
+
+       --output[=FIELD_LIST]
+              use the output format defined by FIELD_LIST, or print all fields
+              if FIELD_LIST is omitted.
+tail:
+       -z, --zero-terminated
+              line delimiter is NUL, not newlines
+top:
+       -o  :Override-sort-field as:  -o fieldname
+            Specifies  the  name  of  the  field  on  which tasks will be
+            sorted, independent of what is reflected in the configuration
+            file.  You can prepend a `+' or `-' to the field name to also
+            override the  sort  direction.   A  leading  `+'  will  force
+            sorting  high to low, whereas a `-' will ensure a low to high
+            ordering.
+
+            This option exists primarily  to  support  automated/scripted
+            batch mode operation.
+
+       -O  :Output-field-names
+            This  option  acts as a form of help for the above -o option.
+            It will cause top to print each of the available field  names
+            on a separate line, then quit.  Such names are subject to nls
+            translation.
+
+      -w  :Output-width-override as:  -w [ number ]
+            In Batch mode, when used without an argument top will  format
+            output  using  the COLUMNS= and LINES= environment variables,
+            if set.  Otherwise, width will be fixed at  the  maximum  512
+            columns.   With an argument, output width can be decreased or
+            increased (up to 512) but the number of  rows  is  considered
+            unlimited.
+
+            In  normal  display  mode,  when used without an argument top
+            will attempt to format output using the COLUMNS=  and  LINES=
+            environment  variables,  if  set.   With  an argument, output
+            width can only be decreased, not  increased.   Whether  using
+            environment  variables  or  an  argument with -w, when not in
+            Batch mode actual terminal dimensions can never be exceeded.
+
+            Note: Without the use of  this  command-line  option,  output
+            width  is  always  based  on  the  terminal  at which top was
+            invoked whether or not in Batch mode.	    
+tar: (not a complete list)
+       --hole-detection=METHOD
+              Use METHOD to detect holes in sparse files.  This  option
+              implies  --sparse.   Valid values for METHOD are seek and
+              raw.  Default is seek  with  fallback  to  raw  when  not
+              applicable.
+
+   Extended file attributes
+       --acls Enable POSIX ACLs support.
+
+       --no-acls
+              Disable POSIX ACLs support.
+
+       --selinux
+              Enable SELinux context support.
+
+       --no-selinux
+              Disable SELinux context support.
+
+       --xattrs
+              Enable extended attributes support.
+
+       --no-xattrs
+              Disable extended attributes support.
+
+       --xattrs-exclude=PATTERN
+              Specify the exclude pattern for xattr keys.  PATTERN is a
+              POSIX regular expression, e.g. --xattrs-exclude='^user.',
+              to exclude attributes from the user namespace.
+
+       --xattrs-include=PATTERN
+              Specify the include pattern for xattr keys.  PATTERN is a
+              POSIX regular expression.
+ping:
+       -a     Audible ping.
+
+       -A     Adaptive  ping.  Interpacket interval adapts to round-trip time,
+              so that effectively not more than one (or more,  if  preload  is
+              set)  unanswered  probe  is  present  in  the  network.  Minimal
+              interval is 200msec for not super-user.  On  networks  with  low
+              rtt this mode is essentially equivalent to flood mode.
+
+       -b     Allow pinging a broadcast address.
+
+       -B     Do  not  allow  ping  to  change  source address of probes.  The
+              address is bound to one selected when ping starts.
+
+       -D     Print  timestamp  (unix  time + microseconds as in gettimeofday)
+              before each line.	      
+
+       -F flow label
+              ping6 only.  Allocate and set 20 bit flow label (in hex) on echo
+              request packets.  If value is zero, kernel allocates random flow
+              label.
+
+       -I interface
+              interface  is  either  an  address,  or  an  interface name.  If
+              interface is an address, it sets  source  address  to  specified
+              interface  address.   If interface in an interface name, it sets
+              source interface to specified interface.  For ping6, when  doing
+              ping  to  a link-local scope address, link specification (by the
+              '%'-notation in destination, or by this option) is required.
+
+   -L     Suppress loopback of multicast packets.  This flag only  applies
+              if the ping destination is a multicast address.
+
+       -m mark
+              use  mark  to  tag  the  packets  going  out. This is useful for
+              variety of reasons  within  the  kernel  such  as  using  policy
+              routing to select specific outbound processing.
+
+       -M pmtudisc_opt
+              Select  Path  MTU  Discovery  strategy.   pmtudisc_option may be
+              either do (prohibit fragmentation, even  local  one),  want  (do
+              PMTU  discovery, fragment locally when packet size is large), or
+              dont (do not set DF flag).
+
+       -N nodeinfo_option
+              ping6 only.  Send ICMPv6  Node  Information  Queries  (RFC4620),
+              instead of Echo Request.  CAP_NET_RAW capability is required.
+
+              help   Show help for NI support.
+
+              name   Queries for Node Names.
+
+              ipv6   Queries  for  IPv6  Addresses.  There  are  several  IPv6
+                     specific flags.
+
+                     ipv6-global
+                            Request IPv6 global-scope addresses.
+
+                     ipv6-sitelocal
+                            Request IPv6 site-local addresses.
+
+                     ipv6-linklocal
+                            Request IPv6 link-local addresses.
+
+                     ipv6-all
+                            Request IPv6 addresses on other interfaces.
+
+              ipv4   Queries for IPv4 Addresses.  There is one  IPv4  specific
+                     flag.
+
+                     ipv4-all
+                            Request IPv4 addresses on other interfaces.
+
+              subject-ipv6=ipv6addr
+                     IPv6 subject address.
+
+              subject-ipv4=ipv4addr
+                     IPv4 subject address.
+
+              subject-name=nodename
+                     Subject  name.   If it contains more than one dot, fully-
+                     qualified domain name is assumed.
+
+              subject-fqdn=nodename
+                     Subject name.   Fully-qualified  domain  name  is  always
+                     assumed.
+
+       -O     Report outstanding ICMP ECHO reply before sending  next  packet.
+              This is useful together with the timestamp -D to log output to a
+              diagnostic file and search for missing answers.
+
+       -Q tos Set Quality of Service -related bits in ICMP datagrams.  tos can
+              be decimal (ping only) or hex number.
+
+              In RFC2474, these fields are interpreted as 8-bit Differentiated
+              Services (DS), consisting  of:  bits  0-1  (2  lowest  bits)  of
+              separate  data,  and bits 2-7 (highest 6 bits) of Differentiated
+              Services Codepoint (DSCP).  In RFC2481 and RFC3168, bits 0-1 are
+              used for ECN.
+
+              Historically   (RFC1349,   obsoleted  by  RFC2474),  these  were
+              interpreted as: bit 0 (lowest bit) for reserved (currently being
+              redefined  as  congestion  control), 1-4 for Type of Service and
+              bits 5-7 (highest bits) for Precedence.
+
+   -S sndbuf
+              Set  socket  sndbuf.  If not specified, it is selected to buffer
+              not more than one packet.
+
+       -t ttl ping only.  Set the IP Time to Live.
+
+       -T timestamp option
+              Set special IP  timestamp  options.   timestamp  option  may  be
+              either  tsonly  (only  timestamps),  tsandaddr  (timestamps  and
+              addresses) or tsprespec host1 [host2 [host3 [host4]]] (timestamp
+              prespecified hops).
+
+       -U     Print  full  user-to-user  latency (the old behaviour). Normally
+              ping prints network round trip time, which can be different f.e.
+              due to DNS failures.
+
+
+       -V     Show version and exit.
+
+       -w deadline
+              Specify  a  timeout, in seconds, before ping exits regardless of
+              how many packets have been sent or received. In this  case  ping
+              does  not  stop after count packet are sent, it waits either for
+              deadline expire or until count probes are answered or  for  some
+              error notification from network.
+
+       -W timeout
+              Time to wait for a response, in seconds. The option affects only
+              timeout in absence of any responses, otherwise  ping  waits  for
+              two RTTs.
+sudo:
+removed:
+       -D level    Enable debugging of sudo plugins and sudo itself.  The
+                   level may be a value from 1 through 9.
+added:
+     -h host, --host=host
+                 Run the command on the specified host if the security policy
+                 plugin supports remote commands.  Note that the sudoers
+                 plugin does not currently support running remote commands.
+                 This may also be used in conjunction with the -l option to
+                 list a user's privileges for the remote host.
+
+     -r role, --role=role
+                 Run the command with an SELinux security context that
+                 includes the specified role.
+
+
+
+
+
+Note: kill is considered to have 3 options, although you can send many signals to kill.
+
+Similarly, tar has 139 option flags if you count options for options as a single option. For example, --warning has 25 options, but this was considered one option for the purposes of this post because those are all suboptions of `--warning`.
+
+~~~
+       --warning=KEYWORD
+              Enable or disable warning messages identified by KEYWORD.  The messages are suppressed if KEYWORD is prefixed with no- and enabled otherwise.
+
+              Multiple --warning messages accumulate.
+
+              Keywords controlling general tar operation:
+
+              all    Enable all warning messages.  This is the default.
+
+              none   Disable all warning messages.
+
+              filename-with-nuls
+                     "%s: file name read contains nul character"
+
+              alone-zero-block
+                     "A lone zero block at %s"
+
+              Keywords applicable for tar --create:
+
+              cachedir
+                     "%s: contains a cache directory tag %s; %s"
+
+              file-shrank
+                     "%s: File shrank by %s bytes; padding with zeros"
+
+              xdev   "%s: file is on a different filesystem; not dumped"
+
+              file-ignored
+                     "%s: Unknown file type; file ignored"
+                     "%s: socket ignored"
+                     "%s: door ignored"
+
+              file-unchanged
+                     "%s: file is unchanged; not dumped"
+
+              ignore-archive
+                     "%s: file is the archive; not dumped"
+
+              file-removed
+                     "%s: File removed before we read it"
+
+              file-changed
+                     "%s: file changed as we read it"
+
+              Keywords applicable for tar --extract:
+
+              existing-file
+                     "%s: skipping existing file"
+
+              timestamp
+                     "%s: implausibly old time stamp %s"
+                     "%s: time stamp %s is %s s in the future"
+
+              contiguous-cast
+                     "Extracting contiguous files as regular files"
+
+              symlink-cast
+                     "Attempting extraction of symbolic links as hard links"
+
+              unknown-cast
+                     "%s: Unknown file type '%c', extracted as normal file"
+
+              ignore-newer
+                     "Current %s is newer or same age"
+
+              unknown-keyword
+                     "Ignoring unknown extended header keyword '%s'"
+
+              decompress-program
+                     Controls  verbose  description of failures occurring when trying to run alternative decompressor programs.  This warning is disabled by default (unless --verbose is used).  A common example of what you can get when using this warning
+                     is:
+
+                     $ tar --warning=decompress-program -x -f archive.Z
+                     tar (child): cannot run compress: No such file or directory
+                     tar (child): trying gzip
+
+                     This means that tar first tried to decompress archive.Z using compress, and, when that failed, switched to gzip.
+
+              record-size
+                     "Record size = %lu blocks"
+
+              Keywords controlling incremental extraction:
+
+              rename-directory
+                     "%s: Directory has been renamed from %s"
+                     "%s: Directory has been renamed"
+
+              new-directory
+                     "%s: Directory is new"
+
+              xdev   "%s: directory is on a different device: not purging"
+
+              bad-dumpdir
+                     "Malformed dumpdir: 'X' never used"
+~~~
+
+Environment variables were also not included, e.g., man is considered to have one option (`-k`), and the following "options" to `man` weren't counted as options:
+
+~~~
+       The following environment variables shall affect the execution of man:
+
+       LANG      Provide   a   default   value  for  the  internationalization
+                 variables that are unset or null. (See the  Base  Definitions
+                 volume  of  POSIX.1‐2008,  Section  8.2, Internationalization
+                 Variables  for   the   precedence   of   internationalization
+                 variables used to determine the values of locale categories.)
+
+       LC_ALL    If  set  to  a non-empty string value, override the values of
+                 all the other internationalization variables.
+
+       LC_CTYPE  Determine the locale for the interpretation of  sequences  of
+                 bytes of text data as characters (for example, single-byte as
+                 opposed to multi-byte characters  in  arguments  and  in  the
+                 summary  database). The value of LC_CTYPE need not affect the
+                 format of the information written about the name operands.
+
+       LC_MESSAGES
+                 Determine the locale that should be used to affect the format
+                 and contents of diagnostic messages written to standard error
+                 and informative messages written to standard output.
+
+       NLSPATH   Determine the location of message catalogs for the processing
+                 of LC_MESSAGES.
+
+       PAGER     Determine  an output filtering command for writing the output
+                 to a terminal. Any  string  acceptable  as  a  command_string
+                 operand  to  the  sh �−c command shall be valid. When standard
+                 output is a terminal device, the reference page output  shall
+                 be  piped  through the command. If the PAGER variable is null
+                 or not set, the command  shall  be  either  more  or  another
+                 paginator utility documented in the system documentation.
+~~~
+
+Options that are explictly listed as doing nothing are counted, so the following option for `touch` was included in the count:
+
+~~~
+
+       -f     (ignored)
+~~~
+
