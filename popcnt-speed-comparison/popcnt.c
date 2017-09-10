@@ -8,7 +8,7 @@
 #include "../rdtsc.h"
 
 #define MIN_LEN 256/8
-#define MIN_LEN 1048576*16
+#define MAX_LEN 1048576*16
 #define DELTA 4
 #define LINE_SIZE 128
 #define ITERATIONS 10000
