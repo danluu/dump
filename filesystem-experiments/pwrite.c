@@ -10,13 +10,13 @@ int main() {
   char* filename = "test.txt";
   char buf[1024];
 
-  int fd = open(filename, O_RDONLY);
+  int fd = open(filename, O_WRONLY);
   if (fd < 0) {
     printf("open fail %s\n", strerror(errno));
     return fd;
   }
 
-  ssize_t rcode = pread(fd, &buf, 100, 0);
+  ssize_t rcode = pwrite(fd, &buf, 100, 0);
   if (rcode < 0) {
     printf("read fail %s\n", strerror(errno));
     return rcode;
