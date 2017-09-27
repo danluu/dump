@@ -11,10 +11,14 @@ int main() {
   void* buf;
 
   int fd = open(filename, O_RDONLY);
-  ssize_t rcode = pread(fd, buf, 100, 0);
+  if (fd < 0) {
+    printf("open fail %s\n", strerror(errno));
+    return fd;
+  }
 
+  ssize_t rcode = pread(fd, buf, 100, 0);
   if (rcode < 0) {
-    printf("errno %s\n", strerror(errno));
+    printf("read fail %s\n", strerror(errno));
     return rcode;
   } else {
     return 0;
