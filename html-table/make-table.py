@@ -1,7 +1,7 @@
 import csv
 
-# input_path = 'filesystems.csv'
-input_path = 'small-filesystems.csv'
+input_path = 'filesystems.csv'
+# input_path = 'small-filesystems.csv'
 with open(input_path) as f:
     reader = csv.reader(f)
     header = next(reader)
@@ -18,15 +18,15 @@ print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {bord
 print('<table>')
 print('<tr>')
 for hitem in header:
-    print('<th>{}</th>'.format(hitem))
+    print('<th>{}</th>'.format(hitem),end='')
 print('</tr>')
 
 for row in body:
     print('<tr>')
     for bitem in row:
         if bitem in color_map:
-            print('<td bgcolor={}>{}</td>'.format(color_map[bitem],bitem))            
+            print('<td bgcolor={}>{}</td>'.format(color_map[bitem],bitem),end='')
         else:
-            print('<td>{}</td>'.format(bitem))
+            print('<td>{}</td>'.format(bitem),end='')
     print('</tr>')
 print('</table>')
