@@ -9,9 +9,9 @@ with open(input_path) as f:
 
 # TODO: if this script is ever re-used, don't hardcode color config.
 color_map = {'':'black',
-             'prop':'olive',
+             'prop':'palegoldenrod',
              'fix':'green',
-             'ignore':'red'}
+             'ignore':'crimson'}
 
 print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}</style>')
 
