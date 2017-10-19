@@ -1,0 +1,152 @@
+`fs/ext4/inline.c`
+
+`ext4_add_dirent_to_inline` appears to incorrectly update directory change times if the operation fails?
+
+~~~
+/*
+ * Add a new entry into a inline dir.
+ * It will return -ENOSPC if no space is available, and -EIO
+ * and -EEXIST if directory entry already exists.
+ */
+static int ext4_add_dirent_to_inline(handle_t *handle,
+				     struct ext4_filename *fname,
+				     struct inode *dir,
+				     struct inode *inode,
+				     struct ext4_iloc *iloc,
+				     void *inline_start, int inline_size)
+{
+	int		err;
+	struct ext4_dir_entry_2 *de;
+
+	err = ext4_find_dest_de(dir, inode, iloc->bh, inline_start,
+				inline_size, fname, &de);
+	if (err)
+		return err;
+
+	BUFFER_TRACE(iloc->bh, "get_write_access");
+	err = ext4_journal_get_write_access(handle, iloc->bh);
+	if (err)
+		return err;
+	ext4_insert_dentry(inode, de, inline_size, fname);
+
+	ext4_show_inline_dir(dir, iloc->bh, inline_start, inline_size);
+
+	/*
+	 * XXX shouldn't update any times until successful
+	 * completion of syscall, but too many callers depend
+	 * on this.
+	 *
+	 * XXX similarly, too many callers depend on
+	 * ext4_new_inode() setting the times, but error
+	 * recovery deletes the inode, so the worst that can
+	 * happen is that the times are slightly out of date
+	 * and/or different from the directory change time.
+	 */
+	dir->i_mtime = dir->i_ctime = current_time(dir);
+	ext4_update_dx_flag(dir);
+	dir->i_version++;
+	return 1;
+}
+~~~
+
+`add_dirent_to_buf` in `fs/ext4/namei.c` appears to have the same bug.
+
+
+There's this curious file, `fs/ext/move_extent.c` which contains this function:
+
+~~~
+/**
+ * ext4_move_extents - Exchange the specified range of a file
+ *
+ * @o_filp:             file structure of the original file
+ * @d_filp:             file structure of the donor file
+ * @orig_blk:           start offset in block for orig
+ * @donor_blk:          start offset in block for donor
+ * @len:                the number of blocks to be moved
+ * @moved_len:          moved block length
+ *
+ * This function returns 0 and moved block length is set in moved_len
+ * if succeed, otherwise returns error value.
+ *
+ */
+int
+ext4_move_extents(struct file *o_filp, struct file *d_filp, __u64 orig_blk,
+                  __u64 donor_blk, __u64 len, __u64 *moved_len)
+{
+    ...
+~~~
+
+This appears to swap two files? You can do this via an `ioctl`:
+
+`fs/ext4/ioctl.c`
+~~~
+long ext4_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
+{
+    ...
+        case EXT4_IOC_MOVE_EXT: {
+                struct move_extent me;
+                struct fd donor;
+                int err;
+
+                if (!(filp->f_mode & FMODE_READ) ||
+                    !(filp->f_mode & FMODE_WRITE))
+                        return -EBADF;
+
+                if (copy_from_user(&me,
+                        (struct move_extent __user *)arg, sizeof(me)))
+                        return -EFAULT;
+                me.moved_len = 0;
+
+                donor = fdget(me.donor_fd);
+                if (!donor.file)
+                        return -EBADF;
+
+                if (!(donor.file->f_mode & FMODE_WRITE)) {
+                        err = -EBADF;
+                        goto mext_out;
+                }
+
+                if (ext4_has_feature_bigalloc(sb)) {
+                        ext4_msg(sb, KERN_ERR,
+                                 "Online defrag not supported with bigalloc");
+                        err = -EOPNOTSUPP;
+                        goto mext_out;
+                } else if (IS_DAX(inode)) {
+                        ext4_msg(sb, KERN_ERR,
+                                 "Online defrag not supported with DAX");
+                        err = -EOPNOTSUPP;
+                        goto mext_out;
+                }
+
+                err = mnt_want_write_file(filp);
+                if (err)
+                        goto mext_out;
+
+                err = ext4_move_extents(filp, donor.file, me.orig_start,
+                                        me.donor_start, me.len, &me.moved_len);
+                mnt_drop_write_file(filp);
+
+                if (copy_to_user((struct move_extent __user *)arg,
+                                 &me, sizeof(me)))
+                        err = -EFAULT;
+mext_out:
+                fdput(donor);
+                return err;
+        }
+    ...
+~~~
+
+But when would you want to do this? Is this only for defragging on rotational disks? There appears to be no code in the kernel that does this, but I guess you can de-frag with an external program if you want?
+
+`fs/ext4/super.c`
+
+This appears to be a decade old TODO that would be easy to fix? If anyone wants to pair on getting a patch into the linux kernel, this might be an easy starting point?
+~~~
+0b8e58a140cae (Andreas Dilger                2009-06-03 17:59:28 -0400 1452)    /* TODO: use simple_strtoll with >32bit ext4 */
+ac27a0ec112a0 (Dave Kleikamp                 2006-10-11 01:20:50 -0700 1453)    sb_block = simple_strtoul(options, &options, 0);
+ac27a0ec112a0 (Dave Kleikamp                 2006-10-11 01:20:50 -0700 1454)    if (*options && *options != ',') {
+4776004f54e41 (Theodore Ts'o                 2008-09-08 23:00:52 -0400 1455)            printk(KERN_ERR "EXT4-fs: Invalid sb specification: %s\n",
+ac27a0ec112a0 (Dave Kleikamp                 2006-10-11 01:20:50 -0700 1456)                   (char *) *data);
+ac27a0ec112a0 (Dave Kleikamp                 2006-10-11 01:20:50 -0700 1457)            return 1;
+ac27a0ec112a0 (Dave Kleikamp                 2006-10-11 01:20:50 -0700 1458)    }
+~~~
