@@ -1,0 +1,370 @@
+bt_compare.c
+
+~~~
+        /*
+         * Overflow.
+         *
+         * XXX
+         * We ignore __db_moff() errors, because we have no way of returning
+         * them.
+         */
+        (void) __db_moff(dbp,
+            dbt, bo->pgno, bo->tlen, func == __bam_defcmp ? NULL : func, &ret);
+        return (ret);
+~~~
+
+__bam_defcmp(a, b)
+~~~
+...
+         * If a size_t doesn't fit into a long, or if the difference between
+         * any two characters doesn't fit into an int, this routine can lose.
+         * What we need is a signed integral type that's guaranteed to be at
+         * least as large as a size_t, and there is no such thing.
+~~~
+
+We now have both ptrdiff_t but I guess that's a "recent" invention? It exists for sure in [C99](http://www.dii.uchile.cl/~daespino/files/Iso_C_1999_definition.pdf). Not if it was in use earlier.
+
+bt_recno.c
+
+__ram_source
+~~~
+         * We'd like to test to see if the file is too big to mmap.  Since we
+         * don't know what size or type off_t's or size_t's are, or the largest
+         * unsigned integral type is, or what random insanity the local C
+         * compiler will perpetrate, doing the comparison in a portable way is
+         * flatly impossible.  Hope that mmap fails if the file is too large.
+~~~
+
+
+build_vms/db.h
+
+There's a fair amount of mac and windows specific hackery in build_vms. That seems kinda weird, but I guess it makes a kind of sense. The db.h files seem to be identical except for the definitions of some types.
+
+~~~
+$ diff build_vms/db.h include/db.h
+1d0
+< /* DO NOT EDIT: automatically built by dist/distrib. */
+62,66c61,65
+< typedef unsigned char u_int8_t;
+< typedef short int16_t;
+< typedef unsigned short u_int16_t;
+< typedef int int32_t;
+< typedef unsigned int u_int32_t;
+---
+> @u_int8_decl@
+> @int16_decl@
+> @u_int16_decl@
+> @int32_decl@
+> @u_int32_decl@
+68a68,71
+> @u_char_decl@
+> @u_short_decl@
+> @u_int_decl@
+> @u_long_decl@
+~~~
+
+common/db_appinit.c
+~~~
+        /* Loop, trying to open a file. */
+        for (;;) {
+                if ((ret = __db_open(path, flags, flags, mode, fdp)) == 0)
+                        return (0);
+
+                /*
+                 * XXX:
+                 * If we don't get an EEXIST error, then there's something
+                 * seriously wrong.  Unfortunately, if the implementation
+                 * doesn't return EEXIST for O_CREAT and O_EXCL regardless
+                 * of other possible errors, we've lost.
+                 */
+                if (ret != EEXIST) {
+                        __db_err(dbenv,
+                            "tmp_open: %s: %s", path, strerror(ret));
+                        return (ret);
+                }
+~~~		
+
+
+common/db_region.c
+~~~
+#ifndef HAVE_SPINLOCKS
+        /*
+         * XXX
+         * Lacking spinlocks, we must have a file descriptor for fcntl(2)
+         * locking, which implies using mmap(2) to map in a regular file.
+         * (Theoretically, we could probably get a file descriptor to lock
+         * other types of shared regions, but I don't see any reason to
+         * bother.)
+         *
+         * Since we may be using shared memory regions, e.g., shmget(2),
+         * and not mmap of regular files, the backing file may be only a
+         * few tens of bytes in length.  So, this depends on the ability
+         * to fcntl lock file offsets much larger than the physical file.
+         */
+        malloc_possible = 0;
+#endif
+
+#ifdef __hppa
+        /*
+         * XXX
+         * HP-UX won't permit mutexes to live in anything but shared memory.
+         * Instantiate a shared region file on that architecture, regardless.
+         */
+        malloc_possible = 0;
+#endif
+...
+        /*
+         * If a region is truly private, malloc the memory.  That's faster
+         * than either anonymous memory or a shared file.
+         */
+        if (malloc_possible && F_ISSET(infop, REGION_PRIVATE)) {
+                if ((ret = __os_malloc(infop->size, NULL, &infop->addr)) != 0)
+                        return (ret);
+~~~
+
+__os_malloc appears to be a wrapper for malloc with some portability fixes:
+~~~
+int
+__os_malloc(size, db_malloc, storep)
+        size_t size;
+        void *(*db_malloc) __P((size_t)), *storep;
+{
+        void *p;
+
+        *(void **)storep = NULL;
+
+        /* Never allocate 0 bytes -- some C libraries don't like it. */
+        if (size == 0)
+                ++size;
+
+        /* Some C libraries don't correctly set errno when malloc(3) fails. */
+        errno = 0;
+        if (db_malloc != NULL)
+                p = db_malloc(size);
+        else if (__db_jump.j_malloc != NULL)
+                p = __db_jump.j_malloc(size);
+        else
+                p = malloc(size);
+        if (p == NULL) {
+                if (errno == 0)
+                        errno = ENOMEM;
+                return (errno);
+        }
+
+#ifdef DIAGNOSTIC
+        memset(p, 0xdb, size);
+#endif
+        *(void **)storep = p;
+
+        return (0);
+}
+~~~
+
+Anyway, back to common/db_region.c, which looks like it must have been very annoying to debug:
+
+~~~
+                /*
+                 * If we're joining a region, figure out what it looks like.
+                 *
+                 * XXX
+                 * We have to figure out if the file is a regular file backing
+                 * a region that we want to map into our address space, or a
+                 * file with the information we need to find a shared anonymous
+                 * region that we want to map into our address space.
+                 *
+                 * All this noise is because some systems don't have a coherent
+                 * VM and buffer cache, and worse, if you mix operations on the
+                 * VM and buffer cache, half the time you hang the system.
+                 *
+                 * There are two possibilities.  If the file is the size of an
+                 * RLAYOUT structure, then we know that the real region is in
+                 * shared memory, because otherwise it would be bigger.  (As
+                 * the RLAYOUT structure size is smaller than a disk sector,
+                 * the only way it can be this size is if deliberately written
+                 * that way.)  In which case, retrieve the information we need
+                 * from the RLAYOUT structure and use it to acquire the shared
+                 * memory.
+                 *
+                 * If the structure is larger than an RLAYOUT structure, then
+                 * the file is backing the shared memory region, and we use
+                 * the current size of the file without reading any information
+                 * from the file itself so that we don't confuse the VM.
+                 *
+                 * And yes, this makes me want to take somebody and kill them,
+                 * but I can't think of any other solution.
+                 */
+~~~
+
+~~~
+                /*
+                 * If the region is anonymous, write the RLAYOUT information
+                 * into the backing file so that future region join and unlink
+                 * calls can find it.
+                 *
+                 * XXX
+                 * We MUST do the seek before we do the write.  On Win95, while
+                 * closing the last reference to an anonymous shared region
+                 * doesn't discard the region, it does zero it out.  So, the
+                 * REGION_CREATED may be set, but the file may have already
+                 * been written and the file descriptor may be at the end of
+                 * the file.
+                 */
+~~~
+
+~~~
+                /*
+                 * We now own the region.  There are a couple of things that
+                 * may have gone wrong, however.
+                 *
+                 * Problem #1: while we were waiting for the lock, the region
+                 * was deleted.  Detected by re-checking the valid flag, since
+                 * it's cleared by the delete region routines.
+                 */
+                if (rlp->valid != DB_REGIONMAGIC) {
+                        (void)__db_mutex_unlock(&rlp->lock, infop->fd);
+                        goto retry;
+                }
+
+                /*
+                 * Problem #3: when we checked the size of the file, it was
+                 * still growing as part of creation.  Detected by the fact
+                 * that infop->size isn't the same size as the region.
+                 */
+                if (infop->size != rlp->size) {
+                        (void)__db_mutex_unlock(&rlp->lock, infop->fd);
+                        goto retry;
+                }
+~~~
+
+What happened to problem #2? The first comment says "a couple problems", so maybe this is a joke?
+
+~~~
+        /*
+         * XXX
+         * HP-UX won't permit mutexes to live in anything but shared memory.
+         * Instantiate a shared region file on that architecture, regardless.
+         *
+         * XXX
+         * There's a problem in cleaning this up on application exit, or on
+         * application failure.  If an application opens a database without
+         * an environment, we create a temporary backing mpool region for it.
+         * That region is marked REGION_PRIVATE, but as HP-UX won't permit
+         * mutexes to live in anything but shared memory, we instantiate a
+         * real file plus a memory region of some form.  If the application
+         * crashes, the necessary information to delete the backing file and
+         * any system region (e.g., the shmget(2) segment ID) is no longer
+         * available.  We can't completely fix the problem, but we try.
+         *
+         * The underlying UNIX __db_mapregion() code preferentially uses the
+         * mmap(2) interface with the MAP_ANON/MAP_ANONYMOUS flags for regions
+         * that are marked REGION_PRIVATE.  This means that we normally aren't
+         * holding any system resources when we get here, in which case we can
+         * delete the backing file.  This results in a short race, from the
+         * __db_open() call above to here.
+         *
+         * If, for some reason, we are holding system resources when we get
+         * here, we don't have any choice -- we can't delete the backing file
+         * because we may need it to detach from the resources.  Set the
+         * REGION_LASTDETACH flag, so that we do all necessary cleanup when
+         * the application closes the region.
+         */
+~~~
+
+db_checkpoint/db_checkpoint.c
+~~~
+        /*
+         * XXX
+         * Don't allow a fully unsigned 32-bit number, some compilers get
+         * upset and require it to be specified in hexadecimal and so on.
+         */
+#define MAX_UINT32_T    2147483647
+~~~
+
+What compilers!? Don't leave us hanging like that :-(
+
+
+log/log.c
+~~~
+         * Assumes that atoi(3) returns a 32-bit number.
+         */
+~~~
+
+log/log_get.c
+~~~
+         * We're calling malloc(3) with a region locked.  This isn't
+         * a good idea.
+         */
+        if ((ret = __os_malloc(len, NULL, &tbuf)) != 0)
+                goto err1;
+~~~
+
+os/os_map.c
+~~~
+ * Work around a bug in the VMS V7.1 mmap() implementation.  To map a file
+ * into memory on VMS it needs to be opened in a certain way, originally.
+ * To get the file opened in that certain way, the VMS mmap() closes the
+ * file and re-opens it.  When it does this, it doesn't flush any caches
+ * out to disk before closing.  The problem this causes us is that when the
+ * memory cache doesn't get written out, the file isn't big enough to match
+ * the memory chunk and the mmap() call fails.  This call to fsync() fixes
+ * the problem.  DEC thinks this isn't a bug because of language in XPG5
+ * discussing user responsibility for on-disk and in-memory synchronization.
+ */
+#ifdef VMS
+        if (__os_fsync(fd) == -1)
+                return(errno);
+#endif
+~~~
+
+os/os_oflags.c
+~~~
+__db_oflags(oflags)
+        int oflags;
+{
+        u_int32_t dbflags;
+
+        /*
+         * XXX
+         * Convert POSIX 1003.1 open(2) flags to DB flags.  Not an exact
+         * science as most POSIX implementations don't have a flag value
+         * for O_RDONLY, it's simply the lack of a write flag.
+         */
+        dbflags = 0;
+        if (oflags & O_CREAT)
+                dbflags |= DB_CREATE;
+        if (!(oflags & (O_RDWR | O_WRONLY)) || oflags & O_RDONLY)
+                dbflags |= DB_RDONLY;
+        if (oflags & O_TRUNC)
+                dbflags |= DB_TRUNCATE;
+        return (dbflags);
+}
+~~~
+
+os_win32/os_map.c
+~~~
+int
+__db_mapinit()
+{
+        /*
+         * XXX
+         * Windows/95 leaves file contents uninitialized, bless its heart.
+         *
+         * Windows/NT initializes them.
+         */
+        return (!IS_WNT);
+}
+~~~
+
+~~~
+         * It turns out that the kernel object underlying the named section
+         * is reference counted, but that the call to MapViewOfFile() above
+         * does NOT increment the reference count! So, if we close the handle
+         * here, the kernel deletes the object from the kernel namespace.
+         * When a second process comes along to join the region, the kernel
+         * happily creates a new object with the same name, but completely
+         * different identity. The two processes then have distinct isolated
+         * mapped sections, not at all what was wanted. Not closing the handle
+         * here fixes this problem.  We carry the handle around in the region
+         * structure so we can close it when unmap is called.  Ignore malloc
+         * errors, it just means we leak the memory.
+~~~	 
