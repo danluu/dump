@@ -18,7 +18,7 @@ print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {bord
 print('<table>')
 print('<tr>')
 # TODO: make this not a hack if this script is ever re-used
-print('<tr><td></td><td rowspan="2">2005</td><td rowspan="4">2017</td></tr>')
+print('<tr><td></td><td colspan="2">2005</td><td colspan="4">2017</td></tr>')
 for hitem in header:
     print('<th>{}</th>'.format(hitem),end='')
 print('</tr>')
