@@ -1,7 +1,8 @@
 module App exposing (..)
 
 import Html
-import Html.Events
+import Keyboard
+import Mouse
 
 -- MODEL
 type alias Model = Int
@@ -12,27 +13,27 @@ init =
 
 
 -- MESSAGES
-type Msg = Increment Int
+type Msg = MouseMsg Mouse.Position | KeyMsg Keyboard.KeyCode
 
 -- VIEW
 view : Model -> Html.Html Msg
 view model =
     Html.div []
-        [Html.button [Html.Events.onClick (Increment 2)] [Html.text "+"]
-        , Html.text (toString model)
-        ]
+        [Html.text (toString model)]
 
 -- UPDATE
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Increment howMuch ->
-            (model + howMuch, Cmd.none)
+        MouseMsg position ->
+            (model + 1, Cmd.none)
+        KeyMsg code ->
+            (model + 2, Cmd.none)
 
 -- SUBSCRIPTIONS
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Sub.none
+    Sub.batch [Mouse.clicks MouseMsg, Keyboard.downs KeyMsg]
 
 -- MAIN
 main : Program Never Model Msg
