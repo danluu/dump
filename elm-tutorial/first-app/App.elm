@@ -4,38 +4,30 @@ import Html
 import Html.Events
 
 -- MODEL
-type alias Model =
-    Bool
+type alias Model = Int
 
 init : ( Model, Cmd Msg )
 init =
-    ( False, Cmd.none )
+    ( 0, Cmd.none )
 
 
 -- MESSAGES
-type Msg
-    = Expand | Collapse
+type Msg = Increment Int
 
 -- VIEW
 view : Model -> Html.Html Msg
 view model =
-    if model then
-        Html.div []
-            [Html.button [Html.Events.onClick Collapse] [Html.text "Collapse"]
-            , Html.text "Widget"
-            ]
-    else
-        Html.div []
-            [Html.button [Html.Events.onClick Expand] [Html.text "Expand"]]
+    Html.div []
+        [Html.button [Html.Events.onClick (Increment 2)] [Html.text "+"]
+        , Html.text (toString model)
+        ]
 
 -- UPDATE
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Expand ->
-            (True, Cmd.none)
-        Collapse ->
-            (False, Cmd.none)
+        Increment howMuch ->
+            (model + howMuch, Cmd.none)
 
 -- SUBSCRIPTIONS
 subscriptions : Model -> Sub Msg
