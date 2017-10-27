@@ -2,15 +2,12 @@ module Main exposing (..)
 
 import Html
 import Msgs exposing (Msg)
--- import Models exposing (Model)
+import Models exposing (Model, initialModel)
 import Update exposing (update)
 import View exposing (view)
 
--- MODEL
-type alias Model = String
-
 init : (Model, Cmd Msg)
-init = ("Hello", Cmd.none)
+init = (initialModel, Cmd.none)
 
 -- SUBSCRIPTIONS
 subscriptions : Model -> Sub Msg
