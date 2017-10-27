@@ -1,6 +1,10 @@
 module Main exposing (..)
 
 import Html
+import Msgs exposing (Msg)
+-- import Models exposing (Model)
+import Update exposing (update)
+import View exposing (view)
 
 -- MODEL
 type alias Model = String
@@ -8,28 +12,11 @@ type alias Model = String
 init : (Model, Cmd Msg)
 init = ("Hello", Cmd.none)
 
--- MESSAGES
-type Msg = NoOp
-
--- VIEW
-view : Model -> Html.Html Msg
-view model = Html.div []
-             [Html.text model]
-
-
--- UPDATE
-update : Msg -> Model -> (Model, Cmd Msg)
-update msg model =
-    case msg of
-        NoOp -> (model, Cmd.none)
-
 -- SUBSCRIPTIONS
 subscriptions : Model -> Sub Msg
 subscriptions model = Sub.none                         
 
 -- MAIN
-
-
 main : Program Never Model Msg
 main =
     Html.program

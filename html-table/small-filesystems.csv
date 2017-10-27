@@ -1,9 +1,9 @@
 read,write,silent,read,write,silent,read,write,silent
+btrfs,,,,fix,fix,fix,fix,fix,fix
+exfat,,,,prop,prop,ignore,prop,prop,ignore
 ext3,prop,ignore,ignore,prop,prop,ignore,prop,prop,ignore
 ext4,,,,prop,prop,ignore,prop,prop,ignore
-xfs,,,,prop,prop,ignore,prop,prop,ignore
-jfs,prop,ignore,ignore,prop,ignore,ignore,prop,prop,ignore
 fat,,,,prop,prop,ignore,prop,prop,ignore
-exfat,,,,prop,prop,ignore,prop,prop,ignore
-btrfs,,,,fix,fix,fix,fix,fix,fix
+jfs,prop,ignore,ignore,prop,ignore,ignore,prop,prop,ignore
 reiserfs,prop,prop,ignore,,,,,,
+xfs,,,,prop,prop,ignore,prop,prop,ignore

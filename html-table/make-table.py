@@ -1,17 +1,18 @@
 import csv
 
-# input_path = 'filesystems.csv'
-input_path = 'small-filesystems.csv'
+input_path = 'filesystems.csv'
+# input_path = 'small-filesystems.csv'
 with open(input_path) as f:
     reader = csv.reader(f)
     header = next(reader)
     body = [line for line in reader]
 
 # TODO: if this script is ever re-used, don't hardcode color config.
-color_map = {'':'black',
-             'prop':'palegoldenrod',
-             'fix':'green',
-             'ignore':'crimson'}
+color_map = {
+    '':'gainsboro',
+    'prop':'palegoldenrod',
+    'fix':'green',
+    'ignore':'crimson'}
 
 print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}</style>')
 
