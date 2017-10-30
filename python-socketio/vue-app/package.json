@@ -14,10 +14,8 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
-    "socket.io-client": "^2.0.4",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
-    "vue-socket.io": "^2.1.1-a"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -36,11 +34,9 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-html": "^3.0.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-config-airbnb-base": "^11.3.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
     "extract-text-webpack-plugin": "^3.0.0",

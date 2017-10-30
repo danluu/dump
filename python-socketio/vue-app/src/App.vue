@@ -9,36 +9,36 @@
 <script>
 export default {
   name: 'app',
-  data () {
+  data() {
     return {
       isConnected: false,
-      socketMessage: ''
-    }
+      socketMessage: '',
+    };
   },
 
   sockets: {
-    connect () {
+    connect() {
       // Fired when the socket connects.
-      this.isConnected = true
+      this.isConnected = true;
     },
 
-    disconnect () {
-      this.isConnected = false
+    disconnect() {
+      this.isConnected = false;
     },
 
     // Fired when the server sends something on the "messageChannel" channel.
-    messageChannel (data) {
-      this.socketMessage = data
-    }
+    messageChannel(data) {
+      this.socketMessage = data;
+    },
   },
 
   methods: {
-    pingServer () {
+    pingServer() {
       // Send the "pingServer" event to the server.
-      this.$socket.emit('pingServer', 'PING!')
-    }
-  }
-}
+      this.$socket.emit('pingServer', 'PING!');
+    },
+  },
+};
 </script>
 
 <style>
