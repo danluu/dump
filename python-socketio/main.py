@@ -1,30 +1,17 @@
-from aiohttp import web
-import socketio
+from flask import Flask, render_template
+from flask_socketio import SocketIO, emit
 
-sio = socketio.AsyncServer()
-app = web.Application()
-sio.attach(app)
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'secret!'
+socketio = SocketIO(app)
 
-async def index(request):
-    """Serve the client-side application."""
-    with open('index.html') as f:
-        return web.Response(text=f.read(), content_type='text/html')
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-@sio.on('connect', namespace='')
-def connect(sid, environ):
-    print("connect ", sid)
-
-@sio.on('message', namespace='')
-async def message(sid, data):
-    print("message ", data)
-    await sio.emit('reply', room=sid)
-
-@sio.on('disconnect', namespace='')
-def disconnect(sid):
-    print('disconnect ', sid)
-
-app.router.add_static('/static', 'static')
-app.router.add_get('/', index)
+@socketio.on('my event')
+def test_message(message):
+    emit('my response', {'data': 'got it!'})
 
 if __name__ == '__main__':
-    web.run_app(app, port=4113)
+    socketio.run(app, port=4113)
