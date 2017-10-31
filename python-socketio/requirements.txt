@@ -1,3 +1,4 @@
+wheel
 gevent-websocket
 flask
 flask-socketio
