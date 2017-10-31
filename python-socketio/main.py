@@ -4,8 +4,11 @@ from flask_socketio import SocketIO, emit, send
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
+
 username_to_session = {}
 session_to_username = {}
+
+username_to_game = {}
 
 @app.route('/')
 def index():
@@ -30,14 +33,31 @@ def test_message(message):
     emit('my response', {'data': 'got it!'})
 
 @socketio.on('username')
-def test_message(message):
-    print('got username: {}'.format(message))
-    emit('my response', {'data': 'got it!'})
+def username_message(message):
+    username = message
+    print('got username: {} for session {}'.format(username, request.sid))
+    
+    if username in username_to_session:
+        old_session = username_to_session[username]
+        assert(old_session in session_to_username)
+        print('deleting old session {} from {}'.format(
+            old_session, username))
+
+    username_to_session[username] = request.sid
+    session_to_username[request.sid] = username
+    emit('ack', {'username': username})
 
 @socketio.on('gamename')
-def test_message(message):
-    print('got gamename: {}'.format(message))
-    emit('my response', {'data': 'got it!'})
+def gamename_message(message):
+    print('got gamename: {}'.format(message, request.sid))
+    assert(username in session_to_username)
+    username = session_to_username[request.sid]
+    gamename = message
+
+    if username in username_to_game:
+        print('')
+    
+    emit('ack', {'gamename': gamename})
 
 @socketio.on('message')
 def handle_message(message):
