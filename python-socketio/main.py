@@ -1,9 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit, send
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
+username_to_session = {}
+session_to_username = {}
 
 @app.route('/')
 def index():
@@ -11,7 +13,7 @@ def index():
 
 @socketio.on('connect')
 def test_connect():
-    print('got connection')
+    print('got connection from {}'.format(request.sid))
     emit('my response', {'data': 'Connected'})
 
 @socketio.on('disconnect')

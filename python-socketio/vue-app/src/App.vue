@@ -1,6 +1,10 @@
 <template>
   <div>
     <p v-if="isConnected">We're connected to the server!</p>
+    <p v-if="username == null"><input v-model="input_username" @keyup.enter="sendUsername()" placeholder="username required"></p>
+    <p v-else>username: {{input_username}}</p>
+    <p v-if="gamename == null && username != null"><input v-model="input_gamename" @keyup.enter="sendGamename()" placeholder="enter game name"></p>
+    <p v-else>gamename: {{input_gamename}}</p>
     <p>Message from server: "{{socketMessage}}"</p>
     <button @click="pingServer()">Ping Server</button>
     <button @click="sendMessage()">Send Message</button>
@@ -13,6 +17,8 @@ export default {
   data() {
     return {
       isConnected: false,
+      username: null,
+      gamename: null,
       socketMessage: '',
     };
   },
@@ -34,6 +40,16 @@ export default {
   },
 
   methods: {
+    sendUsername() {
+      this.username = 'foobar';
+      this.$socket.send('send username here');
+    },
+
+    sendGamename() {
+      this.gamename = 'foobarbaz';
+      this.$socket.send('send gamename here');
+    },
+
     pingServer() {
       // Send the "pingServer" event to the server.
       this.$socket.emit('pingServer', 'PING!');
