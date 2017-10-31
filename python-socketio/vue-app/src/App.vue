@@ -23,6 +23,10 @@ export default {
     };
   },
 
+  props:
+  ['input_username',
+    'input_gamename'],
+
   sockets: {
     connect() {
       // Fired when the socket connects.
@@ -41,13 +45,13 @@ export default {
 
   methods: {
     sendUsername() {
-      this.username = 'foobar';
-      this.$socket.send('send username here');
+      this.username = this.input_username;
+      this.$socket.emit('username', this.username);
     },
 
     sendGamename() {
-      this.gamename = 'foobarbaz';
-      this.$socket.send('send gamename here');
+      this.gamename = this.input_gamename;
+      this.$socket.emit('gamename', this.gamename);
     },
 
     pingServer() {

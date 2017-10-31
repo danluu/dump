@@ -24,6 +24,21 @@ def test_disconnect():
 def test_message(message):
     emit('my response', {'data': 'got it!'})
 
+@socketio.on('pingServer')
+def test_message(message):
+    print('got pingServer')
+    emit('my response', {'data': 'got it!'})
+
+@socketio.on('username')
+def test_message(message):
+    print('got username: {}'.format(message))
+    emit('my response', {'data': 'got it!'})
+
+@socketio.on('gamename')
+def test_message(message):
+    print('got gamename: {}'.format(message))
+    emit('my response', {'data': 'got it!'})
+
 @socketio.on('message')
 def handle_message(message):
     print('received message: ' + message)
