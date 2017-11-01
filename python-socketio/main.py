@@ -10,6 +10,19 @@ session_to_username = {}
 
 username_to_game = {}
 
+class PresidentGame:
+    def __init__(self):
+        pass
+
+class PreGame:
+    def __init__(self, gamename):
+        self.usernames = set()
+        self.gamename = gamename
+        
+    def join(self, username):
+        self.usernames.add(username)
+    
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -50,12 +63,15 @@ def username_message(message):
 @socketio.on('gamename')
 def gamename_message(message):
     print('got gamename: {}'.format(message, request.sid))
-    assert(username in session_to_username)
     username = session_to_username[request.sid]
     gamename = message
+    assert(username in username_to_session)
 
     if username in username_to_game:
-        print('')
+        print('ERROR: user already in game')
+    else:
+        username_to_game[username] = gamename
+    
     
     emit('ack', {'gamename': gamename})
 
