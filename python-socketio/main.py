@@ -5,11 +5,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
-username_to_session = {}
-session_to_username = {}
-
-username_to_game = {}
-
 class PresidentGame:
     def __init__(self):
         pass
@@ -21,7 +16,56 @@ class PreGame:
         
     def join(self, username):
         self.usernames.add(username)
-    
+
+    def start(self):
+
+class PlayerRouter:
+    def __init__(self):
+        username_to_sid = {}
+        sid_to_username = {}
+
+        username_to_gamename = {}
+        games = {}
+
+    def attach_username_sid(self, username, sid):
+        if username in username_to_sid:
+            old_sid = username_to_sid[username]
+            assert(old_sid in sid_to_username)
+            print('deleting old sid {} from {}'.format(
+                old_sid, username))
+
+        username_to_sid[username] = request.sid
+        sid_to_username[request.sid] = username
+
+    def attach_sid_gamename(self, sid, game):
+        username = sid_to_username[request.sid]
+        assert(username in username_to_sid)
+        attach_username_game(username, game)
+
+    def attach_username_gamename(self, username, gamename):
+        if username in username_to_gamename:
+            print('ERROR: user already in game')
+        else:
+            username_to_gamename[username] = gamename
+
+        if not gamename in games:
+            games[gamename] = PreGame(gamename)
+
+        games[gamename].join(username)
+        # TODO: need to return something to client if we failed to join the game.
+
+    def start_sid_gamename(self, sid, gamename):
+        # TODO: make sure the sid is allowed to start the game.
+        
+
+    def username_to_sid(self, username):
+        pass
+
+    def sid_to_username(self, sid):
+        pass
+
+    def username_to_gamename(self, username):
+        pass
 
 @app.route('/')
 def index():
@@ -48,31 +92,18 @@ def test_message(message):
 @socketio.on('username')
 def username_message(message):
     username = message
-    print('got username: {} for session {}'.format(username, request.sid))
-    
-    if username in username_to_session:
-        old_session = username_to_session[username]
-        assert(old_session in session_to_username)
-        print('deleting old session {} from {}'.format(
-            old_session, username))
+    print('got username: {} for sid {}'.format(username, request.sid))
+    router.attach_username_sid(username, request.sid)
 
-    username_to_session[username] = request.sid
-    session_to_username[request.sid] = username
     emit('ack', {'username': username})
 
 @socketio.on('gamename')
 def gamename_message(message):
     print('got gamename: {}'.format(message, request.sid))
-    username = session_to_username[request.sid]
     gamename = message
-    assert(username in username_to_session)
+    attach_sid_gamename(request.sid, gamename)
 
-    if username in username_to_game:
-        print('ERROR: user already in game')
-    else:
-        username_to_game[username] = gamename
-    
-    
+    router.attach_sid_game(request.sid, gamename)
     emit('ack', {'gamename': gamename})
 
 @socketio.on('message')
@@ -81,6 +112,8 @@ def handle_message(message):
     send('got message: ' + message)
 
 if __name__ == '__main__':
+    router = PlayerRouter()
+
     print('running socketio')
     socketio.run(app, port=4113)
     print('ran socketio')
