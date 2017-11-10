@@ -31,7 +31,7 @@ with open('historical-share.csv') as hs_file:
             if version != 'date':
                 share[date][version] = float(row[version])
 
-# Convert from input data to cumulative (stacked) plot data.
+# Convert from input data to ggplot2 friendly format.
 for date in share:
     for version in share[date]:
         age = date - release_date[version]
@@ -39,12 +39,9 @@ for date in share:
         if age < datetime.timedelta(0):
             assert(current_share == 0.0)
             continue
-        if current_share == 0.0:
-            continue
 
-        min_bidx = math.floor(age.days / average_month)
-        for i in range(min_bidx, max_buckets):
-            buckets[date][i] += current_share
+        bidx = math.floor(age.days / average_month)
+        buckets[date][bidx] += current_share
 
 sp_header = ['date','months','percent']
 with open('share-plot.csv','w') as sp_file:
@@ -52,6 +49,4 @@ with open('share-plot.csv','w') as sp_file:
     sp_writer.writerow(sp_header)
     for date, row in buckets.items():
         for i in range(len(row)):
-            if row[i] > 99.5:
-                continue
             sp_writer.writerow([date, i, row[i]])
