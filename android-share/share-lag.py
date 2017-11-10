@@ -21,8 +21,6 @@ with open('version-history.csv') as vh_file:
         version = row[0]
         release_date[version] = date
 
-print(release_date)
-
 with open('historical-share.csv') as hs_file:
     hs_reader = csv.DictReader(hs_file)
     for row in hs_reader:
@@ -33,6 +31,7 @@ with open('historical-share.csv') as hs_file:
             if version != 'date':
                 share[date][version] = float(row[version])
 
+# Convert from input data to cumulative (stacked) plot data.
 for date in share:
     for version in share[date]:
         age = date - release_date[version]
@@ -44,7 +43,13 @@ for date in share:
             continue
 
         min_bidx = math.floor(age.days / average_month)
-        for i in range(min_bidx, max_buckets -1):
+        for i in range(min_bidx, max_buckets):
             buckets[date][i] += current_share
 
-print(buckets)
+bucket_labels = [i for i in range(0, max_buckets)]
+sp_header = ['date'] + bucket_labels
+with open('share-plot.csv','w') as sp_file:
+    sp_writer = csv.writer(sp_file)
+    sp_writer.writerow(sp_header)
+    for date, row in buckets.items():
+        sp_writer.writerow([date] + row)
