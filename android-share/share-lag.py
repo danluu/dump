@@ -52,4 +52,6 @@ with open('share-plot.csv','w') as sp_file:
     sp_writer.writerow(sp_header)
     for date, row in buckets.items():
         for i in range(len(row)):
+            if row[i] > 98:
+                continue
             sp_writer.writerow([date, i, row[i]])
