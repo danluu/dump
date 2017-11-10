@@ -46,10 +46,10 @@ for date in share:
         for i in range(min_bidx, max_buckets):
             buckets[date][i] += current_share
 
-bucket_labels = [i for i in range(0, max_buckets)]
-sp_header = ['date'] + bucket_labels
+sp_header = ['date','months','percent']
 with open('share-plot.csv','w') as sp_file:
     sp_writer = csv.writer(sp_file)
     sp_writer.writerow(sp_header)
     for date, row in buckets.items():
-        sp_writer.writerow([date] + row)
+        for i in range(len(row)):
+            sp_writer.writerow([date, i, row[i]])
