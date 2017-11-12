@@ -19,7 +19,7 @@ with open('version-history.csv') as vh_file:
     vh_reader = csv.reader(vh_file)
     for row in vh_reader:
         date = datetime.datetime.strptime(row[1], "%Y-%m-%d")
-        version = row[0]
+        version = int(row[0])
         release_date[version] = date
 
 with open('historical-share.csv') as hs_file:
@@ -30,16 +30,23 @@ with open('historical-share.csv') as hs_file:
         date = datetime.datetime.strptime(row['date'], "%Y-%m-%d")
         for version in row:
             if version != 'date':
-                share[date][version] = float(row[version])
+                share[date][int(version)] = float(row[version])
 
 # Convert from input data to ggplot2 friendly format.
 for date in share:
     for version in share[date]:
-        age = date - release_date[version]
+        if version < len(release_date):
+            maybe_age = date - release_date[version+1]
+            if (maybe_age < datetime.timedelta(0)):
+                age = datetime.timedelta(0)
+            else:
+                age = maybe_age
+        else:
+            age = datetime.timedelta(0)
         current_share = share[date][version]
-        if age < datetime.timedelta(0):
-            assert(current_share == 0.0)
-            continue
+        # if age < datetime.timedelta(0):
+        #     assert(current_share == 0.0)
+        #     continue
 
         bidx = math.floor(age.days / average_month)
         buckets[date][bidx] += current_share
