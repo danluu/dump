@@ -12,8 +12,15 @@ last_date = datetime.datetime.strptime('2017-10-02', '%Y-%m-%d')
 date_range = last_date - first_date
 max_buckets = math.ceil((date_range.days + 1) / average_month)
 
-buckets = collections.defaultdict(lambda: [0.0] * max_buckets)
+# dict of [date][age] = share
+share_buckets = collections.defaultdict(lambda: [0.0] * max_buckets)
+cumulative_share_buckets = collections.defaultdict(lambda: [0.0] * max_buckets)
 max_months_seen = 0
+
+
+p_consts = [50.0,90.0,95.0]
+# dict of [percentile][date] = age
+percentiles = collections.defaultdict(dict)
 
 with open('version-history.csv') as vh_file:
     vh_reader = csv.reader(vh_file)
@@ -44,21 +51,53 @@ for date in share:
         else:
             age = datetime.timedelta(0)
         current_share = share[date][version]
-        # if age < datetime.timedelta(0):
-        #     assert(current_share == 0.0)
-        #     continue
 
-        bidx = math.floor(age.days / average_month)
-        buckets[date][bidx] += current_share
+        if current_share > 0.0:
+            bidx = math.floor(age.days / average_month)
+            share_buckets[date][bidx] += current_share
 
-sp_header = ['date','months','percent']
+            for i in range(bidx, len(cumulative_share_buckets[date])):
+                cumulative_share_buckets[date][i] += current_share
+
+for p in p_consts:
+    for date in cumulative_share_buckets:
+        current_cumulative = 0.0
+        last_cumulative = 0.0
+        for i in range(len(cumulative_share_buckets[date])):
+            # Consider adding multi-level break
+            current_cumulative = cumulative_share_buckets[date][i]
+            if current_cumulative > p and last_cumulative <= p:
+
+                # Linear interpolation to find estimated age.
+                fraction = (p - last_cumulative) / (current_cumulative - last_cumulative)
+                estimated_age = i-1 + fraction
+                # print(date, p, i-1, last_cumulative, i, current_cumulative, estimated_age)
+                assert(estimated_age >= i-1)
+                assert(estimated_age < i)
+                percentiles[p][date] = estimated_age
+
+            last_cumulative = current_cumulative
+
+
+# Write date, age, share in fully normalized form.
+sp_header = ['date','age','percent']
 with open('share-plot.csv','w') as sp_file:
     sp_writer = csv.writer(sp_file)
     sp_writer.writerow(sp_header)
-    for date, row in buckets.items():
+    for date, row in share_buckets.items():
         for i in range(len(row)):
             sp_writer.writerow([date, i, row[i]])
             if row[i] > 0.0 and i > max_months_seen:
                 max_months_seen = i
+
+pp_header = ['percentile','date','age']
+with open('percentile-plot.csv','w') as pp_file:
+    pp_writer = csv.writer(pp_file)
+    pp_writer.writerow(pp_header)
+    for p, row in percentiles.items():
+        for date, age in row.items():
+            pp_writer.writerow([p, date, age])
                 
 print('max age seen: {}'.format(max_months_seen))
+# print(cumulative_share_buckets)
+# print(percentiles)
