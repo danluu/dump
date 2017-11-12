@@ -57,10 +57,10 @@ with open('share-plot.csv','w') as sp_file:
     sp_writer.writerow(sp_header)
     for date, row in buckets.items():
         for i in range(len(row)):
-            if row[i] > 0.0:
-                sp_writer.writerow([date, i, row[i]])
-                if i > max_months_seen:
-                    max_months_seen = i
+            # if row[i] > 0.0:
+            sp_writer.writerow([date, i, row[i]])
+            # if i > max_months_seen:
+                # max_months_seen = i
                 
 
 print(max_months_seen)
