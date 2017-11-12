@@ -13,6 +13,7 @@ date_range = last_date - first_date
 max_buckets = math.ceil((date_range.days + 1) / average_month)
 
 buckets = collections.defaultdict(lambda: [0.0] * max_buckets)
+max_months_seen = 0
 
 with open('version-history.csv') as vh_file:
     vh_reader = csv.reader(vh_file)
@@ -49,4 +50,10 @@ with open('share-plot.csv','w') as sp_file:
     sp_writer.writerow(sp_header)
     for date, row in buckets.items():
         for i in range(len(row)):
-            sp_writer.writerow([date, i, row[i]])
+            if row[i] > 0.0:
+                sp_writer.writerow([date, i, row[i]])
+                if i > max_months_seen:
+                    max_months_seen = i
+                
+
+print(max_months_seen)
