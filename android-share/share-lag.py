@@ -31,6 +31,7 @@ date_consts = [datetime.datetime.strptime('2010-01-01', '%Y-%m-%d'),
 #               datetime.datetime.strptime('2015-01-01', '%Y-%m-%d'),
                datetime.datetime.strptime('2016-01-01', '%Y-%m-%d')]
 age_by_date = collections.defaultdict(lambda: [0.0] * 100)
+all_age_by_date = collections.defaultdict(lambda: [0.0] * 100)
 
 with open('version-history.csv') as vh_file:
     vh_reader = csv.reader(vh_file)
@@ -93,7 +94,7 @@ for p in p_consts:
 for d in date_consts:
     prev_date = first_date
     for date in cumulative_share_buckets:
-        delta = date -d
+        delta = date - d
         if delta < datetime.timedelta(days=30) and delta > datetime.timedelta(0):
             max_upper_bound = 0
             max_age = 0
@@ -113,9 +114,31 @@ for d in date_consts:
                 for p in range(max_upper_bound, 100):
                     age_by_date[d][p] = max_age
 
-            print(d, max_upper_bound)
-
         prev_date = date
+
+# Compute ages at all dates.
+for date in cumulative_share_buckets:
+    max_upper_bound = 0
+    max_age = 0
+    prev_share = 0.0
+    for age in range(len(cumulative_share_buckets[date])):
+        cur_share = cumulative_share_buckets[date][age]
+        if (cur_share > prev_share):
+            lower_bound = math.floor(prev_share)
+            upper_bound = math.floor(cur_share)
+            max_upper_bound = upper_bound
+            max_age = age
+            for p in range(lower_bound, upper_bound):
+                all_age_by_date[date][p] = age
+
+        prev_share = cur_share
+    if max_upper_bound < 100:
+        for p in range(max_upper_bound, 100):
+            all_age_by_date[d][p] = max_age
+
+
+    prev_date = date
+
 
 
 # Write date, age, share in fully normalized form.
@@ -145,6 +168,17 @@ with open('date-plot.csv', 'w') as dp_file:
         for p in range(len(row)):
             age = row[p]
             dp_writer.writerow([date, p, age])
+
+
+adp_header = ['date','percentile','age']
+with open('all-date-plot.csv', 'w') as adp_file:
+    adp_writer = csv.writer(adp_file)
+    adp_writer.writerow(adp_header)
+    for date, row in all_age_by_date.items():
+        for p in range(len(row)):
+            age = row[p]
+            adp_writer.writerow([date, p, age])
+
                 
 print('max age seen: {}'.format(max_months_seen))
 # print(cumulative_share_buckets)
