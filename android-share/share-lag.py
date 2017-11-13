@@ -18,7 +18,7 @@ cumulative_share_buckets = collections.defaultdict(lambda: [0.0] * max_buckets)
 max_months_seen = 0
 
 
-p_consts = [50.0,90.0,95.0]
+p_consts = [50.0,75.0,95.0,99.0]
 # dict of [percentile][date] = age
 percentiles = collections.defaultdict(dict)
 
