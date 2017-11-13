@@ -22,6 +22,16 @@ p_consts = [50.0,75.0,95.0,99.0]
 # dict of [percentile][date] = age
 percentiles = collections.defaultdict(dict)
 
+# dict of [date][percentile] = age
+date_consts = [datetime.datetime.strptime('2010-01-01', '%Y-%m-%d'),
+               datetime.datetime.strptime('2011-01-01', '%Y-%m-%d'),
+               datetime.datetime.strptime('2012-01-01', '%Y-%m-%d'),
+               datetime.datetime.strptime('2013-01-01', '%Y-%m-%d'),
+               datetime.datetime.strptime('2014-01-01', '%Y-%m-%d'),
+               datetime.datetime.strptime('2015-01-01', '%Y-%m-%d'),
+               datetime.datetime.strptime('2016-01-01', '%Y-%m-%d')]
+age_by_date = collections.defaultdict(lambda: [0.0] * 100)
+
 with open('version-history.csv') as vh_file:
     vh_reader = csv.reader(vh_file)
     for row in vh_reader:
@@ -59,6 +69,7 @@ for date in share:
             for i in range(bidx, len(cumulative_share_buckets[date])):
                 cumulative_share_buckets[date][i] += current_share
 
+# Compute age of various percentiles.
 for p in p_consts:
     for date in cumulative_share_buckets:
         current_cumulative = 0.0
@@ -78,10 +89,28 @@ for p in p_consts:
 
             last_cumulative = current_cumulative
 
+# Compute ages at various dates.
+for d in date_consts:
+    prev_date = first_date
+    for date in cumulative_share_buckets:
+        if date > d and prev_date < d:
+            prev_share = 0.0
+            for age in range(len(cumulative_share_buckets[date])):
+                cur_share = cumulative_share_buckets[date][age]
+                if (cur_share > prev_share):
+                    lower_bound = math.floor(prev_share)
+                    upper_bound = math.floor(cur_share)
+                    for p in range(lower_bound, upper_bound):
+                        age_by_date[date][p] = age
+
+                prev_share = cur_share
+
+        prev_date = date
+
 
 # Write date, age, share in fully normalized form.
 sp_header = ['date','age','percent']
-with open('share-plot.csv','w') as sp_file:
+with open('share-plot.csv', 'w') as sp_file:
     sp_writer = csv.writer(sp_file)
     sp_writer.writerow(sp_header)
     for date, row in share_buckets.items():
@@ -91,13 +120,23 @@ with open('share-plot.csv','w') as sp_file:
                 max_months_seen = i
 
 pp_header = ['percentile','date','age']
-with open('percentile-plot.csv','w') as pp_file:
+with open('percentile-plot.csv', 'w') as pp_file:
     pp_writer = csv.writer(pp_file)
     pp_writer.writerow(pp_header)
     for p, row in percentiles.items():
         for date, age in row.items():
             pp_writer.writerow([p, date, age])
+
+dp_header = ['date','percentile','age']
+with open('date-plot.csv', 'w') as dp_file:
+    dp_writer = csv.writer(dp_file)
+    dp_writer.writerow(dp_header)
+    for date, row in age_by_date.items():
+        for p in range(len(row)):
+            age = row[p]
+            dp_writer.writerow([date, p, age])
                 
 print('max age seen: {}'.format(max_months_seen))
 # print(cumulative_share_buckets)
 # print(percentiles)
+# print(age_by_date)
