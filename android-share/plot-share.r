@@ -26,3 +26,11 @@ ggplot(df, aes(x=date, y=age, col=as.factor(percentile))) + geom_line(size=3) +
            scale_y_continuous(breaks=c(0,24,48,72)) + 
            scale_color_brewer(type='qual', palette='Spectral')
 dev.off()
+
+svg(filename="android-age-over-time.svg", width=16, height=16)
+df <- read.csv("date-plot.csv",colClasses=c("Date",NA,NA))
+ggplot(df, aes(x=percentile, y=age, col=as.factor(date))) + geom_line(size=3) +
+           theme_minimal() +
+           theme(text = element_text(size = 30)) +
+           scale_color_brewer(type='seq')
+dev.off()

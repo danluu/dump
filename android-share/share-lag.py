@@ -93,7 +93,7 @@ for p in p_consts:
 for d in date_consts:
     prev_date = first_date
     for date in cumulative_share_buckets:
-        if date > d and prev_date < d:
+        if date - d < datetime.timedelta(days=30):
             prev_share = 0.0
             for age in range(len(cumulative_share_buckets[date])):
                 cur_share = cumulative_share_buckets[date][age]
@@ -101,7 +101,7 @@ for d in date_consts:
                     lower_bound = math.floor(prev_share)
                     upper_bound = math.floor(cur_share)
                     for p in range(lower_bound, upper_bound):
-                        age_by_date[date][p] = age
+                        age_by_date[d][p] = age
 
                 prev_share = cur_share
 
