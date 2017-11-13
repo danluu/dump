@@ -32,5 +32,5 @@ df <- read.csv("date-plot.csv",colClasses=c("Date",NA,NA))
 ggplot(df, aes(x=percentile, y=age, col=as.factor(date))) + geom_line(size=3) +
            theme_minimal() +
            theme(text = element_text(size = 30)) +
-           scale_color_brewer(type='seq')
+           scale_color_brewer(palette='YlGn')
 dev.off()
