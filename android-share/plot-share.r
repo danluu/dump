@@ -15,7 +15,7 @@ ggplot(df, aes(x=date,y=percent,fill=as.factor(age))) + geom_area() +
            scale_fill_manual(values = my_pal, guide="colorbar") +
            guides(fill=guide_legend(keyheight=0.3, ncol=1, title="months")) +
            scale_y_continuous(labels=c(100,75,50,25,0)) + 
-           labs(y = "marketshare")
+           labs(y = "percentile")
 
 dev.off()
 
@@ -24,7 +24,7 @@ df <- read.csv("percentile-plot.csv",colClasses=c(NA,"Date",NA))
 ggplot(df, aes(x=date, y=age, col=as.factor(percentile))) + geom_line(size=3) +
            theme_minimal() +
            theme(text = element_text(size = 30)) +
-           labs(y = "age (months)") + 
+           labs(y = "months out of date") + 
            guides(col=guide_legend(title="percentile")) +
            scale_y_continuous(breaks=c(0,24,48,72)) + 
            scale_color_brewer(type='qual', palette='Spectral')
@@ -35,10 +35,10 @@ df <- read.csv("date-plot.csv",colClasses=c("Date",NA,NA))
 ggplot(df, aes(x=percentile, y=age, col=as.factor(date))) + geom_line(size=3) +
            theme_minimal() +
            theme(text = element_text(size = 30)) +
-           labs(y = "age (months)") + 
+           labs(y = "months out of date") + 
            guides(col=guide_legend(title="date")) +
            scale_x_continuous(breaks=c(0,25,50,75,99)) + 
-           scale_color_brewer(palette='YlGn')
+           scale_color_brewer(palette='YlGn', labels=c('2010','2012','2014','2016'))
 dev.off()
 
 
@@ -46,8 +46,9 @@ df <- read.csv("all-date-plot.csv",colClasses=c("Date",NA,NA))
 p <- ggplot(df, aes(x=percentile, y=age, frame=date)) + geom_line(size=3) +
            theme_minimal() +
            theme(text = element_text(size = 30)) +
-           labs(y = "age (months)") + 
+           labs(y = "months out of date") + 
            guides(col=guide_legend(title="date")) +
-           scale_x_continuous(breaks=c(0,25,50,75,99))
+           scale_x_continuous(breaks=c(0,25,50,75,99)) +
+           scale_y_continuous(breaks=c(0,24,48,72))           
 
 gganimate(p,interval=.1,"android-age.gif")

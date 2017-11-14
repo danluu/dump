@@ -134,7 +134,7 @@ for date in cumulative_share_buckets:
         prev_share = cur_share
     if max_upper_bound < 100:
         for p in range(max_upper_bound, 100):
-            all_age_by_date[d][p] = max_age
+            all_age_by_date[date][p] = max_age
 
 
     prev_date = date
