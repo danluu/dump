@@ -7,7 +7,7 @@ chmod,9,12
 chown,15,12
 which,1,12
 rm,11,12
-man,1,12
+man,1,12 #TODO: wrong
 echo,5,12
 find,82,12
 ifconfig,25,12
@@ -35,7 +35,7 @@ chmod,9,17
 chown,15,17
 which,1,17
 rm,12,17
-man,1,17
+man,1,17 #TODO: wrong
 echo,5,17
 find,82,17
 ifconfig,25,17
@@ -55,3 +55,12 @@ curl,211,17
 ping,29,17
 wget,134,17
 sudo,25,17
+cp,0,v7 unix
+kill,1,v7 unix
+grep,11,v7 unix
+tar,12,v7 unix
+chmod,0,v7 unix
+chown,0,v7 unix
+which,N/A,v7 unix
+rm,3,v7 unix
+man,5,v7 unix
