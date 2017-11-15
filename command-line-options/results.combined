@@ -1,60 +1,60 @@
 name,options,ubuntu_version
-cp,30,12
-kill,3,12
-grep,45,12
-tar,134,12
-chmod,9,12
-chown,15,12
-which,1,12
-rm,11,12
-man,39,12
-echo,5,12
-find,82,12
-ifconfig,25,12
-ln,15,12
-ps,85,12
-clear,0,12
-top,12,12
-touch,11,12
-mv,13,12
-pwd,4,12
-df,17,12
-cat,12,12
-ls,58,12
-tail,12,12
-mkdir,6,12
-ping,12,12
-wget,98,12
-curl,155,12
-sudo,23,12
-cp,32,17
-kill,3,17
-grep,45,17
-tar,139,17
-chmod,9,17
-chown,15,17
-which,1,17
-rm,12,17
-man,40,17
-echo,5,17
-find,82,17
-ifconfig,25,17
-ln,16,17
-ps,85,17
-clear,0,17
-top,14,17
-touch,11,17
-mv,14,17
-pwd,4,17
-df,18,17
-cat,12,17
-ls,58,17
-tail,13,17
-mkdir,7,17
-curl,211,17
-ping,29,17
-wget,134,17
-sudo,25,17
+cp,30,ubuntu 12
+kill,3,ubuntu 12
+grep,45,ubuntu 12
+tar,134,ubuntu 12
+chmod,9,ubuntu 12
+chown,15,ubuntu 12
+which,1,ubuntu 12
+rm,11,ubuntu 12
+man,39,ubuntu 12
+echo,5,ubuntu 12
+find,82,ubuntu 12
+ifconfig,25,ubuntu 12
+ln,15,ubuntu 12
+ps,85,ubuntu 12
+clear,0,ubuntu 12
+top,12,ubuntu 12
+touch,11,ubuntu 12
+mv,13,ubuntu 12
+pwd,4,ubuntu 12
+df,17,ubuntu 12
+cat,12,ubuntu 12
+ls,58,ubuntu 12
+tail,12,ubuntu 12
+mkdir,6,ubuntu 12
+ping,12,ubuntu 12
+wget,98,ubuntu 12
+curl,155,ubuntu 12
+sudo,23,ubuntu 12
+cp,32,ubuntu 17
+kill,3,ubuntu 17
+grep,45,ubuntu 17
+tar,139,ubuntu 17
+chmod,9,ubuntu 17
+chown,15,ubuntu 17
+which,1,ubuntu 17
+rm,12,ubuntu 17
+man,40,ubuntu 17
+echo,5,ubuntu 17
+find,82,ubuntu 17
+ifconfig,25,ubuntu 17
+ln,16,ubuntu 17
+ps,85,ubuntu 17
+clear,0,ubuntu 17
+top,14,ubuntu 17
+touch,11,ubuntu 17
+mv,14,ubuntu 17
+pwd,4,ubuntu 17
+df,18,ubuntu 17
+cat,12,ubuntu 17
+ls,58,ubuntu 17
+tail,13,ubuntu 17
+mkdir,7,ubuntu 17
+curl,211,ubuntu 17
+ping,29,ubuntu 17
+wget,134,ubuntu 17
+sudo,25,ubuntu 17
 cp,0,v7 unix
 kill,1,v7 unix
 grep,11,v7 unix
