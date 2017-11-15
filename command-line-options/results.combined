@@ -7,7 +7,7 @@ chmod,9,12
 chown,15,12
 which,1,12
 rm,11,12
-man,1,12 #TODO: wrong
+man,39,12
 echo,5,12
 find,82,12
 ifconfig,25,12
@@ -35,7 +35,7 @@ chmod,9,17
 chown,15,17
 which,1,17
 rm,12,17
-man,1,17 #TODO: wrong
+man,40,17
 echo,5,17
 find,82,17
 ifconfig,25,17
@@ -89,5 +89,31 @@ ifconfig,todo,linux 2.6
 ln,15,linux 2.6
 ps,todo,linux 2.6
 clear,0,linux 2.6
-
-
+cp,18,slackware 3.1
+kill,3,slackware 3.1
+grep,22,slackware 3.1
+tar,53,slackware 3.1
+chmod,6,slackware 3.1
+chown,6,slackware 3.1
+which,0,slackware 3.1
+rm,7,slackware 3.1
+man,16,slackware 3.1
+echo,4,slackware 3.1
+find,57,slackware 3.1
+ifconfig,16,slackware 3.1
+ln,11,slackware 3.1
+ps,22,slackware 3.1
+clear,0,slackware 3.1
+top,6,slackware 3.1
+touch,9,slackware 3.1
+mv,9,slackware 3.1
+pwd,2,slackware 3.1
+df,10,slackware 3.1
+cat,12,slackware 3.1
+ls,42,slackware 3.1
+tail,7,slackware 3.1
+mkdir,4,slackware 3.1
+ping,12,slackware 3.1
+wget,N/A,slackware 3.1
+curl,N/A,slackware 3.1
+sudo,0,slackware 3.1
