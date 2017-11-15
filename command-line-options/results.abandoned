@@ -1,0 +1,6 @@
+echo,6,linux 2.6
+find,todo,linux 2.6
+ifconfig,todo,linux 2.6
+ln,15,linux 2.6
+ps,todo,linux 2.6
+clear,0,linux 2.6

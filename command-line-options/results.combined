@@ -83,12 +83,6 @@ ping,n/a,v7 unix
 wget,n/a,v7 unix
 curl,n/a,v7 unix
 sudo,n/a,v7 unix
-echo,6,linux 2.6
-find,todo,linux 2.6
-ifconfig,todo,linux 2.6
-ln,15,linux 2.6
-ps,todo,linux 2.6
-clear,0,linux 2.6
 cp,18,slackware 3.1
 kill,3,slackware 3.1
 grep,22,slackware 3.1
