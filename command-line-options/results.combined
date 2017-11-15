@@ -108,6 +108,6 @@ ls,42,slackware 3.1
 tail,7,slackware 3.1
 mkdir,4,slackware 3.1
 ping,12,slackware 3.1
-wget,N/A,slackware 3.1
-curl,N/A,slackware 3.1
+wget,n/a,slackware 3.1
+curl,n/a,slackware 3.1
 sudo,0,slackware 3.1
