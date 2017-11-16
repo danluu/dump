@@ -1,4 +1,4 @@
-name,options,ubuntu_version
+name,options,version
 cp,30,ubuntu 12
 kill,3,ubuntu 12
 grep,45,ubuntu 12
@@ -68,7 +68,7 @@ echo,1,v7 unix
 find,14,v7 unix
 ifconfig,n/a,v7 unix
 ln,0,v7 unix
-ps, 4, v7 unix
+ps,4,v7 unix
 clear,n/a,v7 unix
 top,n/a,v7 unix
 touch,1,v7 unix

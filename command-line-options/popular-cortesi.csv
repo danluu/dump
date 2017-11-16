@@ -21,7 +21,6 @@ ps
 ping
 kill
 ifconfig
-make
 chown
 grep
 tail
