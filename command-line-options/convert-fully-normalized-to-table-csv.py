@@ -19,10 +19,16 @@ with open('results.combined') as f:
         num_options = row[1]
         version = row[2]
 
-        table_prep[command][version] = num_options
+        if num_options != 'n/a':
+            table_prep[command][version] = num_options
+        else:
+            table_prep[command][version] = ''
 
 with open('command-table.csv','w') as f:
     writer = csv.writer(f)    
+    # header = ['command'] + versions
+    header = ['command'] + ['1979','1996','2015','2017']
+    writer.writerow(header)
     for command in commands:
         row = [command]
         for version in versions:
