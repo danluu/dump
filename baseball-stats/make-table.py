@@ -36,12 +36,12 @@ def value_to_color(value):
 print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}</style>')
 
 print('<table>')
-# TODO: make this not a hack if this script is ever re-used
 # print('<tr><th rowspan="3"></td><th colspan="3">2005</td><th colspan="6">2017</td></tr>')
 print('<tr>')
 for hitem in header:
     print('<th>{}</th>'.format(hitem),end='')
 print('</tr>')
+print('<tr><th>bases</th><th colspan="3">outs</th>></tr>')
 # print('<tr><th colspan="6">file</td><th colspan="3">mmap</td></tr>')
 
 for row in body:
@@ -55,7 +55,7 @@ for row in body:
             else:
                 print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
         except ValueError:
-            print('<td>{}</td>'.format(bitem),end='')            
+            print('<th>{}</th>'.format(bitem),end='')
 
     print('</tr>')
 print('</table>')
