@@ -34,6 +34,10 @@ func minifyFun(path string, info os.FileInfo, err error) error {
 		fmt.Println("Skipping", path)
 		return nil
 	}
+	if strings.Contains(path, "risc-definition") {
+		fmt.Println("Skipping", path)
+		return nil
+	}
 	if strings.HasSuffix(path, ".html") {
 		cmd := "html-minifier"
 		dstPath := dstDir + strings.TrimPrefix(path, srcDir)
@@ -41,9 +45,9 @@ func minifyFun(path string, info os.FileInfo, err error) error {
 		fmt.Println(dstPath)
 		curArgs := baseArgs + " -o " + badTempPath + " " + path
 		args := strings.Split(curArgs, " ")
-		_, err := exec.Command(cmd, args...).Output()
+		out, err := exec.Command(cmd, args...).CombinedOutput()
 		if err != nil {
-			log.Fatal("FAIL", path, err)
+			log.Fatal("FAIL", path, string(out), err)
 		}
 		os.Rename(badTempPath, dstPath)
 	}
