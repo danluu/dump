@@ -38,12 +38,12 @@ func minifyFun(path string, info os.FileInfo, err error) error {
 		fmt.Println("Skipping", path)
 		return nil
 	}
-	# Table gets mangled.
+	// Table gets mangled.
 	if strings.Contains(path, "bad-decisions") {
 		fmt.Println("Skipping", path)
 		return nil
 	}
-	# Table gets mangled
+	// Table gets mangled
 	if strings.Contains(path, "filesystem-errors") {
 		fmt.Println("Skipping", path)
 		return nil
