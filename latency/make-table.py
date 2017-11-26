@@ -5,8 +5,8 @@ import re
 number_matcher = re.compile('(\d*\.?\d*)')
 dark_colors = {'black','#800026','#525252','#252525','#2171b5','#08519c','#08306b'}
 
-# input_path = 'computers.csv'
-input_path = 'mobile.csv'
+input_path = 'computers.csv'
+# input_path = 'mobile.csv'
 
 with open(input_path) as f:
     reader = csv.reader(f)
@@ -76,7 +76,7 @@ def remove_units(value):
     else:
         return raw_value
     
-print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}</style>')
+print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}td.l {text-align:left;}</style>')
 
 print('<table>')
 # print('<tr><th rowspan="3"></td><th colspan="3">2005</td><th colspan="6">2017</td></tr>')
@@ -92,10 +92,10 @@ for row in body:
     for idx, bitem in enumerate(row):
         if idx == 0:
             if bitem == 'packet around the world' or bitem == 'packet':
-                print('<td bgcolor="silver">{}</td>'.format(bitem),end='')
+                print('<td class="l" bgcolor="silver">{}</td>'.format(bitem),end='')
                 reference = True
             else:
-                print('<td>{}</td>'.format(bitem),end='')
+                print('<td class="l">{}</td>'.format(bitem),end='')
         elif idx == 1:
             value = float(bitem)
             color = latency_to_color(value)
