@@ -19,7 +19,7 @@ def latency_to_color(value):
     colors = ['#ffffcc','#ffeda0','#fed976','#feb24c','#fd8d3c','#fc4e2a','#e31a1c','#bd0026','#800026']
 
     min_val = 30
-    max_val = 190
+    max_val = 180
 
     if value <= max_val:
         max_idx = len(colors) - 1
@@ -51,7 +51,7 @@ def log_greyscale(value, min_val, max_val):
     
         return colors[idx]
     else:
-        return 'white'
+        return 'black'
 
 def remove_units(value):
     if value == '':
@@ -88,7 +88,10 @@ for row in body:
     print('<tr>')
     for idx, bitem in enumerate(row):
         if idx == 0:
-            print('<td>{}</td>'.format(bitem),end='')            
+            if bitem == 'packet around the world':
+                print('<td bgcolor="black"><font color=white>{}</font></td>'.format(bitem),end='')
+            else:
+                print('<td>{}</td>'.format(bitem),end='')
         elif idx == 1:
             value = float(bitem)
             color = latency_to_color(value)
@@ -96,6 +99,11 @@ for row in body:
                 print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
             else:
                 print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
+        elif idx == 2:
+            if bitem == '':
+                print('<td bgcolor="black">{}</td>'.format(bitem),end='')
+            else:
+                print('<td>{}</td>'.format(bitem),end='')
         elif idx == 3:
             value = remove_units(bitem)
             color = log_greyscale(value,1000000,4200000000)

@@ -6,6 +6,7 @@ sgi indy,60,1993,.1 GHz,1.2M
 thinkpad 13 <b>chromeos</b>,70,2017,2.3 GHz,1G
 imac g4 <b>os 9</b>,70,2002,.8 GHz,11M
 mac color classic,90,1993,16 MHz,273k
+macbook pro 2014,100,2014,2.6 GHz,700M
 thinkpad 13 <b>linux chroot</b>,100,2017,2.3 GHz,1G
 imac g4 <b>os x</b>,120,2002,16 MHz,273k
 next cube,150,1988,25 MHz,1.2M
