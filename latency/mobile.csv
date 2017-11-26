@@ -1,3 +1,4 @@
+device,latency<br>(ms),year
 ipad pro 10.5" pencil,30,2017
 ipad pro 10.5",70,2017
 iphone 4s,70,2011
@@ -25,6 +26,7 @@ asus zenfone3 max,150,2016
 sony xperia z5 compact,150,2015
 galaxy s4 mini,170,2013
 lg k4,180,2016
+packet,190,
 htc rezound,240,2011
 palm pilot 1000,490,1996
 kindle paperwhite 3,630,2015

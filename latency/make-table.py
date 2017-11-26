@@ -5,7 +5,9 @@ import re
 number_matcher = re.compile('(\d*\.?\d*)')
 dark_colors = {'black','#800026','#525252','#252525','#2171b5','#08519c','#08306b'}
 
-input_path = 'computers.csv'
+# input_path = 'computers.csv'
+input_path = 'mobile.csv'
+
 with open(input_path) as f:
     reader = csv.reader(f)
     header = next(reader)
@@ -33,7 +35,7 @@ def latency_to_color(value):
     else:
         return 'black'
 
-def log_greyscale(value, min_val, max_val):
+def log_color_scale(value, min_val, max_val):
     # colors = ['white','#f0f0f0','#d9d9d9','#bdbdbd','#969696','#737373','#525252','#252525','black']
     colors = ['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#08519c','#08306b']
 
@@ -51,7 +53,7 @@ def log_greyscale(value, min_val, max_val):
     
         return colors[idx]
     else:
-        return 'black'
+        return 'silver'
 
 def remove_units(value):
     if value == '':
@@ -86,34 +88,38 @@ print('</tr>')
 
 for row in body:
     print('<tr>')
+    reference = False
     for idx, bitem in enumerate(row):
         if idx == 0:
-            if bitem == 'packet around the world':
-                print('<td bgcolor="black"><font color=white>{}</font></td>'.format(bitem),end='')
+            if bitem == 'packet around the world' or bitem == 'packet':
+                print('<td bgcolor="silver">{}</td>'.format(bitem),end='')
+                reference = True
             else:
                 print('<td>{}</td>'.format(bitem),end='')
         elif idx == 1:
             value = float(bitem)
             color = latency_to_color(value)
+            if reference:
+                color = 'silver'
             if flip_text_color(color):
                 print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
             else:
                 print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
         elif idx == 2:
             if bitem == '':
-                print('<td bgcolor="black">{}</td>'.format(bitem),end='')
+                print('<td bgcolor="silver">{}</td>'.format(bitem),end='')
             else:
                 print('<td>{}</td>'.format(bitem),end='')
         elif idx == 3:
             value = remove_units(bitem)
-            color = log_greyscale(value,1000000,4200000000)
+            color = log_color_scale(value,1000000,4200000000)
             if flip_text_color(color):
                 print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
             else:
                 print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
         elif idx == 4:
             value = remove_units(bitem)
-            color = log_greyscale(value,3500,2000000000)
+            color = log_color_scale(value,3500,2000000000)
             if flip_text_color(color):
                 print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
             else:
