@@ -3,13 +3,13 @@ apple 2e,30,1983,1 MHz,3.5k
 ti 99/4a,40,1981,3 MHz,8k
 commodore pet 4016,60,1977,1 MHz,3.5k
 sgi indy,60,1993,.1 GHz,1.2M
-lenovo thinkpad 13 chromeos,70,2017,2.3 GHz,1G
-imac g4 os 9,70,2002,.8 GHz,11M
+thinkpad 13 <b>chromeos</b>,70,2017,2.3 GHz,1G
+imac g4 <b>os 9</b>,70,2002,.8 GHz,11M
 mac color classic,90,1993,16 MHz,273k
-lenovo thinkpad 13 crouton,100,2017,2.3 GHz,1G
-imac g4 os x,120,2002,16 MHz,273k
+thinkpad 13 <b>linux chroot</b>,100,2017,2.3 GHz,1G
+imac g4 <b>os x</b>,120,2002,16 MHz,273k
 next cube,150,1988,25 MHz,1.2M
-powerspec g405 linux,170,2017,4.2 GHz,2G
+powerspec g405 <b>linux</b>,170,2017,4.2 GHz,2G
 packet around the world,190,,,
-powerspec g405 windows,200,2017,4.2 GHz,2G
+powerspec g405 <b>windows</b>,200,2017,4.2 GHz,2G
 symbolics 3620,300,1986,5 MHz,390k
