@@ -38,6 +38,7 @@ def latency_to_color(value):
 def log_color_scale(value, min_val, max_val):
     # colors = ['white','#f0f0f0','#d9d9d9','#bdbdbd','#969696','#737373','#525252','#252525','black']
     colors = ['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#08519c','#08306b']
+    colors.reverse()
 
     if value != float('inf'):
         lmin = math.log2(min_val)
