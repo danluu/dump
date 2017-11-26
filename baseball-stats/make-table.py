@@ -41,7 +41,7 @@ print('<tr>')
 for hitem in header:
     print('<th>{}</th>'.format(hitem),end='')
 print('</tr>')
-print('<tr><th>bases</th><th colspan="3">outs</th>></tr>')
+print('<tr><th>bases</th><th colspan="3">outs</th></tr>')
 # print('<tr><th colspan="6">file</td><th colspan="3">mmap</td></tr>')
 
 for row in body:
