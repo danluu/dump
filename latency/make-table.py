@@ -3,7 +3,16 @@ import math
 import re
 
 number_matcher = re.compile('(\d*\.?\d*)')
-dark_colors = {'black','#800026','#525252','#252525','#2171b5','#08519c','#08306b'}
+dark_colors = {'black','#800026','#525252','#252525','#2171b5','#08519c','#08306b','#006d2c','#00441b','#6a51a3','#54278f','#3f007d'}
+
+blue_colors = ['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#08519c','#08306b']
+blue_colors.reverse()
+
+green_colors =  ['#f7fcf5','#e5f5e0','#c7e9c0','#a1d99b','#74c476','#41ab5d','#238b45','#006d2c','#00441b']
+green_colors.reverse()
+
+purple_colors = ['#fcfbfd','#efedf5','#dadaeb','#bcbddc','#9e9ac8','#807dba','#6a51a3','#54278f','#3f007d']
+purple_colors.reverse()
 
 input_path = 'computers.csv'
 # input_path = 'mobile.csv'
@@ -35,10 +44,8 @@ def latency_to_color(value):
     else:
         return 'black'
 
-def log_color_scale(value, min_val, max_val):
+def log_color_scale(value, min_val, max_val, colors):
     # colors = ['white','#f0f0f0','#d9d9d9','#bdbdbd','#969696','#737373','#525252','#252525','black']
-    colors = ['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#08519c','#08306b']
-    colors.reverse()
 
     if value != float('inf'):
         lmin = math.log2(min_val)
@@ -108,19 +115,25 @@ for row in body:
                 print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
         elif idx == 2:
             if bitem == '':
-                print('<td bgcolor="silver">{}</td>'.format(bitem),end='')
+                color = 'silver'
             else:
-                print('<td>{}</td>'.format(bitem),end='')
+                value = int(bitem)
+                color = log_color_scale(value,1977,2017,purple_colors)                    
+                    
+            if flip_text_color(color):
+                print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
+            else:
+                print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
         elif idx == 3:
             value = remove_units(bitem)
-            color = log_color_scale(value,1000000,4200000000)
+            color = log_color_scale(value,1000000,4200000000,blue_colors)
             if flip_text_color(color):
                 print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
             else:
                 print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
         elif idx == 4:
             value = remove_units(bitem)
-            color = log_color_scale(value,3500,2000000000)
+            color = log_color_scale(value,3500,2000000000,blue_colors)
             if flip_text_color(color):
                 print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
             else:
