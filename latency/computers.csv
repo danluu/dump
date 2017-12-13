@@ -1,19 +1,19 @@
 computer,latency<br>(ms),year,clock,# T
 apple 2e,30,1983,1 MHz,3.5k
 ti 99/4a,40,1981,3 MHz,8k
-??? <i>165Hz</i>,50,2017,???,???
+custom haswell-e<i>165Hz</i>,50,2014,3.5 GHz,2G
 commodore pet 4016,60,1977,1 MHz,3.5k
 sgi indy,60,1993,.1 GHz,1.2M
 thinkpad 13 <b>chromeos</b>,70,2017,2.3 GHz,1G
 imac g4 <b>os 9</b>,70,2002,.8 GHz,11M
-??? <i>60Hz</i>,80,2017,???,???
+custom haswell-e<i>60Hz</i>,80,2014,3.5 GHz,2G
 mac color classic,90,1993,16 MHz,273k
 powerspec g405 <b>linux</b> <i>60Hz</i>,90,2017,4.2 GHz,2G
 macbook pro 2014,100,2014,2.6 GHz,700M
 thinkpad 13 <b>linux chroot</b>,100,2017,2.3 GHz,1G
 lenovo x1 carbon 4th gen <b>linux</b>,110,2016,2.6 GHz,1G
 imac g4 <b>os x</b>,120,2002,16 MHz,273k
-??? <i>24Hz</i>,140,2017,???,???
+custom haswell-e<i>24Hz</i>,140,2014,3.5 GHz,2G
 lenovo x1 carbon 4th gen <b>windows</b>,150,2016,2.6 GHz,1G
 next cube,150,1988,25 MHz,1.2M
 powerspec g405 <b>linux</b>,170,2017,4.2 GHz,2G
