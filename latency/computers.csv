@@ -1,9 +1,11 @@
 computer,latency<br>(ms),year,clock,# T
 apple 2e,30,1983,1 MHz,3.5k
 ti 99/4a,40,1981,3 MHz,8k
+custom haswell-e<i>165Hz gsync</i>,50,2014,3.5 GHz,2G
 custom haswell-e<i>165Hz</i>,50,2014,3.5 GHz,2G
 commodore pet 4016,60,1977,1 MHz,3.5k
 sgi indy,60,1993,.1 GHz,1.2M
+custom haswell-e<i>120Hz</i>,60,2014,3.5 GHz,2G
 thinkpad 13 <b>chromeos</b>,70,2017,2.3 GHz,1G
 imac g4 <b>os 9</b>,70,2002,.8 GHz,11M
 custom haswell-e<i>60Hz</i>,80,2014,3.5 GHz,2G
