@@ -14,14 +14,6 @@ green_colors.reverse()
 purple_colors = ['#fcfbfd','#efedf5','#dadaeb','#bcbddc','#9e9ac8','#807dba','#6a51a3','#54278f','#3f007d']
 purple_colors.reverse()
 
-input_path = 'computers.csv'
-# input_path = 'mobile.csv'
-
-with open(input_path) as f:
-    reader = csv.reader(f)
-    header = next(reader)
-    body = [line for line in reader]
-
 def flip_text_color(color):
     return color in dark_colors
 
@@ -83,63 +75,74 @@ def remove_units(value):
         return raw_value * 1000000000
     else:
         return raw_value
-    
-print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}td.l {text-align:left;}</style>')
 
-print('<table>')
-# print('<tr><th rowspan="3"></td><th colspan="3">2005</td><th colspan="6">2017</td></tr>')
-print('<tr>')
-for hitem in header:
-    print('<th>{}</th>'.format(hitem),end='')
-print('</tr>')
-# print('<tr><th colspan="6">file</td><th colspan="3">mmap</td></tr>')
+def gross_main_body(input_path):
+    with open(input_path) as f:
+        reader = csv.reader(f)
+        header = next(reader)
+        body = [line for line in reader]
 
-for row in body:
+    print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}td.l {text-align:left;}</style>')
+
+    print('<table>')
+    # print('<tr><th rowspan="3"></td><th colspan="3">2005</td><th colspan="6">2017</td></tr>')
     print('<tr>')
-    reference = False
-    for idx, bitem in enumerate(row):
-        if idx == 0:
-            if bitem == 'packet around the world' or bitem == 'packet':
-                print('<td class="l" bgcolor="silver">{}</td>'.format(bitem),end='')
-                reference = True
-            else:
-                print('<td class="l">{}</td>'.format(bitem),end='')
-        elif idx == 1:
-            value = float(bitem)
-            color = latency_to_color(value)
-            if reference:
-                color = 'silver'
-            if flip_text_color(color):
-                print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
-            else:
-                print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
-        elif idx == 2:
-            if bitem == '':
-                color = 'silver'
-            else:
-                value = int(bitem)
-                color = log_color_scale(value,1977,2017,purple_colors)                    
-                    
-            if flip_text_color(color):
-                print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
-            else:
-                print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
-        elif idx == 3:
-            value = remove_units(bitem)
-            color = log_color_scale(value,1000000,4200000000,blue_colors)
-            if flip_text_color(color):
-                print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
-            else:
-                print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
-        elif idx == 4:
-            value = remove_units(bitem)
-            color = log_color_scale(value,3500,2000000000,blue_colors)
-            if flip_text_color(color):
-                print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
-            else:
-                print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')            
-        else:
-            print('<td>{}</td>'.format(bitem),end='')
-
+    for hitem in header:
+        print('<th>{}</th>'.format(hitem),end='')
     print('</tr>')
-print('</table>')
+    # print('<tr><th colspan="6">file</td><th colspan="3">mmap</td></tr>')
+
+    for row in body:
+        print('<tr>')
+        reference = False
+        for idx, bitem in enumerate(row):
+            if idx == 0:
+                if bitem == 'packet around the world' or bitem == 'packet':
+                    print('<td class="l" bgcolor="silver">{}</td>'.format(bitem),end='')
+                    reference = True
+                else:
+                    print('<td class="l">{}</td>'.format(bitem),end='')
+            elif idx == 1:
+                value = float(bitem)
+                color = latency_to_color(value)
+                if reference:
+                    color = 'silver'
+                if flip_text_color(color):
+                    print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
+                else:
+                    print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
+            elif idx == 2:
+                if bitem == '':
+                    color = 'silver'
+                else:
+                    value = int(bitem)
+                    color = log_color_scale(value,1977,2017,purple_colors)                    
+
+                if flip_text_color(color):
+                    print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
+                else:
+                    print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
+            elif idx == 3:
+                value = remove_units(bitem)
+                color = log_color_scale(value,1000000,4200000000,blue_colors)
+                if flip_text_color(color):
+                    print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
+                else:
+                    print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
+            elif idx == 4:
+                value = remove_units(bitem)
+                color = log_color_scale(value,3500,2000000000,blue_colors)
+                if flip_text_color(color):
+                    print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
+                else:
+                    print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')            
+            else:
+                print('<td>{}</td>'.format(bitem),end='')
+
+        print('</tr>')
+    print('</table>')
+
+
+input_path = 'computers.csv'
+# input_path = 'mobile.csv'
+gross_main_body(input_path)
