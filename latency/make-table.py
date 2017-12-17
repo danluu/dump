@@ -76,73 +76,77 @@ def remove_units(value):
     else:
         return raw_value
 
-def gross_main_body(input_path):
+def gross_main_body(input_path, output_path):
     with open(input_path) as f:
         reader = csv.reader(f)
         header = next(reader)
         body = [line for line in reader]
 
-    print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}td.l {text-align:left;}</style>')
+    with open(output_path, 'w') as outf:
+        print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}td.l {text-align:left;}</style>',file=outf)
 
-    print('<table>')
-    # print('<tr><th rowspan="3"></td><th colspan="3">2005</td><th colspan="6">2017</td></tr>')
-    print('<tr>')
-    for hitem in header:
-        print('<th>{}</th>'.format(hitem),end='')
-    print('</tr>')
-    # print('<tr><th colspan="6">file</td><th colspan="3">mmap</td></tr>')
+        print('<table>',file=outf)
+        # print('<tr><th rowspan="3"></td><th colspan="3">2005</td><th colspan="6">2017</td></tr>')
+        print('<tr>',file=outf)
+        for hitem in header:
+            print('<th>{}</th>'.format(hitem),end='',file=outf)
+        print('</tr>',file=outf)
+        # print('<tr><th colspan="6">file</td><th colspan="3">mmap</td></tr>')
 
-    for row in body:
-        print('<tr>')
-        reference = False
-        for idx, bitem in enumerate(row):
-            if idx == 0:
-                if bitem == 'packet around the world' or bitem == 'packet':
-                    print('<td class="l" bgcolor="silver">{}</td>'.format(bitem),end='')
-                    reference = True
-                else:
-                    print('<td class="l">{}</td>'.format(bitem),end='')
-            elif idx == 1:
-                value = float(bitem)
-                color = latency_to_color(value)
-                if reference:
-                    color = 'silver'
-                if flip_text_color(color):
-                    print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
-                else:
-                    print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
-            elif idx == 2:
-                if bitem == '':
-                    color = 'silver'
-                else:
-                    value = int(bitem)
-                    color = log_color_scale(value,1977,2017,purple_colors)                    
+        for row in body:
+            print('<tr>',file=outf)
+            reference = False
+            for idx, bitem in enumerate(row):
+                if idx == 0:
+                    if bitem == 'packet around the world' or bitem == 'packet':
+                        print('<td class="l" bgcolor="silver">{}</td>'.format(bitem),end='',file=outf)
+                        reference = True
+                    else:
+                        print('<td class="l">{}</td>'.format(bitem),end='',file=outf)
+                elif idx == 1:
+                    value = float(bitem)
+                    color = latency_to_color(value)
+                    if reference:
+                        color = 'silver'
+                    if flip_text_color(color):
+                        print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
+                    else:
+                        print('<td bgcolor={}>{}</td>'.format(color, bitem),end='',file=outf)
+                elif idx == 2:
+                    if bitem == '':
+                        color = 'silver'
+                    else:
+                        value = int(bitem)
+                        color = log_color_scale(value,1977,2017,purple_colors)
 
-                if flip_text_color(color):
-                    print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
+                    if flip_text_color(color):
+                        print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
+                    else:
+                        print('<td bgcolor={}>{}</td>'.format(color, bitem),end='',file=outf)
+                elif idx == 3:
+                    value = remove_units(bitem)
+                    color = log_color_scale(value,1000000,4200000000,blue_colors)
+                    if flip_text_color(color):
+                        print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
+                    else:
+                        print('<td bgcolor={}>{}</td>'.format(color, bitem),end='',file=outf)
+                elif idx == 4:
+                    value = remove_units(bitem)
+                    color = log_color_scale(value,3500,2000000000,blue_colors)
+                    if flip_text_color(color):
+                        print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
+                    else:
+                        print('<td bgcolor={}>{}</td>'.format(color, bitem),end='',file=outf)
                 else:
-                    print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
-            elif idx == 3:
-                value = remove_units(bitem)
-                color = log_color_scale(value,1000000,4200000000,blue_colors)
-                if flip_text_color(color):
-                    print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
-                else:
-                    print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
-            elif idx == 4:
-                value = remove_units(bitem)
-                color = log_color_scale(value,3500,2000000000,blue_colors)
-                if flip_text_color(color):
-                    print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='')
-                else:
-                    print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')            
-            else:
-                print('<td>{}</td>'.format(bitem),end='')
+                    print('<td>{}</td>'.format(bitem),end='',file=outf)
 
-        print('</tr>')
-    print('</table>')
+            print('</tr>',file=outf)
+        print('</table>',file=outf)
 
 
 input_path = 'computers.csv'
-# input_path = 'mobile.csv'
-gross_main_body(input_path)
+output_path = 'computer-latency.html'
+gross_main_body(input_path, output_path)
+input_path = 'mobile.csv'
+output_path = 'mobile-latency.html'
+gross_main_body(input_path, output_path)
