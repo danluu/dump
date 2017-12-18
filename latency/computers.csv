@@ -1,7 +1,6 @@
 computer,latency<br>(ms),year,clock,# T
 apple 2e,30,1983,1 MHz,3.5k
 ti 99/4a,40,1981,3 MHz,8k
-custom haswell-e <i>165Hz gsync</i>,50,2014,3.5 GHz,2G
 custom haswell-e <i>165Hz</i>,50,2014,3.5 GHz,2G
 commodore pet 4016,60,1977,1 MHz,3.5k
 sgi indy,60,1993,.1 GHz,1.2M
@@ -16,9 +15,9 @@ thinkpad 13 <b>linux chroot</b>,100,2017,2.3 GHz,1G
 lenovo x1 carbon 4g <b>linux</b>,110,2016,2.6 GHz,1G
 imac g4 <b>os x</b>,120,2002,16 MHz,273k
 custom haswell-e <i>24Hz</i>,140,2014,3.5 GHz,2G
-lenovo x1 carbon 4g <b>windows</b>,150,2016,2.6 GHz,1G
+lenovo x1 carbon 4g <b>win</b>,150,2016,2.6 GHz,1G
 next cube,150,1988,25 MHz,1.2M
 powerspec g405 <b>linux</b>,170,2017,4.2 GHz,2G
 packet around the world,190,,,
-powerspec g405 <b>windows</b>,200,2017,4.2 GHz,2G
+powerspec g405 <b>win</b>,200,2017,4.2 GHz,2G
 symbolics 3620,300,1986,5 MHz,390k
