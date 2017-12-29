@@ -97,12 +97,19 @@ def gross_main_body(input_path, output_path):
             print('<tr>',file=outf)
             reference = False
             for idx, bitem in enumerate(row):
+                if bitem.startswith('http'):
+                    continue
                 if idx == 0:
                     if bitem == 'packet around the world' or bitem == 'packet':
                         print('<td class="l" bgcolor="silver">{}</td>'.format(bitem),end='',file=outf)
                         reference = True
                     else:
-                        print('<td class="l">{}</td>'.format(bitem),end='',file=outf)
+                        # Have a link in mobile table.
+                        if len(row) >= 4 and row[3].startswith('http'):
+                            item_text = '<a href={}>{}</a>'.format(row[3], bitem)
+                        else:
+                            item_text = bitem
+                        print('<td class="l">{}</td>'.format(item_text),end='',file=outf)
                 elif idx == 1:
                     value = float(bitem)
                     color = latency_to_color(value)
