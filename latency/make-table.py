@@ -106,7 +106,9 @@ def gross_main_body(input_path, output_path):
                     else:
                         # Have a link in mobile table.
                         if len(row) >= 4 and row[3].startswith('http'):
-                            item_text = '<a href={}>{}</a>'.format(row[3], bitem)
+                            item_text = '<a href="{}">{}</a>'.format(row[3], bitem)
+                        elif len(row) >= 6 and row[5].startswith('http'):
+                            item_text = '<a href="{}">{}</a>'.format(row[5], bitem)
                         else:
                             item_text = bitem
                         print('<td class="l">{}</td>'.format(item_text),end='',file=outf)

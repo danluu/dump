@@ -1,23 +1,23 @@
 computer,latency<br>(ms),year,clock,# T
-apple 2e,30,1983,1 MHz,3.5k
-ti 99/4a,40,1981,3 MHz,8k
-custom haswell-e <i>165Hz</i>,50,2014,3.5 GHz,2G
-commodore pet 4016,60,1977,1 MHz,3.5k
-sgi indy,60,1993,.1 GHz,1.2M
-custom haswell-e <i>120Hz</i>,60,2014,3.5 GHz,2G
-thinkpad 13 <b>chromeos</b>,70,2017,2.3 GHz,1G
-imac g4 <b>os 9</b>,70,2002,.8 GHz,11M
-custom haswell-e <i>60Hz</i>,80,2014,3.5 GHz,2G
-mac color classic,90,1993,16 MHz,273k
-powerspec g405 <b>linux</b> <i>60Hz</i>,90,2017,4.2 GHz,2G
-macbook pro 2014,100,2014,2.6 GHz,700M
-thinkpad 13 <b>linux chroot</b>,100,2017,2.3 GHz,1G
-lenovo x1 carbon 4g <b>linux</b>,110,2016,2.6 GHz,1G
-imac g4 <b>os x</b>,120,2002,.8 GHz,11M
-custom haswell-e <i>24Hz</i>,140,2014,3.5 GHz,2G
-lenovo x1 carbon 4g <b>win</b>,150,2016,2.6 GHz,1G
-next cube,150,1988,25 MHz,1.2M
-powerspec g405 <b>linux</b>,170,2017,4.2 GHz,2G
+apple 2e,30,1983,1 MHz,3.5k,https://en.wikipedia.org/wiki/Apple_IIe
+ti 99/4a,40,1981,3 MHz,8k,https://www.amazon.com/gp/product/B004GYBZBE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B004GYBZBE&linkId=123a7b9e283914f633fbdc9b001f255b
+custom haswell-e <i>165Hz</i>,50,2014,3.5 GHz,2G,https://www.amazon.com/gp/product/B01FJLAITC/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01FJLAITC&linkId=8ffc49fdd6c38da2429e5f3ab5527314
+commodore pet 4016,60,1977,1 MHz,3.5k,https://en.wikipedia.org/wiki/Commodore_PET
+sgi indy,60,1993,.1 GHz,1.2M,https://en.wikipedia.org/wiki/SGI_Indy
+custom haswell-e <i>120Hz</i>,60,2014,3.5 GHz,2G,https://www.amazon.com/gp/product/B01FJLAITC/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01FJLAITC&linkId=8ffc49fdd6c38da2429e5f3ab5527314
+thinkpad 13 <b>chromeos</b>,70,2017,2.3 GHz,1G,https://www.amazon.com/gp/product/B01LWNVFIM/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01LWNVFIM&linkId=d4f3e06001021e2bfc95eb2c8c3a9805
+imac g4 <b>os 9</b>,70,2002,.8 GHz,11M,https://www.amazon.com/gp/product/B007O35FI8/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B007O35FI8&linkId=dc8b3670da16e98e718b157661037e4b
+custom haswell-e <i>60Hz</i>,80,2014,3.5 GHz,2G,https://www.amazon.com/gp/product/B01FJLAITC/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01FJLAITC&linkId=8ffc49fdd6c38da2429e5f3ab5527314
+mac color classic,90,1993,16 MHz,273k,https://en.wikipedia.org/wiki/Macintosh_Color_Classic
+powerspec g405 <b>linux</b> <i>60Hz</i>,90,2017,4.2 GHz,2G,http://www.powerspec.com/systems/system_specs.phtml?selection=G405
+macbook pro 2014,100,2014,2.6 GHz,700M,https://www.amazon.com/gp/product/B0096VDM8G/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B0096VDM8G&linkId=d134e4e812fd9e68ddb6191e03f78a72
+thinkpad 13 <b>linux chroot</b>,100,2017,2.3 GHz,1G,https://www.amazon.com/gp/product/B01LWNVFIM/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01LWNVFIM&linkId=d4f3e06001021e2bfc95eb2c8c3a9805
+lenovo x1 carbon 4g <b>linux</b>,110,2016,2.6 GHz,1G,https://www.amazon.com/gp/product/B072BDGLBC/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B072BDGLBC&linkId=b316192e2edacb439be22ef01a6bb779
+imac g4 <b>os x</b>,120,2002,.8 GHz,11M,https://www.amazon.com/gp/product/B007O35FI8/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B007O35FI8&linkId=dc8b3670da16e98e718b157661037e4b
+custom haswell-e <i>24Hz</i>,140,2014,3.5 GHz,2G,https://www.amazon.com/gp/product/B01FJLAITC/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01FJLAITC&linkId=8ffc49fdd6c38da2429e5f3ab5527314
+lenovo x1 carbon 4g <b>win</b>,150,2016,2.6 GHz,1G,https://www.amazon.com/gp/product/B072BDGLBC/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=abroaview-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B072BDGLBC&linkId=b316192e2edacb439be22ef01a6bb779
+next cube,150,1988,25 MHz,1.2M,https://en.wikipedia.org/wiki/NeXTcube
+powerspec g405 <b>linux</b>,170,2017,4.2 GHz,2G,http://www.powerspec.com/systems/system_specs.phtml?selection=G405
 packet around the world,190,,,
-powerspec g405 <b>win</b>,200,2017,4.2 GHz,2G
-symbolics 3620,300,1986,5 MHz,390k
+powerspec g405 <b>win</b>,200,2017,4.2 GHz,2G,http://www.powerspec.com/systems/system_specs.phtml?selection=G405
+symbolics 3620,300,1986,5 MHz,390k,https://en.wikipedia.org/wiki/Symbolics
