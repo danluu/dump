@@ -48,6 +48,11 @@ func minifyFun(path string, info os.FileInfo, err error) error {
 		fmt.Println("Skipping", path)
 		return nil
 	}
+	// anchor tag gets removed
+	if strings.Contains(path, "empirical-pl") {
+		fmt.Println("Skipping", path)
+		return nil
+	}
 	if strings.HasSuffix(path, ".html") {
 		cmd := "html-minifier"
 		dstPath := dstDir + strings.TrimPrefix(path, srcDir)
