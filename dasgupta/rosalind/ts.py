@@ -3,26 +3,34 @@ import unittest
 class Cyclic(Exception):
     pass
 
-def tsort(rev):
-    no_outgoing = []
-    for node, outgoing in rev.items():
-        if not outgoing:
-            no_outgoing.append(node)
+def tsort(g, rev):
+    no_incoming = []
+    for node, incoming in rev.items():
+        if not incoming:
+            no_incoming.append(node)
 
-    if not no_outgoing:
+    if not no_incoming:
         raise Cyclic
 
-    while no_outgoing:
-        node = no_outgoing.pop()
-        # TODO: fill this in.
+    res = []
+    while no_incoming:
+        node = no_incoming.pop()
+        res.append(node)
+        for outgoing in g[node]:
+            rev[outgoing].remove(node)
+            if not rev[outgoing]:
+                no_incoming.append(outgoing)
+
+    return res
 
 def reverse_graph(g):
     rev = dict()
     for head in g:
-        rev[head] = []
+        rev[head] = set()
 
     for head, tail in g.items():
-        rev[tail].append(head)
+        for node in tail:
+            rev[node].add(head)
 
     return rev
 
@@ -37,7 +45,7 @@ def load_graph(filename):
 
         for line in f:
             parts = line.strip().split(' ')
-            g[int(parts[0])].append((parts[1]))
+            g[int(parts[0])].append(int(parts[1]))
 
     return g
 
@@ -46,13 +54,19 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(True,True)
         self.assertEqual(False,False)
 
-    def test_rosalind_sample(self):
+    def test_rosalind_load(self):
         g = load_graph('rosalind_ts.txt')
         self.assertEqual(len(g), 4)
         self.assertEqual(len(g[1]), 1)
         self.assertEqual(len(g[2]), 0)
         self.assertEqual(len(g[4]), 2)
-        
+
+    def test_rosalind_sample(self):
+        g = load_graph('rosalind_ts.txt')
+        rev = reverse_graph(g)
+        res = tsort(g,rev)
+        print(res)
+        self.assertEqual(res, [4,3,1,2])
         
 
 if __name__ == '__main__':
