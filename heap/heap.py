@@ -78,18 +78,19 @@ class TestHeap(unittest.TestCase):
 
 
     def test_rand(self):
-        h = heap_init()
-        for i in range(20):
-            heap_push(h,
-                      Node(random.randint(0,
-                                          sys.maxsize)))
+        for times in range(100):
+            h = heap_init()
+            for i in range(20):
+                heap_push(h,
+                          Node(random.randint(0,
+                                              sys.maxsize)))
 
-        prev = -sys.maxsize
-        while len(h) > 1:
-            node = heap_pop(h)
-            val = node.val
-            self.assertLessEqual(prev, val)
-            prev = val
+            prev = -sys.maxsize
+            while len(h) > 1:
+                node = heap_pop(h)
+                val = node.val
+                self.assertLessEqual(prev, val)
+                prev = val
 
 if __name__ == '__main__':
     unittest.main()
