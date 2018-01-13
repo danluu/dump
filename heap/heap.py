@@ -1,3 +1,5 @@
+import random
+import sys
 import unittest
 
 class Node:
@@ -44,6 +46,8 @@ def heap_push(h, x):
     bubble_up(h, len(h) - 1)
 
 def heap_pop(h):
+    if len(h) <= 1:
+        return None
     swap(h, 1, len(h) - 1)
     res = h.pop()
     sift_down(h, 1)
@@ -72,6 +76,20 @@ class TestHeap(unittest.TestCase):
         self.assertEqual(heap_pop(h).val, 3)
         self.assertEqual(heap_pop(h).val, 4)
 
+
+    def test_rand(self):
+        h = heap_init()
+        for i in range(20):
+            heap_push(h,
+                      Node(random.randint(0,
+                                          sys.maxsize)))
+
+        prev = -sys.maxsize
+        while len(h) > 1:
+            node = heap_pop(h)
+            val = node.val
+            self.assertLessEqual(prev, val)
+            prev = val
 
 if __name__ == '__main__':
     unittest.main()
