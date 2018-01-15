@@ -31,6 +31,9 @@ class FSM():
                 prev_state.next_states.append(cur_state)
                 if not prev_state.is_star:
                     break
+                else:
+                    if i == len(s):
+                        prev_state.is_end = True
 
             tmp.append(cur_state)
             i += 1
@@ -41,7 +44,14 @@ class FSM():
         self.reset_states = [tmp[0]]
         self.match = False
 
-    def is_match(self):
+    def is_match(self, s=None):
+        if s == None:
+            return self.match
+
+        self.reset()
+        for x in s:
+            self.process_char(x)
+        self.process_char('')
         return self.match
 
     def reset(self):
@@ -64,6 +74,9 @@ class FSM():
                     next_states.append(ns)
             else:
                 print('fallthrough')
+
+            if state.is_star and state.pattern == c:
+                next_states.append(state)
                     
         print('num new states: {}'.format(len(next_states)))
         self.states = next_states
@@ -75,8 +88,6 @@ class State():
         self.is_end = is_end
         self.next_states = next_states
 
-        
-        
     def __repr__(self):
         return 'pattern:is_end {}:{} next_states {}'.format(self.pattern, self.is_end, self.next_states)
             
@@ -101,8 +112,11 @@ class TestRegex(unittest.TestCase):
     def test_trivial_parse(self):
         fsm = FSM()
         fsm.parse('')
+        self.assertFalse(fsm.is_match('a'))
+        self.assertFalse(fsm.is_match('aa'))
+        self.assertTrue(fsm.is_match(''))
 
-    def test_trivial_char_parse(self):
+    def test_trivial_char_parse_manual(self):
         fsm = FSM()
         fsm.parse('a')
         fsm.process_char('a')
@@ -124,7 +138,6 @@ class TestRegex(unittest.TestCase):
         fsm.process_char('')
         self.assertTrue(fsm.is_match())
 
-
         fsm.reset()
         self.assertFalse(fsm.is_match())
         fsm.process_char('a')
@@ -134,10 +147,21 @@ class TestRegex(unittest.TestCase):
         fsm.process_char('')
         self.assertFalse(fsm.is_match())
 
+    def test_trivial_char_parse(self):
+        fsm = FSM()
+        fsm.parse('a')
+        self.assertTrue(fsm.is_match('a'))
+        self.assertFalse(fsm.is_match('x'))
+        self.assertFalse(fsm.is_match('aa'))
+        self.assertFalse(fsm.is_match(''))
 
     def test_trivial_star_parse(self):
         fsm = FSM()
         fsm.parse('a*')
+        self.assertTrue(fsm.is_match('a'))
+        self.assertFalse(fsm.is_match('x'))
+        self.assertTrue(fsm.is_match('aa'))
+        self.assertTrue(fsm.is_match(''))
 
         
 unittest.main()
