@@ -27,6 +27,7 @@ class FSM():
                 i += 1
 
         end_state = State('',False,True)
+        tmp.append(end_state)
         self.states = [tmp[0]]
         self.match = False
 
@@ -81,6 +82,19 @@ class TestRegex(unittest.TestCase):
         fsm = FSM([s0])
         fsm.process_char('a')
         fsm.process_char('')
-        self.assertTrue(fsm.is_match())        
+        self.assertTrue(fsm.is_match())
+
+    def test_trivial_parse(self):
+        fsm = FSM()
+        fsm.parse('')
+
+    def test_trivial_char_parse(self):
+        fsm = FSM()
+        fsm.parse('a')
+
+    def test_trivial_star_parse(self):
+        fsm = FSM()
+        fsm.parse('a*')
+
         
 unittest.main()
