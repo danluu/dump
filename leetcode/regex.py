@@ -3,8 +3,8 @@ import unittest
 # Full string match (no partial match) supporting . and *, incomplete.
 
 class FSM():
-    def __init__(self, state):
-        self.states = [state]
+    def __init__(self, states=[]):
+        self.states = states
         self.match = False
         
     def is_match(self):
@@ -44,7 +44,7 @@ class TestRegex(unittest.TestCase):
     def test_trivial_no_match(self):
         s1 = State('',True)
         s0 = State('a', False, [s1])
-        fsm = FSM(s0)
+        fsm = FSM([s0])
         fsm.process_char('x')
         fsm.process_char('')
         self.assertFalse(fsm.is_match())
@@ -52,7 +52,7 @@ class TestRegex(unittest.TestCase):
     def test_trivial_match(self):
         s1 = State('',True)
         s0 = State('a', False, [s1])
-        fsm = FSM(s0)
+        fsm = FSM([s0])
         fsm.process_char('a')
         fsm.process_char('')
         self.assertTrue(fsm.is_match())        
