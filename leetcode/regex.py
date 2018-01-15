@@ -33,7 +33,7 @@ class FSM():
                 prev_state.next_states.append(cur_state)
                 print('prev', prev_state)
                 print('cur', cur_state)
-                print('linking {} to {} ({} total)'.format(j, i, len(prev_state.next_states)))
+                print('linking {} to {} ({} total)'.format(j, len(tmp), len(prev_state.next_states)))
 
                 if not prev_state.is_star:
                     break
@@ -61,7 +61,6 @@ class FSM():
         self.reset()
         for x in s:
             self.process_char(x)
-        print('-------------------wat')
         self.process_char('')
         return self.match
 
@@ -162,13 +161,6 @@ class TestRegex(unittest.TestCase):
         fsm.process_char('')
         self.assertFalse(fsm.is_match())
 
-    def test_tmp(self):
-        fsm = FSM()
-        fsm.parse('aa')
-        self.assertFalse(fsm.is_match('a'))
-        # self.assertFalse(fsm.is_match(''))
-        # self.assertFalse(fsm.is_match('x'))
-
     def test_trivial_char_parse(self):
         fsm = FSM()
         fsm.parse('a')
@@ -181,6 +173,7 @@ class TestRegex(unittest.TestCase):
         self.assertFalse(fsm.is_match('a'))
         self.assertFalse(fsm.is_match('xx'))
         self.assertTrue(fsm.is_match('aa'))
+        self.assertFalse(fsm.is_match('aaa'))
         self.assertFalse(fsm.is_match(''))
 
     def test_trivial_star_parse(self):
@@ -195,6 +188,8 @@ class TestRegex(unittest.TestCase):
         self.assertFalse(fsm.is_match('xa'))
 
     def test_leetcode(self):
-        pass
+        fsm = FSM()
+        fsm.parse('c*a*b')
+        self.assertTrue(fsm.is_match('b'))
         
 unittest.main()
