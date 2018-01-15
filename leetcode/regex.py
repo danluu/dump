@@ -3,7 +3,9 @@ import unittest
 # Full string match (no partial match) supporting . and *, incomplete.
 
 class FSM():
-    def __init__(self, states=[]):
+    def __init__(self, states=None):
+        if not states:
+            states = []
         self.states = states
         self.reset_states = self.states
         self.match = False
@@ -14,7 +16,6 @@ class FSM():
         
         i = 0
         while i <= len(s):
-            # print('parsing {}:{}'.format(i, s[i]))
             is_star = False
             if i+1 < len(s) and s[i+1] == '*':
                 is_star = True
@@ -25,20 +26,29 @@ class FSM():
                 cur_state = State('',False,True)
             else:
                 cur_state = State(s[i], is_star)
+
+            print('cur', cur_state)
             for j in range (len(tmp) - 1, -1, -1):
-                print('linking to {}'.format(j))
                 prev_state = tmp[j]
                 prev_state.next_states.append(cur_state)
+                print('prev', prev_state)
+                print('cur', cur_state)
+                print('linking {} to {} ({} total)'.format(j, i, len(prev_state.next_states)))
+
                 if not prev_state.is_star:
                     break
                 else:
                     if i == len(s):
+                        print('marking old {} as end'.format(j))
                         prev_state.is_end = True
 
             tmp.append(cur_state)
             i += 1
             if is_star:
                 i += 1
+
+            if i <= len(s):
+                print(tmp)
 
         self.states = [tmp[0]]
         self.reset_states = [tmp[0]]
@@ -51,6 +61,7 @@ class FSM():
         self.reset()
         for x in s:
             self.process_char(x)
+        print('-------------------wat')
         self.process_char('')
         return self.match
 
@@ -69,20 +80,24 @@ class FSM():
                 print('miss')
                 pass
             elif state.next_states:
-                print('going to next states')
+                print('going to {} next states'.format(len(state.next_states)))
                 for ns in state.next_states:
                     next_states.append(ns)
             else:
                 print('fallthrough')
 
             if state.is_star and state.pattern == c:
+                print('star self loop')
                 next_states.append(state)
                     
         print('num new states: {}'.format(len(next_states)))
         self.states = next_states
 
 class State():
-    def __init__(self, pattern, is_star=False, is_end=False, next_states=[]):
+    def __init__(self, pattern, is_star=False, is_end=False, next_states=None):
+        if next_states == None:
+            next_states = []
+
         self.pattern = pattern
         self.is_star = is_star
         self.is_end = is_end
@@ -147,12 +162,25 @@ class TestRegex(unittest.TestCase):
         fsm.process_char('')
         self.assertFalse(fsm.is_match())
 
+    def test_tmp(self):
+        fsm = FSM()
+        fsm.parse('aa')
+        self.assertFalse(fsm.is_match('a'))
+        # self.assertFalse(fsm.is_match(''))
+        # self.assertFalse(fsm.is_match('x'))
+
     def test_trivial_char_parse(self):
         fsm = FSM()
         fsm.parse('a')
         self.assertTrue(fsm.is_match('a'))
         self.assertFalse(fsm.is_match('x'))
         self.assertFalse(fsm.is_match('aa'))
+        self.assertFalse(fsm.is_match(''))
+
+        fsm.parse('aa')
+        self.assertFalse(fsm.is_match('a'))
+        self.assertFalse(fsm.is_match('xx'))
+        self.assertTrue(fsm.is_match('aa'))
         self.assertFalse(fsm.is_match(''))
 
     def test_trivial_star_parse(self):
@@ -163,5 +191,10 @@ class TestRegex(unittest.TestCase):
         self.assertTrue(fsm.is_match('aa'))
         self.assertTrue(fsm.is_match(''))
 
+        self.assertFalse(fsm.is_match('ax'))
+        self.assertFalse(fsm.is_match('xa'))
+
+    def test_leetcode(self):
+        pass
         
 unittest.main()
