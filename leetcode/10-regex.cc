@@ -63,21 +63,18 @@ public:
       size_t cur = m_nodes.size();
       size_t prev = cur -1;
       m_nodes.push_back(std::make_unique<Node>(cur));
-      m_nodes[cur]->edges['\0'].push_back(m_nodes[cur].get()); // epsilon self loop.
 
       if (i + 1 < pattern.size() && pattern[i+1] == '*') {
 	m_nodes[prev]->edges[c].push_back(m_nodes[prev].get()); // self loop.
-
-	for (Node* prev_node : reachable_set) {
-	  prev_node->edges['\0'].push_back(m_nodes[cur].get());
-	}
-	reachable_set.insert(m_nodes[cur].get());
-
 	++i;
       } else {
 	reachable_set.clear();
-	reachable_set.insert(m_nodes[cur].get());
 	m_nodes[prev]->edges[c].push_back(m_nodes[cur].get());
+      }
+
+      reachable_set.insert(m_nodes[cur].get());
+      for (Node* prev_node : reachable_set) {
+	prev_node->edges['\0'].push_back(m_nodes[cur].get());
       }
     }
     m_nodes[m_nodes.size() -1]->set_end();
