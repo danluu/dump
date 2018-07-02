@@ -1,0 +1,40 @@
+---
+title: "Overwatch data"
+output: ow_html_notebook
+---
+
+```{r}
+library(brms)
+library(tidyverse)
+```
+
+```{r}
+raw <- read_csv('raw.csv')
+```
+
+Replace blank categorical variables with default values
+
+```{r}
+raw <- replace_na(raw, list(comp = 'qp', gender = 'm'))
+```
+
+Replace the rest with 0s.
+
+```{r}
+names2zero <- setNames(lapply(vector("list", ncol(raw)), function(x) x <- 0), names(raw))
+no_na <- replace_na(raw, names2zero)
+```
+
+```{r}
+not_zero <- function(x) {x != 0}
+flattened <- mutate_if(no_na, is.numeric, function(x) ifelse(x != 0, 1, 0))
+```
+
+```{r}
+flattened %>% group_by(gender, comp, switch) %>% summarise(n = n())
+```
+
+
+```{r}
+flattened %>% group_by(gender, comp, how2play) %>% summarise(n = n())
+```
