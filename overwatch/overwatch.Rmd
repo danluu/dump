@@ -44,9 +44,6 @@ composite <- add_column(composite, any_sex)
 any_complement <- pull(composite, 'complement') + pull(composite,'undir_complement')
 composite <- add_column(composite, any_complement)
 
-any_trash <- pull(composite, 'trash') + pull(composite,'undir_trash')
-composite <- add_column(composite, any_trash)
-
 any_how2play <- pull(composite, 'how2play') + pull(composite,'undir_how2play')
 composite <- add_column(composite, any_how2play)
 ```
@@ -61,17 +58,58 @@ flattened <- mutate_if(composite, is.numeric, function(x) ifelse(x != 0, 1, 0))
 Find proportion of rows with non-zero.
 
 ```{r}
+tmp <- flattened %>%
+  filter(comp == 'comp', gender == 'f') %>%
+  count(switch) %>%
+  mutate(freq = n / sum(n))
+
+tmp['freq']
+```
+
+
+```{r}
 flattened %>%
   group_by(gender, comp, switch) %>%
-  summarize(n = n())
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>%
+  filter(switch != 0)
 ```
 
-
 ```{r}
-flattened %>% group_by(gender, comp, switch) %>% summarise(n = n())
+flattened %>%
+  group_by(gender, comp, any_switch) %>%
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>%
+  filter(any_switch != 0)
 ```
 
+```{r}
+flattened %>%
+  group_by(gender, comp, how2play) %>%
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>%
+  filter(how2play != 0)
+```
+```{r}
+flattened %>%
+  group_by(gender, comp, any_how2play) %>%
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>%
+  filter(any_how2play != 0)
+```
 
 ```{r}
-flattened %>% group_by(gender, comp, how2play) %>% summarise(n = n())
+flattened %>%
+  group_by(gender, comp, complement) %>%
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>%
+  filter(complement != 0)
+```
+
+```{r}
+flattened %>%
+  group_by(gender, comp, any_complement) %>%
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>%
+  filter(any_complement != 0)
 ```
