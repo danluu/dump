@@ -1,0 +1,37 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+library(brms)
+```
+
+```{r}
+d <- tribble(
+  ~game_type, ~gender, ~splain, ~games,
+  "comp", "female", 7, 35,
+  "comp", "male", 1, 23,
+  "qp", "female", 6, 149,
+  "qp", "male", 2, 132
+)
+```
+
+```{r}
+d <- d %>% mutate(female = ifelse(gender == "female", 1, 0))
+```
+
+```{r}
+toy_s <- 
+  brm(data = d, family = binomial,
+      splain | trials(games) ~ female + game_type,
+      prior = c(set_prior("normal(0,10)", class = "b")),
+      iter = 25000, warmup = 500, cores = 4, chains = 4)      
+```
+
+```{r}
+predict(toy_s, probs = c(0.25, 0.75)) %>%
+  as_tibble()
+```
