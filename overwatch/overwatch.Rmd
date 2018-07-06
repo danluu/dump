@@ -12,6 +12,11 @@ library(tidyverse)
 raw <- read_csv('raw.csv')
 ```
 
+```{r}
+nrow(raw)
+```
+
+
 Remove backfill games.
 
 ```{r}
@@ -114,3 +119,36 @@ flattened %>%
   filter(any_complement != 0)
 ```
 
+```{r}
+spl = flattened %>%
+  mutate(splain = ifelse(how2play != 0 | switch != 0, 1, 0))
+```
+
+```{r}
+spl
+```
+
+```{r}
+flattened %>%
+  group_by(gender, comp, switch) %>%
+  summarise(n = n())
+```
+
+```{r}
+flattened %>%
+  group_by(gender, comp, any_sex) %>%
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>%
+  filter(any_sex != 0)
+```
+
+
+```{r}
+spl %>%
+  group_by(gender, comp, splain) %>%
+  summarise(n = n())
+```
+
+```{r}
+nrow(spl)
+```
