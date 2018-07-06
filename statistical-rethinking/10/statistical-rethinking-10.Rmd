@@ -1,0 +1,183 @@
+---
+title: "Statistical Rethinking C10"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+library(rethinking)
+data(chimpanzees)
+d <- chimpanzees
+```
+
+```{r}
+detach(package:rethinking)
+library(brms)
+rm(chimpanzees)
+```
+
+
+Intercept-only example.
+
+```{r, message = F, warning = F, results = "hide"}
+b10.1 <-
+  brm(data = d, family = binomial,
+      pulled_left ~ 1,
+      prior = c(set_prior("normal(0, 10)", class = "Intercept")))
+```
+
+```{r}
+library(tidyverse)
+ 
+fixef(b10.1) %>%
+  round(digits = 2)
+```
+```{r}
+invlogit <- function(x){1/(1 + exp(-x))}
+```
+
+```{r}
+c(.18, .46) %>%
+  invlogit()
+
+fixef(b10.1) %>%
+  invlogit()
+```
+
+Models with more predictors
+
+```{r}
+b10.2 <-
+  brm(data = d, family = binomial,
+      pulled_left ~ 1 + prosoc_left,
+      prior = c(set_prior("normal(0, 10)", class = "Intercept"),
+                set_prior("normal(0, 10)", class = "b")))
+
+b10.3 <-
+  brm(data = d, family = binomial,
+      pulled_left ~ 1 + prosoc_left + condition:prosoc_left ,
+      prior = c(set_prior("normal(0, 10)", class = "Intercept"),
+                set_prior("normal(0, 10)", class = "b")))
+```
+
+
+WAIC
+```{r}
+w_b10.1 <- waic(b10.1)
+w_b10.2 <- waic(b10.2)
+w_b10.3 <- waic(b10.3)
+
+compare_ic(w_b10.1, w_b10.2, w_b10.3)
+```
+
+
+```{r, fig.width = 3, fig.height = 1}
+library(wesanderson)
+
+wes_palette("Moonrise2")
+
+wes_palette("Moonrise2")[1:4]
+```
+```{r}
+library(ggthemes)
+library(bayesplot)
+
+theme_set(theme_default() + 
+            theme_tufte() +
+            theme(plot.background = element_rect(fill = wes_palette("Moonrise2")[3],
+                                                 color = wes_palette("Moonrise2")[3])))
+```
+
+```{r}
+tibble(model = c("b10.1", "b10.2", "b10.3"),
+       waic  = c(w_b10.1$estimates[3, 1], w_b10.2$estimates[3, 1], w_b10.3$estimates[3, 1]),
+       se    = c(w_b10.1$estimates[3, 2], w_b10.2$estimates[3, 2], w_b10.3$estimates[3, 2])) %>%
+
+  ggplot() +
+  geom_pointrange(aes(x = reorder(model, -waic), y = waic,
+                      ymin = waic - se,
+                      ymax = waic + se,
+                      color = model),
+                  shape = 16) +
+  scale_color_manual(values = wes_palette("Moonrise2")[c(1:2, 4)]) +
+  coord_flip() +
+  labs(x = NULL, y = NULL,
+       title = "WAIC") +
+  theme(axis.ticks.y = element_blank(),
+        legend.position = "none")
+```
+
+```{r}
+print(b10.3)
+```
+
+Relative probability (odds are increased by this factor in prosoc):
+
+```{r}
+fixef(b10.3)[2] %>%
+  exp()
+```
+
+Given an estimated value of 4, probability of pull is:
+
+```{r}
+invlogit(4)
+```
+Probability of pull in prosoc:
+
+```{r}
+(4 + fixef(b10.3)[2]) %>%
+  invlogit()
+```
+```{r, fig.height = 2.75, fig.width = 3, warning = F, message = F}
+# The combined fitted() results of the three models weighted by their WAICs
+pp_a <- 
+  pp_average(b10.1, b10.2, b10.3,
+             weights = "waic",
+             method = "fitted") %>% 
+  as_tibble() %>% 
+  bind_cols(b10.3$data) %>% 
+  distinct(Estimate, `Q2.5`, `Q97.5`, condition, prosoc_left) %>% 
+  mutate(x_axis = str_c(prosoc_left, condition, sep = "/")) %>%
+  mutate(x_axis = factor(x_axis, levels = c("0/0", "1/0", "0/1", "1/1"))) %>% 
+  rename(pulled_left = Estimate)
+
+# The empirically-based summaries
+d_plot <-
+  d %>%
+  group_by(actor, condition, prosoc_left) %>%
+  summarise(pulled_left = mean(pulled_left)) %>%
+  mutate(x_axis = str_c(prosoc_left, condition, sep = "/")) %>%
+  mutate(x_axis = factor(x_axis, levels = c("0/0", "1/0", "0/1", "1/1")))
+
+# The plot
+ggplot() +
+  geom_ribbon(data = pp_a,
+              aes(x = x_axis,
+                  ymin = `Q2.5`, 
+                  ymax = `Q97.5`,
+                  group = 0),
+              fill = wes_palette("Moonrise2")[2]) +
+  geom_line(data = pp_a,
+            aes(x = x_axis, 
+                y = pulled_left,
+                group = 0)) +
+  geom_line(data = d_plot,
+            aes(x = x_axis, y = pulled_left, group = actor),
+            color = wes_palette("Moonrise2")[1], size = 1/3) +
+  scale_x_discrete(expand = c(.03, .03))
+  coord_cartesian(ylim = 0:1) +
+  theme(axis.ticks.x = element_blank())
+```
+
+```{r}
+  pp_average(b10.1, b10.2, b10.3,
+             weights = "waic",
+             method = "fitted") %>% 
+  as_tibble() %>% 
+  bind_cols(b10.3$data)
+```
+
