@@ -11,7 +11,7 @@ library(brms)
 
 ```{r}
 d <- tribble(
-  ~game_type, ~gender, ~splain, ~games,
+  ~comp, ~gender, ~xplain, ~games,
   "comp", "female", 7, 35,
   "comp", "male", 1, 23,
   "qp", "female", 6, 149,
@@ -21,12 +21,13 @@ d <- tribble(
 
 ```{r}
 d <- d %>% mutate(female = ifelse(gender == "female", 1, 0))
+d <- d %>% mutate(comp = ifelse(gender == "comp", 1, 0))
 ```
 
 ```{r}
 toy_s <- 
   brm(data = d, family = binomial,
-      splain | trials(games) ~ female + game_type,
+      xplain | trials(games) ~ female + comp,
       prior = c(set_prior("normal(0,10)", class = "b")),
       iter = 25000, warmup = 500, cores = 4, chains = 4)      
 ```
