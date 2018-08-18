@@ -3,10 +3,11 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-
 ```{r}
-library(tidyverse)
 library(brms)
+library(modelr)
+library(tidybayes)
+library(tidyverse)
 ```
 
 ```{r}
@@ -20,18 +21,38 @@ d <- tribble(
 ```
 
 ```{r}
-d <- d %>% mutate(female = ifelse(gender == "female", 1, 0))
+d <- d %>% mutate(female = ifelse(gender == "female", 1, 0), comp = ifelse(game_type == "comp", 1, 0))
 ```
 
 ```{r}
 toy_s <- 
   brm(data = d, family = binomial,
-      xplain | trials(games) ~ female + game_type,
+      xplain | trials(games) ~ female + comp,
       prior = c(set_prior("normal(0,10)", class = "b")),
       iter = 25000, warmup = 500, cores = 4, chains = 4)      
 ```
 
 ```{r}
-predict(toy_s, probs = c(0.25, 0.75)) %>%
+predict(toy_s, probs = c(0.25, 0.75), summary = TRUE) %>%
   as_tibble()
 ```
+
+```{r}
+toy_s
+```
+
+
+```{r}
+get_variables(toy_s)
+```
+
+```{r}
+toy_s %>%
+  spread_draws(b_female, b_comp, lp__)
+```
+
+```{r}
+toy_s %>%
+  data_grid(b_female)
+```
+
