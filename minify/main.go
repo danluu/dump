@@ -19,8 +19,8 @@ import (
 // However, some (most??) versions work fine without the workaround.
 
 var (
-	srcDir   = "/home/danluu/dev/dist"
-	dstDir   = "/home/danluu/dev/dist"
+	srcDir   = "../dist"
+	dstDir   = "../dist"
 	baseArgs = "--remove-comments --collapse-whitespace --conservative-collapse --collapse-boolean-attributes --collapse-inline-tag-whitespace --remove-tag-whitespace --remove-attribute-quotes --use-short-doctype --remove-empty-attributes --remove-optional-tags --remove-empty-elements --minify-css"
 )
 
