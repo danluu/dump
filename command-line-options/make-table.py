@@ -21,8 +21,10 @@ def flip_text_color(color):
 def log_color_scale(raw_value, min_val, max_val, colors):
     # colors = ['white','#f0f0f0','#d9d9d9','#bdbdbd','#969696','#737373','#525252','#252525','black']
     # print(raw_value)
-    if raw_value == '' or raw_value == '0':
+    if raw_value == '0':
         return 'white'
+    if raw_value == '':
+        return 'silver'
     value = float(raw_value)
 
     lmin = math.log2(min_val)
