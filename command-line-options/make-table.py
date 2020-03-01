@@ -26,6 +26,8 @@ def log_color_scale(raw_value, min_val, max_val, colors):
     if raw_value == '':
         return 'silver'
     value = float(raw_value)
+    if value > max_val:
+        return 'black'
 
     lmin = math.log2(min_val)
     lmax = math.log2(max_val)
@@ -56,7 +58,7 @@ for row in body:
     print('<tr>')
     for idx, bitem in enumerate(row):
         if idx != 0:
-            color = log_color_scale(bitem,1,211,blue_colors)
+            color = log_color_scale(bitem,1,85,blue_colors)
             if flip_text_color(color):
                 print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem), end='')
             else:
