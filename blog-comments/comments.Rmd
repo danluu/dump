@@ -1,0 +1,12 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(brms)
+library(modelr)
+library(tidybayes)
+library(tidyverse)
+```
