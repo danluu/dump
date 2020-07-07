@@ -10,3 +10,19 @@ library(modelr)
 library(tidybayes)
 library(tidyverse)
 ```
+
+```{r}
+d <- tribble(
+  ~author, ~total, ~unqual, ~cond,
+  "Dan", 480, 0, 0,
+  "Julia", 477, 3, 9,
+)
+```
+
+```{r}
+uq_model <- 
+  brm(data = d, family = binomial,
+      unqual | trials(total) ~ author,
+      prior = c(set_prior("normal(0,10)", class = "b")),
+      iter = 5000, warmup = 100, cores = 1, chains = 1)
+```

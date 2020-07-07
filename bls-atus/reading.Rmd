@@ -19,11 +19,12 @@ p <- ggplot(hours, aes(Year, Hours, colour=factor(.), shape=factor(.))) +
   theme_minimal() +
   geom_smooth(method = "lm", se = FALSE) +
   scale_color_brewer(palette = "Set1") +
-  labs(title = "Average hours per day spent reading for personal interest",
+  labs(title = "Hours per day spent reading for personal interest (average)",
        subtitle = "BLS American Time Use Survey",
        colour = "",
        shape = ""
-       )
+       ) + 
+  ylim(c(0, NA))
 p
 ```
 
@@ -40,10 +41,12 @@ p <- ggplot(hours, aes(Year, Participation, colour=factor(.), shape=factor(.))) 
   theme_minimal() +
   geom_smooth(method = "lm", se = FALSE) +
   scale_color_brewer(palette = "Set1") +
-  labs(title = "Percent of people reading for personal interest per day",
+  labs(title = "Fraction reading for personal interest per day",
        subtitle = "BLS American Time Use Survey",
        colour = "",
        shape = ""
-       )
+       ) + 
+  ylab("Percent") +
+  ylim(c(0, NA))
 p
 ```

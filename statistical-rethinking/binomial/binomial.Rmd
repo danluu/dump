@@ -29,7 +29,7 @@ toy_s <-
   brm(data = d, family = binomial,
       xplain | trials(games) ~ female + comp,
       prior = c(set_prior("normal(0,10)", class = "b")),
-      iter = 25000, warmup = 500, cores = 4, chains = 4)      
+      iter = 2500, warmup = 100, cores = 1, chains = 1)      
 ```
 
 ```{r}
