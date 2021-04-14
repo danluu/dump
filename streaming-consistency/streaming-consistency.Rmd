@@ -1,0 +1,35 @@
+---
+title: "Streaming consistency bug plots"
+output: html_notebook
+---
+
+```{r}
+library(data.table)
+library(ggplot2)
+```
+
+
+
+```{r}
+raw_errs <- fread('data/gistfile1.txt', header=FALSE)
+summary(raw_errs)
+```
+
+```{r}
+errs <- data.frame(setNames(raw_errs, c('error')))
+errs$input <- seq(1:nrow(errs))
+summary(errs)
+```
+
+```{r}
+p <- ggplot(errs, aes(x = input, y = error)) +
+  geom_jitter(shape = '.', height = 0.45, alpha = 0.01) +
+  # geom_point(shape = '.', alpha = 0.01) +
+  ylab('Error') +
+  xlab('Input #') +     
+  labs(title='Flink consistency error', subtitle='X axis is number of inputs recieved') +
+  theme_bw()
+p
+```
+
+

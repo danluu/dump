@@ -24,12 +24,13 @@ uq_model <-
   brm(data = d, family = binomial,
       unqual | trials(total) ~ author,
       prior = c(set_prior("normal(0,10)", class = "b")),
-      iter = 5000, warmup = 100, cores = 2, chains = 2)
+      iter = 5000, warmup = 100, cores = 1, chains = 1)
 ```
 
 
 ```{r}
-predict(uq_model, probs = c(0.25, 0.75), summary = TRUE) %>%
+newdata <- data.frame(author=c("Dan", "Julia"), total = c(100000,100000))
+predict(uq_model, newdata = newdata, probs = c(0.25, 0.75), summary = TRUE) %>%
   as_tibble()
 ```
 
@@ -43,7 +44,35 @@ cd_model <-
   brm(data = d, family = binomial,
       cond | trials(total) ~ author,
       prior = c(set_prior("normal(0,10)", class = "b")),
-      iter = 5000, warmup = 100, cores = 2, chains = 2)
+      iter = 5000, warmup = 100, cores = 1, chains = 1)
 ```
 
 
+
+```{r}
+newdata <- data.frame(author=c("Dan", "Julia"), total = c(100000,100000))
+predict(cd_model, newdata = newdata, probs = c(0.25, 0.75), summary = TRUE) %>%
+  as_tibble()
+```
+```{r}
+d <- tribble(
+  ~author, ~total, ~unqual, ~cond,
+  "Dan", 15, 0, 0,
+  "Julia", 14, 2, 6,  
+)
+```
+
+
+```{r}
+uq_model <- 
+  brm(data = d, family = binomial,
+      unqual | trials(total) ~ author,
+      prior = c(set_prior("normal(0,10)", class = "b")),
+      iter = 5000, warmup = 100, cores = 1, chains = 1)
+```, "Julia"), total = c(100000,100000))
+predict(uq_model, newdata = newdata, probs =
+
+```{r}
+newdata <- data.frame(author=c("Dan" c(0.25, 0.75), summary = TRUE) %>%
+  as_tibble()
+```
