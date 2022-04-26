@@ -53,6 +53,11 @@ func minifyFun(path string, info os.FileInfo, err error) error {
 		fmt.Println("Skipping", path)
 		return nil
 	}
+	// minifier dies with parse error
+	if strings.Contains(path, "verilog-vs-vhdl") {
+		fmt.Println("Skipping", path)
+		return nil
+	}	
   // Table gets mangled.
 	if strings.Contains(path, "cli-complexity") {
 		fmt.Println("Skipping", path)
