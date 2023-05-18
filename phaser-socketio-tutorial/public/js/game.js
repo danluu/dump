@@ -49,7 +49,7 @@ var config = {
         });
       });  
       
-      this.cursors = this.input.keyboard.createCursorKeys();      
+      this.cursors = this.input.keyboard.createCursorKeys();            
   }
 
   function update() {
@@ -79,7 +79,7 @@ var config = {
     } else {
       self.ship.setTint(0xff0000);
     }
-    self.ship.setDrag(100);
+    self.ship.setDrag(0);
     self.ship.setAngularDrag(100);
     self.ship.setMaxVelocity(200);
   }
