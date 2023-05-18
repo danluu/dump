@@ -20,6 +20,7 @@ var config = {
 
   function preload() {
     this.load.image('ship', 'assets/spaceShips_001.png');
+    this.load.image('otherPlayer', 'assets/enemyBlack5.png');    
   }
 
   function create() {
