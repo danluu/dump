@@ -25,14 +25,17 @@ var config = {
   function create() {
     var self = this;
     this.socket = io();
+    this.otherPlayers = this.physics.add.group();    
     this.socket.on('currentPlayers', function (players) {
         Object.keys(players).forEach(function (id) {
           if (players[id].playerId === self.socket.id) {
             addPlayer(self, players[id]);
+          } else {
+            addOtherPlayers(self, players[id]);            
           }
         });
       });
-/*
+
       this.socket.on('newPlayer', function (playerInfo) {
         addOtherPlayers(self, playerInfo);
       });
@@ -45,10 +48,10 @@ var config = {
         });
       });  
       
-      this.cursors = this.input.keyboard.createCursorKeys(); */     
+      this.cursors = this.input.keyboard.createCursorKeys();      
   }
 
-  function update() {/*
+  function update() {
     if (this.ship) {
         if (this.cursors.left.isDown) {
           this.ship.setAngularVelocity(-150);
@@ -65,7 +68,7 @@ var config = {
         }
       
         this.physics.world.wrap(this.ship, 5);
-      }*/
+      }
   }
 
   function addPlayer(self, playerInfo) {
