@@ -15,4 +15,6 @@ console.log(`${collection.userName}'s Todo List`);
 let newId: number = collection.addTodo("Go for run");
 let todoItem: TodoItem = collection.getTodoById(newId);
 
+collection.removeComplete();
+
 collection.getTodoItems(true).forEach(item => item.printDetails());
