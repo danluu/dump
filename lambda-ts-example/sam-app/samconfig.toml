@@ -17,6 +17,10 @@ lint = true
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
 resolve_s3 = true
+stack_name = "ts-lambda-hello-world-0"
+s3_prefix = "ts-lambda-hello-world-0"
+region = "us-west-2"
+image_repositories = []
 
 [default.package.parameters]
 resolve_s3 = true
