@@ -20,6 +20,11 @@ export class TodoCollection {
         return this.itemMap.get(id); 
     }
 
+    getTodoItems(includeComplete: boolean): TodoItem[] {
+        return [...this.itemMap.values()].filter(
+            item => includeComplete || !item.complete);
+    }
+
     markComplete(id: number, complete: boolean) {
         const todoItem = this.getTodoById(id);
         if (todoItem) {
