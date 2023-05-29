@@ -7,7 +7,7 @@ function printMessage(msg: string): void {
 
 printMessage("Hello, TypeScript");
 
-debugger;
+debugger; // eslint-disable-line no-debugger
 
 const total = sum(100, 200, 300);
 console.log(`Total: ${total}`);
