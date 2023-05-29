@@ -4,5 +4,6 @@
         "target": "es2022",
         "outDir": "./dist",
         "rootDir": "./src",
-        "module": "commonjs"
+        "module": "commonjs",
+        "allowJs": true
 } }
