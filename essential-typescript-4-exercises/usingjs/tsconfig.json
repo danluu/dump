@@ -1,4 +1,3 @@
-
 {
     "compilerOptions": {
         "target": "es2022",
@@ -6,5 +5,10 @@
         "rootDir": "./src",
         "module": "commonjs",
         "allowJs": true,
-        "checkJs": true
-} }
+        "checkJs": true,
+/*         "baseUrl": ".", 
+        "paths": {
+            "*": ["types/*"]
+        }  */
+    }
+}
