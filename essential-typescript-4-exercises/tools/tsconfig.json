@@ -2,6 +2,9 @@
     "compilerOptions": {
         "target": "es2022",
         "outDir": "./dist",
-        "rootDir": "./src"
+        "rootDir": "./src",
+        "noEmitOnError": true,
+        "module": "CommonJS",
+        "sourceMap": true
     } 
 }
