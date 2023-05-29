@@ -1,6 +1,6 @@
 import { SportsProduct, SPORT } from "./product";
 import { Cart } from "./cart";
-import { sizeFormatter, costFormatter } from "./formatters";
+import { sizeFormatter, costFormatter, writeMessage } from "./formatters";
 
 let kayak = new SportsProduct(1, "Kayak", 275,
 SPORT.Watersports);
@@ -15,3 +15,4 @@ cart.addProduct(hat, 2);
 
 sizeFormatter("Cart", cart.itemCount);
 costFormatter("Cart", `${cart.totalPrice}`);
+writeMessage("Test message");
