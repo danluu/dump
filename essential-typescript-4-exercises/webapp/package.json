@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "json": "json-server data.js -p 4600",
+    "wds": "webpack serve",
+    "start": "npm-run-all -p json wds"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,8 @@
   "devDependencies": {
     "bootstrap": "^5.2.3",
     "css-loader": "^6.8.1",
+    "json-server": "^0.17.3",
+    "npm-run-all": "^4.1.5",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.4.3",
     "typescript": "^5.0.4",
