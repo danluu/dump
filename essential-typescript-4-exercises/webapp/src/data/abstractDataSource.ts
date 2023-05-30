@@ -15,8 +15,7 @@ export abstract class AbstractDataSource {
         this.loading = this.getData();
     }
     
-    async getProducts(sortProp: ProductProp = "id",
-            category? : string): Promise<Product[]> {
+    async getProducts(sortProp: ProductProp = "id", category? : string): Promise<Product[]> {
         await this.loading;
         return this.selectProducts(this._products, sortProp, category);
     }
