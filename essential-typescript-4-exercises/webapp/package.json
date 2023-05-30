@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^0.21.4",
     "bootstrap": "^5.2.3",
     "css-loader": "^6.8.1",
     "json-server": "^0.17.3",
