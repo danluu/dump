@@ -1,0 +1,9 @@
+{
+    "name": "webapp",
+    "description": "Stand-Alone Web App",
+    "license": "0BSD",
+    "devDependencies": {
+        "express": "^4.18.2",
+        "json-server": "^0.17.3"
+      }
+}
