@@ -71,5 +71,42 @@ int main() {
         std::cout << kk << "," << vv << std::endl;
     }
 
+    std::unordered_map<uint32_t, int> answers_histogram;
+    for (std::vector<uint32_t>::size_type i = 0; i < answers.size(); ++i) {
+        if (num_answers[i] != 27) {
+            continue;
+        }
+        ++answers_histogram[answers[i]];
+    }
+
+/*
+    std::cout << "----VECTORS----\n"; 
+
+
+    int most_common_count = 0;
+    uint32_t most_common_vec = 0;
+    for (const auto& [kk,vv]: answers_histogram) {
+        std::cout << kk << "," << vv << std::endl;
+        if (vv > most_common_count) {
+            most_common_count = vv;
+            most_common_vec = kk;
+        }
+    }
+
+    std::cout << "most common " << most_common_vec << "," << most_common_count << std::endl;
+*/
+
+    // Sort answers_histogram by value (count).
+    std::vector<std::pair<uint32_t, int>> sorted_answers_histogram(answers_histogram.begin(), answers_histogram.end());
+    std::sort(sorted_answers_histogram.begin(), sorted_answers_histogram.end(), [](const auto& l, const auto& r) {
+        return l.second > r.second;
+    });
+
+    std::cout << "----SORTED HISTOGRAM----\n"; 
+
+    for (const auto& [kk,vv]: sorted_answers_histogram) {
+        std::cout << kk << "," << vv << std::endl;
+    }
+
     return 0;
 }
