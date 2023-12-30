@@ -9,16 +9,16 @@ with open(input_path) as f:
 entry_values = {'Terrible', 'V. Bad', 'Bad', 'Ok', 'Good', 'Great'}
 
 def flip_text_color(color):
-    return color == '#67001f' or color == '#053061'
+    return color == '#67001f' or color == '#053061' or color == '#2166ac' or color == '#b2182b'
 
 def value_to_color(value):
     lookup = {
-        'Terrible': '#053061',
-        'V. Bad': '#4393c3',
-        'Bad': '#d1e5f0',
-        'Ok': '#f7f7f7',
-        'Good': '#d6604d',
-        'Great': '#67001f',
+        'Great': '#2166ac',
+        'Good': '#4393c3',
+        'Ok': '#d1e5f0',
+        'Bad': '#fddbc7',
+        'V. Bad': '#d6604d',
+        'Terrible': '#b2182b',
     }
     # colors = ['#67001f','#b2182b','#d6604d','#f4a582','#fddbc7','#f7f7f7','#d1e5f0','#92c5de','#4393c3','#2166ac','#053061']
 
@@ -33,8 +33,6 @@ print('<tr>')
 for hitem in header:
     print('<th>{}</th>'.format(hitem),end='')
 print('</tr>')
-print('<tr><th>bases</th><th colspan="3">outs</th></tr>')
-# print('<tr><th colspan="6">file</td><th colspan="3">mmap</td></tr>')
 
 for row in body:
     print('<tr>')
