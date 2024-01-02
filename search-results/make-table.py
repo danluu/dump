@@ -25,9 +25,8 @@ def value_to_color(value):
     return lookup[value]
 
 
-print('<style>table {border-collapse:collapse;margin:0px auto;}table,th,td {border: 1px solid black;}td {text-align:center;}</style>')
-
-print('<table>')
+print('<style>table {border-collapse:collapse;margin:1px 10px;}table,th,td {text-align:center;}</style>')
+print('<table style=float:left>')
 # print('<tr><th rowspan="3"></td><th colspan="3">2005</td><th colspan="6">2017</td></tr>')
 print('<tr>')
 for hitem in header:

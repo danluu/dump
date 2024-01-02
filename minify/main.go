@@ -63,6 +63,11 @@ func minifyFun(path string, info os.FileInfo, err error) error {
 		fmt.Println("Skipping", path)
 		return nil
 	}
+  // Table gets mangled.
+  if strings.Contains(path, "seo-spam") {
+	fmt.Println("Skipping", path)
+	return nil
+}	
 	// Can't handle [ / ] in raw HTML?
 	if strings.Contains(path, "elon-twitter-texts") {
 		fmt.Println("Skipping", path)
