@@ -44,8 +44,7 @@ class CdProduct extends ShopProduct {
     }
 
     public function getSummaryLine(): string {
-        $base = "{$this->title} ({$this->producerMainName}, ";
-        $base .= "{$this->producerFirstName})";
+        $base = parent::getSummaryLine();
         $base .= ": playing time - {$this->playLength}";
         return $base;
     }
@@ -71,11 +70,30 @@ class BookProduct extends ShopProduct {
 
     public function getSummaryLine(): string
     {
-        $base = "{$this->title} ({$this->producerMainName}, ";
-        $base .= "{$this->producerFirstName})";
+        $base = parent::getSummaryLine();
         $base .= ": page count - {$this->numPages}";
         return $base;
     }
+}
+
+class ShopProductWriter {
+    private $products = [];
+
+    public function addProduct(ShopProduct $shopProduct) {
+        $this->products[] = $shopProduct;
+    }
+
+    public function write(): void {
+        $str = "";
+        foreach ($this->products as $shopProduct) {
+            $str .= "{$shopProduct->title}: ";
+            $str .= $shopProduct->getProducer();
+            $str .= " ({$shopProduct->price})\n";
+        }
+        print $str;
+    }
+
+
 }
 
 $product2 = new CdProduct(
@@ -88,15 +106,6 @@ $product2 = new CdProduct(
 );
 
 $product2->getPlayLength();
-
-class ShopProductWriter {
-    public function write(ShopProduct $shopProduct) {
-        $str = $shopProduct->title . ": " . $shopProduct->getProducer() . " ({$shopProduct->price})\n";
-        print $str;
-    }
-
-}
-
 
 class AddressManager {
     private $addresses = ["209.131.36.159", "216.58.213.174"];
