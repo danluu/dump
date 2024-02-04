@@ -60,7 +60,6 @@ class AddressManager {
 
 $settings = simplexml_load_file("resolve.xml");
 $manager = new AddressManager();
-// The string false evaluates to true!
-$manager->outputAddresses($settings->resolvedomains);
+$manager->outputAddresses(filter_var($settings->resolvedomains, FILTER_VALIDATE_BOOLEAN));
 
 ?> 
