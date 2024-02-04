@@ -7,9 +7,7 @@ class ShopProduct
         public string $title, 
         public string $producerFirstName ,
         public string $producerMainName, 
-        public float $price,
-        int $numPages = 0,
-        float $playLength = 0
+        public float $price
         ) {}
 
 
@@ -28,7 +26,20 @@ class ShopProduct
 }
 
 class CdProduct extends ShopProduct {
-    public function getPlayLength(): int {
+    public $playLength;
+
+    public function __construct(
+        string $title, 
+        string $firstName,
+        string $mainName, 
+        float $price,
+        int $playLength
+    ) {
+        parent::__construct($title, $firstName, $mainName, $price);
+        $this->playLength = $playLength;
+    }
+
+    public function getPlayLength(): float {
         return $this->playLength;
     }
 
@@ -41,6 +52,19 @@ class CdProduct extends ShopProduct {
 }
 
 class BookProduct extends ShopProduct {
+    public $numPages;
+
+    public function __construct(
+        string $title, 
+        string $firstName,
+        string $mainName, 
+        float $price,
+        int $numPages
+    ) {
+        parent::__construct($title, $firstName, $mainName, $price);
+        $this->numPages = $numPages;
+    }
+
     public function getNumberOfPages(): int {
         return $this->numPages;
     }
@@ -62,6 +86,8 @@ $product2 = new CdProduct(
     0,
     60.33
 );
+
+$product2->getPlayLength();
 
 class ShopProductWriter {
     public function write(ShopProduct $shopProduct) {
