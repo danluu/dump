@@ -31,4 +31,23 @@ print "author: {$product1->getProducer()}\n";
 // var_dump($product1);
 var_dump($product2);
 
+class AddressManager {
+    private $addresses = ["209.131.36.159", "216.58.213.174"];
+
+    public function outputAddresses($resolve) {
+        foreach ($this->addresses as $address) {
+            print $address;
+            if ($resolve) {
+                print " (" . gethostbyaddr($address) . ")";
+            }
+            print "\n";
+        }
+    }
+}
+
+$settings = simplexml_load_file("resolve.xml");
+$manager = new AddressManager();
+// The string false evaluates to true!
+$manager->outputAddresses($settings->resolvedomains);
+
 ?> 
