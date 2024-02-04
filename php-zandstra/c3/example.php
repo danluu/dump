@@ -6,7 +6,7 @@ class ShopProduct
         public $title, 
         public $producerFirstName = "",
         public $producerMainName = "", 
-        public $price = 0) {}
+        public $price = 0.0) {}
 
 
     public function getProducer()
@@ -17,7 +17,10 @@ class ShopProduct
 }
 
 $product1 = new ShopProduct("My Antonia", "Willa", "Cather", 5.99);
-$product2 = new ShopProduct("Shop Catalog");
+$product2 = new ShopProduct(
+    title: "Shop Catalog",
+    price: 0.7
+);
 
 $product1->title = "My Antonia";
 // $product2->title = "Catch 22";
