@@ -2,10 +2,12 @@
 
 class ShopProduct
 {
-    public $title = "default product";
-    public $producerMainName = "main name";
-    public $producerFirstName = "first name";
-    public $price = 0;
+    public function __construct(
+        public $title, 
+        public $producerFirstName,
+        public $producerMainName, 
+        public $price) {}
+
 
     public function getProducer()
     {
@@ -14,11 +16,11 @@ class ShopProduct
     
 }
 
-$product1 = new ShopProduct();
-$product2 = new ShopProduct();
+$product1 = new ShopProduct("My Antonia", "Willa", "Cather", 5.99);
+// $product2 = new ShopProduct();
 
 $product1->title = "My Antonia";
-$product2->title = "Catch 22";
+// $product2->title = "Catch 22";
 
 print "author: {$product1->producerFirstName} " . "{$product1->producerMainName}\n";
 
