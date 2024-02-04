@@ -16,6 +16,14 @@ class ShopProduct
     
 }
 
+class ShopProductWriter {
+    public function write($shopProduct) {
+        $str = $shopProduct->title . ": " . $shopProduct->getProducer() . " ({$shopProduct->price})\n";
+        print $str;
+    }
+
+}
+
 $product1 = new ShopProduct("My Antonia", "Willa", "Cather", 5.99);
 $product2 = new ShopProduct(
     title: "Shop Catalog",
@@ -30,6 +38,10 @@ print "author: {$product1->getProducer()}\n";
 
 // var_dump($product1);
 var_dump($product2);
+
+$writer = new ShopProductWriter();
+$writer->write($product1);
+$writer->write($product2);
 
 class AddressManager {
     private $addresses = ["209.131.36.159", "216.58.213.174"];
