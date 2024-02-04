@@ -3,10 +3,10 @@
 class ShopProduct
 {
     public function __construct(
-        public $title, 
-        public $producerFirstName = "",
-        public $producerMainName = "", 
-        public $price = 0.0) {}
+        public string $title, 
+        public string $producerFirstName = "",
+        public string $producerMainName = "", 
+        public float $price = 0.0) {}
 
 
     public function getProducer()
@@ -17,7 +17,7 @@ class ShopProduct
 }
 
 class ShopProductWriter {
-    public function write($shopProduct) {
+    public function write(ShopProduct $shopProduct) {
         $str = $shopProduct->title . ": " . $shopProduct->getProducer() . " ({$shopProduct->price})\n";
         print $str;
     }
