@@ -18,6 +18,7 @@ StaticExample::sayHello();
 
 class ShopProduct
 {
+    private int $id = 0;
     private int|float $discount = 0;
 
     public function __construct(
@@ -26,6 +27,11 @@ class ShopProduct
         private string $producerMainName,
         protected int|float $price
     ) {
+    }
+
+    public function setId(int $id): void
+    {
+        $this->id = $id;
     }
 
     public function getProducerFirstName(): string
@@ -41,6 +47,45 @@ class ShopProduct
     public function setDiscount(int|float $num): void
     {
         $this->discount = $num;
+    }
+
+    public function getInstance(int $id, \PDO $pdo): ShopProduct {
+        $stmt = $pdo->prepare("select * from products where id = ?");
+        $result = $stmt->execute([$id]);
+
+        $row = $result->fetch();
+        if (empty($row)) {
+            return null;
+        }
+
+        if ($row['type'] == "book") {
+            $product = new BookProduct(
+                $row['title'],
+                $row['firstname'],
+                $row['mainname'],
+                $row['price'],
+                $row['numpages']
+            );
+        } elseif ($row['type'] == "cd") {
+            $product = new CdProduct(
+                $row['title'],
+                $row['firstname'],
+                $row['mainname'],
+                $row['price'],
+                $row['playlength']
+            );
+        } else {
+            $firstname = (is_null($row['firstname'])) ? "" : $row['firstname'];
+            $product = new ShopProduct(
+                $row['title'],
+                $firstname,
+                $row['mainname'],
+                $row['price']
+            );
+        }
+        $product->setId((int)$row['id']);
+        $product->setDiscount($row['discount']);
+        return $product;
     }
 
     public function getDiscount(): int
