@@ -49,11 +49,11 @@ class ShopProduct
         $this->discount = $num;
     }
 
-    public function getInstance(int $id, \PDO $pdo): ShopProduct {
+    public static function getInstance(int $id, \PDO $pdo): ShopProduct|null {
         $stmt = $pdo->prepare("select * from products where id = ?");
         $result = $stmt->execute([$id]);
 
-        $row = $result->fetch();
+        $row = $stmt->fetch();
         if (empty($row)) {
             return null;
         }
@@ -116,5 +116,11 @@ class ShopProduct
         return $base;
     }
 }
+
+$dsn = "sqlite:products.sqlite3";
+$pdo = new \PDO($dsn, null, null);
+$pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+$obj = ShopProduct::getInstance(1, $pdo);
+var_dump($pdo, $obj);
 
 ?>
