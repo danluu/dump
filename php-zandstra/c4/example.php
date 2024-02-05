@@ -127,4 +127,26 @@ $obj = ShopProduct::getInstance(1, $pdo);
 var_dump($pdo, $obj);
 print ShopProduct::AVAILABLE;
 
+abstract class ShopProductWriter {
+    protected array $products = [];
+
+    public function addProduct(ShopProduct $shopProduct): void {
+        $this->products[] = $shopProduct;
+    }
+
+    abstract public function write(): void;
+}
+
+// class ErroredWriter extends ShopProductWriter {}
+class TextProductWriter extends ShopProductWriter {
+    public function write(): void {
+        $str = "PRODUCTS:\n";
+        foreach ($this->products as $shopProduct) {
+            $str .= $shopProduct->getSummaryLine() . "\n";
+        }
+        print $str;
+    }
+}
+
+
 ?>
