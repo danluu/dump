@@ -18,6 +18,9 @@ StaticExample::sayHello();
 
 class ShopProduct
 {
+    public const AVAILABLE = 0;
+    public const OUT_OF_STOCK = 1;
+
     private int $id = 0;
     private int|float $discount = 0;
 
@@ -122,5 +125,6 @@ $pdo = new \PDO($dsn, null, null);
 $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 $obj = ShopProduct::getInstance(1, $pdo);
 var_dump($pdo, $obj);
+print ShopProduct::AVAILABLE;
 
 ?>
