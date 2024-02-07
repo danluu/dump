@@ -21,18 +21,25 @@ df
 ```
 
 ```{r}
-ggplot(df, aes(x = 1:nrow(df), y=Count)) +
+pp <- ggplot(df, aes(x = 1:nrow(df), y=Count/36902)) +
   geom_point(alpha = 0.5, size = 1) +
   scale_colour_brewer(palette = 'Set1') +
   theme_minimal() +
   labs(title = 'No Vehicles in the Park Opinions',
+       subtitle = 'Percent of people who agree with each position',
        x = 'Opinion',
-       y = 'Count') +
-  scale_y_log10() +
+       y = 'Agreement percentage') +
+  scale_y_log10(labels = scales::percent) +
   annotate("text", x = Inf, y = -Inf, label = "danluu.com",
       hjust=1.1, vjust=-0.2, cex=20,
       fontface = "bold", alpha = 0.03)
+pp
 ```
+```{r}
+ggsave(file="park-agreement.png", plot=pp, width=10, height=8)
+```
+
+
 
 ```{r}
 ggplot(df) +
