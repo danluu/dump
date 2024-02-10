@@ -25,11 +25,15 @@ pp <- ggplot(df, aes(x = 1:nrow(df), y=Count/36902)) +
   geom_point(alpha = 0.5, size = 1) +
   scale_colour_brewer(palette = 'Set1') +
   theme_minimal() +
-  labs(title = 'No Vehicles in the Park Opinions',
-       subtitle = 'Percent of people who agree with each position',
-       x = 'Opinion',
+  labs(title = 'What constitutes a "vehicle" in the park?',
+       subtitle = 'Almost everybody disagrees with almost\neverybody else',
+       x = 'Opinion popularity rank',
        y = 'Agreement percentage') +
   scale_y_log10(labels = scales::percent) +
+  # xlim(c(1,NA)) +
+scale_x_continuous(breaks = c(1,2500,5000,7500),
+                     labels = c(1,2500,2500,7500) ,
+                     limits = c(0, NA))  
   annotate("text", x = 3500, y = 0.0001, label = "danluu.com",
       hjust=0, vjust=0, cex=15,
       fontface = "bold", alpha = 0.05)
