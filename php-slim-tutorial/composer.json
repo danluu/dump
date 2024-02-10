@@ -9,5 +9,12 @@
         "psr-4": {
           "App\\": "src/"
         }
+    },
+    "config": {
+        "process-timeout": 0
+      },
+      "scripts": {
+        "start": "php -S localhost:8080 -t public/"
       }
+      
 }
