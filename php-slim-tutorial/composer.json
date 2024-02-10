@@ -3,5 +3,10 @@
         "slim/slim": "^4.12",
         "nyholm/psr7": "^1.8",
         "nyholm/psr7-server": "^1.1"
-    }
+    },
+    "autoload": {
+        "psr-4": {
+          "App\\": "src/"
+        }
+      }
 }
