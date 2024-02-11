@@ -17,7 +17,9 @@
 
 <body>
     <h1><?php 
-    $greeting = "Hello";
-    echo "$greeting, world" ?></h1>
+        $name = "Dark Matter"
+        ?>
+
+        <h1>You have read "<?php echo $name?>."</h1>
 </body>
 </html>
