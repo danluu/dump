@@ -16,17 +16,14 @@
 </head>
 
 <body>
-    <h1><?php 
-        $name = "Dark Matter";
-        $read = false;
+    <h1><Recommended Books/h1>
 
-        if ($read) {
-            $message = "You have read $name.";
-        } else {
-            $message = "You have not read $name.";
-        }
-        ?>
+    <?php $books = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]; ?>
 
-        <h1><?= $message ?></h1>
+    <ul>
+        <?php foreach($books as $book): ?>
+            <li><?php echo $book; ?></li>
+        <?php endforeach; ?> 
+    </ul>
 </body>
 </html>
