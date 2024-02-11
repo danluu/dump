@@ -22,7 +22,7 @@
 
     <ul>
         <?php foreach($books as $book): ?>
-            <li><?php echo $book; ?></li>
+            <li><?= $book ?></li>
         <?php endforeach; ?> 
     </ul>
 </body>
