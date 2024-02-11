@@ -41,11 +41,11 @@
         ]        
     ]; 
     
-    function filterbyAuthor($items, $key, $author) {
+    function filter($items, $fn) {
         $filteredItems = [];
 
         foreach ($items as $item) {
-            if ($item[$key] === $author) {
+            if ($fn($item)) {
                 $filteredItems[] = $item;
             }
         }
@@ -53,7 +53,10 @@
         return $filteredItems;
     };
 
-    $filteredBooks = filterByAuthor($books, 'author', 'Gayle Laakmann McDowell');
+    $filteredBooks = filter($books, function($book) {
+        return $book['author'] !== 'Gayle Laakmann McDowell';
+    });
+
 
     ?>
 
