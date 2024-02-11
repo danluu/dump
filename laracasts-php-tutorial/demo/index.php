@@ -41,7 +41,7 @@
         ]        
     ]; 
     
-    $filterByAuthor = function($books, $author) {
+    function filterbyAuthor($books, $author) {
         $filteredBooks = [];
 
         foreach ($books as $book) {
@@ -53,7 +53,7 @@
         return $filteredBooks;
     };
 
-    $filteredBooks = $filterByAuthor($books, 'Gayle Laakmann McDowell');
+    $filteredBooks = filterByAuthor($books, 'Gayle Laakmann McDowell');
 
     ?>
 
