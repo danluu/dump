@@ -33,11 +33,30 @@
             'title' => 'Cracking the Coding Interview',
             'author' => 'Gayle Laakmann McDowell',
             'extra' => '$'
-        ]
-    ]; ?>
+        ],
+        [
+            'title' => 'Cracking the Tech Career',
+            'author' => 'Gayle Laakmann McDowell',
+            'extra' => '$'
+        ]        
+    ]; 
+    
+    function filterByAuthor($books, $author) {
+        $filteredBooks = [];
+
+        foreach ($books as $book) {
+            if ($book['author'] === $author) {
+                $filteredBooks[] = $book;
+            }
+        }
+
+        return $filteredBooks;
+    }
+
+    ?>
 
     <ul>
-        <?php foreach($books as $book): ?>
+        <?php foreach(filterByAuthor($books, 'Gayle Laakmann McDowell') as $book): ?>
             <li><?= $book['author'] . ": " . $book['title'] ?></li>
         <?php endforeach; ?> 
     </ul>
