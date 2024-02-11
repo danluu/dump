@@ -41,7 +41,7 @@
         ]        
     ]; 
     
-    function filterByAuthor($books, $author) {
+    $filterByAuthor = function($books, $author) {
         $filteredBooks = [];
 
         foreach ($books as $book) {
@@ -51,12 +51,14 @@
         }
 
         return $filteredBooks;
-    }
+    };
+
+    $filteredBooks = $filterByAuthor($books, 'Gayle Laakmann McDowell');
 
     ?>
 
     <ul>
-        <?php foreach(filterByAuthor($books, 'Gayle Laakmann McDowell') as $book): ?>
+        <?php foreach($filteredBooks as $book): ?>
             <li><?= $book['author'] . ": " . $book['title'] ?></li>
         <?php endforeach; ?> 
     </ul>
