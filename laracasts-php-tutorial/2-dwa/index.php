@@ -1,8 +1,6 @@
 <?php
 require "functions.php";
 
-$heading = 'Home';
-
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
@@ -11,11 +9,14 @@ $routes = [
     '/contacts' => 'controllers/contacts.php'
 ];
 
+function abort($code = 404) {
+    http_response_code($code);
+    require "views/{$code}.view.php";
+    die();    
+}
+
 if (array_key_exists($uri, $routes)) {
     require $routes[$uri];
 } else {
-    http_response_code(404);
-
-    echo "404 Not Found";
-    die();
+    abort();
 }
