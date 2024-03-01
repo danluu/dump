@@ -1,6 +1,5 @@
 <?php
 
-require "functions.php";
 
 $heading = 'Contact';
 
