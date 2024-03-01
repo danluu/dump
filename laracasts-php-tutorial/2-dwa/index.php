@@ -3,16 +3,16 @@ require "functions.php";
 
 $heading = 'Home';
 
-$uri = $_SERVER['REQUEST_URI'];
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
-if ($uri === '/') {
-    require "views/index.view.php";
-} elseif ($uri === '/about') {
-    require "views/about.view.php";
-} elseif ($uri === '/contacts') {
-    require "views/contacts.view.php";
+$routes = [
+    '/' => 'controllers/index.php',
+    '/about' => 'controllers/about.php',
+    '/contacts' => 'controllers/contacts.php'
+];
+
+if (array_key_exists($uri, $routes)) {
+    require $routes[$uri];
 } else {
     require "views/404.view.php";
 }
-
-require "views/index.view.php";
