@@ -3,6 +3,10 @@ import math
 import pprint
 import re
 
+
+COLOR_RANGE_EXTEND = False
+RED_BALANCE = True
+
 number_matcher = re.compile('(\d*\.?\d*)')
 # TODO: need to add dark reds, should just make from scratch instead of using whatever's here.
 dark_colors = {'black','#800026','#525252','#252525','#2171b5','#08519c','#08306b','#006d2c','#00441b','#6a51a3','#54278f','#3f007d'}
@@ -11,7 +15,10 @@ dark_colors = {'black','#800026','#525252','#252525','#2171b5','#08519c','#08306
 green_colors =  ['#f7fcf5','#e5f5e0','#c7e9c0','#a1d99b','#74c476','#41ab5d','#238b45','#006d2c','#00441b']
 
 # light red to dark red
-red_colors = ['#fff5f0','#fee0d2','#fcbba1','#fc9272','#fb6a4a','#ef3b2c','#cb181d','#a50f15','#67000d']
+if (RED_BALANCE):
+    red_colors = ['#fff5f0','#fee0d2','#fcbba1','#fc9272','#fb6a4a','#ef3b2c','#cb181d','#a50f15','#a50f15', '#a50f15', '#9B0D14', '#900A12', '#860811', '#71030E', '#67000d']
+else:
+    red_colors = ['#fff5f0','#fee0d2','#fcbba1','#fc9272','#fb6a4a','#ef3b2c','#cb181d','#a50f15','#67000d']    
 
 def hex_to_rgb(value):
    value = value.lstrip('#')
@@ -44,17 +51,25 @@ def extend_color_range(colors):
     return more_colors
 
 pprint.pprint(red_colors)
-red_colors = extend_color_range(red_colors)
-red_colors = extend_color_range(red_colors)
-red_colors = extend_color_range(red_colors)
-red_colors = extend_color_range(red_colors)
-red_colors = extend_color_range(red_colors)
-red_colors = extend_color_range(red_colors)
-   
-green_colors = extend_color_range(green_colors)
-green_colors = extend_color_range(green_colors)
+if (COLOR_RANGE_EXTEND):
+    red_colors = extend_color_range(red_colors)
+    red_colors = extend_color_range(red_colors)
+    red_colors = extend_color_range(red_colors)
+    red_colors = extend_color_range(red_colors)
+    red_colors = extend_color_range(red_colors)
+    red_colors = extend_color_range(red_colors)
+    
+    green_colors = extend_color_range(green_colors)
+    green_colors = extend_color_range(green_colors)
+else:
+    red_colors = extend_color_range(red_colors)
+    red_colors = extend_color_range(red_colors)
+    red_colors = extend_color_range(red_colors)
 
-dark_colors = ['black'] + green_colors[-4:] + red_colors[-24:]
+if (COLOR_RANGE_EXTEND):
+    dark_colors = ['black'] + green_colors[-4:] + red_colors[-24:]
+else:
+    dark_colors = ['black'] + green_colors[-2:] + red_colors[-2:]
 
 # make green run from dark to light
 green_colors.reverse()
@@ -126,27 +141,28 @@ def remove_units(value):
         return raw_value * 1024
     elif value.endswith('MB'):
         return raw_value * 1024 * 1024
+    elif value.endswith('ms'):
+        # Must be before s!!!
+        return raw_value / 1000    
     elif value.endswith('s'):
         return raw_value
-    elif value.endswith('ms'):
-        return raw_value / 1000
     else:
         return raw_value
 
 value_limits = [ 
     None, # 0
     {'min': 6 * 1024, 'max': 9.3 * 1024 * 1024}, # 1, wire
-    {'min': 18 * 1024, 'max': 15 * 1024 * 1024}, # 2, raw
-    {'min': 50 / 1000, 'max': 20}, # 3, M3 LCP
-    {'min': 19 / 1000, 'max': 20}, # 4, M3 CPU
-    {'min': 50 / 1000, 'max': 20}, # 5, M1 CPU
-    {'min': 20 / 1000, 'max': 20}, # 6, M1 CPU
-    {'min': 50 / 1000, 'max': 20}, # 7, M3/10 CPU
-    {'min': 20 / 1000, 'max': 20}, # 8, M3/10 CPU
-    {'min': 50 / 1000, 'max': 20}, # 9, Tecno CPU
-    {'min': 20 / 1000, 'max': 20}, # 10, Tecno CPU                        
-    {'min': 50 / 1000, 'max': 20}, # 9, Tecno CPU
-    {'min': 20 / 1000, 'max': 20}, # 10, Tecno CPU                            
+    {'min': 18 * 1024, 'max': 21 * 1024 * 1024}, # 2, raw
+    {'min': 50 / 1000, 'max': 30}, # 3, M3 LCP
+    {'min': 20 / 1000, 'max': 30}, # 4, M3 CPU
+    {'min': 50 / 1000, 'max': 30}, # 5, M1 CPU
+    {'min': 20 / 1000, 'max': 30}, # 6, M1 CPU
+    {'min': 50 / 1000, 'max': 30}, # 7, M3/10 CPU
+    {'min': 20 / 1000, 'max': 30}, # 8, M3/10 CPU
+    {'min': 50 / 1000, 'max': 30}, # 9, Tecno CPU
+    {'min': 20 / 1000, 'max': 30}, # 10, Tecno CPU                        
+    {'min': 50 / 1000, 'max': 30}, # 9, Tecno CPU
+    {'min': 20 / 1000, 'max': 30}, # 10, Tecno CPU                            
 ]
 
 def gross_main_body(input_path, output_path):
