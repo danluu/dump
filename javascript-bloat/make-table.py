@@ -178,10 +178,20 @@ def gross_main_body(input_path, output_path):
         print('<table>',file=outf)
         # print('<tr><th rowspan="3"></td><th colspan="3">2005</td><th colspan="6">2017</td></tr>')
         print('<tr>',file=outf)
-        for hitem in header_1:
-            print('<th>{}</th>'.format(hitem),end='',file=outf)
+        for idx, hitem in enumerate(header_1):
+            if idx == 0:
+                print('<th>{}</th>'.format(hitem),end='',file=outf)
+            else:
+                if hitem == '':
+                    continue
+                else:
+                    print('<th colspan="2">{}</th>'.format(hitem),end='',file=outf)
         print('</tr>',file=outf)
         # print('<tr><th colspan="6">file</td><th colspan="3">mmap</td></tr>')
+        print('<tr>',file=outf)
+        for hitem in header_2:
+            print('<th>{}</th>'.format(hitem),end='',file=outf)
+        print('</tr>',file=outf)        
 
         for row in body:
             print('<tr>',file=outf)
