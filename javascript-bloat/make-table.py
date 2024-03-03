@@ -63,6 +63,8 @@ if (COLOR_RANGE_EXTEND):
     green_colors = extend_color_range(green_colors)
     green_colors = extend_color_range(green_colors)
 else:
+    red_colors_size = extend_color_range(red_colors)  
+
     red_colors = extend_color_range(red_colors)
     red_colors = extend_color_range(red_colors)
     red_colors = extend_color_range(red_colors)
@@ -77,6 +79,7 @@ green_colors.reverse()
 
 # dark red to light red to light green to dark green
 red_green_colors = green_colors + red_colors
+red_green_colors_size = green_colors + red_colors_size
 
 # pprint.pprint(red_green_colors)
 
@@ -84,8 +87,8 @@ def flip_text_color(color):
     return color in dark_colors
 
 
-def value_to_color(value, value_limits):
-    colors = red_green_colors
+def value_to_color(value, value_limits, colors):
+    colors
     min_val = value_limits['min']
     max_val = value_limits['max']
 
@@ -207,7 +210,10 @@ def gross_main_body(input_path, output_path):
                     print('<td class="l">{}</td>'.format(bitem),end='',file=outf)
                 else:
                     value = remove_units(bitem)
-                    color = value_to_color(value, value_limits[idx])
+                    if (idx <= 2):
+                        color = value_to_color(value, value_limits[idx], red_green_colors_size)
+                    else:
+                        color = value_to_color(value,value_limits[idx], red_green_colors)
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
