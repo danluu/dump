@@ -69,7 +69,7 @@ else:
 if (COLOR_RANGE_EXTEND):
     dark_colors = ['black'] + green_colors[-4:] + red_colors[-24:]
 else:
-    dark_colors = ['black'] + green_colors[-2:] + red_colors[-2:]
+    dark_colors = ['black'] + green_colors[-1:] + red_colors[-16:]
 
 # make green run from dark to light
 green_colors.reverse()
