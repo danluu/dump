@@ -149,20 +149,22 @@ def remove_units(value):
     else:
         return raw_value
 
+# This table is a legacy format from when each column
+# was normalized seperately. There's no reason to have this big table now.
 value_limits = [ 
     None, # 0
     {'min': 6 * 1024, 'max': 9.3 * 1024 * 1024}, # 1, wire
     {'min': 18 * 1024, 'max': 21 * 1024 * 1024}, # 2, raw
     {'min': 50 / 1000, 'max': 30}, # 3, M3 LCP
     {'min': 20 / 1000, 'max': 30}, # 4, M3 CPU
-    {'min': 50 / 1000, 'max': 30}, # 5, M1 CPU
+    {'min': 50 / 1000, 'max': 30}, # 5, M1 LCP
     {'min': 20 / 1000, 'max': 30}, # 6, M1 CPU
-    {'min': 50 / 1000, 'max': 30}, # 7, M3/10 CPU
+    {'min': 50 / 1000, 'max': 30}, # 7, M3/10 LCP
     {'min': 20 / 1000, 'max': 30}, # 8, M3/10 CPU
-    {'min': 50 / 1000, 'max': 30}, # 9, Tecno CPU
+    {'min': 50 / 1000, 'max': 30}, # 9, Tecno LCP
     {'min': 20 / 1000, 'max': 30}, # 10, Tecno CPU                        
-    {'min': 50 / 1000, 'max': 30}, # 9, Tecno CPU
-    {'min': 20 / 1000, 'max': 30}, # 10, Tecno CPU                            
+    {'min': 50 / 1000, 'max': 30}, # 11, Itel LCP
+    {'min': 20 / 1000, 'max': 30}, # 12, Itel CPU
 ]
 
 def gross_main_body(input_path, output_path):
