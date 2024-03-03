@@ -28,6 +28,7 @@ def hex_to_rgb(value):
 def rgb_to_hex(rgb):
    return '%02x%02x%02x' % rgb
 
+# This should really use HSL or something instead of RGB.
 def mean_color(color1, color2):
    rgb1 = hex_to_rgb(color1)
    rgb2 = hex_to_rgb(color2)
