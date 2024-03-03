@@ -9,13 +9,13 @@ WordPress (old),0.3MB,1.0MB,80ms,70ms,90ms,90ms,0.4s,0.9s,0.7s,1.7s,1.1s,1.9s
 XenForo,0.3MB,1.0MB,0.4s,0.1s,0.6s,0.2s,1.4s,1.5s,1.5s,1.8s,FAIL,FAIL
 Ghost,0.7MB,2.4MB,0.1s,0.2s,0.2s,0.2s,1.1s,2.2s,1s,2.4s,1.1s,3.5s
 vBulletin,1.2MB,3.4MB,0.5s,0.2s,0.6s,0.3s,1.1s,2.9s,4.4s,4.8s,13s,16s
-Squarespace,1.9MB,7.1MB,0.1s,0.4s,0.2s,0.4s,0.7s,3.6s,14s,5.1s,16s,18.7s
+Squarespace,1.9MB,7.1MB,0.1s,0.4s,0.2s,0.4s,0.7s,3.6s,14s,5.1s,16s,19s
 Mastodon,3.8MB,5.3MB,0.2s,0.3s,0.2s,0.4s,1.8s,4.7s,2.0s,7.6s,FAIL,FAIL
-Tumblr,3.5MB,7.1MB,0.7s,0.6s,1.1s,0.7s,1.0s,7s,14s,7.9s,8.7s,8.7s
+Tumblr,3.5MB,7.1MB,0.7s,0.6s,1.1s,0.7s,1.0s,7.0s,14s,7.9s,8.7s,8.7s
 Quora,0.6MB,4.9MB,0.7s,1.2s,0.8s,1.3s,2.6s,8.7s,FAIL,FAIL,19s,29s
 Bluesky,4.8MB,10MB,1.0s,0.4s,1.0s,0.5s,5.1s,6.0s,8.1s,8.3s,FAIL,FAIL
 Wix,7.0MB,21MB,2.4s,1.1s,2.5s,1.2s,18s,11s,5.6s,10s,FAIL,FAIL
-Substack,1.3MB,4.3MB,0.4s,0.5s,0.4s,0.5s,1.5s,4.9s,14s,13.8s,FAIL,FAIL
+Substack,1.3MB,4.3MB,0.4s,0.5s,0.4s,0.5s,1.5s,4.9s,14s,14s,FAIL,FAIL
 Threads,9.3MB,13MB,1.5s,0.5s,1.6s,0.7s,5.1s,6.1s,6.4s,16s,28s,66s
 Twitter,4.7MB,11MB,2.6s,0.9s,2.7s,1.1s,5.6s,6.6s,12s,19s,24s,43s
 Shopify,3.0MB,5.5MB,0.4s,0.2s,0.4s,0.3s,0.7s,2.3s,9.7s,26s,FAIL,FAIL
