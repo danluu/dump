@@ -19,7 +19,7 @@ Substack,1.3MB,4.3MB,0.4s,0.5s,0.4s,0.5s,1.5s,4.9s,14s,14s,FAIL,FAIL
 Threads,9.3MB,13MB,1.5s,0.5s,1.6s,0.7s,5.1s,6.1s,6.4s,16s,28s,66s
 Twitter,4.7MB,11MB,2.6s,0.9s,2.7s,1.1s,5.6s,6.6s,12s,19s,24s,43s
 Shopify,3.0MB,5.5MB,0.4s,0.2s,0.4s,0.3s,0.7s,2.3s,9.7s,26s,FAIL,FAIL
-Discourse,2.6MB,10MB,1.1s,0.5s,1.5s,0.6s,6.5s,5.9s,15.3s,26s,FAIL,FAIL
+Discourse,2.6MB,10MB,1.1s,0.5s,1.5s,0.6s,6.5s,5.9s,15s,26s,FAIL,FAIL
 Patreon,4.0MB,13MB,0.6s,1.0s,1.2s,1.2s,1.2s,14s,1.7s,31s,9.1s,45s
 Medium,1.2MB,3.3MB,1.4s,0.7s,1.4s,1s,2s,11s,2.8s,33s,3.2s,63s
 Reddit,1.7MB,5.4MB,0.9s,0.7s,0.9s,0.9s,6.2s,12s,1.2s,45s,FAIL,FAIL
