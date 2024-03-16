@@ -124,7 +124,7 @@ def log_color_scale(value, min_val, max_val, colors):
         return 'silver'
 
 def remove_units(value):
-    if value == '' or value == 'FAIL':
+    if value == '' or value == 'FAIL' or value == '∞':
         return float('inf')
 
     match = number_matcher.match(value)
