@@ -207,7 +207,7 @@ def gross_main_body(input_path, output_path):
                 if bitem.startswith('http'):
                     continue
                 if idx == 0:
-                    # TODO: what is this class for?
+                    # TODO: class forces align left
                     print('<td class="l">{}</td>'.format(bitem),end='',file=outf)
                 else:
                     value = remove_units(bitem)
@@ -218,7 +218,7 @@ def gross_main_body(input_path, output_path):
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
-                        print('<td bgcolor={}>{}</td>'.format(color, bitem),end='',file=outf)
+                        print('<td bgcolor={}><font color=black>{}</td>'.format(color, bitem),end='',file=outf)
 
             print('</tr>',file=outf)
         print('</table>',file=outf)

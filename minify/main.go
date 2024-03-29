@@ -57,19 +57,29 @@ func minifyFun(path string, info os.FileInfo, err error) error {
 	if strings.Contains(path, "verilog-vs-vhdl") {
 		fmt.Println("Skipping", path)
 		return nil
-	}	
-  // Table gets mangled.
+	}
+	// Table gets mangled.
 	if strings.Contains(path, "cli-complexity") {
 		fmt.Println("Skipping", path)
 		return nil
 	}
-  // Table gets mangled.
-  if strings.Contains(path, "seo-spam") {
-	fmt.Println("Skipping", path)
-	return nil
-}	
+	// Table gets mangled.
+	if strings.Contains(path, "seo-spam") {
+		fmt.Println("Skipping", path)
+		return nil
+	}
 	// Can't handle [ / ] in raw HTML?
 	if strings.Contains(path, "elon-twitter-texts") {
+		fmt.Println("Skipping", path)
+		return nil
+	}
+	// Table gets mangled.
+	if strings.Contains(path, "slow-device") {
+		fmt.Println("Skipping", path)
+		return nil
+	}
+	// Table gets mangled.
+	if strings.Contains(path, "butler-lampson-1999") {
 		fmt.Println("Skipping", path)
 		return nil
 	}
