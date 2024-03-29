@@ -218,7 +218,7 @@ def gross_main_body(input_path, output_path):
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
-                        print('<td bgcolor={}><font color=black>{}</td>'.format(color, bitem),end='',file=outf)
+                        print('<td bgcolor={}><font color=black>{}</font></td>'.format(color, bitem),end='',file=outf)
 
             print('</tr>',file=outf)
         print('</table>',file=outf)

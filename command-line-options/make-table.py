@@ -62,7 +62,7 @@ for row in body:
             if flip_text_color(color):
                 print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem), end='')
             else:
-                print('<td bgcolor={}>{}</td>'.format(color, bitem),end='')
+                print('<td bgcolor={}><font color=black>{}</font></td>'.format(color, bitem),end='')
             # print('<td>{}</td>'.format(bitem),end='')
 	        # print('<th>{}</th>'.format(bitem),end='')
         else:

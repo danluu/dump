@@ -131,21 +131,21 @@ def gross_main_body(input_path, output_path):
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
-                        print('<td bgcolor={}><font color=black>{}</td>'.format(color, bitem),end='',file=outf)
+                        print('<td bgcolor={}><font color=black>{}</font></td>'.format(color, bitem),end='',file=outf)
                 elif idx == 3:
                     value = remove_units(bitem)
                     color = log_color_scale(value,1000000,4200000000,blue_colors)
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
-                        print('<td bgcolor={}><font color=black>{}</td>'.format(color, bitem),end='',file=outf)
+                        print('<td bgcolor={}><font color=black>{}</font></td>'.format(color, bitem),end='',file=outf)
                 elif idx == 4:
                     value = remove_units(bitem)
                     color = log_color_scale(value,3500,2000000000,blue_colors)
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
-                        print('<td bgcolor={}><font color=black>{}</td>'.format(color, bitem),end='',file=outf)
+                        print('<td bgcolor={}><font color=black>{}</font></td>'.format(color, bitem),end='',file=outf)
                 else:
                     print('<td>{}</td>'.format(bitem),end='',file=outf)
 
