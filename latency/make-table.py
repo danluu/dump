@@ -2,7 +2,7 @@ import csv
 import math
 import re
 
-number_matcher = re.compile('(\d*\.?\d*)')
+number_matcher = re.compile(r'(\d*\.?\d*)')
 dark_colors = {'black','#800026','#525252','#252525','#2171b5','#08519c','#08306b','#006d2c','#00441b','#6a51a3','#54278f','#3f007d'}
 
 blue_colors = ['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#08519c','#08306b']
@@ -120,7 +120,7 @@ def gross_main_body(input_path, output_path):
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
-                        print('<td bgcolor={}>{}</td>'.format(color, bitem),end='',file=outf)
+                        print('<td bgcolor={}><font color=black>{}</td>'.format(color, bitem),end='',file=outf)
                 elif idx == 2:
                     if bitem == '':
                         color = 'silver'
@@ -131,21 +131,21 @@ def gross_main_body(input_path, output_path):
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
-                        print('<td bgcolor={}>{}</td>'.format(color, bitem),end='',file=outf)
+                        print('<td bgcolor={}><font color=black>{}</td>'.format(color, bitem),end='',file=outf)
                 elif idx == 3:
                     value = remove_units(bitem)
                     color = log_color_scale(value,1000000,4200000000,blue_colors)
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
-                        print('<td bgcolor={}>{}</td>'.format(color, bitem),end='',file=outf)
+                        print('<td bgcolor={}><font color=black>{}</td>'.format(color, bitem),end='',file=outf)
                 elif idx == 4:
                     value = remove_units(bitem)
                     color = log_color_scale(value,3500,2000000000,blue_colors)
                     if flip_text_color(color):
                         print('<td bgcolor={}><font color=white>{}</font></td>'.format(color, bitem),end='',file=outf)
                     else:
-                        print('<td bgcolor={}>{}</td>'.format(color, bitem),end='',file=outf)
+                        print('<td bgcolor={}><font color=black>{}</td>'.format(color, bitem),end='',file=outf)
                 else:
                     print('<td>{}</td>'.format(bitem),end='',file=outf)
 
