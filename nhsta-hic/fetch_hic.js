@@ -44,6 +44,7 @@ async function main() {
 
   const searchUrl = `${BASE}vehicle-database-test-results/by-search?count=${MAX_COUNT}` +
     `&orderBy=testNo&pageNumber=0&sortBy=DESC&excludeNhtsaVehicles=true`; // pulls master list of crash tests
+  console.log(`Test source URL: ${searchUrl}`);
   const data = await fetchJson(searchUrl);
   const results = data.results || []; // API response payload: array of vehicle test objects
   console.log(`Fetched ${results.length} test records`);
@@ -109,7 +110,7 @@ async function main() {
     'vehicleTestWeight',
     'occupantLocation', 'occupantType', 'occupantSex', 'dummySizePercentile',
     'HIC', 'T1_ms', 'T2_ms',
-    'sourceUrl', 'testSourceUrl'
+    'sourceUrl'
   ];
   const lines = [header.join(',')];
   for (const row of rows) {
@@ -119,8 +120,7 @@ async function main() {
       row.vehicleTestWeight,
       row.occLocation, row.occType, row.occSex, row.dummySizePercentile,
       row.hic, row.t1, row.t2,
-      `${BASE}vehicle-database-test-results/get-occupant-info/${row.testNo}`, // direct API source for occupant info
-      searchUrl // endpoint used to obtain testNo per make/model/year
+      `${BASE}vehicle-database-test-results/get-occupant-info/${row.testNo}` // direct API source for occupant info
     ].map(v => {
       if (v === null || v === undefined) return '';
       const s = String(v);
