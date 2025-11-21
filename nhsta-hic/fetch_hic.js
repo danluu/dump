@@ -17,7 +17,6 @@ async function fetchJson(url) {
 }
 
 async function main() {
-  const seen = new Set();
   const rows = [];
 
   const searchUrl = `${BASE}vehicle-database-test-results/by-search?count=${MAX_COUNT}` +
@@ -26,21 +25,12 @@ async function main() {
   const results = data.results || []; // API response payload: array of vehicle test objects
   console.log(`Fetched ${results.length} test records`);
 
-  const unique = [];
-  for (const r of results) {
-    const key = `${r.vehicleMake}|${r.vehicleModel}|${r.modelYear}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    unique.push(r);
-  }
-  console.log(`Unique make/model/year combos: ${unique.length}`);
-
   // Fetch occupant info with limited concurrency
   let idx = 0;
   async function worker() {
-    while (idx < unique.length) {
+    while (idx < results.length) {
       const myIdx = idx++;
-      const r = unique[myIdx];
+      const r = results[myIdx];
       let occupants = [];
       try {
         const occ = await fetchJson(`${BASE}vehicle-database-test-results/get-occupant-info/${r.testNo}`); // occupant-level metrics for specific testNo
@@ -76,7 +66,7 @@ async function main() {
       }
 
       if ((myIdx + 1) % 100 === 0) {
-        console.log(`Processed ${myIdx + 1}/${unique.length} vehicles`);
+        console.log(`Processed ${myIdx + 1}/${results.length} vehicles`);
       }
     }
   }
@@ -107,7 +97,7 @@ async function main() {
     lines.push(values.join(','));
   }
   fs.writeFileSync('hic_latest.csv', lines.join('\n'));
-  console.log(`Wrote ${rows.length} rows for ${seen.size} unique make/model/year combos to hic_latest.csv`);
+  console.log(`Wrote ${rows.length} rows for ${results.length} tests to hic_latest.csv`);
 }
 
 main().catch(err => {
