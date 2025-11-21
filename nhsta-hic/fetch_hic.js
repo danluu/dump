@@ -7,6 +7,29 @@ const BASE = 'https://nrd.api.nhtsa.dot.gov/nhtsa/vehicle/api/v1/'; // NHTSA Veh
 const MAX_COUNT = 20000; // fetch all /vehicle-database-test-results/by-search records in one call
 const CONCURRENCY = 50; // limit for simultaneous /get-occupant-info requests
 
+function normalizeSex(sex) {
+  if (sex === null || sex === undefined) return '';
+  const s = String(sex).trim().toLowerCase();
+  if (!s) return '';
+  if (s === 'm' || s === 'male') return 'M';
+  if (s === 'f' || s === 'female') return 'F';
+  return s.toUpperCase(); // fallback: preserve info but standardize case
+}
+
+function normalizePercentile(value) {
+  if (value === null || value === undefined) return '';
+  const s = String(value).trim();
+  if (!s) return '';
+  const match = s.match(/([0-9]+(?:\.[0-9]+)?)/);
+  if (match) {
+    const num = Number(match[1]);
+    if (!Number.isNaN(num)) {
+      return Number.isInteger(num) ? `${num}` : `${num}`; // numeric percentile only
+    }
+  }
+  return s; // fallback: return as-is if no numeric component
+}
+
 async function fetchJson(url) {
   const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!res.ok) {
@@ -40,9 +63,11 @@ async function main() {
           hic: o.headInjuryCriterion, // headInjuryCriterion (HIC)
           t1: o.lowerBoundaryofHICTimeInterval, // lowerBoundaryofHICTimeInterval
           t2: o.upperBoundaryofHICTimeInterval, // upperBoundaryofHICTimeInterval
+          sex: normalizeSex(o.occupantSex), // standardized occupantSex
+          percentile: normalizePercentile(o.dummySizePercentile), // standardized dummySizePercentile
         }));
       } catch (e) {
-        occupants = [{ location: '', type: '', hic: '', t1: '', t2: '', error: e.message }];
+        occupants = [{ location: '', type: '', hic: '', t1: '', t2: '', sex: '', percentile: '', error: e.message }];
       }
 
       for (const occ of occupants) {
@@ -57,11 +82,14 @@ async function main() {
           closingSpeed: r.closingSpeed, // by-search -> closingSpeed
           impactAngle: r.impactAngle, // by-search -> impactAngle
           offsetDistance: r.offsetDistance, // by-search -> offsetDistance
+          vehicleTestWeight: r.vehicleTestWeight, // by-search -> vehicleTestWeight
           occLocation: occ.location, // get-occupant-info -> occupantLocation
           occType: occ.type, // get-occupant-info -> occupantType
           hic: occ.hic, // get-occupant-info -> headInjuryCriterion
           t1: occ.t1, // get-occupant-info -> lowerBoundaryofHICTimeInterval
           t2: occ.t2, // get-occupant-info -> upperBoundaryofHICTimeInterval
+          occSex: occ.sex, // get-occupant-info -> occupantSex (standardized)
+          dummySizePercentile: occ.percentile, // get-occupant-info -> dummySizePercentile (standardized)
         });
       }
 
@@ -78,7 +106,9 @@ async function main() {
   const header = [
     'make', 'model', 'year', 'testNo', 'testType', 'configuration',
     'performer', 'closingSpeed_kph', 'impactAngle_deg', 'offsetDistance_mm',
-    'occupantLocation', 'occupantType', 'HIC', 'T1_ms', 'T2_ms',
+    'vehicleTestWeight',
+    'occupantLocation', 'occupantType', 'occupantSex', 'dummySizePercentile',
+    'HIC', 'T1_ms', 'T2_ms',
     'sourceUrl', 'testSourceUrl'
   ];
   const lines = [header.join(',')];
@@ -86,7 +116,9 @@ async function main() {
     const values = [
       row.make, row.model, row.year, row.testNo, row.testType, row.configuration,
       row.performer, row.closingSpeed, row.impactAngle, row.offsetDistance,
-      row.occLocation, row.occType, row.hic, row.t1, row.t2,
+      row.vehicleTestWeight,
+      row.occLocation, row.occType, row.occSex, row.dummySizePercentile,
+      row.hic, row.t1, row.t2,
       `${BASE}vehicle-database-test-results/get-occupant-info/${row.testNo}`, // direct API source for occupant info
       searchUrl // endpoint used to obtain testNo per make/model/year
     ].map(v => {
