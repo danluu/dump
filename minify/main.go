@@ -21,7 +21,7 @@ import (
 var (
 	srcDir   = "../dist"
 	dstDir   = "../dist"
-	baseArgs = "--remove-comments --collapse-whitespace --conservative-collapse --collapse-boolean-attributes --collapse-inline-tag-whitespace --remove-tag-whitespace --remove-attribute-quotes --use-short-doctype --remove-empty-attributes --remove-optional-tags --remove-empty-elements --minify-css"
+	baseArgs = "--remove-comments --collapse-whitespace --conservative-collapse --collapse-boolean-attributes --collapse-inline-tag-whitespace --remove-tag-whitespace --remove-attribute-quotes --remove-empty-attributes --remove-optional-tags --remove-empty-elements --minify-css"
 )
 
 func minifyFun(path string, info os.FileInfo, err error) error {
