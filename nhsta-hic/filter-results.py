@@ -6,6 +6,7 @@ Filter hic_latest.csv to keep only records where:
   - offsetDistance_mm == 0
   - occupantLocation is a front seat (LEFT FRONT SEAT or RIGHT FRONT SEAT)
   - HIC is present (non-empty)
+  - testType is not a modified vehicle test (e.g., excludes "MODIFIED VEHICLE TEST")
 
 Usage:
   python3 filter-results.py --input hic_latest.csv --output hic_filtered.csv
@@ -51,6 +52,7 @@ def main():
 
     def matches(row):
         configuration = (row.get("configuration") or "").strip().upper()
+        test_type = (row.get("testType") or "").strip().upper()
         impact_angle = parse_number(row.get("impactAngle_deg"))
         offset_distance = parse_number(row.get("offsetDistance_mm"))
         occupant_location = (row.get("occupantLocation") or "").strip().upper()
@@ -58,6 +60,7 @@ def main():
         front_seats = {"LEFT FRONT SEAT", "RIGHT FRONT SEAT"}
         return (
             configuration == "VEHICLE INTO BARRIER"
+            and "MODIFIED" not in test_type
             and (impact_angle or 0) == 0
             and (offset_distance or 0) == 0
             and occupant_location in front_seats
@@ -66,8 +69,19 @@ def main():
 
     filtered = [row for row in rows if matches(row)]
 
+    # Add HIC_duration = T2_ms - T1_ms when both present
+    for row in filtered:
+        t1 = parse_number(row.get("T1_ms"))
+        t2 = parse_number(row.get("T2_ms"))
+        if t1 is not None and t2 is not None:
+            row["HIC_duration"] = t2 - t1
+        else:
+            row["HIC_duration"] = ""
+
+    out_fields = fieldnames + ([ "HIC_duration" ] if "HIC_duration" not in fieldnames else [])
+
     with output_path.open("w", newline="") as outfile:
-        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+        writer = csv.DictWriter(outfile, fieldnames=out_fields)
         writer.writeheader()
         writer.writerows(filtered)
 

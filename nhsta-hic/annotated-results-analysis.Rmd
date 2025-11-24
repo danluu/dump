@@ -1,0 +1,285 @@
+---
+title: "Annotated Results: HIC vs Year"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+
+files <- tibble(
+  path = c(
+    "annotated_results.csv",
+    "annotated_results_m50_bucket15.csv",
+    "annotated_results_m50_bucket36.csv",
+    "annotated_results_f5_bucket15.csv",
+    "annotated_results_f5_bucket36.csv"
+  )
+) %>% filter(file.exists(path))
+
+if (nrow(files) == 0) {
+  stop("No annotated_results*.csv files found in the working directory.")
+}
+
+read_and_tag <- function(path) {
+  df <- read_csv(path, show_col_types = FALSE)
+  name <- basename(path)
+  if (grepl("m50", name, ignore.case = TRUE)) {
+    role <- "M50"
+    df <- df %>%
+      transmute(
+        make, model, year = as.numeric(year),
+        role,
+        source = name,
+        hic_bucket = hic_bucket,
+        raw_hic = as.numeric(HIC_m50),
+        norm_hic = as.numeric(normalizedHIC_m50)
+      )
+  } else if (grepl("f5", name, ignore.case = TRUE)) {
+    role <- "F5"
+    df <- df %>%
+      transmute(
+        make, model, year = as.numeric(year),
+        role,
+        source = name,
+        hic_bucket = hic_bucket,
+        raw_hic = as.numeric(HIC_f5),
+        norm_hic = as.numeric(normalizedHIC_f5)
+      )
+  } else {
+    # combined file: keep both roles separately and combined normalized
+    combined <- df %>%
+      transmute(
+        make, model, year = as.numeric(year),
+        role = "Combined",
+        source = name,
+        hic_bucket = hic_bucket,
+        raw_hic = NA_real_,
+        norm_hic = as.numeric(normalizedHIC)
+      )
+    m50 <- df %>%
+      transmute(
+        make, model, year = as.numeric(year),
+        role = "M50",
+        source = name,
+        hic_bucket = hic_bucket,
+        raw_hic = as.numeric(HIC_m50),
+        norm_hic = as.numeric(normalizedHIC_m50)
+      )
+    f5 <- df %>%
+      transmute(
+        make, model, year = as.numeric(year),
+        role = "F5",
+        source = name,
+        hic_bucket = hic_bucket,
+        raw_hic = as.numeric(HIC_f5),
+        norm_hic = as.numeric(normalizedHIC_f5)
+      )
+    return(bind_rows(combined, m50, f5))
+  }
+  df
+}
+
+data <- files %>%
+  mutate(tbl = map(path, read_and_tag)) %>%
+  pull(tbl) %>%
+  bind_rows()
+
+data <- data %>%
+  filter(!is.na(year))
+
+glimpse(data)
+```
+
+## Raw HIC vs Year (all points, faceted by HIC bucket)
+
+```{r raw-all, fig.width=8, fig.height=6}
+ggplot(filter(data, !is.na(raw_hic)), aes(year, raw_hic, color = role)) +
+  geom_point(alpha = 0.25, position = position_jitter(width = 0.35, height = 0)) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Raw HIC vs Year",
+    x = "Model Year",
+    y = "Raw HIC"
+  ) +
+  facet_grid(role ~ hic_bucket, scales = "free_y") +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```
+
+## Raw HIC vs Year (yearly average, faceted by HIC bucket)
+
+```{r raw-yearly, fig.width=8, fig.height=6}
+raw_year <- data %>%
+  filter(!is.na(raw_hic)) %>%
+  group_by(year, role, hic_bucket) %>%
+  summarise(raw_hic = mean(raw_hic, na.rm = TRUE), .groups = "drop")
+
+ggplot(raw_year, aes(year, raw_hic, color = role)) +
+  geom_point(size = 2) +
+  geom_line(alpha = 0.7) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Raw HIC vs Year (Yearly Mean)",
+    x = "Model Year",
+    y = "Raw HIC (mean)"
+  ) +
+  facet_grid(role ~ hic_bucket, scales = "free_y") +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```
+
+## Normalized HIC vs Year (all points, faceted by HIC bucket)
+
+```{r norm-all, fig.width=8, fig.height=6}
+ggplot(filter(data, !is.na(norm_hic)), aes(year, norm_hic, color = role)) +
+  geom_point(alpha = 0.25, position = position_jitter(width = 0.35, height = 0)) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Normalized HIC vs Year",
+    x = "Model Year",
+    y = "Normalized HIC"
+  ) +
+  facet_grid(role ~ hic_bucket, scales = "free_y") +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```
+
+## Normalized HIC vs Year (yearly average, faceted by HIC bucket)
+
+```{r norm-yearly, fig.width=8, fig.height=6}
+norm_year <- data %>%
+  filter(!is.na(norm_hic)) %>%
+  group_by(year, role, hic_bucket) %>%
+  summarise(norm_hic = mean(norm_hic, na.rm = TRUE), .groups = "drop")
+
+ggplot(norm_year, aes(year, norm_hic, color = role)) +
+  geom_point(size = 2) +
+  geom_line(alpha = 0.7) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Normalized HIC vs Year (Yearly Mean)",
+    x = "Model Year",
+    y = "Normalized HIC (mean)"
+  ) +
+  facet_grid(role ~ hic_bucket, scales = "free_y") +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```
+
+## HIC 15 bucket: zoomed to 2010 and later (raw HIC, all points)
+
+```{r raw-all-15-zoom, fig.width=8, fig.height=6}
+ggplot(filter(data, !is.na(raw_hic), hic_bucket == "15", year >= 2010), aes(year, raw_hic, color = role)) +
+  geom_point(alpha = 0.25, position = position_jitter(width = 0.35, height = 0)) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Raw HIC vs Year (HIC15, 2010+)",
+    x = "Model Year",
+    y = "Raw HIC"
+  ) +
+  facet_grid(role ~ hic_bucket, scales = "free_y") +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```
+
+## HIC 15 bucket: zoomed to 2010 and later (raw HIC, yearly mean)
+
+```{r raw-yearly-15-zoom, fig.width=8, fig.height=6}
+raw_year_15 <- data %>%
+  filter(!is.na(raw_hic), hic_bucket == "15", year >= 2010) %>%
+  group_by(year, role, hic_bucket) %>%
+  summarise(raw_hic = mean(raw_hic, na.rm = TRUE), .groups = "drop")
+
+ggplot(raw_year_15, aes(year, raw_hic, color = role)) +
+  geom_point(size = 2) +
+  geom_line(alpha = 0.7) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Raw HIC vs Year (HIC15, 2008+, Yearly Mean)",
+    x = "Model Year",
+    y = "Raw HIC (mean)"
+  ) +
+  facet_grid(role ~ hic_bucket, scales = "free_y") +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```
+
+## HIC 15 bucket: zoomed to 2010 and later (normalized HIC, all points)
+
+```{r norm-all-15-zoom, fig.width=8, fig.height=6}
+ggplot(filter(data, !is.na(norm_hic), hic_bucket == "15", year >= 2010), aes(year, norm_hic, color = role)) +
+  geom_point(alpha = 0.25, position = position_jitter(width = 0.35, height = 0)) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Normalized HIC vs Year (HIC15, 2010+)",
+    x = "Model Year",
+    y = "Normalized HIC"
+  ) +
+  facet_grid(role ~ hic_bucket, scales = "free_y") +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```
+
+## HIC 15 bucket: zoomed to 2010 and later (normalized HIC, yearly mean)
+
+```{r norm-yearly-15-zoom, fig.width=8, fig.height=6}
+norm_year_15 <- data %>%
+  filter(!is.na(norm_hic), hic_bucket == "15", year >= 2010) %>%
+  group_by(year, role, hic_bucket) %>%
+  summarise(norm_hic = mean(norm_hic, na.rm = TRUE), .groups = "drop")
+
+ggplot(norm_year_15, aes(year, norm_hic, color = role)) +
+  geom_point(size = 2) +
+  geom_line(alpha = 0.7) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Normalized HIC vs Year (HIC15, 2008+, Yearly Mean)",
+    x = "Model Year",
+    y = "Normalized HIC (mean)"
+  ) +
+  facet_grid(role ~ hic_bucket, scales = "free_y") +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```
+
+## HIC 15 bucket: zoomed to 2010+ (normalized HIC, yearly mean, all roles together)
+
+```{r norm-yearly-15-zoom-combined, fig.width=8, fig.height=5}
+norm_year_15 <- data %>%
+  filter(!is.na(norm_hic), hic_bucket == "15", year >= 2010) %>%
+  group_by(year, role) %>%
+  summarise(norm_hic = mean(norm_hic, na.rm = TRUE), .groups = "drop")
+
+ggplot(norm_year_15, aes(year, norm_hic, color = role)) +
+  geom_point(size = 2) +
+  geom_line(alpha = 0.7) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Normalized HIC vs Year (HIC15, 2010+, Yearly Mean, All Roles)",
+    x = "Model Year",
+    y = "Normalized HIC (mean)"
+  ) +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```
+
+## HIC 15 bucket: zoomed to 2010+ (normalized HIC, yearly minimum, all roles together)
+
+```{r norm-yearly-15-zoom-min, fig.width=8, fig.height=5}
+norm_year_15_min <- data %>%
+  filter(!is.na(norm_hic), hic_bucket == "15", year >= 2010) %>%
+  group_by(year, role) %>%
+  summarise(norm_hic = min(norm_hic, na.rm = TRUE), .groups = "drop")
+
+ggplot(norm_year_15_min, aes(year, norm_hic, color = role)) +
+  geom_point(size = 2) +
+  geom_line(alpha = 0.7) +
+  geom_smooth(se = TRUE, method = "loess") +
+  labs(
+    title = "Normalized HIC vs Year (HIC15, 2010+, Yearly Min, All Roles)",
+    x = "Model Year",
+    y = "Normalized HIC (min)"
+  ) +
+  coord_cartesian(ylim = c(0, NA)) +
+  theme_minimal()
+```

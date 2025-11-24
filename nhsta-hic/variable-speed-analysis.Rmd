@@ -1,0 +1,340 @@
+---
+title: "Speed vs HIC for Identical Configurations"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+
+input_file <- "variable-speed.csv"
+data_raw <- read_csv(input_file, show_col_types = FALSE)
+
+# Coerce numeric fields
+data <- data_raw %>%
+  mutate(
+    closingSpeed_kph = as.numeric(closingSpeed_kph),
+    HIC = as.numeric(HIC),
+    HIC_duration = as.numeric(HIC_duration)
+  ) %>%
+  mutate(
+    hic_bucket = case_when(
+      !is.na(HIC_duration) & abs(HIC_duration - 15) <= 1 ~ "15",
+      !is.na(HIC_duration) & abs(HIC_duration - 36) <= 1 ~ "36",
+      TRUE ~ NA_character_
+    )
+  ) %>%
+  filter(
+    !is.na(closingSpeed_kph),
+    !is.na(HIC),
+    !is.na(hic_bucket),
+    closingSpeed_kph <= 60  # exclude high-speed outliers (>60 kph)
+  )
+
+glimpse(data)
+```
+
+The input (`variable-speed.csv`) is assumed to already satisfy:
+
+- Configuration: vehicle into barrier, 0 deg impact, 0 mm offset
+- Occupant location, type, sex, and dummy percentile consistent within each make/model/year
+- Multiple `testNo` entries per make/model/year/occupant combination
+
+## Overall relationship (descriptive only)
+
+```{r overall-plot, fig.width=7, fig.height=5}
+ggplot(data, aes(closingSpeed_kph, HIC)) +
+  geom_point(alpha = 0.4, size = 2) +
+  geom_smooth(method = "loess", se = TRUE, color = "firebrick") +
+  labs(
+    title = "HIC vs. Closing Speed (all rows, descriptive LOESS)",
+    x = "Closing speed (kph)",
+    y = "HIC"
+  ) +
+  theme_minimal()
+```
+
+## Within-vehicle comparisons
+
+Group by make/model/year/occupant characteristics to see how HIC changes with speed when everything else is matched.
+
+```{r by-vehicle}
+by_vehicle <- data %>%
+  group_by(make, model, year, occupantLocation, occupantType, occupantSex, dummySizePercentile) %>%
+  filter(n_distinct(testNo) > 1) %>%
+  summarise(
+    n_tests = n(),
+    speeds = n_distinct(closingSpeed_kph),
+    min_speed = min(closingSpeed_kph),
+    max_speed = max(closingSpeed_kph),
+    min_HIC = min(HIC),
+    max_HIC = max(HIC),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(speeds), desc(n_tests))
+
+by_vehicle
+```
+
+## Per-group model selection (nonlinear allowed, lower-order terms fixed at 0)
+
+Instead of assuming a single linear form, fit alternative shapes within each tightly matched group (same make/model/year and occupant attributes) and pick the best via AIC. Candidate models:
+
+- Linear through origin: `HIC ~ b * speed` (no intercept)
+- Pure quadratic: `HIC ~ b * speed^2` (no intercept or linear term; only if the group has at least 3 distinct speeds)
+
+```{r per-group-model-selection, fig.width=8, fig.height=6}
+group_cols <- c("make", "model", "year", "occupantLocation", "occupantType", "occupantSex", "dummySizePercentile", "hic_bucket")
+
+best_fits <- data %>%
+  group_by(across(all_of(group_cols))) %>%
+  filter(
+    n_distinct(closingSpeed_kph) > 1,
+    (max(closingSpeed_kph) - min(closingSpeed_kph)) >= 5  # require at least 5 kph spread
+  ) %>%
+  group_modify(~{
+    n_speeds <- n_distinct(.x$closingSpeed_kph)
+    models <- list(
+      linear = lm(HIC ~ 0 + closingSpeed_kph, data = .x), # through origin
+      cubic = lm(HIC ~ 0 + I(closingSpeed_kph^3), data = .x) # pure cubic
+    )
+    if (n_speeds >= 3) {
+      models$quadratic <- lm(HIC ~ 0 + I(closingSpeed_kph^2), data = .x) # pure quadratic, no intercept/linear term
+    }
+    aics <- vapply(models, AIC, numeric(1))
+    best_name <- names(aics)[which.min(aics)]
+    best_model <- models[[best_name]]
+
+    pred_grid <- tibble(closingSpeed_kph = seq(min(.x$closingSpeed_kph), max(.x$closingSpeed_kph), length.out = 50))
+    preds <- predict(best_model, newdata = pred_grid, se.fit = TRUE)
+    pred_grid <- pred_grid %>%
+      mutate(fit = preds$fit, se = preds$se.fit)
+
+    tibble(
+      best_model = best_name,
+      n_tests = nrow(.x),
+      n_speeds = n_speeds,
+      aic_linear = unname(aics["linear"]),
+      aic_quadratic = if ("quadratic" %in% names(aics)) unname(aics["quadratic"]) else NA_real_,
+      aic_cubic = unname(aics["cubic"]),
+      data = list(.x),
+      preds = list(pred_grid)
+    )
+  }) %>%
+  ungroup() %>%
+  arrange(desc(n_speeds), desc(n_tests))
+
+best_fits %>%
+  select(all_of(group_cols), best_model, n_tests, n_speeds, aic_linear, aic_quadratic, aic_cubic) %>%
+  arrange(desc(n_speeds), desc(n_tests))
+```
+
+### Visualize best-fit shapes (first few groups)
+
+```{r best-fit-plots, fig.width=8, fig.height=6}
+plot_count <- min(6, nrow(best_fits))
+if (plot_count > 0) {
+  plots <- best_fits %>%
+    mutate(plot = pmap(list(data, preds, make, model, year, occupantLocation, occupantType, occupantSex, dummySizePercentile, best_model), ~{
+      df <- ..1
+      pr <- ..2
+      ggplot(df, aes(closingSpeed_kph, HIC)) +
+        geom_point(alpha = 0.6, size = 2) +
+        geom_line(data = pr, aes(y = fit), color = "firebrick", linewidth = 1) +
+        labs(
+          title = paste0(..3, " ", ..4, " (", ..5, ") - ", ..6, " - best: ", ..7),
+          x = "Closing speed (kph)",
+          y = "HIC"
+        ) +
+        theme_minimal()
+    }))
+
+  for (i in seq_len(plot_count)) {
+    print(plots$plot[[i]])
+  }
+} else {
+  cat("No groups with multiple speeds to plot.\n")
+}
+```
+
+### Faceted view of all groups (saved to disk)
+
+```{r best-fit-facets, echo=TRUE, results='markup', fig.show='hide', message=FALSE, warning=FALSE, eval=FALSE}
+if (nrow(best_fits) > 0) {
+  dir.create("plots", showWarnings = FALSE)
+
+  df_all <- best_fits %>%
+    select(all_of(group_cols), data) %>%
+    mutate(
+      id = row_number(),
+      occ_loc_short = abbreviate(occupantLocation, minlength = 6),
+      occ_type_short = abbreviate(occupantType, minlength = 6),
+      title = paste(make, model, year, occ_loc_short, occ_type_short, occupantSex, dummySizePercentile, sep = " | ")
+    )
+
+  for (i in seq_len(nrow(df_all))) {
+    row <- df_all[i, ]
+    pts <- unnest(row %>% select(data), cols = c(data))
+
+    # Pure cubic fit through origin
+    fit <- tryCatch(
+      lm(HIC ~ 0 + I(closingSpeed_kph^3), data = pts),
+      error = function(e) NULL
+    )
+    if (is.null(fit)) next
+
+    grid <- tibble(closingSpeed_kph = seq(min(pts$closingSpeed_kph), max(pts$closingSpeed_kph), length.out = 50))
+    grid$fit <- predict(fit, newdata = grid)
+
+    p <- ggplot(pts, aes(closingSpeed_kph, HIC)) +
+      geom_point(alpha = 0.85, size = 3) +
+      geom_line(data = grid, aes(y = fit), color = "firebrick", linewidth = 1) +
+      labs(
+        title = paste0(row$title),
+        subtitle = "Cubic fit: HIC ~ b * speed^3",
+        x = "Closing speed (kph)",
+        y = "HIC"
+      ) +
+      theme_minimal(base_size = 11)
+
+    fname <- file.path("plots", sprintf("best-fit-%02d.png", i))
+    ggsave(fname, p, width = 8, height = 6, units = "in", dpi = 300)
+  }
+
+  cat("Saved", nrow(df_all), "per-group cubic plots to ./plots/best-fit-XX.png\n")
+} else {
+  cat("No groups to plot.\n")
+}
+```
+
+## Global power-law search for a single exponent across all groups
+
+Assume a power-law form `HIC ~ b * speed^n` (no intercept) and find a single exponent `n` that performs best across all matched groups (same make/model/year and occupant attributes). We evaluate candidate `n` values and pick the one minimizing the total AIC across groups that have at least two speeds and a ≥5 kph spread.
+
+```{r power-fit-search}
+power_candidates <- seq(0.5, 8, by = 0.1)
+
+power_by_bucket <- function(bucket) {
+  subset <- data %>%
+    filter(hic_bucket == bucket) %>%
+    group_by(across(all_of(group_cols))) %>%
+    filter(
+      n_distinct(closingSpeed_kph) > 1,
+      (max(closingSpeed_kph) - min(closingSpeed_kph)) >= 5
+    ) %>%
+    group_split()
+
+  power_results <- map_dfr(power_candidates, function(p) {
+    aics <- map_dbl(subset, function(df) {
+      fit <- lm(HIC ~ 0 + I(closingSpeed_kph ^ p), data = df) # no intercept
+      AIC(fit)
+    })
+    tibble(
+      hic_bucket = bucket,
+      exponent = p,
+      total_aic = sum(aics),
+      mean_aic = mean(aics),
+      groups = length(aics)
+    )
+  })
+
+  best_power <- power_results %>% arrange(total_aic) %>% slice(1)
+  list(results = power_results, best = best_power)
+}
+
+power_15 <- power_by_bucket("15")
+power_36 <- power_by_bucket("36")
+
+bind_rows(power_15$best, power_36$best)
+```
+
+Inspect how the best single exponent compares to the top alternatives.
+
+```{r power-fit-plot, fig.width=7, fig.height=5}
+ggplot(power_15$results, aes(exponent, total_aic)) +
+  geom_line(color = "steelblue") +
+  geom_point(data = power_15$best, size = 3, color = "firebrick") +
+  labs(
+    title = "Total AIC vs power exponent (HIC bucket 15±1)",
+    x = "Exponent n in speed^n",
+    y = "Total AIC (sum over groups)"
+  ) +
+  theme_minimal()
+
+ggplot(power_36$results, aes(exponent, total_aic)) +
+  geom_line(color = "steelblue") +
+  geom_point(data = power_36$best, size = 3, color = "firebrick") +
+  labs(
+    title = "Total AIC vs power exponent (HIC bucket 36±1)",
+    x = "Exponent n in speed^n",
+    y = "Total AIC (sum over groups)"
+  ) +
+  theme_minimal()
+```
+
+### Example fits using the best exponent
+
+```{r power-fit-examples, fig.width=8, fig.height=6}
+plot_power_examples <- function(best_list, bucket_label) {
+  if (nrow(best_list$best) == 0) {
+    cat("No groups available for power-law search in bucket", bucket_label, "\n")
+    return()
+  }
+  best_n <- best_list$best$exponent[[1]]
+  grouped <- data %>%
+    filter(hic_bucket == bucket_label) %>%
+    group_by(across(all_of(group_cols))) %>%
+    filter(
+      n_distinct(closingSpeed_kph) > 1,
+      (max(closingSpeed_kph) - min(closingSpeed_kph)) >= 5
+    ) %>%
+    group_split()
+  plot_groups <- grouped[seq_len(min(4, length(grouped)))]
+
+  for (df in plot_groups) {
+    df <- df %>% arrange(closingSpeed_kph)
+    fit <- lm(HIC ~ 0 + I(closingSpeed_kph ^ best_n), data = df) # no intercept
+    grid <- tibble(closingSpeed_kph = seq(min(df$closingSpeed_kph), max(df$closingSpeed_kph), length.out = 50))
+    grid$fit <- predict(fit, newdata = grid)
+
+    title_txt <- paste0(
+      unique(df$make), " ", unique(df$model), " (", unique(df$year), ") - ",
+      unique(df$occupantLocation), " | bucket ", bucket_label
+    )
+
+    print(
+      ggplot(df, aes(closingSpeed_kph, HIC)) +
+        geom_point(alpha = 0.6, size = 2) +
+        geom_line(data = grid, aes(y = fit), color = "firebrick", linewidth = 1) +
+        labs(
+          title = paste0(title_txt, " | power n=", round(best_n, 2)),
+          x = "Closing speed (kph)",
+          y = "HIC"
+        ) +
+        theme_minimal()
+    )
+  }
+}
+
+plot_power_examples(power_15, "15")
+plot_power_examples(power_36, "36")
+```
+
+## Faceted view by occupant location
+
+```{r facet-location, fig.width=9, fig.height=6}
+ggplot(data, aes(closingSpeed_kph, HIC)) +
+  geom_point(alpha = 0.35, size = 2) +
+  geom_smooth(method = "lm", se = FALSE, color = "firebrick") +
+  facet_wrap(~ occupantLocation) +
+  labs(
+    title = "HIC vs. speed by occupant location",
+    x = "Closing speed (kph)",
+    y = "HIC"
+  ) +
+  theme_minimal()
+```
+
+## Notes
+
+- If no rows appear above, ensure `variable-speed.csv` contains multiple `testNo` entries per make/model/year and consistent occupant attributes.
+- Speeds are interpreted numerically; rows with non-numeric speed or HIC are dropped in the cleaning step.

@@ -19,3 +19,4 @@ target*
 out/*
 user_config.py
 .DS_Store
+.Rproj.user
